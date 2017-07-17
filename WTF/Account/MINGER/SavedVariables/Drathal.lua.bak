@@ -1,0 +1,2 @@
+
+DrathalDB = nil

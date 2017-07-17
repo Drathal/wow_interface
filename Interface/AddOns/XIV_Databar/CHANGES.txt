@@ -1,0 +1,56 @@
+Changes since tag b2.0.16
+
+commit 183ebe2ad1e90367958a092501e34405ab52b1ab
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Sun Jul 9 19:17:56 2017 +0200
+
+    Added short gold values in tooltip and fixed bugs with artifact bar
+
+commit 183ebe2ad1e90367958a092501e34405ab52b1ab
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Sun Jul 9 19:17:56 2017 +0200
+
+    Added short gold values in tooltip and fixed bugs with artifact bar
+
+commit 930ee46673e37bc37fe99279caad43796f42530d
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Mon Jul 3 20:11:41 2017 +0200
+
+    Fix error with gold strings with too big values
+
+commit 930ee46673e37bc37fe99279caad43796f42530d
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Mon Jul 3 20:11:41 2017 +0200
+
+    Fix error with gold strings with too big values
+
+commit 42c850c187906dbd403e733de63abc51d61f5dc5
+Author: Mikeprod <Mikeprod@users.noreply.github.com>
+Date:   Mon Jul 3 13:25:50 2017 +0200
+
+    Update frFR.lua
+
+commit 20d1e4a6a45bd74c7c422233e5aadea797d88b10
+Author: Merathilis <neo0608@gmail.com>
+Date:   Mon Jul 3 10:51:24 2017 +0200
+
+    Add locale support for the recent gold changes.
+
+commit 20d1e4a6a45bd74c7c422233e5aadea797d88b10
+Author: Merathilis <neo0608@gmail.com>
+Date:   Mon Jul 3 10:51:24 2017 +0200
+
+    Add locale support for the recent gold changes.
+
+commit 75cc6adff4dd38c73a13d9e4fedb8d71538f7b2c
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Sun Jul 2 16:35:00 2017 +0200
+
+    Added daily and session gold status
+
+commit 75cc6adff4dd38c73a13d9e4fedb8d71538f7b2c
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Sun Jul 2 16:35:00 2017 +0200
+
+    Added daily and session gold status
+

@@ -1,0 +1,49 @@
+
+NamePlateKAIDB = {
+	["profileKeys"] = {
+		["Dronthal - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["performanceMode"] = 0,
+			["nameFont"] = {
+				["name"] = "Interface\\AddOns\\KkthnxUI\\Media\\Fonts\\Normal.ttf",
+				["size"] = 8,
+			},
+			["castFont"] = {
+				["name"] = "Interface\\AddOns\\KkthnxUI\\Media\\Fonts\\Normal.ttf",
+				["size"] = 8,
+			},
+			["barTexture"] = "Interface\\Buttons\\WHITE8X8",
+			["version"] = 7,
+			["castBarTexture"] = "Interface\\Buttons\\WHITE8X8",
+			["castBarHeight"] = 10,
+			["target"] = {
+				["flash"] = false,
+				["animationAlpha"] = 0.43,
+				["shine"] = false,
+				["shineAlpha"] = 0.1,
+			},
+			["redHostile"] = true,
+			["barBackdrop"] = {
+				["edgeSize"] = 2,
+			},
+			["buff"] = {
+				["size"] = {
+					["W"] = 17,
+					["H"] = 12,
+				},
+			},
+			["friendlyClickThrough"] = true,
+			["dynamicOpacity"] = true,
+			["nameFontPlayer"] = {
+				["outline"] = "OUTLINE",
+				["name"] = "Interface\\AddOns\\KkthnxUI\\Media\\Fonts\\Normal.ttf",
+				["size"] = 8,
+			},
+		},
+	},
+}
+NamePlateKAIFilter = nil
+NamePlateKAIAura = nil

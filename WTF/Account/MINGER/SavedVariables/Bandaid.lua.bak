@@ -1,0 +1,10 @@
+
+BandaidDB = {
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

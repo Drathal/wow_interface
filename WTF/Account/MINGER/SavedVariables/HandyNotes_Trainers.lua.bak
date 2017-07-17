@@ -1,0 +1,11 @@
+
+HandyNotes_TrainersDB = {
+	["profileKeys"] = {
+		["Draltair - Blackhand"] = "Draltair - Blackhand",
+	},
+	["faction"] = {
+		["Alliance"] = {
+			["dbversion"] = 3,
+		},
+	},
+}

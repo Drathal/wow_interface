@@ -1,0 +1,17 @@
+/Interface/AddOns/Blizzard_*
+/AskMrRobotClient
+/Cache
+/Data
+/Errors
+/Logs
+/Screenshots
+/Utils
+*.exe
+*.dll
+*.zip
+*.mfil
+.curseclient
+.product.db
+.patch.result
+.build.info
+Launcher.db

@@ -1,0 +1,6 @@
+
+GMDURABILITY = {
+	["GUILDREPAIR"] = true,
+	["AUTOSELL"] = true,
+	["AUTOREPAIR"] = true,
+}

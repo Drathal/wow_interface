@@ -1,0 +1,24 @@
+lightweight tag 702556256e367e79594c1d4c857109dd88389b68 1.0.12
+Author:	Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:	Thu Jul 6 16:40:43 2017 +0200
+
+commit 702556256e367e79594c1d4c857109dd88389b68
+Author: Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:   Thu Jul 6 16:40:43 2017 +0200
+
+    options visual update
+
+commit 751d9d1b01e7605c859a49d63e836fedbb30af0f
+Author: Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:   Thu Jul 6 16:21:37 2017 +0200
+
+    version bump
+
+commit 46220b53be9dd8db5fae7d143a97ee420fd51f02
+Author: Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:   Thu Jul 6 16:13:41 2017 +0200
+
+    added LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS
+    
+    added option to automatically Dismiss "Group reached limit" popup
+

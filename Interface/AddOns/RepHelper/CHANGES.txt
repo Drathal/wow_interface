@@ -1,0 +1,10 @@
+tag 524acb335702f321aa3c365e5579c17fe5449ced 7.2.0.13-release
+Author:	Chawan <chawan6@gmail.com>
+Date:	Fri May 26 04:29:29 2017 +0200
+
+commit b8217cf79d63ac0468232af51bca36572c4259a5
+Author: Chawan <chawan6@gmail.com>
+Date:   Fri May 26 04:28:25 2017 +0200
+
+    Fixed #3 Disabled GetFactionInfo hook as this would sometimes cause a Lua error due to GetFactionInfo returning nil sometimes. The only thing that used this custom function was not working anyway so might as well disable it.
+

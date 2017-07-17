@@ -1,0 +1,72 @@
+VER 3 0100000000000005 "Beacon" "INV_MISC_QUESTIONMARK"
+#show
+/use [@mouseover,nomod][nomod]Beacon of Light
+/use [talent:7/1,@mouseover,mod][talent:7/1,mod]Beacon of Faith
+/use [@mouseover,nomod][mod]Beacon of Light
+END
+VER 3 0100000000000007 "Bestow" "INV_MISC_QUESTIONMARK"
+#show
+/cast [talent:1/1,@mouseover,help][talent:1/1]Bestow Faith
+/cast [talent:1/2,@cursor][talent:1/2]Light's Hammer
+END
+VER 3 0100000000000008 "BoT" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/startattack
+/cast [@mouseover,help][@target,help][]Blessing of Protection
+END
+VER 3 0100000000000004 "Hammer" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/startattack
+/cast [@mouseover,harm,nomod][nomod]Hammer of Justice
+/cast [talent:3/3,mod]Blinding Light
+END
+VER 3 0100000000000002 "Hand" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,harm][@target,harm][]Hand of Reckoning
+END
+VER 3 010000000000000A "Holy Prism" "INV_MISC_QUESTIONMARK"
+#show
+/cast [talent:5/3,@mouseover][talent:5/3]Holy Prism
+/cast [talent:5/2]Holy Avenger
+END
+VER 3 0100000000000003 "Judgement" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/startattack
+/cast [@mouseover,harm][@target,harm][]Judgment
+END
+VER 3 0100000000000009 "Light of Dawn" "INV_MISC_QUESTIONMARK"
+#show Light of Dawn
+/use 13
+/use 14
+/cast Light of Dawn
+END
+VER 3 010000000000000F "Rebuke" "INV_Misc_QuestionMark"
+#showtooltip
+/stopcasting
+/cast [@mouseover,harm,nomod][nomod]Rebuke
+END
+VER 3 0100000000000001 "Shield" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,harm][@target,harm][]Avenger's Shield
+END
+VER 3 0100000000000006 "Shock" "INV_MISC_QUESTIONMARK"
+#showtooltip Holy Shock
+/startattack
+/use Holy Avenger
+/use Avenging Wrath
+/use Holy Shock
+END
+VER 3 010000000000000B "test" "INV_Misc_QuestionMark"
+END
+VER 3 010000000000000E "TSM - Dungeon He" "236249"
+#Talent Set Manager# automatically generated, do not modify
+/talentset pve Dungeon Heal
+END
+VER 3 010000000000000D "TSM - Raid Heal" "571553"
+#Talent Set Manager# automatically generated, do not modify
+/talentset pve Raid Heal
+END
+VER 3 010000000000000C "TSM - Shockadin" "spell_holy_searinglight"
+#Talent Set Manager# automatically generated, do not modify
+/talentset pve Shockadin
+END

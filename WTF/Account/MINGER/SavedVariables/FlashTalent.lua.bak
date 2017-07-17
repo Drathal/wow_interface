@@ -1,0 +1,11 @@
+
+FlashTalentDB = {
+	["char"] = {
+		["Drathair - Blackhand"] = {
+			["LegionSetReset"] = true,
+		},
+	},
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Drathair - Blackhand",
+	},
+}

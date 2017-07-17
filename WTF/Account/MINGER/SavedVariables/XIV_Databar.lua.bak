@@ -1,0 +1,111 @@
+
+TEST_CONFIG = nil
+XIVBarDB = {
+	["char"] = {
+		["Drahmoon - Madmortem"] = {
+			["portItem"] = {
+				["portId"] = 140192,
+				["text"] = "Dalaran",
+			},
+		},
+		["Dronthal - Madmortem"] = {
+			["portItem"] = {
+				["portId"] = 140192,
+				["text"] = "Dalaran",
+			},
+		},
+	},
+	["profiles"] = {
+		["Drahmoon - Madmortem"] = {
+			["color"] = {
+				["normal"] = {
+					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
+				},
+				["barColor"] = {
+					["a"] = 0,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
+				},
+			},
+			["text"] = {
+				["flags"] = 2,
+				["font"] = "KkthnxUI_Normal",
+			},
+			["general"] = {
+				["barPosition"] = "TOP",
+				["ohHide"] = true,
+				["moduleSpacing"] = 29,
+			},
+			["modules"] = {
+				["tradeskill"] = {
+					["enabled"] = false,
+				},
+				["talent"] = {
+					["minWidth"] = 60,
+					["barCC"] = true,
+					["showTooltip"] = false,
+				},
+				["travel"] = {
+					["enabled"] = false,
+				},
+				["microMenu"] = {
+					["chat"] = false,
+					["help"] = false,
+					["quest"] = false,
+					["talent"] = false,
+					["char"] = false,
+					["pvp"] = false,
+				},
+				["currency"] = {
+					["enabled"] = false,
+					["showXPbar"] = false,
+					["currencyThree"] = "1314",
+					["currencyTwo"] = "1226",
+					["currencyOne"] = "1273",
+				},
+				["gold"] = {
+					["showFreeBagSpace"] = false,
+					["shortThousands"] = true,
+				},
+				["armor"] = {
+					["enabled"] = false,
+				},
+				["MasterVolume"] = {
+					["enabled"] = true,
+				},
+				["clock"] = {
+					["hideEventText"] = true,
+					["timeFormat"] = "twoFourNoZero",
+				},
+				["system"] = {
+					["showTooltip"] = false,
+					["showAllOnShift"] = false,
+				},
+			},
+		},
+		["Dronthal - Madmortem"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
+	},
+	["factionrealm"] = {
+		["Alliance - Madmortem"] = {
+			["Drahmoon"] = {
+				["currentMoney"] = 707261350,
+				["sessionMoney"] = -963372230,
+			},
+			["Dronthal"] = {
+				["dailyMoney"] = -775616666,
+				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["currentMoney"] = 156551518,
+				["lastLoginDate"] = 20170714,
+			},
+		},
+	},
+}

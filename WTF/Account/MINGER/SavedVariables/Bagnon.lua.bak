@@ -1,0 +1,73 @@
+
+Bagnon_Sets = {
+	["reagentColor"] = {
+	},
+	["gemColor"] = {
+	},
+	["global"] = {
+		["inventory"] = {
+			["point"] = "BOTTOMRIGHT",
+			["hiddenBags"] = {
+			},
+			["scale"] = 1,
+			["alpha"] = 1,
+			["y"] = 28.9998226165772,
+			["x"] = -68.999755859375,
+			["bagBreak"] = false,
+			["borderColor"] = {
+			},
+			["columns"] = 11,
+			["broker"] = false,
+			["itemScale"] = 1,
+			["color"] = {
+			},
+		},
+		["vault"] = {
+			["color"] = {
+			},
+			["borderColor"] = {
+			},
+			["hiddenBags"] = {
+			},
+		},
+		["guild"] = {
+			["color"] = {
+			},
+			["borderColor"] = {
+			},
+			["hiddenBags"] = {
+			},
+		},
+		["bank"] = {
+			["color"] = {
+			},
+			["borderColor"] = {
+			},
+			["hiddenBags"] = {
+			},
+		},
+	},
+	["glowAlpha"] = 0.8,
+	["engineerColor"] = {
+	},
+	["refrigeColor"] = {
+	},
+	["mineColor"] = {
+	},
+	["inscribeColor"] = {
+	},
+	["leatherColor"] = {
+	},
+	["tackleColor"] = {
+	},
+	["herbColor"] = {
+	},
+	["normalColor"] = {
+	},
+	["enchantColor"] = {
+	},
+	["players"] = {
+		["Blackhand"] = {
+		},
+	},
+}

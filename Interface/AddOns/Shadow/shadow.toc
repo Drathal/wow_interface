@@ -1,0 +1,11 @@
+## Interface: 72000
+
+## Title: Shadow
+## Author: Drathal
+
+## Version: 1.0.0
+## Notes: Creates a shadow overlay
+
+## SavedVariables: shadowLevel
+
+shadow.lua

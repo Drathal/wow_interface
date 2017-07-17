@@ -1,0 +1,12 @@
+
+FollowerLocationInfoDB = {
+	["LDB_NumFollowers"] = true,
+	["LDBi_Enabled"] = true,
+	["LDB_TargetCoords"] = false,
+	["ShowFollowerID"] = true,
+	["LDBi_Data"] = {
+	},
+	["showInfoBox"] = false,
+	["ExternalURL"] = "WoWHead",
+	["LDB_PlayerCoords"] = false,
+}

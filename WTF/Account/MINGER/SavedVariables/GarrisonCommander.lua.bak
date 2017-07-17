@@ -1,0 +1,47 @@
+
+dbGAC = {
+	["char"] = {
+		["Draltair - Blackhand"] = {
+			["firstun"] = false,
+			["lastversion"] = 20902,
+		},
+	},
+	["profileKeys"] = {
+		["Draltair - Blackhand"] = "Draltair - Blackhand",
+	},
+	["global"] = {
+		["firstrun"] = false,
+		["lastversion"] = 20902,
+		["lastinterface"] = 60200,
+	},
+	["profiles"] = {
+		["Draltair - Blackhand"] = {
+			["toggles"] = {
+				["IGP"] = true,
+				["MSORT"] = "Garrison_SortMissions_Original",
+				["PIN"] = true,
+				["IXP"] = true,
+				["SWAPBUTTONS"] = false,
+				["MOVEPANEL"] = true,
+				["HF"] = false,
+				["SHIPPIN"] = true,
+				["MINPERC"] = 50,
+				["MAXRES"] = true,
+				["MAXRESCHANCE"] = 80,
+				["GCSKIPRARE"] = true,
+				["GCSKIPEPIC"] = true,
+				["MAXMISSIONS"] = 5,
+				["UPG"] = true,
+				["GCMINLEVEL"] = 540,
+				["ILV"] = true,
+				["BIGSCREEN"] = true,
+				["USEFUL"] = true,
+				["GCMINUPGRADE"] = 600,
+				["NOCONFIRM"] = true,
+				["SHIPMOVEPANEL"] = true,
+				["NOFILL"] = false,
+				["IGM"] = true,
+			},
+		},
+	},
+}

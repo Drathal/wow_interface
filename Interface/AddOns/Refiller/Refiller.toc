@@ -1,0 +1,22 @@
+﻿## Interface: 70200
+## Title: Refiller
+## Notes: Refills and Stocks defined items on Bank/Merchant visit.
+## Version: 7.2.0-1
+## Author: Shidera505(Twitch)
+## X-Category: Inventory
+## OptionalDeps: Ace3, LibBagUtils-1.0
+## X-Embeds: Ace3, LibBagUtils-1.0
+## SavedVariables: RefillerDB
+##
+## LoadManagers: AddonLoader
+## X-LoadOn-Merchant: true
+## X-LoadOn-Bank: true
+## X-LoadOn-Slash: /Refiller
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+Refiller-enUS.lua
+
+Refiller.lua

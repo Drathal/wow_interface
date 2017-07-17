@@ -1,0 +1,8 @@
+Ironi:
+	- fix lua errors on L100 chars
+	- fix lua error on 7.1
+	- toc update
+	- fix boss order for Darkbough (EN #1)
+	- add Trial of Valor (missing quests atm)
+	- add yellow '!' in front of the boss name if you have a quest for it (and you can do the quest in LFR)
+	- fix order for Torment Guardians (EN #2)

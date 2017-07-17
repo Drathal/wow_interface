@@ -1,0 +1,16 @@
+
+TradeSkillMaster_CompetitorTrackerDB = {
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Darlaxle - Blackhand"] = "Default",
+	},
+	["factionrealm"] = {
+		["Horde - Blackhand"] = {
+			["loginTime"] = 1467579829,
+			["logoutTime"] = 1467579849,
+		},
+	},
+}

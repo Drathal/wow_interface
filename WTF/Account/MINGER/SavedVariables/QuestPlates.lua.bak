@@ -1,0 +1,2 @@
+
+QuestPlateSettings = nil

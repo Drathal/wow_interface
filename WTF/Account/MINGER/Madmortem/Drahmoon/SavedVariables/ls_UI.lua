@@ -1,0 +1,2 @@
+
+LS_UI_CHAR_CONFIG = nil

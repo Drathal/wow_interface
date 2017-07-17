@@ -1,0 +1,9 @@
+
+Leaf_RDSW = {
+	"ENCOUNTER: Millificent Manastorm eID: 1847 Time: 10/04/16 12:38:27 Player: DrathalDifficulty: 2 raidSize: 5 Outcome: KILL +_MST: 1.0000 HST: 0.9344 CRT: 0.7091 VRS: 0.7592 _+MST_H: 360276.70 HST_H: 279269.80 CRT_H: 53567.06 VRS_H: 155446.26 ", -- [1]
+	"ENCOUNTER: Anub'esset eID: 1852 Time: 10/04/16 12:43:52 Player: DrathalDifficulty: 2 raidSize: 5 Outcome: KILL +_MST: 1.0000 HST: 0.7974 CRT: 0.8106 VRS: 0.6629 _+MST_H: 443827.29 HST_H: 293567.58 CRT_H: 75428.58 VRS_H: 167197.68 ", -- [2]
+	"ENCOUNTER: Fel Lord Betrug eID: 1856 Time: 10/04/16 12:48:39 Player: DrathalDifficulty: 2 raidSize: 5 Outcome: KILL +_MST: 1.0000 HST: 0.7426 CRT: 0.7170 VRS: 0.6306 _+MST_H: 1004822.84 HST_H: 618990.32 CRT_H: 151059.62 VRS_H: 360071.41 ", -- [3]
+	"ENCOUNTER: Nythendra eID: 1853 Time: 10/04/16 12:56:48 Player: DrathalDifficulty: 17 raidSize: 25 Outcome: KILL +_MST: 0.7349 HST: 0.8077 CRT: 1.0000 VRS: 0.6623 _+MST_H: 2987295.65 HST_H: 2723674.70 CRT_H: 852335.31 VRS_H: 1530015.70 ", -- [4]
+	"ENCOUNTER: Il'gynoth, The Heart of Corruption eID: 1873 Time: 10/04/16 13:15:19 Player: DrathalDifficulty: 17 raidSize: 25 Outcome: KILL +_MST: 0.9193 HST: 1.0000 CRT: 0.9564 VRS: 0.8282 _+MST_H: 3571148.19 HST_H: 3222596.33 CRT_H: 779031.13 VRS_H: 1828514.50 ", -- [5]
+	"ENCOUNTER: Elerethe Renferal eID: 1876 Time: 10/04/16 13:29:01 Player: DrathalDifficulty: 17 raidSize: 25 Outcome: KILL +_MST: 1.0000 HST: 0.7947 CRT: 0.8273 VRS: 0.6592 _+MST_H: 2813602.74 HST_H: 1854922.41 CRT_H: 488069.36 VRS_H: 1054004.79 ", -- [6]
+}

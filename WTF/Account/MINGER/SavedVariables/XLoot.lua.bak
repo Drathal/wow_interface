@@ -1,0 +1,49 @@
+
+XLootADB = {
+	["namespaces"] = {
+		["Group"] = {
+			["profiles"] = {
+				["Default"] = {
+					["alert_anchor"] = {
+						["visible"] = false,
+					},
+					["win_icon"] = true,
+					["roll_anchor"] = {
+						["y"] = 722.666870117188,
+						["visible"] = false,
+						["x"] = 59.5554122924805,
+					},
+				},
+			},
+		},
+		["Frame"] = {
+			["profiles"] = {
+				["Default"] = {
+					["frame_snap"] = false,
+					["loot_row_height"] = 29,
+					["loot_icon_size"] = 31,
+				},
+			},
+		},
+		["Monitor"] = {
+			["profiles"] = {
+				["Default"] = {
+					["anchor"] = {
+						["y"] = 256.000122070313,
+						["x"] = 5.33292675018311,
+						["visible"] = false,
+					},
+				},
+			},
+		},
+		["Master"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

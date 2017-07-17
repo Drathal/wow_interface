@@ -1,0 +1,93 @@
+
+MapsterDB = {
+	["namespaces"] = {
+		["GroupIcons"] = {
+		},
+		["Coords"] = {
+		},
+		["FogClear"] = {
+			["profiles"] = {
+				["Default"] = {
+					["colorA"] = 0.580000013113022,
+					["version"] = 2,
+					["colorR"] = 0.396078431372549,
+					["colorB"] = 0.0705882352941177,
+					["colorG"] = 0.0666666666666667,
+				},
+				["base"] = {
+					["colorR"] = 0.396078431372549,
+					["colorG"] = 0.0666666666666667,
+					["colorA"] = 0.580000013113022,
+					["colorB"] = 0.0705882352941177,
+					["version"] = 2,
+				},
+			},
+		},
+		["BattleMap"] = {
+			["profiles"] = {
+				["Default"] = {
+					["hideTextures"] = true,
+				},
+				["base"] = {
+					["hideTextures"] = true,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Drathal - Blackhand"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
+		["Dorthal - Blackhand"] = "Default",
+		["Drathon - Blackhand"] = "base",
+		["Darlaxle - Blackhand"] = "Default",
+		["Sungleave - Blackhand"] = "Default",
+		["Drathol - Blackhand"] = "Default",
+		["Draltar - Blackhand"] = "Default",
+		["Drahdo - Blackhand"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
+		["Drathal - Antonidas"] = "Default",
+		["Modrix - Blackhand"] = "Default",
+		["Modran - Alexstrasza"] = "Default",
+		["Modranthir - Blackhand"] = "Default",
+		["Draltair - Blackhand"] = "Default",
+		["Drathair - Blackhand"] = "base",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["arrowScale"] = 1.34,
+			["point"] = "TOPLEFT",
+			["scale"] = 1.09860515594482,
+			["mini"] = {
+				["y"] = -77.7704436644854,
+				["x"] = 18.5630535432109,
+				["scale"] = 0.888815462589264,
+			},
+			["poiScale"] = 0.86,
+			["hideMapButton"] = true,
+			["y"] = -23.1332470224297,
+			["x"] = 13.1555174670878,
+			["ejScale"] = 1.08,
+			["modules"] = {
+				["Coords"] = false,
+			},
+		},
+		["base"] = {
+			["arrowScale"] = 1.34,
+			["ejScale"] = 1.08,
+			["scale"] = 1.09860515594482,
+			["mini"] = {
+				["y"] = -77.7704436644854,
+				["x"] = 18.5630535432109,
+				["scale"] = 0.888815462589264,
+			},
+			["poiScale"] = 0.86,
+			["hideMapButton"] = true,
+			["modules"] = {
+				["Coords"] = false,
+			},
+			["x"] = 13.1555174670878,
+			["point"] = "TOPLEFT",
+			["y"] = -23.1332470224297,
+		},
+	},
+}

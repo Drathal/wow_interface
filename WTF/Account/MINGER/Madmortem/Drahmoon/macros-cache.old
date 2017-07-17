@@ -1,0 +1,57 @@
+VER 3 0100000000000006 "Agony" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/startattack
+/use [mod,@focus]Agony
+/use [nomod,@target]Agony
+END
+VER 3 0100000000000007 "Corruption" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/startattack
+/use [mod,@focus] Corruption
+/use [nomod,@target] Corruption
+END
+VER 3 0100000000000001 "DC" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [talent:3/1] Demonic Circle
+/cast [talent:3/2] Mortal Coil
+/cast [talent:3/3] Howl of Terror
+END
+VER 3 010000000000000C "Demon" "INV_MISC_QUESTIONMARK"
+#show
+/cast Command Demon
+/cast [mod:ctrl] Summon Doomguard(Summon)
+/petdismiss [mod:shift]
+END
+VER 3 010000000000000B "Doom" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,exists][] Doom
+END
+VER 3 010000000000000A "Drain" "INV_MISC_QUESTIONMARK"
+#show Drain Soul
+/startattack
+/use 13
+/use 14
+/use Drain Soul
+END
+VER 3 0100000000000003 "Havoc" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,exists][] Havoc
+END
+VER 3 0100000000000009 "Seed" "INV_MISC_QUESTIONMARK"
+#show
+/startattack
+/use [talent:4/1] Phantom Singularity
+/use [talent:4/2] Seed of Corruption
+/use [talent:4/3] Soul Harvest
+END
+VER 3 0100000000000008 "Siphon Life" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/startattack
+/use [talent:7/2,mod,@focus] Siphon Life
+/use [talent:7/2,nomod,@target] Siphon Life
+/use Unstable Affliction
+END
+VER 3 0100000000000004 "Soulstone" "136210"
+#showtooltip
+/use [@mouseover,exists][] Soulstone
+END

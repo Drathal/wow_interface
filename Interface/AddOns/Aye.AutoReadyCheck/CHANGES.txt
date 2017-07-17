@@ -1,0 +1,33 @@
+lightweight tag 85cdd4d343fb61f96d70645b9632d7ade564ff33 1.0.11
+Author:	Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:	Thu Jul 6 17:09:45 2017 +0200
+
+commit 85cdd4d343fb61f96d70645b9632d7ade564ff33
+Author: Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:   Thu Jul 6 17:09:45 2017 +0200
+
+    version bump
+
+commit 6531a670adea2125830be14daa6e988e139ce131
+Author: Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:   Thu Jul 6 17:08:52 2017 +0200
+
+    options visual update
+
+commit d07b34380ba28ab3355a1f5b24ba31346a9038ac
+Author: Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:   Thu Jun 29 08:47:03 2017 +0200
+
+    extend benched detection
+    
+    replace IsMythicBenched by IsBenched, checking for all of NM, HC, and
+    Mythic modes.
+
+commit c6fc820b79ac9d1b14f18a138318f0ff6f21943a
+Author: Pawel Benetkiewicz <benio@users.noreply.github.com>
+Date:   Wed Jun 14 19:40:35 2017 +0200
+
+    update Player util
+    
+    add Aye.utils.Player.IsFriend util
+

@@ -1,0 +1,10 @@
+tag 00d5588d554e73e07cba77cf14b67067ba3fa154 2.4.14
+Author:	Benjamin Staneck <staneck@gmail.com>
+Date:	Sat Jul 15 18:02:16 2017 +0200
+
+commit 9c7749385ec8c0cf5df78b1b5ad3cbc2e18ea0fe
+Author: Infus <infus@squorn.de>
+Date:   Sat Jul 15 12:58:04 2017 +0200
+
+    Fix regressions with anchor change
+

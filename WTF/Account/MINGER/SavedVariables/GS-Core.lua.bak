@@ -1,0 +1,18 @@
+
+GnomeOptions = {
+	["deleteOrphansOnLogout"] = true,
+	["clearUIErrors"] = true,
+	["seedInitialMacro"] = true,
+	["hideUIErrors"] = true,
+	["initialised"] = true,
+	["sendDebugOutputGSDebugOutput"] = false,
+	["cleanTempMacro"] = true,
+	["sendDebugOutputToChat"] = true,
+	["debugSequence"] = true,
+	["debug"] = false,
+	["AddInPacks"] = {
+		["GS-DraikMacros"] = true,
+		["GS-SequenceEditor"] = true,
+	},
+	["hideSoundErrors"] = true,
+}

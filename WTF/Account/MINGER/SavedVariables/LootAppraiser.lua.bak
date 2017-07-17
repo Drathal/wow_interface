@@ -1,0 +1,10 @@
+
+LootAppraiserDB = {
+	["profileKeys"] = {
+		["Darlaxle - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

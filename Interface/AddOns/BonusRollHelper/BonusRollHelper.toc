@@ -1,0 +1,9 @@
+## Interface:70100
+## Title: Bonus Roll Helper
+## Notes:
+## Author: Kelród-Draenor
+## SavedVariablesPerCharacter: BonusRollManagerVariables
+
+Setup.lua
+CalculateBonusRolls.lua
+CreateMainFrame.lua

@@ -1,0 +1,39 @@
+
+rs_saved = {
+	["TextureTable"] = {
+		"red", -- [1]
+		"orange", -- [2]
+		"yellow", -- [3]
+		"green", -- [4]
+		"blue", -- [5]
+		"purple", -- [6]
+	},
+	["WindowSize"] = {
+		{
+			200, -- [1]
+			150.000091552734, -- [2]
+		}, -- [1]
+	},
+	["Anchor"] = {
+		{
+			"CENTER", -- [1]
+			"UIParent", -- [2]
+			"CENTER", -- [3]
+			-150, -- [4]
+			150, -- [5]
+		}, -- [1]
+	},
+	["Mode"] = {
+		1, -- [1]
+	},
+	["Shown"] = {
+	},
+	["ConfigAnchor"] = {
+		"CENTER", -- [1]
+		"UIParent", -- [2]
+		"CENTER", -- [3]
+		0, -- [4]
+		0, -- [5]
+	},
+}
+rs_reports = nil

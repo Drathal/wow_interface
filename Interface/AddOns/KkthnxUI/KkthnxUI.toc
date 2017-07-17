@@ -1,0 +1,19 @@
+## Interface: 70200
+## Name: KkthnxUI
+## Title: |cff3c9bedKkthnxUI|r
+## Notes: User Interface replacement AddOn for World of Warcraft.
+## Author: Josh "Kkthnx" Russell, Shestak
+## Version: 6.38
+## DefaultState: Enabled
+## SavedVariables: KkthnxUIData
+## SavedVariablesPerCharacter: KkthnxUIDataPerChar
+## OptionalDeps: KkthnxUI_Config, Blizzard_DebugTools, tekDebug, SharedMedia, DBM-Core, Recount, Skada, Spy, WeakAuras
+## X-License: The MIT License (MIT)
+## X-Donate: https://www.paypal.me/kkthnx
+## X-eMail: Kkthnxbye@live.com
+## X-oUF: oUF_Kkthnx
+## X-Website: https://github.com/Kkthnx
+## X-Category: Interface Enhancements
+
+# -- Load Core File
+KkthnxUI.xml

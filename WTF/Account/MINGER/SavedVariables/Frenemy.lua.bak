@@ -1,0 +1,11 @@
+
+FrenemyDB = {
+	["profileKeys"] = {
+		["Darlaxle - Blackhand"] = "Default",
+	},
+	["global"] = {
+		["ZoneData"] = {
+			[962] = 6,
+		},
+	},
+}

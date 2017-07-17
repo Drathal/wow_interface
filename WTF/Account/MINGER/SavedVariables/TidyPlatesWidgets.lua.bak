@@ -1,0 +1,25 @@
+
+TidyPlatesWidgetData = {
+	["UnitLastSeen"] = {
+		["Training Dummy"] = 3866,
+		["Frostwall Wolf"] = 3866,
+		["Frostwall Smith"] = 3866,
+		["Dungeoneer's Training Dummy"] = 3866,
+		["Barracks Recruit"] = 3866,
+		["Barracks Grunt"] = 3866,
+		["Drathair"] = 3866,
+	},
+	["UnitDescriptions"] = {
+	},
+	["UnitGuild"] = {
+		["Training Dummy"] = "Healing",
+		["Dungeoneer's Training Dummy"] = "Damage",
+	},
+	["CachedAuraDurations"] = {
+	},
+	["UnitClass"] = {
+		["Training Dummy"] = "NPC",
+		["Drathair"] = "MONK",
+		["Dungeoneer's Training Dummy"] = "NPC",
+	},
+}

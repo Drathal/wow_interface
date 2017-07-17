@@ -1,0 +1,10 @@
+tag ae853427168fbf225fa699cceff3138340df2b56 0.6-release
+Author:	Michael Boll <m.boll@tripexart.de>
+Date:	Wed Jul 5 19:46:23 2017 +0200
+
+commit 7fc5bc48ab7e81bb872e30509a5c9b87b32adc33
+Author: Michael Boll <m.boll@tripexart.de>
+Date:   Wed Jul 5 19:46:10 2017 +0200
+
+    fixed missing local, fixed typo that prevent rogue lockbox from beeing in their own virtual bag.
+

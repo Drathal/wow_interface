@@ -1,0 +1,12 @@
+tag 8c1ccd5549485cc6b2ed11c55927c087309eda96 v7.2.0.170329
+Author:	Vladinator89 <vladix@gmail.com>
+Date:	Mon Apr 3 08:26:53 2017 +0100
+
+v7.2.0.170329
+
+commit 792c4235f866e5de568a4453cea2740d88d6ebac
+Author: Vladinator89 <vladix@gmail.com>
+Date:   Mon Apr 3 09:22:29 2017 +0200
+
+    Patch 7.2 update. Added tooltip config for keystone items. Adjusted numbers to use the comma separated format for long numbers, just like how other UI elements does it. The previous 1235000 becomes 1,235,000 and it's nicer to read.
+

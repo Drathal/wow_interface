@@ -1,0 +1,15 @@
+## Interface: 70100
+## Title: iLFRDescription
+## Notes: iLFRDescription
+## Author: Ironi
+## Version: 1.1
+## DefaultState: enabled
+## X-Category: Misc
+## X-Name: ilfrdescription
+## X-Curse-Packaged-Version: v1.1-7-g7df1148
+## X-Curse-Project-Name: iLFRDescription
+## X-Curse-Project-ID: ilfrdescription
+## X-Curse-Repository-ID: wow/ilfrdescription/mainline
+
+iLFRDescription.lua
+bossList.lua

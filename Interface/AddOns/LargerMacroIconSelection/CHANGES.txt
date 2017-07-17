@@ -1,0 +1,14 @@
+lightweight tag aa3d7c8ac5b5b114e8ead8c0d45b6b89eee1179b v1.2.1
+Author:	Ketho <sghs17@outlook.com>
+Date:	Fri Jul 7 10:46:25 2017 +0200
+
+commit aa3d7c8ac5b5b114e8ead8c0d45b6b89eee1179b
+Author: Ketho <sghs17@outlook.com>
+Date:   Fri Jul 7 10:46:25 2017 +0200
+
+    Update for 7.2.5
+    
+    When searching for a specific icon by ID it will now be auto selected
+    
+    Fixed searching by achievement id
+

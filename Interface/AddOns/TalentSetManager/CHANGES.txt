@@ -1,0 +1,11 @@
+lightweight tag b0a51abacabd39ae170c1c6aee2bb455651808cc v1.2.4
+Author:	Saregon <n_rhygar@yahoo.it>
+Date:	Sun Jul 16 17:07:01 2017 +0200
+
+commit b0a51abacabd39ae170c1c6aee2bb455651808cc
+Author: Saregon <n_rhygar@yahoo.it>
+Date:   Sun Jul 16 17:07:01 2017 +0200
+
+    made slash command function global
+    usage: TalentSetManager_LearnSet("pve", "set name")
+

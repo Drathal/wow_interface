@@ -1,0 +1,22 @@
+
+dbMRF = {
+	["char"] = {
+		["Drathair - Blackhand"] = {
+			["firstun"] = false,
+		},
+	},
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Default",
+	},
+	["global"] = {
+		["firstrun"] = false,
+	},
+	["profiles"] = {
+		["Default"] = {
+			["toggles"] = {
+				["RESTORE"] = true,
+				["MINIMAP"] = false,
+			},
+		},
+	},
+}

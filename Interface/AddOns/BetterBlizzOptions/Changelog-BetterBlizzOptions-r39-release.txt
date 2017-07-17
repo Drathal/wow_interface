@@ -1,0 +1,22 @@
+------------------------------------------------------------------------
+r40 | torhal | 2014-11-20 14:59:38 +0000 (Thu, 20 Nov 2014) | 1 line
+Changed paths:
+   A /tags/r39-release (from /trunk:39)
+
+Tagging as r39-release
+------------------------------------------------------------------------
+r39 | torhal | 2014-10-25 22:20:55 +0000 (Sat, 25 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/BetterBlizzOptions.toc
+
+Updated ToC Interface to 60000
+------------------------------------------------------------------------
+r38 | Phanx | 2014-08-27 16:38:19 +0000 (Wed, 27 Aug 2014) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+   M /trunk/BetterBlizzOptions.toc
+
+- Fix packaging to include LibStub
+- Bump the TOC while I'm here
+------------------------------------------------------------------------

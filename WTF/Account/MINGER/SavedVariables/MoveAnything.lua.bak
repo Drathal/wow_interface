@@ -1,0 +1,56 @@
+
+MADB = {
+	["noMMMW"] = false,
+	["characters"] = {
+	},
+	["alwaysShowNudger"] = false,
+	["tooltips"] = true,
+	["profiles"] = {
+		["default"] = {
+			["name"] = "default",
+			["frames"] = {
+				["BagItemTooltipMover"] = {
+					["orgPos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
+					["name"] = "BagItemTooltipMover",
+					["pos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						728.000427246094, -- [4]
+						-560.000030517578, -- [5]
+					},
+				},
+				["GuildBankItemTooltipMover"] = {
+					["name"] = "GuildBankItemTooltipMover",
+				},
+				["TooltipMover"] = {
+					["orgPos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
+					["name"] = "TooltipMover",
+					["pos"] = {
+						"TOP", -- [1]
+						"UIParent", -- [2]
+						"TOP", -- [3]
+						719.111206054688, -- [4]
+						-603.666809082031, -- [5]
+					},
+				},
+			},
+		},
+	},
+	["closeGUIOnEscape"] = false,
+	["playSound"] = false,
+	["noBags"] = false,
+	["frameListRows"] = 18,
+}

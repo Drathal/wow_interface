@@ -1,0 +1,43 @@
+VER 3 00000000000000AD "Char" "INV_CHEST_LEATHER_09"
+/run if not InCombatLockdown() then ToggleCharacter("PaperDollFrame") end
+END
+VER 3 00000000000000A8 "combattext" "INV_SWORD_04"
+/console floatingCombatTextCombatDamage 0
+/console floatingCombatTextCombatHealing 0
+END
+VER 3 00000000000000A7 "Console" "134329"
+/console scriptErrors 0
+END
+VER 3 00000000000000C0 "Decursive" "INV_MISC_QUESTIONMARK"
+/stopcasting
+/cast [@mouseover,nomod,exists] Cleanse;  [@mouseover,exists,mod:ctrl] Cleanse; [@mouseover,exists,mod:shift] Cleanse
+END
+VER 3 0000000000000042 "Focus" "Spell_Shaman_ImprovedEarthShield"
+/focus [@mouseover][]
+/clearfocus [mod:alt]
+END
+VER 3 00000000000000AC "group" "ACHIEVEMENT_GUILDPERK_QUICK AND DEAD"
+/dungeonfinder
+END
+VER 3 00000000000000BC "mFood" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use item:113509
+#MMM
+END
+VER 3 00000000000000AA "Roll dice" "237285"
+/roll
+END
+VER 3 000000000000000F "t all" "INV_Pet_TigerGodCub.blp"
+#show
+/use 13
+/use 14
+END
+VER 3 00000000000000BF "TSMMacro" "Achievement_Faction_GoldenLotus"
+/click TSMVendoringSellAllButton
+/click TSMShoppingCancelConfirmationButton
+/click TSMAuctioningCancelButton
+/click TSMCraftNextButton
+/click TSMShoppingBuyoutConfirmationButton
+/click TSMAuctioningPostButton
+/click TSMShoppingBuyoutButton
+END

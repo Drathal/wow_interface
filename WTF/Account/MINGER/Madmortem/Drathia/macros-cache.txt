@@ -1,0 +1,40 @@
+VER 3 0100000000000004 "Barrier" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Power Word: Barrier
+END
+VER 3 0100000000000006 "Force" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Shining Force
+END
+VER 3 010000000000000B "Guardian" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Guardian Spirit
+END
+VER 3 0100000000000009 "HW:S" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Holy Word: Sanctify
+END
+VER 3 0100000000000005 "Levitate" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Levitate
+END
+VER 3 0100000000000007 "Mending" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Prayer of Mending
+END
+VER 3 0100000000000001 "Pain" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Pain Suppression
+END
+VER 3 0100000000000008 "PoH" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Prayer of Healing
+END
+VER 3 0100000000000003 "Radiance" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Power Word: Radiance
+END
+VER 3 010000000000000A "Serenity" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Holy Word: Serenity
+END

@@ -1,0 +1,10 @@
+
+TRANSMOGSHOP_SAVEDVARIABLES = {
+	["version"] = 1.3,
+	["flyoutPanelOpen"] = true,
+	["undressCharacter"] = false,
+	["dataGetAllScan"] = {
+	},
+	["lastTimeGetAllScan"] = {
+	},
+}

@@ -1,0 +1,16 @@
+## Title: Aye.AutoReadyCheck
+## Notes: Auto Ready Check
+## Depot: Aye
+## LoadOnDemand: 1
+## Author: Benio
+## Version: 1.0.11
+## Interface: 70200
+
+#utils
+utils/Buffs.lua
+utils/Player.lua
+
+#files
+Aye.AutoReadyCheck.lua
+Aye.AutoReadyCheck.options.lua
+Aye.AutoReadyCheck.options.default.lua

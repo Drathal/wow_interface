@@ -1,0 +1,33 @@
+
+zz_InfoclockDB = {
+	["global"] = {
+		["ldbicons"] = {
+			["zz_Infoclock"] = {
+				["minimapPos"] = 301.168829445027,
+				["hide"] = true,
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["zz_Infoclock"] = {
+				["datecolor"] = "ffffff",
+				["datestring"] = "%A, %d.%B",
+				["showLatency"] = true,
+				["ldbstring"] = "%clock %latency %fps",
+				["update"] = 2,
+				["showClock"] = true,
+				["showFPS"] = true,
+				["fpsstring"] = "%fps FPS",
+				["clockstring"] = "%H:%M",
+				["latencystring"] = "%world ms",
+				["fpscolor"] = "ffffff",
+				["clockcolor"] = "ffffff",
+				["latencycolor"] = "ffff00",
+			},
+		},
+	},
+}

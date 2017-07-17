@@ -1,0 +1,46 @@
+
+SyLevelDB = {
+	["version"] = "2.001",
+	["FontSettings"] = {
+		["flags"] = "OUTLINE",
+		["offsety"] = 3,
+		["typeface"] = "Accidental Presidency",
+		["align"] = "TOPLEFT",
+		["offsetx"] = -1,
+		["reference"] = "TOPLEFT",
+		["size"] = 14,
+	},
+	["EnabledFilters"] = {
+		["Item level text"] = {
+			["merchant"] = true,
+			["bags"] = true,
+			["tradeskill"] = true,
+			["char"] = true,
+			["gbank"] = true,
+			["char-flyout"] = true,
+			["loot"] = true,
+			["trade"] = true,
+			["mail"] = true,
+			["inspect"] = true,
+			["voidstore"] = true,
+			["bank"] = true,
+		},
+	},
+	["EnabledPipes"] = {
+		["merchant"] = true,
+		["bags"] = true,
+		["tradeskill"] = true,
+		["char"] = true,
+		["gbank"] = true,
+		["char-flyout"] = true,
+		["loot"] = true,
+		["trade"] = true,
+		["mail"] = true,
+		["inspect"] = true,
+		["voidstore"] = true,
+		["bank"] = true,
+	},
+	["FilterSettings"] = {
+	},
+	["ColorFunc"] = 4,
+}
