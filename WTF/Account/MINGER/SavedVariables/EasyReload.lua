@@ -1,2 +1,0 @@
-
-EasyReloadDB = nil

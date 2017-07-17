@@ -1,6 +1,0 @@
-
-mouseSonarOpt = {
-	["onMouselook"] = true,
-	["onlyCombat"] = true,
-	["pulseSize"] = 256,
-}

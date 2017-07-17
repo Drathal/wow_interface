@@ -1,2 +1,0 @@
-
-LS_PROSPECTOR_CFG_GLOBAL = nil

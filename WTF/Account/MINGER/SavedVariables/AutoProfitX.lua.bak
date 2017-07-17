@@ -1,9 +1,0 @@
-
-AutoProfitXDB = {
-	["global"] = {
-		["Version"] = "r88",
-	},
-	["profileKeys"] = {
-		["Drathair - Blackhand"] = "Drathair - Blackhand",
-	},
-}

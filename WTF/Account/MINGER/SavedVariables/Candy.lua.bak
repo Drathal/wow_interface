@@ -1,9 +1,0 @@
-
-CandyDB = {
-	["profileKeys"] = {
-		["Drathol - Blackhand"] = "Drathol - Blackhand",
-	},
-	["global"] = {
-		["locked"] = true,
-	},
-}
