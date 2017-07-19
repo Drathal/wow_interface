@@ -1,17 +1,21 @@
 
 DecursiveDB = {
-	["global"] = {
-		["LastVersionAnnounce"] = 1500058740,
+	["profileKeys"] = {
+		["Darlaxle - Blackhand"] = "Default",
+		["Drathal - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 	},
 	["class"] = {
-		["PALADIN"] = {
+		["PRIEST"] = {
 			["CureOrder"] = {
 				3, -- [1]
-				-15, -- [2]
+				2, -- [2]
 				nil, -- [3]
 				-14, -- [4]
-				[8] = 1,
-				[16] = 2,
+				[8] = -15,
+				[16] = 1,
 				[32] = -16,
 			},
 		},
@@ -37,28 +41,24 @@ DecursiveDB = {
 				[32] = 1,
 			},
 		},
-		["PRIEST"] = {
+		["PALADIN"] = {
 			["CureOrder"] = {
-				3, -- [1]
-				2, -- [2]
+				-13, -- [1]
+				-15, -- [2]
 				nil, -- [3]
 				-14, -- [4]
-				[8] = -15,
-				[16] = 1,
+				[8] = 1,
+				[16] = 2,
 				[32] = -16,
 			},
 		},
 	},
-	["profileKeys"] = {
-		["Darlaxle - Blackhand"] = "Default",
-		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1500486739,
 	},
 	["profiles"] = {
 		["Default"] = {
-			["Print_Error"] = false,
+			["DebuffsFrameMaxCount"] = 40,
 			["DebuffsFrameStickToRight"] = true,
 			["AutoHideMUFs"] = 2,
 			["HideLiveList"] = true,
@@ -77,7 +77,7 @@ DecursiveDB = {
 			["Amount_Of_Afflicted"] = 1,
 			["DebuffsFrameContainer_x"] = 545.422964926001,
 			["DebuffsFrameElemBorderAlpha"] = 0.5,
-			["DebuffsFrameMaxCount"] = 40,
+			["Print_Error"] = false,
 			["Print_ChatFrame"] = false,
 		},
 	},

@@ -5,7 +5,7 @@ PandariaTreasuresDB = {
 		["Drathair - Blackhand"] = "base",
 		["Sungleave - Blackhand"] = "Default",
 		["Drathon - Blackhand"] = "base",
-		["Dronthal - Blackhand"] = "Default",
+		["Dorthal - Blackhand"] = "Default",
 		["Draltar - Blackhand"] = "Default",
 		["Modranthir - Madmortem"] = "Default",
 		["Darlaxle - Blackhand"] = "Default",
@@ -15,7 +15,7 @@ PandariaTreasuresDB = {
 		["Drathal - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
-		["Dorthal - Blackhand"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

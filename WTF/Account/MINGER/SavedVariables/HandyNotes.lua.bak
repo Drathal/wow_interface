@@ -15,10 +15,10 @@ HandyNotesDB = {
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 		["Drahdo - Blackhand"] = "Drahdo - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
+		["Drathair - Blackhand"] = "base",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
-		["Drathair - Blackhand"] = "base",
+		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -28,10 +28,10 @@ HandyNotesDB = {
 		["Drathol - Blackhand"] = {
 		},
 		["Modranthir - Madmortem"] = {
-			["icon_alpha"] = 0.5,
+			["icon_scale_minimap"] = 0.79,
 			["icon_alpha_minimap"] = 0.49,
 			["icon_scale"] = 0.79,
-			["icon_scale_minimap"] = 0.79,
+			["icon_alpha"] = 0.5,
 		},
 		["Modranthir - Blackhand"] = {
 		},
@@ -40,17 +40,17 @@ HandyNotesDB = {
 		["Drathal - Madmortem"] = {
 		},
 		["base"] = {
-			["icon_alpha"] = 0.5,
+			["icon_scale_minimap"] = 0.79,
 			["icon_alpha_minimap"] = 0.49,
 			["icon_scale"] = 0.79,
-			["icon_scale_minimap"] = 0.79,
+			["icon_alpha"] = 0.5,
 		},
 		["Drathair - Blackhand"] = {
 			["enabled"] = false,
 			["icon_scale"] = 0.79,
 			["icon_alpha_minimap"] = 0.49,
-			["icon_scale_minimap"] = 0.79,
 			["icon_alpha"] = 0.5,
+			["icon_scale_minimap"] = 0.79,
 		},
 		["Sungleave - Blackhand"] = {
 		},
@@ -61,20 +61,20 @@ HandyNotesDB = {
 		["Drahdo - Blackhand"] = {
 		},
 		["Dronthal - Madmortem"] = {
-			["icon_alpha_minimap"] = 0.75,
 			["icon_scale_minimap"] = 0.89,
+			["icon_alpha_minimap"] = 0.75,
 		},
-		["Draltair - Blackhand"] = {
-			["enabled"] = false,
+		["Dronthal - Blackhand"] = {
 		},
-		["Darlaxle - Blackhand"] = {
+		["Draltar - Blackhand"] = {
 		},
 		["Drahmoon - Madmortem"] = {
 			["icon_scale_minimap"] = 0.7,
 		},
-		["Draltar - Blackhand"] = {
+		["Darlaxle - Blackhand"] = {
 		},
-		["Dronthal - Blackhand"] = {
+		["Draltair - Blackhand"] = {
+			["enabled"] = false,
 		},
 	},
 }
@@ -94,10 +94,10 @@ HandyNotes_HandyNotesDB = {
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 		["Drahdo - Blackhand"] = "Drahdo - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
+		["Drathair - Blackhand"] = "base",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
-		["Drathair - Blackhand"] = "base",
+		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -128,15 +128,15 @@ HandyNotes_HandyNotesDB = {
 		},
 		["Dronthal - Madmortem"] = {
 		},
-		["Draltair - Blackhand"] = {
-		},
-		["Darlaxle - Blackhand"] = {
-		},
-		["Drahmoon - Madmortem"] = {
+		["Dronthal - Blackhand"] = {
 		},
 		["Draltar - Blackhand"] = {
 		},
-		["Dronthal - Blackhand"] = {
+		["Drahmoon - Madmortem"] = {
+		},
+		["Darlaxle - Blackhand"] = {
+		},
+		["Draltair - Blackhand"] = {
 		},
 	},
 }

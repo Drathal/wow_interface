@@ -2,32 +2,55 @@
 TEST_CONFIG = nil
 XIVBarDB = {
 	["char"] = {
-		["Drahmoon - Madmortem"] = {
-			["portItem"] = {
-				["portId"] = 140192,
-				["text"] = "Dalaran",
-			},
-		},
 		["Dronthal - Madmortem"] = {
 			["portItem"] = {
-				["portId"] = 140192,
 				["text"] = "Dalaran",
+				["portId"] = 140192,
+			},
+		},
+		["Drahmoon - Madmortem"] = {
+			["portItem"] = {
+				["text"] = "Dalaran",
+				["portId"] = 140192,
 			},
 		},
 	},
+	["factionrealm"] = {
+		["Alliance - Madmortem"] = {
+			["Dronthal"] = {
+				["dailyMoney"] = -775616666,
+				["sessionMoney"] = 0,
+				["currentMoney"] = 156551518,
+				["lastLoginDate"] = 20170714,
+				["daily"] = 0,
+			},
+			["Drahmoon"] = {
+				["lastLoginDate"] = 20170719,
+				["dailyMoney"] = 0,
+				["currentMoney"] = 707261350,
+				["sessionMoney"] = 0,
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+	},
 	["profiles"] = {
+		["Dronthal - Madmortem"] = {
+		},
 		["Drahmoon - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
-					["b"] = 1,
-					["g"] = 1,
 					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["b"] = 0,
-					["g"] = 0,
 					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
 				},
 			},
 			["text"] = {
@@ -45,8 +68,8 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["barCC"] = true,
 					["showTooltip"] = false,
+					["barCC"] = true,
 				},
 				["travel"] = {
 					["enabled"] = false,
@@ -76,35 +99,14 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["clock"] = {
-					["hideEventText"] = true,
-					["timeFormat"] = "twoFourNoZero",
-				},
 				["system"] = {
 					["showTooltip"] = false,
 					["showAllOnShift"] = false,
 				},
-			},
-		},
-		["Dronthal - Madmortem"] = {
-		},
-	},
-	["profileKeys"] = {
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
-	},
-	["factionrealm"] = {
-		["Alliance - Madmortem"] = {
-			["Drahmoon"] = {
-				["currentMoney"] = 707261350,
-				["sessionMoney"] = -963372230,
-			},
-			["Dronthal"] = {
-				["dailyMoney"] = -775616666,
-				["sessionMoney"] = 0,
-				["daily"] = 0,
-				["currentMoney"] = 156551518,
-				["lastLoginDate"] = 20170714,
+				["clock"] = {
+					["hideEventText"] = true,
+					["timeFormat"] = "twoFourNoZero",
+				},
 			},
 		},
 	},

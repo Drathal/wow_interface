@@ -4,8 +4,8 @@ KkthnxUIDataPerChar = {
 	["AutoInvite"] = false,
 	["Movers"] = {
 	},
-	["BarsLocked"] = false,
-	["RightBars"] = 2,
-	["BottomBars"] = 3,
 	["Install"] = true,
+	["BottomBars"] = 3,
+	["RightBars"] = 2,
+	["BarsLocked"] = false,
 }

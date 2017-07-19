@@ -10,7 +10,7 @@ VER 3 00000000000000A7 "Console" "134329"
 END
 VER 3 00000000000000C0 "Decursive" "INV_MISC_QUESTIONMARK"
 /stopcasting
-/cast [@mouseover,nomod,exists] Cleanse Toxins;  [@mouseover,exists,mod:ctrl] Cleanse Toxins; [@mouseover,exists,mod:shift] Cleanse Toxins
+/cast [@mouseover,nomod,exists] Purify;  [@mouseover,exists,mod:ctrl] Dispel Magic; [@mouseover,exists,mod:shift] Purify
 END
 VER 3 0000000000000042 "Focus" "Spell_Shaman_ImprovedEarthShield"
 /focus [@mouseover][]
@@ -21,7 +21,7 @@ VER 3 00000000000000AC "group" "ACHIEVEMENT_GUILDPERK_QUICK AND DEAD"
 END
 VER 3 00000000000000BC "mFood" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use item:113509
+/use item:133572
 #MMM
 END
 VER 3 00000000000000AA "Roll dice" "237285"

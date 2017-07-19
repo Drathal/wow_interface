@@ -4,35 +4,22 @@ XIVBarDB = {
 	["char"] = {
 		["Dronthal - Madmortem"] = {
 			["portItem"] = {
-				["text"] = "Dalaran",
 				["portId"] = 140192,
+				["text"] = "Dalaran",
 			},
 		},
 		["Drahmoon - Madmortem"] = {
+			["portItem"] = {
+				["portId"] = 140192,
+				["text"] = "Dalaran",
+			},
+		},
+		["Drathia - Madmortem"] = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
 			},
 		},
-	},
-	["factionrealm"] = {
-		["Alliance - Madmortem"] = {
-			["Dronthal"] = {
-				["dailyMoney"] = -775616666,
-				["sessionMoney"] = 0,
-				["lastLoginDate"] = 20170714,
-				["currentMoney"] = 156551518,
-				["daily"] = 0,
-			},
-			["Drahmoon"] = {
-				["currentMoney"] = 707261350,
-				["sessionMoney"] = -963372230,
-			},
-		},
-	},
-	["profileKeys"] = {
-		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 	},
 	["profiles"] = {
 		["Dronthal - Madmortem"] = {
@@ -40,15 +27,15 @@ XIVBarDB = {
 		["Drahmoon - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
-					["r"] = 1,
-					["g"] = 1,
 					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["r"] = 0,
-					["g"] = 0,
 					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
 				},
 			},
 			["text"] = {
@@ -57,8 +44,8 @@ XIVBarDB = {
 			},
 			["general"] = {
 				["barPosition"] = "TOP",
-				["ohHide"] = true,
 				["moduleSpacing"] = 29,
+				["ohHide"] = true,
 			},
 			["modules"] = {
 				["tradeskill"] = {
@@ -66,19 +53,19 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["showTooltip"] = false,
 					["barCC"] = true,
+					["showTooltip"] = false,
 				},
 				["travel"] = {
 					["enabled"] = false,
 				},
 				["microMenu"] = {
-					["chat"] = false,
-					["help"] = false,
-					["quest"] = false,
-					["talent"] = false,
 					["char"] = false,
+					["help"] = false,
+					["talent"] = false,
 					["pvp"] = false,
+					["quest"] = false,
+					["chat"] = false,
 				},
 				["currency"] = {
 					["enabled"] = false,
@@ -97,14 +84,44 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["system"] = {
-					["showTooltip"] = false,
-					["showAllOnShift"] = false,
-				},
 				["clock"] = {
 					["hideEventText"] = true,
 					["timeFormat"] = "twoFourNoZero",
 				},
+				["system"] = {
+					["showAllOnShift"] = false,
+					["showTooltip"] = false,
+				},
+			},
+		},
+		["Drathia - Madmortem"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathia - Madmortem"] = "Drathia - Madmortem",
+	},
+	["factionrealm"] = {
+		["Alliance - Madmortem"] = {
+			["Dronthal"] = {
+				["dailyMoney"] = -775616666,
+				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["currentMoney"] = 156551518,
+				["lastLoginDate"] = 20170714,
+			},
+			["Drathia"] = {
+				["lastLoginDate"] = 20170719,
+				["dailyMoney"] = 0,
+				["currentMoney"] = 12864863,
+				["sessionMoney"] = 0,
+			},
+			["Drahmoon"] = {
+				["currentMoney"] = 707261350,
+				["dailyMoney"] = 0,
+				["lastLoginDate"] = 20170719,
+				["sessionMoney"] = 0,
 			},
 		},
 	},

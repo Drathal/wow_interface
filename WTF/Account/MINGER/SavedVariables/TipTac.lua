@@ -20,26 +20,26 @@ TipTac_Config = {
 	["manaBarText"] = "none",
 	["classification_trivial"] = "~%s ",
 	["classification_worldboss"] = "%s|r (Boss) ",
-	["fontSizeDelta"] = 0,
+	["barTexture"] = "Interface\\Addons\\Grid2\\media\\white16x16",
 	["showTalents"] = false,
 	["colorNameByClass"] = true,
 	["iconClass"] = false,
 	["classification_rareelite"] = "+%s|r (Rare) ",
-	["left"] = 1505.88903808594,
-	["classColoredBorder"] = true,
+	["optionsBottom"] = 574.222045898438,
+	["optionsLeft"] = 637.333740234375,
 	["targetYouText"] = "<<YOU>>",
 	["hideUFTipsInCombat"] = true,
 	["top"] = 337.222045898438,
+	["fontFace"] = "Fonts\\FRIZQT__.TTF",
+	["gradientTip"] = false,
+	["powerBarText"] = "none",
 	["tipColor"] = {
 		0, -- [1]
 		0, -- [2]
 		0, -- [3]
 		1, -- [4]
 	},
-	["gradientTip"] = false,
-	["powerBarText"] = "none",
-	["fontFace"] = "Fonts\\FRIZQT__.TTF",
-	["optionsLeft"] = 637.333740234375,
-	["optionsBottom"] = 574.222045898438,
-	["barTexture"] = "Interface\\Addons\\Grid2\\media\\white16x16",
+	["classColoredBorder"] = true,
+	["left"] = 1505.88903808594,
+	["fontSizeDelta"] = 0,
 }
