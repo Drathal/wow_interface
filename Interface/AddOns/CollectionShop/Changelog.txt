@@ -1,3 +1,15 @@
+**2.02**
+
+- Release date: 07/18/2017
+- Bug fix: In rare situations an Appearance Shop would get stuck at "Filtering, one moment please...".
+
+**2.01**
+
+- Release date: 07/18/2017
+- Bug fix: In some cases not all Sources were being gathered to determine if an Appearance was collected (API inconsistencies) and may have returned Collected items as being Not Collected.
+- Bug fix: Rarely a noticable effect but in the event an Appearance Shop was performed within a few seconds of login or reload the number of results may have been reduced. The internal timeout has been increased for checking Sources to compensate for the game's info lag during that time.
+- Live checkbox now disabled while scanning to prevent accidental cancellation of a GetAll scan.
+
 **2.0**
 
 - Release date: 07/16/2017
@@ -24,7 +36,7 @@
 **1.13**
 
 - Release date: 03/31/2017
-- Bug fix, in patch 7.2 some Auction House categories were changed causing issues in Pets and Toys mode.
+- Bug fix: In patch 7.2 some Auction House categories were changed causing issues in Pets and Toys mode.
 
 **1.12**
 
@@ -34,7 +46,7 @@
 **1.11**
 
 - Release date: 01/10/2017
-- Bug fix, Lua error to do with money color codes introduced in last update accidentally.
+- Bug fix: Lua error to do with money color codes introduced in last update accidentally.
 
 **1.10**
 
@@ -52,7 +64,7 @@
 **1.08**
 
 - Release date: 12/01/2016
-- Bug fix, LUA error when looting a new Appearance from a Timewalking Dungeon after using CollectionShop Appearances mode.
+- Bug fix: Lua error when looting a new Appearance from a Timewalking Dungeon after using CollectionShop Appearances mode.
 
 **1.07**
 
@@ -62,14 +74,14 @@
 **1.06**
 
 - Release date: 10/02/2016
-- Bug fix, a very few Appearances were showing as Not Collected even when they were due to being "Collected" in one Appearance category while being "Not Collected" in another. Thanks to Curse user Tarasitarik for reporting this issue.
+- Bug fix: A very few Appearances were showing as Not Collected even when they were due to being "Collected" in one Appearance category while being "Not Collected" in another. Thanks to Curse user Tarasitarik for reporting this issue.
 
 **1.05**
 
 - Release date: 09/11/2016
 - You must first exit "World of Warcraft" completely.
 - Improved detection of Not Collected vs Collected on Mounts and Toys
-- Bug fix, in rare situations changing options would close the options frame unintentionally.
+- Bug fix: In rare situations changing options would close the options frame unintentionally.
 - New optional results column for users of the popular TradeSkillMaster addon, "% Item Value". This will allow viewing and sorting by this value to determine how good of a price you're getting on your collection buyouts.
 - New option for previously mentioned column, "Item Value Source". This option is the price source or custom price source used to calculate the Item Value.
 
@@ -86,13 +98,13 @@
 **1.02**
 
 - Release date: 09/08/2016
-- Bug fix, rare LUA error on slow connections caused by previous increase in filter retry attempts.
-- Bug fix, sometimes on slow connections, auctions were said to be no longer available when really there was just not enough time given to find the information required. Increased retry attempts to compensate, this should no longer happen.
+- Bug fix: Rare Lua error on slow connections caused by previous increase in filter retry attempts.
+- Bug fix: Sometimes on slow connections, auctions were said to be no longer available when really there was just not enough time given to find the information required. Increased retry attempts to compensate, this should no longer happen.
 
 **1.01**
 
 - Release date: 09/07/2016
-- Bug fix, occasionally items Already known would be listed as Not Collected due to slow response in retrieving item information. I've increased retry attempts to retrieve item information for filters to avoid inaccurate results. Should an item still fail during filtering a chat message will be shown.
+- Bug fix: Occasionally items Already known would be listed as Not Collected due to slow response in retrieving item information. I've increased retry attempts to retrieve item information for filters to avoid inaccurate results. Should an item still fail during filtering a chat message will be shown.
 
 **1.0**
 

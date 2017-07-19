@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- 	Leatrix Plus 7.2.10 (17th July 2017, www.leatrix.com)
+-- 	Leatrix Plus 7.2.11 (18th July 2017, www.leatrix.com)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:Player		72:Profile		
@@ -20,7 +20,7 @@
 	local void
 
 --	Version
-	LeaPlusLC["AddonVer"] = "7.2.10"
+	LeaPlusLC["AddonVer"] = "7.2.11"
 
 ----------------------------------------------------------------------
 -- 	Locale
@@ -8406,10 +8406,9 @@
 			----------------------------------------------------------------------
 
 			-- Position general tooltip
-			hooksecurefunc("GameTooltip_SetDefaultAnchor", function(tooltip, parent)
+			hooksecurefunc("GameTooltip_SetDefaultAnchor", function()
 				local a,b,c,d,e = GameTooltip:GetPoint()
 				if a ~= "BOTTOMRIGHT" or c ~= "BOTTOMRIGHT" then
-					GameTooltip:SetOwner(parent, "ANCHOR_NONE")
 					GameTooltip:ClearAllPoints()
 				end
 				GameTooltip:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", LeaPlusLC["TipOffsetX"], LeaPlusLC["TipOffsetY"]);
@@ -8420,7 +8419,6 @@
 				if parent == UIParent then
 					local a,b,c,d,e = PetBattlePrimaryAbilityTooltip:GetPoint()
 					if a ~= "BOTTOMRIGHT" or c ~= "BOTTOMRIGHT" then
-						PetBattlePrimaryAbilityTooltip:SetOwner(parent, "ANCHOR_NONE")
 						PetBattlePrimaryAbilityTooltip:ClearAllPoints()
 					end
 					PetBattlePrimaryAbilityTooltip:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", LeaPlusLC["TipOffsetX"], LeaPlusLC["TipOffsetY"]);

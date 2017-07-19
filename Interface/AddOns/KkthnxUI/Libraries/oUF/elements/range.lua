@@ -102,7 +102,11 @@ local function getUnit(unit)
 end
 
 local function friendlyIsInRange(unit)
-	if CheckInteractDistance(unit, 1) and UnitInPhase(unit) then --Inspect (28 yards) and same phase as you
+	if not UnitInPhase(unit) then --Different phase
+		return false
+	end
+
+	if CheckInteractDistance(unit, 1) then --Inspect (28 yards)
 		return true
 	end
 
@@ -186,27 +190,27 @@ local OnRangeUpdate = function(self, elapsed)
 				if(unit) then
 					if UnitCanAttack("player", unit) then
 						if enemyIsInRange(unit) then
-							--object:SetAlpha(range.insideAlpha)
+							object:SetAlpha(range.insideAlpha)
 						elseif enemyIsInLongRange(unit) then
-							--object:SetAlpha(range.insideAlpha)
+							object:SetAlpha(range.insideAlpha)
 						else
-							--object:SetAlpha(range.outsideAlpha)
+							object:SetAlpha(range.outsideAlpha)
 						end
 					elseif UnitIsUnit(unit, "pet") then
 						if petIsInRange(unit) then
-							--object:SetAlpha(range.insideAlpha)
+							object:SetAlpha(range.insideAlpha)
 						else
-							--object:SetAlpha(range.outsideAlpha)
+							object:SetAlpha(range.outsideAlpha)
 						end
 					else
 						if friendlyIsInRange(unit) and UnitIsConnected(unit) then
-							--object:SetAlpha(range.insideAlpha)
+							object:SetAlpha(range.insideAlpha)
 						else
-							--object:SetAlpha(range.outsideAlpha)
+							object:SetAlpha(range.outsideAlpha)
 						end
 					end
 				else
-					--object:SetAlpha(range.insideAlpha)
+					object:SetAlpha(range.insideAlpha)
 				end
 			end
 		end
@@ -225,7 +229,7 @@ local Enable = function(self)
 			OnRangeFrame:SetScript("OnUpdate", OnRangeUpdate)
 		end
 
-		--OnRangeFrame:Show()
+		OnRangeFrame:Show()
 
 		return true
 	end
@@ -237,13 +241,13 @@ local Disable = function(self)
 		for k, frame in next, _FRAMES do
 			if(frame == self) then
 				tremove(_FRAMES, k)
-				--frame:SetAlpha(1)
+				frame:SetAlpha(1)
 				break
 			end
 		end
 
 		if(#_FRAMES == 0) then
-			--OnRangeFrame:Hide()
+			OnRangeFrame:Hide()
 		end
 	end
 end

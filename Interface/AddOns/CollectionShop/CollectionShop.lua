@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 local NS = select( 2, ... );
 local L = NS.localization;
-NS.versionString = "2.0";
+NS.versionString = "2.02";
 NS.version = tonumber( NS.versionString );
 --
 NS.options = {};
@@ -913,7 +913,7 @@ NS.AuctionGroup_AuctionMissing = function( groupKey, OnMessageOnly )
 		else
 			-- Some auctions removed, update and filter group
 			NS.AuctionDataGroups_UpdateGroup( groupKey );
-			local groupId = NS.auction.data.groups[groupKey][1]; -- itemId(1) or speciesID(1) or itemLink(1) or appearanceID(1)
+			local groupId = NS.auction.data.groups[groupKey][1]; -- itemId(1) or speciesID(1) or itemLink(1) or appearanceID(1) or sourceID(1)
 			NS.scan:FilterGroups( function()
 				-- Was group removed?
 				if not NS.AuctionDataGroups_FindGroupKey( groupId ) then
@@ -1104,7 +1104,7 @@ end
 NS.AuctionDataGroups_Filter = function( groupKey, FilterFunction, OnGroupsComplete, filterNotMatch, filter )
 	if not filter then return OnGroupsComplete(); end
 	--
-	local groupKeyStart,groupKeyStop,groupBatchNum,groupBatchRetry,filterGroups,NextGroup,GroupsComplete;
+	local groupKeyStart,groupKeyStop,groupBatchNum,groupBatchRetry,filterGroupIds,NextGroup,GroupsComplete;
 	local groupKeyList = type( groupKey ) == "table" and CopyTable( groupKey ) or nil;
 	local groupKey = not groupKeyList and groupKey or nil;
 	--
@@ -1115,10 +1115,14 @@ NS.AuctionDataGroups_Filter = function( groupKey, FilterFunction, OnGroupsComple
 			if not groupKeyList or groupKeyList[groupKey] then
 				if not groupBatchRetry.inProgress or ( groupBatchRetry.inProgress and groupBatchRetry.groupBatchNum[groupBatchNum] ) then -- Not currently retrying or retrying and match
 					local match = FilterFunction( NS.auction.data.groups[groupKey] );
+					--
+					-- DEBUG
+					--
+					-- if match == "retry" and groupBatchRetry.attempts == groupBatchRetry.attemptsMax then
+					-- 	NS.Print( string.format( L["Filter failed at %s for %s"], RETRIEVING_ITEM_INFO, NS.auction.data.groups[groupKey][5][1][2] ) ); -- auctions(5) first auction(1) itemLink(2)
+					-- end
+					--
 					-- Validate - ignore, retry, or match
-					if match == "retry" and groupBatchRetry.attempts == groupBatchRetry.attemptsMax then
-						NS.Print( string.format( L["Filter failed at %s for %s"], RETRIEVING_ITEM_INFO, NS.auction.data.groups[groupKey][5][1][2] ) ); -- DEBUG
-					end
 					if match == "retry" and groupBatchRetry.attempts < groupBatchRetry.attemptsMax then
 						-- Retry required, add it
 						if not groupBatchRetry.inProgress then
@@ -1129,7 +1133,7 @@ NS.AuctionDataGroups_Filter = function( groupKey, FilterFunction, OnGroupsComple
 						--
 						-- FILTER
 						--
-						table.insert( filterGroups, groupKey );
+						table.insert( filterGroupIds, NS.auction.data.groups[groupKey][1] ); -- groupId(1)
 					end
 					-- Retry successful, remove it
 					if groupBatchRetry.inProgress and ( not match or match ~= "retry" ) then
@@ -1170,27 +1174,22 @@ NS.AuctionDataGroups_Filter = function( groupKey, FilterFunction, OnGroupsComple
 	--
 	GroupsComplete = function()
 		if NS.scan.status ~= "scanning" and NS.scan.status ~= "buying" then return end -- Check for Reset
-		if filter == "analyze" then return OnGroupsComplete( filterGroups ); end -- DO NOT REMOVE GROUPS - Just return for analysis
+		if filter == "analyze" then return OnGroupsComplete( filterGroupIds ); end -- Return for analysis -- DO NOT REMOVE GROUPS --
 		--
-		local groupsRemoved = 0;
-		local recheckAppearances = {}; -- APPEARANCES ONLY
+		local recheckGroupIds = {}; -- APPEARANCES ONLY
 		-- Remove filtered auction or group
-		for i = 1, #filterGroups do
-			local groupKey = filterGroups[i] - groupsRemoved;
-			--NS.Print( NS.auction.data.groups[groupKey][5][1][2] ); -- DEBUG
-			if ( NS.mode == "APPEARANCES" and NS.AuctionDataGroups_RemoveAuction( groupKey ) or NS.AuctionDataGroups_RemoveGroup( groupKey ) ) == "group" then
-				-- Group removed
-				groupsRemoved = groupsRemoved + 1;
-			else
-				-- Auction removed - APPEARANCES ONLY
-				table.insert( recheckAppearances, NS.auction.data.groups[groupKey][1] ); -- appearanceID(1)
+		for i = 1, #filterGroupIds do
+			local groupKey = NS.AuctionDataGroups_FindGroupKey( filterGroupIds[i] );
+			if ( NS.mode == "APPEARANCES" and NS.AuctionDataGroups_RemoveAuction( groupKey ) or NS.AuctionDataGroups_RemoveGroup( groupKey ) ) ~= "group" then
+				-- Auction removed, group must be rechecked -- APPEARANCES ONLY --
+				table.insert( recheckGroupIds, filterGroupIds[i] ); -- i.e. appearanceID or sourceID
 			end
 		end
 		-- Recheck auction removed groups, their new first auction may be a match
-		if #recheckAppearances > 0 then
+		if #recheckGroupIds > 0 then
 			local recheckGroupKeys = {};
-			for i = 1, #recheckAppearances do
-				recheckGroupKeys[NS.AuctionDataGroups_FindGroupKey( recheckAppearances[i] )] = true;
+			for i = 1, #recheckGroupIds do
+				recheckGroupKeys[NS.AuctionDataGroups_FindGroupKey( recheckGroupIds[i] )] = true;
 			end
 			return NS.AuctionDataGroups_Filter( recheckGroupKeys, FilterFunction, OnGroupsComplete, filterNotMatch, filter );
 		else
@@ -1204,7 +1203,7 @@ NS.AuctionDataGroups_Filter = function( groupKey, FilterFunction, OnGroupsComple
 	groupBatchNum = 1;
 	groupBatchSize = 50;
 	groupBatchRetry = { inProgress = false, count = 0, attempts = 0, attemptsMax = 50, groupBatchNum = {} };
-	filterGroups = {};
+	filterGroupIds = {};
 	NextGroup();
 end
 --
@@ -1280,6 +1279,7 @@ function NS.scan:Start( type )
 	AuctionFrameCollectionShop_JumbotronFrame:Hide();
 	AuctionFrameCollectionShop_DialogFrame_BuyoutFrame_BuyoutButton:Disable();
 	AuctionFrameCollectionShop_DialogFrame_BuyoutFrame_CancelButton:Disable();
+	AuctionFrameCollectionShop_LiveCheckButton:Disable();
 	AuctionFrameCollectionShop_ScanButton:Disable();
 	AuctionFrameCollectionShop_BuyAllButton:Disable();
 	NS.disableFlyoutChecks = true;
@@ -1541,7 +1541,7 @@ function NS.scan:GetAuctionItemInfo( index )
 					if quality > 1 then -- Transmoggable gear is uncommon or higher quality
 						appearanceID,sourceID = NS.GetAppearanceSourceInfo( itemLink );
 						if not appearanceID then
-							return "retry";
+							return "retry"; -- Retry for appearanceID or if item has none then prevent inclusion after max retries
 						end
 						if not NS.FindKeyByValue( data["appearanceSources"], sourceID ) then
 							data["appearanceSources"][#data["appearanceSources"] + 1] = sourceID; -- List of unique sources to update appearanceCollection
@@ -1735,7 +1735,7 @@ function NS.scan:UpdateAppearanceCollection()
 	--
 	NS.BatchDataLoop( {
 		data = data1["appearanceSources"],
-		attemptsMax = 10,
+		attemptsMax = 50,
 		AbortFunction = function()
 			if self.status ~= "scanning" then
 				return true;
@@ -1754,10 +1754,11 @@ function NS.scan:UpdateAppearanceCollection()
 						if not NS.appearanceCollection.appearances[appearanceID] then
 							local appearanceCollected = sourceCollected;
 							if not sourceCollected then
-								local sources = C_TransmogCollection.GetAppearanceSources( appearanceID );
-								if sources then -- Empty if uncollected appearance has only unlisted sources
+								local sources = C_TransmogCollection.GetAllAppearanceSources( appearanceID );
+								if sources then -- You never know, this API is wonky sometimes
 									for i = 1, #sources do
-										if sources[i].isCollected then
+										local _,_,_,_,isCollected = C_TransmogCollection.GetAppearanceSourceInfo( sources[i] );
+										if isCollected then
 											appearanceCollected = true;
 											break; -- Stop ASAP
 										end
@@ -2070,6 +2071,7 @@ function NS.scan:Complete( cancelMessage )
 	NS.AuctionSortButtons_Action( "Enable" );
 	NS.disableFlyoutChecks = false;
 	AuctionFrameCollectionShop_FlyoutPanel_ScrollFrame:Update();
+	AuctionFrameCollectionShop_LiveCheckButton:Enable();
 	AuctionFrameCollectionShop_ScanButton:Reset();
 	AuctionFrameCollectionShop_ShopButton:Reset();
 end

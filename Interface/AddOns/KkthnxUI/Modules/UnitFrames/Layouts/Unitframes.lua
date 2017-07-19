@@ -325,10 +325,6 @@ local function UpdateUnitFrameLayout(frame)
 		return
 	end
 
-	if MatchUnit == "party" and C.Unitframe.Party == false then
-		return
-	end
-
 	-- Frame Size
 	frame:SetSize(data.siz.w, data.siz.h)
 	frame:SetScale(C.Unitframe.Scale or 1)
@@ -824,10 +820,10 @@ local function CreateUnitLayout(self, unit)
 	K.CreateAuras(self)
 
 	-- Range Fader (We use oUF_SpellRange)
-	--self.Range = {
-	--	insideAlpha = 1,
-	--	outsideAlpha = C.UnitframePlugins.OORAlpha,
-	--}
+	self.Range = {
+		insideAlpha = 1,
+		outsideAlpha = C.UnitframePlugins.OORAlpha,
+	}
 
 	return self
 end
