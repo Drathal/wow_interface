@@ -4,7 +4,7 @@ AlreadyKnown: enabled
 AskMrRobot: enabled
 Auctionator: disabled
 ConfirmSP: enabled
-BetterBlizzOptions: enabled
+BetterBlizzOptions: disabled
 Broker_WorldQuests: enabled
 cargBags_Nivaya: disabled
 Chatter: enabled

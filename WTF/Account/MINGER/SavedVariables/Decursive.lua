@@ -1,12 +1,12 @@
 
 DecursiveDB = {
 	["global"] = {
-		["LastVersionAnnounce"] = 1500486739,
+		["LastVersionAnnounce"] = 1501110340,
 	},
 	["class"] = {
 		["PALADIN"] = {
 			["CureOrder"] = {
-				-13, -- [1]
+				3, -- [1]
 				-15, -- [2]
 				nil, -- [3]
 				-14, -- [4]

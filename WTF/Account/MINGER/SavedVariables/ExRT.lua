@@ -880,25 +880,25 @@ VExRT = {
 			[1851] = "Sael'orn",
 			[1660] = "Groyat, the Blind Hunter",
 			[2055] = "Agronox",
-			[1661] = "Chalgra Razorflank",
-			[1852] = "Anub'esset",
 			[481] = "Maleki the Pallid",
+			[233] = "Warder Stilgiss",
+			[1661] = "Chalgra Razorflank",
 			[553] = "Grimlok",
-			[547] = "Revelosh",
+			[1855] = "Blood-Princess Thal'ena",
 			[1853] = "Nythendra",
 			[1662] = "Aaurx",
 			[610] = "Razorgore the Untamed",
 			[1790] = "Rokmora",
 			[1854] = "Dragons of Nightmare",
 			[1663] = "Mordresh Fire Eye",
-			[482] = "Magistrate Barthilas",
+			[1665] = "Death Speaker Blackthorn",
 			[1791] = "Ularogg Cragshaper",
-			[1855] = "Blood-Princess Thal'ena",
+			[547] = "Revelosh",
 			[1664] = "Mushlump",
 			[611] = "Vaelastrasz the Corrupt",
 			[1792] = "Naraxas",
 			[1856] = "Fel Lord Betrug",
-			[1665] = "Death Speaker Blackthorn",
+			[482] = "Magistrate Barthilas",
 			[1836] = "Archdruid Glaidalis",
 			[1793] = "Dargrul the Underking",
 			[1050] = "Forgemaster Throngus",
@@ -907,7 +907,7 @@ VExRT = {
 			[599] = "Shadowpriest Sezz'ziz",
 			[1812] = "King Deepbeard",
 			[1667] = "Ghamoo-ra",
-			[233] = "Warder Stilgiss",
+			[1852] = "Anub'esset",
 			[552] = "Galgann Firehammer",
 			[549] = "Ironaya",
 			[1668] = "Domina",
@@ -1721,30 +1721,30 @@ VExRT = {
 			["Azathoth-Bloodfeather"] = 62,
 			["Ньёлдар-Гордунни"] = 251,
 			["Mnk-GrimBatol"] = 269,
-			["Ravine-DieSilberneHand"] = 264,
 			["Naseguhl-Shattrath"] = 251,
+			["Ravine-DieSilberneHand"] = 264,
 			["Badhealer-Shattrath"] = 258,
-			["Kiflura-Aegwynn"] = 64,
+			["Wokshock-Dragonblight"] = 70,
 			["Arleah-Ahn'Qiraj"] = 251,
-			["Nandiadk-Alleria"] = 250,
 			["ßio-Silvermoon"] = 261,
+			["Chewié"] = 102,
 			["Anjelina"] = 257,
 			["Arduarnos-Silvermoon"] = 251,
-			["Chewié"] = 102,
+			["Kiflura-Aegwynn"] = 64,
 			["Swaggro-Silvermoon"] = 66,
 			["Sanctity-Anub'arak"] = 66,
 			["Cyandris-DieAldor"] = 103,
 			["Lougarou-Nozdormu"] = 104,
-			["Honeybeam-Blackmoore"] = 253,
-			["Ardory-Aegwynn"] = 105,
 			["Ephemerald-Ravencrest"] = 72,
+			["Ardory-Aegwynn"] = 105,
+			["Honeybeam-Blackmoore"] = 253,
 			["Frostzelot-Gilneas"] = 64,
 			["Thorron-Ravencrest"] = 262,
-			["Wargas-Gorgonnash"] = 104,
 			["Flackan-Ravencrest"] = 66,
+			["Wargas-Gorgonnash"] = 104,
 			["Worgwork-Ravencrest"] = 104,
 			["Anôthrox-Blackmoore"] = 63,
-			["Dronthal"] = 66,
+			["Dronthal"] = 65,
 			["Elue-Area52"] = 263,
 			["Junkó-ArgentDawn"] = 264,
 			["Signorina-Alexstrasza"] = 254,
@@ -1760,10 +1760,10 @@ VExRT = {
 			["Lucerna-Bloodhoof"] = 70,
 			["Сёбочка-Гордунни"] = 581,
 			["Søku-Lordaeron"] = 268,
-			["Canoy-ZirkeldesCenarius"] = 259,
+			["Nandiadk-Alleria"] = 250,
 			["Delevon-Runetotem"] = 577,
 			["Vâpe-Thrall"] = 66,
-			["Wokshock-Dragonblight"] = 70,
+			["Canoy-ZirkeldesCenarius"] = 259,
 			["Multiculti-Gilneas"] = 64,
 			["Boca-Drak'thul"] = 64,
 			["Eliandra-Khadgar"] = 577,
@@ -1947,10 +1947,10 @@ VExRT = {
 			["15487;4"] = 1,
 			["147362;3"] = 1,
 			["187707;4"] = 1,
-			["106839;3"] = 1,
+			["96231;4"] = 1,
 			["116705;3"] = 1,
 			["96231;3"] = 1,
-			["96231;4"] = 1,
+			["106839;3"] = 1,
 			["57994;1"] = 1,
 			["2139;1"] = 1,
 		},
@@ -1991,9 +1991,9 @@ VExRT = {
 				["fontShadow"] = false,
 				["blacklistGeneral"] = true,
 				["posY"] = 1078,
-				["posX"] = 134.999694824219,
-				["iconGeneral"] = true,
 				["fontOutline"] = true,
+				["iconGeneral"] = true,
+				["posX"] = 134.999694824219,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
@@ -2008,9 +2008,9 @@ VExRT = {
 				["fontShadow"] = false,
 				["blacklistGeneral"] = true,
 				["posY"] = 1078.99987792969,
-				["posX"] = 264.999786376953,
-				["iconGeneral"] = true,
 				["fontOutline"] = true,
+				["iconGeneral"] = true,
+				["posX"] = 264.999786376953,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
@@ -2151,14 +2151,14 @@ VExRT = {
 		["Priority"] = {
 		},
 		["CDE"] = {
-			[19647] = true,
+			[47476] = true,
 			[2139] = true,
 			[183752] = true,
-			[47528] = true,
-			[47476] = true,
+			[78675] = true,
+			[19647] = true,
 			[91802] = true,
-			[1766] = true,
 			[15487] = true,
+			[1766] = true,
 			[116705] = true,
 			[96231] = true,
 			[57994] = true,
@@ -2166,7 +2166,7 @@ VExRT = {
 			[106839] = true,
 			[147362] = true,
 			[115781] = true,
-			[78675] = true,
+			[47528] = true,
 		},
 		["Save"] = {
 		},
@@ -2194,13 +2194,13 @@ VExRT = {
 				"LTerrordeamon-Blackmoore", -- [16]
 				"LAlayra", -- [17]
 				"CSimya", -- [18]
-				["c"] = "Drahmoon-Madmortem",
 				["k"] = true,
+				["c"] = "Drahmoon-Madmortem",
 				["d"] = 15,
-				["eI"] = 1872,
+				["eN"] = "Grand Magistrix Elisande",
 				["t"] = 1495909036,
 				["g"] = 18,
-				["eN"] = "Grand Magistrix Elisande",
+				["eI"] = 1872,
 			}, -- [1]
 			{
 				"BNofingers-Sporeggar", -- [1]
@@ -2222,13 +2222,13 @@ VExRT = {
 				"CБуйныйдзинь-Галакронд", -- [17]
 				"GSimreck-Silvermoon", -- [18]
 				"CÓsírís-Teldrassil", -- [19]
-				["c"] = "Drahmoon-Madmortem",
 				["k"] = true,
+				["c"] = "Drahmoon-Madmortem",
 				["d"] = 14,
-				["eI"] = 1853,
+				["eN"] = "Nythendra",
 				["t"] = 1495965246,
 				["g"] = 19,
-				["eN"] = "Nythendra",
+				["eI"] = 1853,
 			}, -- [2]
 			{
 				"LNeesh", -- [1]
@@ -2245,13 +2245,13 @@ VExRT = {
 				"FAgonistic-Blackmoore", -- [12]
 				"BKaptanovic-Antonidas", -- [13]
 				"FRagnvaldr", -- [14]
-				["c"] = "Drahmoon-Madmortem",
 				["k"] = true,
+				["c"] = "Drahmoon-Madmortem",
 				["d"] = 15,
-				["eN"] = "Grand Magistrix Elisande",
+				["eI"] = 1872,
 				["t"] = 1496513936,
 				["g"] = 14,
-				["eI"] = 1872,
+				["eN"] = "Grand Magistrix Elisande",
 			}, -- [3]
 			{
 				"LNeesh", -- [1]
@@ -2267,13 +2267,13 @@ VExRT = {
 				"GXinderella", -- [11]
 				"FAgonistic-Blackmoore", -- [12]
 				"FRagnvaldr", -- [13]
-				["eN"] = "Gul'dan",
-				["k"] = true,
-				["t"] = 1496516999,
 				["eI"] = 1866,
+				["c"] = "Drahmoon-Madmortem",
+				["t"] = 1496516999,
+				["eN"] = "Gul'dan",
 				["d"] = 15,
 				["g"] = 13,
-				["c"] = "Drahmoon-Madmortem",
+				["k"] = true,
 			}, -- [4]
 			{
 				"GShefo-Ravencrest", -- [1]
@@ -2306,13 +2306,13 @@ VExRT = {
 				"GMmbob-Shadowsong", -- [28]
 				"GÐyx-ArgentDawn", -- [29]
 				"ATorodon-Magtheridon", -- [30]
-				["eI"] = 1853,
-				["k"] = true,
-				["t"] = 1497647710,
 				["eN"] = "Nythendra",
+				["c"] = "Drahmoon-Madmortem",
+				["t"] = 1497647710,
+				["eI"] = 1853,
 				["d"] = 15,
 				["g"] = 30,
-				["c"] = "Drahmoon-Madmortem",
+				["k"] = true,
 			}, -- [5]
 			{
 				"LNeesh", -- [1]
@@ -2327,13 +2327,13 @@ VExRT = {
 				"CSimya", -- [10]
 				"KMôfô-Blackmoore", -- [11]
 				"BDonkulle", -- [12]
-				["k"] = true,
 				["c"] = "Drahmoon-Madmortem",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 1872,
+				["eN"] = "Grand Magistrix Elisande",
 				["t"] = 1497723787,
 				["g"] = 12,
-				["eN"] = "Grand Magistrix Elisande",
+				["eI"] = 1872,
 			}, -- [6]
 			{
 				"GNailstorm-Silvermoon", -- [1]
@@ -2357,13 +2357,13 @@ VExRT = {
 				"BJayjaxon-Mal'Ganis", -- [19]
 				"DShadó-Mal'Ganis", -- [20]
 				"IRhymés-Mal'Ganis", -- [21]
-				["eI"] = 1849,
-				["k"] = true,
-				["t"] = 1498405313,
 				["eN"] = "Skorpyron",
+				["c"] = "Drahmoon-Madmortem",
+				["t"] = 1498405313,
+				["eI"] = 1849,
 				["d"] = 14,
 				["g"] = 21,
-				["c"] = "Drahmoon-Madmortem",
+				["k"] = true,
 			}, -- [7]
 			{
 				"GNailstorm-Silvermoon", -- [1]
@@ -2387,13 +2387,13 @@ VExRT = {
 				"BJayjaxon-Mal'Ganis", -- [19]
 				"DShadó-Mal'Ganis", -- [20]
 				"IRhymés-Mal'Ganis", -- [21]
-				["k"] = true,
 				["c"] = "Drahmoon-Madmortem",
+				["k"] = true,
 				["d"] = 14,
-				["eN"] = "Chronomatic Anomaly",
+				["eI"] = 1865,
 				["t"] = 1498405608,
 				["g"] = 21,
-				["eI"] = 1865,
+				["eN"] = "Chronomatic Anomaly",
 			}, -- [8]
 		},
 		["alts"] = {

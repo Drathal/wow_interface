@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 1323,
+	["session"] = 1329,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\dFade\\dFade-1.lua:11: attempt to index field '?' (a nil value)",

@@ -1,11 +1,4 @@
 Version: 1
-Frame: InterfaceOptionsFrame
-FrameLevel: 1
-Anchor: CENTER
-X: 0
-Y: 0
-W: 900
-H: 660
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER

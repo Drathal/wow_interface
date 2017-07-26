@@ -35,14 +35,15 @@ AllTheThingsPCD = {
 		false, -- [32]
 		false, -- [33]
 		false, -- [34]
-		[103] = true,
-		[100] = true,
-		[200] = true,
-		[101] = true,
-		[105] = true,
-		[36] = true,
-		[102] = true,
+		nil, -- [35]
+		true, -- [36]
 		[106] = true,
+		[200] = true,
+		[103] = true,
+		[105] = true,
+		[100] = true,
+		[102] = true,
 		[104] = true,
+		[101] = true,
 	},
 }

@@ -2,45 +2,6 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
-		["Dronthal - Madmortem"] = {
-			["spec1_profileKey"] = "Dronthal - Madmortem",
-			["blizzframes"] = {
-				["PetFrame"] = false,
-				["FocusFrameToT"] = false,
-				["PlayerFrame"] = false,
-				["party"] = false,
-				["TargetFrameToT"] = false,
-				["compactraid"] = false,
-				["FocusFrame"] = false,
-				["arena"] = false,
-				["boss"] = false,
-				["TargetFrame"] = false,
-			},
-			["fastooc"] = false,
-			["spec2_profileKey"] = "Dronthal - Madmortem",
-			["downclick"] = true,
-			["spec3_profileKey"] = "Dronthal - Madmortem",
-			["alerthidden"] = true,
-			["specswap"] = false,
-			["stopcastingfix"] = true,
-		},
-		["Sungleave - Blackhand"] = {
-			["alerthidden"] = true,
-		},
-		["Drathon - Blackhand"] = {
-			["spec1_profileKey"] = "base",
-			["fastooc"] = false,
-			["alerthidden"] = true,
-			["downclick"] = false,
-			["spec3_profileKey"] = "base",
-			["spec4_profileKey"] = "base",
-			["spec2_profileKey"] = "base",
-			["stopcastingfix"] = true,
-			["specswap"] = false,
-		},
-		["Drathal - Madmortem"] = {
-			["alerthidden"] = true,
-		},
 		["Drathair - Blackhand"] = {
 			["spec1_profileKey"] = "Drathair - Blackhand",
 			["blizzframes"] = {
@@ -66,23 +27,62 @@ CliqueDB3 = {
 			["spec2_profileKey"] = "Drathair - Blackhand",
 			["spec3_profileKey"] = "Drathair - Blackhand",
 		},
+		["Sungleave - Blackhand"] = {
+			["alerthidden"] = true,
+		},
+		["Drathon - Blackhand"] = {
+			["spec1_profileKey"] = "base",
+			["fastooc"] = false,
+			["alerthidden"] = true,
+			["downclick"] = false,
+			["spec3_profileKey"] = "base",
+			["spec4_profileKey"] = "base",
+			["spec2_profileKey"] = "base",
+			["stopcastingfix"] = true,
+			["specswap"] = false,
+		},
+		["Drathal - Madmortem"] = {
+			["alerthidden"] = true,
+		},
+		["Dronthal - Madmortem"] = {
+			["spec1_profileKey"] = "Dronthal - Madmortem",
+			["blizzframes"] = {
+				["PetFrame"] = false,
+				["FocusFrameToT"] = false,
+				["PlayerFrame"] = false,
+				["party"] = false,
+				["TargetFrameToT"] = false,
+				["compactraid"] = false,
+				["FocusFrame"] = false,
+				["arena"] = false,
+				["boss"] = false,
+				["TargetFrame"] = false,
+			},
+			["fastooc"] = false,
+			["spec2_profileKey"] = "Dronthal - Madmortem",
+			["downclick"] = true,
+			["spec3_profileKey"] = "Dronthal - Madmortem",
+			["alerthidden"] = true,
+			["specswap"] = false,
+			["stopcastingfix"] = true,
+		},
 		["Dronthal - Blackhand"] = {
 			["alerthidden"] = true,
 		},
 		["Drathia - Madmortem"] = {
-			["alerthidden"] = true,
 			["blacklist"] = {
 				["LSBoss2Frame"] = true,
 				["Boss3TargetFrame"] = true,
 				["Boss1TargetFrame"] = true,
 				["Boss2TargetFrame"] = true,
-				["LSBoss5Frame"] = true,
 				["LSBoss4Frame"] = true,
+				["LSBoss5Frame"] = true,
 				["LSBoss3Frame"] = true,
 				["LSTargetTargetFrame"] = true,
 				["Boss4TargetFrame"] = true,
 				["LSBoss1Frame"] = true,
 			},
+			["alerthidden"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -91,7 +91,7 @@ CliqueDB3 = {
 		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
 		["Drathon - Blackhand"] = "Drathon - Blackhand",
 		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
-		["Drathol - Blackhand"] = "Drathol - Blackhand",
+		["Draltar - Blackhand"] = "Draltar - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Modranthir - Blackhand"] = "Modranthir - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
@@ -100,7 +100,7 @@ CliqueDB3 = {
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
-		["Draltar - Blackhand"] = "Draltar - Blackhand",
+		["Drathol - Blackhand"] = "Drathol - Blackhand",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -425,7 +425,7 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Drathol - Blackhand"] = {
+		["Draltar - Blackhand"] = {
 			["bindings"] = {
 				{
 					["type"] = "target",
@@ -1015,7 +1015,7 @@ CliqueDB3 = {
 				}, -- [6]
 			},
 		},
-		["Draltar - Blackhand"] = {
+		["Drathol - Blackhand"] = {
 			["bindings"] = {
 				{
 					["type"] = "target",

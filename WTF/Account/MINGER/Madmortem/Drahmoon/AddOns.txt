@@ -38,7 +38,7 @@ Auctionator: disabled
 AutoMacro: enabled
 Aye.AutoOK: enabled
 Aye.AutoReadyCheck: enabled
-BetterBlizzOptions: enabled
+BetterBlizzOptions: disabled
 Broker_MicroMenu: enabled
 Broker_WorldQuests: enabled
 !BugGrabber: enabled

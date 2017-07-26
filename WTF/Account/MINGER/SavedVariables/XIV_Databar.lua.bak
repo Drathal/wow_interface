@@ -14,31 +14,44 @@ XIVBarDB = {
 				["portId"] = 140192,
 			},
 		},
+		["Drathia - Madmortem"] = {
+			["portItem"] = {
+				["portId"] = 140192,
+				["text"] = "Dalaran",
+			},
+		},
 	},
 	["factionrealm"] = {
 		["Alliance - Madmortem"] = {
 			["Dronthal"] = {
-				["dailyMoney"] = -775616666,
+				["dailyMoney"] = -774079066,
+				["sessionMoney"] = 1537600,
+				["lastLoginDate"] = 20170727,
+				["currentMoney"] = 158089118,
+				["daily"] = 0,
+			},
+			["Drathia"] = {
+				["dailyMoney"] = 0,
 				["sessionMoney"] = 0,
-				["currentMoney"] = 156551518,
-				["lastLoginDate"] = 20170714,
+				["lastLoginDate"] = 20170727,
+				["currentMoney"] = 12864863,
 				["daily"] = 0,
 			},
 			["Drahmoon"] = {
-				["lastLoginDate"] = 20170719,
 				["dailyMoney"] = 0,
-				["currentMoney"] = 707261350,
 				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["lastLoginDate"] = 20170727,
+				["currentMoney"] = 707261350,
 			},
 		},
 	},
 	["profileKeys"] = {
 		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathia - Madmortem"] = "Default",
 	},
 	["profiles"] = {
-		["Dronthal - Madmortem"] = {
-		},
 		["Drahmoon - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
@@ -59,8 +72,8 @@ XIVBarDB = {
 			},
 			["general"] = {
 				["barPosition"] = "TOP",
-				["ohHide"] = true,
 				["moduleSpacing"] = 29,
+				["ohHide"] = true,
 			},
 			["modules"] = {
 				["tradeskill"] = {
@@ -75,11 +88,11 @@ XIVBarDB = {
 					["enabled"] = false,
 				},
 				["microMenu"] = {
-					["chat"] = false,
-					["help"] = false,
-					["quest"] = false,
-					["talent"] = false,
 					["char"] = false,
+					["help"] = false,
+					["talent"] = false,
+					["chat"] = false,
+					["quest"] = false,
 					["pvp"] = false,
 				},
 				["currency"] = {
@@ -100,14 +113,20 @@ XIVBarDB = {
 					["enabled"] = true,
 				},
 				["system"] = {
-					["showTooltip"] = false,
 					["showAllOnShift"] = false,
+					["showTooltip"] = false,
 				},
 				["clock"] = {
 					["hideEventText"] = true,
 					["timeFormat"] = "twoFourNoZero",
 				},
 			},
+		},
+		["Dronthal - Madmortem"] = {
+		},
+		["Default"] = {
+		},
+		["Drathia - Madmortem"] = {
 		},
 	},
 }

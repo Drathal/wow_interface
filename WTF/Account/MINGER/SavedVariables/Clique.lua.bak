@@ -2,28 +2,6 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
-		["Dronthal - Madmortem"] = {
-			["spec1_profileKey"] = "Dronthal - Madmortem",
-			["blizzframes"] = {
-				["PetFrame"] = false,
-				["FocusFrameToT"] = false,
-				["PlayerFrame"] = false,
-				["party"] = false,
-				["TargetFrameToT"] = false,
-				["compactraid"] = false,
-				["FocusFrame"] = false,
-				["arena"] = false,
-				["TargetFrame"] = false,
-				["boss"] = false,
-			},
-			["fastooc"] = false,
-			["spec2_profileKey"] = "Dronthal - Madmortem",
-			["downclick"] = true,
-			["stopcastingfix"] = true,
-			["specswap"] = false,
-			["alerthidden"] = true,
-			["spec3_profileKey"] = "Dronthal - Madmortem",
-		},
 		["Drathair - Blackhand"] = {
 			["spec1_profileKey"] = "Drathair - Blackhand",
 			["blizzframes"] = {
@@ -66,23 +44,45 @@ CliqueDB3 = {
 		["Drathal - Madmortem"] = {
 			["alerthidden"] = true,
 		},
+		["Dronthal - Madmortem"] = {
+			["spec1_profileKey"] = "Dronthal - Madmortem",
+			["blizzframes"] = {
+				["PetFrame"] = false,
+				["FocusFrameToT"] = false,
+				["PlayerFrame"] = false,
+				["party"] = false,
+				["TargetFrameToT"] = false,
+				["compactraid"] = false,
+				["FocusFrame"] = false,
+				["arena"] = false,
+				["TargetFrame"] = false,
+				["boss"] = false,
+			},
+			["fastooc"] = false,
+			["spec2_profileKey"] = "Dronthal - Madmortem",
+			["downclick"] = true,
+			["stopcastingfix"] = true,
+			["specswap"] = false,
+			["alerthidden"] = true,
+			["spec3_profileKey"] = "Dronthal - Madmortem",
+		},
 		["Dronthal - Blackhand"] = {
 			["alerthidden"] = true,
 		},
 		["Drathia - Madmortem"] = {
+			["alerthidden"] = true,
 			["blacklist"] = {
 				["LSBoss2Frame"] = true,
-				["LSBoss1Frame"] = true,
-				["Boss1TargetFrame"] = true,
 				["Boss2TargetFrame"] = true,
-				["LSBoss4Frame"] = true,
-				["LSBoss5Frame"] = true,
-				["LSTargetTargetFrame"] = true,
+				["Boss1TargetFrame"] = true,
 				["LSBoss3Frame"] = true,
+				["LSBoss5Frame"] = true,
+				["LSBoss4Frame"] = true,
+				["LSTargetTargetFrame"] = true,
+				["LSBoss1Frame"] = true,
 				["Boss4TargetFrame"] = true,
 				["Boss3TargetFrame"] = true,
 			},
-			["alerthidden"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -90,8 +90,8 @@ CliqueDB3 = {
 		["Drathair - Blackhand"] = "Drathair - Blackhand",
 		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
 		["Drathon - Blackhand"] = "Drathon - Blackhand",
-		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
+		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Modranthir - Blackhand"] = "Modranthir - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
@@ -297,7 +297,7 @@ CliqueDB3 = {
 				}, -- [9]
 			},
 		},
-		["Drathol - Blackhand"] = {
+		["Draltar - Blackhand"] = {
 			["bindings"] = {
 				{
 					["sets"] = {
@@ -378,7 +378,7 @@ CliqueDB3 = {
 				}, -- [6]
 			},
 		},
-		["Draltar - Blackhand"] = {
+		["Drathol - Blackhand"] = {
 			["bindings"] = {
 				{
 					["sets"] = {
@@ -525,6 +525,13 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [2]
 				{
+					["type"] = "menu",
+					["key"] = "ALT-BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [3]
+				{
 					["spell"] = "Holy Shock",
 					["key"] = "BUTTON2",
 					["sets"] = {
@@ -532,7 +539,7 @@ CliqueDB3 = {
 					},
 					["icon"] = 135972,
 					["type"] = "spell",
-				}, -- [3]
+				}, -- [4]
 				{
 					["spell"] = "Tyr's Deliverance",
 					["key"] = "MOUSEWHEELUP",
@@ -541,13 +548,6 @@ CliqueDB3 = {
 					},
 					["icon"] = 1122562,
 					["type"] = "spell",
-				}, -- [4]
-				{
-					["type"] = "menu",
-					["key"] = "ALT-BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
 				}, -- [5]
 				{
 					["spell"] = "Blessing of Sacrifice",
@@ -568,12 +568,12 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [7]
 				{
-					["spell"] = "Blessing of Protection",
-					["key"] = "BUTTON3",
+					["spell"] = "Blessing of Freedom",
+					["key"] = "SHIFT-MOUSEWHEELUP",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 135964,
+					["icon"] = 135968,
 					["type"] = "spell",
 				}, -- [8]
 				{
@@ -586,21 +586,21 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [9]
 				{
+					["spell"] = "Blessing of Protection",
+					["key"] = "BUTTON3",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 135964,
+					["type"] = "spell",
+				}, -- [10]
+				{
 					["spell"] = "Holy Light",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
 						["default"] = true,
 					},
 					["icon"] = 135981,
-					["type"] = "spell",
-				}, -- [10]
-				{
-					["spell"] = "Blessing of Freedom",
-					["key"] = "SHIFT-MOUSEWHEELUP",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 135968,
 					["type"] = "spell",
 				}, -- [11]
 				{

@@ -1,6 +1,8 @@
 
 AllTheThingsPCD = {
 	["MapID"] = 1014,
+	["Saves"] = {
+	},
 	["ItemFilters"] = {
 		true, -- [1]
 		true, -- [2]
@@ -43,7 +45,5 @@ AllTheThingsPCD = {
 		[100] = true,
 		[102] = true,
 		[101] = true,
-	},
-	["Saves"] = {
 	},
 }
