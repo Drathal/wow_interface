@@ -4,8 +4,7 @@
 
 local version = 1
 
-local C_EquipmentSet = C_EquipmentSet 
-local format, tremove, tinsert, lower, floor, ceil = string.format, table.remove, table.insert, string.lower, math.floor, math.ceil
+local C_EquipmentSet, format, tremove, tinsert, lower, floor, ceil = C_EquipmentSet, string.format, table.remove, table.insert, string.lower, math.floor, math.ceil
 
 local addonName, addonTable = ...
 local L = addonTable.L
@@ -28,7 +27,7 @@ local funcs      = { talents     = { check = GetTalentInfo   , learn = LearnTale
                      talents_pvp = { check = GetPvpTalentInfo, learn = LearnPvpTalents } }
 
 local str_no_equipment = "|cffE96969"..NONE.."|r"
-local equipment_cache, equipment_menu_table, equipment_menu_frame, t_menu_close, t_menu_empty
+local equipment_cache, equipment_menu_table, quicktalentselect_menu_table, menu_frame, t_menu_close, t_menu_empty
 local spec, sets
 local tt = "talents"
 
@@ -58,7 +57,7 @@ end
 
 local function isEquipped(v)
  if not v then return end
- 
+
  for j = 1, numTiers[v.tt] do
   if v[j] then
    local id, _, _, selected = funcs[v.tt].check(j, v[j], 1)
@@ -607,7 +606,7 @@ function TalentSetList_OnEvent(self, event, ...)
   TalentSetsDialogPopup:Hide()
   StaticPopup_Hide("TS_CONFIRM_DELETE_TALENT_SET")
   StaticPopup_Hide("TS_CONFIRM_OVERWRITE_TALENT_SET")
-  equipment_menu_frame:Hide()
+  menu_frame:Hide()
  elseif event == "PLAYER_REGEN_ENABLED" then
   self.in_combat_lockdown:Hide()
  end
@@ -617,7 +616,7 @@ function TalentSetList_OnHide(self)
  TalentSetsDialogPopup:Hide()
  StaticPopup_Hide("TS_CONFIRM_DELETE_TALENT_SET")
  StaticPopup_Hide("TS_CONFIRM_OVERWRITE_TALENT_SET")
- equipment_menu_frame:Hide()
+ menu_frame:Hide()
 end
 
 function TalentSetListButton_Generic_OnLeave(f)
@@ -627,7 +626,7 @@ end
 
 ----- equipment menu -----
 local function equipment_menuitem_onClick(f)
- local set = equipment_menu_frame.editingSet
+ local set = menu_frame.editingSet
  
  if not set then return end
 
@@ -678,8 +677,8 @@ function TalentSetListButton_Equipment_OnClick(f)
  equipment_menu_table[menu_index] = t_menu_empty
  equipment_menu_table[menu_index + 1] = t_menu_close
  
- equipment_menu_frame.editingSet = p.set
- EasyMenu(equipment_menu_table, equipment_menu_frame, "cursor", 0 , 0, "MENU")
+ menu_frame.editingSet = p.set
+ EasyMenu(equipment_menu_table, menu_frame, "cursor", 0 , 0, "MENU")
 end
 ---------------------
 
@@ -727,7 +726,7 @@ function TalentSetListButton_OnClick(f)
  end
  StaticPopup_Hide("TS_CONFIRM_DELETE_TALENT_SET")
  StaticPopup_Hide("TS_CONFIRM_OVERWRITE_TALENT_SET")
- equipment_menu_frame:Hide()
+ menu_frame:Hide()
 end
 
 function TalentSetListButton_OnDoubleClick(f)
@@ -890,7 +889,7 @@ local function toggleFrameVisibility(self)
  if not PlayerTalentFramePVPTalents:IsVisible() and not PlayerTalentFrameTalents:IsVisible() then
   TalentSetsMainframe:Hide()
   TalentSetsShowButton:Hide()
-  equipment_menu_frame:Hide()
+  menu_frame:Hide()
  else
   if self == PlayerTalentFramePVPTalents then -- pvp talents
    tt = "talents_pvp"
@@ -1102,23 +1101,79 @@ function TalentSetsDialogPopup_OnHide(self)
  TalentSetsDialogPopupEditBox:SetText("")
  collectgarbage()
 end
+------
+
+----- quick talent selection
+local function quicklearn_talent(data)
+ learnTalents(data.arg1)
+end
+
+local quicktalent_cache
+local function quickTalentSelectPopup_Show()
+
+ if not charsvar or not charsvar[tt][spec] or #charsvar[tt][spec] == 0 then return end
+ 
+ if not quicktalentselect_menu_table then 
+  quicktalentselect_menu_table = {}
+  quicktalentselect_menu_table[1] = {text = L["quick_talent_selection"], isTitle = true, notCheckable = true}
+  quicktalentselect_menu_table[2] = {text = "", isTitle = true, notCheckable = true}
+  quicktalentselect_menu_table[3] = t_menu_empty
+  quicktalent_cache = {}
+ else
+  for i = 4, #quicktalentselect_menu_table do
+   if quicktalentselect_menu_table[i] ~= t_menu_empty and quicktalentselect_menu_table[i] ~= t_menu_close then
+    quicktalent_cache[#quicktalent_cache + 1] = quicktalentselect_menu_table[i]
+   end
+   quicktalentselect_menu_table[i] = nil
+  end
+ end
+
+ local canchange = canChangeTalents(true)
+ local i = 4
+
+ quicktalentselect_menu_table[2].text = canchange and L["quick_talent_selection_canchange"] or L["quick_talent_selection_cannotchange"]
+ 
+ for k,v in pairs(charsvar[tt][spec]) do
+  if quicktalent_cache[1] then
+   quicktalentselect_menu_table[i] = tremove(quicktalent_cache, 1)
+  else
+   quicktalentselect_menu_table[i] = {func = quicklearn_talent}
+  end
+  quicktalentselect_menu_table[i].text = v.name
+  quicktalentselect_menu_table[i].disabled = not canchange
+  quicktalentselect_menu_table[i].checked = isEquipped(v)
+  quicktalentselect_menu_table[i].arg1 = v
+  i = i + 1
+ end
+ 
+ quicktalentselect_menu_table[#quicktalentselect_menu_table + 1] = t_menu_empty
+ quicktalentselect_menu_table[#quicktalentselect_menu_table + 1] = t_menu_close
+ 
+ EasyMenu(quicktalentselect_menu_table, menu_frame, "cursor", 0 , 0, "MENU")
+end
 -----
 
 local function initializeFrame()
 
  local btn = CreateFrame("Checkbutton", "TalentSetsShowButton", PlayerTalentFrame, "SpellBookSkillLineTabTemplate")
  btn.tooltip = "Talent Set Manager"
+ btn:RegisterForClicks("LeftButtonUp", "RightButtonUp")
  btn:SetPoint("TOPLEFT", PlayerTalentFrame, "TOPRIGHT", 0, -20)
- btn:SetChecked(TalentSetManager_Options.visible)
  btn:SetNormalTexture("interface\\icons\\achievement_guildperk_ladyluck_rank2")
+ btn:SetChecked(TalentSetManager_Options.visible)
  
- btn:SetScript("OnClick", function()
-  TalentSetManager_Options.visible = not TalentSetManager_Options.visible
-  if TalentSetManager_Options.visible then
-   TalentSetsMainframe:Show()
+ btn:SetScript("OnClick", function(self, button)
+  if button == "RightButton" then
+   quickTalentSelectPopup_Show()
   else
-   TalentSetsMainframe:Hide()
+   TalentSetManager_Options.visible = not TalentSetManager_Options.visible
+   if TalentSetManager_Options.visible then
+    TalentSetsMainframe:Show()
+   else
+    TalentSetsMainframe:Hide()
+   end
   end
+  btn:SetChecked(TalentSetManager_Options.visible)
  end)
 
  local mf = CreateFrame("Frame", "TalentSetsMainframe", PlayerTalentFrame, "InsetFrameTemplate")
@@ -1221,12 +1276,9 @@ local function initializeFrame()
 end
 
 local function initialize_equipment_menu()
- equipment_menu_frame = CreateFrame("Frame", "TalentSetManagerEquipmentMenu", UIParent, "UIDropDownMenuTemplate")
+ menu_frame = CreateFrame("Frame", "TalentSetManagerEquipmentMenu", UIParent, "UIDropDownMenuTemplate")
  equipment_cache = {}
  equipment_menu_table = {}
- 
- t_menu_empty = { text = " ", isTitle = true, notCheckable = true }
- t_menu_close = { text = CLOSE, notCheckable = true, func = function() equipment_menu_frame:Hide() end }
  
  equipment_menu_table[1] = { text = "|cffffffad"..L["equipment_menu_title1"].."|r", isTitle = true, notCheckable = true }
  equipment_menu_table[2] = { text = "|cffffffad"..L["equipment_menu_title2"].."|r", isTitle = true, notCheckable = true }
@@ -1248,7 +1300,7 @@ local function initialize()
   end
  end
 
- -- moved the LDB at start because of ElvUI (yes, always that)
+ -- moved the LDB initialization at start because of ElvUI (yes, always that)
  -- now we can refresh the label with the spec available
  addonTable.UpdateLDBButton()
 
@@ -1325,6 +1377,8 @@ local function eventhandler(self, event, ...)
   charsvar.version = 0
   
   addonTable:InitializeLDB()
+  t_menu_empty = { text = " ", isTitle = true, notCheckable = true }
+  t_menu_close = { text = CLOSE, notCheckable = true, func = function() menu_frame:Hide() end }
   initialize_equipment_menu()
 
   -- GetSpecialization still not available on the very first login

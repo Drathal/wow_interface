@@ -44,13 +44,17 @@ local L = addonTable.L
  L["options_chat_filter_hide"] = "Hide entirely"
  L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
  L["options_hide_info_button"] = "Hide Info Button"
- L["search_icon"] = "Search Icon"
- -- new
  L["options_auto_equip_chatmsg"] = "Chat notification"
+
+ L["search_icon"] = "Search Icon"
  L["autoequip_equipment_opt"] = "Automatically wear linked equipment when changing specialization"
  L["autoequip_equipment_msg"] = "Using equipment set %s"
  L["autoequip_specs_description"] = "Main talent group:"
  L["autoequip_no_linked_equip_found"] = "No linked equipment found"
+ 
+ L["quick_talent_selection"] = "Quick Talent Selection"
+ L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+ L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
  --return
 --end
 
@@ -115,6 +119,12 @@ L["options_hide_info_button"] = "Hide Info Button"
 L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
 --Translation missing 
 L["options_talent_highlight_icon"] = "Talent Highlight Icon"
+--Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
 --Translation missing 
 L["search_icon"] = "Search Icon"
 --Translation missing 
@@ -186,6 +196,12 @@ L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
 --Translation missing 
 L["options_talent_highlight_icon"] = "Talent Highlight Icon"
 --Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
+--Translation missing 
 L["search_icon"] = "Search Icon"
 --Translation missing 
 L["set_already_exists"] = "A talent set with that name already exists"
@@ -225,6 +241,9 @@ L["options_chat_filter_show"] = "Non filtrare"
 L["options_hide_info_button"] = "Nascondi Pulsante Info"
 L["options_ignored_tiers_background_color"] = "Colore di sfondo delle righe ignorate"
 L["options_talent_highlight_icon"] = "Icona dei talenti evidenziati"
+L["quick_talent_selection"] = "Selezione Rapida Talenti"
+L["quick_talent_selection_canchange"] = "|cff00ff00I talenti possono essere modificati|r"
+L["quick_talent_selection_cannotchange"] = "|cffff0000I talenti non possono essere modificati|r"
 L["search_icon"] = "Cerca Icona"
 L["set_already_exists"] = "Un set di talenti con quel nome esiste già."
 L["sets_limit_reached"] = "Non puoi creare ulteriori set di talenti."
@@ -292,6 +311,12 @@ L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
 --Translation missing 
 L["options_talent_highlight_icon"] = "Talent Highlight Icon"
 --Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
+--Translation missing 
 L["search_icon"] = "Search Icon"
 --Translation missing 
 L["set_already_exists"] = "A talent set with that name already exists"
@@ -345,6 +370,12 @@ L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
 --Translation missing 
 L["options_talent_highlight_icon"] = "Talent Highlight Icon"
 --Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
+--Translation missing 
 L["search_icon"] = "Search Icon"
 L["set_already_exists"] = "Un talent avec ce nom existe déjà"
 L["sets_limit_reached"] = "Vous ne pouvez pas créer de nouveaux ensembles de talents."
@@ -383,6 +414,10 @@ L["options_chat_filter_show"] = "Nicht filtern"
 L["options_hide_info_button"] = "Infobutton ausblenden"
 L["options_ignored_tiers_background_color"] = "Hintergrundfarbe ignorierter Stufen"
 L["options_talent_highlight_icon"] = "Talenthervorhebungssymbol"
+--Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+L["quick_talent_selection_canchange"] = "|cff00ff00Talente können geändert werden|r"
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talente können nicht geändert werden|r"
 L["search_icon"] = "Nach Symbol suchen"
 L["set_already_exists"] = "Ein Talentset mit diesem Namen existiert bereits."
 L["sets_limit_reached"] = "Es können keine weiteren Talentsets angelegt werden."
@@ -424,6 +459,12 @@ L["options_chat_filter_show"] = "Не фильтровать"
 L["options_hide_info_button"] = "Скрыть кнопку инфо"
 L["options_ignored_tiers_background_color"] = "Цвет фона игнорируемых рядов"
 L["options_talent_highlight_icon"] = "Иконка для выделяемого таланта"
+--Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
 L["search_icon"] = "Поиск иконок"
 L["set_already_exists"] = "Набор талантов с этим именем уже существует"
 L["sets_limit_reached"] = "Вы не можете создать больше наборов талантов"
@@ -488,6 +529,12 @@ L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
 --Translation missing 
 L["options_talent_highlight_icon"] = "Talent Highlight Icon"
 --Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
+--Translation missing 
 L["search_icon"] = "Search Icon"
 --Translation missing 
 L["set_already_exists"] = "A talent set with that name already exists"
@@ -527,6 +574,12 @@ L["options_chat_filter_show"] = "不過濾"
 L["options_hide_info_button"] = "隱藏資訊按鈕"
 L["options_ignored_tiers_background_color"] = "忽略套裝背景顏色"
 L["options_talent_highlight_icon"] = "天賦高亮圖示"
+--Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
 L["search_icon"] = "搜尋圖標"
 L["set_already_exists"] = "此天賦設定的名稱已經存在"
 L["sets_limit_reached"] = "你不能在創建更多新天賦設定。"
@@ -594,6 +647,12 @@ L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
 --Translation missing 
 L["options_talent_highlight_icon"] = "Talent Highlight Icon"
 --Translation missing 
+L["quick_talent_selection"] = "Quick Talent Selection"
+--Translation missing 
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+--Translation missing 
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
+--Translation missing 
 L["search_icon"] = "Search Icon"
 --Translation missing 
 L["set_already_exists"] = "A talent set with that name already exists"
@@ -633,6 +692,9 @@ L["options_chat_filter_show"] = "Do not filter"
 L["options_hide_info_button"] = "Hide Info Button"
 L["options_ignored_tiers_background_color"] = "Ignored tiers background color"
 L["options_talent_highlight_icon"] = "Talent Highlight Icon"
+L["quick_talent_selection"] = "Quick Talent Selection"
+L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
+L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
 L["search_icon"] = "Search Icon"
 L["set_already_exists"] = "A talent set with that name already exists"
 L["sets_limit_reached"] = "You cannot create any more new talent sets."
