@@ -2,5 +2,6 @@
 ## Title: dFade
 ## Notes: Fade Player Frame
 ## Version: 1
+## RequiredDeps: KkthnxUI
 
 dFade.lua

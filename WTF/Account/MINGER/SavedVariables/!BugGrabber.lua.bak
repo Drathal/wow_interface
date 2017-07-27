@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 1328,
 	["lastSanitation"] = 3,
+	["session"] = 1365,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\dFade\\dFade-1.lua:11: attempt to index field '?' (a nil value)",
@@ -43,5 +43,21 @@ BugGrabberDB = {
 			["session"] = 1301,
 			["counter"] = 6,
 		}, -- [5]
+		{
+			["message"] = "Interface\\AddOns\\KkthnxUI\\Modules\\Maps\\ButtonCollect.lua:100: 'end' expected (to close 'function' at line 78) near 'if'",
+			["time"] = "2017/07/27 06:01:44",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1350,
+			["counter"] = 1,
+		}, -- [6]
+		{
+			["message"] = "Interface\\AddOns\\dFade\\dFade-1.lua:59: 'end' expected (to close 'function' at line 27) near '<eof>'",
+			["time"] = "2017/07/27 06:34:47",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1361,
+			["counter"] = 1,
+		}, -- [7]
 	},
 }

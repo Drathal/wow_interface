@@ -1,8 +1,8 @@
 
 KkthnxUIConfigAll = {
 	["Madmortem"] = {
-		["Dronthal"] = false,
 		["Drahmoon"] = false,
+		["Dronthal"] = false,
 		["Drathia"] = false,
 		["Drathal"] = false,
 	},
@@ -11,16 +11,16 @@ KkthnxUIConfigPublic = {
 	["DataBars"] = {
 		["HonorEnable"] = false,
 		["ReputationEnable"] = false,
-		["ReputationWidth"] = 192,
-		["ExperienceFade"] = true,
-		["ArtifactEnable"] = false,
-		["ArtifactWidth"] = 192,
 		["ExperienceWidth"] = 192,
+		["ArtifactEnable"] = false,
+		["ExperienceFade"] = true,
+		["ArtifactWidth"] = 192,
+		["ReputationWidth"] = 192,
 	},
 	["Misc"] = {
 		["BGSpam"] = true,
-		["SlotDurability"] = true,
 		["CombatState"] = true,
+		["SlotDurability"] = true,
 		["NoBanner"] = true,
 		["UseGuildRepair"] = true,
 		["EnhancedPvpMessages"] = true,
@@ -30,24 +30,24 @@ KkthnxUIConfigPublic = {
 		["ToggleButton"] = false,
 		["DisableTutorialButtons"] = true,
 		["WelcomeMessage"] = false,
-		["BubbleFontSize"] = 10,
 		["UseFlatTextures"] = true,
+		["BubbleFontSize"] = 10,
 	},
 	["Blizzard"] = {
-		["RaidTools"] = false,
+		["ColorTextures"] = true,
+		["TalkingHeadScale"] = 0.75,
 		["TexturesColor"] = {
 			0.188235294117647, -- [1]
 			0.188235294117647, -- [2]
 			0.188235294117647, -- [3]
 			1, -- [4]
 		},
-		["TalkingHeadScale"] = 0.75,
-		["ColorTextures"] = true,
+		["RaidTools"] = false,
 	},
 	["Bags"] = {
 		["Enable"] = false,
-		["SortRightToLeft"] = true,
 		["Spacing"] = 2,
+		["SortRightToLeft"] = true,
 	},
 	["ActionBar"] = {
 		["SplitBars"] = true,
@@ -61,17 +61,17 @@ KkthnxUIConfigPublic = {
 		["PetBarHorizontal"] = true,
 	},
 	["Loot"] = {
-		["AutoGreed"] = true,
 		["ConfirmDisenchant"] = true,
+		["AutoGreed"] = true,
 	},
 	["Automation"] = {
 		["AutoInvite"] = true,
 		["Resurrection"] = true,
 	},
 	["Skins"] = {
-		["WeakAuras"] = true,
-		["Skada"] = true,
 		["Spy"] = true,
+		["Skada"] = true,
+		["WeakAuras"] = true,
 		["DBM"] = true,
 	},
 	["Tooltip"] = {
@@ -86,10 +86,10 @@ KkthnxUIConfigPublic = {
 		["Enable"] = false,
 		["Width"] = 70,
 		["RaidAsParty"] = true,
-		["Height"] = 30,
+		["IconSize"] = 16,
 		["ShowRolePrefix"] = true,
 		["MainTankFrames"] = false,
-		["IconSize"] = 16,
+		["Height"] = 30,
 		["ShowThreatText"] = true,
 		["ManabarShow"] = false,
 		["Smooth"] = true,
@@ -98,20 +98,24 @@ KkthnxUIConfigPublic = {
 		["Outline"] = true,
 		["Party"] = false,
 		["GCDBar"] = true,
-		["CastbarTicks"] = true,
 		["ClassPortraits"] = false,
+		["CastbarTicks"] = true,
 		["ThreatValue"] = true,
 		["CastbarWidth"] = 200,
 		["Smooth"] = true,
 	},
 	["DataText"] = {
 		["Time24Hr"] = true,
-		["System"] = false,
 		["Battleground"] = false,
+		["System"] = false,
 	},
-	["Auras"] = {
-		["BuffsPerRow"] = 15,
-		["Consolidate"] = true,
+	["Chat"] = {
+		["Outline"] = true,
+		["TabsOutline"] = true,
+		["DamageMeterSpam"] = true,
+		["MessageFilter"] = true,
+		["SpamFilter"] = true,
+		["Width"] = 500,
 	},
 	["Nameplates"] = {
 		["Clamp"] = true,
@@ -121,26 +125,22 @@ KkthnxUIConfigPublic = {
 		["Width"] = 100,
 		["HealerIcon"] = true,
 		["Height"] = 8,
-		["AurasSize"] = 22,
-		["HealthValue"] = false,
 		["Smooth"] = true,
+		["HealthValue"] = false,
+		["AurasSize"] = 22,
 	},
 	["Minimap"] = {
 		["ResetZoomTime"] = 5,
-		["Size"] = 200,
 		["ResetZoom"] = true,
+		["Size"] = 200,
 	},
 	["Cooldown"] = {
 		["Threshold"] = 0,
 		["FontSize"] = 15,
 		["Enable"] = false,
 	},
-	["Chat"] = {
-		["Outline"] = true,
-		["TabsOutline"] = true,
-		["DamageMeterSpam"] = true,
-		["MessageFilter"] = true,
-		["SpamFilter"] = true,
-		["Width"] = 500,
+	["Auras"] = {
+		["BuffsPerRow"] = 15,
+		["Consolidate"] = true,
 	},
 }

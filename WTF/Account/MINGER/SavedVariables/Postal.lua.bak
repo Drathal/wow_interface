@@ -1,13 +1,5 @@
 
 Postal3DB = {
-	["profileKeys"] = {
-		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
-		["Drathal - Madmortem"] = "Drathal - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
-	},
 	["global"] = {
 		["BlackBook"] = {
 			["alts"] = {
@@ -20,6 +12,14 @@ Postal3DB = {
 			},
 		},
 	},
+	["profileKeys"] = {
+		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
+		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Drathal - Madmortem"] = "Drathal - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
+		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
+	},
 	["profiles"] = {
 		["Dronthal - Madmortem"] = {
 			["BlackBook"] = {
@@ -29,7 +29,12 @@ Postal3DB = {
 				},
 			},
 		},
-		["Modranthir - Madmortem"] = {
+		["Drathia - Madmortem"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Drahmoon|Madmortem|Alliance", -- [1]
+				},
+			},
 		},
 		["Drathal - Madmortem"] = {
 			["BlackBook"] = {
@@ -49,12 +54,7 @@ Postal3DB = {
 		},
 		["Darlaxle - Blackhand"] = {
 		},
-		["Drathia - Madmortem"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Drahmoon|Madmortem|Alliance", -- [1]
-				},
-			},
+		["Modranthir - Madmortem"] = {
 		},
 	},
 }
