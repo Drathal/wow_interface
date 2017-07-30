@@ -24,10 +24,10 @@ XIVBarDB = {
 	["factionrealm"] = {
 		["Alliance - Madmortem"] = {
 			["Dronthal"] = {
-				["dailyMoney"] = -774079066,
-				["sessionMoney"] = 0,
-				["currentMoney"] = 158089118,
-				["lastLoginDate"] = 20170727,
+				["dailyMoney"] = -751227406,
+				["sessionMoney"] = 22851660,
+				["currentMoney"] = 180940778,
+				["lastLoginDate"] = 20170729,
 				["daily"] = 0,
 			},
 			["Drathia"] = {

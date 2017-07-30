@@ -5,13 +5,13 @@ TalentSetManager_Saves = {
 			{
 				1, -- [1]
 				1, -- [2]
-				3, -- [3]
+				1, -- [3]
 				1, -- [4]
 				2, -- [5]
 				3, -- [6]
 				3, -- [7]
 				["tt"] = "talents",
-				["name"] = "Dungeon Heal",
+				["name"] = "Dungeon",
 				["texture"] = 236249,
 			}, -- [1]
 			{
@@ -23,7 +23,7 @@ TalentSetManager_Saves = {
 				3, -- [6]
 				2, -- [7]
 				["tt"] = "talents",
-				["name"] = "Raid Heal",
+				["name"] = "Raid",
 				["texture"] = 571553,
 			}, -- [2]
 			{

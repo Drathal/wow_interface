@@ -40,6 +40,11 @@ VER 3 0100000000000009 "Light of Dawn" "INV_MISC_QUESTIONMARK"
 /use 14
 /cast Light of Dawn
 END
+VER 3 010000000000000F "Rebuke" "INV_Misc_QuestionMark"
+#showtooltip
+/stopcasting
+/cast [@mouseover,harm,nomod][nomod]Rebuke
+END
 VER 3 0100000000000001 "Shield" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,harm][@target,harm][]Avenger's Shield

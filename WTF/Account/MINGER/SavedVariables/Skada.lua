@@ -15,7 +15,6 @@ SkadaDB = {
 				{
 					["barheight"] = 17,
 					["barslocked"] = true,
-					["hidden"] = true,
 					["y"] = 4.00001335144043,
 					["x"] = -0.000244140625,
 					["title"] = {
@@ -75,7 +74,7 @@ SkadaDB = {
 					["clickthrough"] = false,
 					["wipemode"] = "",
 					["set"] = "current",
-					["hidden"] = true,
+					["hidden"] = false,
 					["y"] = 3.99986577033997,
 					["barfont"] = "KkthnxUI_Normal",
 					["name"] = "Heal",

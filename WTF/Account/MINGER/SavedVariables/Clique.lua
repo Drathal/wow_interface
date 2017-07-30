@@ -287,10 +287,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
-						["friend"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
+						["default"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -525,12 +525,21 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [2]
 				{
+					["spell"] = "Tyr's Deliverance",
+					["key"] = "MOUSEWHEELUP",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 1122562,
+					["type"] = "spell",
+				}, -- [3]
+				{
 					["type"] = "menu",
 					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-				}, -- [3]
+				}, -- [4]
 				{
 					["spell"] = "Holy Shock",
 					["key"] = "BUTTON2",
@@ -538,15 +547,6 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["icon"] = 135972,
-					["type"] = "spell",
-				}, -- [4]
-				{
-					["spell"] = "Tyr's Deliverance",
-					["key"] = "MOUSEWHEELUP",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 1122562,
 					["type"] = "spell",
 				}, -- [5]
 				{
@@ -568,12 +568,12 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [7]
 				{
-					["spell"] = "Blessing of Freedom",
-					["key"] = "SHIFT-MOUSEWHEELUP",
+					["spell"] = "Holy Light",
+					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 135968,
+					["icon"] = 135981,
 					["type"] = "spell",
 				}, -- [8]
 				{
@@ -586,21 +586,21 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [9]
 				{
+					["spell"] = "Blessing of Freedom",
+					["key"] = "SHIFT-MOUSEWHEELUP",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 135968,
+					["type"] = "spell",
+				}, -- [10]
+				{
 					["spell"] = "Blessing of Protection",
 					["key"] = "BUTTON3",
 					["sets"] = {
 						["default"] = true,
 					},
 					["icon"] = 135964,
-					["type"] = "spell",
-				}, -- [10]
-				{
-					["spell"] = "Holy Light",
-					["key"] = "SHIFT-BUTTON1",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 135981,
 					["type"] = "spell",
 				}, -- [11]
 				{
@@ -700,9 +700,9 @@ CliqueDB3 = {
 					["spell"] = "Regrowth",
 					["key"] = "BUTTON2",
 					["sets"] = {
+						["friend"] = true,
 						["default"] = true,
 						["hovercast"] = true,
-						["friend"] = true,
 					},
 					["icon"] = 136085,
 					["type"] = "spell",
@@ -722,9 +722,9 @@ CliqueDB3 = {
 					["spell"] = "Healing Touch",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
+						["friend"] = true,
 						["default"] = true,
 						["hovercast"] = true,
-						["friend"] = true,
 					},
 					["icon"] = 136041,
 					["type"] = "spell",
@@ -744,9 +744,9 @@ CliqueDB3 = {
 					["spell"] = "Rejuvenation",
 					["key"] = "BUTTON1",
 					["sets"] = {
+						["friend"] = true,
 						["default"] = true,
 						["hovercast"] = true,
-						["friend"] = true,
 					},
 					["icon"] = 136081,
 					["type"] = "spell",
@@ -767,10 +767,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
-						["default"] = true,
 						["friend"] = true,
+						["spec4"] = true,
+						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -779,10 +779,10 @@ CliqueDB3 = {
 					["spell"] = "Ironbark",
 					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
-						["default"] = true,
 						["friend"] = true,
+						["spec4"] = true,
+						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 572025,
 					["type"] = "spell",
@@ -791,10 +791,10 @@ CliqueDB3 = {
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
-						["hovercast"] = true,
 						["friend"] = true,
+						["spec4"] = true,
+						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
@@ -803,10 +803,10 @@ CliqueDB3 = {
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
-						["hovercast"] = true,
 						["default"] = true,
+						["spec4"] = true,
+						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 134914,
 					["type"] = "spell",

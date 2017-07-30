@@ -1,96 +1,96 @@
 local K, C, L = unpack(select(2, ...))
 
-["DataBars"].HonorEnable = false
-["DataBars"].ReputationEnable = false
-["DataBars"].ReputationWidth = 192
-["DataBars"].ExperienceFade = true
-["DataBars"].ArtifactEnable = false
-["DataBars"].ArtifactWidth = 192	
-["DataBars"].ExperienceWidth = 192
+C["DataBars"].HonorEnable = false
+C["DataBars"].ReputationEnable = false
+C["DataBars"].ReputationWidth = 192
+C["DataBars"].ExperienceFade = true
+C["DataBars"].ArtifactEnable = false
+C["DataBars"].ArtifactWidth = 192	
+C["DataBars"].ExperienceWidth = 192
 
-["Misc"].BGSpam = true
-["Misc"].SlotDurability = true
-["Misc"].CombatState = true
-["Misc"].NoBanner = true
-["Misc"].UseGuildRepair = true
-["Misc"].EnhancedPvpMessages = true
+C["Misc"].BGSpam = true
+C["Misc"].SlotDurability = true
+C["Misc"].CombatState = true
+C["Misc"].NoBanner = true
+C["Misc"].UseGuildRepair = true
+C["Misc"].EnhancedPvpMessages = true
 
-["General"].SpellTolerance = true
-["General"].ToggleButton = false
-["General"].DisableTutorialButtons = true
-["General"].WelcomeMessage = false
-["General"].BubbleFontSize = 10
-["General"].UseFlatTextures = true
+C["General"].SpellTolerance = true
+C["General"].ToggleButton = false
+C["General"].DisableTutorialButtons = true
+C["General"].WelcomeMessage = false
+C["General"].BubbleFontSize = 10
+C["General"].UseFlatTextures = true
 
-["Blizzard"].RaidTools = false
-["Blizzard"].TalkingHeadScale = 0.75
-["Blizzard"].ColorTextures = true
-["Blizzard"].TexturesColor = {
+C["Blizzard"].RaidTools = false
+C["Blizzard"].TalkingHeadScale = 0.75
+C["Blizzard"].ColorTextures = true
+C["Blizzard"].TexturesColor = {
 			0.188235294117647, -- [1]
 			0.188235294117647, -- [2]
 			0.188235294117647, -- [3]
 			1, -- [4]
 }
 
-["Bags"].Enable = false
+C["Bags"].Enable = false
 
-["ActionBar"].SplitBars = true
-["ActionBar"].ButtonSize = 32
-["ActionBar"].Macro = false
-["ActionBar"].EquipBorder = true
-["ActionBar"].Grid = false
-["ActionBar"].ToggleMode = false
-["ActionBar"].HideHighlight = true
-["ActionBar"].ButtonSpace = 3
-["ActionBar"].PetBarHorizontal = true
+C["ActionBar"].SplitBars = true
+C["ActionBar"].ButtonSize = 32
+C["ActionBar"].Macro = false
+C["ActionBar"].EquipBorder = true
+C["ActionBar"].Grid = false
+C["ActionBar"].ToggleMode = false
+C["ActionBar"].HideHighlight = true
+C["ActionBar"].ButtonSpace = 3
+C["ActionBar"].PetBarHorizontal = true
 
-["Loot"].AutoGreed = true
-["Loot"].ConfirmDisenchant = true
+C["Loot"].AutoGreed = true
+C["Loot"].ConfirmDisenchant = true
 
-["Automation"].AutoInvite = true
-["Automation"].Resurrection = true
+C["Automation"].AutoInvite = true
+C["Automation"].Resurrection = true
 
-["Skins"].WeakAuras = true
-["Skins"].Skada = true
-["Skins"].Spy = true
-["Skins"].DBM = true
+C["Skins"].WeakAuras = true
+C["Skins"].Skada = true
+C["Skins"].Spy = true
+C["Skins"].DBM = true
 
-["Tooltip"].Enable = false
+C["Tooltip"].Enable = false
 
-["Raidframe"].Enable = false
+C["Raidframe"].Enable = false
 
-["Unitframe"].Outline = true
-["Unitframe"].Party = false
-["Unitframe"].GCDBar = true
-["Unitframe"].CastbarTicks = true
-["Unitframe"].ClassPortraits = false
-["Unitframe"].ThreatValue = true
-["Unitframe"].CastbarWidth = 200
-["Unitframe"].Smooth = true
+C["Unitframe"].Outline = true
+C["Unitframe"].Party = false
+C["Unitframe"].GCDBar = true
+C["Unitframe"].CastbarTicks = true
+C["Unitframe"].ClassPortraits = false
+C["Unitframe"].ThreatValue = true
+C["Unitframe"].CastbarWidth = 200
+C["Unitframe"].Smooth = true
 
-["DataText"].Time24Hr = true
-["DataText"].System = false	
-["DataText"].Battleground = false
+C["DataText"].Time24Hr = true
+C["DataText"].System = false	
+C["DataText"].Battleground = false
 
-["Auras"].BuffsPerRow = 15
-["Auras"].Consolidate = true
+C["Auras"].BuffsPerRow = 15
+C["Auras"].Consolidate = true
 
-["Nameplates"].Enable = false
+C["Nameplates"].Enable = false
 
-["Minimap"].ResetZoomTime = 5
-["Minimap"].Size = 200
-["Minimap"].ResetZoom = true
+C["Minimap"].ResetZoomTime = 5
+C["Minimap"].Size = 200
+C["Minimap"].ResetZoom = true
 
-["Cooldown"].Threshold = 0
-["Cooldown"].FontSize = 15
-["Cooldown"].Enable = false
+C["Cooldown"].Threshold = 0
+C["Cooldown"].FontSize = 15
+C["Cooldown"].Enable = false
 
-["Chat"].Outline = true
-["Chat"].TabsOutline = true
-["Chat"].DamageMeterSpam = true
-["Chat"].MessageFilter = true
-["Chat"].SpamFilter = true
-["Chat"].Width = 500
+C["Chat"].Outline = true
+C["Chat"].TabsOutline = true
+C["Chat"].DamageMeterSpam = true
+C["Chat"].MessageFilter = true
+C["Chat"].SpamFilter = true
+C["Chat"].Width = 500
 
 
 

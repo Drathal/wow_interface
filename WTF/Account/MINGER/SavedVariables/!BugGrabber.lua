@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 1366,
+	["session"] = 1370,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -59,5 +59,21 @@ BugGrabberDB = {
 			["session"] = 1361,
 			["counter"] = 1,
 		}, -- [7]
+		{
+			["message"] = "Interface\\AddOns\\KkthnxUI\\Config\\Profiles.lua:3: unexpected symbol near '='",
+			["time"] = "2017/07/29 00:57:39",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1368,
+			["counter"] = 1,
+		}, -- [8]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'oUF_KkthnxPlayer:Show()'.",
+			["time"] = "2017/07/29 01:27:16",
+			["locals"] = "",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:3289: in function `UIFrameFade'\nInterface\\FrameXML\\UIParent.lua:3310: in function `UIFrameFadeIn'\nInterface\\AddOns\\dFade\\dFade-1.lua:14: in function <Interface\\AddOns\\dFade\\dFade.lua:10>\nInterface\\AddOns\\dFade\\dFade-1.lua:48: in function <Interface\\AddOns\\dFade\\dFade.lua:27>\n[C]: in function `TurnOrActionStop'\n[string \"TURNORACTION\"]:4: in function <[string \"TURNORACTION\"]:1>",
+			["session"] = 1370,
+			["counter"] = 1,
+		}, -- [9]
 	},
 }

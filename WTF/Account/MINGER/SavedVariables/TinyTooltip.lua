@@ -29,10 +29,10 @@ BigTipDB = {
 			0.8, -- [4]
 		},
 		["anchor"] = {
-			["y"] = 403,
+			["y"] = 127,
 			["returnOnUnitFrame"] = false,
 			["position"] = "static",
-			["x"] = -257,
+			["x"] = -363,
 			["cp"] = "BOTTOM",
 			["p"] = "BOTTOMRIGHT",
 			["returnInCombat"] = false,

@@ -6,7 +6,7 @@ ArtifactTab: enabled
 AskMrRobot: enabled
 Auctionator: disabled
 ConfirmSP: enabled
-BetterBlizzOptions: disabled
+BetterBlizzOptions: enabled
 BigWigs_AutoReply: enabled
 BigWigs_Achievements: enabled
 BigWigs_Voice_Overwatch: enabled
