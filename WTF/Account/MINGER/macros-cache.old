@@ -10,7 +10,7 @@ VER 3 00000000000000A7 "Console" "134329"
 END
 VER 3 00000000000000C0 "Decursive" "INV_MISC_QUESTIONMARK"
 /stopcasting
-/cast [@mouseover,nomod,exists] Purify;  [@mouseover,exists,mod:ctrl] Dispel Magic; [@mouseover,exists,mod:shift] Purify
+/cast [@mouseover,nomod,exists] Cleanse;  [@mouseover,exists,mod:ctrl] Cleanse; [@mouseover,exists,mod:shift] Cleanse
 END
 VER 3 0000000000000042 "Focus" "Spell_Shaman_ImprovedEarthShield"
 /focus [@mouseover][]

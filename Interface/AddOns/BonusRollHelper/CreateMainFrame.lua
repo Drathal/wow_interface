@@ -62,7 +62,7 @@ local classColors = {
 [""] = "",
 ["Select your Class"] = ""
 }
-local statNames = {"Strength", "Agility", "Intellect", "Stamina", "Crit", "Haste", "Versatility", "Mastery", "Extra Ilvl", "Tier Bonus"}
+local statNames = {"Strength", "Agility", "Intellect", "Stamina", "Crit", "Haste", "Versatility", "Mastery", "Extra Ilvl", "Tier Bonus", "Armor"}
 local bosses = {}		--Table containing names of all bosses in the current Raid
 local difficulties = {"Normal", "Heroic", "Mythic"}	--Table containing names of difficulties
 local difficultiesAlignment = {"RIGHT", "", "LEFT"}	--Table containing alignments for the difficulties
@@ -105,6 +105,33 @@ local function setStatweights(self)
 	statweights[brmT.getSelectedSpecID()][index] = self:GetNumber()
 	self:HighlightText(0,0)
 	self:ClearFocus()
+ end
+ 
+ --Is called when the player presses enter when inputting statweights. Saves that imput and moves the curser to the next Statweight.
+ local function setStatweightsEnter(self)
+	local index = nil
+	for i, value in ipairs(statWeightBoxes) do
+		if self == value then
+			index = i
+		end
+	end
+	if self:GetText() == "" then
+		self:SetText(0)
+	end
+	statweights[brmT.getSelectedSpecID()][index] = self:GetNumber()
+	self:HighlightText(0,0)
+	self:ClearFocus()
+	
+	for i, value in ipairs(activeStatweightBoxes) do
+		if self == value then
+			index = i
+		end
+	end
+	local nextBox = activeStatweightBoxes[index + 1]
+	if nextBox then
+		nextBox:SetFocus()
+		nextBox:HighlightText()
+	end
  end
 
 --Is called when the player selects a class from the dropdown menu. Saves that selection.
@@ -327,7 +354,13 @@ local function printBossScores()
 	end
 end
 
-
+local function printBossScoresTrue()
+	print("Boss scores:")
+	for index, boss in ipairs(brmV.sortedBosses) do
+		local _, _, _, _, link = EJ_GetEncounterInfoByIndex(boss.index, brmT.raidID)
+		print(link, ": ", boss.score)
+	end
+end
 
 --Opens and creates the big frame
 createMainFrame = function()
@@ -335,7 +368,7 @@ createMainFrame = function()
 	brmT = BonusRollManagerTable
 	brmV = BonusRollManagerVariables
 	statweights = brmV.statweights
-	
+		
 
 --Loads the Encounter Journal
 	local loaded, reason = LoadAddOn("Blizzard_EncounterJournal")
@@ -394,11 +427,11 @@ createMainFrame = function()
  		statWeightBoxes[i]:SetSize(50, 35)
  		statWeightBoxes[i]:SetFontObject(GameFontNormal)
  		statWeightBoxes[i]:SetNumeric(true)
- 		statWeightBoxes[i]:SetText(statweights[brmT.getSelectedSpecID()][i])
+ 		statWeightBoxes[i]:SetText(statweights[brmT.getSelectedSpecID()][i] or 0)
 		statWeightBoxes[i]:SetAutoFocus(false)
 		statWeightBoxes[i]:SetMaxLetters(5)
  		statWeightBoxes[i]:SetScript("OnEditFocusLost", setStatweights)
- 		statWeightBoxes[i]:SetScript("OnEnterPressed", setStatweights)
+ 		statWeightBoxes[i]:SetScript("OnEnterPressed", setStatweightsEnter)
  		--statWeightBoxes[i]:SetScript("OnChar", setStatweights)
 		
 		statLabel[i] = statWeightBoxes[i]:CreateFontString(addonName.."statWeightBox"..i.."Label", "OVERLAY", "GameFontNormal")
@@ -562,7 +595,7 @@ createMainFrame = function()
 --Sets up Legendary Dropdowns
 	for i = 1, 2, 1 do
 		legSlotSelect[i] = CreateFrame("Button", addonName.."LegSlotSelect"..i, mainFrame, "UIDropDownMenuTemplate")
-		legSlotSelect[i]:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 50, -400 - 30 * i)
+		legSlotSelect[i]:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 50, -450 - 30 * i)
 		UIDropDownMenu_SetWidth(legSlotSelect[i], 100)
 		UIDropDownMenu_JustifyText(legSlotSelect[i], "LEFT")
 		UIDropDownMenu_SetText(legSlotSelect[i], brmV.selectedLegSlot[i])

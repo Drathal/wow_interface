@@ -1,3 +1,9 @@
+**2.03**
+
+- Release date: 08/04/2017
+- Reduced number of Appearance detection retries for armor and weapons during GetAll and Live scans. This should prevent long pauses on realms that happen to have a large amount of armor or weapons that cannot be transmogged.
+- Minor change to Help tab.
+
 **2.02**
 
 - Release date: 07/18/2017

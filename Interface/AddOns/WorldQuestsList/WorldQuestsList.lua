@@ -1,4 +1,4 @@
-local VERSION = 36
+local VERSION = 38
 
 --[[
 Special icons for rares, pvp or pet battle quests in list
@@ -95,13 +95,17 @@ Added faction icons for emissary quests (can be disabled in options)
 Threshold for lower priority on gear rewards was lowered to 880 ilvl
 
 7.2.5 Update
+
+7.3.0 PTR Update
+Added TomTom support
+
+Fixed debug numbers in chat
+TomTom now have higher prior if both addons for arrow enabled
 ]]
 
 
 local GetCurrentMapAreaID, GetCurrentMapZone, tonumber, C_TaskQuest, tinsert, abs, time, GetCurrencyInfo, HaveQuestData, QuestUtils_IsQuestWorldQuest, GetQuestTagInfo, bit, format, floor = 
       GetCurrentMapAreaID, GetCurrentMapZone, tonumber, C_TaskQuest, tinsert, abs, time, GetCurrencyInfo, HaveQuestData, QuestUtils_IsQuestWorldQuest, GetQuestTagInfo, bit, format, floor
-local BAG_ITEM_QUALITY_COLORS, ARTIFACT_POWER, ITEM_SPELL_TRIGGER_ONUSE, ITEM_BIND_ON_EQUIP = 
-      BAG_ITEM_QUALITY_COLORS, ARTIFACT_POWER, ITEM_SPELL_TRIGGER_ONUSE, ITEM_BIND_ON_EQUIP
 local LE = {
 	LE_QUEST_TAG_TYPE_INVASION = LE_QUEST_TAG_TYPE_INVASION,
 	LE_QUEST_TAG_TYPE_DUNGEON = LE_QUEST_TAG_TYPE_DUNGEON,
@@ -112,6 +116,11 @@ local LE = {
 	LE_QUEST_TAG_TYPE_PET_BATTLE = LE_QUEST_TAG_TYPE_PET_BATTLE,
 	LE_QUEST_TAG_TYPE_PROFESSION = LE_QUEST_TAG_TYPE_PROFESSION,
 	LE_ITEM_QUALITY_COMMON = LE_ITEM_QUALITY_COMMON,
+	
+	BAG_ITEM_QUALITY_COLORS = BAG_ITEM_QUALITY_COLORS,
+	ITEM_SPELL_TRIGGER_ONUSE = ITEM_SPELL_TRIGGER_ONUSE,
+	ITEM_BIND_ON_EQUIP = ITEM_BIND_ON_EQUIP,
+	ARTIFACT_POWER = ARTIFACT_POWER,
 }
       
 local charKey = (UnitName'player' or "").."-"..(GetRealmName() or ""):gsub(" ","")
@@ -329,7 +338,7 @@ local LOCALE =
 local orderResName = GetCurrencyInfo(1220)
 local filters = {
 	{LOCALE.gear,2^0},
-	{ARTIFACT_POWER,2^1},
+	{LE.ARTIFACT_POWER,2^1},
 	{orderResName,2^2},
 	{LOCALE.blood,2^5},
 	{LOCALE.gold,2^3},
@@ -366,26 +375,24 @@ if SECOND_NUMBER then
 end
 
 local WorldQuestList_Update
-
-local is72
-do
-	local expansion,majorPatch,minorPatch = (GetBuildInfo() or "1.0.0"):match("^(%d+)%.(%d+)%.(%d+)")
-	local ver = (expansion or 0) * 10000 + (majorPatch or 0) * 100 + (minorPatch or 0)
-	if ver >= 70200 then
-		is72 = true
-	end
-end
-
-
+local LastUpdateReset
 local WorldQuestList_Update_PrevZone = nil
 
 local UpdateTicker = nil
 
 local ELib = {}
 
+local function AddArrow(x,y,worldX,worldY,map,continent,name)
+	if TomTom then
+		TomTom:AddZWaypoint(continent, map, x*100, y*100, name)
+	elseif GExRT and GExRT.F.Arrow then
+		GExRT.F.Arrow:ShowRunTo(worldX,worldY,40,nil,true)
+	end
+end
+
 local function EnableClickArrow()
 	hooksecurefunc("TaskPOI_OnClick", function (self,button)
-		if not GExRT or VWQL.DisableArrow then
+		if VWQL.DisableArrow then
 			return
 		end
 		if self.worldQuest and button == "LeftButton" then
@@ -402,14 +409,16 @@ local function EnableClickArrow()
 				for i, info  in ipairs(taskInfo) do
 					if info.questId == self.questID then
 						local floor, a1, b1, c1, d1 = GetCurrentMapDungeonLevel()
-						local _, a2, b2, c2, d2 = GetCurrentMapZone()
+						local z, a2, b2, c2, d2 = GetCurrentMapZone()
 						if not a1 or not b1 or not c1 or not d1 then
 							a1, b1, c1, d1 = c2, d2, a2, b2
 						end
 						local x = c1 - info.x * abs(c1-a1)
 						local y = d1 - info.y * abs(d1-b1)
-					
-						GExRT.F.Arrow:ShowRunTo(x,y,40,nil,true)
+						
+						local name = C_TaskQuest.GetQuestInfoByQuestID(info.questId)
+						local continent = GetCurrentMapContinent()
+						AddArrow(info.x,info.y,x,y,z,continent,name)
 						return
 					end
 				end
@@ -955,18 +964,21 @@ local function WorldQuestList_LineName_OnClick(self,button)
 		
 		if line.data and not IsShiftKeyDown() then
 			local Wx,Wy = line.data.Wx,line.data.Wy
-			if (GExRT and not VWQL.DisableArrow) and Wx and Wy then
+			if not VWQL.DisableArrow and Wx and Wy then
 				Wx = 1 - Wx
 				Wy = 1 - Wy
 				local floor, a1, b1, c1, d1 = GetCurrentMapDungeonLevel()
-				local _, a2, b2, c2, d2 = GetCurrentMapZone()
+				local z, a2, b2, c2, d2 = GetCurrentMapZone()
 				if not a1 or not b1 or not c1 or not d1 then
 					a1, b1, c1, d1 = c2, d2, a2, b2
 				end
 				local x = c1 - Wx * abs(c1-a1)
 				local y = d1 - Wy * abs(d1-b1)
 			
-				GExRT.F.Arrow:ShowRunTo(x,y,30,nil,true)
+				--GExRT.F.Arrow:ShowRunTo(x,y,30,nil,true)
+				local name = C_TaskQuest.GetQuestInfoByQuestID(line.data.questId)
+				local continent = GetCurrentMapContinent()
+				AddArrow(Wx,Wy,x,y,z,continent,name)
 			end
 		end
 
@@ -1145,6 +1157,7 @@ do
 		VWQL.Sort = ActiveSort
 		ELib.ScrollDropDown.Close()
 		WorldQuestList_Update_PrevZone = nil
+		LastUpdateReset()
 		WorldQuestList_Update()
 	end
 	local function WorldQuestList_HeaderLine_OnEnter(self)
@@ -1437,7 +1450,7 @@ do
 		checkable = true,
 	}
 	list[#list+1] = {
-		text = ARTIFACT_POWER,
+		text = LE.ARTIFACT_POWER,
 		func = function()
 			VWQL[charKey].apIgnoreFilter = not VWQL[charKey].apIgnoreFilter
 			ELib.ScrollDropDown.UpdateChecks()
@@ -1491,20 +1504,18 @@ do
 		arg1 = "!ignoreFilterEpic",
 		checkable = true,
 	}
-	if is72 then
-		list[#list+1] = {
-			text = FACTION.." "..(GetFactionInfoByID(2045) or "Legionfall"),
-			func = function()
-				VWQL[charKey].legionfallIgnoreFilter = not VWQL[charKey].legionfallIgnoreFilter
-				ELib.ScrollDropDown.UpdateChecks()
-				WorldQuestList_Update_PrevZone = nil
-				WorldQuestList_Update()
-			end,
-			arg1 = "!ignoreFilterLegionfall",
-			checkable = true,
-		}	
+	list[#list+1] = {
+		text = FACTION.." "..(GetFactionInfoByID(2045) or "Legionfall"),
+		func = function()
+			VWQL[charKey].legionfallIgnoreFilter = not VWQL[charKey].legionfallIgnoreFilter
+			ELib.ScrollDropDown.UpdateChecks()
+			WorldQuestList_Update_PrevZone = nil
+			WorldQuestList_Update()
+		end,
+		arg1 = "!ignoreFilterLegionfall",
+		checkable = true,
+	}	
 	
-	end
 	
 	
 	function WorldQuestList.filterDropDown.Button:additionalToggle()
@@ -1779,6 +1790,16 @@ do
 			radio = true,
 		},
 		{
+			text = "1.1B",
+			func = function()
+				VWQL.APFormat = 5
+				ELib.ScrollDropDown.Close()
+				WorldQuestList_Update_PrevZone = nil
+				WorldQuestList_Update()
+			end,
+			radio = true,
+		},
+		{
 			text = "Auto",
 			func = function()
 				VWQL.APFormat = nil
@@ -1861,7 +1882,8 @@ do
 		apFormatSubMenu[2].checkState = VWQL.APFormat == 2
 		apFormatSubMenu[3].checkState = VWQL.APFormat == 3
 		apFormatSubMenu[4].checkState = VWQL.APFormat == 4
-		apFormatSubMenu[5].checkState = not VWQL.APFormat
+		apFormatSubMenu[5].checkState = VWQL.APFormat == 5
+		apFormatSubMenu[6].checkState = not VWQL.APFormat
 	end	
 end
 
@@ -1930,6 +1952,11 @@ local BrokenIslesZones = {
 	1014,
 	1021,
 	1096,
+}
+local ArgusZones = {
+	1170,
+	1135,
+	1171,
 }
 
 local dalaranWQs = {	--Invincible outside dalaran, API broken too
@@ -2030,8 +2057,8 @@ local function WorldQuestList_Leveling_Update()
 						reward = "|T"..icon..":0|t "..name..(numItems and numItems > 1 and " x"..numItems or "")
 					end
 					
-					if quality and quality >= LE.LE_ITEM_QUALITY_COMMON and BAG_ITEM_QUALITY_COLORS[quality] then
-						rewardColor = BAG_ITEM_QUALITY_COLORS[quality]
+					if quality and quality >= LE.LE_ITEM_QUALITY_COMMON and LE.BAG_ITEM_QUALITY_COLORS[quality] then
+						rewardColor = LE.BAG_ITEM_QUALITY_COLORS[quality]
 					end
 					
 				end
@@ -2174,6 +2201,8 @@ local function WorldQuestList_Leveling_Update()
 		WorldQuestList.b:SetAlpha(WorldQuestList.b.A or 1)
 		WorldQuestList.backdrop:SetAlpha(1)
 	end
+	
+	WorldQuestList.TotalAP:SetText("")
 end
 
 
@@ -2186,9 +2215,15 @@ local function FormatAPnumber(ap,artifactKnowlegeLevel)
 		return format("%.1fM",ap / 1000000)
 	elseif VWQL.APFormat == 4 then
 		return format("%dM",ap / 1000000)
+	elseif VWQL.APFormat == 5 then
+		return format("%.1fB",ap / 1000000000)
 	else
 		artifactKnowlegeLevel = artifactKnowlegeLevel or 0
-		if artifactKnowlegeLevel >= 40 then
+		if artifactKnowlegeLevel >= 53 then
+			return format("%.1fB",ap / 1000000000)
+		elseif artifactKnowlegeLevel >= 50 then
+			return format("%dB",ap / 1000000000)
+		elseif artifactKnowlegeLevel >= 40 then
 			return format("%dM",ap / 1000000)
 		elseif artifactKnowlegeLevel >= 35 then
 			return format("%.1fM",ap / 1000000)
@@ -2201,25 +2236,29 @@ local function FormatAPnumber(ap,artifactKnowlegeLevel)
 end
 
 local QuestsCachedPosX,QuestsCachedPosY = {},{}
-
-local WorldQuestList_Update_Timer = nil
 local TableQuestsViewed = {}
 local TableQuestsViewed_Time = {}
+local LastUpdateHappened,LastUpdateCounter,LastUpdateSch,UpdateDisabled = 0,0
+
+function LastUpdateReset()
+	if LastUpdateSch then
+		LastUpdateSch:Cancel()
+		LastUpdateSch = nil
+	end
+	LastUpdateHappened = 0
+end
 
 local FactionBountyIcons,FactionBountyIconsCounter = {},0
 
 local WANTED_TEXT,DANGER_TEXT,DANGER_TEXT_2,DANGER_TEXT_3
 
-function WorldQuestList_Update()
-	if not WorldQuestList:IsVisible() then
+function WorldQuestList_Update(preTastInfo)
+	if not WorldQuestList:IsVisible() or UpdateDisabled then
 		return
 	end
 
-	WorldQuestList_Update_Timer = nil
-	
 	local mapAreaID = GetCurrentMapAreaID()
 
-	WorldQuestList.TotalAP:SetText("")
 	if UnitLevel'player' < 110 or VWQL[charKey].RegularQuestMode then
 		WorldQuestList.sortDropDown:Hide()
 		WorldQuestList.filterDropDown:Hide()
@@ -2231,17 +2270,89 @@ function WorldQuestList_Update()
 		WorldQuestList.filterDropDown:Show()
 		WorldQuestList.optionsDropDown:Show()	
 	end
-	local taskInfo
-	local zoneName
+
+	local currTime = GetTime()
 	
-	if mapAreaID == 1007 then
+	local O = {
+		isGeneralMap = false,
+		isGearLessRelevant = false,
+		artifactKnowlegeLevel = 0,
+		nextResearch = nil,
+	}
+
+	local taskInfo
+	
+	if mapAreaID == 1184 then
+		O.isGeneralMap = true
+		
+		if WorldQuestList_Update_PrevZone ~= 1184 then
+			LastUpdateCounter = 0
+		end
+		
+		if preTastInfo then
+			taskInfo = preTastInfo
+		else
+			if currTime < LastUpdateHappened then
+				if not LastUpdateSch then
+					LastUpdateSch = C_Timer.NewTimer(LastUpdateHappened - currTime + .1, function()
+						LastUpdateSch = nil
+						WorldQuestList_Update()
+					end)
+				end
+				return
+			end
+			LastUpdateCounter = LastUpdateCounter + 1
+			LastUpdateHappened = currTime + (LastUpdateCounter <= 2 and .5 or LastUpdateCounter <= 4 and 2 or LastUpdateCounter % 2 == 0 and .5 or 10)
+			
+			taskInfo = {}
+			UpdateDisabled = true
+			
+			for i=1,#ArgusZones do
+				local mapID = ArgusZones[i]
+				SetMapByID(mapID)
+				
+				local zoneName = GetMapNameByID(mapID)
+				
+				local z = C_TaskQuest.GetQuestsForPlayerByMapID(mapID)
+				local c = 0
+				for _, info  in ipairs(z or {}) do
+					local findExisted = false
+					for j=1,#taskInfo do
+						if taskInfo[j].questId == info.questId then
+							findExisted = true
+							break
+						end
+					end
+					if not findExisted then
+						tinsert(taskInfo, info)
+						info.zone = zoneName
+						info.zoneID = i
+						info.zoneMapID = mapID
+						
+						if info.x and info.y then
+							info.x = nil
+							info.y = nil
+						end
+						
+						c = c + 1
+					end
+				end
+			end
+			SetMapByID(1184)
+			UpdateDisabled = false
+			WorldQuestList_Update(taskInfo)
+			
+			return
+		end
+	elseif mapAreaID == 1007 then
+		O.isGeneralMap = true
 		taskInfo = {}
 		
 		local _,xR,yT,xL,yB = GetCurrentMapZone()
 
 		for i=1,#BrokenIslesZones do
 			local mapID = BrokenIslesZones[i]
-			zoneName = GetMapNameByID(mapID)
+			local zoneName = GetMapNameByID(mapID)
 			
 			local z = C_TaskQuest.GetQuestsForPlayerByMapID(mapID)
 			local c = 0
@@ -2291,8 +2402,6 @@ function WorldQuestList_Update()
 				end
 			end
 		end
-		WorldQuestList:SetWidth(WorldQuestList_Width+WorldQuestList_ZoneWidth)
-		WorldQuestList.C:SetWidth(WorldQuestList_Width+WorldQuestList_ZoneWidth)
 	else
 		taskInfo = C_TaskQuest.GetQuestsForPlayerByMapID(mapAreaID)
 		
@@ -2309,31 +2418,39 @@ function WorldQuestList_Update()
 				end
 			end
 		end
-		
-		WorldQuestList:SetWidth(WorldQuestList_Width)
-		WorldQuestList.C:SetWidth(WorldQuestList_Width)
 	end
 	
-	local nextResearch = nil
+	if O.isGeneralMap then
+		WorldQuestList:SetWidth(WorldQuestList_Width+WorldQuestList_ZoneWidth)
+		WorldQuestList.C:SetWidth(WorldQuestList_Width+WorldQuestList_ZoneWidth)	
+	else
+		WorldQuestList:SetWidth(WorldQuestList_Width)
+		WorldQuestList.C:SetWidth(WorldQuestList_Width)	
+	end
+	
+	if WorldQuestList_Update_PrevZone == 1184 and mapAreaID ~= 1184 then
+		LastUpdateReset()
+	end
+	WorldQuestList_Update_PrevZone = mapAreaID
 	
 	local looseShipments = C_Garrison.GetLooseShipments(3)
 	for i = 1, #looseShipments do
 		local name, texture, shipmentCapacity, shipmentsReady, shipmentsTotal, creationTime, duration, timeleftString = C_Garrison.GetLandingPageShipmentInfoByContainerID(looseShipments[i])
 		if texture == 237446 and creationTime then
-			nextResearch = (creationTime + duration - time()) / 60 + 60
-			if nextResearch < 0 then
-				nextResearch = nil
+			O.nextResearch = (creationTime + duration - time()) / 60 + 60
+			if O.nextResearch < 0 then
+				O.nextResearch = nil
 			end
 			if shipmentsReady and shipmentsReady > 0 then
-				nextResearch = 0
+				O.nextResearch = 0
 			end
 			break
 		end
 	end
 	
-	local artifactKnowlegeLevel = select(2,GetCurrencyInfo(1171)) or 0
+	O.artifactKnowlegeLevel = select(2,GetCurrencyInfo(1171)) or 0
 	
-	local isGearLessRelevant = (select(2,GetAverageItemLevel()) or 0) >= 880
+	O.isGearLessRelevant = (select(2,GetAverageItemLevel()) or 0) >= 880
 		
 	local bounties = GetQuestBountyInfoForMapID(1007)
 	local bountiesInProgress = {}
@@ -2396,8 +2513,6 @@ function WorldQuestList_Update()
 		end
 	end
 	
-	local currTime = GetTime()
-
 	local taskIconIndex = 1
 	local totalQuestsNumber = 0
 	if ( numTaskPOIs > 0 ) then
@@ -2557,16 +2672,22 @@ function WorldQuestList_Update()
 					for i = 1, numQuestCurrencies do
 						local name, texture, numItems, currencyID = GetQuestLogRewardCurrencyInfo(i, questID)
 						local text = BONUS_OBJECTIVE_REWARD_WITH_COUNT_FORMAT:format(texture, numItems, name)
-						if currencyID == 1342 or (type(texture)=='string' and texture:find("ble_boss_token$")) then	--War Supplies
+						if currencyID == 1342 then	--War Supplies
 							WarSupplies = numItems
-						elseif (currencyID == 1226 or (type(texture)=='string' and texture:find("acrystal01$"))) and isInvasion then	--Shard of nothing
+						elseif currencyID == 1226 and isInvasion then	--Shard of nothing
 							ShardsNothing = numItems
 						else
 							reward = text
 							rewardType = 30
 						end
+						
+						if currencyID == 1508 then	--Veiled Argunite
+							hasRewardFiltered = true
+							rewardType = 30.1508
+							rewardSort = numItems or 0
+						end
 					
-						if currencyID == 1220 or (type(texture)=='string' and texture:find("orderresources$")) then
+						if currencyID == 1220 then
 							hasRewardFiltered = true
 							rewardSort = numItems or 0
 							if bit.band(filters[3][2],ActiveFilter) == 0 then 
@@ -2590,8 +2711,8 @@ function WorldQuestList_Update()
 						if bit.band(filters[2][2],ActiveFilter) == 0 then 
 							isValidLine = 0  
 						end
-						if BAG_ITEM_QUALITY_COLORS[6] then
-							rewardColor = BAG_ITEM_QUALITY_COLORS[6]
+						if LE.BAG_ITEM_QUALITY_COLORS[6] then
+							rewardColor = LE.BAG_ITEM_QUALITY_COLORS[6]
 						end
 					
 						reward = "["..artifactXP.."] "..BONUS_OBJECTIVE_ARTIFACT_XP_FORMAT:gsub("^%%s ","")
@@ -2615,8 +2736,8 @@ function WorldQuestList_Update()
 						end
 						
 
-						if quality and quality >= LE.LE_ITEM_QUALITY_COMMON and BAG_ITEM_QUALITY_COLORS[quality] then
-							rewardColor = BAG_ITEM_QUALITY_COLORS[quality]
+						if quality and quality >= LE.LE_ITEM_QUALITY_COMMON and LE.BAG_ITEM_QUALITY_COLORS[quality] then
+							rewardColor = LE.BAG_ITEM_QUALITY_COLORS[quality]
 						end
 						
 						local isBoeItem = nil
@@ -2626,25 +2747,25 @@ function WorldQuestList_Update()
 						for j=2, inspectScantip:NumLines() do
 							local tooltipLine = _G[GlobalAddonName.."WorldQuestListInspectScanningTooltipTextLeft"..j]
 							local text = tooltipLine:GetText()
-							if text and ( text:find(ARTIFACT_POWER.."|r$") or text:find("Artifact Power|r$") ) then
+							if text and ( text:find(LE.ARTIFACT_POWER.."|r$") or text:find("Artifact Power|r$") ) then
 								hasRewardFiltered = true
 								rewardType = 20
 								if bit.band(filters[2][2],ActiveFilter) == 0 then 
 									isValidLine = 0  
 								end
-								if BAG_ITEM_QUALITY_COLORS[6] then
-									rewardColor = BAG_ITEM_QUALITY_COLORS[6]
+								if LE.BAG_ITEM_QUALITY_COLORS[6] then
+									rewardColor = LE.BAG_ITEM_QUALITY_COLORS[6]
 								end
 							elseif text and text:find(ITEM_LEVEL) then
 								local ilvl = text:match(ITEM_LEVEL)
 								reward = "|T"..icon..":0|t "..ilvl.." "..name
 								ilvl = tonumber( ilvl:gsub("%+",""),nil )
 								if ilvl then
-									rewardType = isGearLessRelevant and 37 or 0
+									rewardType = O.isGearLessRelevant and 37 or 0
 									rewardSort = ilvl
 									hasRewardFiltered = true
 								end
-							elseif text and rewardType == 20 and text:find("^"..ITEM_SPELL_TRIGGER_ONUSE) then
+							elseif text and rewardType == 20 and text:find("^"..LE.ITEM_SPELL_TRIGGER_ONUSE) then
 								local ap = tonumber((text:gsub("(%d)[ %.,]+(%d)","%1%2"):match("%d+[,%d%.]*") or "?"):gsub(",",""):gsub("%.",""),nil)
 								if ap then
 									if SECOND_NUMBER then	--Check 7.2
@@ -2675,7 +2796,7 @@ function WorldQuestList_Update()
 										totalAP = totalAP - totalAPadded
 									end
 									
-									local apString = FormatAPnumber(ap,artifactKnowlegeLevel)
+									local apString = FormatAPnumber(ap,O.artifactKnowlegeLevel)
 									
 									reward = reward:gsub(":0|t ",":0|t ["..apString.."] ")
 									rewardSort = ap
@@ -2683,7 +2804,7 @@ function WorldQuestList_Update()
 										totalAP = totalAP + ap
 									end
 								end
-							elseif text and text:find(ITEM_BIND_ON_EQUIP) and j<=4 then
+							elseif text and text:find(LE.ITEM_BIND_ON_EQUIP) and j<=4 then
 								isBoeItem = true
 							end 
 						end
@@ -2811,8 +2932,8 @@ function WorldQuestList_Update()
 					end
 					timeleft = (color or "")..(timeString or "")
 					
-					if rewardType == 20 and nextResearch and timeLeftMinutes > nextResearch and reward then
-						timeToComplete = timeLeftMinutes - nextResearch + 60
+					if rewardType == 20 and O.nextResearch and timeLeftMinutes > O.nextResearch and reward then
+						timeToComplete = timeLeftMinutes - O.nextResearch + 60
 						reward = reward:gsub("] ","]** ")
 						artifactKnowlege = true
 					end
@@ -2902,6 +3023,8 @@ function WorldQuestList_Update()
 		result = newResult
 	end
 	
+	Q = result
+	
 	--taskIconIndex = taskIconIndex + 1
 	for i=1,#result do
 		local data = result[i]
@@ -2981,7 +3104,7 @@ function WorldQuestList_Update()
 			line.timeleft.f._t = data.time
 		end
 		
-		if mapAreaID == 1007 then
+		if O.isGeneralMap then
 			line.zone:Show()
 			line.zone.f:Show()
 		else
@@ -3050,21 +3173,24 @@ function WorldQuestList_Update()
 		WorldQuestList.backdrop:SetAlpha(0)
 		if mapAreaID == 1007 then
 			ViewAllButton:Hide()
+		elseif mapAreaID == 1184 then
+			ViewAllButton:Hide()
 		else
 			ViewAllButton:Show()
 		end
 		WorldQuestList.header:Update(true)
+		WorldQuestList.TotalAP:SetText("")
 	else
 		WorldQuestList.b:SetAlpha(WorldQuestList.b.A or 1)
 		WorldQuestList.backdrop:SetAlpha(1)
 		ViewAllButton:Hide()
-		WorldQuestList.header:Update(false,mapAreaID == 1007)
+		WorldQuestList.header:Update(false,O.isGeneralMap)
 	end
 	
 	if not VWQL.DisableTotalAP then
 		local fString = ""
 		if totalAP > 0 then
-			fString = fString .. (fString ~= "" and "|n" or "") .. LOCALE.totalap .. FormatAPnumber(totalAP,artifactKnowlegeLevel)
+			fString = fString .. (fString ~= "" and "|n" or "") .. LOCALE.totalap .. FormatAPnumber(totalAP,O.artifactKnowlegeLevel)
 		end
 		if totalOR > 0 then
 			fString = fString .. (fString ~= "" and "|n" or "") .. format("%s: %d",orderResName,totalOR)
@@ -3073,6 +3199,8 @@ function WorldQuestList_Update()
 			fString = fString .. (fString ~= "" and "|n" or "") .. LOCALE.gold..": "..GetCoinTextureString(totalG)
 		end
 		WorldQuestList.TotalAP:SetText(fString)
+	else
+		WorldQuestList.TotalAP:SetText("")
 	end
 	
 	if totalQuestsNumber == 0 then
@@ -4000,7 +4128,7 @@ do
 			dropDown = self:GetParent()
 		end
 		ELib.ScrollDropDown.ToggleDropDownMenu(dropDown)
-		PlaySound("igMainMenuOptionCheckBoxOn")
+		--PlaySound("igMainMenuOptionCheckBoxOn")
 	end
 	
 	function ELib.ScrollDropDown:Reload(level)

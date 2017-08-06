@@ -8,7 +8,7 @@ BonusRollManagerTable = {} --This WILL NOT be saved between Sessions; Used for "
 BonusRollManagerVariables.selectedClass = "Select your Class"	--Saves the selected Class
 BonusRollManagerVariables.selectedSpec = ""						--Saves the selected Spec
 BonusRollManagerVariables.selectedLegSlot = {"", ""}
-BonusRollManagerVariables.statweights = {[0] = {0,0,0,0,0,0,0,0,0, 0} }		--Saves the selected statweights
+BonusRollManagerVariables.statweights = {[0] = {0,0,0,0,0,0,0,0,0, 0, 0} }		--Saves the selected statweights
 BonusRollManagerVariables.showOnlyActive = false				--Saves whether or not inactive statweights should be shown
 --BonusRollManagerVariables.selectedRaid = nil					--Saves the selected raid
 BonusRollManagerVariables.selectedBosses = {}					--Saves the difficulty bosses will be killed at
@@ -80,7 +80,7 @@ end
 
 for class, classSpecs in pairs(BonusRollManagerTable.specID) do
 	for spec, specID in pairs(classSpecs) do
-		BonusRollManagerVariables.statweights[specID] = {0,0,0,0,0,0,0,0,0, 0}
+		BonusRollManagerVariables.statweights[specID] = {0,0,0,0,0,0,0,0,0, 0, 0}
 	end
 end
 

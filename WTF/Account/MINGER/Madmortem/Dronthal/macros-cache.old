@@ -58,13 +58,13 @@ VER 3 0100000000000006 "Shock" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000000B "test" "INV_Misc_QuestionMark"
 END
-VER 3 010000000000000E "TSM - Dungeon He" "236249"
+VER 3 010000000000000E "TSM - Dungeon" "236249"
 #Talent Set Manager# automatically generated, do not modify
-/talentset pve Dungeon Heal
+/talentset pve Dungeon
 END
-VER 3 010000000000000D "TSM - Raid Heal" "571553"
+VER 3 010000000000000D "TSM - Raid" "571553"
 #Talent Set Manager# automatically generated, do not modify
-/talentset pve Raid Heal
+/talentset pve Raid
 END
 VER 3 010000000000000C "TSM - Shockadin" "spell_holy_searinglight"
 #Talent Set Manager# automatically generated, do not modify

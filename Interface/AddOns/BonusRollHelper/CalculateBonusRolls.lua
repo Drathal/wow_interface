@@ -46,13 +46,14 @@ local BiS
 function BonusRollManagerTable.copyVariables()
 	brmT = BonusRollManagerTable
 	brmV = BonusRollManagerVariables
+	statweights.RESISTANCE0_NAME = brmV.statweights[brmT.getSelectedSpecID()][11]
 	statweights.ITEM_MOD_STRENGTH_SHORT = brmV.statweights[brmT.getSelectedSpecID()][1]
 	statweights.ITEM_MOD_AGILITY_SHORT = brmV.statweights[brmT.getSelectedSpecID()][2]
 	statweights.ITEM_MOD_INTELLECT_SHORT = brmV.statweights[brmT.getSelectedSpecID()][3]
 	statweights.ITEM_MOD_STAMINA_SHORT = brmV.statweights[brmT.getSelectedSpecID()][4]
 	statweights.ITEM_MOD_CRIT_RATING_SHORT = brmV.statweights[brmT.getSelectedSpecID()][5]
 	statweights.ITEM_MOD_HASTE_RATING_SHORT = brmV.statweights[brmT.getSelectedSpecID()][6]
-	statweights.ITEM_MOD_VERSATILITY_SHORT = brmV.statweights[brmT.getSelectedSpecID()][7]
+	statweights.ITEM_MOD_VERSATILITY = brmV.statweights[brmT.getSelectedSpecID()][7]
 	statweights.ITEM_MOD_MASTERY_RATING_SHORT = brmV.statweights[brmT.getSelectedSpecID()][8]
 	statweights.RELIC_ITEM_LEVEL_INCREASE = brmV.statweights[brmT.getSelectedSpecID()][9]
 	bossID = brmT.bossID
@@ -353,13 +354,18 @@ function BonusRollManagerTable.calcBossScore()
 	end
 	for bossIndex, bossLoot in pairs(loot) do
 		for lootIndex, currentLoot in pairs(bossLoot) do
+			local t = 0
 			if not isOccupied[currentLoot.slot] then
-				local t = currentLoot.score - equippedBySlot[currentLoot.slot].score
-				bossScore[bossIndex] = bossScore[bossIndex] + (t > 0 and t or 0)
+				t = currentLoot.score - equippedBySlot[currentLoot.slot].score
+				t = math.max(t, 0)
+				if BiS[currentLoot.slot] and not currentLoot.isTier and BiS[currentLoot.slot].isTier then
+					t = 0
+				end
+				if BiS[currentLoot.slot] and currentLoot.isTier and BiS[currentLoot.slot].isTier and not equippedBySlot[currentLoot.slot].isTier then
+					t = t + brmV.statweights[brmT.getSelectedSpecID()][10]
+				end
 			end
-			if BiS[currentLoot.slot] and not isOccupied[currentLoot.slot] and(BiS[currentLoot.slot].isTier and currentLoot.isTier and not equippedBySlot[currentLoot.slot].isTier) then
-				bossScore[bossIndex] = bossScore[bossIndex] + brmV.statweights[brmT.getSelectedSpecID()][10]
-			end
+			bossScore[bossIndex] = bossScore[bossIndex] + t
 		end
 		bossScore[bossIndex] = bossScore[bossIndex] / brmT.numLoot[bossIndex]
 	end

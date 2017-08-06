@@ -17,13 +17,6 @@ dbOHC = {
 			["firstun"] = false,
 		},
 	},
-	["profileKeys"] = {
-		["Darlaxle - Blackhand"] = "Default",
-		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
-	},
 	["global"] = {
 		["warn01_seen"] = 0,
 		["firstrun"] = false,
@@ -34,10 +27,17 @@ dbOHC = {
 		},
 		["warn02_seen"] = 0,
 	},
+	["profileKeys"] = {
+		["Darlaxle - Blackhand"] = "Default",
+		["Drathal - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
+	},
 	["profiles"] = {
 		["Default"] = {
 			["toggles"] = {
-				["SPARE"] = false,
+				["NOTROOPS"] = false,
 				["SORTMISSION"] = "Garrison_SortMissions_Chance",
 				["MAXCHAMP"] = 3,
 				["MOVEPANEL"] = false,
@@ -47,13 +47,14 @@ dbOHC = {
 				["IGNOREINACTIVE"] = true,
 				["BONUS"] = true,
 				["NOWARN"] = false,
-				["IGNORELOW"] = true,
-				["MAKEITQUICK"] = false,
-				["NOTROOPS"] = false,
-				["TROOPALERT"] = true,
-				["IGNOREBUSY"] = true,
 				["MAKEITVERYQUICK"] = false,
+				["MAKEITQUICK"] = false,
+				["SPARE"] = false,
+				["IGNORELOW"] = true,
+				["IGNOREBUSY"] = true,
+				["TROOPALERT"] = true,
 			},
+			["showmenu"] = true,
 			["blacklist"] = {
 				[1055] = true,
 				[1252] = true,
@@ -61,7 +62,6 @@ dbOHC = {
 				[1173] = true,
 				[1420] = true,
 			},
-			["showmenu"] = true,
 		},
 	},
 }

@@ -5,7 +5,7 @@ RefillerDB = {
 		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
 		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
 		["Drathon - Blackhand"] = "base",
-		["Drathair - Blackhand"] = "base",
+		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
 		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
@@ -15,7 +15,7 @@ RefillerDB = {
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
-		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
+		["Drathair - Blackhand"] = "base",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -26,17 +26,9 @@ RefillerDB = {
 		},
 		["Drathon - Blackhand"] = {
 		},
-		["Drathair - Blackhand"] = {
-			["refills"] = {
-				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
-				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
-			},
+		["Dorthal - Blackhand"] = {
 		},
-		["base"] = {
-			["refills"] = {
-				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
-				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
-			},
+		["Draltair - Blackhand"] = {
 		},
 		["Draltar - Blackhand"] = {
 		},
@@ -63,9 +55,17 @@ RefillerDB = {
 		},
 		["Drahmoon - Madmortem"] = {
 		},
-		["Draltair - Blackhand"] = {
+		["base"] = {
+			["refills"] = {
+				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
+				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
+			},
 		},
-		["Dorthal - Blackhand"] = {
+		["Drathair - Blackhand"] = {
+			["refills"] = {
+				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
+				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
+			},
 		},
 	},
 }

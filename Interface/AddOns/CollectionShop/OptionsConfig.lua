@@ -361,9 +361,8 @@ NS.options.cfg = {
 					fontObject = "GameFontNormalLarge",
 				} );
 				NS.TextFrame( "NeedMoreHelp", SubFrame, string.format(
-						L["%sQuestions, comments, and suggestions can be made on Curse.\nPlease submit bug reports on CurseForge.|r\n\n" ..
-						"http://www.curse.com/addons/wow/collectionshop\n" ..
-						"http://wow.curseforge.com/addons/collectionshop/tickets/"],
+						L["%sQuestions, Comments, Bugs, and Suggestions|r\n\n" ..
+						"https://mods.curse.com/addons/wow/collectionshop"],
 						NORMAL_FONT_COLOR_CODE
 					), {
 					setPoint = {

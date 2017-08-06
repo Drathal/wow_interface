@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- 	Leatrix Plus 7.2.12 (27th July 2017, www.leatrix.com)
+-- 	Leatrix Plus 7.2.13 (2nd August 2017, www.leatrix.com)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:Player		72:Profile		
@@ -20,7 +20,7 @@
 	local void
 
 --	Version
-	LeaPlusLC["AddonVer"] = "7.2.12"
+	LeaPlusLC["AddonVer"] = "7.2.13"
 
 ----------------------------------------------------------------------
 -- 	Locale
@@ -4876,6 +4876,8 @@
 					totalPrice, mBagID, mBagSlot = 0, -1, -1
 					-- Do nothing if shift key is held down
 					if IsShiftKeyDown() then return end
+					-- Cancel existing ticker if present
+					if SellJunkTicker then SellJunkTicker:Cancel() end
 					-- Sell grey items using ticker (ends when all grey items are sold or iteration count reached)
 					SellJunkTicker = C_Timer.NewTicker(0.2, SellJunkFunc, IterationCount)
 					SellJunkFrame:RegisterEvent("ITEM_LOCKED")

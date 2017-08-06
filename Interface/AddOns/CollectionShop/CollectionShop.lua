@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 local NS = select( 2, ... );
 local L = NS.localization;
-NS.versionString = "2.02";
+NS.versionString = "2.03";
 NS.version = tonumber( NS.versionString );
 --
 NS.options = {};
@@ -1541,7 +1541,7 @@ function NS.scan:GetAuctionItemInfo( index )
 					if quality > 1 then -- Transmoggable gear is uncommon or higher quality
 						appearanceID,sourceID = NS.GetAppearanceSourceInfo( itemLink );
 						if not appearanceID then
-							return "retry"; -- Retry for appearanceID or if item has none then prevent inclusion after max retries
+							return "retry-possible-appearance"; -- Retry for appearanceID or if item has none then prevent inclusion after max retries
 						end
 						if not NS.FindKeyByValue( data["appearanceSources"], sourceID ) then
 							data["appearanceSources"][#data["appearanceSources"] + 1] = sourceID; -- List of unique sources to update appearanceCollection
@@ -1586,7 +1586,7 @@ function NS.scan:QueryPageRetrieve()
 		--
 		if not auctionBatchRetry.inProgress or ( auctionBatchRetry.inProgress and auctionBatchRetry.auctionBatchNum[auctionBatchNum] ) then -- Not currently retrying or retrying and match
 			local get = self:GetAuctionItemInfo( auctionBatchNum );
-			if get == "retry" then
+			if get == "retry" or ( get == "retry-possible-appearance" and ( not auctionBatchRetry.inProgress or auctionBatchRetry.attempts < 10 ) ) then
 				-- Retry required
 				if not auctionBatchRetry.inProgress then
 					auctionBatchRetry.count = auctionBatchRetry.count + 1;
@@ -1607,7 +1607,7 @@ function NS.scan:QueryPageRetrieve()
 					self.query.auction.index = auctionBatchNum;
 					return PageComplete();
 				elseif auctionBatchRetry.inProgress then
-					-- Retry successful
+					-- Retry successful (or max Appearance attempts)
 					auctionBatchRetry.count = auctionBatchRetry.count - 1;
 					auctionBatchRetry.auctionBatchNum[auctionBatchNum] = nil;
 				end
@@ -1679,14 +1679,14 @@ function NS.scan:QueryGetAllRetrieve()
 		if auctionNum <= totalAuctions then
 			if not auctionBatchRetry.inProgress or ( auctionBatchRetry.inProgress and auctionBatchRetry.auctionBatchNum[auctionBatchNum] ) then -- Not currently retrying or retrying and match
 				local get = self:GetAuctionItemInfo( auctionNum );
-				if get == "retry" then
+				if get == "retry" or ( get == "retry-possible-appearance" and ( not auctionBatchRetry.inProgress or auctionBatchRetry.attempts < 10 ) ) then
 					-- Retry required
 					if not auctionBatchRetry.inProgress then
 						auctionBatchRetry.count = auctionBatchRetry.count + 1;
 						auctionBatchRetry.auctionBatchNum[auctionBatchNum] = true;
 					end
 				elseif auctionBatchRetry.inProgress then
-					-- Retry successful
+					-- Retry successful (or max Appearance attempts)
 					auctionBatchRetry.count = auctionBatchRetry.count - 1;
 					auctionBatchRetry.auctionBatchNum[auctionBatchNum] = nil;
 				end
