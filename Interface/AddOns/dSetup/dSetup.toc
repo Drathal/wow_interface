@@ -1,0 +1,8 @@
+## Interface: 70200
+## Title: dSetup
+## Notes: Setup UI
+## Version: 1
+## RequiredDeps: Grid2, XIV_Databar
+## SavedVariables: dsetupDB, Grid2DB, XIVBarDB
+
+dSetup.lua

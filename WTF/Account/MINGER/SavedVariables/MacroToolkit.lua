@@ -6,19 +6,20 @@ MacroToolkitDB = {
 			},
 		},
 	},
-	["global"] = {
-		["backups"] = {
-		},
-		["ebackups"] = {
-		},
-	},
 	["profileKeys"] = {
 		["Dronthal - Madmortem"] = "profile",
-		["Modranthir - Madmortem"] = "profile",
+		["Drathia - Madmortem"] = "profile",
+		["Drathtix - Madmortem"] = "profile",
 		["Drathal - Madmortem"] = "profile",
 		["Drahmoon - Madmortem"] = "profile",
 		["Darlaxle - Blackhand"] = "profile",
-		["Drathia - Madmortem"] = "profile",
+		["Modranthir - Madmortem"] = "profile",
+	},
+	["global"] = {
+		["ebackups"] = {
+		},
+		["backups"] = {
+		},
 	},
 	["profiles"] = {
 		["profile"] = {

@@ -33,7 +33,7 @@ AdiButtonAuras_Config: enabled
 AlreadyKnown: enabled
 ArtifactButton: enabled
 ArtifactPathFinder: disabled
-AskMrRobot: enabled
+AskMrRobot: disabled
 Auctionator: disabled
 AutoMacro: enabled
 Aye.AutoOK: enabled

@@ -1,7 +1,7 @@
 AdiButtonAuras: enabled
 AdiButtonAuras_Config: enabled
 AlreadyKnown: enabled
-AskMrRobot: enabled
+AskMrRobot: disabled
 Auctionator: disabled
 ConfirmSP: enabled
 BetterBlizzOptions: enabled

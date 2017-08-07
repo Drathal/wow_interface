@@ -25,15 +25,11 @@ C["General"].UseFlatTextures = true
 C["Blizzard"].RaidTools = false
 C["Blizzard"].TalkingHeadScale = 0.75
 C["Blizzard"].ColorTextures = true
-C["Blizzard"].TexturesColor = {
-			0.188235294117647, -- [1]
-			0.188235294117647, -- [2]
-			0.188235294117647, -- [3]
-			1, -- [4]
-}
+C["Blizzard"].TexturesColor = {0.31, 0.31, 0.31}
 
 C["Bags"].Enable = false
 
+C["ActionBar"].BottomBars = 3
 C["ActionBar"].SplitBars = true
 C["ActionBar"].ButtonSize = 32
 C["ActionBar"].Macro = false
@@ -92,6 +88,12 @@ C["Chat"].MessageFilter = true
 C["Chat"].SpamFilter = true
 C["Chat"].Width = 500
 
+C["Position"].Minimap = {"TOPRIGHT", "UIParent", "TOPRIGHT", 0, -32}
+C["Position"].Ticket = {"TOPLEFT", "UIParent", "TOPLEFT", 250, -32}
+C["Position"].TalkingHead = {"TOP", "UIParent", "TOP", 0, -32}
+C["Position"].RaidUtility = {"TOP", "UIParent", "TOP", -280, -32}
+C["Position"].Alerts = {"TOP", "UIParent", "TOP", 0, -32}
+C["Position"].AltPowerBar = {"TOP", "UIParent", "TOP", 0, -64}
 
 
 -- Per class config (overwrites general)

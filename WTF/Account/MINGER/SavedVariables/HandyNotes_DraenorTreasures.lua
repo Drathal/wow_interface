@@ -15,10 +15,11 @@ DraenorTreasuresDB = {
 		["Drathia - Madmortem"] = "Default",
 		["Drahdo - Blackhand"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Dronthal - Blackhand"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Drathol - Blackhand"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

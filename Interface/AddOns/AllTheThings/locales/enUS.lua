@@ -35,7 +35,9 @@ AllTheThings.Locales.enUS = {
 	["ERROR_UNKNOWN"] = "An unknown error occured.";
 	
 	["ITEM_ID_ADDED"] = "%s (%d) was added to your collection.";
+	["ITEM_ID_ADDED_SHARED"] = "%s (%d) [+%d] were added to your collection.";
 	["ITEM_ID_REMOVED"] = "%s (%d) was removed from your collection.";
+	["ITEM_ID_REMOVED_SHARED"] = "%s (%d) [+%d] were removed from your collection.";
 	
 	-- Tooltip Text
 	["LEFT_CLICK_TO_EXPAND"] = "|cff3399ffLeft Click to Expand/Collapse|r";
@@ -57,6 +59,7 @@ AllTheThings.Locales.enUS = {
 	["INSTANCE_ID"] = "Instance ID";
 	["DUNGEON"] = "Dungeon";
 	["RAID"] = "Raid";
+	["HISTORY"] = "History";
 	["ITEM"] = "Item";
 	["ITEM_ID"] = "Item ID";
 	["ITEM_SLOT"] = "Slot";
@@ -119,10 +122,10 @@ AllTheThings.Locales.enUS = {
 		["Dungeons & Raids"] = "D&R",
 		["Classic -> "] = "",
 		["Burning Crusade"] = "BC",
-		["Wrath of the Lich King"] = "WOLK",
+		["Wrath of the Lich King"] = "WotLK",
 		["Cataclysm"] = "CATA",
 		["Mists of Pandaria"] = "MISTS",
-		["Warlords of Draenor"] = "WOD",
+		["Warlords of Draenor"] = "WoD",
 		["Raid Finder"] = "LFR",
 		["Looking For Raid"] = "LFR",
 		["Normal"] = "N",
@@ -146,16 +149,16 @@ AllTheThings.Locales.enUS = {
 	
 	["FILTER_ID_TYPES"] = {
 		-- "Armor Types"
-		[1] = "Held in Off-Hand",
+		[1] = INVTYPE_HOLDABLE, --"Held in Off-Hand",
 		[2] = "Cosmetic",
-		[3] = "Cloaks",
+		[3] = INVTYPE_CLOAK, -- "Cloaks",
 		[4] = "Cloth",
 		[5] = "Leather",
 		[6] = "Mail",
 		[7] = "Plate",
-		[8] = "Shields",
-		[9] = "Tabards",
-		[10] = "Shirts",
+		[8] = SHIELDSLOT, --"Shields",
+		[9] = INVTYPE_TABARD, --"Tabards",
+		[10] = INVTYPE_BODY, --"Shirts",
 		
 		-- PADDING for extra types, if necessary
 		
@@ -181,28 +184,114 @@ AllTheThings.Locales.enUS = {
 		-- PADDING for extra types, if necessary
 		
 		-- "Non-Equipment Types"
-		[100] = "Mounts",
+		[100] = TUTORIAL_TITLE53, --"Mounts",
 		[101] = "Companion Pets",
 		[102] = "Toys",
 		[103] = "Illusions",
-		[104] = "Quest Items",
-		[105] = "Achievements",
-		[106] = "Holiday",
+		[104] = ITEM_BIND_QUEST, --"Quest Items",
+		[105] = TRACKER_FILTER_ACHIEVEMENTS, --"Achievements",
+		[106] = CALENDAR_FILTER_WEEKLY_HOLIDAYS, --"Holiday",
 		[107] = "Vignettes",
 		[108] = "Music Rolls",
+		[109] = HEIRLOOMS, -- "Heirlooms",
 		
 		-- "Recipes"
-		[200] = "Recipes",
+		[200] = AUCTION_CATEGORY_RECIPES, --"Recipes",
 	};
 	
 	-- These need to be localized manually.
 	["NPC_ID_ICONS"] = {
 		-- Achievement_Boss_ShadeOfEranikus
+		[0] = "Interface\\Icons\\INV_TreasureChest_FelfireCitadel",
+		[-1] = "Interface\\Icons\\Achievement_Garrison_Horde_PVE",
 		[-2] = "Interface\\Icons\\INV_Misc_Coin_02", 	-- Vendors
+		[-3] = "Interface\\Icons\\INV_Helm_Cloth_WitchHat_B_01",
+		[-4] = "Interface\\Icons\\ability_warrior_innerrage",
 		[-7] = "Interface\\Icons\\Inv_offhand_1h_artifactskulloferedar_d_05",	-- World Bosses (Achievement_Boss_ShadeOfEranikus)
+		[-9] = "Interface\\Icons\\TRADE_ARCHAEOLOGY",
+		[-12] = "Interface\\Icons\\Ability_Warlock_DemonicEmpowerment",
+		[-13] = "Interface\\Icons\\Achievement_Reputation_Ogre",
+		[-14] = "Interface\\Icons\\INV_Misc_Head_Elf_02",
 		[-16] = "Interface\\Icons\\Spell_Shadow_DeathScream",	-- Rares
 		[-17] = "Interface\\Icons\\inv_misc_book_07", 		-- Quests
+		[-18] = "Interface\\Icons\\icon_scenarios",			-- Scenarios
+		[-19] = "Interface\\Icons\\achievement_scenario_arenaofannihilation",
 		[-25] = "Interface\\Icons\\Tracking_WildPet", 		-- Pet Battles	
+		[-29] = "Interface\\Icons\\Inv_misc_bag_17", -- Raid Finder Bag
+		[-34] = "Interface\\Icons\\Achievement_Reputation_06",
+		[-363] = "Interface\\Icons\\achievement_reputation_argentchampion", -- Argent Tournament
+		[-1000] = "Interface\\Icons\\achievement_transmog_collections",
+		[-318] = "Interface\\Icons\\garrison_purplearmor",
+		[-319] = "Interface\\Icons\\garrison_purpleweapon",
+		[-320] = "Interface\\Icons\\inv_helmet_03",
+		[-321] = "Interface\\Icons\\inv_shoulder_05",
+		[-322] = "Interface\\Icons\\inv_misc_cape_11",
+		[-323] = "Interface\\Icons\\inv_chest_chain",
+		[-324] = "Interface\\Icons\\inv_shirt_grey_01",
+		[-325] = "Interface\\Icons\\inv_misc_tournaments_tabard_gnome",
+		[-326] = "Interface\\Icons\\inv_bracer_07",
+		[-327] = "Interface\\Icons\\Inv_gauntlets_24",
+		[-328] = "Interface\\Icons\\inv_belt_24",
+		[-329] = "Interface\\Icons\\inv_pants_09",
+		[-330] = "Interface\\Icons\\inv_boots_09",
+		[-334] = "Interface\\Icons\\inv_axe_17",
+		[-335] = "Interface\\Icons\\inv_axe_09",
+		[-346] = "Interface\\Icons\\inv_weapon_bow_05",
+		[-347] = "Interface\\Icons\\inv_weapon_crossbow_01",
+		[-333] = "Interface\\Icons\\inv_weapon_shortblade_01",
+		[-348] = "Interface\\Icons\\inv_misc_monsterclaw_02",
+		[-345] = "Interface\\Icons\\inv_weapon_rifle_01",
+		[-331] = "Interface\\Icons\\inv_misc_orb_01",
+		[-336] = "Interface\\Icons\\inv_mace_02",
+		[-337] = "Interface\\Icons\\inv_hammer_16",
+		[-343] = "Interface\\Icons\\inv_spear_04",
+		[-332] = "Interface\\Icons\\inv_shield_06",
+		[-342] = "Interface\\Icons\\inv_staff_27",
+		[-338] = "Interface\\Icons\\inv_sword_04",
+		[-339] = "Interface\\Icons\\inv_sword_07",
+		[-341] = "Interface\\Icons\\inv_wand_02",
+		[-9901] = "Interface\\Icons\\ClassIcon_Priest", -- "Priest",
+		[-9902] = "Interface\\Icons\\ClassIcon_Mage", -- "Mage",
+		[-9903] = "Interface\\Icons\\ClassIcon_Warlock", -- "Warlock",
+		[-9904] = "Interface\\Icons\\ClassIcon_Druid", -- "Druid",
+		[-9905] = "Interface\\Icons\\ClassIcon_Rogue", -- "Rogue",
+		[-9906] = "Interface\\Icons\\ClassIcon_Monk", -- "Monk",
+		[-9907] = "Interface\\Icons\\ClassIcon_DemonHunter", -- "Demon Hunter",
+		[-9908] = "Interface\\Icons\\ClassIcon_Hunter", -- "Hunter",
+		[-9909] = "Interface\\Icons\\ClassIcon_Shaman", -- "Shaman",
+		[-9910] = "Interface\\Icons\\ClassIcon_Paladin", -- "Paladin",
+		[-9911] = "Interface\\Icons\\ClassIcon_Warrior", -- "Warrior",
+		[-9912] = "Interface\\Icons\\ClassIcon_DeathKnight", -- "Death Knight",
+		[-9914] = "Interface\\FriendsFrame\\PlusManz-Alliance", -- Alliance
+		[-9913] = "Interface\\FriendsFrame\\PlusManz-Horde", -- Horde
+		[150] = "Interface\\Icons\\ability_warrior_innerrage",
+		[69471] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69341] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69749] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[70080] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69347] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69633] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69339] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69767] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69396] = "Interface\\Icons\\Trade_archaeology_chestoftinyglassanimals",
+		[69769] = "Interface\\Icons\\Inv_misc_archaeology_trollgolem",
+		[69841] = "Interface\\Icons\\Inv_misc_archaeology_trollgolem", 
+		[69842] = "Interface\\Icons\\Inv_misc_archaeology_trollgolem",
+		[69768] = "Interface\\Icons\\Inv_misc_archaeology_trollgolem",
+		[50817] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50341] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50354] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50332] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50789] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50831] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50733] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50769] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[70096] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[50358] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[70530] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		[69251] = "Interface\\Icons\\inv_misc_head_dragon_black",
+		
+		
 	};
 	["NPC_ID_NAMES"] = {
 -- Used #'s 
@@ -218,20 +307,21 @@ AllTheThings.Locales.enUS = {
 -- -3150-3600 [Dungeon and Event Armor Sets]
 -- Commonly used 
 		[-2] = TUTORIAL_TITLE20, 	-- Vendors
-		[-3] = "Holiday",
+		[-3] = CALENDAR_FILTER_WEEKLY_HOLIDAYS, -- Holiday
 		[-4] = TRACKER_FILTER_ACHIEVEMENTS, 	-- Achievements
 		[-5] = UNIT_NAME_PLAYER_TITLE, 		-- Titles
 		[-15] = AUCTION_CATEGORY_RECIPES, 	-- Recipes
-		[-16] = BATTLE_PET_BREED_QUALITY4..""..SHIFT_KEY_TEXT_ABBR, 	-- Rares
+		[-16] = BATTLE_PET_BREED_QUALITY4, 	-- Rares
 		[-17] = TRACKER_HEADER_QUESTS, 		-- Quests
 		[-18] = SCENARIOS, 		-- Scenarios
 		[-25] = SHOW_PET_BATTLES_ON_MAP_TEXT, 		-- Pet Battles	
-		[-26] = ZONE..""..BATTLE_PET_SOURCE_1, 		-- Zone Drop
+		[-34] = TRACKER_HEADER_WORLD_QUESTS, -- World Quests
+		[-35] = ORDER_HALL_MISSIONS, -- Class Hall Missions
 -- Dungeon and Raid
-		[0] = "Trash Mobs",
-		[-1] = "Shared Boss Loot",
+		[0] = ZONE.." "..BATTLE_PET_SOURCE_1, 	-- Zone Drop
+		[-1] = BATTLE_PET_BREED_QUALITY2.." "..TRANSMOG_SOURCE_1,	-- Common Boss Drop
 		[-6] = GUILD_INTEREST_DUNGEON, 		-- Dungeons
-		[-7] = WORLD.." "..BOSSES, 		-- World Bosses
+		[-7] = WORLD.." "..RAID_BOSSES, 		-- World Bosses
 		[-8] = "Evergreen Plot",
 		[-9] = "Cache of Madness (Requires 225 Archeology)",
 		[-10] = PLAYER_DIFFICULTY1, 	-- Normal
@@ -242,6 +332,7 @@ AllTheThings.Locales.enUS = {
 		[-19] = DUNGEON_FLOOR_PROVINGGROUNDS1, 		-- Arena of Annihilation
 		[-27] = PLAYER_DIFFICULTY6, 	-- Mythic
 		[-28] = PLAYER_DIFFICULTY3, 	-- Raid Finder
+		[-29] = PLAYER_DIFFICULTY3.." "..BAGSLOT, -- Raid Finder Bag
 -- Order Hall
 		[-20] = "Order Halls",
 		[-21] = ORDER_HALL_PALADIN, 	-- Sanctum of Light
@@ -249,18 +340,16 @@ AllTheThings.Locales.enUS = {
 		[-23] = ORDER_HALL_DEATHKNIGHT, 		-- Acherus
 		[-24] = ORDER_HALL_WARLOCK, 	-- Dreadscar Rift
 -- Custom NPC's
-		[-30] = "Amateur Hunters (\"Sure-Shot\" Arnie, Ryael Dawndrifter, Dargok Thunderuin)",
-		[-31] = "Unethical Adventurers (Puck, Jak, Xaander, Zenobia, Darkful)",
-		[-32] = "Static Mob Drops",
-		[-33] = "Fishing",
+		[-33] = PROFESSIONS_FISHING,		-- Fishing
 -- World Events
 		[-48] = MINIMAP_TRACKING_STABLEMASTER,		-- Stable Master
 		[-49] = WORLD.." "..EVENTS_LABEL, 		-- World Events
-		[-50] = "Lunar Festival",
-		[-51] = "Love is in the Air",
-		[-52] = "Noblegarden",
-		[-53] = "Children's Week",
-		[-54] = "Midsummer Fire Festival",
+		[-47] = "Lunar Festival",
+		[-50] = "Love is in the Air",
+		[-51] = "Noblegarden",
+		[-52] = "Children's Week",
+		[-53] = "Midsummer Fire Festival [Alliance]", -- Horde
+		[-54] = "Midsummer Fire Festival [Horde]", -- Alliance
 		[-55] = "Pirate's Day",
 		[-56] = "Brewfest",
 		[-57] = "Harvest Festival",
@@ -335,15 +424,6 @@ AllTheThings.Locales.enUS = {
 		
 -- Other1
 		[-299] = GARRISON_MISSIONS, -- Missions
-		[-300] = "BOE",
-		[-301] = "RFG",
-		[-302] = EXPANSION_NAME0, 	-- Classic
-		[-303] = EXPANSION_NAME1, 	-- The Burning Crusade
-		[-304] = EXPANSION_NAME2, 	-- Wrath of the Lich King
-		[-305] = EXPANSION_NAME3, 	-- Cataclysm
-		[-306] = EXPANSION_NAME4, 	-- Mists of Pandaria
-		[-307] = EXPANSION_NAME5, 	-- Warlords of Draenor
-		[-308] = EXPANSION_NAME6, 	-- Legion
 		[-309] = TRADE_SKILLS, 		-- Professions
 		[-318] = ARMOR, 		-- Armor
 		[-319] = AUCTION_CATEGORY_WEAPONS, 	-- Weapons
@@ -376,7 +456,6 @@ AllTheThings.Locales.enUS = {
 		[-346] = "Bows",
 		[-347] = "Crossbows",
 		[-348] = "Fist Weapons",
-		[-349] = "Unsorted",
 		[-350] = "Level 1-9",
 		[-351] = "Level 10-19",
 		[-352] = "Level 20-29",
@@ -460,6 +539,25 @@ AllTheThings.Locales.enUS = {
 				
 		[-1000] = WARDROBE_SETS, 	-- Sets
 		
+-- Factions
+
+		[-9914] = FACTION_ALLIANCE, -- Alliance
+		[-9913] = FACTION_HORDE, -- Horde
+		
+-- Classes [Needs localization]
+		[-9901] = "Priest",
+		[-9902] = "Mage",
+		[-9903] = "Warlock",
+		[-9904] = "Druid",
+		[-9905] = "Rogue",
+		[-9906] = "Monk",
+		[-9907] = "Demon Hunter",
+		[-9908] = "Hunter",
+		[-9909] = "Shaman",
+		[-9910] = "Paladin",
+		[-9911] = "Warrior",
+		[-9912] = "Death Knight",
+
 -- Tier/Dungeon/Event/Holiday Sets 
 		--Class Sets
 		[-5352] = GARRISON_TIER.." "..WARDROBE_SETS,		-- Tier Sets
@@ -478,6 +576,10 @@ AllTheThings.Locales.enUS = {
 		[-6002] = "Vestments of the Black Harvest", -- Warlock
 		[-6001] = "Vesture of Tirisgarde", -- Mage
 		[-6000] = "Regalia of the High Priest", -- Priest
+
+--[[		-- Tier Set Numbers Localization
+		[-5992] = GARRISON_CURRENT_LEVEL.." "..WARDROBE_SETS, -- Tier 9 Sets
+--]]		
 		-- Tier 20 Sets
 		[-4098] = "Gravewarden Armaments", -- Death Knight
 		[-4097] = "Titantic Onslaught Armor", -- Warrior
@@ -600,8 +702,8 @@ AllTheThings.Locales.enUS = {
 		[-3263] = "Bloodfang Armor", -- Rogue
 		[-3262] = "Stormrage Raiment", -- Druid
 		[-3261] = "Nemesis Raiment", -- Warlock
-		[-3260] = "Netherwind Regalia", -- Mage
-		[-3259] = "Vestments of Transcendence", -- Priest
+		[-3260] = "Vault-Minder's Set",
+		[-3259] = "Terrorweave Set",
 		-- Zandalar Tribe Set (Zul'Gurub) [Tier 1.5]
 		[-3258] = "Vindicator's Battlegear", -- Warrior
 		[-3257] = "Freethinker's Armor", -- Paladin
@@ -613,15 +715,15 @@ AllTheThings.Locales.enUS = {
 		[-3251] = "Illusionist's Attire", -- Mage
 		[-3250] = "Confessor's Raiment", -- Priest
 		-- Tier 1 Sets (Molten Core)
-		[-3249] = "Battlegear of Might",  -- Warrior
-		[-3248] = "Lawbringer Armor", -- Paladin
-		[-3247] = "Earthfury Raiment", -- Shaman
-		[-3246] = "Giantstalker Armor", -- Hunter
-		[-3245] = "Nightslayer Armor", -- Rogue
-		[-3244] = "Cenarion Raiment", -- Druid
-		[-3243] = "Felheart Raiment", -- Warlock
-		[-3242] = "Arcanist Regalia", -- Mage
-		[-3241] = "Vestments of Prophecy", -- Priest
+		[-3249] = "Sunfrost Set",
+		[-3248] = "Seawitch Set",
+		[-3247] = "Roggthread Set",
+		[-3246] = "Riven Priesthood Set",
+		[-3245] = "Night Dreamer Set",
+		[-3244] = "Netherwhisper Set",
+		[-3243] = "Manawracker Set",
+		[-3242] = "Bonespeaker Set",
+		[-3241] = "Arcane Singed Set",
 		-- Cenarion Circle Set (Ruins of Ahn'Qiraj")
 		[-3240] = "Battlegear of Unyielding Strength", -- Warrior
 		[-3239] = "Battlegear of Eternal Justice", -- Paladin
@@ -688,9 +790,9 @@ AllTheThings.Locales.enUS = {
 		[-3176] = "Tier 5 (Serpentshrine Cavern & The Eye)",
 		[-3175] = "Tier 6 (Hyjal Summit, Black Temple, and Sunwell Plateau)",
 --[[	[-3174] = "7",
-		[-3173] = "8",
-		[-3172] = "9",
-		[-3171] = "10",
+		[-3173] = "8",--]]
+		[-3172] = "Tier 9 (Trial of the Crusader)",
+--[[	[-3171] = "10",
 		[-3170] = "11",
 		[-3169] = "12",
 		[-3168] = "13",
@@ -701,11 +803,12 @@ AllTheThings.Locales.enUS = {
 		[-3163] = "18", --]]
 		[-3162] = "Tier 19 (The Nighthold)",
 		[-3161] = "Tier 20 (Tomb of Sargeras)",
+		[-3160] = INVTYPE_CLOAK, -- Cloak
 		-- PvP Sets
 		[-4192] = ELITE, -- Elite
 		[-4191] = "Gladiator",
 		[-4190] = "Combatant",
-		[-4189] = CALENDAR_TYPE_PVP, -- PvP
+		[-4189] = CALENDAR_TYPE_PVP.." "..WARDROBE_SETS, -- PvP
 		[-4188] = "Legacy Sets",
 		[-4187] = "Season 1",
 		[-4186] = "Season 2",
@@ -731,6 +834,24 @@ AllTheThings.Locales.enUS = {
 		
 		
 -- To be removed when NpcDB is created
+		[66467] = "G'nathus",
+		[66990] = "Huggalon the Heart Watcher",
+		[64403] = "Alani",
+		[69983] = "Primal Direhorn",
+		[69925] = "Zandalari Dinomancer",
+		[69251] = "Quivering Filth",
+		[69471] = "Spirit of Warlord Teng",
+		[69341] = "Echo of Kros",
+		[69749] = "Qi'nor",
+		[70080] = "Windweaver Akil'amon",
+		[69347] = "Incomplete Drakkari Colossus",
+		[69633] = "Kor'dok and Tinzo the Emberkeeper",
+		[69339] = "Electromancer Ju'le",
+		[69767] = "Ancient Mogu Guardian",
+		[69396] = "Cera",
+		[81330] = "Warleader Tome",
+		[101878] = "Felsoul Inquisitor",
+		[92343] = "Captain Tomas",
 		[23159] = "Okuno",
 		[54401] = "Naresir Stormfury",		
 		[54402] = "Lurah Wrathvine",	
@@ -754,7 +875,7 @@ AllTheThings.Locales.enUS = {
 		[38181] = "Haragg the Unseen",
 		[37688] = "Crusader Grimtong",		
 		[594] = "Defias Henchman",
-		[16080] = "Mor Greyhoof Summonable Read Description",
+		[16080] = "Mor Grayhoof Summonable Read Description",
 		[111573] = "Kosumoth the Hungering",
 		[119629] = "Lord Hel'Nurath",
 		[16264] = "Winaestra <Hawkstrider Breeder>",
@@ -901,6 +1022,9 @@ AllTheThings.Locales.enUS = {
 		[35576] = "Champion Faesrol <Triumphant Armor Vendor>",
 		[35575] = "Champion Isimode <Triumphant Armor Vendor>",
 		[35574] = "Magistrix Iruvia <Legacy Justice Quartermaster>",
+		[68000] = "Hiren Loresong <Kirin Tor Offensive Quartermaster>",
+		[70535] = "Teng of the Flying Daggers <Shado-Pan Assault Quartermaster>",
+		[67672] = "Vasarin Redmorn <Sunreaver Onslaught Quartermaster>",
 		[3636] = "Deviate Ravager / Deviate Guardian",
 		[3840] = "Druid of the Fang",
 		[3872] = "Deathsworn Captain (Rare)",
@@ -933,7 +1057,7 @@ AllTheThings.Locales.enUS = {
 		[10082] = "Zerillis (Rare)",
 		[10376] = "Crystal Fang (Rare)",
 		[10393] = "Skul (Rare)",
-		[10809] = "Stonespire (Rare)",
+		[10809] = "Stonespine (Rare)",
 		[11143] = "Postmaster Malown (Summonable - Mailboxes)",
 		[11467] = "Tsu'zee (Rare)",
 		[12237] = "Meshlok the Harvester (Rare)",
@@ -1285,6 +1409,23 @@ AllTheThings.Locales.enUS = {
 		[1140] = "Razormaw Matriarch",
 		[2090] = "Ma'ruk Wyrmscale",
 		[2108] = "Garneg Charskull",
+		[4604] = "Abigail Sawyer <Bow Merchant>",
+		[10053] = "Anya Maulray <Stable Master>",
+		[4573] = "Armand Cromwell <Fishing Trainer>",
+		[8403] = "Jeremiah Payson <Cockroach Vendor>",
+		[50304] = "Captain Donald Adams <Undercity Quartermaster>",
+		[4589] = "Joseph Moore <Leatherworking Supplies>",
+		[4558] = "Lauren Newcomb <Light Armor Merchant>",
+		[4577] = "Millie Gregorian <Tailoring Supplies>",
+		[10856] = "Argent Quartermaster Hasana <The Argent Dawn>",
+		[3522] = "Constance Brisboise <Apprentice Clothier>",
+		[12943] = "Werg Thickblade <Leatherworking Supplies>",
+		[4731] = "Zachariah Post <Undead Horse Merchant>",
+		[3552] = "Alexandre Lefevre <Leather Armor Merchant>",
+		[3554] = "Andrea Boynton <Clothier>",
+		[3556] = "Andrew Hilbert <Trade Supplies>",
+		[9553] = "Nadia Vernon <Bowyer>",
+		[3534] = "Wallace the Blind <Weaponsmith>",
 		[14424] = "Mirelow",
 		[14425] = "Gnawbone",
 		[14433] = "Sludginn",
@@ -1479,6 +1620,10 @@ AllTheThings.Locales.enUS = {
 		[51028] = "The Deep Tunneler",
 		[51045] = "Arcanus",
 		[3581] = "Sewer Beast",
+		[16631] = "Andra <Clothier>",
+		[16670] = "Eriden <Blacksmithing Supplies>",
+		[16782] = "Yatheon <Engineering Supplies>",
+		[16623] = "Zyandrel <Cloth Armor Merchant>",
 		[16854] = "Eldinarcus",
 		[16855] = "Tregla",
 		[22062] = "Dr. Whitherlimb",
@@ -1510,6 +1655,9 @@ AllTheThings.Locales.enUS = {
 		[32358] = "Fumblub Gearwind",
 		[32361] = "Icehorn",
 		[32400] = "Tukemuth",
+		[16528] = "Provisioner Vredigar",
+		[16268] = "Eralan <Poison Supplies>",
+		[33711] = "Plagued Snapper",
 		[32409] = "Crazed Indu'le Survivor",
 		[32417] = "Scarlet Highlord Daion",
 		[32422] = "Grocklar",
@@ -2483,12 +2631,35 @@ AllTheThings.Locales.enUS = {
 		[115736] = "First Arcanist Thalyssra",
 		[82459] = "Honest Jim",
 		[84243] = "Linny \"The Skinny\" Leadpockets",
+		[72896] = "Eternal Kilnmaster",
+		[72809] = "Eroded Cliffdweller",
+		[72767] = "Jademist Dancer",
+		[73162] = "Foreboding Flame",
+		[72875] = "Ordon Candlekeeper",
+		[72895] = "Burning Berserker",
+		[72007] = "Master Kukuru",
 	},
 	
 	["OBJECT_ID_ICONS"] = {
-	
+		[186672] = "Interface\\Icons\\INV_Misc_Bag_10",
+		[187021] = "Interface\\Icons\\INV_Misc_Basket_05",
+		[186667] = "Interface\\Icons\\inv_misc_treasurechest03a",
+		[186648] = "Interface\\Icons\\INV_Box_01",
+		[181074] = "Interface\\Icons\\Garrison_SilverChest",
+		[161495] = "Interface\\Icons\\Battleground_Strongbox_Silver_Alliance",
+		[179564] = "Interface\\Icons\\INV_Plate_BlackrockClan_B_01Chest",
+		[184465] = "Interface\\Icons\\INV_6_2Raid_Trinket_3b",
+		
 	};
 	["OBJECT_ID_NAMES"] = {
+		[220832] = "Sunken Treasure",
+		[222685] = "Crane Nest",
+		[131979] = "Large Darkwood Chest",
+		[141979] = "Ancient Treasure",
+		[239828] = "Edge of Reality",
+		[239901] = "Voidtalon Egg",
+		[227654] = "Bonechewer Spear",
+		[227793] = "Aarko's Family Treasure",
 		[240622] = "Warden's Spellcase",
 		[240616] = "Frozen Supplies",
 		[240625] = "High Priestess' Reliquary",

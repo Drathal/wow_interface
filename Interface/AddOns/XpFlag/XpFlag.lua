@@ -9,7 +9,7 @@ local MAX_PLAYER_LEVEL,BNET_CLIENT_WOW = MAX_PLAYER_LEVEL,BNET_CLIENT_WOW;
 local RAID_CLASS_COLORS = RAID_CLASS_COLORS;
 local UnitXP,UnitXPMax = UnitXP,UnitXPMax;
 local GetNumFriends, GetFriendInfo = GetNumFriends, GetFriendInfo;
-local BNGetNumFriends,BNGetFriendInfo,BNGetNumFriendToons,BNGetFriendToonInfo = BNGetNumFriends,BNGetFriendInfo,BNGetNumFriendToons,BNGetFriendToonInfo;
+local BNGetNumFriends,BNGetFriendInfo,BNGetNumFriendGameAccounts,BNGetFriendGameAccountInfo = BNGetNumFriends,BNGetFriendInfo,BNGetNumFriendGameAccounts,BNGetFriendGameAccountInfo;
 local SendAddonMessage = SendAddonMessage;
 local wipe,pairs = wipe,pairs;
 local IsInGuild,GetNumGuildMembers,GetGuildRosterInfo = IsInGuild,GetNumGuildMembers,GetGuildRosterInfo;
@@ -172,8 +172,8 @@ function XpFlag:BATTLENET()
 	for i=1,BNGetNumFriends() do
 		local presenceID, givenName, surname, toonName, toonID, client, isOnline = BNGetFriendInfo(i);
 		if isOnline then
-			for x=1,BNGetNumFriendToons(i) do
-				local _,name,client,realm,faction = BNGetFriendToonInfo(i,x);
+			for x=1,BNGetNumFriendGameAccounts(i) do
+				local _,name,client,realm,faction = BNGetFriendGameAccountInfo(i,x);
 				if name and (client == BNET_CLIENT_WOW) and (faction == playerFaction) and (realm == playerRealm) then
 					if XpFlag.db.friends[name:lower().."|"..realm:lower()] then
 						if not marks[name] then

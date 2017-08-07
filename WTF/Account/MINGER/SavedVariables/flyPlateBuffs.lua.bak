@@ -1,11 +1,12 @@
 
 flyPlateBuffsDB = {
+	["version"] = 2,
 	["profileKeys"] = {
+		["Drathia - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
 	},
-	["version"] = 2,
 	["profiles"] = {
 		["Default"] = {
 			["showStdSwipe"] = true,

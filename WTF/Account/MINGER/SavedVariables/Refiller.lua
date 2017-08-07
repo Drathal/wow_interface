@@ -5,67 +5,70 @@ RefillerDB = {
 		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
 		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
 		["Drathon - Blackhand"] = "base",
-		["Drathair - Blackhand"] = "base",
+		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
+		["Draltar - Blackhand"] = "Draltar - Blackhand",
 		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
-		["Draltar - Blackhand"] = "Draltar - Blackhand",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
-		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
+		["Drathair - Blackhand"] = "base",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
 		},
-		["Dronthal - Blackhand"] = {
-		},
-		["Sungleave - Blackhand"] = {
-		},
-		["Drathon - Blackhand"] = {
-		},
-		["Drathair - Blackhand"] = {
-			["refills"] = {
-				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
-				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
-			},
-		},
-		["base"] = {
-			["refills"] = {
-				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
-				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
-			},
-		},
-		["Draltar - Blackhand"] = {
-		},
-		["Modranthir - Madmortem"] = {
-		},
-		["Darlaxle - Blackhand"] = {
-		},
-		["Dronthal - Madmortem"] = {
-			["refills"] = {
-				["|cffffffff|Hitem:138292::::::::110:65::::::|h[Ley-Enriched Water]|h|r"] = 100,
-			},
-		},
-		["Drathia - Madmortem"] = {
-			["refills"] = {
-				["|cffffffff|Hitem:138292::::::::110:257::::::|h[Ley-Enriched Water]|h|r"] = 200,
-			},
+		["Dorthal - Blackhand"] = {
 		},
 		["Drathol - Blackhand"] = {
+		},
+		["Modranthir - Madmortem"] = {
 		},
 		["Drathal - Madmortem"] = {
 			["refills"] = {
 				["|cffffffff|Hitem:138292::::::::108:105::::::|h[Ley-Enriched Water]|h|r"] = 200,
 			},
 		},
-		["Drahmoon - Madmortem"] = {
+		["base"] = {
+			["refills"] = {
+				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
+				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
+			},
+		},
+		["Drathair - Blackhand"] = {
+			["refills"] = {
+				["|cffffffff|Hitem:140298::::::::110:270::::::|h[Mananelle's Sparkling Cider]|h|r"] = 100,
+				["|cffffffff|Hitem:138292::::::::110:270::::::|h[Ley-Enriched Water]|h|r"] = 100,
+			},
+		},
+		["Sungleave - Blackhand"] = {
+		},
+		["Drathon - Blackhand"] = {
+		},
+		["Drathia - Madmortem"] = {
+			["refills"] = {
+				["|cffffffff|Hitem:138292::::::::110:257::::::|h[Ley-Enriched Water]|h|r"] = 200,
+			},
+		},
+		["Dronthal - Madmortem"] = {
+			["refills"] = {
+				["|cffffffff|Hitem:138292::::::::110:65::::::|h[Ley-Enriched Water]|h|r"] = 100,
+			},
+		},
+		["Dronthal - Blackhand"] = {
+		},
+		["Drathtix - Madmortem"] = {
 		},
 		["Draltair - Blackhand"] = {
 		},
-		["Dorthal - Blackhand"] = {
+		["Drahmoon - Madmortem"] = {
+		},
+		["Draltar - Blackhand"] = {
+		},
+		["Darlaxle - Blackhand"] = {
 		},
 	},
 }

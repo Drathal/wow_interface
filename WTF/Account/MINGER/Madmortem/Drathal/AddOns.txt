@@ -3,7 +3,7 @@ AdvancedInterfaceOptions: enabled
 AlreadyKnown: enabled
 ArtifactPathFinder: disabled
 ArtifactTab: enabled
-AskMrRobot: enabled
+AskMrRobot: disabled
 Auctionator: disabled
 ConfirmSP: enabled
 BetterBlizzOptions: enabled

@@ -28,6 +28,25 @@ GameTooltipIcon.icon:SetAllPoints(GameTooltipIcon);
 GameTooltipIcon.icon:Show();
 GameTooltipIcon:Hide();
 
+-- Model is used to display the model of an NPC/Encounter.
+local GameTooltipModel = CreateFrame("FRAME", nil, GameTooltip);
+GameTooltipModel:SetPoint("TOPRIGHT", GameTooltip, "TOPLEFT", 0, 0);
+GameTooltipModel:SetSize(128, 128);
+GameTooltipModel:SetBackdrop(backdrop);
+GameTooltipModel:SetBackdropBorderColor(1, 1, 1, 1);
+GameTooltipModel:SetBackdropColor(0, 0, 0, 1);
+GameTooltipModel.Model = CreateFrame("PlayerModel", nil, GameTooltipModel);
+GameTooltipModel.Model:SetPoint("TOPLEFT", GameTooltipModel ,"TOPLEFT", 4, -4)
+GameTooltipModel.Model:SetPoint("BOTTOMRIGHT", GameTooltipModel ,"BOTTOMRIGHT", -4, 4)
+GameTooltipModel.Model:SetRotation(MODELFRAME_DEFAULT_ROTATION);
+GameTooltipModel.SetModelID = function(self, modelID)
+	self.Model:SetDisplayInfo(modelID);
+	self.Model:SetDoBlend(false);
+	self.Model:SetAnimation(0,-1); --0=alive, 6=dead
+	self:Show();
+end
+GameTooltipModel:Hide();
+
 -- Data Lib
 if not AllTheThingsAD then AllTheThingsAD = { }; end					-- For account-wide data.
 if not AllTheThingsPCD then AllTheThingsPCD = { }; end					-- For character specific data.
@@ -169,6 +188,15 @@ local function GetTempDataSubSubMember(member, submember, subsubmember, default)
 		end
 	end
 	return AllTheThingsTempData[member][submember][subsubmember];
+end
+
+function table.contains(table, element)
+  for _, value in pairs(table) do
+    if value == element then
+      return true
+    end
+  end
+  return false
 end
 
 -- Localization Lib
@@ -328,6 +356,8 @@ local inventorySlotsMap = {	-- Taken directly from CanIMogIt (Thanks!)
     ["INVTYPE_TABARD"] = {19},
 };
 local function GetSourceID(itemLink)
+	-- C_TransmogCollection.GetItemInfo(itemID, [itemModID]/itemLink/itemName) = appearanceID, sourceID
+	-- Maybe use the function provided above?
     if IsDressableItem(itemLink) then
 		local itemID, _, _, slotName = GetItemInfoInstant(itemLink);
 		if slotName then
@@ -367,23 +397,23 @@ local function SortCompanionPetInformation(a,b)
 end
 local function GetCompanionPetInfoCache()
 	local cache = GetTempDataMember("COMPANION_PET_CACHE", {});
-	local collected = GetDataMember("CollectedSpecies", {});
-	-- SetDataMember("COMPANION_PET_CACHE", cache);
+	local count = select(1, C_PetJournal.GetNumPets());
+	if count < 1 then return {}; end
 	
+	-- SetDataMember("COMPANION_PET_CACHE", cache);
 	local listedSpecies = GetTempDataMember("COMPANION_PET_CACHE_LISTED", {});
 	local temp = GetTempDataMember("COMPANION_PET_CACHE_TYPES", {});
 	if #temp < 1 then
 		local numPetTypes = C_PetJournal.GetNumPetTypes();
 		for index = 1,numPetTypes do
-			local petTypeTable = setmetatable({ ["petType"] = index, ["groups"] = {} }, app.BasePetType);
+			local petTypeTable = setmetatable({ ["petType"] = index, ["groups"] = {}}, app.BasePetType);
 			temp[index] = petTypeTable;
 			tinsert(cache, petTypeTable);
 		end
 	end
-	for index = 1,select(1, C_PetJournal.GetNumPets()) do
+	for index = 1,count do
 		local petID, speciesID, owned, customName, level, favorite, isRevoked, speciesName, icon, petType = C_PetJournal.GetPetInfoByIndex(index);
 		if speciesID then
-			collected[speciesID] = C_PetJournal.GetNumCollectedInfo(speciesID) > 0;
 			if not listedSpecies[speciesID] then 
 				listedSpecies[speciesID] = true;
 				tinsert(temp[petType].groups, setmetatable({ ["speciesID"] = speciesID }, app.BaseSpecies));
@@ -473,13 +503,17 @@ local function GetMountInfoCache()
 	--SetDataMember("MOUNT_CACHE", cache);
 	local spellID_MountID = GetTempDataMember("MOUNT_SPELLID_TO_MOUNTID");
 	if not spellID_MountID then
-		-- Let's build the spellID_MountID and mount cache.
-		local collected = GetDataMember("CollectedMounts", {});
-		spellID_MountID = {};
+		local numMounts = C_MountJournal.GetNumMounts();
+		if numMounts < 1 then return {}; end
 		
+		-- Detect how many mounts there are. If 0, Blizzard isn't ready yet.
 		local mountIDs = C_MountJournal.GetMountIDs();
+		if #mountIDs < 1 then return {}; end
+		
+		-- Let's build the spellID_MountID and mount cache.
 		local listedMounts = GetTempDataMember("MOUNT_CACHE_LISTED", {});
 		local temp = GetTempDataMember("COMPANION_PET_SOURCE_TYPES", {});
+		local collected = GetDataMember("CollectedMounts", {});
 		if #temp < 1 then
 			-- Create the Mount Achievements
 			tinsert(cache, app.CreateNPC(-4, 
@@ -502,6 +536,7 @@ local function GetMountInfoCache()
 				tinsert(cache, t);
 			end
 		end
+		spellID_MountID = {};
 		for i,mountID in ipairs(mountIDs) do
 			-- The 2nd value in the list is the spellID for the mount.
 			local creatureName, spellID, icon, active, isUsable, sourceType, isFavorite, isFactionSpecific, faction, hideOnChar, isCollected = C_MountJournal.GetMountInfoByID(mountID);
@@ -532,14 +567,16 @@ local function Harvest(itemID, bonusIDs)
 	if not app.Items then app.LoadItems(); app.LoadItems = nil; end
 	local baseItem = app.Items[itemID];
 	if not baseItem then
-		baseItem = {};
+		baseItem = setmetatable({}, app.BaseItem);
 		app.Items[itemID] = baseItem;
+	else
+		if not getmetatable(baseItem) then setmetatable(baseItem, app.BaseItem); end
 	end
 	
 	-- If we don't need a specific set of bonus IDs, then return the base item.
-	if not bonusIDs then return baseItem; end
-	local count = #bonusIDs;
-	if count < 1 then return baseItem; end
+	if not bonusIDs or #bonusIDs < 1 then
+		return baseItem;
+	end
 	
 	-- This addon only uses one bonus ID layer. (probably won't need more than that)
 	local bonusID = bonusIDs[1];
@@ -547,9 +584,7 @@ local function Harvest(itemID, bonusIDs)
 	-- Attempt to acquire the item information
 	if not baseItem.v then baseItem.v = {}; end
 	local item = baseItem.v[bonusID];
-	if item then
-		if not rawget(item, "s") then item.s = 0; end
-	else
+	if not item then
 		-- Create a child item
 		item = setmetatable({}, { __index = baseItem });
 		item.ids = bonusIDs;
@@ -561,7 +596,7 @@ end
 local function SearchForItemIDRecursively(group, itemID, bonusID)
 	if group.itemID == itemID then
 		-- OH BOY, WE FOUND IT!
-		return {""}, group;
+		return { (group.dr and ("/ |c" .. GetProgressColor(group.dr * 0.01) .. tostring(group.dr) .. "%|r")) or "" }, group;
 	end
 	if group.groups then
 		-- Check to see if our bonus ids are used for this group
@@ -610,8 +645,10 @@ local function SearchForItemIDRecursively(group, itemID, bonusID)
 		if first then
 			local t = tostring(group.text);
 			for i,text in ipairs(first) do
-				if text == "" then
+				if not text or text == "" then
 					first[i] = t;
+				elseif string.sub(text, 1, 1) == "/" then
+					first[i] = (group.text or group.link or "*") .. " " .. text;
 				else
 					first[i] = t .. " -> " .. text;
 				end
@@ -627,7 +664,7 @@ end
 local function SearchForSourceIDRecursively(group, sourceID)
 	if group.s == sourceID then
 		-- OH BOY, WE FOUND IT!
-		return {""}, group;
+		return { (group.dr and ("/ |c" .. GetProgressColor(group.dr * 0.01) .. tostring(group.dr) .. "%|r")) or "" }, group;
 	end
 	if group.groups then
 		-- Go through the sub groups and determine if any of them have a response.
@@ -661,8 +698,10 @@ local function SearchForSourceIDRecursively(group, sourceID)
 		-- If one or more of them did, append the text for this group.
 		if first then
 			for i,text in ipairs(first) do
-				if text == "" then
+				if not text or text == "" then
 					first[i] = (group.text or group.link or "*");
+				elseif string.sub(text, 1, 1) == "/" then
+					first[i] = (group.text or group.link or "*") .. " " .. text;
 				else
 					first[i] = (group.text or group.link or "*") .. " -> " .. (text or "*");
 				end
@@ -678,7 +717,7 @@ end
 local function SearchForSourceIDRecursivelyQuickly(group, sourceID)
 	if group.s == sourceID then
 		-- OH BOY, WE FOUND IT!
-		return {""}, group;
+		return { (group.dr and ("/ |c" .. GetProgressColor(group.dr * 0.01) .. tostring(group.dr) .. "%|r")) or "" }, group;
 	end
 	if group.groups then
 		-- Go through the sub groups and determine if any of them have a response.
@@ -687,8 +726,10 @@ local function SearchForSourceIDRecursivelyQuickly(group, sourceID)
 			if r then
 				-- Append the text for this group.
 				for i,text in ipairs(r) do
-					if text == "" then
+					if not text or text == "" then
 						r[i] = (group.text or group.link or "*");
+					elseif string.sub(text, 1, 1) == "/" then
+						first[i] = (group.text or group.link or "*") .. " " .. text;
 					else
 						r[i] = (group.text or group.link or "*") .. " -> " .. (text or "*");
 					end
@@ -712,6 +753,19 @@ local function SearchForItemLink(link)
 		if cache and (now - cache[3]) < cache[4] then return cache[1], cache[2]; end
 	
 		if string.match(link, "item") then
+			-- Skip artifact weapons and common for now
+			local _, _, quality = GetItemInfo(link);
+			if quality and (quality == LE_ITEM_QUALITY_ARTIFACT or quality <= LE_ITEM_QUALITY_COMMON) then
+				-- Cache the result for a while depending on the importance of the item
+				cache = { };
+				cache[1] = nil;
+				cache[2] = nil;
+				cache[3] = now;
+				cache[4] = 100000000;
+				searchCache[link] = cache;
+				return nil;
+			end
+		
 			-- Parse the link and get the itemID and bonus ids.
 			local itemString = string.match(link, "item[%-?%d:]+") or link;
 			if itemString then
@@ -725,10 +779,15 @@ local function SearchForItemLink(link)
 					if sourceID then
 						important = true;
 						if GetDataMember("ShowSources") then
-							listing, group = SearchForSourceIDQuickly(sourceID);
+							listing, group = (GetDataMember("ShowAllSources") and SearchForSourceID or SearchForSourceIDQuickly)(sourceID);
 							if not listing then
 								listing, group = SearchForItemID(itemID);
-								if not listing then listing = {}; end
+								if not listing then
+									listing = {};
+								elseif group and (not group.s or group.s < 1) then
+									getmetatable(group).__index.s = s;
+									SetDataMember("Items", app.Items); -- Uncomment for harvesting Source IDs
+								end
 							end
 							for i,text in ipairs(listing) do
 								for source,replacement in pairs(L("ABBREVIATIONS")) do
@@ -761,7 +820,7 @@ local function SearchForItemLink(link)
 												text = "   ";
 											end
 											text = text .. link .. " (" .. (otherSourceID == sourceID and "*" or otherSource.itemID) .. ")" .. "/" .. L(otherSource.isCollected and "COLLECTED_ICON" or "NOT_COLLECTED_ICON");
-											if otherSource.isCollected then SetDataSubMember("Collected", otherSourceID, 1); end
+											if otherSource.isCollected then SetDataSubMember("CollectedSources", otherSourceID, 1); end
 											tinsert(listing, text);
 										end
 									end
@@ -783,7 +842,7 @@ local function SearchForItemLink(link)
 					end
 					
 					if not listing then listing = {}; end
-					-- if itemID > 0 then tinsert(listing, L("ITEM_ID") .. "/" .. itemID); end
+					if itemID > 0 then tinsert(listing, L("ITEM_ID") .. "/" .. itemID); end
 					-- tinsert(listing, itemString);
 					-- tinsert(listing, "Source ID: " .. tostring(GetSourceID(link)));
 					
@@ -1004,9 +1063,9 @@ local function RefreshSources(groups, bonusIDs)
 			while InCombatLockdown() do coroutine.yield(); end
 			if group.itemID then
 				if not getmetatable(group) then setmetatable(group, { __index = (group.ignoreBonus and Harvest(group.itemID)) or Harvest(group.itemID, group.ids or bonusIDs) }); end
-				if group.s and group.s > 0 and not GetDataSubMember("Collected", group.s) then
+				if group.s and group.s > 0 and not GetDataSubMember("CollectedSources", group.s) then
 					local sourceInfo = C_TransmogCollection.GetSourceInfo(group.s);
-					if sourceInfo and app.ItemSourceFilter(sourceInfo) then SetDataSubMember("Collected", group.s, 1); end
+					if sourceInfo and app.ItemSourceFilter(sourceInfo) then SetDataSubMember("CollectedSources", group.s, 1); end
 				end
 			end
 			if group.toyID and not GetDataSubMember("CollectedToys", group.toyID) and PlayerHasToy(group.toyID) then
@@ -1024,6 +1083,19 @@ local function RefreshCollections(groups)
 			-- Harvest Illusion Collections
 			for i,illusion in ipairs(C_TransmogCollection.GetIllusions()) do
 				if illusion.isCollected then SetDataSubMember("CollectedIllusions", illusion.sourceID, 1); end
+			end
+			
+			-- Wait a frame before harvesting item collection status.
+			coroutine.yield();
+			
+			-- Harvest all appearance / source collections usable by this character from Blizzard's API.
+			for categoryID=1,28 do
+				for i, appearance in ipairs(C_TransmogCollection.GetCategoryAppearances(categoryID)) do
+					for j, sourceID in ipairs(C_TransmogCollection.GetAllAppearanceSources(appearance.visualID)) do
+						local sourceInfo = C_TransmogCollection.GetSourceInfo(sourceID);
+						if sourceInfo and sourceInfo.isCollected then SetDataSubMember("CollectedSources", sourceID, 1); end
+					end
+				end
 			end
 			
 			-- Wait a frame before harvesting item collection status.
@@ -1049,12 +1121,10 @@ AllTheThings.OpenMiniList = OpenMiniList;
 -- Achievement Lib
 app.BaseAchievement = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "f" then
-			return 105;
-		elseif key == "text" then
+		--if key == "f" then
+		--	return 105;
+		--else
+		if key == "text" then
 			--local IDNumber, Name, Points, Completed, Month, Day, Year, Description, Flags, Image, RewardText, isGuildAch = GetAchievementInfo(t.achievementID);
 			return GetAchievementLink(t.achievementID) or select(2, GetAchievementInfo(t.achievementID)) or ("Achievement #" .. t.achievementID);
 		elseif key == "link" then
@@ -1078,10 +1148,7 @@ end
 -- Character Class Lib
 app.BaseCharacterClass = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			local name, id = GetClassInfo(t.classID);
 			return "|c" .. RAID_CLASS_COLORS[id].colorStr .. name .. "|r";
 		else
@@ -1098,13 +1165,28 @@ app.CreateCharacterClass = function(id, t)
 end
 
 -- Difficulty Lib
+app.DifficultyDB = {
+	[1] = { icon = "Interface/Worldmap/Skull_64Green" },
+	[2] = { icon = "Interface/Worldmap/Skull_64Blue" },
+	[3] = { icon = "Interface/Worldmap/Skull_64Green" },
+	[4] = { icon = "Interface/Worldmap/Skull_64Green" },
+	[5] = { icon = "Interface/Worldmap/Skull_64Blue" },
+	[6] = { icon = "Interface/Worldmap/Skull_64Blue" },
+	[7] = { icon = "Interface/Worldmap/Skull_64Grey" },
+	[14] = { icon = "Interface/Worldmap/Skull_64Green" },
+	[15] = { icon = "Interface/Worldmap/Skull_64Blue" },
+	[16] = { icon = "Interface/Worldmap/Skull_64Purple" },
+	[17] = { icon = "Interface/Worldmap/Skull_64Grey" },
+	[23] = { icon = "Interface/Worldmap/Skull_64Purple" },
+	[24] = { icon = "Interface/Worldmap/Skull_64Red" },
+};
 app.BaseDifficulty = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			return GetDifficultyInfo(t.difficultyID);
+		elseif key == "icon" then
+			local info = app.DifficultyDB[t.difficultyID];
+			return info and info.icon;
 		else
 			-- Something that isn't dynamic.
 			return table[key];
@@ -1121,10 +1203,7 @@ end
 -- Encounter Lib
 app.BaseEncounter = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			if t["isRaid"] then
 				return "|cffff8000" .. (select(1, EJ_GetEncounterInfo(t.encounterID)) or "") .. "|r";
 			end
@@ -1133,6 +1212,9 @@ app.BaseEncounter = {
 			return select(2, EJ_GetEncounterInfo(t.encounterID)) or "";
 		elseif key == "link" then
 			return select(5, EJ_GetEncounterInfo(t.encounterID)) or "";
+		elseif key == "modelID" then
+			-- local id, name, description, displayInfo, iconImage = EJ_GetCreatureInfo(1, t.encounterID);
+			return select(4, EJ_GetCreatureInfo(1, t.encounterID));
 		else
 			-- Something that isn't dynamic.
 			return table[key];
@@ -1146,12 +1228,46 @@ app.CreateEncounter = function(id, t)
 	return t;
 end
 
+-- Follower Lib
+app.BaseFollower = {
+	__index = function(t, key)
+		if key == "collectable" then
+			return true;
+		elseif key == "text" then
+			local info = t.info;
+			return info and info.name;
+		elseif key == "info" then
+			-- https://wow.gamepedia.com/API_C_Garrison.GetFollowerInfo
+			return C_Garrison.GetFollowerInfo(t.followerID);
+		elseif key == "icon" then
+			local info = t.info;
+			return info and info.portraitIconID;
+		elseif key == "modelID" then
+			local info = t.info;
+			return info and info.displayID;
+		elseif key == "collected" then
+			return C_Garrison.IsFollowerCollected(t.followerID);
+		else
+			-- Something that isn't dynamic.
+			return table[key];
+		end
+	end
+};
+app.CreateFollower = function(id, t)
+	if not t then t = {};
+	elseif not t.groups then t = { ["groups"] = t }; end
+	t.followerID = id;
+	setmetatable(t, app.BaseFollower);
+	return t;
+end
+
 -- Heirloom Lib
 app.BaseHeirloom = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
+		if key == "collectable" then
+			return true;
+		elseif key == "f" then
+			return 109;
 		elseif key == "text" then
 			return select(2, GetItemInfo(t.heirloomID));
 		elseif key == "link" then
@@ -1176,9 +1292,8 @@ end
 -- Illusion Lib
 app.BaseIllusion = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
+		if key == "collectable" then
+			return true;
 		elseif key == "collected" then
 			return GetDataSubMember("CollectedIllusions", t.illusionID);
 		elseif key == "f" then
@@ -1206,10 +1321,7 @@ end
 -- Gear Set Lib
 app.BaseGearSet = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "info" then
+		if key == "info" then
 			return C_TransmogSets.GetSetInfo(t.setID);
 		elseif key == "text" then
 			local info = t.info;
@@ -1262,19 +1374,11 @@ app.BaseGearSource = {
 			local info = t.info;
 			if info then return info.itemID; end
 		elseif key == "text" then
-			local item = t.item;
-			if item then return item.text; end
-			return select(1, GetItemInfo(t.itemID));
+			return select(2, GetItemInfo(t.itemID));
+		elseif key == "link" then
+			return select(2, GetItemInfo(t.itemID));
 		elseif key == "icon" then
 			return select(5, GetItemInfoInstant(t.itemID));
-		elseif key == "link" then
-			local item = t.item;
-			if item then return item.link; end
-		elseif key == "item" then
-			local response, group = SearchForSourceIDQuickly(t.s);
-			if group == t then group = {}; end
-			rawset(t, "item", group);
-			return group;
 		else
 			-- Something that isn't dynamic.
 			return table[key];
@@ -1286,10 +1390,7 @@ app.CreateGearSource = function(id)
 end
 app.BaseGearSetHeader = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			local info = C_TransmogSets.GetSetInfo(t.setHeaderID);
 			if info then return info.label; end
 		else
@@ -1306,10 +1407,7 @@ app.CreateGearSetHeader = function(id, t)
 end
 app.BaseGearSetSubHeader = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			local info = C_TransmogSets.GetSetInfo(t.setSubHeaderID);
 			if info then return info.description; end
 		else
@@ -1328,10 +1426,7 @@ end
 -- Instance Lib
 app.BaseInstance = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			if t["isRaid"] then
 				return "|cffff8000" .. (select(1, EJ_GetInstanceInfo(t.instanceID)) or "") .. "|r";
 			end
@@ -1357,6 +1452,33 @@ app.CreateInstance = function(id, t)
 	t.instanceID = id;
 	return setmetatable(t, app.BaseInstance);
 end
+app.BaseItem = {
+	__index = function(t, key)
+		if key == "collectable" then
+			return t.s;
+		elseif key == "collected" then
+			if t.s then
+				if t.s > 0 then
+					-- If an item has a source ID, that means we can check its collected status.
+					return GetDataSubMember("CollectedSources", t.s);
+				else
+					-- The source ID will need to be harvested.
+					if not table.contains(GetTempDataMember("Missing"), t) then
+						table.insert(GetTempDataMember("Missing"), t);
+					end
+				
+					-- This item is missing its source ID. :(
+					return 0;
+				end
+			end
+		--elseif key == "s" then
+		--	return 0; -- Use this for Harvesting!
+		else
+			-- Something that isn't dynamic.
+			return table[key];
+		end
+	end
+};
 app.CreateItem = function(id, t)
 	if not t then
 		local item = { ["itemID"] = id };
@@ -1382,10 +1504,7 @@ end
 -- Map Lib
 app.BaseMap = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			local mapID = t.mapID;
 			return (mapID and mapID > 0 and GetMapNameByID(mapID)) or ("Map ID #" .. (mapID or "???"));
 		elseif key == "link" then
@@ -1408,9 +1527,8 @@ end
 -- Mount Lib
 app.BaseMount = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
+		if key == "collectable" then
+			return true;
 		elseif key == "collected" then
 			return GetDataSubMember("CollectedMounts", t.mountID);
 		elseif key == "f" then
@@ -1423,6 +1541,8 @@ app.BaseMount = {
 			return select(1, GetSpellLink(t.mountID));
 		elseif key == "icon" then
 			return select(3, GetSpellInfo(t.mountID));
+		elseif key == "modelID" then
+			return select(1, GetMountExtraInfo(t.mountID));
 		else
 			-- Something that isn't dynamic.
 			return table[key];
@@ -1440,9 +1560,8 @@ end
 -- Music Roll Lib
 app.BaseMusicRoll = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
+		if key == "collectable" then
+			return true;
 		elseif key == "f" then
 			return 108;
 		elseif key == "Lvl" then
@@ -1474,14 +1593,10 @@ app.CreateMusicRoll = function(questID, itemID)
 	return t;
 end
 
-
 -- NPC Lib
 app.BaseNPC = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			local name = L("NPC_ID_NAMES")[t.npcID] or ("Unknown NPC ID #" .. t.npcID);
 			if t["isRaid"] then name = "|cffff8000" .. name .. "|r"; end
 			rawset(t, "text", name);
@@ -1506,10 +1621,7 @@ end
 -- Object Lib (as in "World Object")
 app.BaseObject = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			local name = L("OBJECT_ID_NAMES")[t.objectID] or ("Unknown Object ID #" .. t.objectID);
 			if t["isRaid"] then name = "|cffff8000" .. name .. "|r"; end
 			rawset(t, "text", name);
@@ -1532,10 +1644,7 @@ end
 -- Pet Type Lib
 app.BasePetType = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "f" then
+		if key == "f" then
 			return 101;
 		elseif key == "text" then
 			return _G["BATTLE_PET_NAME_" .. t.petType];
@@ -1557,10 +1666,7 @@ end
 -- Profession Lib
 app.BaseProfession = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "f" then
+		if key == "f" then
 			return 200;
 		elseif key == "text" then
 			return select(1, GetSpellInfo(t.professionID));
@@ -1584,10 +1690,7 @@ end
 -- Quest Lib
 app.BaseQuest = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "f" then
+		if key == "f" then
 			return 104;
 		elseif key == "text" then
 			local questName = QuestTitleFromID[t.questID];
@@ -1613,10 +1716,7 @@ end
 -- Spell Lib
 app.BaseSpell = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			return select(1, GetSpellLink(t.spellID)) or select(1, GetSpellInfo(t.spellID)) or ("Spell #" .. t.spellID);
 		elseif key == "link" then
 			return select(1, GetSpellLink(t.spellID));
@@ -1638,11 +1738,12 @@ end
 -- Species Lib
 app.BaseSpecies = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
+		if key == "collectable" then
+			return true;
 		elseif key == "collected" then
-			return GetDataSubMember("CollectedSpecies", t.speciesID);
+			if select(1, C_PetJournal.GetNumCollectedInfo(t.speciesID)) > 0 then
+				return 1;
+			end
 		elseif key == "f" then
 			return 101;
 		elseif key == "text" then
@@ -1651,6 +1752,8 @@ app.BaseSpecies = {
 			return select(2, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
 		elseif key == "description" then
 			return select(6, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
+		elseif key == "modelID" then
+			return select(12, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
 		else
 			-- Something that isn't dynamic.
 			return table[key];
@@ -1677,10 +1780,7 @@ app.TierDB = {
 };
 app.BaseTier = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "text" then
+		if key == "text" then
 			return EJ_GetTierInfo(t.tierID);
 		else
 			-- Something that isn't dynamic.
@@ -1698,9 +1798,8 @@ end
 -- Toy Lib
 app.BaseToy = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
+		if key == "collectable" then
+			return true;
 		elseif key == "collected" then
 			return GetDataSubMember("CollectedToys", t.toyID);
 		elseif key == "f" then
@@ -1728,10 +1827,7 @@ end
 -- Vignette Lib
 app.BaseVignette = {
 	__index = function(t, key)
-		if key == "expanded" then
-			-- TODO: Use a data setting.
-			return false;
-		elseif key == "f" then
+		if key == "f" then
 			return 107;
 		elseif key == "text" then
 			local questName = QuestTitleFromID[t.vignetteID];
@@ -1755,8 +1851,6 @@ app.CreateVignette = function(id, t)
 	setmetatable(t, app.BaseVignette);
 	return t;
 end
-
-
 
 -- Filtering
 function app.Filter()
@@ -2033,14 +2127,7 @@ local function CreateSettingsMenu()
 	frame.UniqueAppearances:SetChecked(GetDataMember("UniqueAppearances"));
 	frame.UniqueAppearances:SetScript("OnClick", function(self)
 		SetDataMember("UniqueAppearances", self:GetChecked());
-		SetDataMember("Collected", {});	-- This option causes a caching issue, so we have to purge the collected data cache.
-		--[[
-		SetDataMember("CollectedPets", {});
-		SetDataMember("CollectedToys", {});
-		SetDataMember("CollectedIllusions", {});
-		SetDataMember("CollectedSpecies", {});
-		SetDataMember("CollectedMounts", {});
-		]]--
+		SetDataMember("CollectedSources", {});	-- This option causes a caching issue, so we have to purge the collected data cache.
 		if self:GetChecked() then
 			app.ItemSourceFilter = app.FilterItemSourceUnique;
 		else
@@ -2084,7 +2171,7 @@ local function CreateSettingsMenu()
 	frame.PlayFanfare.Label = _G[frame.PlayFanfare:GetName() .. "Text"];
 	frame.PlayFanfare.Label:SetText("Play Collection Fanfare");
 	frame.PlayFanfare.Label:SetWidth(300);
-	frame.PlayFanfare:SetChecked(GetDataMember("PlayFanfare"));
+	frame.PlayFanfare:SetChecked(GetDataMember("PlayFanfare", true));
 	frame.PlayFanfare:SetScript("OnClick", function(self)
 		SetDataMember("PlayFanfare", self:GetChecked());
 	end);
@@ -2094,7 +2181,7 @@ local function CreateSettingsMenu()
 	frame.PlayRemoveSound.Label = _G[frame.PlayRemoveSound:GetName() .. "Text"];
 	frame.PlayRemoveSound.Label:SetText("Play Remove Sound");
 	frame.PlayRemoveSound.Label:SetWidth(300);
-	frame.PlayRemoveSound:SetChecked(GetDataMember("PlayRemoveSound"));
+	frame.PlayRemoveSound:SetChecked(GetDataMember("PlayRemoveSound", true));
 	frame.PlayRemoveSound:SetScript("OnClick", function(self)
 		SetDataMember("PlayRemoveSound", self:GetChecked());
 	end);
@@ -2128,6 +2215,28 @@ local function CreateSettingsMenu()
 	frame.ShowSources:SetChecked(GetDataMember("ShowSources"));
 	frame.ShowSources:SetScript("OnClick", function(self)
 		SetDataMember("ShowSources", self:GetChecked());
+		wipe(searchCache);
+	end);
+	
+	frame.ShowAllSources = CreateFrame("CheckButton", name .. "-ShowAllSources", frame, "InterfaceOptionsCheckButtonTemplate");
+	frame.ShowAllSources:SetPoint("TOPLEFT", frame.ShowSources, "BOTTOMLEFT", 10, 6);
+	frame.ShowAllSources.Label = _G[frame.ShowAllSources:GetName() .. "Text"];
+	frame.ShowAllSources.Label:SetText("Show All Sources");
+	frame.ShowAllSources.Label:SetWidth(300);
+	frame.ShowAllSources:SetChecked(GetDataMember("ShowAllSources"));
+	frame.ShowAllSources:SetScript("OnClick", function(self)
+		SetDataMember("ShowAllSources", self:GetChecked());
+		wipe(searchCache);
+	end);
+	
+	frame.ShowCollected = CreateFrame("CheckButton", name .. "-ShowCollected", frame, "InterfaceOptionsCheckButtonTemplate");
+	frame.ShowCollected:SetPoint("TOPLEFT", frame.ShowAllSources, "TOPRIGHT", 120, 0);
+	frame.ShowCollected.Label = _G[frame.ShowCollected:GetName() .. "Text"];
+	frame.ShowCollected.Label:SetText("Show Collected");
+	frame.ShowCollected.Label:SetWidth(300);
+	frame.ShowCollected:SetChecked(GetDataMember("ShowCollected", true));
+	frame.ShowCollected:SetScript("OnClick", function(self)
+		SetDataMember("ShowCollected", self:GetChecked());
 		wipe(searchCache);
 	end);
 	
@@ -2291,7 +2400,7 @@ local function CreateSettingsMenu()
 	
 	-- "Non-Equipment Types" (Part 2)
 	lastFilter = frame.NonEquipmentTypesTitle;
-	for i,filter in ipairs({ 104, 105, 106, 200 }) do
+	for i,filter in ipairs({ 104, 108, 109, 200 }) do
 		local itemFilter = CreateFrame("CheckButton", name .. "-15-" .. filter, frame, "InterfaceOptionsCheckButtonTemplate");
 		itemFilter:SetPoint("LEFT", frame.NonEquipmentTypesTitle, "LEFT", 200, 0);
 		itemFilter:SetPoint("TOP", lastFilter, "BOTTOM", 0, 6);
@@ -2447,12 +2556,20 @@ local function SetRowData(self, data)
 		if data.icon then
 			self.Texture:SetPoint("LEFT", leftmost, relative, x, 0);
 			self.Texture:SetTexture(data.icon);
+			self.Texture:SetWidth(self:GetHeight());
+			self.Texture:Show();
+			leftmost = self.Texture;
+			relative = "RIGHT";
+			x = 4;
+		elseif data.modelID then
+			self.Texture:SetPoint("LEFT", leftmost, relative, x, 0);
+			SetPortraitTexture(self.Texture, data.modelID);
+			self.Texture:SetWidth(self:GetHeight());
 			self.Texture:Show();
 			leftmost = self.Texture;
 			relative = "RIGHT";
 			x = 4;
 		end
-		
 		if data.total and data.total > 0 then
 			local percent = data.collected / data.total;
 			self.Summary:SetText("|c" .. GetProgressColor(percent) .. tostring(data.collected) .. " / " .. tostring(data.total) .. " (" .. tostring(floor(percent * 100)) .. "%)|r");
@@ -2475,6 +2592,7 @@ end
 local function UpdateVisibleRowData(self)
 	-- If there is no raw data, then return immediately.
 	if not self.rowData then return; end
+	if self:GetHeight() > 64 then self.ScrollBar:Show(); else self.ScrollBar:Hide(); end
 	
 	-- Make it so that if you scroll all the way down, you have the ability to see all of the text every time.
 	local container = self.Container;
@@ -2527,7 +2645,7 @@ local function StartMovingOrSizing(self, fromChild)
 		StopMovingOrSizing(self);
 	else
 		self.isMoving = true;
-		if ((select(2, GetCursorPosition()) / self:GetEffectiveScale()) < self:GetTop() - 40) then
+		if ((select(2, GetCursorPosition()) / self:GetEffectiveScale()) < math.max(self:GetTop() - 40, self:GetBottom() + 10)) then
 			self:StartSizing();
 			Push(self, function()
 				if self.isMoving then
@@ -2605,14 +2723,18 @@ local function RowOnEnter(self)
 	local reference = self.ref; -- NOTE: This is the good ref value, not the parasitic one.
 	if reference and GameTooltip then
 		GameTooltipIcon:Hide();
+		GameTooltipModel:Hide();
 		GameTooltip:ClearLines();
 		GameTooltipIcon:ClearAllPoints();
+		GameTooltipModel:ClearAllPoints();
 		if self:GetCenter() > (UIParent:GetWidth() / 2) then
 			GameTooltip:SetOwner(self, "ANCHOR_LEFT");
 			GameTooltipIcon:SetPoint("TOPRIGHT", GameTooltip, "TOPLEFT", 0, 0);
+			GameTooltipModel:SetPoint("TOPRIGHT", GameTooltip, "TOPLEFT", 0, 0);
 		else
 			GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
 			GameTooltipIcon:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT", 0, 0);
+			GameTooltipModel:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT", 0, 0);
 		end
 		
 		-- NOTE: Order matters, we "fall-through" certain values in order to pass this information to the item ID section.
@@ -2641,22 +2763,24 @@ local function RowOnEnter(self)
 		end
 		
 		-- Miscellaneous fields
-		local style = GameTooltip:NumLines() < 1;
-		if style then
-			if not reference.total or reference.total < 1 then 
-				GameTooltip:AddDoubleLine(self.Label:GetText(), L(reference.collected and "COLLECTED" or "NOT_COLLECTED"));
+		if GetDataMember("ShowCollected", true) then
+			local style = GameTooltip:NumLines() < 1;
+			if style then
+				if not reference.total or reference.total < 1 then 
+					GameTooltip:AddDoubleLine(self.Label:GetText(), L(reference.collected and "COLLECTED" or "NOT_COLLECTED"));
+				else
+					local percent = reference.collected / reference.total;
+					GameTooltip:AddDoubleLine(self.Label:GetText(), "|c" .. GetProgressColor(percent) .. tostring(reference.collected) .. " / " .. tostring(reference.total) .. " (" .. tostring(floor(percent * 100)) .. "%)|r");
+				end
 			else
-				local percent = reference.collected / reference.total;
-				GameTooltip:AddDoubleLine(self.Label:GetText(), "|c" .. GetProgressColor(percent) .. tostring(reference.collected) .. " / " .. tostring(reference.total) .. " (" .. tostring(floor(percent * 100)) .. "%)|r");
+				if not reference.total or reference.total < 1 then
+					GameTooltipTextRight1:SetText(L(reference.collected and "COLLECTED" or "NOT_COLLECTED"));
+				else
+					local percent = reference.collected / reference.total;
+					GameTooltipTextRight1:SetText("|c" .. GetProgressColor(percent) .. tostring(reference.collected) .. " / " .. tostring(reference.total) .. " (" .. tostring(floor(percent * 100)) .. "%)|r");
+				end
+				GameTooltipTextRight1:Show();
 			end
-		else
-			if not reference.total or reference.total < 1 then
-				GameTooltipTextRight1:SetText(L(reference.collected and "COLLECTED" or "NOT_COLLECTED"));
-			else
-				local percent = reference.collected / reference.total;
-				GameTooltipTextRight1:SetText("|c" .. GetProgressColor(percent) .. tostring(reference.collected) .. " / " .. tostring(reference.total) .. " (" .. tostring(floor(percent * 100)) .. "%)|r");
-			end
-			GameTooltipTextRight1:Show();
 		end
 		
 		if reference.Lvl then GameTooltip:AddDoubleLine(L("REQUIRES_LEVEL"), tostring(reference.Lvl)); end
@@ -2669,10 +2793,6 @@ local function RowOnEnter(self)
 		if reference.mountID then GameTooltip:AddDoubleLine(L("MOUNT_ID"), tostring(reference.mountID)); end
 		if reference.musicRollID then GameTooltip:AddDoubleLine(L("MUSIC_ROLL_ID"), tostring(reference.musicRollID)); end
 		if reference.npcID then GameTooltip:AddDoubleLine(L("NPC_ID"), tostring(reference.npcID)); end
-		if reference.questID then
-			GameTooltip:AddDoubleLine(L("QUEST_ID"), tostring(reference.questID));
-			GameTooltip:AddDoubleLine(" ", L(IsQuestFlaggedCompleted(reference.questID) and "COMPLETE" or "INCOMPLETE"));
-		end
 		if reference.speciesID then GameTooltip:AddDoubleLine(L("SPECIES_ID"), tostring(reference.speciesID)); end
 		if reference.spellID then GameTooltip:AddDoubleLine(L("SPELL_ID"), tostring(reference.spellID)); end
 		if reference.tierID then GameTooltip:AddDoubleLine(L("EXPANSION_ID"), tostring(reference.tierID)); end
@@ -2682,9 +2802,15 @@ local function RowOnEnter(self)
 		if reference.setSubHeaderID then GameTooltip:AddDoubleLine(L("SET_ID"), tostring(reference.setSubHeaderID)); end
 		if reference.description then GameTooltip:AddLine(reference.description, 0.4, 0.8, 1, 1); end
 		if reference.mapID then GameTooltip:AddDoubleLine(L("MAP_ID"), tostring(reference.mapID)); end
-		if reference.dr then GameTooltip:AddDoubleLine(L("DROP_RATE"), tostring(reference.dr) .. "%"); end
+		if reference.dr then GameTooltip:AddDoubleLine(L("DROP_RATE"), "|c" .. GetProgressColor(reference.dr * 0.01) .. tostring(reference.dr) .. "%|r"); end
 		if not reference.itemID and reference.u then GameTooltip:AddLine(L("UNOBTAINABLE_ITEM_REASONS")[reference.u][2], 1, 1, 1, 1, true); end
-		if reference.icon then
+		if reference.questID then
+			GameTooltip:AddDoubleLine(L("QUEST_ID"), tostring(reference.questID));
+			GameTooltip:AddDoubleLine(" ", L(IsQuestFlaggedCompleted(reference.questID) and "COMPLETE" or "INCOMPLETE"));
+		end
+		if reference.modelID then
+			GameTooltipModel:SetModelID(reference.modelID);
+		elseif reference.icon then
 			if reference.groups then
 				GameTooltipIcon:SetSize(96,96);
 			else
@@ -2718,6 +2844,7 @@ local function RowOnLeave(self)
 	if self.ref and GameTooltip then
 		GameTooltip:Hide();
 		GameTooltipIcon:Hide();
+		GameTooltipModel:Hide();
 	end
 end
 CreateRow = function(self)
@@ -2815,7 +2942,7 @@ local function UpdateGroups(parent, groups, bonusIDs)
 					if group.itemID and group.s then
 						if group.s > 0 then
 							-- If an item has a source ID, that means we can check its collected status.
-							group.collected = GetDataSubMember("Collected", group.s) and 1 or 0;
+							group.collected = GetDataSubMember("CollectedSources", group.s) and 1 or 0;
 							group.total = 1;
 						else
 							-- This item is missing its source ID. :(
@@ -2849,10 +2976,16 @@ local function UpdateGroups(parent, groups, bonusIDs)
 					if group.itemID then
 						-- If an item has a source ID, that means we can check its collected status.
 						if group.s and group.s > 0 then
-							group.collected = GetDataSubMember("Collected", group.s);
+							group.collected = GetDataSubMember("CollectedSources", group.s);
 						else
 							-- If it doesn't, the source ID will need to be harvested.
-							table.insert(GetTempDataMember("Missing"), group);
+							local s, dressable = group.text and GetSourceID(group.text);
+							if dressable then 
+								getmetatable(group).__index.s = s;
+								SetDataMember("Items", app.Items); -- Uncomment for harvesting Source IDs
+							else
+								table.insert(GetTempDataMember("Missing"), group);
+							end
 						end
 					end
 					
@@ -3131,6 +3264,7 @@ function app:GetWindow(suffix)
 		window:SetMovable(true);
 		window:SetResizable(true);
 		window:SetPoint("CENTER");
+		window:SetMinResize(32, 32);
 		window:SetSize(300, 300);
 		window:SetUserPlaced(true);
 		window.data = {};
@@ -3185,6 +3319,7 @@ app:GetWindow("CurrentInstance");
 -- Tooltip Hooks
 local function AttachTooltipWithLink(self, link, ...)
     if link then
+		-- print(self:GetName());
 		local listing, group = SearchForItemLink(link);
 		if listing and (#listing > 0 or group) then
 			if group and group.u then self:AddLine(L("UNOBTAINABLE_ITEM_REASONS")[group.u][2], 1, 1, 1, true); end
@@ -3197,7 +3332,7 @@ local function AttachTooltipWithLink(self, link, ...)
 				end
 			end
 			
-			if group then
+			if group and GetDataMember("ShowCollected", true) then
 				-- TODO: Add a preference for showing this on the first line or appending it to the bottom.
 				local style = self:NumLines() < 1;
 				if style then
@@ -3248,12 +3383,12 @@ ItemRefShoppingTooltip1:HookScript("OnTooltipCleared", ClearTooltip);
 ItemRefShoppingTooltip2:HookScript("OnShow", AttachTooltip);
 ItemRefShoppingTooltip2:HookScript("OnTooltipSetItem", AttachTooltip);
 ItemRefShoppingTooltip2:HookScript("OnTooltipCleared", ClearTooltip);
-ShoppingTooltip1:HookScript("OnShow", AttachTooltip);
-ShoppingTooltip1:HookScript("OnTooltipSetItem", AttachTooltip);
-ShoppingTooltip1:HookScript("OnTooltipCleared", ClearTooltip);
-ShoppingTooltip2:HookScript("OnShow", AttachTooltip);
-ShoppingTooltip2:HookScript("OnTooltipSetItem", AttachTooltip);
-ShoppingTooltip2:HookScript("OnTooltipCleared", ClearTooltip);
+--ShoppingTooltip1:HookScript("OnShow", AttachTooltip);
+--ShoppingTooltip1:HookScript("OnTooltipSetItem", AttachTooltip);
+--ShoppingTooltip1:HookScript("OnTooltipCleared", ClearTooltip);
+--ShoppingTooltip2:HookScript("OnShow", AttachTooltip);
+--ShoppingTooltip2:HookScript("OnTooltipSetItem", AttachTooltip);
+--ShoppingTooltip2:HookScript("OnTooltipCleared", ClearTooltip);
 WorldMapTooltip.ItemTooltip.Tooltip:HookScript("OnTooltipSetItem", AttachTooltip);
 WorldMapTooltip.ItemTooltip.Tooltip:HookScript("OnTooltipCleared", ClearTooltip);
 
@@ -3442,6 +3577,7 @@ app.events.COMPANION_LEARNED = function(...)
 	GetCompanionPetInfoCache();
 	app:RefreshData(false, true);
 	PlayFanfare();
+	wipe(searchCache);
 end
 app.events.COMPANION_UNLEARNED = function(...)
 	GetCompanionPetInfoCache();
@@ -3457,6 +3593,7 @@ app.events.TOYS_UPDATED = function(itemID, new)
 		SetDataSubMember("CollectedToys", itemID, true);
 		app:RefreshData(false, true);
 		PlayFanfare();
+		wipe(searchCache);
 		
 		if GetDataMember("ShowNotifications", true) then
 			local name, link = GetItemInfo(itemID);
@@ -3465,31 +3602,87 @@ app.events.TOYS_UPDATED = function(itemID, new)
 	end
 end
 app.events.TRANSMOG_COLLECTION_SOURCE_ADDED = function(sourceID)
-	if sourceID and not GetDataSubMember("Collected", sourceID) then
-		SetDataSubMember("Collected", sourceID, 1);
+	if sourceID and (GetDataSubMember("CollectedSources", sourceID) or 0) ~= 1 then
+		local sourceInfo = C_TransmogCollection.GetSourceInfo(sourceID);
+		local categoryID, appearanceID, canEnchant, texture, isCollected, itemLink = C_TransmogCollection.GetAppearanceSourceInfo(sourceID);
+		SetDataSubMember("CollectedSources", sourceID, 1);
+		
+		-- If the user isn't a Completionist... We need to flag the shared appearances as collected as well. :/
+		if GetDataMember("UniqueAppearances") then
+			local shared = 0;
+			if categoryID then
+				for i, otherSourceID in ipairs(C_TransmogCollection.GetAllAppearanceSources(appearanceID)) do
+					if not GetDataSubMember("CollectedSources", otherSourceID) then
+						if C_TransmogCollection.GetSourceInfo(otherSourceID).categoryID == categoryID then
+							SetDataSubMember("CollectedSources", otherSourceID, 2);
+							shared = shared + 1;
+						end
+					end
+				end
+			end
+			
+			if GetDataMember("ShowNotifications", true) then
+				-- NOTE: The itemlink that gets passed is BASE ITEM LINK, not the full item link.
+				-- So this may show green items where an epic was obtained. (particularly with Legion drops)
+				-- This is okay since items of this type share their appearance regardless of the power of the item.
+				local name, link = GetItemInfo(sourceInfo.itemID);
+				print(format(L(shared > 0 and "ITEM_ID_ADDED_SHARED" or "ITEM_ID_ADDED"), link or name or ("|cffff80ff|Htransmogappearance:" .. sourceID .. "|h[Source " .. sourceID .. "]|h|r"), sourceInfo.itemID, shared));
+			end
+		else
+			if GetDataMember("ShowNotifications", true) then
+				-- NOTE: The itemlink that gets passed is BASE ITEM LINK, not the full item link.
+				-- So this may show green items where an epic was obtained. (particularly with Legion drops)
+				-- This is okay since items of this type share their appearance regardless of the power of the item.
+				local name, link = GetItemInfo(sourceInfo.itemID);
+				print(format(L("ITEM_ID_ADDED"), link or name or ("|cffff80ff|Htransmogappearance:" .. sourceID .. "|h[Source " .. sourceID .. "]|h|r"), sourceInfo.itemID));
+			end
+		end
+		
+		-- Refresh the Data and Celebrate!
 		app:RefreshData(false, true);
 		PlayFanfare();
-		
-		if GetDataMember("ShowNotifications", true) then
-			-- NOTE: The itemlink that gets passed is BASE ITEM LINK, not the full item link.
-			-- So this may show green items where an epic was obtained. (particularly with Legion drops)
-			-- This is okay since items of this type share their appearance regardless of the power of the item.
-			local itemLink = select(6, C_TransmogCollection.GetAppearanceSourceInfo(sourceID));
-			if itemLink then print(format(L("ITEM_ID_ADDED"), itemLink, GetItemInfoInstant(itemLink))); end
-		end
+		wipe(searchCache);
 	end
 end
 app.events.TRANSMOG_COLLECTION_SOURCE_REMOVED = function(sourceID)
-	if sourceID and GetDataSubMember("Collected", sourceID) then
-		SetDataSubMember("Collected", sourceID, nil);
+	if sourceID and GetDataSubMember("CollectedSources", sourceID) then
+		local sourceInfo = C_TransmogCollection.GetSourceInfo(sourceID);
+		local categoryID, appearanceID, canEnchant, texture, isCollected, itemLink = C_TransmogCollection.GetAppearanceSourceInfo(sourceID);
+		SetDataSubMember("CollectedSources", sourceID, nil);
+		
+		-- If the user isn't a Completionist... We need to flag the shared appearances as collected as well. :/
+		if GetDataMember("UniqueAppearances") then
+			local shared = 0;
+			if categoryID then
+				for i, otherSourceID in ipairs(C_TransmogCollection.GetAllAppearanceSources(appearanceID)) do
+					if GetDataSubMember("CollectedSources", otherSourceID) then
+						local otherSourceInfo = C_TransmogCollection.GetSourceInfo(otherSourceID);
+						if not otherSourceInfo.isCollected and otherSourceInfo.categoryID == categoryID then
+							SetDataSubMember("CollectedSources", otherSourceID, nil);
+							shared = shared + 1;
+						end
+					end
+				end
+			end
+			
+			if GetDataMember("ShowNotifications", true) then
+				-- Oh shucks, that was nice of you to give this item to your friend.
+				-- WAIT, WHAT? A VENDOR?! OH GOD NO! TODO: Warn a user when they vendor an appearance?
+				local name, link = GetItemInfo(sourceInfo.itemID);
+				print(format(L(shared > 0 and "ITEM_ID_REMOVED_SHARED" or "ITEM_ID_REMOVED"), link or name or ("|cffff80ff|Htransmogappearance:" .. sourceID .. "|h[Source " .. sourceID .. "]|h|r"), sourceInfo.itemID, shared));
+			end
+		else
+			if GetDataMember("ShowNotifications", true) then
+				-- Oh shucks, that was nice of you to give this item to your friend.
+				-- WAIT, WHAT? A VENDOR?! OH GOD NO! TODO: Warn a user when they vendor an appearance?
+				local name, link = GetItemInfo(sourceInfo.itemID);
+				print(format(L("ITEM_ID_REMOVED"), link or name or ("|cffff80ff|Htransmogappearance:" .. sourceID .. "|h[Source " .. sourceID .. "]|h|r"), sourceInfo.itemID));
+			end
+		end
+		
+		-- Refresh the Data and Cry!
 		app:RefreshData(false, true);
 		PlayRemoveSound();
-		
-		if GetDataMember("ShowNotifications", true) then
-			-- Oh shucks, that was nice of you to give this item to your friend.
-			-- WAIT, WHAT? A VENDOR?! OH GOD NO! TODO: Warn a user when they vendor an appearance?
-			local itemLink = select(6, C_TransmogCollection.GetAppearanceSourceInfo(sourceID));
-			if itemLink then print(format(L("ITEM_ID_REMOVED"), itemLink, GetItemInfoInstant(itemLink))); end
-		end
+		wipe(searchCache);
 	end
 end
