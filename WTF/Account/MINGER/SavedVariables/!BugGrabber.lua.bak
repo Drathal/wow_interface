@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 1596,
 	["lastSanitation"] = 3,
-	["session"] = 1573,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\dSetup\\dSetup-1.lua:26: unexpected symbol near '{'",

@@ -41,3 +41,6 @@ VER 3 00000000000000BF "TSMMacro" "Achievement_Faction_GoldenLotus"
 /click TSMAuctioningPostButton
 /click TSMShoppingBuyoutButton
 END
+VER 3 00000000000000C1 "UnitName" "611419"
+/run print(GetUnitName("PLAYERTARGET",true))
+END

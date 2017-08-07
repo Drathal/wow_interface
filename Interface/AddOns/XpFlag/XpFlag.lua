@@ -29,12 +29,12 @@ local maxWidth = 1920
 local defaults = {
   version = version,
   showself = true,
-  selfcolor = {Red = 0.7, Green = 0.7, Blue = 0.5},
+  selfcolor = {Red = 0.25, Green = 0.5, Blue = 1},
+  selfcolorrested = {Red = 0.5, Green = 0.25, Blue = 1},
   flipmarkers = true,
-  width = 11,
-  height = 14,
-  opacity = 1,
-  levelopacity = 0.6,
+  width = 16,
+  height = 16,
+  opacity = 0.5,
   voffset = 0,
   guild = true,
 };
@@ -256,12 +256,13 @@ function XpFlag.CreateBar(value, maxvalue)
 	playerBar = CreateFrame("Frame",'XPFLag-Playerbar');
 	playerBar.texture = playerBar:CreateTexture(nil,"OVERLAY");  
 	playerBar:SetHeight(1);
-	playerBar:SetWidth((maxWidth * value/maxvalue) + 5);
+	playerBar:SetWidth((maxWidth * value/maxvalue) + 8);
 	playerBar:SetParent(_G['UIParent']);
 	playerBar.texture:SetAllPoints(playerBar);
 	playerBar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0);	
 	playerBar.texture:SetTexture("Interface\\AddOns\\XpFlag\\bar.blp");
-	playerBar.texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,1);
+	playerBar.texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,XpFlag.db.opacity);
+	playerBar:SetFrameLevel(5)
 	playerBar:SetFrameStrata("DIALOG");
 	playerBar:Show();
 end
@@ -279,21 +280,23 @@ function XpFlag.CreateMark(name, class)
 	marks[name]:SetParent(_G['UIParent']);
 	marks[name].texture:SetAllPoints(marks[name]);
 	marks[name]:SetPoint("TOP", _G['UIParent'], "TOPLEFT", 0, XpFlag.db.voffset);	
-	marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\mark1.blp");
+	marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle.tga");
 	marks[name]:SetFrameStrata("DIALOG");
 	marks[name]:Show();
 
 	if XpFlag.db.flipmarkers then
-		marks[name].texture:SetTexCoord(5/32,26/32,1,5/32);
+		marks[name].texture:SetTexCoord(0,1,1,0);
 	else
-		marks[name].texture:SetTexCoord(5/32,26/32,5/32,1);
+		marks[name].texture:SetTexCoord(0,1,0,1);
 	end
 
 	if name == playerNameRealm then
+		marks[name]:SetFrameLevel(5)
 		marks[name].player = true;
 		marks[name].texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,1);
 	else
 		local uclass = class:upper()
+		marks[name]:SetFrameLevel(1)
 		marks[name].texture:SetVertexColor(
 			RAID_CLASS_COLORS[uclass].r,
 			RAID_CLASS_COLORS[uclass].g,
@@ -321,7 +324,6 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 	--print("UpdateMark", name)
 
 	if not marks[name] then
-
 		--print("before create", name)
 		XpFlag.CreateMark(name, class);
 	end
@@ -354,10 +356,18 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 	end
 
 	
-	if tonumber(level) ~= playerLevel then
-		marks[name]:SetAlpha(XpFlag.db.levelopacity);
+	if tonumber(level) < playerLevel then
+		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-minus.tga");
+		marks[name]:SetHeight(XpFlag.db.height * 0.8);
+		marks[name]:SetWidth(XpFlag.db.width * 0.8);		
+	elseif tonumber(level) > playerLevel then
+		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-plus.tga");
+		marks[name]:SetHeight(XpFlag.db.height * 1.2);
+		marks[name]:SetWidth(XpFlag.db.width * 1.2);
 	else
-		marks[name]:SetAlpha(XpFlag.db.opacity);
+		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle.tga");		
+		marks[name]:SetHeight(XpFlag.db.height);
+		marks[name]:SetWidth(XpFlag.db.width);
 	end
 	
 	if marks[name] then		
@@ -367,7 +377,14 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 
 
 	if marks[name].player == true and playerBar then	
-		playerBar:SetWidth((maxWidth * value/maxvalue) + 5);
+		playerBar:SetWidth((maxWidth * value/maxvalue) + 8);
+		if GetXPExhaustion() > 0 then
+			marks[name].texture:SetVertexColor(XpFlag.db.selfcolorrested.Red,XpFlag.db.selfcolorrested.Green,XpFlag.db.selfcolorrested.Blue,1);
+			playerBar.texture:SetVertexColor(XpFlag.db.selfcolorrested.Red,XpFlag.db.selfcolorrested.Green,XpFlag.db.selfcolorrested.Blue,1);
+		else
+			marks[name].texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,1);
+			playerBar.texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,1);
+		end
 	end
 
 	if level == MAX_PLAYER_LEVEL then
