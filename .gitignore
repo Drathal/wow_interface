@@ -7,10 +7,12 @@
 /Logs
 /Screenshots
 /Utils
+/down
 *.exe
 *.dll
 *.zip
 *.mfil
+*.app
 .curseclient
 .product.db
 .patch.result
