@@ -1,7 +1,7 @@
 
 DecursiveDB = {
 	["global"] = {
-		["LastVersionAnnounce"] = 1502094298,
+		["LastVersionAnnounce"] = 1502120648,
 	},
 	["class"] = {
 		["WARLOCK"] = {
@@ -39,12 +39,12 @@ DecursiveDB = {
 		},
 		["MONK"] = {
 			["CureOrder"] = {
-				-11, -- [1]
+				nil, -- [1]
 				-15, -- [2]
 				nil, -- [3]
-				-12, -- [4]
-				[8] = -13,
-				[16] = -14,
+				-14, -- [4]
+				[8] = 2,
+				[16] = 3,
 				[32] = -16,
 			},
 		},
@@ -75,7 +75,7 @@ DecursiveDB = {
 			["AutoHideMUFs"] = 2,
 			["HideLiveList"] = true,
 			["DebuffsFrameShowHelp"] = false,
-			["DebuffsFrameContainer_y"] = 209.777840776824,
+			["DebuffsFrameContainer_y"] = 152.177744102455,
 			["DebuffsFrameElemScale"] = 1.14,
 			["Show_Stealthed_Status"] = false,
 			["MainBarX"] = 3.55539423756738,
@@ -87,7 +87,7 @@ DecursiveDB = {
 			["AfflictionTooltips"] = false,
 			["DebuffsFrameElemAlpha"] = 1,
 			["Amount_Of_Afflicted"] = 1,
-			["DebuffsFrameContainer_x"] = 545.422964926001,
+			["DebuffsFrameContainer_x"] = 538.311868451929,
 			["DebuffsFrameElemBorderAlpha"] = 0.5,
 			["DebuffsFrameMaxCount"] = 40,
 			["Print_ChatFrame"] = false,

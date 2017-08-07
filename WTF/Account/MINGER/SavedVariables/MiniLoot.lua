@@ -1,7 +1,7 @@
 
 MiniLootDB = {
-	["ITEM_ALERT_TRANSMOG_EVERYTHING"] = false,
-	["ARTIFACT_POWER"] = false,
+	["ITEM_ALERT_TRANSMOG_EVERYTHING"] = true,
+	["ARTIFACT_POWER"] = true,
 	["ITEM_SHOW_ITEM_LEVEL_ONLY_EQUIPMENT"] = false,
 	["ITEM_SELF_PREFIX"] = false,
 	["CHAT_TOOLTIP_ARTIFACT"] = false,
@@ -15,7 +15,7 @@ MiniLootDB = {
 	["ITEM_SELF_PREFIX_NAME"] = false,
 	["FACTION_NAME_MINIFY"] = false,
 	["ITEM_SHOW_ITEM_LEVEL"] = false,
-	["ITEM_QUALITY_PLAYER"] = 1,
+	["ITEM_QUALITY_PLAYER"] = 0,
 	["CHAT_TOOLTIP_DEATH"] = false,
 	["REPORT_IN_COMBAT"] = true,
 	["NAME_SHORT"] = true,

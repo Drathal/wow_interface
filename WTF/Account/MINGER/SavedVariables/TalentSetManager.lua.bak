@@ -21,6 +21,8 @@ TalentSetManager_CharacterSaves = {
 		["talents"] = {
 			[3] = {
 			},
+			[2] = {
+			},
 		},
 		["talents_pvp"] = {
 		},

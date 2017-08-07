@@ -5,9 +5,9 @@ local oUFs = {
         [4] = "Bar5Holder" 
 }
 
-
- 
 local function FadeIn()
+        if InCombatLockdown() then return end
+
         _G["oUF_KkthnxPlayer"].Range.insideAlpha = 1
         _G["oUF_KkthnxPlayer"].Range.outsideAlpha = 1
         for i = 1, 4 do
@@ -16,6 +16,8 @@ local function FadeIn()
 end
 
 local function FadeOut()
+        if InCombatLockdown() then return end
+
         _G["oUF_KkthnxPlayer"].Range.insideAlpha = 0.2
         _G["oUF_KkthnxPlayer"].Range.outsideAlpha = 0.2
         for i = 1, 4 do      
@@ -23,35 +25,31 @@ local function FadeOut()
         end
 end
 
+local function fadeTarget()
+    if UnitExists("target") then
+        FadeIn()
+    else
+        FadeOut()
+    end
+end
+
 
 local function uffade(self, event, unit)
-        if event == "UNIT_SPELLCAST_START" then
-            if unit == "player" then
-                FadeIn()
-            end
-        elseif event == "UNIT_SPELLCAST_STOP" then
-            if unit == "player" then
-                if UnitExists("target") then
-                        FadeIn()
-                else
-                        if not InCombatLockdown() then
-                                FadeOut()
-                        end
-                end
-            end
-        elseif event == "PLAYER_REGEN_DISABLED" then
-                FadeIn()            
-        elseif event == "PLAYER_REGEN_ENABLED" or event == "PLAYER_ENTERING_WORLD" then
-                FadeOut()
-        elseif event == "PLAYER_TARGET_CHANGED" then
-                if UnitExists("target") then
-                        FadeIn()
-                else
-                        if not InCombatLockdown() then
-                                FadeOut()
-                        end
-                end
+    if event == "UNIT_SPELLCAST_START" then
+        if unit == "player" then
+            FadeIn()
         end
+    elseif event == "UNIT_SPELLCAST_STOP" then
+        if unit == "player" then
+            fadeTarget()
+        end
+    elseif event == "PLAYER_REGEN_DISABLED" then
+        FadeIn()            
+    elseif event == "PLAYER_REGEN_ENABLED" or event == "PLAYER_ENTERING_WORLD" then
+        FadeOut()
+    elseif event == "PLAYER_TARGET_CHANGED" then
+        fadeTarget()
+    end
 end
  
 local oocfade = CreateFrame("Frame")

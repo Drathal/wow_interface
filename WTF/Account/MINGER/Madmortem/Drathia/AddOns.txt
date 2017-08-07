@@ -1,7 +1,7 @@
 AdiButtonAuras: enabled
 AdiButtonAuras_Config: enabled
 AlreadyKnown: enabled
-AskMrRobot: disabled
+AskMrRobot: enabled
 Auctionator: disabled
 ConfirmSP: enabled
 BetterBlizzOptions: enabled
@@ -234,16 +234,16 @@ ServerHop: enabled
 Shadow: enabled
 WorldQuestAssistant: enabled
 WorldQuestsList: enabled
-TradeSkillMaster_Accounting: disabled
-TradeSkillMaster_AppHelper: disabled
-TradeSkillMaster_AuctionDB: disabled
-TradeSkillMaster_Auctioning: disabled
-TradeSkillMaster_Crafting: disabled
-TradeSkillMaster_Destroying: disabled
-TradeSkillMaster_Mailing: disabled
-TradeSkillMaster_Shopping: disabled
-TradeSkillMaster_Vendoring: disabled
-TradeSkillMaster_Warehousing: disabled
+TradeSkillMaster_Accounting: enabled
+TradeSkillMaster_AppHelper: enabled
+TradeSkillMaster_AuctionDB: enabled
+TradeSkillMaster_Auctioning: enabled
+TradeSkillMaster_Crafting: enabled
+TradeSkillMaster_Destroying: enabled
+TradeSkillMaster_Mailing: enabled
+TradeSkillMaster_Shopping: enabled
+TradeSkillMaster_Vendoring: enabled
+TradeSkillMaster_Warehousing: enabled
 DBM-VPDeutsch weiblich: enabled
 Backpack: disabled
 Backpack_Classic: disabled
@@ -281,3 +281,8 @@ Mapster: enabled
 oUF_Simple: enabled
 oUF_SimpleConfig: enabled
 rLib: enabled
+dSetup: enabled
+NiceBubbles: enabled
+QuakeAssist: enabled
+TinyTooltip: enabled
+XpFlag: enabled

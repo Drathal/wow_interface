@@ -6,9 +6,9 @@ PawnCommon = {
 	["ShowItemID"] = false,
 	["ShowRelicUpgrades"] = true,
 	["ShowValuesForUpgradesOnly"] = false,
-	["ShowEnchanted"] = true,
-	["ShownGettingStarted"] = true,
 	["IgnoreGemsWhileLeveling"] = true,
+	["ShownGettingStarted"] = true,
+	["ShowEnchanted"] = true,
 	["ColorTooltipBorder"] = true,
 	["ShowTooltipIcons"] = true,
 	["Scales"] = {
@@ -656,6 +656,9 @@ PawnCommon = {
 		["\"MrRobot\":MONK2"] = {
 			["IconTexturePath"] = 608952,
 			["PerCharacterOptions"] = {
+				["Drathtix-Madmortem"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "00ff96",
 			["ClassID"] = 10,
@@ -780,9 +783,6 @@ PawnCommon = {
 		["\"MrRobot\":MONK3"] = {
 			["IconTexturePath"] = 608953,
 			["PerCharacterOptions"] = {
-				["Drathtix-Madmortem"] = {
-					["Visible"] = true,
-				},
 			},
 			["Color"] = "00ff96",
 			["ClassID"] = 10,
@@ -802,6 +802,6 @@ PawnCommon = {
 	["ButtonPosition"] = 2,
 	["Debug"] = false,
 	["ShowQuestUpgradeAdvisor"] = true,
-	["LastVersion"] = 2.0209,
 	["Digits"] = 1,
+	["LastVersion"] = 2.0209,
 }

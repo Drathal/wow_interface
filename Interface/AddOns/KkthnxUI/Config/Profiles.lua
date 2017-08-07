@@ -1,5 +1,6 @@
 local K, C, L = unpack(select(2, ...))
 
+C["DataBars"].ExperienceEnable = false
 C["DataBars"].HonorEnable = false
 C["DataBars"].ReputationEnable = false
 C["DataBars"].ReputationWidth = 192

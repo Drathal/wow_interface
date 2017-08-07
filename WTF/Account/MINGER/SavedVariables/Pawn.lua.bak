@@ -6,9 +6,9 @@ PawnCommon = {
 	["ShowItemID"] = false,
 	["ShowRelicUpgrades"] = true,
 	["ShowValuesForUpgradesOnly"] = false,
-	["Digits"] = 1,
 	["LastVersion"] = 2.0209,
-	["IgnoreGemsWhileLeveling"] = true,
+	["Digits"] = 1,
+	["ShowEnchanted"] = true,
 	["ColorTooltipBorder"] = true,
 	["ShowTooltipIcons"] = true,
 	["ShowSpecIcons"] = true,
@@ -655,6 +655,9 @@ PawnCommon = {
 		["\"MrRobot\":MONK2"] = {
 			["IconTexturePath"] = 608952,
 			["PerCharacterOptions"] = {
+				["Drathtix-Madmortem"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "00ff96",
 			["LocalizedName"] = "Monk: Mistweaver",
@@ -782,9 +785,6 @@ PawnCommon = {
 		["\"MrRobot\":MONK3"] = {
 			["IconTexturePath"] = 608953,
 			["PerCharacterOptions"] = {
-				["Drathtix-Madmortem"] = {
-					["Visible"] = true,
-				},
 			},
 			["Color"] = "00ff96",
 			["LocalizedName"] = "Monk: Windwalker",
@@ -802,6 +802,6 @@ PawnCommon = {
 	["ButtonPosition"] = 2,
 	["ShowLootUpgradeAdvisor"] = true,
 	["ShowQuestUpgradeAdvisor"] = true,
-	["ShowEnchanted"] = true,
+	["IgnoreGemsWhileLeveling"] = true,
 	["ShownGettingStarted"] = true,
 }

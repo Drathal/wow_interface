@@ -2,6 +2,9 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
+		["Drathtix - Madmortem"] = {
+			["alerthidden"] = true,
+		},
 		["Drathair - Blackhand"] = {
 			["spec1_profileKey"] = "Drathair - Blackhand",
 			["blizzframes"] = {
@@ -923,16 +926,34 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["type"] = "target",
-					["key"] = "BUTTON1",
+					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
 					["type"] = "menu",
-					["key"] = "BUTTON2",
+					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
 				}, -- [2]
+				{
+					["spell"] = "Effuse",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 1360977,
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Enveloping Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 775461,
+					["type"] = "spell",
+				}, -- [4]
 			},
 		},
 		["Draltar - Blackhand"] = {

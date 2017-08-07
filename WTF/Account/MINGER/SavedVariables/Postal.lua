@@ -16,7 +16,7 @@ Postal3DB = {
 				"Drahmoon|Madmortem|Alliance|110|WARLOCK", -- [2]
 				"Drathal|Madmortem|Alliance|110|DRUID", -- [3]
 				"Drathia|Madmortem|Alliance|110|PRIEST", -- [4]
-				"Drathtix|Madmortem|Alliance|1|MONK", -- [5]
+				"Drathtix|Madmortem|Alliance|25|MONK", -- [5]
 				"Dronthal|Madmortem|Alliance|110|PALADIN", -- [6]
 				"Modranthir|Madmortem|Alliance|5|PRIEST", -- [7]
 			},

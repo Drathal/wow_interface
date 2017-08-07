@@ -2,6 +2,17 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
+		["Drathon - Blackhand"] = {
+			["spec1_profileKey"] = "base",
+			["fastooc"] = false,
+			["alerthidden"] = true,
+			["downclick"] = false,
+			["spec3_profileKey"] = "base",
+			["spec4_profileKey"] = "base",
+			["spec2_profileKey"] = "base",
+			["stopcastingfix"] = true,
+			["specswap"] = false,
+		},
 		["Drathair - Blackhand"] = {
 			["spec1_profileKey"] = "Drathair - Blackhand",
 			["blizzframes"] = {
@@ -30,18 +41,13 @@ CliqueDB3 = {
 		["Sungleave - Blackhand"] = {
 			["alerthidden"] = true,
 		},
-		["Drathon - Blackhand"] = {
-			["spec1_profileKey"] = "base",
-			["fastooc"] = false,
+		["Drathtix - Madmortem"] = {
 			["alerthidden"] = true,
-			["downclick"] = false,
-			["spec3_profileKey"] = "base",
-			["spec4_profileKey"] = "base",
-			["spec2_profileKey"] = "base",
-			["stopcastingfix"] = true,
-			["specswap"] = false,
 		},
 		["Drathal - Madmortem"] = {
+			["alerthidden"] = true,
+		},
+		["Dronthal - Blackhand"] = {
 			["alerthidden"] = true,
 		},
 		["Dronthal - Madmortem"] = {
@@ -65,9 +71,6 @@ CliqueDB3 = {
 			["alerthidden"] = true,
 			["specswap"] = false,
 			["stopcastingfix"] = true,
-		},
-		["Dronthal - Blackhand"] = {
-			["alerthidden"] = true,
 		},
 		["Drathia - Madmortem"] = {
 			["blacklist"] = {
@@ -874,16 +877,34 @@ CliqueDB3 = {
 					["sets"] = {
 						["default"] = true,
 					},
-					["key"] = "BUTTON1",
+					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
 					["type"] = "menu",
-					["key"] = "BUTTON2",
+					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
 				}, -- [2]
+				{
+					["spell"] = "Effuse",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 1360977,
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Enveloping Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 775461,
+					["type"] = "spell",
+				}, -- [4]
 			},
 		},
 		["base"] = {
