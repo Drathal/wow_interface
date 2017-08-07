@@ -5,6 +5,7 @@ local mainChar = "Dronthal - Madmortem";
 local currentChar = playerName .. " - " .. playerRealm
 local setupFrame = CreateFrame("Frame")
 local profileChar = nil
+local SetCVar = _G.SetCVar
 
 local function copyTable(src, dest)
     if type(dest) ~= "table" then dest = {} end
@@ -73,6 +74,10 @@ end
 _G.SLASH_DSETUP1 = "/dsetup"
 _G.SLASH_DSETUP2 = "/ds"
 SlashCmdList["DSETUP"] = function(arg)
+    
+    SetCVar("checkAddonVersion", 0)
+
     if currentChar == mainChar then return end
     setup(arg)   
+
 end
