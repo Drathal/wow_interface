@@ -2,7 +2,7 @@
 ## Title: dSetup
 ## Notes: Setup UI
 ## Version: 1
-## RequiredDeps: Grid2, XIV_Databar
-## SavedVariables: dsetupDB, Grid2DB, XIVBarDB
+## RequiredDeps: Grid2, XIV_Databar, Skada
+## SavedVariables: dsetupDB, Grid2DB, XIVBarDB, SkadaDB
 
 dSetup.lua

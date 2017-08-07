@@ -22,8 +22,11 @@ end
 
 local function setupProfile(tbl)
 
-    tbl["profileKeys"][currentChar] = currentChar
+    if tbl["profileKeys"] ~= nil then
+        tbl["profileKeys"][currentChar] = currentChar
+    end
 
+    profileChar = nil
     if tbl["profileKeys"] ~= nil and tbl["profileKeys"][mainChar] ~= nil then
         profileChar = tbl["profileKeys"][mainChar]
     end
@@ -52,13 +55,14 @@ local function setupGrid2(tbl)
     copyCharData(tbl["profiles"])    
 end
 
-local function setupXIVDatabar(tbl) 
+local function setupDefault(tbl) 
     copyCharData(tbl["profiles"])    
 end
 
 local setups = { 
     ["Grid2DB"] = setupGrid2,
-    ["XIVBarDB"] = setupXIVDatabar
+    ["XIVBarDB"] = setupDefault,
+    ["SkadaDB"] = setupDefault
 }
 
 local function setup(arg)
@@ -68,7 +72,7 @@ local function setup(arg)
         v(_G[k])   
     end
 
-    -- ReloadUI();
+    ReloadUI();
 end
 
 _G.SLASH_DSETUP1 = "/dsetup"
