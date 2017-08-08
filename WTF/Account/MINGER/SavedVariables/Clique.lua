@@ -243,9 +243,9 @@ CliqueDB3 = {
 					["spell"] = "Regrowth",
 					["key"] = "BUTTON2",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136085,
 					["type"] = "spell",
@@ -265,9 +265,9 @@ CliqueDB3 = {
 					["spell"] = "Healing Touch",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136041,
 					["type"] = "spell",
@@ -287,9 +287,9 @@ CliqueDB3 = {
 					["spell"] = "Rejuvenation",
 					["key"] = "BUTTON1",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136081,
 					["type"] = "spell",
@@ -310,10 +310,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -322,10 +322,10 @@ CliqueDB3 = {
 					["spell"] = "Ironbark",
 					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 572025,
 					["type"] = "spell",
@@ -334,10 +334,10 @@ CliqueDB3 = {
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
@@ -346,10 +346,10 @@ CliqueDB3 = {
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 134914,
 					["type"] = "spell",
@@ -636,10 +636,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -930,13 +930,6 @@ CliqueDB3 = {
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
-					["type"] = "menu",
-					["key"] = "ALT-BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-				{
 					["spell"] = "Effuse",
 					["key"] = "BUTTON1",
 					["sets"] = {
@@ -944,16 +937,14 @@ CliqueDB3 = {
 					},
 					["icon"] = 1360977,
 					["type"] = "spell",
-				}, -- [3]
+				}, -- [2]
 				{
-					["spell"] = "Enveloping Mist",
-					["key"] = "BUTTON2",
+					["type"] = "menu",
+					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 775461,
-					["type"] = "spell",
-				}, -- [4]
+				}, -- [3]
 				{
 					["spell"] = "Vivify",
 					["key"] = "SHIFT-BUTTON2",
@@ -962,7 +953,25 @@ CliqueDB3 = {
 					},
 					["icon"] = 1360980,
 					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Enveloping Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 775461,
+					["type"] = "spell",
 				}, -- [5]
+				{
+					["spell"] = "Life Cocoon",
+					["key"] = "MOUSEWHEELUP",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 627485,
+					["type"] = "spell",
+				}, -- [6]
 			},
 		},
 		["Draltar - Blackhand"] = {

@@ -20,18 +20,19 @@ TradeSkillMaster_AuctioningDB = {
 			"Drathia - Madmortem", -- [13]
 			"Drathal - Madmortem", -- [14]
 			"Dronthal - Madmortem", -- [15]
-		},
-		["realm"] = {
-			"Blackhand", -- [1]
-			"Madmortem", -- [2]
-		},
-		["profile"] = {
-			"Default", -- [1]
+			"Drathtix - Madmortem", -- [16]
 		},
 		["factionrealm"] = {
 			"Horde - Blackhand", -- [1]
 			"Alliance - Blackhand", -- [2]
 			"Alliance - Madmortem", -- [3]
+		},
+		["profile"] = {
+			"Default", -- [1]
+		},
+		["realm"] = {
+			"Blackhand", -- [1]
+			"Madmortem", -- [2]
 		},
 	},
 	["g@ @helpPlatesShown"] = {
@@ -41,9 +42,10 @@ TradeSkillMaster_AuctioningDB = {
 	},
 	["_hash"] = 5870975,
 	["f@Alliance - Madmortem@player"] = {
+		["Drathia"] = true,
+		["Drathtix"] = true,
 		["Drahmoon"] = true,
 		["Dronthal"] = true,
-		["Drathia"] = true,
 		["Drathal"] = true,
 	},
 	["f@Alliance - Madmortem@whitelist"] = {
@@ -53,8 +55,9 @@ TradeSkillMaster_AuctioningDB = {
 		["Dronthal - Blackhand"] = "Default",
 		["Dorthal - Blackhand"] = "Default",
 		["Drathon - Blackhand"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
 		["Drathol - Blackhand"] = "Default",
-		["Draltar - Blackhand"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 		["Modranthir - Blackhand"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
@@ -63,28 +66,28 @@ TradeSkillMaster_AuctioningDB = {
 		["Drathal - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
+		["Draltar - Blackhand"] = "Default",
 	},
 	["g@ @roundNormalPrice"] = true,
 	["g@ @priceColumn"] = 1,
 	["f@Horde - Blackhand@player"] = {
 		["Modrix"] = true,
 		["Drathol"] = true,
-		["Drathon"] = true,
 		["Modranthir"] = true,
-		["Darlaxle"] = true,
+		["Drathon"] = true,
 		["Dorthal"] = true,
+		["Darlaxle"] = true,
 		["Drathal"] = true,
 	},
 	["g@ @matchWhitelist"] = true,
-	["f@Alliance - Blackhand@whitelist"] = {
-	},
+	["g@ @cancelWithBid"] = false,
 	["f@Alliance - Blackhand@player"] = {
 		["Draltair"] = true,
 		["Draltar"] = true,
-		["Drahdo"] = true,
 		["Dronthal"] = true,
+		["Drahdo"] = true,
 	},
 	["_version"] = 1,
-	["g@ @cancelWithBid"] = false,
+	["f@Alliance - Blackhand@whitelist"] = {
+	},
 }

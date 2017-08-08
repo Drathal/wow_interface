@@ -1,9 +1,9 @@
 
 TradeSkillMaster_WarehousingDB = {
-	["g@ @ShowLogData"] = false,
-	["_hash"] = 185553,
 	["f@Alliance - Madmortem@BagState"] = {
 	},
+	["_hash"] = 185553,
+	["g@ @ShowLogData"] = false,
 	["f@Alliance - Blackhand@BagState"] = {
 	},
 	["_scopeKeys"] = {
@@ -23,18 +23,19 @@ TradeSkillMaster_WarehousingDB = {
 			"Drathia - Madmortem", -- [13]
 			"Drathal - Madmortem", -- [14]
 			"Dronthal - Madmortem", -- [15]
+			"Drathtix - Madmortem", -- [16]
+		},
+		["realm"] = {
+			"Blackhand", -- [1]
+			"Madmortem", -- [2]
+		},
+		["profile"] = {
+			"Default", -- [1]
 		},
 		["factionrealm"] = {
 			"Horde - Blackhand", -- [1]
 			"Alliance - Blackhand", -- [2]
 			"Alliance - Madmortem", -- [3]
-		},
-		["profile"] = {
-			"Default", -- [1]
-		},
-		["realm"] = {
-			"Blackhand", -- [1]
-			"Madmortem", -- [2]
 		},
 	},
 	["f@Horde - Blackhand@BagState"] = {
@@ -45,7 +46,8 @@ TradeSkillMaster_WarehousingDB = {
 		["Dronthal - Blackhand"] = "Default",
 		["Dorthal - Blackhand"] = "Default",
 		["Drathon - Blackhand"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Draltar - Blackhand"] = "Default",
 		["Drathol - Blackhand"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 		["Modranthir - Blackhand"] = "Default",
@@ -55,6 +57,6 @@ TradeSkillMaster_WarehousingDB = {
 		["Drathal - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
-		["Draltar - Blackhand"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
 	},
 }

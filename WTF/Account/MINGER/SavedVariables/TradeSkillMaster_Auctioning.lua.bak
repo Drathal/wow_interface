@@ -21,17 +21,17 @@ TradeSkillMaster_AuctioningDB = {
 			"Drathal - Madmortem", -- [14]
 			"Dronthal - Madmortem", -- [15]
 		},
-		["factionrealm"] = {
-			"Horde - Blackhand", -- [1]
-			"Alliance - Blackhand", -- [2]
-			"Alliance - Madmortem", -- [3]
+		["realm"] = {
+			"Blackhand", -- [1]
+			"Madmortem", -- [2]
 		},
 		["profile"] = {
 			"Default", -- [1]
 		},
-		["realm"] = {
-			"Blackhand", -- [1]
-			"Madmortem", -- [2]
+		["factionrealm"] = {
+			"Horde - Blackhand", -- [1]
+			"Alliance - Blackhand", -- [2]
+			"Alliance - Madmortem", -- [3]
 		},
 	},
 	["g@ @helpPlatesShown"] = {
@@ -41,8 +41,8 @@ TradeSkillMaster_AuctioningDB = {
 	},
 	["_hash"] = 5870975,
 	["f@Alliance - Madmortem@player"] = {
-		["Dronthal"] = true,
 		["Drahmoon"] = true,
+		["Dronthal"] = true,
 		["Drathia"] = true,
 		["Drathal"] = true,
 	},
@@ -53,7 +53,7 @@ TradeSkillMaster_AuctioningDB = {
 		["Dronthal - Blackhand"] = "Default",
 		["Dorthal - Blackhand"] = "Default",
 		["Drathon - Blackhand"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
+		["Drathol - Blackhand"] = "Default",
 		["Draltar - Blackhand"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 		["Modranthir - Blackhand"] = "Default",
@@ -63,28 +63,28 @@ TradeSkillMaster_AuctioningDB = {
 		["Drathal - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
-		["Drathol - Blackhand"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
 	},
 	["g@ @roundNormalPrice"] = true,
 	["g@ @priceColumn"] = 1,
 	["f@Horde - Blackhand@player"] = {
 		["Modrix"] = true,
 		["Drathol"] = true,
-		["Modranthir"] = true,
 		["Drathon"] = true,
-		["Dorthal"] = true,
+		["Modranthir"] = true,
 		["Darlaxle"] = true,
+		["Dorthal"] = true,
 		["Drathal"] = true,
 	},
 	["g@ @matchWhitelist"] = true,
-	["g@ @cancelWithBid"] = false,
+	["f@Alliance - Blackhand@whitelist"] = {
+	},
 	["f@Alliance - Blackhand@player"] = {
 		["Draltair"] = true,
 		["Draltar"] = true,
-		["Dronthal"] = true,
 		["Drahdo"] = true,
+		["Dronthal"] = true,
 	},
 	["_version"] = 1,
-	["f@Alliance - Blackhand@whitelist"] = {
-	},
+	["g@ @cancelWithBid"] = false,
 }

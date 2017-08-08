@@ -3,6 +3,9 @@
 ## Notes: Setup UI
 ## Version: 1
 ## RequiredDeps: Grid2, XIV_Databar, Skada
-## SavedVariables: dsetupDB, Grid2DB, XIVBarDB, SkadaDB
+## SavedVariables: dsetupDB
 
 dSetup.lua
+vars/Grid2.lua
+vars/XIV_Databar.lua
+vars/Skada.lua

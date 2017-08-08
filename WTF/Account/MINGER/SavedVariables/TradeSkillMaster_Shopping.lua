@@ -1,8 +1,25 @@
 
 TradeSkillMaster_ShoppingDB = {
-	["g@ @sniperCustomPrice"] = "check(minprice - 100000g, 90% minprice, check(minprice - 50000g, 80% minprice, check(minprice - 10000g, 60% minprice, check(minprice - 5000g, 50% minprice, check(minprice - 1000g, 30% minprice, check(minprice - 500g, 20% minprice, check(minprice - 50g, 10% minprice)))))))",
-	["g@ @maxDeSearchPercent"] = 1,
-	["g@ @postUndercut"] = "1c",
+	["_currentProfile"] = {
+		["Drathal - Blackhand"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
+		["Dorthal - Blackhand"] = "Default",
+		["Drathon - Blackhand"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
+		["Drathol - Blackhand"] = "Default",
+		["Drathia - Madmortem"] = "Default",
+		["Modranthir - Blackhand"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
+		["Drahdo - Blackhand"] = "Default",
+		["Modrix - Blackhand"] = "Default",
+		["Drathal - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+		["Draltair - Blackhand"] = "Default",
+		["Draltar - Blackhand"] = "Default",
+	},
+	["_version"] = 3,
+	["g@ @sniperVendorPrice"] = true,
 	["g@ @postBidPercent"] = 0.95,
 	["_scopeKeys"] = {
 		["char"] = {
@@ -21,25 +38,29 @@ TradeSkillMaster_ShoppingDB = {
 			"Drathia - Madmortem", -- [13]
 			"Drathal - Madmortem", -- [14]
 			"Dronthal - Madmortem", -- [15]
-		},
-		["realm"] = {
-			"Blackhand", -- [1]
-			"Madmortem", -- [2]
-		},
-		["profile"] = {
-			"Default", -- [1]
+			"Drathtix - Madmortem", -- [16]
 		},
 		["factionrealm"] = {
 			"Horde - Blackhand", -- [1]
 			"Alliance - Blackhand", -- [2]
 			"Alliance - Madmortem", -- [3]
 		},
+		["profile"] = {
+			"Default", -- [1]
+		},
+		["realm"] = {
+			"Blackhand", -- [1]
+			"Madmortem", -- [2]
+		},
 	},
 	["g@ @helpPlatesShown"] = {
 		["auction"] = true,
 	},
-	["g@ @sniperVendorPrice"] = true,
+	["g@ @postUndercut"] = "1c",
+	["g@ @minDeSearchLvl"] = 1,
+	["g@ @maxDeSearchLvl"] = 735,
 	["_hash"] = 1861581,
+	["g@ @marketValueSource"] = "dbmarket",
 	["g@ @savedSearches"] = {
 		{
 			["searchMode"] = "normal",
@@ -91,26 +112,7 @@ TradeSkillMaster_ShoppingDB = {
 		}, -- [8]
 	},
 	["g@ @sniperSound"] = "TSM_CASH_REGISTER",
-	["g@ @marketValueSource"] = "dbmarket",
-	["g@ @maxDeSearchLvl"] = 735,
-	["g@ @minDeSearchLvl"] = 1,
 	["g@ @normalPostPrice"] = "150% dbmarket",
-	["_version"] = 3,
-	["_currentProfile"] = {
-		["Drathal - Blackhand"] = "Default",
-		["Dronthal - Blackhand"] = "Default",
-		["Dorthal - Blackhand"] = "Default",
-		["Drathon - Blackhand"] = "Default",
-		["Drathol - Blackhand"] = "Default",
-		["Draltar - Blackhand"] = "Default",
-		["Drathia - Madmortem"] = "Default",
-		["Modranthir - Blackhand"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
-		["Drahdo - Blackhand"] = "Default",
-		["Modrix - Blackhand"] = "Default",
-		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
-		["Draltair - Blackhand"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
-	},
+	["g@ @maxDeSearchPercent"] = 1,
+	["g@ @sniperCustomPrice"] = "check(minprice - 100000g, 90% minprice, check(minprice - 50000g, 80% minprice, check(minprice - 10000g, 60% minprice, check(minprice - 5000g, 50% minprice, check(minprice - 1000g, 30% minprice, check(minprice - 500g, 20% minprice, check(minprice - 50g, 10% minprice)))))))",
 }

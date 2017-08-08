@@ -27,6 +27,46 @@ XIVBarDB = {
 			},
 		},
 	},
+	["baseProfile"] = {
+	},
+	["profileKeys"] = {
+		["Drathia - Madmortem"] = "Default",
+		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathtix - Madmortem"] = "baseProfile",
+	},
+	["factionrealm"] = {
+		["Alliance - Madmortem"] = {
+			["Dronthal"] = {
+				["dailyMoney"] = -739736888,
+				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["currentMoney"] = 192431296,
+				["lastLoginDate"] = 20170807,
+			},
+			["Drahmoon"] = {
+				["dailyMoney"] = 0,
+				["sessionMoney"] = 0,
+				["lastLoginDate"] = 20170727,
+				["currentMoney"] = 707261350,
+				["daily"] = 0,
+			},
+			["Drathia"] = {
+				["dailyMoney"] = 0,
+				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["currentMoney"] = 12864863,
+				["lastLoginDate"] = 20170727,
+			},
+			["Drathtix"] = {
+				["dailyMoney"] = 0,
+				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["currentMoney"] = 381530,
+				["lastLoginDate"] = 20170808,
+			},
+		},
+	},
 	["profiles"] = {
 		["Dronthal - Madmortem"] = {
 		},
@@ -71,9 +111,9 @@ XIVBarDB = {
 					["char"] = false,
 					["help"] = false,
 					["talent"] = false,
-					["chat"] = false,
-					["quest"] = false,
 					["pvp"] = false,
+					["quest"] = false,
+					["chat"] = false,
 				},
 				["currency"] = {
 					["currencyTwo"] = "1226",
@@ -172,44 +212,77 @@ XIVBarDB = {
 				},
 			},
 		},
-		["Drathia - Madmortem"] = {
+		["baseProfile"] = {
+			["color"] = {
+				["normal"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
+				},
+				["barColor"] = {
+					["a"] = 0,
+					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
+				},
+			},
+			["text"] = {
+				["flags"] = 2,
+				["font"] = "KkthnxUI_Normal",
+			},
+			["general"] = {
+				["ohHide"] = true,
+				["barPosition"] = "TOP",
+				["moduleSpacing"] = 29,
+			},
+			["modules"] = {
+				["tradeskill"] = {
+					["enabled"] = false,
+				},
+				["talent"] = {
+					["minWidth"] = 60,
+					["barCC"] = true,
+					["showTooltip"] = false,
+				},
+				["travel"] = {
+					["enabled"] = false,
+				},
+				["microMenu"] = {
+					["chat"] = false,
+					["help"] = false,
+					["quest"] = false,
+					["talent"] = false,
+					["char"] = false,
+					["pvp"] = false,
+				},
+				["currency"] = {
+					["enabled"] = false,
+					["showXPbar"] = false,
+					["currencyThree"] = "1314",
+					["currencyTwo"] = "1226",
+					["currencyOne"] = "1273",
+				},
+				["gold"] = {
+					["showFreeBagSpace"] = false,
+					["shortThousands"] = true,
+				},
+				["clock"] = {
+					["hideEventText"] = true,
+					["timeFormat"] = "twoFourNoZero",
+				},
+				["MasterVolume"] = {
+					["enabled"] = true,
+				},
+				["system"] = {
+					["showTooltip"] = false,
+					["showAllOnShift"] = false,
+				},
+				["armor"] = {
+					["enabled"] = false,
+				},
+			},
 		},
-	},
-	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Default",
-		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
-	},
-	["factionrealm"] = {
-		["Alliance - Madmortem"] = {
-			["Dronthal"] = {
-				["dailyMoney"] = -739736888,
-				["sessionMoney"] = 0,
-				["daily"] = 0,
-				["lastLoginDate"] = 20170807,
-				["currentMoney"] = 192431296,
-			},
-			["Drahmoon"] = {
-				["dailyMoney"] = 0,
-				["sessionMoney"] = 0,
-				["currentMoney"] = 707261350,
-				["lastLoginDate"] = 20170727,
-				["daily"] = 0,
-			},
-			["Drathia"] = {
-				["dailyMoney"] = 0,
-				["sessionMoney"] = 0,
-				["daily"] = 0,
-				["lastLoginDate"] = 20170727,
-				["currentMoney"] = 12864863,
-			},
-			["Drathtix"] = {
-				["currentMoney"] = 0,
-				["dailyMoney"] = 0,
-				["lastLoginDate"] = 20170807,
-				["sessionMoney"] = 0,
-			},
+		["Drathia - Madmortem"] = {
 		},
 	},
 }

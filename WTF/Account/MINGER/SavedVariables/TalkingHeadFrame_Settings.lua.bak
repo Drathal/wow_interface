@@ -1,9 +1,0 @@
-
-THF_DB = {
-	["Y"] = 0,
-	["X"] = 0,
-	["Point"] = "CENTER",
-	["RelativePoint"] = "CENTER",
-	["Disabled"] = false,
-	["ClickThrough"] = false,
-}

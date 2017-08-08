@@ -18,23 +18,24 @@ TradeSkillMaster_VendoringDB = {
 			"Drathia - Madmortem", -- [13]
 			"Drathal - Madmortem", -- [14]
 			"Dronthal - Madmortem", -- [15]
-		},
-		["realm"] = {
-			"Blackhand", -- [1]
-			"Madmortem", -- [2]
-		},
-		["profile"] = {
-			"Default", -- [1]
+			"Drathtix - Madmortem", -- [16]
 		},
 		["factionrealm"] = {
 			"Horde - Blackhand", -- [1]
 			"Alliance - Blackhand", -- [2]
 			"Alliance - Madmortem", -- [3]
 		},
+		["profile"] = {
+			"Default", -- [1]
+		},
+		["realm"] = {
+			"Blackhand", -- [1]
+			"Madmortem", -- [2]
+		},
 	},
 	["g@ @helpPlatesShown"] = {
-		["buy"] = true,
 		["quickSell"] = true,
+		["buy"] = true,
 	},
 	["_hash"] = 7791016,
 	["g@ @qsHideGrouped"] = true,
@@ -43,8 +44,9 @@ TradeSkillMaster_VendoringDB = {
 		["Dronthal - Blackhand"] = "Default",
 		["Dorthal - Blackhand"] = "Default",
 		["Drathon - Blackhand"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
 		["Drathol - Blackhand"] = "Default",
-		["Draltar - Blackhand"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 		["Modranthir - Blackhand"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
@@ -53,18 +55,18 @@ TradeSkillMaster_VendoringDB = {
 		["Drathal - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
+		["Draltar - Blackhand"] = "Default",
 	},
 	["g@ @qsHideSoulbound"] = true,
 	["g@ @defaultPage"] = 1,
 	["g@ @qsBatchSize"] = 12,
 	["g@ @displayMoneyCollected"] = true,
+	["g@ @qsMarketValue"] = "dbmarket",
+	["g@ @autoSellTrash"] = false,
+	["g@ @defaultMerchantTab"] = false,
+	["g@ @qsMaxDestroyValue"] = "100g",
+	["g@ @qsMaxMarketValue"] = "100g",
+	["_version"] = 1,
 	["g@ @ignore"] = {
 	},
-	["g@ @defaultMerchantTab"] = false,
-	["g@ @autoSellTrash"] = false,
-	["g@ @qsMaxMarketValue"] = "100g",
-	["g@ @qsMaxDestroyValue"] = "100g",
-	["_version"] = 1,
-	["g@ @qsMarketValue"] = "dbmarket",
 }
