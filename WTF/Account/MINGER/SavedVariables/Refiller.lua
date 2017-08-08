@@ -2,21 +2,22 @@
 RefillerDB = {
 	["profileKeys"] = {
 		["Drathal - Blackhand"] = "Drathal - Blackhand",
-		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
-		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
-		["Drathon - Blackhand"] = "base",
 		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
-		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
-		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
-		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
+		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
+		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
+		["Drathon - Blackhand"] = "base",
+		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
+		["Drathol - Blackhand"] = "Drathol - Blackhand",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathair - Blackhand"] = "base",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -53,22 +54,24 @@ RefillerDB = {
 				["|cffffffff|Hitem:138292::::::::110:257::::::|h[Ley-Enriched Water]|h|r"] = 200,
 			},
 		},
+		["Dronthal - Blackhand"] = {
+		},
 		["Dronthal - Madmortem"] = {
 			["refills"] = {
 				["|cffffffff|Hitem:138292::::::::110:65::::::|h[Ley-Enriched Water]|h|r"] = 100,
 			},
 		},
-		["Dronthal - Blackhand"] = {
+		["Draltair - Blackhand"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
-		["Draltair - Blackhand"] = {
+		["Draltar - Blackhand"] = {
 		},
 		["Drahmoon - Madmortem"] = {
 		},
-		["Draltar - Blackhand"] = {
-		},
 		["Darlaxle - Blackhand"] = {
+		},
+		["Dranathal - Madmortem"] = {
 		},
 	},
 }

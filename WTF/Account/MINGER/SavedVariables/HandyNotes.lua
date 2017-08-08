@@ -15,11 +15,12 @@ HandyNotesDB = {
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 		["Drahdo - Blackhand"] = "Drahdo - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathair - Blackhand"] = "base",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -57,6 +58,8 @@ HandyNotesDB = {
 		},
 		["Drathon - Blackhand"] = {
 		},
+		["Dronthal - Blackhand"] = {
+		},
 		["Drathia - Madmortem"] = {
 		},
 		["Drahdo - Blackhand"] = {
@@ -65,19 +68,19 @@ HandyNotesDB = {
 			["icon_alpha_minimap"] = 0.75,
 			["icon_scale_minimap"] = 0.89,
 		},
-		["Dronthal - Blackhand"] = {
+		["Draltar - Blackhand"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
-		["Draltar - Blackhand"] = {
+		["Darlaxle - Blackhand"] = {
 		},
 		["Drahmoon - Madmortem"] = {
 			["icon_scale_minimap"] = 0.7,
 		},
-		["Darlaxle - Blackhand"] = {
-		},
 		["Draltair - Blackhand"] = {
 			["enabled"] = false,
+		},
+		["Dranathal - Madmortem"] = {
 		},
 	},
 }
@@ -97,11 +100,12 @@ HandyNotes_HandyNotesDB = {
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 		["Drahdo - Blackhand"] = "Drahdo - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathair - Blackhand"] = "base",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -126,23 +130,25 @@ HandyNotes_HandyNotesDB = {
 		},
 		["Drathon - Blackhand"] = {
 		},
+		["Dronthal - Blackhand"] = {
+		},
 		["Drathia - Madmortem"] = {
 		},
 		["Drahdo - Blackhand"] = {
 		},
 		["Dronthal - Madmortem"] = {
 		},
-		["Dronthal - Blackhand"] = {
+		["Draltar - Blackhand"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
-		["Draltar - Blackhand"] = {
+		["Darlaxle - Blackhand"] = {
 		},
 		["Drahmoon - Madmortem"] = {
 		},
-		["Darlaxle - Blackhand"] = {
-		},
 		["Draltair - Blackhand"] = {
+		},
+		["Dranathal - Madmortem"] = {
 		},
 	},
 }

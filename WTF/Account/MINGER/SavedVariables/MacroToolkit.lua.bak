@@ -17,12 +17,13 @@ MacroToolkitDB = {
 		},
 	},
 	["profileKeys"] = {
-		["Dronthal - Madmortem"] = "profile",
 		["Modranthir - Madmortem"] = "profile",
+		["Darlaxle - Blackhand"] = "profile",
+		["Dronthal - Madmortem"] = "profile",
 		["Drathtix - Madmortem"] = "profile",
 		["Drathal - Madmortem"] = "profile",
 		["Drahmoon - Madmortem"] = "profile",
-		["Darlaxle - Blackhand"] = "profile",
+		["Dranathal - Madmortem"] = "profile",
 		["Drathia - Madmortem"] = "profile",
 	},
 	["profiles"] = {

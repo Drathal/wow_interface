@@ -1,22 +1,23 @@
 
 MacroToolkitDB = {
 	["char"] = {
-		["Drathtix - Madmortem"] = {
+		["Dronthal - Madmortem"] = {
 			["backups"] = {
 			},
 		},
-		["Dronthal - Madmortem"] = {
+		["Drathtix - Madmortem"] = {
 			["backups"] = {
 			},
 		},
 	},
 	["profileKeys"] = {
-		["Dronthal - Madmortem"] = "profile",
 		["Drathia - Madmortem"] = "profile",
+		["Darlaxle - Blackhand"] = "profile",
+		["Dronthal - Madmortem"] = "profile",
 		["Drathtix - Madmortem"] = "profile",
 		["Drathal - Madmortem"] = "profile",
 		["Drahmoon - Madmortem"] = "profile",
-		["Darlaxle - Blackhand"] = "profile",
+		["Dranathal - Madmortem"] = "profile",
 		["Modranthir - Madmortem"] = "profile",
 	},
 	["global"] = {

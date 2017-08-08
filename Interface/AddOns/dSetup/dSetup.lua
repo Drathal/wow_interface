@@ -79,7 +79,8 @@ end
 local setups = { 
     { "Grid2",       "Grid2DB",  "Dronthal - Madmortem", setupGrid2 },
     { "XIV_Databar", "XIVBarDB", "Dronthal - Madmortem" },
-    { "Skada",       "SkadaDB",  "Dronthal - Madmortem" }    
+    { "Skada",       "SkadaDB",  "Dronthal - Madmortem" },
+    { "TellMeWhen",  "TellMeWhenDB",  "Dronthal - Madmortem" }        
 }
 
 local function setup(arg)
@@ -102,7 +103,9 @@ local function setup(arg)
                 else
                     setupDefault(_G["setup"..DBName], _G[DBName], profile)
                 end
-            end
+            else
+                _G[DBName] = _G["setup"..DBName]
+            end 
         end
     end
 

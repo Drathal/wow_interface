@@ -2,14 +2,17 @@
 HandyNotes_LegionTreasuresDB = {
 	["profileKeys"] = {
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
+		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["profiles"] = {
 		["Darlaxle - Blackhand"] = {
+		},
+		["Dronthal - Madmortem"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
@@ -17,7 +20,7 @@ HandyNotes_LegionTreasuresDB = {
 		},
 		["Drahmoon - Madmortem"] = {
 		},
-		["Dronthal - Madmortem"] = {
+		["Dranathal - Madmortem"] = {
 		},
 		["Drathia - Madmortem"] = {
 		},

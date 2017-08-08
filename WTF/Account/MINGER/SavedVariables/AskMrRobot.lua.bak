@@ -255,6 +255,36 @@ AskMrRobotDb3 = {
 				},
 			},
 		},
+		["Draltar - Blackhand"] = {
+			["Logging"] = {
+				["LastDiff"] = 0,
+				["LastZone"] = "Kalimdor",
+			},
+			["Talents"] = {
+				[3] = "1223300",
+			},
+			["Equipped"] = {
+				[3] = {
+					"|cff00ccff|Hitem:122245::::::::100:73:::1:583:::|h[Polished Helm of Valor]|h|r", -- [1]
+					"|cff00ccff|Hitem:122667::::::::100:73:::1:583:::|h[Eternal Emberfury Talisman]|h|r", -- [2]
+					"|cff00ccff|Hitem:122355::::::::100:73:::1:583:::|h[Polished Spaulders of Valor]|h|r", -- [3]
+					nil, -- [4]
+					"|cff00ccff|Hitem:122381::::::::100:73:::1:583:::|h[Polished Breastplate of Valor]|h|r", -- [5]
+					"|cff0070dd|Hitem:138154::::::::100:73:512:9:1:3387:100:::|h[Felforged Waistplate]|h|r", -- [6]
+					"|cff00ccff|Hitem:122251::::::::100:73:::1:583:::|h[Polished Legplates of Valor]|h|r", -- [7]
+					"|cff0070dd|Hitem:138158::::::::100:73:512:9:1:3387:100:::|h[Felforged Warboots]|h|r", -- [8]
+					"|cff0070dd|Hitem:138159::::::::100:73:512:9:1:3387:100:::|h[Felforged Vambraces]|h|r", -- [9]
+					"|cff0070dd|Hitem:138153::::::::100:73:512:9:1:3387:100:::|h[Felforged Gauntlets]|h|r", -- [10]
+					"|cff0070dd|Hitem:61474:::::::1686651392:100:73::::::|h[Worldbinder Signet]|h|r", -- [11]
+					"|cff0070dd|Hitem:59782:::::::1530859136:100:73::::::|h[Prismatic Periwinkle Band]|h|r", -- [12]
+					"|cff0070dd|Hitem:55868:::::::1624394368:100:73::::::|h[Heart of Solace]|h|r", -- [13]
+					"|cff1eff00|Hitem:61448:::::::919739776:100:73::::::|h[Oremantle's Favor]|h|r", -- [14]
+					"|cff00ccff|Hitem:122266::::::::100:73:::1:583:::|h[Ripped Sandstorm Cloak]|h|r", -- [15]
+					"|cff0070dd|Hitem:141594::::::::100:73::9:3:1816:1814:3447:::|h[Fel Hacker]|h|r", -- [16]
+					"|cff00ccff|Hitem:122391::::::::100:73:::1:583:::|h[Flamescarred Draconian Deflector]|h|r", -- [17]
+				},
+			},
+		},
 		["Drathol - Blackhand"] = {
 			["Logging"] = {
 				["LastDiff"] = 1,
@@ -604,34 +634,13 @@ AskMrRobotDb3 = {
 				[141285] = 1,
 			},
 		},
-		["Draltar - Blackhand"] = {
+		["Dranathal - Madmortem"] = {
+			["Talents"] = {
+				"0000000", -- [1]
+			},
 			["Logging"] = {
 				["LastDiff"] = 0,
-				["LastZone"] = "Kalimdor",
-			},
-			["Talents"] = {
-				[3] = "1223300",
-			},
-			["Equipped"] = {
-				[3] = {
-					"|cff00ccff|Hitem:122245::::::::100:73:::1:583:::|h[Polished Helm of Valor]|h|r", -- [1]
-					"|cff00ccff|Hitem:122667::::::::100:73:::1:583:::|h[Eternal Emberfury Talisman]|h|r", -- [2]
-					"|cff00ccff|Hitem:122355::::::::100:73:::1:583:::|h[Polished Spaulders of Valor]|h|r", -- [3]
-					nil, -- [4]
-					"|cff00ccff|Hitem:122381::::::::100:73:::1:583:::|h[Polished Breastplate of Valor]|h|r", -- [5]
-					"|cff0070dd|Hitem:138154::::::::100:73:512:9:1:3387:100:::|h[Felforged Waistplate]|h|r", -- [6]
-					"|cff00ccff|Hitem:122251::::::::100:73:::1:583:::|h[Polished Legplates of Valor]|h|r", -- [7]
-					"|cff0070dd|Hitem:138158::::::::100:73:512:9:1:3387:100:::|h[Felforged Warboots]|h|r", -- [8]
-					"|cff0070dd|Hitem:138159::::::::100:73:512:9:1:3387:100:::|h[Felforged Vambraces]|h|r", -- [9]
-					"|cff0070dd|Hitem:138153::::::::100:73:512:9:1:3387:100:::|h[Felforged Gauntlets]|h|r", -- [10]
-					"|cff0070dd|Hitem:61474:::::::1686651392:100:73::::::|h[Worldbinder Signet]|h|r", -- [11]
-					"|cff0070dd|Hitem:59782:::::::1530859136:100:73::::::|h[Prismatic Periwinkle Band]|h|r", -- [12]
-					"|cff0070dd|Hitem:55868:::::::1624394368:100:73::::::|h[Heart of Solace]|h|r", -- [13]
-					"|cff1eff00|Hitem:61448:::::::919739776:100:73::::::|h[Oremantle's Favor]|h|r", -- [14]
-					"|cff00ccff|Hitem:122266::::::::100:73:::1:583:::|h[Ripped Sandstorm Cloak]|h|r", -- [15]
-					"|cff0070dd|Hitem:141594::::::::100:73::9:3:1816:1814:3447:::|h[Fel Hacker]|h|r", -- [16]
-					"|cff00ccff|Hitem:122391::::::::100:73:::1:583:::|h[Flamescarred Draconian Deflector]|h|r", -- [17]
-				},
+				["LastZone"] = "Outland",
 			},
 		},
 		["Dronthal - Madmortem"] = {
@@ -1074,10 +1083,10 @@ AskMrRobotDb3 = {
 				[8150] = 1,
 				[139697] = 1,
 				[141259] = 1,
-				[137307] = 1,
+				[147252] = 1,
 				[134183] = 1,
 				[137530] = 1,
-				[124117] = 2,
+				[137307] = 1,
 				[138875] = 5,
 				[142173] = 1,
 				[134248] = 1,
@@ -1090,7 +1099,7 @@ AskMrRobotDb3 = {
 				[124120] = 158,
 				[7912] = 1,
 				[134204] = 1,
-				[147252] = 1,
+				[124117] = 2,
 				[8170] = 6,
 				[142215] = 1,
 				[134504] = 1,
@@ -1957,6 +1966,14 @@ AskMrRobotDb3 = {
 							[143687] = true,
 						},
 					},
+					[130248] = {
+						["id"] = 130248,
+						["text"] = "200 Int",
+						["enchantId"] = 130248,
+						["identicalItemGroup"] = {
+							[130248] = true,
+						},
+					},
 					[130220] = {
 						["id"] = 130220,
 						["text"] = "150 Haste",
@@ -1971,14 +1988,6 @@ AskMrRobotDb3 = {
 						["enchantId"] = 141261,
 						["identicalItemGroup"] = {
 							[141261] = true,
-						},
-					},
-					[130248] = {
-						["id"] = 130248,
-						["text"] = "200 Int",
-						["enchantId"] = 130248,
-						["identicalItemGroup"] = {
-							[130248] = true,
 						},
 					},
 				}, -- [3]
@@ -2125,12 +2134,12 @@ AskMrRobotDb3 = {
 						[921] = 4,
 						[999] = 1,
 						[922] = 4,
-						[1353] = 1,
-						[923] = 4,
 						[925] = 1,
+						[923] = 4,
+						[1601] = 4,
 						[924] = 1,
 						[1390] = 1,
-						[1601] = 4,
+						[1353] = 1,
 						[1602] = 1,
 						[1603] = 1,
 					},
@@ -3367,8 +3376,8 @@ AskMrRobotDb3 = {
 					[132457] = {
 						["id"] = 132457,
 					},
-					[140897] = {
-						["id"] = 140897,
+					[138317] = {
+						["id"] = 138317,
 					},
 					[144403] = {
 						["id"] = 144403,
@@ -3379,13 +3388,8 @@ AskMrRobotDb3 = {
 							1, -- [1]
 						},
 					},
-					[128942] = {
-						["id"] = 128942,
-						["socketColors"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-						},
+					[140897] = {
+						["id"] = 140897,
 					},
 					[144259] = {
 						["id"] = 144259,
@@ -3417,8 +3421,13 @@ AskMrRobotDb3 = {
 					[138320] = {
 						["id"] = 138320,
 					},
-					[138317] = {
-						["id"] = 138317,
+					[128942] = {
+						["id"] = 128942,
+						["socketColors"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+						},
 					},
 				}, -- [1]
 				{
@@ -3486,20 +3495,22 @@ AskMrRobotDb3 = {
 					},
 				}, -- [2]
 				{
-					[147765] = {
-						["id"] = 147765,
+					[128941] = {
+						["id"] = 128941,
+						["socketColors"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+						},
 					},
 					[138311] = {
 						["id"] = 138311,
 					},
-					[145598] = {
-						["id"] = 145598,
-						["socketColors"] = {
-							1, -- [1]
-						},
+					[138323] = {
+						["id"] = 138323,
 					},
-					[132375] = {
-						["id"] = 132375,
+					[147765] = {
+						["id"] = 147765,
 					},
 					[138317] = {
 						["id"] = 138317,
@@ -3513,8 +3524,11 @@ AskMrRobotDb3 = {
 							1, -- [1]
 						},
 					},
-					[134528] = {
-						["id"] = 134528,
+					[145598] = {
+						["id"] = 145598,
+						["socketColors"] = {
+							1, -- [1]
+						},
 					},
 					[138314] = {
 						["id"] = 138314,
@@ -3531,16 +3545,11 @@ AskMrRobotDb3 = {
 					[137508] = {
 						["id"] = 137508,
 					},
-					[138323] = {
-						["id"] = 138323,
+					[134528] = {
+						["id"] = 134528,
 					},
-					[128941] = {
-						["id"] = 128941,
-						["socketColors"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-						},
+					[132375] = {
+						["id"] = 132375,
 					},
 				}, -- [3]
 			},
@@ -3641,11 +3650,11 @@ AskMrRobotDb3 = {
 				[139063] = 1,
 				[90407] = 5,
 				[124121] = 4,
-				[140911] = 1,
+				[137341] = 1,
 				[134531] = 1,
 				[121326] = 1,
 				[127845] = 1,
-				[137341] = 1,
+				[146776] = 1,
 				[141001] = 1,
 				[124118] = 3,
 				[139280] = 1,
@@ -3691,7 +3700,7 @@ AskMrRobotDb3 = {
 				[144756] = 1,
 				[124102] = 4,
 				[137309] = 2,
-				[146776] = 1,
+				[140911] = 1,
 				[121757] = 1,
 				[147350] = 1,
 				[124437] = 114,
@@ -3845,14 +3854,14 @@ AskMrRobotDb3 = {
 						"", -- [3]
 					},
 					["Powers"] = {
+						[1293] = 1,
 						[1279] = 3,
-						[1286] = 3,
 						[1290] = 1,
 						[1281] = 1,
 						[1277] = 1,
 						[1288] = 1,
 						[1285] = 3,
-						[1293] = 1,
+						[1286] = 3,
 					},
 				}, -- [1]
 				{
@@ -3882,12 +3891,12 @@ AskMrRobotDb3 = {
 					},
 					["Powers"] = {
 						[831] = 1,
-						[822] = 3,
+						[1341] = 1,
 						[830] = 1,
 						[825] = 2,
 						[820] = 3,
+						[822] = 3,
 						[801] = 3,
-						[1341] = 1,
 					},
 				}, -- [3]
 			},
@@ -4146,9 +4155,10 @@ AskMrRobotDb3 = {
 		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
 		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
 		["Drathon - Blackhand"] = "base",
+		["Draltar - Blackhand"] = "Draltar - Blackhand",
 		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
-		["Draltar - Blackhand"] = "Draltar - Blackhand",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
 		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
@@ -4301,6 +4311,38 @@ AskMrRobotDb3 = {
 		["Drathon - Blackhand"] = {
 		},
 		["Draltar - Blackhand"] = {
+		},
+		["Dranathal - Madmortem"] = {
+			["Logging"] = {
+				["Auto"] = {
+					[1520] = {
+						[14] = false,
+						[16] = false,
+						[17] = false,
+						[15] = false,
+					},
+					[1676] = {
+						[14] = false,
+						[16] = false,
+						[17] = false,
+						[15] = false,
+					},
+					[530] = {
+					},
+					[1530] = {
+						[14] = false,
+						[16] = false,
+						[17] = false,
+						[15] = false,
+					},
+					[1648] = {
+						[14] = false,
+						[16] = false,
+						[17] = false,
+						[15] = false,
+					},
+				},
+			},
 		},
 		["Drathol - Blackhand"] = {
 			["Logging"] = {

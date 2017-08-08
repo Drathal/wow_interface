@@ -5,6 +5,7 @@ RoutesDB = {
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["global"] = {

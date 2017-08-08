@@ -2,21 +2,22 @@
 RefillerDB = {
 	["profileKeys"] = {
 		["Drathal - Blackhand"] = "Drathal - Blackhand",
-		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
-		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
-		["Drathon - Blackhand"] = "base",
-		["Drathair - Blackhand"] = "base",
-		["Drathol - Blackhand"] = "Drathol - Blackhand",
+		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
-		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
-		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
-		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
+		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
+		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
+		["Drathon - Blackhand"] = "base",
+		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
+		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathair - Blackhand"] = "base",
+		["Drathol - Blackhand"] = "Drathol - Blackhand",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
@@ -52,6 +53,8 @@ RefillerDB = {
 			["refills"] = {
 				["|cffffffff|Hitem:138292::::::::110:257::::::|h[Ley-Enriched Water]|h|r"] = 200,
 			},
+		},
+		["Dranathal - Madmortem"] = {
 		},
 		["Dronthal - Madmortem"] = {
 			["refills"] = {

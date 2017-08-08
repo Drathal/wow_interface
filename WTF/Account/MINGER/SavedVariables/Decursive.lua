@@ -2,10 +2,11 @@
 DecursiveDB = {
 	["profileKeys"] = {
 		["Darlaxle - Blackhand"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
+		["Dranathal - Madmortem"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 	},
 	["class"] = {
@@ -28,6 +29,17 @@ DecursiveDB = {
 				-14, -- [4]
 				[8] = 1,
 				[16] = 2,
+				[32] = -16,
+			},
+		},
+		["SHAMAN"] = {
+			["CureOrder"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
 				[32] = -16,
 			},
 		},

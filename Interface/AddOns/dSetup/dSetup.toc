@@ -2,10 +2,13 @@
 ## Title: dSetup
 ## Notes: Setup UI
 ## Version: 1
-## RequiredDeps: Grid2, XIV_Databar, Skada
+## RequiredDeps: Grid2, XIV_Databar, Skada, TellMeWhen, AllTheThings
 ## SavedVariables: dsetupDB
 
-dSetup.lua
 vars/Grid2.lua
 vars/XIV_Databar.lua
 vars/Skada.lua
+vars/TellMeWhen.lua
+vars/AllTheThings.lua
+
+dSetup.lua

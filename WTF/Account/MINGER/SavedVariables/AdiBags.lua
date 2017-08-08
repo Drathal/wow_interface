@@ -144,19 +144,20 @@ AdiBagsDB = {
 		["Drahmoon - Madmortem"] = {
 			["collapsedSections"] = {
 				["Broken Shore#Broken Shore"] = true,
+				["Hearthstones#Hearthstones"] = true,
 				["Equipment#Set: AMR Affliction"] = true,
-				["Junk#Junk"] = true,
 				["Equipment#Set: AMR Destruction"] = true,
 				["Equipment#Legenday"] = true,
 				["Equipment#Set: AMR Demonology"] = true,
-				["Hearthstones#Hearthstones"] = true,
+				["Junk#Junk"] = true,
 			},
 		},
 	},
 	["profileKeys"] = {
+		["Dronthal - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
+		["Dranathal - Madmortem"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 	},
 	["profiles"] = {

@@ -5,6 +5,7 @@ MMMunchDB = {
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["profiles"] = {
@@ -55,6 +56,17 @@ MMMunchDB = {
 				["mWater"] = "#showtooltip\n/use <mpf>",
 				["mAllMP"] = "#showtooltip\n/use [nomod,nocombat] <mpf>\n/castsequence [nomod,combat] reset=combat <mps,mpp>",
 				["mMP"] = "#showtooltip\n/use <mpp>",
+			},
+		},
+		["Dranathal - Madmortem"] = {
+			["macroTable"] = {
+				["mAllHP"] = "#showtooltip\n/use [mod,@player] <b>; [nocombat] <hpf>\n/castsequence [nomod,combat] reset=combat <hps,hpp>",
+				["mHP"] = "#showtooltip\n/castsequence [nocombat] reset=120 <hps,hpp,hpp>\n/castsequence [combat] reset=combat <hps,hpp>",
+				["mFood"] = "#showtooltip\n/use <hpf>",
+				["mBandage"] = "#showtooltip\n/use [@player] <b>",
+				["mMP"] = "#showtooltip\n/use <mpp>",
+				["mAllMP"] = "#showtooltip\n/use [nomod,nocombat] <mpf>\n/castsequence [nomod,combat] reset=combat <mps,mpp>",
+				["mWater"] = "#showtooltip\n/use <mpf>",
 			},
 		},
 		["Drathia - Madmortem"] = {

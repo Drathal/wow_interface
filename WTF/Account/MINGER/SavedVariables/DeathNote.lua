@@ -1,18 +1,21 @@
 
 DeathNoteDB = {
 	["profileKeys"] = {
-		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
+		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
+		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["profiles"] = {
-		["Dronthal - Madmortem"] = {
-		},
 		["Modranthir - Madmortem"] = {
+		},
+		["Darlaxle - Blackhand"] = {
+		},
+		["Dronthal - Madmortem"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
@@ -37,7 +40,7 @@ DeathNoteDB = {
 		},
 		["Drahmoon - Madmortem"] = {
 		},
-		["Darlaxle - Blackhand"] = {
+		["Dranathal - Madmortem"] = {
 		},
 		["Drathia - Madmortem"] = {
 		},

@@ -5,6 +5,7 @@ HandyNotes_LegionInstanceWorldQuestsDB = {
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["profiles"] = {
@@ -15,6 +16,8 @@ HandyNotes_LegionInstanceWorldQuestsDB = {
 		["Drathal - Madmortem"] = {
 		},
 		["Drahmoon - Madmortem"] = {
+		},
+		["Dranathal - Madmortem"] = {
 		},
 		["Drathia - Madmortem"] = {
 		},

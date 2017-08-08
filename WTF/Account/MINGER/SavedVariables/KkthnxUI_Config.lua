@@ -5,6 +5,7 @@ KkthnxUIConfigAll = {
 		["Drathal"] = false,
 		["Dronthal"] = false,
 		["Drahmoon"] = false,
+		["Dranathal"] = false,
 		["Drathtix"] = false,
 	},
 }

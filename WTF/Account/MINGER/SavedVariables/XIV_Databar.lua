@@ -2,13 +2,13 @@
 TEST_CONFIG = nil
 XIVBarDB = {
 	["char"] = {
-		["Drathtix - Madmortem"] = {
+		["Dronthal - Madmortem"] = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
 			},
 		},
-		["Dronthal - Madmortem"] = {
+		["Drathtix - Madmortem"] = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
@@ -18,6 +18,12 @@ XIVBarDB = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
+			},
+		},
+		["Dranathal - Madmortem"] = {
+			["portItem"] = {
+				["portId"] = 140192,
+				["text"] = "Dalaran",
 			},
 		},
 		["Drathia - Madmortem"] = {
@@ -30,13 +36,28 @@ XIVBarDB = {
 	["baseProfile"] = {
 	},
 	["profileKeys"] = {
-		["Drathtix - Madmortem"] = "baseProfile",
 		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathtix - Madmortem"] = "baseProfile",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Dranathal - Madmortem"] = "baseProfile",
 		["Drathia - Madmortem"] = "Default",
 	},
 	["factionrealm"] = {
 		["Alliance - Madmortem"] = {
+			["Drathia"] = {
+				["dailyMoney"] = 0,
+				["sessionMoney"] = 0,
+				["lastLoginDate"] = 20170727,
+				["currentMoney"] = 12864863,
+				["daily"] = 0,
+			},
+			["Dranathal"] = {
+				["dailyMoney"] = 50,
+				["sessionMoney"] = 50,
+				["daily"] = 0,
+				["currentMoney"] = 50,
+				["lastLoginDate"] = 20170808,
+			},
 			["Drahmoon"] = {
 				["dailyMoney"] = 0,
 				["sessionMoney"] = 0,
@@ -49,13 +70,6 @@ XIVBarDB = {
 				["sessionMoney"] = 0,
 				["lastLoginDate"] = 20170807,
 				["currentMoney"] = 192431296,
-				["daily"] = 0,
-			},
-			["Drathia"] = {
-				["dailyMoney"] = 0,
-				["sessionMoney"] = 0,
-				["lastLoginDate"] = 20170727,
-				["currentMoney"] = 12864863,
 				["daily"] = 0,
 			},
 			["Drathtix"] = {
@@ -142,6 +156,76 @@ XIVBarDB = {
 				},
 			},
 		},
+		["baseProfile"] = {
+			["color"] = {
+				["normal"] = {
+					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
+				},
+				["barColor"] = {
+					["a"] = 0,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
+				},
+			},
+			["text"] = {
+				["flags"] = 2,
+				["font"] = "KkthnxUI_Normal",
+			},
+			["general"] = {
+				["ohHide"] = true,
+				["barPosition"] = "TOP",
+				["moduleSpacing"] = 29,
+			},
+			["modules"] = {
+				["tradeskill"] = {
+					["enabled"] = false,
+				},
+				["talent"] = {
+					["minWidth"] = 60,
+					["showTooltip"] = false,
+					["barCC"] = true,
+				},
+				["travel"] = {
+					["enabled"] = false,
+				},
+				["microMenu"] = {
+					["chat"] = false,
+					["help"] = false,
+					["quest"] = false,
+					["talent"] = false,
+					["char"] = false,
+					["pvp"] = false,
+				},
+				["currency"] = {
+					["enabled"] = false,
+					["showXPbar"] = false,
+					["currencyThree"] = "1314",
+					["currencyTwo"] = "1226",
+					["currencyOne"] = "1273",
+				},
+				["gold"] = {
+					["showFreeBagSpace"] = false,
+					["shortThousands"] = true,
+				},
+				["clock"] = {
+					["hideEventText"] = true,
+					["timeFormat"] = "twoFourNoZero",
+				},
+				["MasterVolume"] = {
+					["enabled"] = true,
+				},
+				["armor"] = {
+					["enabled"] = false,
+				},
+				["system"] = {
+					["showTooltip"] = false,
+					["showAllOnShift"] = false,
+				},
+			},
+		},
 		["Drahmoon - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
@@ -212,75 +296,7 @@ XIVBarDB = {
 				},
 			},
 		},
-		["baseProfile"] = {
-			["color"] = {
-				["normal"] = {
-					["b"] = 1,
-					["g"] = 1,
-					["r"] = 1,
-				},
-				["barColor"] = {
-					["a"] = 0,
-					["b"] = 0,
-					["g"] = 0,
-					["r"] = 0,
-				},
-			},
-			["text"] = {
-				["flags"] = 2,
-				["font"] = "KkthnxUI_Normal",
-			},
-			["general"] = {
-				["ohHide"] = true,
-				["barPosition"] = "TOP",
-				["moduleSpacing"] = 29,
-			},
-			["modules"] = {
-				["tradeskill"] = {
-					["enabled"] = false,
-				},
-				["talent"] = {
-					["minWidth"] = 60,
-					["showTooltip"] = false,
-					["barCC"] = true,
-				},
-				["travel"] = {
-					["enabled"] = false,
-				},
-				["microMenu"] = {
-					["chat"] = false,
-					["help"] = false,
-					["quest"] = false,
-					["talent"] = false,
-					["char"] = false,
-					["pvp"] = false,
-				},
-				["currency"] = {
-					["enabled"] = false,
-					["showXPbar"] = false,
-					["currencyThree"] = "1314",
-					["currencyTwo"] = "1226",
-					["currencyOne"] = "1273",
-				},
-				["gold"] = {
-					["showFreeBagSpace"] = false,
-					["shortThousands"] = true,
-				},
-				["clock"] = {
-					["hideEventText"] = true,
-					["timeFormat"] = "twoFourNoZero",
-				},
-				["MasterVolume"] = {
-					["enabled"] = true,
-				},
-				["armor"] = {
-					["enabled"] = false,
-				},
-				["system"] = {
-					["showTooltip"] = false,
-					["showAllOnShift"] = false,
-				},
-			},
+		["Dranathal - Madmortem"] = {
 		},
 		["Drathia - Madmortem"] = {
 		},
