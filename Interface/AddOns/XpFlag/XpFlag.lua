@@ -17,26 +17,21 @@ local IsInGuild,GetNumGuildMembers,GetGuildRosterInfo = IsInGuild,GetNumGuildMem
 
 local marks = {};
 local friends = {};
-local battlenet = {};
-local guild = {};
 local playerBar = nil;
 
 local LibStub = LibStub;
 local XpFlag = LibStub("AceAddon-3.0"):NewAddon("XpFlag", "AceEvent-3.0");
 
-local maxWidth = 1920
+local maxWidth = _G['UIParent']:GetWidth()
 
 local defaults = {
   version = version,
   showself = true,
-  selfcolor = {Red = 0.25, Green = 0.5, Blue = 1},
-  selfcolorrested = {Red = 0.5, Green = 0.25, Blue = 1},
+  selfcolor = {0.25, 0.5, 1, 0.8},
+  selfcolorrested = {0.5, 0.25, 1, 0.8},
   flipmarkers = true,
   width = 16,
-  height = 16,
-  opacity = 0.5,
-  voffset = 0,
-  guild = true,
+  height = 16
 };
 
 function XpFlag:OnInitialize()
@@ -48,15 +43,6 @@ function XpFlag:OnInitialize()
 	XpFlag:RegisterEvent("CHAT_MSG_ADDON");
 	XpFlag:RegisterEvent("FRIENDLIST_UPDATE");
 
-	XpFlag:RegisterEvent("BN_FRIEND_TOON_ONLINE","BATTLENET");
-	XpFlag:RegisterEvent("BN_FRIEND_TOON_OFFLINE","BATTLENET");
-	XpFlag:RegisterEvent("BN_FRIEND_ACCOUNT_ONLINE","BATTLENET");
-	XpFlag:RegisterEvent("BN_FRIEND_ACCOUNT_OFFLINE","BATTLENET");
-  
-	if XpFlag.db.guild then
-		XpFlag:RegisterEvent("GUILD_ROSTER_UPDATE");
-	end
-
 	RegisterAddonMessagePrefix("XpFlag")
 	RegisterAddonMessagePrefix("XpFlagRequest")	
 	RegisterAddonMessagePrefix("XpFlagCancel")	
@@ -65,54 +51,28 @@ end
 
 function XpFlag:PLAYER_ENTERING_WORLD(event)
 
-    maxWidth = _G['UIParent']:GetWidth()
-
-    XpFlag:UnregisterEvent("PLAYER_ENTERING_WORLD");
-  
 	if XpFlag.db.showself then
 		XpFlag.UpdateMark(playerNameRealm,UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
 		XpFlag.CreateBar(UnitXP("PLAYER"), UnitXPMax("PLAYER"))
 	end
 
-	if XpFlag.db.guild then
-		XpFlag:RegisterEvent("PLAYER_GUILD_UPDATE");
-	end
-
 	ShowFriends();
 	XpFlag:FRIENDLIST_UPDATE();
 
-	if BNGetNumFriends() > 0 then
-		XpFlag:BATTLENET();
-	end
-end
+	XpFlag:UnregisterEvent("PLAYER_ENTERING_WORLD");
 
-function XpFlag:PLAYER_GUILD_UPDATE(event,unit)
-	if unit == "player" then
-		if IsInGuild() then
-			if XpFlag.db.guild then
-				SendAddonMessage("XpFlag",UnitXP("PLAYER")..":"..UnitXPMax("PLAYER")..":"..playerLevel..":"..playerClass,"GUILD");
-				SendAddonMessage("XpFlagRequest",version,"GUILD");
-			end
-			GuildRoster();
-		end
-		XpFlag:UnregisterEvent("PLAYER_GUILD_UPDATE");
-	end
 end
 
 function XpFlag:PLAYER_XP_UPDATE(event,unit)
 	if unit == "player" then	
 		local value,maxvalue = UnitXP("PLAYER"),UnitXPMax("PLAYER");
+
 		for k,v in pairs(friends) do
 			SendAddonMessage("XpFlag",value..":"..maxvalue..":"..playerLevel..":"..playerClass,"WHISPER",k);
 		end
-		for k,v in pairs(battlenet) do
-			SendAddonMessage("XpFlag",value..":"..maxvalue..":"..playerLevel..":"..playerClass,"WHISPER",k);
-		end
+
 		if XpFlag.db.showself then
 			XpFlag.UpdateMark(playerNameRealm,value,maxvalue,playerLevel,playerClass);
-		end
-		if XpFlag.db.guild and IsInGuild() then
-			SendAddonMessage("XpFlag",value..":"..maxvalue..":"..playerLevel..":"..playerClass,"GUILD");
 		end
 	end
 end
@@ -131,11 +91,6 @@ function XpFlag:CHAT_MSG_ADDON(event,pre,msg,chan,sender)
 					--print("Received",value,maxvalue,level,class)
 					XpFlag.UpdateMark(sender,value,maxvalue,level,class);
 				end
-			elseif chan == "GUILD" then
-				if XpFlag.db.guild then
-					local value,maxvalue,level,class = msg:match("^(.-):(.-):(.-):(.-)$");
-					XpFlag.UpdateMark(sender,value,maxvalue,level,class);
-				end
 			end
 		elseif pre == "XpFlagRequest" then
 			if chan == "WHISPER" then
@@ -151,20 +106,11 @@ function XpFlag:CHAT_MSG_ADDON(event,pre,msg,chan,sender)
 						SendAddonMessage("XpFlagRequest",version,"WHISPER",sender);
 					end
 				end
-			elseif chan == "GUILD" then
-				if XpFlag.db.guild then
-					SendAddonMessage("XpFlag",UnitXP("PLAYER")..":"..UnitXPMax("PLAYER")..":"..playerLevel..":"..playerClass,"GUILD");
-				end
 			end
 		elseif pre == "XpFlagCancel" then
 			if chan == "WHISPER" then
 				if marks[sender] then
 					XpFlag.DeleteMark(sender);
-				end
-			elseif chan == "GUILD" then
-				if marks[sender] then
-					guild[sender] = nil;
-					XpFlag.RefreshMarks();
 				end
 			end
 		end
@@ -188,41 +134,9 @@ function XpFlag:FRIENDLIST_UPDATE()
 	XpFlag.RefreshMarks();
 end
 
-function XpFlag:BATTLENET()
-	wipe(battlenet);
-	for i=1,BNGetNumFriends() do
-		local presenceID, givenName, surname, toonName, toonID, client, isOnline = BNGetFriendInfo(i);
-		if isOnline then
-			for x=1,BNGetNumFriendGameAccounts(i) do
-				local _,name,client,realm,faction = BNGetFriendGameAccountInfo(i,x);
-				if name and (client == BNET_CLIENT_WOW) and (faction == playerFaction) and (realm == playerRealm) then
-					if XpFlag.db.friends[playerNameRealm] then
-						if not marks[name] then
-							SendAddonMessage("XpFlagRequest",version,"WHISPER",name);
-						end
-						battlenet[name] = true;
-					end
-				end
-			end
-		end
-	end
-	XpFlag.RefreshMarks();
-end
-
-function XpFlag:GUILD_ROSTER_UPDATE()
-	wipe(guild);
-	for i=1,GetNumGuildMembers(true) do
-		local name, rank, rankIndex, level, class, zone, note, officernote, online, status, classFileName, achievementPoints, achievementRank, isMobile = GetGuildRosterInfo(i);
-		if name and online then
-			guild[name] = true;
-		end
-	end
-	XpFlag.RefreshMarks();
-end
-
 function XpFlag.RefreshMarks()
 	for k,v in pairs(marks) do
-		if not (friends[k] or battlenet[k] or (XpFlag.db.guild and guild[k]) or (k == playerNameRealm)) then
+		if not (friends[k] or (k == playerNameRealm)) then
 			XpFlag.DeleteMark(k);
 		end
 	end
@@ -239,15 +153,20 @@ XpFlag.tooltip:SetScript("OnUpdate",function(self,elapsed)
 
 		for k,v in pairs(marks) do
 			if v:IsMouseOver() then
+				
 				GameTooltip:AddLine(" ");
 				GameTooltip:AddLine(k, RAID_CLASS_COLORS[v.class].r, RAID_CLASS_COLORS[v.class].g, RAID_CLASS_COLORS[v.class].b, 1);
 				GameTooltip:AddLine("Level: "..v.level, 1, 1, 1, 1);
-				GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue, 1, 1, 1, 1);
-				GameTooltip:AddLine("Percentage: "..string.format("%.2f",v.value/v.maxvalue*100).."%", 1, 1, 1, 1);
+				GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue.." ("..string.format("%.2f",v.value/v.maxvalue*100).."%)", 1, 1, 1, 1);				
+
+				local rested = GetXPExhaustion()
+				if rested and v.player then
+					GameTooltip:AddLine("Rested: "..rested.." ("..string.format("%.2f",rested/v.maxvalue*100).."%)", 1, 1, 1, 1);
+				end
+
 			end
 		end
 		GameTooltip:Show();
-		delay = 0.1;
 	end
 end);
 
@@ -261,7 +180,13 @@ function XpFlag.CreateBar(value, maxvalue)
 	playerBar.texture:SetAllPoints(playerBar);
 	playerBar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0);	
 	playerBar.texture:SetTexture("Interface\\AddOns\\XpFlag\\bar.blp");
-	playerBar.texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,XpFlag.db.opacity);
+
+	if GetXPExhaustion() then
+		playerBar.texture:SetVertexColor(unpack(XpFlag.db.selfcolorrested));	
+	else		
+		playerBar.texture:SetVertexColor(unpack(XpFlag.db.selfcolor));	
+	end
+
 	playerBar:SetFrameLevel(5)
 	playerBar:SetFrameStrata("DIALOG");
 	playerBar:Show();
@@ -279,7 +204,7 @@ function XpFlag.CreateMark(name, class)
 	marks[name]:SetWidth(XpFlag.db.width);
 	marks[name]:SetParent(_G['UIParent']);
 	marks[name].texture:SetAllPoints(marks[name]);
-	marks[name]:SetPoint("TOP", _G['UIParent'], "TOPLEFT", 0, XpFlag.db.voffset);	
+	marks[name]:SetPoint("TOP", _G['UIParent'], "TOPLEFT", 0, 0);	
 	marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle.tga");
 	marks[name]:SetFrameStrata("DIALOG");
 	marks[name]:Show();
@@ -291,9 +216,15 @@ function XpFlag.CreateMark(name, class)
 	end
 
 	if name == playerNameRealm then
+
+		if GetXPExhaustion() then
+			marks[name].texture:SetVertexColor(unpack(XpFlag.db.selfcolorrested));
+		else
+			marks[name].texture:SetVertexColor(unpack(XpFlag.db.selfcolor));		
+		end
+
 		marks[name]:SetFrameLevel(5)
 		marks[name].player = true;
-		marks[name].texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,1);
 	else
 		local uclass = class:upper()
 		marks[name]:SetFrameLevel(1)
@@ -357,33 +288,26 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 
 	
 	if tonumber(level) < playerLevel then
-		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-minus.tga");
-		marks[name]:SetHeight(XpFlag.db.height * 0.8);
-		marks[name]:SetWidth(XpFlag.db.width * 0.8);		
+		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-minus.tga");	
 	elseif tonumber(level) > playerLevel then
 		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-plus.tga");
-		marks[name]:SetHeight(XpFlag.db.height * 1.2);
-		marks[name]:SetWidth(XpFlag.db.width * 1.2);
 	else
 		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle.tga");		
-		marks[name]:SetHeight(XpFlag.db.height);
-		marks[name]:SetWidth(XpFlag.db.width);
 	end
 	
 	if marks[name] then		
 		marks[name]:ClearAllPoints();	
-		marks[name]:SetPoint("TOPLEFT", _G['UIParent'], maxWidth * value/maxvalue, XpFlag.db.voffset);	
+		marks[name]:SetPoint("TOPLEFT", _G['UIParent'], maxWidth * value/maxvalue, 0);	
 	end
-
 
 	if marks[name].player == true and playerBar then	
 		playerBar:SetWidth((maxWidth * value/maxvalue) + 8);
-		if GetXPExhaustion() > 0 then
-			marks[name].texture:SetVertexColor(XpFlag.db.selfcolorrested.Red,XpFlag.db.selfcolorrested.Green,XpFlag.db.selfcolorrested.Blue,1);
-			playerBar.texture:SetVertexColor(XpFlag.db.selfcolorrested.Red,XpFlag.db.selfcolorrested.Green,XpFlag.db.selfcolorrested.Blue,1);
+		if GetXPExhaustion() then
+			marks[name].texture:SetVertexColor(unpack(XpFlag.db.selfcolorrested));
+			playerBar.texture:SetVertexColor(unpack(XpFlag.db.selfcolorrested));
 		else
-			marks[name].texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,1);
-			playerBar.texture:SetVertexColor(XpFlag.db.selfcolor.Red,XpFlag.db.selfcolor.Green,XpFlag.db.selfcolor.Blue,1);
+			marks[name].texture:SetVertexColor(unpack(XpFlag.db.selfcolor));
+			playerBar.texture:SetVertexColor(unpack(XpFlag.db.selfcolor));
 		end
 	end
 

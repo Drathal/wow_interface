@@ -2,75 +2,73 @@
 dsetupDB = nil
 Grid2DB = {
 	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
+		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["namespaces"] = {
-		["Grid2Frame"] = {
+		["LibDualSpec-1.0"] = {
+		},
+		["Grid2RaidDebuffs"] = {
 			["profiles"] = {
 				["Drathtix - Madmortem"] = {
-					["font"] = "KkthnxUI_Normal",
-					["menuDisabled"] = true,
-					["frameHeights"] = {
-						[30] = 35,
-						[25] = 45,
-						[40] = 28,
+					["lastSelectedModule"] = "[Custom Debuffs]",
+					["enabledModules"] = {
+						["Legion"] = true,
+						["Cataclysm"] = true,
+						["The Burning Crusade"] = true,
+						["Mists of Pandaria"] = true,
+						["The Lich King"] = true,
+						["Warlords of Draenor"] = true,
 					},
-					["orientation"] = "HORIZONTAL",
-					["frameWidth"] = 74,
-					["frameTexture"] = "Grid2 Flat",
+					["##########"] = 1,
 				},
 				["Drahmoon - Madmortem"] = {
-					["font"] = "KkthnxUI_Normal",
-					["menuDisabled"] = true,
-					["orientation"] = "HORIZONTAL",
-					["frameTexture"] = "Grid2 Flat",
-					["frameWidth"] = 74,
-					["frameHeights"] = {
-						[30] = 35,
-						[25] = 45,
-						[40] = 28,
+					["lastSelectedModule"] = "[Custom Debuffs]",
+					["enabledModules"] = {
+						["Legion"] = true,
+						["Cataclysm"] = true,
+						["The Burning Crusade"] = true,
+						["Mists of Pandaria"] = true,
+						["The Lich King"] = true,
+						["Warlords of Draenor"] = true,
 					},
 				},
 				["Dronthal - Madmortem"] = {
-					["font"] = "KkthnxUI_Normal",
-					["menuDisabled"] = true,
-					["frameHeights"] = {
-						[30] = 35,
-						[25] = 45,
-						[40] = 28,
+					["lastSelectedModule"] = "[Custom Debuffs]",
+					["enabledModules"] = {
+						["Legion"] = true,
+						["Cataclysm"] = true,
+						["Mists of Pandaria"] = true,
+						["The Burning Crusade"] = true,
+						["The Lich King"] = true,
+						["Warlords of Draenor"] = true,
 					},
-					["frameWidth"] = 74,
-					["frameTexture"] = "Grid2 Flat",
-					["orientation"] = "HORIZONTAL",
+					["##########"] = 1,
 				},
 				["Drathia - Madmortem"] = {
-					["font"] = "KkthnxUI_Normal",
-					["menuDisabled"] = true,
-					["orientation"] = "HORIZONTAL",
-					["frameHeights"] = {
-						[30] = 35,
-						[25] = 45,
-						[40] = 28,
+					["lastSelectedModule"] = "[Custom Debuffs]",
+					["enabledModules"] = {
+						["Legion"] = true,
+						["Cataclysm"] = true,
+						["The Burning Crusade"] = true,
+						["Mists of Pandaria"] = true,
+						["The Lich King"] = true,
+						["Warlords of Draenor"] = true,
 					},
-					["frameTexture"] = "Grid2 Flat",
-					["frameWidth"] = 74,
 				},
 			},
 		},
-		["Grid2Utils"] = {
-		},
 		["Grid2Layout"] = {
 			["profiles"] = {
-				["Drathtix - Madmortem"] = {
+				["Drathia - Madmortem"] = {
 					["BackgroundG"] = 0,
 					["minimapIcon"] = {
 						["minimapPos"] = 201.967257452281,
 						["hide"] = true,
 					},
-					["PosY"] = -538.304852444444,
+					["BorderB"] = 0.501960784313726,
 					["layoutBySize"] = {
 						[30] = "By Group",
 						[10] = "By Group",
@@ -82,15 +80,15 @@ Grid2DB = {
 						["party"] = "Party",
 					},
 					["BackgroundB"] = 0,
-					["Spacing"] = 4,
+					["PosY"] = -538.304852444444,
 					["FrameLock"] = true,
 					["BackgroundA"] = 0,
 					["BorderR"] = 0.501960784313726,
 					["PosX"] = 549.778355326434,
 					["BackgroundR"] = 0,
 					["BorderG"] = 0.501960784313726,
+					["Spacing"] = 4,
 					["BorderTexture"] = "None",
-					["BorderB"] = 0.501960784313726,
 				},
 				["Drahmoon - Madmortem"] = {
 					["BackgroundG"] = 0,
@@ -110,15 +108,15 @@ Grid2DB = {
 						["party"] = "Party",
 					},
 					["BackgroundR"] = 0,
-					["PosY"] = -538.304852444444,
+					["Spacing"] = 4,
 					["FrameLock"] = true,
 					["BackgroundA"] = 0,
 					["BorderR"] = 0.501960784313726,
 					["BorderTexture"] = "None",
-					["PosX"] = 549.778355326434,
-					["BorderG"] = 0.501960784313726,
 					["BackgroundB"] = 0,
-					["Spacing"] = 4,
+					["BorderG"] = 0.501960784313726,
+					["PosX"] = 549.778355326434,
+					["PosY"] = -538.304852444444,
 				},
 				["Dronthal - Madmortem"] = {
 					["BackgroundG"] = 0,
@@ -138,23 +136,23 @@ Grid2DB = {
 						["party"] = "Party",
 					},
 					["BackgroundB"] = 0,
-					["PosY"] = -538.304852444444,
+					["Spacing"] = 4,
 					["FrameLock"] = true,
 					["BackgroundA"] = 0,
 					["BorderR"] = 0.501960784313726,
 					["PosX"] = 549.778355326434,
-					["BorderTexture"] = "None",
-					["BorderG"] = 0.501960784313726,
 					["BackgroundR"] = 0,
-					["Spacing"] = 4,
+					["BorderG"] = 0.501960784313726,
+					["BorderTexture"] = "None",
+					["PosY"] = -538.304852444444,
 				},
-				["Drathia - Madmortem"] = {
+				["Drathtix - Madmortem"] = {
 					["BackgroundG"] = 0,
 					["minimapIcon"] = {
 						["minimapPos"] = 201.967257452281,
 						["hide"] = true,
 					},
-					["BorderB"] = 0.501960784313726,
+					["PosY"] = -538.304852444444,
 					["layoutBySize"] = {
 						[30] = "By Group",
 						[10] = "By Group",
@@ -166,15 +164,15 @@ Grid2DB = {
 						["party"] = "Party",
 					},
 					["BackgroundB"] = 0,
-					["PosX"] = 549.778355326434,
+					["BorderB"] = 0.501960784313726,
 					["FrameLock"] = true,
 					["BackgroundA"] = 0,
 					["BorderR"] = 0.501960784313726,
-					["BorderTexture"] = "None",
 					["Spacing"] = 4,
+					["BorderTexture"] = "None",
 					["BorderG"] = 0.501960784313726,
 					["BackgroundR"] = 0,
-					["PosY"] = -538.304852444444,
+					["PosX"] = 549.778355326434,
 				},
 			},
 		},
@@ -182,7 +180,7 @@ Grid2DB = {
 		},
 		["Grid2Options"] = {
 			["profiles"] = {
-				["Drathtix - Madmortem"] = {
+				["Drathia - Madmortem"] = {
 					["L"] = {
 						["indicators"] = {
 							["top-bar"] = "bar-top",
@@ -203,7 +201,7 @@ Grid2DB = {
 						},
 					},
 				},
-				["Drathia - Madmortem"] = {
+				["Drathtix - Madmortem"] = {
 					["L"] = {
 						["indicators"] = {
 							["top-bar"] = "bar-top",
@@ -212,57 +210,59 @@ Grid2DB = {
 				},
 			},
 		},
-		["Grid2RaidDebuffs"] = {
+		["Grid2Frame"] = {
 			["profiles"] = {
 				["Drathia - Madmortem"] = {
-					["lastSelectedModule"] = "[Custom Debuffs]",
-					["enabledModules"] = {
-						["Legion"] = true,
-						["Cataclysm"] = true,
-						["The Burning Crusade"] = true,
-						["Mists of Pandaria"] = true,
-						["The Lich King"] = true,
-						["Warlords of Draenor"] = true,
+					["font"] = "KkthnxUI_Normal",
+					["menuDisabled"] = true,
+					["orientation"] = "HORIZONTAL",
+					["frameWidth"] = 74,
+					["frameTexture"] = "Grid2 Flat",
+					["frameHeights"] = {
+						[30] = 35,
+						[25] = 45,
+						[40] = 28,
 					},
 				},
 				["Drahmoon - Madmortem"] = {
-					["lastSelectedModule"] = "[Custom Debuffs]",
-					["enabledModules"] = {
-						["Legion"] = true,
-						["Cataclysm"] = true,
-						["The Burning Crusade"] = true,
-						["Mists of Pandaria"] = true,
-						["The Lich King"] = true,
-						["Warlords of Draenor"] = true,
+					["font"] = "KkthnxUI_Normal",
+					["menuDisabled"] = true,
+					["orientation"] = "HORIZONTAL",
+					["frameHeights"] = {
+						[30] = 35,
+						[25] = 45,
+						[40] = 28,
 					},
+					["frameTexture"] = "Grid2 Flat",
+					["frameWidth"] = 74,
 				},
 				["Dronthal - Madmortem"] = {
-					["lastSelectedModule"] = "[Custom Debuffs]",
-					["enabledModules"] = {
-						["Legion"] = true,
-						["Cataclysm"] = true,
-						["Mists of Pandaria"] = true,
-						["The Burning Crusade"] = true,
-						["The Lich King"] = true,
-						["Warlords of Draenor"] = true,
+					["font"] = "KkthnxUI_Normal",
+					["menuDisabled"] = true,
+					["frameHeights"] = {
+						[30] = 35,
+						[25] = 45,
+						[40] = 28,
 					},
-					["##########"] = 1,
+					["orientation"] = "HORIZONTAL",
+					["frameWidth"] = 74,
+					["frameTexture"] = "Grid2 Flat",
 				},
 				["Drathtix - Madmortem"] = {
-					["lastSelectedModule"] = "[Custom Debuffs]",
-					["enabledModules"] = {
-						["Legion"] = true,
-						["Cataclysm"] = true,
-						["The Burning Crusade"] = true,
-						["Mists of Pandaria"] = true,
-						["The Lich King"] = true,
-						["Warlords of Draenor"] = true,
+					["font"] = "KkthnxUI_Normal",
+					["menuDisabled"] = true,
+					["frameHeights"] = {
+						[30] = 35,
+						[25] = 45,
+						[40] = 28,
 					},
-					["##########"] = 1,
+					["frameTexture"] = "Grid2 Flat",
+					["frameWidth"] = 74,
+					["orientation"] = "HORIZONTAL",
 				},
 			},
 		},
-		["LibDualSpec-1.0"] = {
+		["Grid2Utils"] = {
 		},
 	},
 	["global"] = {
@@ -270,7 +270,7 @@ Grid2DB = {
 	},
 	["aaa"] = 1,
 	["profiles"] = {
-		["Drathia - Madmortem"] = {
+		["Drathtix - Madmortem"] = {
 			["hideBlizzardRaidFrames"] = true,
 			["indicators"] = {
 				["corner-top-left"] = {
@@ -278,55 +278,55 @@ Grid2DB = {
 					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
 						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
-					["width"] = 12,
+					["font"] = "Friz Quadrata TT",
 					["borderSize"] = 1,
 					["type"] = "square",
-					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOPLEFT",
 						["point"] = "TOPLEFT",
 						["x"] = 1,
 					},
+					["height"] = 7,
 					["level"] = 9,
 					["textlength"] = 12,
-					["font"] = "Friz Quadrata TT",
+					["width"] = 12,
 				},
 				["corner-bottom-right"] = {
-					["color1"] = {
-						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
+					["width"] = 12,
 					["fontSize"] = 8,
-					["borderSize"] = 1,
-					["height"] = 7,
+					["type"] = "square",
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOMRIGHT",
 						["point"] = "BOTTOMRIGHT",
 						["x"] = -1,
 					},
+					["height"] = 7,
 					["level"] = 8,
-					["type"] = "square",
-					["width"] = 12,
+					["borderSize"] = 1,
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
 				},
 				["text-down"] = {
-					["fontSize"] = 10,
 					["type"] = "text",
+					["fontSize"] = 10,
 					["font"] = "Friz Quadrata TT",
-					["shadowDisabled"] = true,
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOM",
 						["point"] = "BOTTOM",
 						["x"] = 0,
 					},
+					["shadowDisabled"] = true,
 					["level"] = 6,
 					["textlength"] = 5,
 					["fontFlags"] = "OUTLINE",
@@ -344,13 +344,13 @@ Grid2DB = {
 					["size"] = 14,
 				},
 				["border"] = {
+					["type"] = "border",
 					["color1"] = {
 						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["type"] = "border",
 				},
 				["role"] = {
 					["fontSize"] = 8,
@@ -369,44 +369,65 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["height"] = 5,
+					["orientation"] = "HORIZONTAL",
+					["level"] = 8,
 					["location"] = {
 						["y"] = 2,
 						["relPoint"] = "BOTTOMRIGHT",
 						["point"] = "BOTTOMRIGHT",
 						["x"] = -2,
 					},
-					["height"] = 5,
-					["level"] = 8,
-					["orientation"] = "HORIZONTAL",
 					["texture"] = "Grid2 Flat",
 				},
-				["bar-top-right-color"] = {
+				["bar-top-left-color"] = {
 					["type"] = "bar-color",
 				},
-				["bar-top-left"] = {
-					["width"] = 10,
+				["heals"] = {
 					["type"] = "bar",
+					["texture"] = "Grid2 Flat",
+					["anchorTo"] = "health",
+					["location"] = {
+						["y"] = 0,
+						["relPoint"] = "CENTER",
+						["point"] = "CENTER",
+						["x"] = 0,
+					},
+					["level"] = 1,
+					["opacity"] = 0.25,
+					["color1"] = {
+						["a"] = 0,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
+				},
+				["bar-top-left"] = {
+					["texture"] = "Gradient",
+					["type"] = "bar",
+					["height"] = 5,
+					["level"] = 9,
+					["orientation"] = "HORIZONTAL",
+					["duration"] = true,
 					["location"] = {
 						["y"] = -2,
 						["relPoint"] = "TOPLEFT",
 						["point"] = "TOPLEFT",
 						["x"] = 2,
 					},
-					["duration"] = true,
-					["height"] = 5,
-					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Gradient",
-				},
-				["text-down-color"] = {
-					["type"] = "text-color",
+					["width"] = 10,
 				},
 				["side-top-color"] = {
 					["type"] = "text-color",
 				},
 				["icon-center"] = {
 					["type"] = "icon",
-					["size"] = 20,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 					["location"] = {
 						["y"] = 0,
 						["relPoint"] = "CENTER",
@@ -415,34 +436,14 @@ Grid2DB = {
 					},
 					["level"] = 8,
 					["fontSize"] = 8,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
+					["size"] = 20,
 				},
-				["top-bar"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["height"] = 5,
-					["location"] = {
-						["y"] = -2,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
-					},
-					["level"] = 8,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Grid2 Flat",
+				["text-up-color"] = {
+					["type"] = "text-color",
 				},
 				["bar-top-right"] = {
-					["width"] = 10,
+					["texture"] = "Gradient",
 					["type"] = "bar",
-					["height"] = 5,
-					["duration"] = true,
 					["location"] = {
 						["y"] = -2,
 						["relPoint"] = "TOPRIGHT",
@@ -451,22 +452,28 @@ Grid2DB = {
 					},
 					["level"] = 9,
 					["orientation"] = "HORIZONTAL",
-					["texture"] = "Gradient",
+					["duration"] = true,
+					["height"] = 5,
+					["width"] = 10,
 				},
-				["text-up"] = {
-					["font"] = "Friz Quadrata TT",
-					["type"] = "text",
-					["fontSize"] = 10,
-					["shadowDisabled"] = true,
-					["location"] = {
-						["y"] = -16,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
+				["corner-bottom-left"] = {
+					["type"] = "square",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["level"] = 7,
-					["textlength"] = 6,
-					["fontFlags"] = "OUTLINE",
+					["location"] = {
+						["y"] = 1,
+						["relPoint"] = "BOTTOMLEFT",
+						["point"] = "BOTTOMLEFT",
+						["x"] = 1,
+					},
+					["height"] = 7,
+					["level"] = 5,
+					["borderSize"] = 1,
+					["width"] = 12,
 				},
 				["icon-right"] = {
 					["fontSize"] = 8,
@@ -483,17 +490,37 @@ Grid2DB = {
 				["heals-color"] = {
 					["type"] = "bar-color",
 				},
-				["bar-bottom-right-color"] = {
-					["type"] = "bar-color",
-				},
-				["alpha"] = {
+				["corner-top-right"] = {
+					["fontSize"] = 8,
+					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
 						["b"] = 0,
 						["g"] = 0,
 						["r"] = 0,
 					},
+					["font"] = "Friz Quadrata TT",
+					["borderSize"] = 1,
+					["type"] = "square",
+					["location"] = {
+						["y"] = -1,
+						["relPoint"] = "TOPRIGHT",
+						["point"] = "TOPRIGHT",
+						["x"] = -1,
+					},
+					["height"] = 7,
+					["level"] = 5,
+					["textlength"] = 12,
+					["width"] = 12,
+				},
+				["alpha"] = {
 					["type"] = "alpha",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 				},
 				["health-color"] = {
 					["type"] = "bar-color",
@@ -502,23 +529,23 @@ Grid2DB = {
 					["fontSize"] = 10,
 					["color1"] = {
 						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["width"] = 12,
+					["type"] = "square",
+					["font"] = "KkthnxUI_Normal",
 					["borderSize"] = 1,
-					["disableOmniCC"] = true,
+					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOP",
 						["point"] = "TOP",
 						["x"] = 0,
 					},
-					["height"] = 7,
 					["level"] = 6,
-					["font"] = "KkthnxUI_Normal",
-					["type"] = "square",
+					["disableOmniCC"] = true,
+					["width"] = 12,
 				},
 				["top-bar-color"] = {
 					["type"] = "bar-color",
@@ -532,317 +559,176 @@ Grid2DB = {
 						["x"] = 0,
 					},
 					["level"] = 2,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
 					["texture"] = "Blizzard Raid Bar",
-				},
-				["corner-top-right"] = {
-					["fontSize"] = 8,
-					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
 						["r"] = 0,
 						["g"] = 0,
 						["b"] = 0,
 					},
-					["width"] = 12,
-					["borderSize"] = 1,
-					["type"] = "square",
-					["height"] = 7,
-					["location"] = {
-						["y"] = -1,
-						["relPoint"] = "TOPRIGHT",
-						["point"] = "TOPRIGHT",
-						["x"] = -1,
-					},
-					["level"] = 5,
-					["textlength"] = 12,
-					["font"] = "Friz Quadrata TT",
-				},
-				["corner-bottom-left"] = {
-					["type"] = "square",
-					["width"] = 12,
-					["borderSize"] = 1,
-					["height"] = 7,
-					["level"] = 5,
-					["location"] = {
-						["y"] = 1,
-						["relPoint"] = "BOTTOMLEFT",
-						["point"] = "BOTTOMLEFT",
-						["x"] = 1,
-					},
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-				},
-				["text-up-color"] = {
-					["type"] = "text-color",
-				},
-				["heals"] = {
-					["type"] = "bar",
-					["color1"] = {
-						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["anchorTo"] = "health",
-					["location"] = {
-						["y"] = 0,
-						["relPoint"] = "CENTER",
-						["point"] = "CENTER",
-						["x"] = 0,
-					},
-					["level"] = 1,
-					["opacity"] = 0.25,
-					["texture"] = "Grid2 Flat",
-				},
-				["bar-top-left-color"] = {
-					["type"] = "bar-color",
-				},
-			},
-			["statusMap"] = {
-				["corner-top-left"] = {
-					["buff-BeaconOfLight-mine"] = 101,
-					["buff-BeaconofVirtue-mine"] = 102,
-					["buff-BeaconofFaith-mine"] = 100,
-				},
-				["corner-bottom-right"] = {
-					["buff-BestowFaith-mine"] = 50,
-				},
-				["text-down"] = {
-					["name"] = 99,
-				},
-				["icon-left"] = {
-					["raid-icon-player"] = 155,
-				},
-				["border"] = {
-					["banzai-threat"] = 50,
-				},
-				["role"] = {
-					["dungeon-role"] = 51,
-				},
-				["bar-bottom-right"] = {
-					["buff-BestowFaith-mine"] = 51,
-				},
-				["bar-top-right-color"] = {
-					["color-timeroverlay"] = 50,
-				},
-				["bar-top-left-color"] = {
-					["color-timeroverlay"] = 50,
-				},
-				["text-down-color"] = {
-					["debuff-Forbearance"] = 53,
-				},
-				["side-top-color"] = {
-					["buff-FlashOfLight-mine"] = 99,
-				},
-				["icon-center"] = {
-					["ready-check"] = 150,
-					["raid-debuffs"] = 155,
-				},
-				["top-bar"] = {
-					["buff-Tyr'sDeliverance-mine"] = 51,
-				},
-				["bar-top-right"] = {
-					["buff-BlessingofSacrifice-mine"] = 52,
-					["buff-BlessingofProtection-mine"] = 51,
-					["buff-BlessingofFreedom-mine"] = 50,
-				},
-				["text-up"] = {
-					["resurrection"] = 98,
-					["feign-death"] = 95,
-					["death"] = 93,
-					["charmed"] = 65,
-					["offline"] = 96,
-					["vehicle"] = 70,
-					["afk"] = 97,
-				},
-				["corner-top-right"] = {
-					["buff-BlessingofSacrifice-mine"] = 51,
-					["buff-BlessingofProtection-mine"] = 52,
-					["buff-BlessingofFreedom-mine"] = 50,
-				},
-				["heals-color"] = {
-					["classcolor"] = 99,
 				},
 				["bar-bottom-right-color"] = {
-					["color-timeroverlay"] = 51,
+					["type"] = "bar-color",
 				},
-				["alpha"] = {
-					["offline"] = 97,
-					["range"] = 99,
-					["death"] = 98,
+				["text-up"] = {
+					["type"] = "text",
+					["font"] = "Friz Quadrata TT",
+					["fontSize"] = 10,
+					["location"] = {
+						["y"] = -16,
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
+						["x"] = 0,
+					},
+					["shadowDisabled"] = true,
+					["level"] = 7,
+					["textlength"] = 6,
+					["fontFlags"] = "OUTLINE",
 				},
-				["top-bar-color"] = {
-					["color-timeroverlay"] = 52,
+				["top-bar"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["location"] = {
+						["y"] = -2,
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
+						["x"] = 0,
+					},
+					["orientation"] = "HORIZONTAL",
+					["level"] = 8,
+					["height"] = 5,
+					["texture"] = "Grid2 Flat",
 				},
-				["top"] = {
-					["buff-Tyr'sDeliverance-mine"] = 51,
+				["text-down-color"] = {
+					["type"] = "text-color",
 				},
-				["health-color"] = {
-					["classcolor"] = 99,
+				["bar-top-right-color"] = {
+					["type"] = "bar-color",
 				},
-				["health"] = {
-					["health-current"] = 99,
-				},
-				["icon-right"] = {
-					["raid-icon-target"] = 50,
-				},
-				["corner-bottom-left"] = {
-					["buff-AuraofSacrifice-mine"] = 50,
-					["buff-DevotionAura-mine"] = 51,
-					["buff-AuraofMercy-mine"] = 52,
-				},
-				["text-up-color"] = {
-					["charmed"] = 65,
-					["feign-death"] = 96,
-					["health-deficit"] = 50,
-					["offline"] = 93,
-					["vehicle"] = 70,
-					["death"] = 95,
-				},
-				["heals"] = {
-					["heals-incoming"] = 99,
-				},
-				["bar-top-left"] = {
-					["buff-BeaconofVirtue-mine"] = 50,
-				},
-			},
-			["versions"] = {
-				["Grid2"] = 5,
-				["Grid2RaidDebuffs"] = 1,
 			},
 			["statuses"] = {
 				["debuff-Forbearance"] = {
 					["type"] = "debuff",
+					["spellName"] = 25771,
 					["color1"] = {
 						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.298039215686275,
 						["r"] = 1,
+						["g"] = 0.298039215686275,
+						["b"] = 0,
 					},
-					["spellName"] = 25771,
 				},
 				["buff-BeaconOfLight-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.96078431372549,
-						["g"] = 0.180392156862745,
-						["r"] = 0.956862745098039,
-					},
+					["spellName"] = 53563,
 					["type"] = "buff",
 					["mine"] = true,
-					["spellName"] = 53563,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.956862745098039,
+						["g"] = 0.180392156862745,
+						["b"] = 0.96078431372549,
+					},
 				},
 				["buff-DevotionAura-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.952941176470588,
-						["g"] = 0.564705882352941,
-						["r"] = 0.172549019607843,
-					},
+					["spellName"] = "Devotion Aura",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Devotion Aura",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.172549019607843,
+						["g"] = 0.564705882352941,
+						["b"] = 0.952941176470588,
+					},
 				},
 				["buff-BestowFaith-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.83921568627451,
-						["r"] = 1,
-					},
+					["spellName"] = "Bestow Faith",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Bestow Faith",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 0.83921568627451,
+						["b"] = 0,
+					},
 				},
 				["buff-BlessingofSacrifice-mine"] = {
-					["spellName"] = "Blessing of Sacrifice",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
+						["b"] = 0,
 						["g"] = 0.0980392156862745,
-						["b"] = 0,
-					},
-				},
-				["buff-AuraofSacrifice-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.180392156862745,
 						["r"] = 1,
 					},
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Aura of Sacrifice",
+					["spellName"] = "Blessing of Sacrifice",
 				},
 				["buff-BlessingofProtection-mine"] = {
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 1,
+						["g"] = 0.580392156862745,
+						["r"] = 0,
+					},
+					["type"] = "buff",
+					["mine"] = 1,
 					["spellName"] = "Blessing of Protection",
+				},
+				["buff-AuraofMercy-mine"] = {
+					["spellName"] = "Aura of Mercy",
 					["type"] = "buff",
 					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0.580392156862745,
-						["b"] = 1,
+						["r"] = 0.403921568627451,
+						["g"] = 0.262745098039216,
+						["b"] = 0.964705882352941,
 					},
 				},
 				["buff-BlessingofFreedom-mine"] = {
-					["spellName"] = "Blessing of Freedom",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.36078431372549,
 						["b"] = 0,
+						["g"] = 0.36078431372549,
+						["r"] = 1,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Blessing of Freedom",
 				},
 				["buff-Tyr'sDeliverance-mine"] = {
-					["spellName"] = "Tyr's Deliverance",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0.976470588235294,
-						["g"] = 0.76078431372549,
 						["b"] = 0,
+						["g"] = 0.76078431372549,
+						["r"] = 0.976470588235294,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Tyr's Deliverance",
 				},
 				["role"] = {
 					["hideInCombat"] = true,
 				},
-				["buff-AuraofMercy-mine"] = {
+				["color-timeroverlay"] = {
+					["type"] = "color",
 					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.964705882352941,
-						["g"] = 0.262745098039216,
-						["r"] = 0.403921568627451,
+						["a"] = 0.5,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["type"] = "buff",
-					["mine"] = 1,
-					["spellName"] = "Aura of Mercy",
 				},
 				["buff-BeaconofFaith-mine"] = {
-					["spellName"] = 156910,
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0.4,
 						["b"] = 1,
+						["g"] = 0.4,
+						["r"] = 0,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = 156910,
 				},
 				["dungeon-role"] = {
 					["hideDamagers"] = true,
@@ -1151,13 +1037,16 @@ Grid2DB = {
 							156932, -- [69]
 							155743, -- [70]
 						},
-						[799] = {
-							37066, -- [1]
-							29522, -- [2]
-							29511, -- [3]
-							30753, -- [4]
-							30115, -- [5]
-							30843, -- [6]
+						[1042] = {
+							194325, -- [1]
+							194216, -- [2]
+							194266, -- [3]
+							197264, -- [4]
+							227233, -- [5]
+							197858, -- [6]
+							193211, -- [7]
+							193364, -- [8]
+							193460, -- [9]
 						},
 						[929] = {
 							137504, -- [1]
@@ -1336,21 +1225,16 @@ Grid2DB = {
 							150032, -- [24]
 							150023, -- [25]
 						},
-						[1067] = {
-							196376, -- [1]
-							198376, -- [2]
-							198408, -- [3]
-							200182, -- [4]
-							200238, -- [5]
-							204502, -- [6]
-							200111, -- [7]
-							199345, -- [8]
-							199460, -- [9]
-							199389, -- [10]
-							191326, -- [11]
-							204611, -- [12]
-							204574, -- [13]
-							204666, -- [14]
+						[1087] = {
+							209602, -- [1]
+							209676, -- [2]
+							224333, -- [3]
+							209628, -- [4]
+							208165, -- [5]
+							211457, -- [6]
+							207906, -- [7]
+							207261, -- [8]
+							207278, -- [9]
 						},
 						[752] = {
 							104936, -- [1]
@@ -1465,11 +1349,21 @@ Grid2DB = {
 							123121, -- [24]
 							123705, -- [25]
 						},
-						[951] = {
-							144638, -- [1]
-							144689, -- [2]
-							144607, -- [3]
-							144630, -- [4]
+						[1067] = {
+							196376, -- [1]
+							198376, -- [2]
+							198408, -- [3]
+							200182, -- [4]
+							200238, -- [5]
+							204502, -- [6]
+							200111, -- [7]
+							199345, -- [8]
+							199460, -- [9]
+							199389, -- [10]
+							191326, -- [11]
+							204611, -- [12]
+							204574, -- [13]
+							204666, -- [14]
 						},
 						[953] = {
 							147705, -- [1]
@@ -1649,39 +1543,34 @@ Grid2DB = {
 							223355, -- [2]
 							219602, -- [3]
 						},
-						[949] = {
-							175915, -- [1]
-							176004, -- [2]
+						[1114] = {
+							228054, -- [1]
+							227982, -- [2]
+							193367, -- [3]
+							227903, -- [4]
+							228058, -- [5]
+							228519, -- [6]
+							202476, -- [7]
+							232450, -- [8]
+							227570, -- [9]
+							227566, -- [10]
+							227539, -- [11]
+							228250, -- [12]
+							228246, -- [13]
+							228226, -- [14]
+							192044, -- [15]
+							198088, -- [16]
+							228915, -- [17]
+							227959, -- [18]
+							227475, -- [19]
+							192044, -- [20]
+							227781, -- [21]
 						},
-						[984] = {
-							154477, -- [1]
-							154218, -- [2]
-							153430, -- [3]
-							157165, -- [4]
-							157170, -- [5]
-							176511, -- [6]
-							157797, -- [7]
-							154852, -- [8]
-							154263, -- [9]
-							157168, -- [10]
-							156954, -- [11]
-							157052, -- [12]
-							156854, -- [13]
-							156856, -- [14]
-							156964, -- [15]
-							156960, -- [16]
-							153234, -- [17]
-							153396, -- [18]
-						},
-						[969] = {
-							153070, -- [1]
-							153501, -- [2]
-							156776, -- [3]
-							152819, -- [4]
-							1604, -- [5]
-							153524, -- [6]
-							154442, -- [7]
-							154469, -- [8]
+						[531] = {
+							39647, -- [1]
+							58936, -- [2]
+							60708, -- [3]
+							57491, -- [4]
 						},
 						[780] = {
 							39042, -- [1]
@@ -1696,6 +1585,16 @@ Grid2DB = {
 							37641, -- [10]
 							37749, -- [11]
 							38280, -- [12]
+						},
+						[969] = {
+							153070, -- [1]
+							153501, -- [2]
+							156776, -- [3]
+							152819, -- [4]
+							1604, -- [5]
+							153524, -- [6]
+							154442, -- [7]
+							154469, -- [8]
 						},
 						[529] = {
 							63276, -- [1]
@@ -1747,6 +1646,422 @@ Grid2DB = {
 						},
 						[532] = {
 							72004, -- [1]
+						},
+						[604] = {
+							70107, -- [1]
+							70106, -- [2]
+							69766, -- [3]
+							71665, -- [4]
+							70126, -- [5]
+							70157, -- [6]
+							70980, -- [7]
+							70450, -- [8]
+							71089, -- [9]
+							69483, -- [10]
+							71163, -- [11]
+							71127, -- [12]
+							70435, -- [13]
+							70671, -- [14]
+							70432, -- [15]
+							71257, -- [16]
+							70873, -- [17]
+							70744, -- [18]
+							70751, -- [19]
+							70633, -- [20]
+							71941, -- [21]
+							70766, -- [22]
+							69290, -- [23]
+							69248, -- [24]
+							72219, -- [25]
+							69278, -- [26]
+							71289, -- [27]
+							71204, -- [28]
+							71237, -- [29]
+							69674, -- [30]
+							69508, -- [31]
+							30494, -- [32]
+							72133, -- [33]
+							68981, -- [34]
+							69242, -- [35]
+							69409, -- [36]
+							70541, -- [37]
+							27177, -- [38]
+							68980, -- [39]
+							69065, -- [40]
+							72999, -- [41]
+							71807, -- [42]
+							69651, -- [43]
+							70838, -- [44]
+							71623, -- [45]
+							70949, -- [46]
+							72151, -- [47]
+							71340, -- [48]
+							72985, -- [49]
+							70923, -- [50]
+							70215, -- [51]
+							72454, -- [52]
+							70341, -- [53]
+							70342, -- [54]
+							70911, -- [55]
+							69774, -- [56]
+							72293, -- [57]
+							72769, -- [58]
+						},
+						[1088] = {
+							206482, -- [1]
+							206788, -- [2]
+							208910, -- [3]
+							208506, -- [4]
+							206641, -- [5]
+							208203, -- [6]
+							205344, -- [7]
+							206677, -- [8]
+							218502, -- [9]
+							219049, -- [10]
+							218424, -- [11]
+							218342, -- [12]
+							218809, -- [13]
+							206585, -- [14]
+							206936, -- [15]
+							206589, -- [16]
+							206388, -- [17]
+							205649, -- [18]
+							206398, -- [19]
+							206965, -- [20]
+							207143, -- [21]
+							212492, -- [22]
+							215458, -- [23]
+							212587, -- [24]
+							212647, -- [25]
+							213083, -- [26]
+							206607, -- [27]
+							206609, -- [28]
+							206615, -- [29]
+							212099, -- [30]
+							212568, -- [31]
+							206883, -- [32]
+							206222, -- [33]
+							206221, -- [34]
+							208672, -- [35]
+							208802, -- [36]
+							221891, -- [37]
+							221603, -- [38]
+							206896, -- [39]
+							211261, -- [40]
+							209615, -- [41]
+							209973, -- [42]
+							209971, -- [43]
+							211887, -- [44]
+							209170, -- [45]
+							209599, -- [46]
+							206480, -- [47]
+							213238, -- [48]
+							212795, -- [49]
+							208230, -- [50]
+							216024, -- [51]
+							216040, -- [52]
+							204766, -- [53]
+							214657, -- [54]
+							214662, -- [55]
+							211659, -- [56]
+							204471, -- [57]
+						},
+						[609] = {
+							74562, -- [1]
+							74567, -- [2]
+							74792, -- [3]
+							74795, -- [4]
+							74502, -- [5]
+							74367, -- [6]
+							74452, -- [7]
+						},
+						[930] = {
+							137341, -- [1]
+							137360, -- [2]
+							137408, -- [3]
+							137440, -- [4]
+							138308, -- [5]
+							138372, -- [6]
+							138349, -- [7]
+							137399, -- [8]
+							138733, -- [9]
+							138002, -- [10]
+							140092, -- [11]
+							134256, -- [12]
+							138319, -- [13]
+							134366, -- [14]
+							140014, -- [15]
+							136050, -- [16]
+							140546, -- [17]
+							137000, -- [18]
+							136228, -- [19]
+							138609, -- [20]
+							138569, -- [21]
+							138659, -- [22]
+							136954, -- [23]
+							134691, -- [24]
+							134647, -- [25]
+							136193, -- [26]
+							135145, -- [27]
+							139822, -- [28]
+							137731, -- [29]
+							139866, -- [30]
+							139841, -- [31]
+							134378, -- [32]
+							139839, -- [33]
+							140179, -- [34]
+							139994, -- [35]
+							137552, -- [36]
+							134916, -- [37]
+							135150, -- [38]
+							139011, -- [39]
+							136478, -- [40]
+							136853, -- [41]
+							136295, -- [42]
+							135703, -- [43]
+							136767, -- [44]
+							136708, -- [45]
+							136719, -- [46]
+							136654, -- [47]
+							136587, -- [48]
+							136512, -- [49]
+							140946, -- [50]
+							136710, -- [51]
+							133767, -- [52]
+							133768, -- [53]
+							134755, -- [54]
+							136413, -- [55]
+							133795, -- [56]
+							133597, -- [57]
+							133598, -- [58]
+							134007, -- [59]
+							137650, -- [60]
+							137085, -- [61]
+							136922, -- [62]
+							136917, -- [63]
+							136903, -- [64]
+							136857, -- [65]
+							137359, -- [66]
+							137891, -- [67]
+						},
+						[800] = {
+							98443, -- [1]
+							98450, -- [2]
+							98535, -- [3]
+							96993, -- [4]
+							76622, -- [5]
+							97151, -- [6]
+							99610, -- [7]
+							99693, -- [8]
+							99695, -- [9]
+							99800, -- [10]
+							99993, -- [11]
+							100767, -- [12]
+							49026, -- [13]
+							97079, -- [14]
+							97202, -- [15]
+							99506, -- [16]
+							99936, -- [17]
+							99837, -- [18]
+							99840, -- [19]
+							99252, -- [20]
+							99256, -- [21]
+							99516, -- [22]
+							99399, -- [23]
+							100238, -- [24]
+							98313, -- [25]
+							100460, -- [26]
+							98981, -- [27]
+							99613, -- [28]
+							98492, -- [29]
+							100094, -- [30]
+							99389, -- [31]
+							99308, -- [32]
+							100640, -- [33]
+							100555, -- [34]
+						},
+						[796] = {
+							34654, -- [1]
+							39674, -- [2]
+							41150, -- [3]
+							41168, -- [4]
+							39837, -- [5]
+							40239, -- [6]
+							40251, -- [7]
+							40604, -- [8]
+							40481, -- [9]
+							40508, -- [10]
+							42005, -- [11]
+							41303, -- [12]
+							41410, -- [13]
+							41376, -- [14]
+							40860, -- [15]
+							41001, -- [16]
+							41485, -- [17]
+							41472, -- [18]
+							41914, -- [19]
+							41917, -- [20]
+							40585, -- [21]
+							40932, -- [22]
+						},
+						[987] = {
+							164837, -- [1]
+							164504, -- [2]
+							172771, -- [3]
+							169341, -- [4]
+							167240, -- [5]
+							172889, -- [6]
+							173113, -- [7]
+							173307, -- [8]
+							158341, -- [9]
+							163390, -- [10]
+							163740, -- [11]
+							163276, -- [12]
+							168398, -- [13]
+							168227, -- [14]
+						},
+						[989] = {
+							176544, -- [1]
+							160149, -- [2]
+							153757, -- [3]
+							153759, -- [4]
+							154043, -- [5]
+							153139, -- [6]
+							153123, -- [7]
+							156841, -- [8]
+							153907, -- [9]
+							160288, -- [10]
+							152982, -- [11]
+							152838, -- [12]
+							153001, -- [13]
+							152999, -- [14]
+							160303, -- [15]
+							154150, -- [16]
+						},
+						[1147] = {
+							233430, -- [1]
+							233983, -- [2]
+							235213, -- [3]
+							235240, -- [4]
+							240209, -- [5]
+							236304, -- [6]
+							236550, -- [7]
+							236519, -- [8]
+							236603, -- [9]
+							234996, -- [10]
+							234995, -- [11]
+							236330, -- [12]
+							236541, -- [13]
+							233263, -- [14]
+							239264, -- [15]
+							236712, -- [16]
+							231363, -- [17]
+							230345, -- [18]
+							234264, -- [19]
+							233279, -- [20]
+							233062, -- [21]
+							231998, -- [22]
+							231729, -- [23]
+							231770, -- [24]
+							234128, -- [25]
+							236449, -- [26]
+							236241, -- [27]
+							236515, -- [28]
+							235989, -- [29]
+							236361, -- [30]
+							235968, -- [31]
+							239932, -- [32]
+							234295, -- [33]
+							240911, -- [34]
+							238505, -- [35]
+							238429, -- [36]
+							239216, -- [37]
+							239155, -- [38]
+							236710, -- [39]
+							241822, -- [40]
+							236555, -- [41]
+							236494, -- [42]
+							236604, -- [43]
+							239739, -- [44]
+							232913, -- [45]
+							230139, -- [46]
+							232754, -- [47]
+							230201, -- [48]
+							230384, -- [49]
+							230358, -- [50]
+						},
+						[993] = {
+							164192, -- [1]
+							176025, -- [2]
+							176033, -- [3]
+							164218, -- [4]
+							176147, -- [5]
+							164241, -- [6]
+							166340, -- [7]
+							166570, -- [8]
+							160681, -- [9]
+							162507, -- [10]
+							162491, -- [11]
+							162057, -- [12]
+							163447, -- [13]
+							161588, -- [14]
+							162065, -- [15]
+						},
+						[995] = {
+							1604, -- [1]
+							153832, -- [2]
+							153897, -- [3]
+							153981, -- [4]
+							155037, -- [5]
+							155586, -- [6]
+							155581, -- [7]
+							167259, -- [8]
+							155572, -- [9]
+							154827, -- [10]
+							163057, -- [11]
+							165944, -- [12]
+							165954, -- [13]
+							155056, -- [14]
+							155065, -- [15]
+							161772, -- [16]
+							161765, -- [17]
+							155589, -- [18]
+							155721, -- [19]
+							157428, -- [20]
+							162600, -- [21]
+						},
+						[824] = {
+							108046, -- [1]
+							108043, -- [2]
+							107567, -- [3]
+							107558, -- [4]
+							110214, -- [5]
+							106794, -- [6]
+							106385, -- [7]
+							105841, -- [8]
+							105445, -- [9]
+							104451, -- [10]
+							105285, -- [11]
+							105316, -- [12]
+							105289, -- [13]
+							105259, -- [14]
+							105465, -- [15]
+							105369, -- [16]
+							106108, -- [17]
+							106415, -- [18]
+							105927, -- [19]
+							106369, -- [20]
+							103687, -- [21]
+							105563, -- [22]
+							105490, -- [23]
+							105479, -- [24]
+							106199, -- [25]
+							106200, -- [26]
+							106005, -- [27]
+							103434, -- [28]
+							104849, -- [29]
+							109389, -- [30]
+							105695, -- [31]
 						},
 						[1026] = {
 							184243, -- [1]
@@ -1858,422 +2173,6 @@ Grid2DB = {
 							184357, -- [107]
 							184652, -- [108]
 						},
-						[824] = {
-							108046, -- [1]
-							108043, -- [2]
-							107567, -- [3]
-							107558, -- [4]
-							110214, -- [5]
-							106794, -- [6]
-							106385, -- [7]
-							105841, -- [8]
-							105445, -- [9]
-							104451, -- [10]
-							105285, -- [11]
-							105316, -- [12]
-							105289, -- [13]
-							105259, -- [14]
-							105465, -- [15]
-							105369, -- [16]
-							106108, -- [17]
-							106415, -- [18]
-							105927, -- [19]
-							106369, -- [20]
-							103687, -- [21]
-							105563, -- [22]
-							105490, -- [23]
-							105479, -- [24]
-							106199, -- [25]
-							106200, -- [26]
-							106005, -- [27]
-							103434, -- [28]
-							104849, -- [29]
-							109389, -- [30]
-							105695, -- [31]
-						},
-						[987] = {
-							164837, -- [1]
-							164504, -- [2]
-							172771, -- [3]
-							169341, -- [4]
-							167240, -- [5]
-							172889, -- [6]
-							173113, -- [7]
-							173307, -- [8]
-							158341, -- [9]
-							163390, -- [10]
-							163740, -- [11]
-							163276, -- [12]
-							168398, -- [13]
-							168227, -- [14]
-						},
-						[993] = {
-							164192, -- [1]
-							176025, -- [2]
-							176033, -- [3]
-							164218, -- [4]
-							176147, -- [5]
-							164241, -- [6]
-							166340, -- [7]
-							166570, -- [8]
-							160681, -- [9]
-							162507, -- [10]
-							162491, -- [11]
-							162057, -- [12]
-							163447, -- [13]
-							161588, -- [14]
-							162065, -- [15]
-						},
-						[989] = {
-							176544, -- [1]
-							160149, -- [2]
-							153757, -- [3]
-							153759, -- [4]
-							154043, -- [5]
-							153139, -- [6]
-							153123, -- [7]
-							156841, -- [8]
-							153907, -- [9]
-							160288, -- [10]
-							152982, -- [11]
-							152838, -- [12]
-							153001, -- [13]
-							152999, -- [14]
-							160303, -- [15]
-							154150, -- [16]
-						},
-						[796] = {
-							34654, -- [1]
-							39674, -- [2]
-							41150, -- [3]
-							41168, -- [4]
-							39837, -- [5]
-							40239, -- [6]
-							40251, -- [7]
-							40604, -- [8]
-							40481, -- [9]
-							40508, -- [10]
-							42005, -- [11]
-							41303, -- [12]
-							41410, -- [13]
-							41376, -- [14]
-							40860, -- [15]
-							41001, -- [16]
-							41485, -- [17]
-							41472, -- [18]
-							41914, -- [19]
-							41917, -- [20]
-							40585, -- [21]
-							40932, -- [22]
-						},
-						[609] = {
-							74562, -- [1]
-							74567, -- [2]
-							74792, -- [3]
-							74795, -- [4]
-							74502, -- [5]
-							74367, -- [6]
-							74452, -- [7]
-						},
-						[800] = {
-							98443, -- [1]
-							98450, -- [2]
-							98535, -- [3]
-							96993, -- [4]
-							76622, -- [5]
-							97151, -- [6]
-							99610, -- [7]
-							99693, -- [8]
-							99695, -- [9]
-							99800, -- [10]
-							99993, -- [11]
-							100767, -- [12]
-							49026, -- [13]
-							97079, -- [14]
-							97202, -- [15]
-							99506, -- [16]
-							99936, -- [17]
-							99837, -- [18]
-							99840, -- [19]
-							99252, -- [20]
-							99256, -- [21]
-							99516, -- [22]
-							99399, -- [23]
-							100238, -- [24]
-							98313, -- [25]
-							100460, -- [26]
-							98981, -- [27]
-							99613, -- [28]
-							98492, -- [29]
-							100094, -- [30]
-							99389, -- [31]
-							99308, -- [32]
-							100640, -- [33]
-							100555, -- [34]
-						},
-						[1147] = {
-							233430, -- [1]
-							233983, -- [2]
-							235213, -- [3]
-							235240, -- [4]
-							240209, -- [5]
-							236304, -- [6]
-							236550, -- [7]
-							236519, -- [8]
-							236603, -- [9]
-							234996, -- [10]
-							234995, -- [11]
-							236330, -- [12]
-							236541, -- [13]
-							233263, -- [14]
-							239264, -- [15]
-							236712, -- [16]
-							231363, -- [17]
-							230345, -- [18]
-							234264, -- [19]
-							233279, -- [20]
-							233062, -- [21]
-							231998, -- [22]
-							231729, -- [23]
-							231770, -- [24]
-							234128, -- [25]
-							236449, -- [26]
-							236241, -- [27]
-							236515, -- [28]
-							235989, -- [29]
-							236361, -- [30]
-							235968, -- [31]
-							239932, -- [32]
-							234295, -- [33]
-							240911, -- [34]
-							238505, -- [35]
-							238429, -- [36]
-							239216, -- [37]
-							239155, -- [38]
-							236710, -- [39]
-							241822, -- [40]
-							236555, -- [41]
-							236494, -- [42]
-							236604, -- [43]
-							239739, -- [44]
-							232913, -- [45]
-							230139, -- [46]
-							232754, -- [47]
-							230201, -- [48]
-							230384, -- [49]
-							230358, -- [50]
-						},
-						[930] = {
-							137341, -- [1]
-							137360, -- [2]
-							137408, -- [3]
-							137440, -- [4]
-							138308, -- [5]
-							138372, -- [6]
-							138349, -- [7]
-							137399, -- [8]
-							138733, -- [9]
-							138002, -- [10]
-							140092, -- [11]
-							134256, -- [12]
-							138319, -- [13]
-							134366, -- [14]
-							140014, -- [15]
-							136050, -- [16]
-							140546, -- [17]
-							137000, -- [18]
-							136228, -- [19]
-							138609, -- [20]
-							138569, -- [21]
-							138659, -- [22]
-							136954, -- [23]
-							134691, -- [24]
-							134647, -- [25]
-							136193, -- [26]
-							135145, -- [27]
-							139822, -- [28]
-							137731, -- [29]
-							139866, -- [30]
-							139841, -- [31]
-							134378, -- [32]
-							139839, -- [33]
-							140179, -- [34]
-							139994, -- [35]
-							137552, -- [36]
-							134916, -- [37]
-							135150, -- [38]
-							139011, -- [39]
-							136478, -- [40]
-							136853, -- [41]
-							136295, -- [42]
-							135703, -- [43]
-							136767, -- [44]
-							136708, -- [45]
-							136719, -- [46]
-							136654, -- [47]
-							136587, -- [48]
-							136512, -- [49]
-							140946, -- [50]
-							136710, -- [51]
-							133767, -- [52]
-							133768, -- [53]
-							134755, -- [54]
-							136413, -- [55]
-							133795, -- [56]
-							133597, -- [57]
-							133598, -- [58]
-							134007, -- [59]
-							137650, -- [60]
-							137085, -- [61]
-							136922, -- [62]
-							136917, -- [63]
-							136903, -- [64]
-							136857, -- [65]
-							137359, -- [66]
-							137891, -- [67]
-						},
-						[995] = {
-							1604, -- [1]
-							153832, -- [2]
-							153897, -- [3]
-							153981, -- [4]
-							155037, -- [5]
-							155586, -- [6]
-							155581, -- [7]
-							167259, -- [8]
-							155572, -- [9]
-							154827, -- [10]
-							163057, -- [11]
-							165944, -- [12]
-							165954, -- [13]
-							155056, -- [14]
-							155065, -- [15]
-							161772, -- [16]
-							161765, -- [17]
-							155589, -- [18]
-							155721, -- [19]
-							157428, -- [20]
-							162600, -- [21]
-						},
-						[1088] = {
-							206482, -- [1]
-							206788, -- [2]
-							208910, -- [3]
-							208506, -- [4]
-							206641, -- [5]
-							208203, -- [6]
-							205344, -- [7]
-							206677, -- [8]
-							218502, -- [9]
-							219049, -- [10]
-							218424, -- [11]
-							218342, -- [12]
-							218809, -- [13]
-							206585, -- [14]
-							206936, -- [15]
-							206589, -- [16]
-							206388, -- [17]
-							205649, -- [18]
-							206398, -- [19]
-							206965, -- [20]
-							207143, -- [21]
-							212492, -- [22]
-							215458, -- [23]
-							212587, -- [24]
-							212647, -- [25]
-							213083, -- [26]
-							206607, -- [27]
-							206609, -- [28]
-							206615, -- [29]
-							212099, -- [30]
-							212568, -- [31]
-							206883, -- [32]
-							206222, -- [33]
-							206221, -- [34]
-							208672, -- [35]
-							208802, -- [36]
-							221891, -- [37]
-							221603, -- [38]
-							206896, -- [39]
-							211261, -- [40]
-							209615, -- [41]
-							209973, -- [42]
-							209971, -- [43]
-							211887, -- [44]
-							209170, -- [45]
-							209599, -- [46]
-							206480, -- [47]
-							213238, -- [48]
-							212795, -- [49]
-							208230, -- [50]
-							216024, -- [51]
-							216040, -- [52]
-							204766, -- [53]
-							214657, -- [54]
-							214662, -- [55]
-							211659, -- [56]
-							204471, -- [57]
-						},
-						[604] = {
-							70107, -- [1]
-							70106, -- [2]
-							69766, -- [3]
-							71665, -- [4]
-							70126, -- [5]
-							70157, -- [6]
-							70980, -- [7]
-							70450, -- [8]
-							71089, -- [9]
-							69483, -- [10]
-							71163, -- [11]
-							71127, -- [12]
-							70435, -- [13]
-							70671, -- [14]
-							70432, -- [15]
-							71257, -- [16]
-							70873, -- [17]
-							70744, -- [18]
-							70751, -- [19]
-							70633, -- [20]
-							71941, -- [21]
-							70766, -- [22]
-							69290, -- [23]
-							69248, -- [24]
-							72219, -- [25]
-							69278, -- [26]
-							71289, -- [27]
-							71204, -- [28]
-							71237, -- [29]
-							69674, -- [30]
-							69508, -- [31]
-							30494, -- [32]
-							72133, -- [33]
-							68981, -- [34]
-							69242, -- [35]
-							69409, -- [36]
-							70541, -- [37]
-							27177, -- [38]
-							68980, -- [39]
-							69065, -- [40]
-							72999, -- [41]
-							71807, -- [42]
-							69651, -- [43]
-							70838, -- [44]
-							71623, -- [45]
-							70949, -- [46]
-							72151, -- [47]
-							71340, -- [48]
-							72985, -- [49]
-							70923, -- [50]
-							70215, -- [51]
-							72454, -- [52]
-							70341, -- [53]
-							70342, -- [54]
-							70911, -- [55]
-							69774, -- [56]
-							72293, -- [57]
-							72769, -- [58]
-						},
 						[1041] = {
 							196838, -- [1]
 							197556, -- [2]
@@ -2311,81 +2210,182 @@ Grid2DB = {
 							214804, -- [17]
 							200904, -- [18]
 						},
-						[531] = {
-							39647, -- [1]
-							58936, -- [2]
-							60708, -- [3]
-							57491, -- [4]
+						[984] = {
+							154477, -- [1]
+							154218, -- [2]
+							153430, -- [3]
+							157165, -- [4]
+							157170, -- [5]
+							176511, -- [6]
+							157797, -- [7]
+							154852, -- [8]
+							154263, -- [9]
+							157168, -- [10]
+							156954, -- [11]
+							157052, -- [12]
+							156854, -- [13]
+							156856, -- [14]
+							156964, -- [15]
+							156960, -- [16]
+							153234, -- [17]
+							153396, -- [18]
 						},
-						[1114] = {
-							228054, -- [1]
-							227982, -- [2]
-							193367, -- [3]
-							227903, -- [4]
-							228058, -- [5]
-							228519, -- [6]
-							202476, -- [7]
-							232450, -- [8]
-							227570, -- [9]
-							227566, -- [10]
-							227539, -- [11]
-							228250, -- [12]
-							228246, -- [13]
-							228226, -- [14]
-							192044, -- [15]
-							198088, -- [16]
-							228915, -- [17]
-							227959, -- [18]
-							227475, -- [19]
-							192044, -- [20]
-							227781, -- [21]
+						[949] = {
+							175915, -- [1]
+							176004, -- [2]
 						},
-						[1087] = {
-							209602, -- [1]
-							209676, -- [2]
-							224333, -- [3]
-							209628, -- [4]
-							208165, -- [5]
-							211457, -- [6]
-							207906, -- [7]
-							207261, -- [8]
-							207278, -- [9]
+						[951] = {
+							144638, -- [1]
+							144689, -- [2]
+							144607, -- [3]
+							144630, -- [4]
 						},
 						[948] = {
 							167615, -- [1]
 						},
-						[1042] = {
-							194325, -- [1]
-							194216, -- [2]
-							194266, -- [3]
-							197264, -- [4]
-							227233, -- [5]
-							197858, -- [6]
-							193211, -- [7]
-							193364, -- [8]
-							193460, -- [9]
+						[799] = {
+							37066, -- [1]
+							29522, -- [2]
+							29511, -- [3]
+							30753, -- [4]
+							30115, -- [5]
+							30843, -- [6]
 						},
 					},
 				},
 				["buff-BeaconofVirtue-mine"] = {
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0,
+						["g"] = 0.6,
+						["r"] = 1,
+					},
+					["type"] = "buff",
+					["mine"] = 1,
 					["spellName"] = "Beacon of Virtue",
+				},
+				["buff-AuraofSacrifice-mine"] = {
+					["spellName"] = "Aura of Sacrifice",
 					["type"] = "buff",
 					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
 						["r"] = 1,
-						["g"] = 0.6,
+						["g"] = 0.180392156862745,
 						["b"] = 0,
 					},
 				},
-				["color-timeroverlay"] = {
-					["color1"] = {
-						["a"] = 0.5,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["type"] = "color",
+			},
+			["versions"] = {
+				["Grid2"] = 5,
+				["Grid2RaidDebuffs"] = 1,
+			},
+			["statusMap"] = {
+				["corner-top-left"] = {
+					["buff-BeaconOfLight-mine"] = 101,
+					["buff-BeaconofVirtue-mine"] = 102,
+					["buff-BeaconofFaith-mine"] = 100,
+				},
+				["corner-bottom-right"] = {
+					["buff-BestowFaith-mine"] = 50,
+				},
+				["text-down"] = {
+					["name"] = 99,
+				},
+				["icon-left"] = {
+					["raid-icon-player"] = 155,
+				},
+				["border"] = {
+					["banzai-threat"] = 50,
+				},
+				["role"] = {
+					["dungeon-role"] = 51,
+				},
+				["bar-bottom-right"] = {
+					["buff-BestowFaith-mine"] = 51,
+				},
+				["bar-top-left"] = {
+					["buff-BeaconofVirtue-mine"] = 50,
+				},
+				["heals"] = {
+					["heals-incoming"] = 99,
+				},
+				["text-down-color"] = {
+					["debuff-Forbearance"] = 53,
+				},
+				["bar-top-left-color"] = {
+					["color-timeroverlay"] = 50,
+				},
+				["icon-center"] = {
+					["ready-check"] = 150,
+					["raid-debuffs"] = 155,
+				},
+				["text-up-color"] = {
+					["charmed"] = 65,
+					["feign-death"] = 96,
+					["health-deficit"] = 50,
+					["offline"] = 93,
+					["death"] = 95,
+					["vehicle"] = 70,
+				},
+				["bar-top-right"] = {
+					["buff-BlessingofSacrifice-mine"] = 52,
+					["buff-BlessingofProtection-mine"] = 51,
+					["buff-BlessingofFreedom-mine"] = 50,
+				},
+				["corner-bottom-left"] = {
+					["buff-AuraofSacrifice-mine"] = 50,
+					["buff-DevotionAura-mine"] = 51,
+					["buff-AuraofMercy-mine"] = 52,
+				},
+				["corner-top-right"] = {
+					["buff-BlessingofSacrifice-mine"] = 51,
+					["buff-BlessingofProtection-mine"] = 52,
+					["buff-BlessingofFreedom-mine"] = 50,
+				},
+				["heals-color"] = {
+					["classcolor"] = 99,
+				},
+				["icon-right"] = {
+					["raid-icon-target"] = 50,
+				},
+				["alpha"] = {
+					["offline"] = 97,
+					["range"] = 99,
+					["death"] = 98,
+				},
+				["top-bar-color"] = {
+					["color-timeroverlay"] = 52,
+				},
+				["top"] = {
+					["buff-Tyr'sDeliverance-mine"] = 51,
+				},
+				["health-color"] = {
+					["classcolor"] = 99,
+				},
+				["health"] = {
+					["health-current"] = 99,
+				},
+				["bar-bottom-right-color"] = {
+					["color-timeroverlay"] = 51,
+				},
+				["text-up"] = {
+					["resurrection"] = 98,
+					["feign-death"] = 95,
+					["death"] = 93,
+					["afk"] = 97,
+					["offline"] = 96,
+					["vehicle"] = 70,
+					["charmed"] = 65,
+				},
+				["top-bar"] = {
+					["buff-Tyr'sDeliverance-mine"] = 51,
+				},
+				["side-top-color"] = {
+					["buff-FlashOfLight-mine"] = 99,
+				},
+				["bar-top-right-color"] = {
+					["color-timeroverlay"] = 50,
 				},
 			},
 		},
@@ -2397,55 +2397,55 @@ Grid2DB = {
 					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
 						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
-					["width"] = 12,
+					["font"] = "Friz Quadrata TT",
 					["borderSize"] = 1,
 					["type"] = "square",
-					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOPLEFT",
 						["point"] = "TOPLEFT",
 						["x"] = 1,
 					},
+					["height"] = 7,
 					["level"] = 9,
 					["textlength"] = 12,
-					["font"] = "Friz Quadrata TT",
+					["width"] = 12,
 				},
 				["corner-bottom-right"] = {
-					["color1"] = {
-						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
+					["width"] = 12,
 					["borderSize"] = 1,
-					["type"] = "square",
-					["height"] = 7,
+					["fontSize"] = 8,
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOMRIGHT",
 						["point"] = "BOTTOMRIGHT",
 						["x"] = -1,
 					},
+					["height"] = 7,
 					["level"] = 8,
-					["fontSize"] = 8,
-					["width"] = 12,
+					["type"] = "square",
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
 				},
 				["text-down"] = {
-					["font"] = "Friz Quadrata TT",
 					["fontSize"] = 10,
+					["font"] = "Friz Quadrata TT",
 					["type"] = "text",
-					["shadowDisabled"] = true,
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOM",
 						["point"] = "BOTTOM",
 						["x"] = 0,
 					},
+					["shadowDisabled"] = true,
 					["level"] = 6,
 					["textlength"] = 5,
 					["fontFlags"] = "OUTLINE",
@@ -2463,13 +2463,13 @@ Grid2DB = {
 					["size"] = 14,
 				},
 				["border"] = {
+					["type"] = "border",
 					["color1"] = {
 						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["type"] = "border",
 				},
 				["role"] = {
 					["fontSize"] = 8,
@@ -2486,46 +2486,50 @@ Grid2DB = {
 				["bar-top-right-color"] = {
 					["type"] = "bar-color",
 				},
-				["bar-bottom-right"] = {
+				["bar-top-left-color"] = {
+					["type"] = "bar-color",
+				},
+				["bar-top-right"] = {
+					["texture"] = "Gradient",
 					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
 					["location"] = {
-						["y"] = 2,
-						["relPoint"] = "BOTTOMRIGHT",
-						["point"] = "BOTTOMRIGHT",
+						["y"] = -2,
+						["relPoint"] = "TOPRIGHT",
+						["point"] = "TOPRIGHT",
 						["x"] = -2,
 					},
-					["height"] = 5,
-					["level"] = 8,
+					["level"] = 9,
 					["orientation"] = "HORIZONTAL",
-					["texture"] = "Grid2 Flat",
+					["duration"] = true,
+					["height"] = 5,
+					["width"] = 10,
 				},
 				["bar-top-left"] = {
-					["width"] = 10,
+					["texture"] = "Gradient",
 					["type"] = "bar",
+					["height"] = 5,
+					["level"] = 9,
+					["orientation"] = "HORIZONTAL",
+					["duration"] = true,
 					["location"] = {
 						["y"] = -2,
 						["relPoint"] = "TOPLEFT",
 						["point"] = "TOPLEFT",
 						["x"] = 2,
 					},
-					["duration"] = true,
-					["height"] = 5,
-					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Gradient",
-				},
-				["text-down-color"] = {
-					["type"] = "text-color",
+					["width"] = 10,
 				},
 				["side-top-color"] = {
 					["type"] = "text-color",
 				},
 				["icon-center"] = {
 					["type"] = "icon",
-					["size"] = 20,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 					["location"] = {
 						["y"] = 0,
 						["relPoint"] = "CENTER",
@@ -2534,37 +2538,14 @@ Grid2DB = {
 					},
 					["level"] = 8,
 					["fontSize"] = 8,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
+					["size"] = 20,
 				},
-				["top-bar"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["height"] = 5,
-					["location"] = {
-						["y"] = -2,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
-					},
-					["level"] = 8,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Grid2 Flat",
+				["text-up-color"] = {
+					["type"] = "text-color",
 				},
 				["heals"] = {
 					["type"] = "bar",
-					["color1"] = {
-						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
+					["texture"] = "Grid2 Flat",
 					["anchorTo"] = "health",
 					["location"] = {
 						["y"] = 0,
@@ -2574,22 +2555,31 @@ Grid2DB = {
 					},
 					["level"] = 1,
 					["opacity"] = 0.25,
-					["texture"] = "Grid2 Flat",
-				},
-				["text-up"] = {
-					["fontSize"] = 10,
-					["font"] = "Friz Quadrata TT",
-					["type"] = "text",
-					["shadowDisabled"] = true,
-					["location"] = {
-						["y"] = -16,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
+					["color1"] = {
+						["a"] = 0,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["level"] = 7,
-					["textlength"] = 6,
-					["fontFlags"] = "OUTLINE",
+				},
+				["corner-bottom-left"] = {
+					["borderSize"] = 1,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
+					["height"] = 7,
+					["location"] = {
+						["y"] = 1,
+						["relPoint"] = "BOTTOMLEFT",
+						["point"] = "BOTTOMLEFT",
+						["x"] = 1,
+					},
+					["level"] = 5,
+					["type"] = "square",
+					["width"] = 12,
 				},
 				["icon-right"] = {
 					["fontSize"] = 8,
@@ -2606,17 +2596,37 @@ Grid2DB = {
 				["heals-color"] = {
 					["type"] = "bar-color",
 				},
-				["bar-bottom-right-color"] = {
-					["type"] = "bar-color",
-				},
-				["alpha"] = {
+				["corner-top-right"] = {
+					["fontSize"] = 8,
+					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
 						["b"] = 0,
 						["g"] = 0,
 						["r"] = 0,
 					},
+					["font"] = "Friz Quadrata TT",
+					["borderSize"] = 1,
+					["type"] = "square",
+					["location"] = {
+						["y"] = -1,
+						["relPoint"] = "TOPRIGHT",
+						["point"] = "TOPRIGHT",
+						["x"] = -1,
+					},
+					["height"] = 7,
+					["level"] = 5,
+					["textlength"] = 12,
+					["width"] = 12,
+				},
+				["alpha"] = {
 					["type"] = "alpha",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 				},
 				["health-color"] = {
 					["type"] = "bar-color",
@@ -2625,23 +2635,23 @@ Grid2DB = {
 					["disableOmniCC"] = true,
 					["color1"] = {
 						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["width"] = 12,
+					["borderSize"] = 1,
 					["font"] = "KkthnxUI_Normal",
-					["fontSize"] = 10,
+					["type"] = "square",
+					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOP",
 						["point"] = "TOP",
 						["x"] = 0,
 					},
-					["height"] = 7,
 					["level"] = 6,
-					["type"] = "square",
-					["borderSize"] = 1,
+					["fontSize"] = 10,
+					["width"] = 12,
 				},
 				["top-bar-color"] = {
 					["type"] = "bar-color",
@@ -2655,76 +2665,66 @@ Grid2DB = {
 						["x"] = 0,
 					},
 					["level"] = 2,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
 					["texture"] = "Blizzard Raid Bar",
-				},
-				["corner-top-right"] = {
-					["fontSize"] = 8,
-					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
 						["r"] = 0,
 						["g"] = 0,
 						["b"] = 0,
 					},
-					["width"] = 12,
-					["borderSize"] = 1,
-					["type"] = "square",
-					["height"] = 7,
-					["location"] = {
-						["y"] = -1,
-						["relPoint"] = "TOPRIGHT",
-						["point"] = "TOPRIGHT",
-						["x"] = -1,
-					},
-					["level"] = 5,
-					["textlength"] = 12,
+				},
+				["bar-bottom-right-color"] = {
+					["type"] = "bar-color",
+				},
+				["text-up"] = {
 					["font"] = "Friz Quadrata TT",
-				},
-				["corner-bottom-left"] = {
-					["borderSize"] = 1,
-					["width"] = 12,
-					["type"] = "square",
+					["fontSize"] = 10,
+					["type"] = "text",
 					["location"] = {
-						["y"] = 1,
-						["relPoint"] = "BOTTOMLEFT",
-						["point"] = "BOTTOMLEFT",
-						["x"] = 1,
+						["y"] = -16,
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
+						["x"] = 0,
 					},
-					["level"] = 5,
-					["height"] = 7,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
+					["shadowDisabled"] = true,
+					["level"] = 7,
+					["textlength"] = 6,
+					["fontFlags"] = "OUTLINE",
 				},
-				["text-up-color"] = {
-					["type"] = "text-color",
-				},
-				["bar-top-right"] = {
-					["width"] = 10,
+				["top-bar"] = {
 					["type"] = "bar",
-					["height"] = 5,
+					["opacity"] = 1,
+					["width"] = 10,
 					["duration"] = true,
 					["location"] = {
 						["y"] = -2,
-						["relPoint"] = "TOPRIGHT",
-						["point"] = "TOPRIGHT",
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
+						["x"] = 0,
+					},
+					["orientation"] = "HORIZONTAL",
+					["level"] = 8,
+					["height"] = 5,
+					["texture"] = "Grid2 Flat",
+				},
+				["text-down-color"] = {
+					["type"] = "text-color",
+				},
+				["bar-bottom-right"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["height"] = 5,
+					["orientation"] = "HORIZONTAL",
+					["level"] = 8,
+					["location"] = {
+						["y"] = 2,
+						["relPoint"] = "BOTTOMRIGHT",
+						["point"] = "BOTTOMRIGHT",
 						["x"] = -2,
 					},
-					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Gradient",
-				},
-				["bar-top-left-color"] = {
-					["type"] = "bar-color",
+					["texture"] = "Grid2 Flat",
 				},
 			},
 			["statusMap"] = {
@@ -2751,36 +2751,39 @@ Grid2DB = {
 				["bar-top-right-color"] = {
 					["color-timeroverlay"] = 50,
 				},
-				["bar-bottom-right"] = {
-					["buff-BestowFaith-mine"] = 51,
+				["bar-top-left"] = {
+					["buff-BeaconofVirtue-mine"] = 50,
 				},
-				["bar-top-left-color"] = {
-					["color-timeroverlay"] = 50,
+				["bar-top-right"] = {
+					["buff-BlessingofSacrifice-mine"] = 52,
+					["buff-BlessingofProtection-mine"] = 51,
+					["buff-BlessingofFreedom-mine"] = 50,
 				},
 				["text-down-color"] = {
 					["debuff-Forbearance"] = 53,
 				},
-				["side-top-color"] = {
-					["buff-FlashOfLight-mine"] = 99,
+				["bar-top-left-color"] = {
+					["color-timeroverlay"] = 50,
 				},
 				["icon-center"] = {
 					["ready-check"] = 150,
 					["raid-debuffs"] = 155,
 				},
-				["top-bar"] = {
-					["buff-Tyr'sDeliverance-mine"] = 51,
+				["text-up-color"] = {
+					["charmed"] = 65,
+					["feign-death"] = 96,
+					["health-deficit"] = 50,
+					["offline"] = 93,
+					["death"] = 95,
+					["vehicle"] = 70,
 				},
 				["heals"] = {
 					["heals-incoming"] = 99,
 				},
-				["text-up"] = {
-					["resurrection"] = 98,
-					["feign-death"] = 95,
-					["death"] = 93,
-					["charmed"] = 65,
-					["offline"] = 96,
-					["vehicle"] = 70,
-					["afk"] = 97,
+				["corner-bottom-left"] = {
+					["buff-AuraofSacrifice-mine"] = 50,
+					["buff-DevotionAura-mine"] = 51,
+					["buff-AuraofMercy-mine"] = 52,
 				},
 				["corner-top-right"] = {
 					["buff-BlessingofSacrifice-mine"] = 51,
@@ -2790,8 +2793,8 @@ Grid2DB = {
 				["heals-color"] = {
 					["classcolor"] = 99,
 				},
-				["bar-bottom-right-color"] = {
-					["color-timeroverlay"] = 51,
+				["icon-right"] = {
+					["raid-icon-target"] = 50,
 				},
 				["alpha"] = {
 					["offline"] = 97,
@@ -2810,29 +2813,26 @@ Grid2DB = {
 				["health"] = {
 					["health-current"] = 99,
 				},
-				["icon-right"] = {
-					["raid-icon-target"] = 50,
+				["bar-bottom-right-color"] = {
+					["color-timeroverlay"] = 51,
 				},
-				["corner-bottom-left"] = {
-					["buff-AuraofSacrifice-mine"] = 50,
-					["buff-DevotionAura-mine"] = 51,
-					["buff-AuraofMercy-mine"] = 52,
-				},
-				["text-up-color"] = {
-					["charmed"] = 65,
-					["feign-death"] = 96,
-					["health-deficit"] = 50,
-					["offline"] = 93,
+				["text-up"] = {
+					["resurrection"] = 98,
+					["feign-death"] = 95,
+					["death"] = 93,
+					["afk"] = 97,
+					["offline"] = 96,
 					["vehicle"] = 70,
-					["death"] = 95,
+					["charmed"] = 65,
 				},
-				["bar-top-right"] = {
-					["buff-BlessingofSacrifice-mine"] = 52,
-					["buff-BlessingofProtection-mine"] = 51,
-					["buff-BlessingofFreedom-mine"] = 50,
+				["top-bar"] = {
+					["buff-Tyr'sDeliverance-mine"] = 51,
 				},
-				["bar-top-left"] = {
-					["buff-BeaconofVirtue-mine"] = 50,
+				["side-top-color"] = {
+					["buff-FlashOfLight-mine"] = 99,
+				},
+				["bar-bottom-right"] = {
+					["buff-BestowFaith-mine"] = 51,
 				},
 			},
 			["versions"] = {
@@ -2842,126 +2842,124 @@ Grid2DB = {
 			["statuses"] = {
 				["debuff-Forbearance"] = {
 					["type"] = "debuff",
+					["spellName"] = 25771,
 					["color1"] = {
 						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.298039215686275,
 						["r"] = 1,
+						["g"] = 0.298039215686275,
+						["b"] = 0,
 					},
-					["spellName"] = 25771,
 				},
 				["buff-BeaconOfLight-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.96078431372549,
-						["g"] = 0.180392156862745,
-						["r"] = 0.956862745098039,
-					},
+					["spellName"] = 53563,
 					["type"] = "buff",
 					["mine"] = true,
-					["spellName"] = 53563,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.956862745098039,
+						["g"] = 0.180392156862745,
+						["b"] = 0.96078431372549,
+					},
 				},
 				["buff-DevotionAura-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.952941176470588,
-						["g"] = 0.564705882352941,
-						["r"] = 0.172549019607843,
-					},
+					["spellName"] = "Devotion Aura",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Devotion Aura",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.172549019607843,
+						["g"] = 0.564705882352941,
+						["b"] = 0.952941176470588,
+					},
 				},
 				["buff-BestowFaith-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.83921568627451,
-						["r"] = 1,
-					},
+					["spellName"] = "Bestow Faith",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Bestow Faith",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 0.83921568627451,
+						["b"] = 0,
+					},
 				},
 				["buff-BlessingofSacrifice-mine"] = {
-					["spellName"] = "Blessing of Sacrifice",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.0980392156862745,
 						["b"] = 0,
+						["g"] = 0.0980392156862745,
+						["r"] = 1,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Blessing of Sacrifice",
 				},
 				["buff-BlessingofProtection-mine"] = {
-					["spellName"] = "Blessing of Protection",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
+						["b"] = 1,
 						["g"] = 0.580392156862745,
-						["b"] = 1,
+						["r"] = 0,
 					},
-				},
-				["buff-BeaconofFaith-mine"] = {
-					["spellName"] = 156910,
 					["type"] = "buff",
 					["mine"] = 1,
+					["spellName"] = "Blessing of Protection",
+				},
+				["color-timeroverlay"] = {
+					["type"] = "color",
 					["color1"] = {
-						["a"] = 1,
+						["a"] = 0.5,
 						["r"] = 0,
-						["g"] = 0.4,
-						["b"] = 1,
+						["g"] = 0,
+						["b"] = 0,
 					},
 				},
 				["buff-BlessingofFreedom-mine"] = {
-					["spellName"] = "Blessing of Freedom",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.36078431372549,
 						["b"] = 0,
+						["g"] = 0.36078431372549,
+						["r"] = 1,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Blessing of Freedom",
 				},
 				["buff-Tyr'sDeliverance-mine"] = {
-					["spellName"] = "Tyr's Deliverance",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0.976470588235294,
-						["g"] = 0.76078431372549,
 						["b"] = 0,
+						["g"] = 0.76078431372549,
+						["r"] = 0.976470588235294,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Tyr's Deliverance",
 				},
 				["role"] = {
 					["hideInCombat"] = true,
 				},
 				["buff-AuraofMercy-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.964705882352941,
-						["g"] = 0.262745098039216,
-						["r"] = 0.403921568627451,
-					},
+					["spellName"] = "Aura of Mercy",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Aura of Mercy",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.403921568627451,
+						["g"] = 0.262745098039216,
+						["b"] = 0.964705882352941,
+					},
 				},
 				["buff-AuraofSacrifice-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.180392156862745,
-						["r"] = 1,
-					},
+					["spellName"] = "Aura of Sacrifice",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Aura of Sacrifice",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 0.180392156862745,
+						["b"] = 0,
+					},
 				},
 				["dungeon-role"] = {
 					["hideDamagers"] = true,
@@ -3206,32 +3204,16 @@ Grid2DB = {
 							30115, -- [5]
 							30843, -- [6]
 						},
-						[964] = {
-							151415, -- [1]
-							151446, -- [2]
-							152089, -- [3]
-							151638, -- [4]
-							151697, -- [5]
-							152235, -- [6]
-							151685, -- [7]
-							151720, -- [8]
-							1604, -- [9]
-							151566, -- [10]
-							163802, -- [11]
-							164616, -- [12]
-							150784, -- [13]
-							167739, -- [14]
-							152897, -- [15]
-							153227, -- [16]
-							153679, -- [17]
-							150751, -- [18]
-							150807, -- [19]
-							151092, -- [20]
-							150011, -- [21]
-							149941, -- [22]
-							149975, -- [23]
-							150032, -- [24]
-							150023, -- [25]
+						[781] = {
+							43657, -- [1]
+							43622, -- [2]
+							43299, -- [3]
+							43303, -- [4]
+							43613, -- [5]
+							43501, -- [6]
+							43093, -- [7]
+							43095, -- [8]
+							43150, -- [9]
 						},
 						[929] = {
 							137504, -- [1]
@@ -3455,21 +3437,16 @@ Grid2DB = {
 							156932, -- [69]
 							155743, -- [70]
 						},
-						[1067] = {
-							196376, -- [1]
-							198376, -- [2]
-							198408, -- [3]
-							200182, -- [4]
-							200238, -- [5]
-							204502, -- [6]
-							200111, -- [7]
-							199345, -- [8]
-							199460, -- [9]
-							199389, -- [10]
-							191326, -- [11]
-							204611, -- [12]
-							204574, -- [13]
-							204666, -- [14]
+						[1087] = {
+							209602, -- [1]
+							209676, -- [2]
+							224333, -- [3]
+							209628, -- [4]
+							208165, -- [5]
+							211457, -- [6]
+							207906, -- [7]
+							207261, -- [8]
+							207278, -- [9]
 						},
 						[752] = {
 							104936, -- [1]
@@ -3584,11 +3561,21 @@ Grid2DB = {
 							123121, -- [24]
 							123705, -- [25]
 						},
-						[951] = {
-							144638, -- [1]
-							144689, -- [2]
-							144607, -- [3]
-							144630, -- [4]
+						[1067] = {
+							196376, -- [1]
+							198376, -- [2]
+							198408, -- [3]
+							200182, -- [4]
+							200238, -- [5]
+							204502, -- [6]
+							200111, -- [7]
+							199345, -- [8]
+							199460, -- [9]
+							199389, -- [10]
+							191326, -- [11]
+							204611, -- [12]
+							204574, -- [13]
+							204666, -- [14]
 						},
 						[953] = {
 							147705, -- [1]
@@ -3768,39 +3755,34 @@ Grid2DB = {
 							223355, -- [2]
 							219602, -- [3]
 						},
-						[949] = {
-							175915, -- [1]
-							176004, -- [2]
+						[1114] = {
+							228054, -- [1]
+							227982, -- [2]
+							193367, -- [3]
+							227903, -- [4]
+							228058, -- [5]
+							228519, -- [6]
+							202476, -- [7]
+							232450, -- [8]
+							227570, -- [9]
+							227566, -- [10]
+							227539, -- [11]
+							228250, -- [12]
+							228246, -- [13]
+							228226, -- [14]
+							192044, -- [15]
+							198088, -- [16]
+							228915, -- [17]
+							227959, -- [18]
+							227475, -- [19]
+							192044, -- [20]
+							227781, -- [21]
 						},
-						[984] = {
-							154477, -- [1]
-							154218, -- [2]
-							153430, -- [3]
-							157165, -- [4]
-							157170, -- [5]
-							176511, -- [6]
-							157797, -- [7]
-							154852, -- [8]
-							154263, -- [9]
-							157168, -- [10]
-							156954, -- [11]
-							157052, -- [12]
-							156854, -- [13]
-							156856, -- [14]
-							156964, -- [15]
-							156960, -- [16]
-							153234, -- [17]
-							153396, -- [18]
-						},
-						[969] = {
-							153070, -- [1]
-							153501, -- [2]
-							156776, -- [3]
-							152819, -- [4]
-							1604, -- [5]
-							153524, -- [6]
-							154442, -- [7]
-							154469, -- [8]
+						[531] = {
+							39647, -- [1]
+							58936, -- [2]
+							60708, -- [3]
+							57491, -- [4]
 						},
 						[780] = {
 							39042, -- [1]
@@ -3815,6 +3797,16 @@ Grid2DB = {
 							37641, -- [10]
 							37749, -- [11]
 							38280, -- [12]
+						},
+						[969] = {
+							153070, -- [1]
+							153501, -- [2]
+							156776, -- [3]
+							152819, -- [4]
+							1604, -- [5]
+							153524, -- [6]
+							154442, -- [7]
+							154469, -- [8]
 						},
 						[529] = {
 							63276, -- [1]
@@ -3866,6 +3858,422 @@ Grid2DB = {
 						},
 						[532] = {
 							72004, -- [1]
+						},
+						[604] = {
+							70107, -- [1]
+							70106, -- [2]
+							69766, -- [3]
+							71665, -- [4]
+							70126, -- [5]
+							70157, -- [6]
+							70980, -- [7]
+							70450, -- [8]
+							71089, -- [9]
+							69483, -- [10]
+							71163, -- [11]
+							71127, -- [12]
+							70435, -- [13]
+							70671, -- [14]
+							70432, -- [15]
+							71257, -- [16]
+							70873, -- [17]
+							70744, -- [18]
+							70751, -- [19]
+							70633, -- [20]
+							71941, -- [21]
+							70766, -- [22]
+							69290, -- [23]
+							69248, -- [24]
+							72219, -- [25]
+							69278, -- [26]
+							71289, -- [27]
+							71204, -- [28]
+							71237, -- [29]
+							69674, -- [30]
+							69508, -- [31]
+							30494, -- [32]
+							72133, -- [33]
+							68981, -- [34]
+							69242, -- [35]
+							69409, -- [36]
+							70541, -- [37]
+							27177, -- [38]
+							68980, -- [39]
+							69065, -- [40]
+							72999, -- [41]
+							71807, -- [42]
+							69651, -- [43]
+							70838, -- [44]
+							71623, -- [45]
+							70949, -- [46]
+							72151, -- [47]
+							71340, -- [48]
+							72985, -- [49]
+							70923, -- [50]
+							70215, -- [51]
+							72454, -- [52]
+							70341, -- [53]
+							70342, -- [54]
+							70911, -- [55]
+							69774, -- [56]
+							72293, -- [57]
+							72769, -- [58]
+						},
+						[1088] = {
+							206482, -- [1]
+							206788, -- [2]
+							208910, -- [3]
+							208506, -- [4]
+							206641, -- [5]
+							208203, -- [6]
+							205344, -- [7]
+							206677, -- [8]
+							218502, -- [9]
+							219049, -- [10]
+							218424, -- [11]
+							218342, -- [12]
+							218809, -- [13]
+							206585, -- [14]
+							206936, -- [15]
+							206589, -- [16]
+							206388, -- [17]
+							205649, -- [18]
+							206398, -- [19]
+							206965, -- [20]
+							207143, -- [21]
+							212492, -- [22]
+							215458, -- [23]
+							212587, -- [24]
+							212647, -- [25]
+							213083, -- [26]
+							206607, -- [27]
+							206609, -- [28]
+							206615, -- [29]
+							212099, -- [30]
+							212568, -- [31]
+							206883, -- [32]
+							206222, -- [33]
+							206221, -- [34]
+							208672, -- [35]
+							208802, -- [36]
+							221891, -- [37]
+							221603, -- [38]
+							206896, -- [39]
+							211261, -- [40]
+							209615, -- [41]
+							209973, -- [42]
+							209971, -- [43]
+							211887, -- [44]
+							209170, -- [45]
+							209599, -- [46]
+							206480, -- [47]
+							213238, -- [48]
+							212795, -- [49]
+							208230, -- [50]
+							216024, -- [51]
+							216040, -- [52]
+							204766, -- [53]
+							214657, -- [54]
+							214662, -- [55]
+							211659, -- [56]
+							204471, -- [57]
+						},
+						[609] = {
+							74562, -- [1]
+							74567, -- [2]
+							74792, -- [3]
+							74795, -- [4]
+							74502, -- [5]
+							74367, -- [6]
+							74452, -- [7]
+						},
+						[930] = {
+							137341, -- [1]
+							137360, -- [2]
+							137408, -- [3]
+							137440, -- [4]
+							138308, -- [5]
+							138372, -- [6]
+							138349, -- [7]
+							137399, -- [8]
+							138733, -- [9]
+							138002, -- [10]
+							140092, -- [11]
+							134256, -- [12]
+							138319, -- [13]
+							134366, -- [14]
+							140014, -- [15]
+							136050, -- [16]
+							140546, -- [17]
+							137000, -- [18]
+							136228, -- [19]
+							138609, -- [20]
+							138569, -- [21]
+							138659, -- [22]
+							136954, -- [23]
+							134691, -- [24]
+							134647, -- [25]
+							136193, -- [26]
+							135145, -- [27]
+							139822, -- [28]
+							137731, -- [29]
+							139866, -- [30]
+							139841, -- [31]
+							134378, -- [32]
+							139839, -- [33]
+							140179, -- [34]
+							139994, -- [35]
+							137552, -- [36]
+							134916, -- [37]
+							135150, -- [38]
+							139011, -- [39]
+							136478, -- [40]
+							136853, -- [41]
+							136295, -- [42]
+							135703, -- [43]
+							136767, -- [44]
+							136708, -- [45]
+							136719, -- [46]
+							136654, -- [47]
+							136587, -- [48]
+							136512, -- [49]
+							140946, -- [50]
+							136710, -- [51]
+							133767, -- [52]
+							133768, -- [53]
+							134755, -- [54]
+							136413, -- [55]
+							133795, -- [56]
+							133597, -- [57]
+							133598, -- [58]
+							134007, -- [59]
+							137650, -- [60]
+							137085, -- [61]
+							136922, -- [62]
+							136917, -- [63]
+							136903, -- [64]
+							136857, -- [65]
+							137359, -- [66]
+							137891, -- [67]
+						},
+						[800] = {
+							98443, -- [1]
+							98450, -- [2]
+							98535, -- [3]
+							96993, -- [4]
+							76622, -- [5]
+							97151, -- [6]
+							99610, -- [7]
+							99693, -- [8]
+							99695, -- [9]
+							99800, -- [10]
+							99993, -- [11]
+							100767, -- [12]
+							49026, -- [13]
+							97079, -- [14]
+							97202, -- [15]
+							99506, -- [16]
+							99936, -- [17]
+							99837, -- [18]
+							99840, -- [19]
+							99252, -- [20]
+							99256, -- [21]
+							99516, -- [22]
+							99399, -- [23]
+							100238, -- [24]
+							98313, -- [25]
+							100460, -- [26]
+							98981, -- [27]
+							99613, -- [28]
+							98492, -- [29]
+							100094, -- [30]
+							99389, -- [31]
+							99308, -- [32]
+							100640, -- [33]
+							100555, -- [34]
+						},
+						[796] = {
+							34654, -- [1]
+							39674, -- [2]
+							41150, -- [3]
+							41168, -- [4]
+							39837, -- [5]
+							40239, -- [6]
+							40251, -- [7]
+							40604, -- [8]
+							40481, -- [9]
+							40508, -- [10]
+							42005, -- [11]
+							41303, -- [12]
+							41410, -- [13]
+							41376, -- [14]
+							40860, -- [15]
+							41001, -- [16]
+							41485, -- [17]
+							41472, -- [18]
+							41914, -- [19]
+							41917, -- [20]
+							40585, -- [21]
+							40932, -- [22]
+						},
+						[987] = {
+							164837, -- [1]
+							164504, -- [2]
+							172771, -- [3]
+							169341, -- [4]
+							167240, -- [5]
+							172889, -- [6]
+							173113, -- [7]
+							173307, -- [8]
+							158341, -- [9]
+							163390, -- [10]
+							163740, -- [11]
+							163276, -- [12]
+							168398, -- [13]
+							168227, -- [14]
+						},
+						[989] = {
+							176544, -- [1]
+							160149, -- [2]
+							153757, -- [3]
+							153759, -- [4]
+							154043, -- [5]
+							153139, -- [6]
+							153123, -- [7]
+							156841, -- [8]
+							153907, -- [9]
+							160288, -- [10]
+							152982, -- [11]
+							152838, -- [12]
+							153001, -- [13]
+							152999, -- [14]
+							160303, -- [15]
+							154150, -- [16]
+						},
+						[1147] = {
+							233430, -- [1]
+							233983, -- [2]
+							235213, -- [3]
+							235240, -- [4]
+							240209, -- [5]
+							236304, -- [6]
+							236550, -- [7]
+							236519, -- [8]
+							236603, -- [9]
+							234996, -- [10]
+							234995, -- [11]
+							236330, -- [12]
+							236541, -- [13]
+							233263, -- [14]
+							239264, -- [15]
+							236712, -- [16]
+							231363, -- [17]
+							230345, -- [18]
+							234264, -- [19]
+							233279, -- [20]
+							233062, -- [21]
+							231998, -- [22]
+							231729, -- [23]
+							231770, -- [24]
+							234128, -- [25]
+							236449, -- [26]
+							236241, -- [27]
+							236515, -- [28]
+							235989, -- [29]
+							236361, -- [30]
+							235968, -- [31]
+							239932, -- [32]
+							234295, -- [33]
+							240911, -- [34]
+							238505, -- [35]
+							238429, -- [36]
+							239216, -- [37]
+							239155, -- [38]
+							236710, -- [39]
+							241822, -- [40]
+							236555, -- [41]
+							236494, -- [42]
+							236604, -- [43]
+							239739, -- [44]
+							232913, -- [45]
+							230139, -- [46]
+							232754, -- [47]
+							230201, -- [48]
+							230384, -- [49]
+							230358, -- [50]
+						},
+						[993] = {
+							164192, -- [1]
+							176025, -- [2]
+							176033, -- [3]
+							164218, -- [4]
+							176147, -- [5]
+							164241, -- [6]
+							166340, -- [7]
+							166570, -- [8]
+							160681, -- [9]
+							162507, -- [10]
+							162491, -- [11]
+							162057, -- [12]
+							163447, -- [13]
+							161588, -- [14]
+							162065, -- [15]
+						},
+						[995] = {
+							1604, -- [1]
+							153832, -- [2]
+							153897, -- [3]
+							153981, -- [4]
+							155037, -- [5]
+							155586, -- [6]
+							155581, -- [7]
+							167259, -- [8]
+							155572, -- [9]
+							154827, -- [10]
+							163057, -- [11]
+							165944, -- [12]
+							165954, -- [13]
+							155056, -- [14]
+							155065, -- [15]
+							161772, -- [16]
+							161765, -- [17]
+							155589, -- [18]
+							155721, -- [19]
+							157428, -- [20]
+							162600, -- [21]
+						},
+						[824] = {
+							108046, -- [1]
+							108043, -- [2]
+							107567, -- [3]
+							107558, -- [4]
+							110214, -- [5]
+							106794, -- [6]
+							106385, -- [7]
+							105841, -- [8]
+							105445, -- [9]
+							104451, -- [10]
+							105285, -- [11]
+							105316, -- [12]
+							105289, -- [13]
+							105259, -- [14]
+							105465, -- [15]
+							105369, -- [16]
+							106108, -- [17]
+							106415, -- [18]
+							105927, -- [19]
+							106369, -- [20]
+							103687, -- [21]
+							105563, -- [22]
+							105490, -- [23]
+							105479, -- [24]
+							106199, -- [25]
+							106200, -- [26]
+							106005, -- [27]
+							103434, -- [28]
+							104849, -- [29]
+							109389, -- [30]
+							105695, -- [31]
 						},
 						[1026] = {
 							184243, -- [1]
@@ -3977,422 +4385,6 @@ Grid2DB = {
 							184357, -- [107]
 							184652, -- [108]
 						},
-						[824] = {
-							108046, -- [1]
-							108043, -- [2]
-							107567, -- [3]
-							107558, -- [4]
-							110214, -- [5]
-							106794, -- [6]
-							106385, -- [7]
-							105841, -- [8]
-							105445, -- [9]
-							104451, -- [10]
-							105285, -- [11]
-							105316, -- [12]
-							105289, -- [13]
-							105259, -- [14]
-							105465, -- [15]
-							105369, -- [16]
-							106108, -- [17]
-							106415, -- [18]
-							105927, -- [19]
-							106369, -- [20]
-							103687, -- [21]
-							105563, -- [22]
-							105490, -- [23]
-							105479, -- [24]
-							106199, -- [25]
-							106200, -- [26]
-							106005, -- [27]
-							103434, -- [28]
-							104849, -- [29]
-							109389, -- [30]
-							105695, -- [31]
-						},
-						[987] = {
-							164837, -- [1]
-							164504, -- [2]
-							172771, -- [3]
-							169341, -- [4]
-							167240, -- [5]
-							172889, -- [6]
-							173113, -- [7]
-							173307, -- [8]
-							158341, -- [9]
-							163390, -- [10]
-							163740, -- [11]
-							163276, -- [12]
-							168398, -- [13]
-							168227, -- [14]
-						},
-						[993] = {
-							164192, -- [1]
-							176025, -- [2]
-							176033, -- [3]
-							164218, -- [4]
-							176147, -- [5]
-							164241, -- [6]
-							166340, -- [7]
-							166570, -- [8]
-							160681, -- [9]
-							162507, -- [10]
-							162491, -- [11]
-							162057, -- [12]
-							163447, -- [13]
-							161588, -- [14]
-							162065, -- [15]
-						},
-						[989] = {
-							176544, -- [1]
-							160149, -- [2]
-							153757, -- [3]
-							153759, -- [4]
-							154043, -- [5]
-							153139, -- [6]
-							153123, -- [7]
-							156841, -- [8]
-							153907, -- [9]
-							160288, -- [10]
-							152982, -- [11]
-							152838, -- [12]
-							153001, -- [13]
-							152999, -- [14]
-							160303, -- [15]
-							154150, -- [16]
-						},
-						[796] = {
-							34654, -- [1]
-							39674, -- [2]
-							41150, -- [3]
-							41168, -- [4]
-							39837, -- [5]
-							40239, -- [6]
-							40251, -- [7]
-							40604, -- [8]
-							40481, -- [9]
-							40508, -- [10]
-							42005, -- [11]
-							41303, -- [12]
-							41410, -- [13]
-							41376, -- [14]
-							40860, -- [15]
-							41001, -- [16]
-							41485, -- [17]
-							41472, -- [18]
-							41914, -- [19]
-							41917, -- [20]
-							40585, -- [21]
-							40932, -- [22]
-						},
-						[609] = {
-							74562, -- [1]
-							74567, -- [2]
-							74792, -- [3]
-							74795, -- [4]
-							74502, -- [5]
-							74367, -- [6]
-							74452, -- [7]
-						},
-						[800] = {
-							98443, -- [1]
-							98450, -- [2]
-							98535, -- [3]
-							96993, -- [4]
-							76622, -- [5]
-							97151, -- [6]
-							99610, -- [7]
-							99693, -- [8]
-							99695, -- [9]
-							99800, -- [10]
-							99993, -- [11]
-							100767, -- [12]
-							49026, -- [13]
-							97079, -- [14]
-							97202, -- [15]
-							99506, -- [16]
-							99936, -- [17]
-							99837, -- [18]
-							99840, -- [19]
-							99252, -- [20]
-							99256, -- [21]
-							99516, -- [22]
-							99399, -- [23]
-							100238, -- [24]
-							98313, -- [25]
-							100460, -- [26]
-							98981, -- [27]
-							99613, -- [28]
-							98492, -- [29]
-							100094, -- [30]
-							99389, -- [31]
-							99308, -- [32]
-							100640, -- [33]
-							100555, -- [34]
-						},
-						[1147] = {
-							233430, -- [1]
-							233983, -- [2]
-							235213, -- [3]
-							235240, -- [4]
-							240209, -- [5]
-							236304, -- [6]
-							236550, -- [7]
-							236519, -- [8]
-							236603, -- [9]
-							234996, -- [10]
-							234995, -- [11]
-							236330, -- [12]
-							236541, -- [13]
-							233263, -- [14]
-							239264, -- [15]
-							236712, -- [16]
-							231363, -- [17]
-							230345, -- [18]
-							234264, -- [19]
-							233279, -- [20]
-							233062, -- [21]
-							231998, -- [22]
-							231729, -- [23]
-							231770, -- [24]
-							234128, -- [25]
-							236449, -- [26]
-							236241, -- [27]
-							236515, -- [28]
-							235989, -- [29]
-							236361, -- [30]
-							235968, -- [31]
-							239932, -- [32]
-							234295, -- [33]
-							240911, -- [34]
-							238505, -- [35]
-							238429, -- [36]
-							239216, -- [37]
-							239155, -- [38]
-							236710, -- [39]
-							241822, -- [40]
-							236555, -- [41]
-							236494, -- [42]
-							236604, -- [43]
-							239739, -- [44]
-							232913, -- [45]
-							230139, -- [46]
-							232754, -- [47]
-							230201, -- [48]
-							230384, -- [49]
-							230358, -- [50]
-						},
-						[930] = {
-							137341, -- [1]
-							137360, -- [2]
-							137408, -- [3]
-							137440, -- [4]
-							138308, -- [5]
-							138372, -- [6]
-							138349, -- [7]
-							137399, -- [8]
-							138733, -- [9]
-							138002, -- [10]
-							140092, -- [11]
-							134256, -- [12]
-							138319, -- [13]
-							134366, -- [14]
-							140014, -- [15]
-							136050, -- [16]
-							140546, -- [17]
-							137000, -- [18]
-							136228, -- [19]
-							138609, -- [20]
-							138569, -- [21]
-							138659, -- [22]
-							136954, -- [23]
-							134691, -- [24]
-							134647, -- [25]
-							136193, -- [26]
-							135145, -- [27]
-							139822, -- [28]
-							137731, -- [29]
-							139866, -- [30]
-							139841, -- [31]
-							134378, -- [32]
-							139839, -- [33]
-							140179, -- [34]
-							139994, -- [35]
-							137552, -- [36]
-							134916, -- [37]
-							135150, -- [38]
-							139011, -- [39]
-							136478, -- [40]
-							136853, -- [41]
-							136295, -- [42]
-							135703, -- [43]
-							136767, -- [44]
-							136708, -- [45]
-							136719, -- [46]
-							136654, -- [47]
-							136587, -- [48]
-							136512, -- [49]
-							140946, -- [50]
-							136710, -- [51]
-							133767, -- [52]
-							133768, -- [53]
-							134755, -- [54]
-							136413, -- [55]
-							133795, -- [56]
-							133597, -- [57]
-							133598, -- [58]
-							134007, -- [59]
-							137650, -- [60]
-							137085, -- [61]
-							136922, -- [62]
-							136917, -- [63]
-							136903, -- [64]
-							136857, -- [65]
-							137359, -- [66]
-							137891, -- [67]
-						},
-						[995] = {
-							1604, -- [1]
-							153832, -- [2]
-							153897, -- [3]
-							153981, -- [4]
-							155037, -- [5]
-							155586, -- [6]
-							155581, -- [7]
-							167259, -- [8]
-							155572, -- [9]
-							154827, -- [10]
-							163057, -- [11]
-							165944, -- [12]
-							165954, -- [13]
-							155056, -- [14]
-							155065, -- [15]
-							161772, -- [16]
-							161765, -- [17]
-							155589, -- [18]
-							155721, -- [19]
-							157428, -- [20]
-							162600, -- [21]
-						},
-						[1088] = {
-							206482, -- [1]
-							206788, -- [2]
-							208910, -- [3]
-							208506, -- [4]
-							206641, -- [5]
-							208203, -- [6]
-							205344, -- [7]
-							206677, -- [8]
-							218502, -- [9]
-							219049, -- [10]
-							218424, -- [11]
-							218342, -- [12]
-							218809, -- [13]
-							206585, -- [14]
-							206936, -- [15]
-							206589, -- [16]
-							206388, -- [17]
-							205649, -- [18]
-							206398, -- [19]
-							206965, -- [20]
-							207143, -- [21]
-							212492, -- [22]
-							215458, -- [23]
-							212587, -- [24]
-							212647, -- [25]
-							213083, -- [26]
-							206607, -- [27]
-							206609, -- [28]
-							206615, -- [29]
-							212099, -- [30]
-							212568, -- [31]
-							206883, -- [32]
-							206222, -- [33]
-							206221, -- [34]
-							208672, -- [35]
-							208802, -- [36]
-							221891, -- [37]
-							221603, -- [38]
-							206896, -- [39]
-							211261, -- [40]
-							209615, -- [41]
-							209973, -- [42]
-							209971, -- [43]
-							211887, -- [44]
-							209170, -- [45]
-							209599, -- [46]
-							206480, -- [47]
-							213238, -- [48]
-							212795, -- [49]
-							208230, -- [50]
-							216024, -- [51]
-							216040, -- [52]
-							204766, -- [53]
-							214657, -- [54]
-							214662, -- [55]
-							211659, -- [56]
-							204471, -- [57]
-						},
-						[604] = {
-							70107, -- [1]
-							70106, -- [2]
-							69766, -- [3]
-							71665, -- [4]
-							70126, -- [5]
-							70157, -- [6]
-							70980, -- [7]
-							70450, -- [8]
-							71089, -- [9]
-							69483, -- [10]
-							71163, -- [11]
-							71127, -- [12]
-							70435, -- [13]
-							70671, -- [14]
-							70432, -- [15]
-							71257, -- [16]
-							70873, -- [17]
-							70744, -- [18]
-							70751, -- [19]
-							70633, -- [20]
-							71941, -- [21]
-							70766, -- [22]
-							69290, -- [23]
-							69248, -- [24]
-							72219, -- [25]
-							69278, -- [26]
-							71289, -- [27]
-							71204, -- [28]
-							71237, -- [29]
-							69674, -- [30]
-							69508, -- [31]
-							30494, -- [32]
-							72133, -- [33]
-							68981, -- [34]
-							69242, -- [35]
-							69409, -- [36]
-							70541, -- [37]
-							27177, -- [38]
-							68980, -- [39]
-							69065, -- [40]
-							72999, -- [41]
-							71807, -- [42]
-							69651, -- [43]
-							70838, -- [44]
-							71623, -- [45]
-							70949, -- [46]
-							72151, -- [47]
-							71340, -- [48]
-							72985, -- [49]
-							70923, -- [50]
-							70215, -- [51]
-							72454, -- [52]
-							70341, -- [53]
-							70342, -- [54]
-							70911, -- [55]
-							69774, -- [56]
-							72293, -- [57]
-							72769, -- [58]
-						},
 						[1041] = {
 							196838, -- [1]
 							197556, -- [2]
@@ -4430,81 +4422,89 @@ Grid2DB = {
 							214804, -- [17]
 							200904, -- [18]
 						},
-						[531] = {
-							39647, -- [1]
-							58936, -- [2]
-							60708, -- [3]
-							57491, -- [4]
+						[984] = {
+							154477, -- [1]
+							154218, -- [2]
+							153430, -- [3]
+							157165, -- [4]
+							157170, -- [5]
+							176511, -- [6]
+							157797, -- [7]
+							154852, -- [8]
+							154263, -- [9]
+							157168, -- [10]
+							156954, -- [11]
+							157052, -- [12]
+							156854, -- [13]
+							156856, -- [14]
+							156964, -- [15]
+							156960, -- [16]
+							153234, -- [17]
+							153396, -- [18]
 						},
-						[1114] = {
-							228054, -- [1]
-							227982, -- [2]
-							193367, -- [3]
-							227903, -- [4]
-							228058, -- [5]
-							228519, -- [6]
-							202476, -- [7]
-							232450, -- [8]
-							227570, -- [9]
-							227566, -- [10]
-							227539, -- [11]
-							228250, -- [12]
-							228246, -- [13]
-							228226, -- [14]
-							192044, -- [15]
-							198088, -- [16]
-							228915, -- [17]
-							227959, -- [18]
-							227475, -- [19]
-							192044, -- [20]
-							227781, -- [21]
+						[949] = {
+							175915, -- [1]
+							176004, -- [2]
 						},
-						[1087] = {
-							209602, -- [1]
-							209676, -- [2]
-							224333, -- [3]
-							209628, -- [4]
-							208165, -- [5]
-							211457, -- [6]
-							207906, -- [7]
-							207261, -- [8]
-							207278, -- [9]
+						[951] = {
+							144638, -- [1]
+							144689, -- [2]
+							144607, -- [3]
+							144630, -- [4]
 						},
 						[948] = {
 							167615, -- [1]
 						},
-						[781] = {
-							43657, -- [1]
-							43622, -- [2]
-							43299, -- [3]
-							43303, -- [4]
-							43613, -- [5]
-							43501, -- [6]
-							43093, -- [7]
-							43095, -- [8]
-							43150, -- [9]
+						[964] = {
+							151415, -- [1]
+							151446, -- [2]
+							152089, -- [3]
+							151638, -- [4]
+							151697, -- [5]
+							152235, -- [6]
+							151685, -- [7]
+							151720, -- [8]
+							1604, -- [9]
+							151566, -- [10]
+							163802, -- [11]
+							164616, -- [12]
+							150784, -- [13]
+							167739, -- [14]
+							152897, -- [15]
+							153227, -- [16]
+							153679, -- [17]
+							150751, -- [18]
+							150807, -- [19]
+							151092, -- [20]
+							150011, -- [21]
+							149941, -- [22]
+							149975, -- [23]
+							150032, -- [24]
+							150023, -- [25]
 						},
 					},
 				},
 				["buff-BeaconofVirtue-mine"] = {
-					["spellName"] = "Beacon of Virtue",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
+						["b"] = 0,
 						["g"] = 0.6,
-						["b"] = 0,
+						["r"] = 1,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Beacon of Virtue",
 				},
-				["color-timeroverlay"] = {
+				["buff-BeaconofFaith-mine"] = {
 					["color1"] = {
-						["a"] = 0.5,
-						["b"] = 0,
-						["g"] = 0,
+						["a"] = 1,
+						["b"] = 1,
+						["g"] = 0.4,
 						["r"] = 0,
 					},
-					["type"] = "color",
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = 156910,
 				},
 			},
 		},
@@ -4516,55 +4516,55 @@ Grid2DB = {
 					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
+					["width"] = 12,
 					["borderSize"] = 1,
-					["font"] = "Friz Quadrata TT",
 					["fontSize"] = 8,
+					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOPLEFT",
 						["point"] = "TOPLEFT",
 						["x"] = 1,
 					},
-					["height"] = 7,
 					["level"] = 9,
 					["textlength"] = 12,
-					["width"] = 12,
+					["font"] = "Friz Quadrata TT",
 				},
 				["corner-bottom-right"] = {
-					["width"] = 12,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 					["type"] = "square",
-					["fontSize"] = 8,
+					["borderSize"] = 1,
+					["height"] = 7,
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOMRIGHT",
 						["point"] = "BOTTOMRIGHT",
 						["x"] = -1,
 					},
-					["height"] = 7,
 					["level"] = 8,
-					["borderSize"] = 1,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
+					["fontSize"] = 8,
+					["width"] = 12,
 				},
 				["text-down"] = {
-					["font"] = "Friz Quadrata TT",
 					["type"] = "text",
+					["font"] = "Friz Quadrata TT",
 					["fontSize"] = 10,
+					["shadowDisabled"] = true,
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOM",
 						["point"] = "BOTTOM",
 						["x"] = 0,
 					},
-					["shadowDisabled"] = true,
 					["level"] = 6,
 					["textlength"] = 5,
 					["fontFlags"] = "OUTLINE",
@@ -4582,13 +4582,13 @@ Grid2DB = {
 					["size"] = 14,
 				},
 				["border"] = {
-					["type"] = "border",
 					["color1"] = {
 						["a"] = 0,
-						["r"] = 0,
-						["g"] = 0,
 						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
+					["type"] = "border",
 				},
 				["role"] = {
 					["type"] = "icon",
@@ -4607,23 +4607,83 @@ Grid2DB = {
 					["duration"] = true,
 					["width"] = 10,
 					["opacity"] = 1,
-					["height"] = 5,
 					["orientation"] = "HORIZONTAL",
-					["level"] = 8,
 					["location"] = {
 						["y"] = 2,
 						["relPoint"] = "BOTTOMRIGHT",
 						["point"] = "BOTTOMRIGHT",
 						["x"] = -2,
 					},
+					["level"] = 8,
+					["height"] = 5,
 					["texture"] = "Grid2 Flat",
+				},
+				["bar-top-right-color"] = {
+					["type"] = "bar-color",
+				},
+				["bar-top-left"] = {
+					["width"] = 10,
+					["type"] = "bar",
+					["orientation"] = "HORIZONTAL",
+					["duration"] = true,
+					["location"] = {
+						["y"] = -2,
+						["relPoint"] = "TOPLEFT",
+						["point"] = "TOPLEFT",
+						["x"] = 2,
+					},
+					["level"] = 9,
+					["height"] = 5,
+					["texture"] = "Gradient",
+				},
+				["text-down-color"] = {
+					["type"] = "text-color",
 				},
 				["side-top-color"] = {
 					["type"] = "text-color",
 				},
+				["icon-center"] = {
+					["type"] = "icon",
+					["size"] = 20,
+					["location"] = {
+						["y"] = 0,
+						["relPoint"] = "CENTER",
+						["point"] = "CENTER",
+						["x"] = 0,
+					},
+					["level"] = 8,
+					["fontSize"] = 8,
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
+				},
+				["top-bar"] = {
+					["type"] = "bar",
+					["duration"] = true,
+					["width"] = 10,
+					["opacity"] = 1,
+					["orientation"] = "HORIZONTAL",
+					["height"] = 5,
+					["level"] = 8,
+					["location"] = {
+						["y"] = -2,
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
+						["x"] = 0,
+					},
+					["texture"] = "Grid2 Flat",
+				},
 				["heals"] = {
 					["type"] = "bar",
-					["texture"] = "Grid2 Flat",
+					["color1"] = {
+						["a"] = 0,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
 					["anchorTo"] = "health",
 					["location"] = {
 						["y"] = 0,
@@ -4633,73 +4693,22 @@ Grid2DB = {
 					},
 					["level"] = 1,
 					["opacity"] = 0.25,
-					["color1"] = {
-						["a"] = 0,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
+					["texture"] = "Grid2 Flat",
 				},
-				["text-down-color"] = {
-					["type"] = "text-color",
-				},
-				["bar-top-left-color"] = {
-					["type"] = "bar-color",
-				},
-				["icon-center"] = {
-					["type"] = "icon",
-					["color1"] = {
-						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
+				["text-up"] = {
+					["type"] = "text",
+					["fontSize"] = 10,
+					["font"] = "Friz Quadrata TT",
+					["shadowDisabled"] = true,
 					["location"] = {
-						["y"] = 0,
-						["relPoint"] = "CENTER",
-						["point"] = "CENTER",
+						["y"] = -16,
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
 						["x"] = 0,
 					},
-					["level"] = 8,
-					["fontSize"] = 8,
-					["size"] = 20,
-				},
-				["text-up-color"] = {
-					["type"] = "text-color",
-				},
-				["bar-top-right"] = {
-					["texture"] = "Gradient",
-					["type"] = "bar",
-					["location"] = {
-						["y"] = -2,
-						["relPoint"] = "TOPRIGHT",
-						["point"] = "TOPRIGHT",
-						["x"] = -2,
-					},
-					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["duration"] = true,
-					["height"] = 5,
-					["width"] = 10,
-				},
-				["corner-bottom-left"] = {
-					["type"] = "square",
-					["color1"] = {
-						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
-					["location"] = {
-						["y"] = 1,
-						["relPoint"] = "BOTTOMLEFT",
-						["point"] = "BOTTOMLEFT",
-						["x"] = 1,
-					},
-					["height"] = 7,
-					["level"] = 5,
-					["borderSize"] = 1,
-					["width"] = 12,
+					["level"] = 7,
+					["textlength"] = 6,
+					["fontFlags"] = "OUTLINE",
 				},
 				["icon-right"] = {
 					["type"] = "icon",
@@ -4716,37 +4725,17 @@ Grid2DB = {
 				["heals-color"] = {
 					["type"] = "bar-color",
 				},
-				["corner-top-right"] = {
-					["type"] = "square",
-					["duration"] = true,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["borderSize"] = 1,
-					["font"] = "Friz Quadrata TT",
-					["fontSize"] = 8,
-					["location"] = {
-						["y"] = -1,
-						["relPoint"] = "TOPRIGHT",
-						["point"] = "TOPRIGHT",
-						["x"] = -1,
-					},
-					["height"] = 7,
-					["level"] = 5,
-					["textlength"] = 12,
-					["width"] = 12,
+				["bar-bottom-right-color"] = {
+					["type"] = "bar-color",
 				},
 				["alpha"] = {
-					["type"] = "alpha",
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
 						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
+					["type"] = "alpha",
 				},
 				["health-color"] = {
 					["type"] = "bar-color",
@@ -4755,23 +4744,23 @@ Grid2DB = {
 					["fontSize"] = 10,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
 						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
+					["width"] = 12,
 					["font"] = "KkthnxUI_Normal",
-					["borderSize"] = 1,
-					["type"] = "square",
+					["disableOmniCC"] = true,
+					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOP",
 						["point"] = "TOP",
 						["x"] = 0,
 					},
-					["height"] = 7,
 					["level"] = 6,
-					["disableOmniCC"] = true,
-					["width"] = 12,
+					["type"] = "square",
+					["borderSize"] = 1,
 				},
 				["top-bar-color"] = {
 					["type"] = "bar-color",
@@ -4785,188 +4774,199 @@ Grid2DB = {
 						["x"] = 0,
 					},
 					["level"] = 2,
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
 					["texture"] = "Blizzard Raid Bar",
+				},
+				["corner-top-right"] = {
+					["type"] = "square",
+					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
 						["r"] = 0,
 						["g"] = 0,
 						["b"] = 0,
 					},
-				},
-				["bar-bottom-right-color"] = {
-					["type"] = "bar-color",
-				},
-				["text-up"] = {
-					["fontSize"] = 10,
-					["type"] = "text",
+					["width"] = 12,
+					["borderSize"] = 1,
+					["fontSize"] = 8,
+					["height"] = 7,
+					["location"] = {
+						["y"] = -1,
+						["relPoint"] = "TOPRIGHT",
+						["point"] = "TOPRIGHT",
+						["x"] = -1,
+					},
+					["level"] = 5,
+					["textlength"] = 12,
 					["font"] = "Friz Quadrata TT",
-					["location"] = {
-						["y"] = -16,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
-					},
-					["shadowDisabled"] = true,
-					["level"] = 7,
-					["textlength"] = 6,
-					["fontFlags"] = "OUTLINE",
 				},
-				["top-bar"] = {
-					["type"] = "bar",
-					["duration"] = true,
+				["corner-bottom-left"] = {
+					["type"] = "square",
+					["width"] = 12,
+					["borderSize"] = 1,
+					["location"] = {
+						["y"] = 1,
+						["relPoint"] = "BOTTOMLEFT",
+						["point"] = "BOTTOMLEFT",
+						["x"] = 1,
+					},
+					["level"] = 5,
+					["height"] = 7,
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
+				},
+				["text-up-color"] = {
+					["type"] = "text-color",
+				},
+				["bar-top-right"] = {
 					["width"] = 10,
-					["opacity"] = 1,
-					["location"] = {
-						["y"] = -2,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
-					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 8,
-					["height"] = 5,
-					["texture"] = "Grid2 Flat",
-				},
-				["bar-top-left"] = {
-					["texture"] = "Gradient",
 					["type"] = "bar",
+					["orientation"] = "HORIZONTAL",
+					["duration"] = true,
 					["height"] = 5,
 					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["duration"] = true,
 					["location"] = {
 						["y"] = -2,
-						["relPoint"] = "TOPLEFT",
-						["point"] = "TOPLEFT",
-						["x"] = 2,
+						["relPoint"] = "TOPRIGHT",
+						["point"] = "TOPRIGHT",
+						["x"] = -2,
 					},
-					["width"] = 10,
+					["texture"] = "Gradient",
 				},
-				["bar-top-right-color"] = {
+				["bar-top-left-color"] = {
 					["type"] = "bar-color",
 				},
 			},
 			["statuses"] = {
 				["debuff-Forbearance"] = {
 					["type"] = "debuff",
-					["spellName"] = 25771,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.298039215686275,
 						["b"] = 0,
+						["g"] = 0.298039215686275,
+						["r"] = 1,
 					},
+					["spellName"] = 25771,
 				},
 				["buff-BeaconOfLight-mine"] = {
-					["spellName"] = 53563,
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0.96078431372549,
+						["g"] = 0.180392156862745,
+						["r"] = 0.956862745098039,
+					},
 					["type"] = "buff",
 					["mine"] = true,
-					["color1"] = {
-						["a"] = 1,
-						["r"] = 0.956862745098039,
-						["g"] = 0.180392156862745,
-						["b"] = 0.96078431372549,
-					},
+					["spellName"] = 53563,
 				},
 				["buff-DevotionAura-mine"] = {
-					["spellName"] = "Devotion Aura",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0.172549019607843,
-						["g"] = 0.564705882352941,
 						["b"] = 0.952941176470588,
+						["g"] = 0.564705882352941,
+						["r"] = 0.172549019607843,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Devotion Aura",
 				},
 				["buff-BestowFaith-mine"] = {
-					["spellName"] = "Bestow Faith",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.83921568627451,
 						["b"] = 0,
+						["g"] = 0.83921568627451,
+						["r"] = 1,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Bestow Faith",
 				},
 				["buff-BlessingofSacrifice-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.0980392156862745,
-						["r"] = 1,
-					},
+					["spellName"] = "Blessing of Sacrifice",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Blessing of Sacrifice",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 0.0980392156862745,
+						["b"] = 0,
+					},
 				},
 				["buff-BlessingofProtection-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 1,
-						["g"] = 0.580392156862745,
-						["r"] = 0,
-					},
+					["spellName"] = "Blessing of Protection",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Blessing of Protection",
-				},
-				["color-timeroverlay"] = {
-					["type"] = "color",
 					["color1"] = {
-						["a"] = 0.5,
+						["a"] = 1,
 						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
+						["g"] = 0.580392156862745,
+						["b"] = 1,
 					},
 				},
-				["buff-BlessingofFreedom-mine"] = {
+				["buff-AuraofSacrifice-mine"] = {
 					["color1"] = {
 						["a"] = 1,
 						["b"] = 0,
-						["g"] = 0.36078431372549,
+						["g"] = 0.180392156862745,
 						["r"] = 1,
 					},
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Blessing of Freedom",
+					["spellName"] = "Aura of Sacrifice",
 				},
-				["buff-Tyr'sDeliverance-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.76078431372549,
-						["r"] = 0.976470588235294,
-					},
+				["buff-BlessingofFreedom-mine"] = {
+					["spellName"] = "Blessing of Freedom",
 					["type"] = "buff",
 					["mine"] = 1,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 0.36078431372549,
+						["b"] = 0,
+					},
+				},
+				["buff-Tyr'sDeliverance-mine"] = {
 					["spellName"] = "Tyr's Deliverance",
+					["type"] = "buff",
+					["mine"] = 1,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.976470588235294,
+						["g"] = 0.76078431372549,
+						["b"] = 0,
+					},
 				},
 				["role"] = {
 					["hideInCombat"] = true,
 				},
-				["buff-AuraofMercy-mine"] = {
-					["spellName"] = "Aura of Mercy",
-					["type"] = "buff",
-					["mine"] = 1,
+				["color-timeroverlay"] = {
 					["color1"] = {
-						["a"] = 1,
-						["r"] = 0.403921568627451,
-						["g"] = 0.262745098039216,
-						["b"] = 0.964705882352941,
-					},
-				},
-				["buff-BeaconofFaith-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 1,
-						["g"] = 0.4,
+						["a"] = 0.5,
+						["b"] = 0,
+						["g"] = 0,
 						["r"] = 0,
 					},
+					["type"] = "color",
+				},
+				["buff-BeaconofFaith-mine"] = {
+					["spellName"] = 156910,
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = 156910,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0.4,
+						["b"] = 1,
+					},
 				},
 				["dungeon-role"] = {
 					["hideDamagers"] = true,
@@ -5293,16 +5293,13 @@ Grid2DB = {
 							156932, -- [69]
 							155743, -- [70]
 						},
-						[781] = {
-							43657, -- [1]
-							43622, -- [2]
-							43299, -- [3]
-							43303, -- [4]
-							43613, -- [5]
-							43501, -- [6]
-							43093, -- [7]
-							43095, -- [8]
-							43150, -- [9]
+						[799] = {
+							37066, -- [1]
+							29522, -- [2]
+							29511, -- [3]
+							30753, -- [4]
+							30115, -- [5]
+							30843, -- [6]
 						},
 						[929] = {
 							137504, -- [1]
@@ -5463,10 +5460,21 @@ Grid2DB = {
 							31944, -- [6]
 							31972, -- [7]
 						},
-						[1024] = {
-							223373, -- [1]
-							223355, -- [2]
-							219602, -- [3]
+						[1067] = {
+							196376, -- [1]
+							198376, -- [2]
+							198408, -- [3]
+							200182, -- [4]
+							200238, -- [5]
+							204502, -- [6]
+							200111, -- [7]
+							199345, -- [8]
+							199460, -- [9]
+							199389, -- [10]
+							191326, -- [11]
+							204611, -- [12]
+							204574, -- [13]
+							204666, -- [14]
 						},
 						[752] = {
 							104936, -- [1]
@@ -5760,45 +5768,44 @@ Grid2DB = {
 							125206, -- [36]
 							116008, -- [37]
 						},
-						[1087] = {
-							209602, -- [1]
-							209676, -- [2]
-							224333, -- [3]
-							209628, -- [4]
-							208165, -- [5]
-							211457, -- [6]
-							207906, -- [7]
-							207261, -- [8]
-							207278, -- [9]
+						[1024] = {
+							223373, -- [1]
+							223355, -- [2]
+							219602, -- [3]
 						},
-						[1114] = {
-							228054, -- [1]
-							227982, -- [2]
-							193367, -- [3]
-							227903, -- [4]
-							228058, -- [5]
-							228519, -- [6]
-							202476, -- [7]
-							232450, -- [8]
-							227570, -- [9]
-							227566, -- [10]
-							227539, -- [11]
-							228250, -- [12]
-							228246, -- [13]
-							228226, -- [14]
-							192044, -- [15]
-							198088, -- [16]
-							228915, -- [17]
-							227959, -- [18]
-							227475, -- [19]
-							192044, -- [20]
-							227781, -- [21]
+						[949] = {
+							175915, -- [1]
+							176004, -- [2]
 						},
-						[531] = {
-							39647, -- [1]
-							58936, -- [2]
-							60708, -- [3]
-							57491, -- [4]
+						[984] = {
+							154477, -- [1]
+							154218, -- [2]
+							153430, -- [3]
+							157165, -- [4]
+							157170, -- [5]
+							176511, -- [6]
+							157797, -- [7]
+							154852, -- [8]
+							154263, -- [9]
+							157168, -- [10]
+							156954, -- [11]
+							157052, -- [12]
+							156854, -- [13]
+							156856, -- [14]
+							156964, -- [15]
+							156960, -- [16]
+							153234, -- [17]
+							153396, -- [18]
+						},
+						[969] = {
+							153070, -- [1]
+							153501, -- [2]
+							156776, -- [3]
+							152819, -- [4]
+							1604, -- [5]
+							153524, -- [6]
+							154442, -- [7]
+							154469, -- [8]
 						},
 						[780] = {
 							39042, -- [1]
@@ -5813,16 +5820,6 @@ Grid2DB = {
 							37641, -- [10]
 							37749, -- [11]
 							38280, -- [12]
-						},
-						[969] = {
-							153070, -- [1]
-							153501, -- [2]
-							156776, -- [3]
-							152819, -- [4]
-							1604, -- [5]
-							153524, -- [6]
-							154442, -- [7]
-							154469, -- [8]
 						},
 						[529] = {
 							63276, -- [1]
@@ -5874,422 +5871,6 @@ Grid2DB = {
 						},
 						[532] = {
 							72004, -- [1]
-						},
-						[604] = {
-							70107, -- [1]
-							70106, -- [2]
-							69766, -- [3]
-							71665, -- [4]
-							70126, -- [5]
-							70157, -- [6]
-							70980, -- [7]
-							70450, -- [8]
-							71089, -- [9]
-							69483, -- [10]
-							71163, -- [11]
-							71127, -- [12]
-							70435, -- [13]
-							70671, -- [14]
-							70432, -- [15]
-							71257, -- [16]
-							70873, -- [17]
-							70744, -- [18]
-							70751, -- [19]
-							70633, -- [20]
-							71941, -- [21]
-							70766, -- [22]
-							69290, -- [23]
-							69248, -- [24]
-							72219, -- [25]
-							69278, -- [26]
-							71289, -- [27]
-							71204, -- [28]
-							71237, -- [29]
-							69674, -- [30]
-							69508, -- [31]
-							30494, -- [32]
-							72133, -- [33]
-							68981, -- [34]
-							69242, -- [35]
-							69409, -- [36]
-							70541, -- [37]
-							27177, -- [38]
-							68980, -- [39]
-							69065, -- [40]
-							72999, -- [41]
-							71807, -- [42]
-							69651, -- [43]
-							70838, -- [44]
-							71623, -- [45]
-							70949, -- [46]
-							72151, -- [47]
-							71340, -- [48]
-							72985, -- [49]
-							70923, -- [50]
-							70215, -- [51]
-							72454, -- [52]
-							70341, -- [53]
-							70342, -- [54]
-							70911, -- [55]
-							69774, -- [56]
-							72293, -- [57]
-							72769, -- [58]
-						},
-						[930] = {
-							137341, -- [1]
-							137360, -- [2]
-							137408, -- [3]
-							137440, -- [4]
-							138308, -- [5]
-							138372, -- [6]
-							138349, -- [7]
-							137399, -- [8]
-							138733, -- [9]
-							138002, -- [10]
-							140092, -- [11]
-							134256, -- [12]
-							138319, -- [13]
-							134366, -- [14]
-							140014, -- [15]
-							136050, -- [16]
-							140546, -- [17]
-							137000, -- [18]
-							136228, -- [19]
-							138609, -- [20]
-							138569, -- [21]
-							138659, -- [22]
-							136954, -- [23]
-							134691, -- [24]
-							134647, -- [25]
-							136193, -- [26]
-							135145, -- [27]
-							139822, -- [28]
-							137731, -- [29]
-							139866, -- [30]
-							139841, -- [31]
-							134378, -- [32]
-							139839, -- [33]
-							140179, -- [34]
-							139994, -- [35]
-							137552, -- [36]
-							134916, -- [37]
-							135150, -- [38]
-							139011, -- [39]
-							136478, -- [40]
-							136853, -- [41]
-							136295, -- [42]
-							135703, -- [43]
-							136767, -- [44]
-							136708, -- [45]
-							136719, -- [46]
-							136654, -- [47]
-							136587, -- [48]
-							136512, -- [49]
-							140946, -- [50]
-							136710, -- [51]
-							133767, -- [52]
-							133768, -- [53]
-							134755, -- [54]
-							136413, -- [55]
-							133795, -- [56]
-							133597, -- [57]
-							133598, -- [58]
-							134007, -- [59]
-							137650, -- [60]
-							137085, -- [61]
-							136922, -- [62]
-							136917, -- [63]
-							136903, -- [64]
-							136857, -- [65]
-							137359, -- [66]
-							137891, -- [67]
-						},
-						[609] = {
-							74562, -- [1]
-							74567, -- [2]
-							74792, -- [3]
-							74795, -- [4]
-							74502, -- [5]
-							74367, -- [6]
-							74452, -- [7]
-						},
-						[1088] = {
-							206482, -- [1]
-							206788, -- [2]
-							208910, -- [3]
-							208506, -- [4]
-							206641, -- [5]
-							208203, -- [6]
-							205344, -- [7]
-							206677, -- [8]
-							218502, -- [9]
-							219049, -- [10]
-							218424, -- [11]
-							218342, -- [12]
-							218809, -- [13]
-							206585, -- [14]
-							206936, -- [15]
-							206589, -- [16]
-							206388, -- [17]
-							205649, -- [18]
-							206398, -- [19]
-							206965, -- [20]
-							207143, -- [21]
-							212492, -- [22]
-							215458, -- [23]
-							212587, -- [24]
-							212647, -- [25]
-							213083, -- [26]
-							206607, -- [27]
-							206609, -- [28]
-							206615, -- [29]
-							212099, -- [30]
-							212568, -- [31]
-							206883, -- [32]
-							206222, -- [33]
-							206221, -- [34]
-							208672, -- [35]
-							208802, -- [36]
-							221891, -- [37]
-							221603, -- [38]
-							206896, -- [39]
-							211261, -- [40]
-							209615, -- [41]
-							209973, -- [42]
-							209971, -- [43]
-							211887, -- [44]
-							209170, -- [45]
-							209599, -- [46]
-							206480, -- [47]
-							213238, -- [48]
-							212795, -- [49]
-							208230, -- [50]
-							216024, -- [51]
-							216040, -- [52]
-							204766, -- [53]
-							214657, -- [54]
-							214662, -- [55]
-							211659, -- [56]
-							204471, -- [57]
-						},
-						[800] = {
-							98443, -- [1]
-							98450, -- [2]
-							98535, -- [3]
-							96993, -- [4]
-							76622, -- [5]
-							97151, -- [6]
-							99610, -- [7]
-							99693, -- [8]
-							99695, -- [9]
-							99800, -- [10]
-							99993, -- [11]
-							100767, -- [12]
-							49026, -- [13]
-							97079, -- [14]
-							97202, -- [15]
-							99506, -- [16]
-							99936, -- [17]
-							99837, -- [18]
-							99840, -- [19]
-							99252, -- [20]
-							99256, -- [21]
-							99516, -- [22]
-							99399, -- [23]
-							100238, -- [24]
-							98313, -- [25]
-							100460, -- [26]
-							98981, -- [27]
-							99613, -- [28]
-							98492, -- [29]
-							100094, -- [30]
-							99389, -- [31]
-							99308, -- [32]
-							100640, -- [33]
-							100555, -- [34]
-						},
-						[796] = {
-							34654, -- [1]
-							39674, -- [2]
-							41150, -- [3]
-							41168, -- [4]
-							39837, -- [5]
-							40239, -- [6]
-							40251, -- [7]
-							40604, -- [8]
-							40481, -- [9]
-							40508, -- [10]
-							42005, -- [11]
-							41303, -- [12]
-							41410, -- [13]
-							41376, -- [14]
-							40860, -- [15]
-							41001, -- [16]
-							41485, -- [17]
-							41472, -- [18]
-							41914, -- [19]
-							41917, -- [20]
-							40585, -- [21]
-							40932, -- [22]
-						},
-						[987] = {
-							164837, -- [1]
-							164504, -- [2]
-							172771, -- [3]
-							169341, -- [4]
-							167240, -- [5]
-							172889, -- [6]
-							173113, -- [7]
-							173307, -- [8]
-							158341, -- [9]
-							163390, -- [10]
-							163740, -- [11]
-							163276, -- [12]
-							168398, -- [13]
-							168227, -- [14]
-						},
-						[989] = {
-							176544, -- [1]
-							160149, -- [2]
-							153757, -- [3]
-							153759, -- [4]
-							154043, -- [5]
-							153139, -- [6]
-							153123, -- [7]
-							156841, -- [8]
-							153907, -- [9]
-							160288, -- [10]
-							152982, -- [11]
-							152838, -- [12]
-							153001, -- [13]
-							152999, -- [14]
-							160303, -- [15]
-							154150, -- [16]
-						},
-						[1147] = {
-							233430, -- [1]
-							233983, -- [2]
-							235213, -- [3]
-							235240, -- [4]
-							240209, -- [5]
-							236304, -- [6]
-							236550, -- [7]
-							236519, -- [8]
-							236603, -- [9]
-							234996, -- [10]
-							234995, -- [11]
-							236330, -- [12]
-							236541, -- [13]
-							233263, -- [14]
-							239264, -- [15]
-							236712, -- [16]
-							231363, -- [17]
-							230345, -- [18]
-							234264, -- [19]
-							233279, -- [20]
-							233062, -- [21]
-							231998, -- [22]
-							231729, -- [23]
-							231770, -- [24]
-							234128, -- [25]
-							236449, -- [26]
-							236241, -- [27]
-							236515, -- [28]
-							235989, -- [29]
-							236361, -- [30]
-							235968, -- [31]
-							239932, -- [32]
-							234295, -- [33]
-							240911, -- [34]
-							238505, -- [35]
-							238429, -- [36]
-							239216, -- [37]
-							239155, -- [38]
-							236710, -- [39]
-							241822, -- [40]
-							236555, -- [41]
-							236494, -- [42]
-							236604, -- [43]
-							239739, -- [44]
-							232913, -- [45]
-							230139, -- [46]
-							232754, -- [47]
-							230201, -- [48]
-							230384, -- [49]
-							230358, -- [50]
-						},
-						[993] = {
-							164192, -- [1]
-							176025, -- [2]
-							176033, -- [3]
-							164218, -- [4]
-							176147, -- [5]
-							164241, -- [6]
-							166340, -- [7]
-							166570, -- [8]
-							160681, -- [9]
-							162507, -- [10]
-							162491, -- [11]
-							162057, -- [12]
-							163447, -- [13]
-							161588, -- [14]
-							162065, -- [15]
-						},
-						[995] = {
-							1604, -- [1]
-							153832, -- [2]
-							153897, -- [3]
-							153981, -- [4]
-							155037, -- [5]
-							155586, -- [6]
-							155581, -- [7]
-							167259, -- [8]
-							155572, -- [9]
-							154827, -- [10]
-							163057, -- [11]
-							165944, -- [12]
-							165954, -- [13]
-							155056, -- [14]
-							155065, -- [15]
-							161772, -- [16]
-							161765, -- [17]
-							155589, -- [18]
-							155721, -- [19]
-							157428, -- [20]
-							162600, -- [21]
-						},
-						[824] = {
-							108046, -- [1]
-							108043, -- [2]
-							107567, -- [3]
-							107558, -- [4]
-							110214, -- [5]
-							106794, -- [6]
-							106385, -- [7]
-							105841, -- [8]
-							105445, -- [9]
-							104451, -- [10]
-							105285, -- [11]
-							105316, -- [12]
-							105289, -- [13]
-							105259, -- [14]
-							105465, -- [15]
-							105369, -- [16]
-							106108, -- [17]
-							106415, -- [18]
-							105927, -- [19]
-							106369, -- [20]
-							103687, -- [21]
-							105563, -- [22]
-							105490, -- [23]
-							105479, -- [24]
-							106199, -- [25]
-							106200, -- [26]
-							106005, -- [27]
-							103434, -- [28]
-							104849, -- [29]
-							109389, -- [30]
-							105695, -- [31]
 						},
 						[1026] = {
 							184243, -- [1]
@@ -6401,6 +5982,422 @@ Grid2DB = {
 							184357, -- [107]
 							184652, -- [108]
 						},
+						[824] = {
+							108046, -- [1]
+							108043, -- [2]
+							107567, -- [3]
+							107558, -- [4]
+							110214, -- [5]
+							106794, -- [6]
+							106385, -- [7]
+							105841, -- [8]
+							105445, -- [9]
+							104451, -- [10]
+							105285, -- [11]
+							105316, -- [12]
+							105289, -- [13]
+							105259, -- [14]
+							105465, -- [15]
+							105369, -- [16]
+							106108, -- [17]
+							106415, -- [18]
+							105927, -- [19]
+							106369, -- [20]
+							103687, -- [21]
+							105563, -- [22]
+							105490, -- [23]
+							105479, -- [24]
+							106199, -- [25]
+							106200, -- [26]
+							106005, -- [27]
+							103434, -- [28]
+							104849, -- [29]
+							109389, -- [30]
+							105695, -- [31]
+						},
+						[987] = {
+							164837, -- [1]
+							164504, -- [2]
+							172771, -- [3]
+							169341, -- [4]
+							167240, -- [5]
+							172889, -- [6]
+							173113, -- [7]
+							173307, -- [8]
+							158341, -- [9]
+							163390, -- [10]
+							163740, -- [11]
+							163276, -- [12]
+							168398, -- [13]
+							168227, -- [14]
+						},
+						[993] = {
+							164192, -- [1]
+							176025, -- [2]
+							176033, -- [3]
+							164218, -- [4]
+							176147, -- [5]
+							164241, -- [6]
+							166340, -- [7]
+							166570, -- [8]
+							160681, -- [9]
+							162507, -- [10]
+							162491, -- [11]
+							162057, -- [12]
+							163447, -- [13]
+							161588, -- [14]
+							162065, -- [15]
+						},
+						[989] = {
+							176544, -- [1]
+							160149, -- [2]
+							153757, -- [3]
+							153759, -- [4]
+							154043, -- [5]
+							153139, -- [6]
+							153123, -- [7]
+							156841, -- [8]
+							153907, -- [9]
+							160288, -- [10]
+							152982, -- [11]
+							152838, -- [12]
+							153001, -- [13]
+							152999, -- [14]
+							160303, -- [15]
+							154150, -- [16]
+						},
+						[796] = {
+							34654, -- [1]
+							39674, -- [2]
+							41150, -- [3]
+							41168, -- [4]
+							39837, -- [5]
+							40239, -- [6]
+							40251, -- [7]
+							40604, -- [8]
+							40481, -- [9]
+							40508, -- [10]
+							42005, -- [11]
+							41303, -- [12]
+							41410, -- [13]
+							41376, -- [14]
+							40860, -- [15]
+							41001, -- [16]
+							41485, -- [17]
+							41472, -- [18]
+							41914, -- [19]
+							41917, -- [20]
+							40585, -- [21]
+							40932, -- [22]
+						},
+						[609] = {
+							74562, -- [1]
+							74567, -- [2]
+							74792, -- [3]
+							74795, -- [4]
+							74502, -- [5]
+							74367, -- [6]
+							74452, -- [7]
+						},
+						[800] = {
+							98443, -- [1]
+							98450, -- [2]
+							98535, -- [3]
+							96993, -- [4]
+							76622, -- [5]
+							97151, -- [6]
+							99610, -- [7]
+							99693, -- [8]
+							99695, -- [9]
+							99800, -- [10]
+							99993, -- [11]
+							100767, -- [12]
+							49026, -- [13]
+							97079, -- [14]
+							97202, -- [15]
+							99506, -- [16]
+							99936, -- [17]
+							99837, -- [18]
+							99840, -- [19]
+							99252, -- [20]
+							99256, -- [21]
+							99516, -- [22]
+							99399, -- [23]
+							100238, -- [24]
+							98313, -- [25]
+							100460, -- [26]
+							98981, -- [27]
+							99613, -- [28]
+							98492, -- [29]
+							100094, -- [30]
+							99389, -- [31]
+							99308, -- [32]
+							100640, -- [33]
+							100555, -- [34]
+						},
+						[1147] = {
+							233430, -- [1]
+							233983, -- [2]
+							235213, -- [3]
+							235240, -- [4]
+							240209, -- [5]
+							236304, -- [6]
+							236550, -- [7]
+							236519, -- [8]
+							236603, -- [9]
+							234996, -- [10]
+							234995, -- [11]
+							236330, -- [12]
+							236541, -- [13]
+							233263, -- [14]
+							239264, -- [15]
+							236712, -- [16]
+							231363, -- [17]
+							230345, -- [18]
+							234264, -- [19]
+							233279, -- [20]
+							233062, -- [21]
+							231998, -- [22]
+							231729, -- [23]
+							231770, -- [24]
+							234128, -- [25]
+							236449, -- [26]
+							236241, -- [27]
+							236515, -- [28]
+							235989, -- [29]
+							236361, -- [30]
+							235968, -- [31]
+							239932, -- [32]
+							234295, -- [33]
+							240911, -- [34]
+							238505, -- [35]
+							238429, -- [36]
+							239216, -- [37]
+							239155, -- [38]
+							236710, -- [39]
+							241822, -- [40]
+							236555, -- [41]
+							236494, -- [42]
+							236604, -- [43]
+							239739, -- [44]
+							232913, -- [45]
+							230139, -- [46]
+							232754, -- [47]
+							230201, -- [48]
+							230384, -- [49]
+							230358, -- [50]
+						},
+						[930] = {
+							137341, -- [1]
+							137360, -- [2]
+							137408, -- [3]
+							137440, -- [4]
+							138308, -- [5]
+							138372, -- [6]
+							138349, -- [7]
+							137399, -- [8]
+							138733, -- [9]
+							138002, -- [10]
+							140092, -- [11]
+							134256, -- [12]
+							138319, -- [13]
+							134366, -- [14]
+							140014, -- [15]
+							136050, -- [16]
+							140546, -- [17]
+							137000, -- [18]
+							136228, -- [19]
+							138609, -- [20]
+							138569, -- [21]
+							138659, -- [22]
+							136954, -- [23]
+							134691, -- [24]
+							134647, -- [25]
+							136193, -- [26]
+							135145, -- [27]
+							139822, -- [28]
+							137731, -- [29]
+							139866, -- [30]
+							139841, -- [31]
+							134378, -- [32]
+							139839, -- [33]
+							140179, -- [34]
+							139994, -- [35]
+							137552, -- [36]
+							134916, -- [37]
+							135150, -- [38]
+							139011, -- [39]
+							136478, -- [40]
+							136853, -- [41]
+							136295, -- [42]
+							135703, -- [43]
+							136767, -- [44]
+							136708, -- [45]
+							136719, -- [46]
+							136654, -- [47]
+							136587, -- [48]
+							136512, -- [49]
+							140946, -- [50]
+							136710, -- [51]
+							133767, -- [52]
+							133768, -- [53]
+							134755, -- [54]
+							136413, -- [55]
+							133795, -- [56]
+							133597, -- [57]
+							133598, -- [58]
+							134007, -- [59]
+							137650, -- [60]
+							137085, -- [61]
+							136922, -- [62]
+							136917, -- [63]
+							136903, -- [64]
+							136857, -- [65]
+							137359, -- [66]
+							137891, -- [67]
+						},
+						[995] = {
+							1604, -- [1]
+							153832, -- [2]
+							153897, -- [3]
+							153981, -- [4]
+							155037, -- [5]
+							155586, -- [6]
+							155581, -- [7]
+							167259, -- [8]
+							155572, -- [9]
+							154827, -- [10]
+							163057, -- [11]
+							165944, -- [12]
+							165954, -- [13]
+							155056, -- [14]
+							155065, -- [15]
+							161772, -- [16]
+							161765, -- [17]
+							155589, -- [18]
+							155721, -- [19]
+							157428, -- [20]
+							162600, -- [21]
+						},
+						[1088] = {
+							206482, -- [1]
+							206788, -- [2]
+							208910, -- [3]
+							208506, -- [4]
+							206641, -- [5]
+							208203, -- [6]
+							205344, -- [7]
+							206677, -- [8]
+							218502, -- [9]
+							219049, -- [10]
+							218424, -- [11]
+							218342, -- [12]
+							218809, -- [13]
+							206585, -- [14]
+							206936, -- [15]
+							206589, -- [16]
+							206388, -- [17]
+							205649, -- [18]
+							206398, -- [19]
+							206965, -- [20]
+							207143, -- [21]
+							212492, -- [22]
+							215458, -- [23]
+							212587, -- [24]
+							212647, -- [25]
+							213083, -- [26]
+							206607, -- [27]
+							206609, -- [28]
+							206615, -- [29]
+							212099, -- [30]
+							212568, -- [31]
+							206883, -- [32]
+							206222, -- [33]
+							206221, -- [34]
+							208672, -- [35]
+							208802, -- [36]
+							221891, -- [37]
+							221603, -- [38]
+							206896, -- [39]
+							211261, -- [40]
+							209615, -- [41]
+							209973, -- [42]
+							209971, -- [43]
+							211887, -- [44]
+							209170, -- [45]
+							209599, -- [46]
+							206480, -- [47]
+							213238, -- [48]
+							212795, -- [49]
+							208230, -- [50]
+							216024, -- [51]
+							216040, -- [52]
+							204766, -- [53]
+							214657, -- [54]
+							214662, -- [55]
+							211659, -- [56]
+							204471, -- [57]
+						},
+						[604] = {
+							70107, -- [1]
+							70106, -- [2]
+							69766, -- [3]
+							71665, -- [4]
+							70126, -- [5]
+							70157, -- [6]
+							70980, -- [7]
+							70450, -- [8]
+							71089, -- [9]
+							69483, -- [10]
+							71163, -- [11]
+							71127, -- [12]
+							70435, -- [13]
+							70671, -- [14]
+							70432, -- [15]
+							71257, -- [16]
+							70873, -- [17]
+							70744, -- [18]
+							70751, -- [19]
+							70633, -- [20]
+							71941, -- [21]
+							70766, -- [22]
+							69290, -- [23]
+							69248, -- [24]
+							72219, -- [25]
+							69278, -- [26]
+							71289, -- [27]
+							71204, -- [28]
+							71237, -- [29]
+							69674, -- [30]
+							69508, -- [31]
+							30494, -- [32]
+							72133, -- [33]
+							68981, -- [34]
+							69242, -- [35]
+							69409, -- [36]
+							70541, -- [37]
+							27177, -- [38]
+							68980, -- [39]
+							69065, -- [40]
+							72999, -- [41]
+							71807, -- [42]
+							69651, -- [43]
+							70838, -- [44]
+							71623, -- [45]
+							70949, -- [46]
+							72151, -- [47]
+							71340, -- [48]
+							72985, -- [49]
+							70923, -- [50]
+							70215, -- [51]
+							72454, -- [52]
+							70341, -- [53]
+							70342, -- [54]
+							70911, -- [55]
+							69774, -- [56]
+							72293, -- [57]
+							72769, -- [58]
+						},
 						[1041] = {
 							196838, -- [1]
 							197556, -- [2]
@@ -6438,80 +6435,83 @@ Grid2DB = {
 							214804, -- [17]
 							200904, -- [18]
 						},
-						[984] = {
-							154477, -- [1]
-							154218, -- [2]
-							153430, -- [3]
-							157165, -- [4]
-							157170, -- [5]
-							176511, -- [6]
-							157797, -- [7]
-							154852, -- [8]
-							154263, -- [9]
-							157168, -- [10]
-							156954, -- [11]
-							157052, -- [12]
-							156854, -- [13]
-							156856, -- [14]
-							156964, -- [15]
-							156960, -- [16]
-							153234, -- [17]
-							153396, -- [18]
+						[531] = {
+							39647, -- [1]
+							58936, -- [2]
+							60708, -- [3]
+							57491, -- [4]
 						},
-						[949] = {
-							175915, -- [1]
-							176004, -- [2]
+						[1114] = {
+							228054, -- [1]
+							227982, -- [2]
+							193367, -- [3]
+							227903, -- [4]
+							228058, -- [5]
+							228519, -- [6]
+							202476, -- [7]
+							232450, -- [8]
+							227570, -- [9]
+							227566, -- [10]
+							227539, -- [11]
+							228250, -- [12]
+							228246, -- [13]
+							228226, -- [14]
+							192044, -- [15]
+							198088, -- [16]
+							228915, -- [17]
+							227959, -- [18]
+							227475, -- [19]
+							192044, -- [20]
+							227781, -- [21]
 						},
-						[1067] = {
-							196376, -- [1]
-							198376, -- [2]
-							198408, -- [3]
-							200182, -- [4]
-							200238, -- [5]
-							204502, -- [6]
-							200111, -- [7]
-							199345, -- [8]
-							199460, -- [9]
-							199389, -- [10]
-							191326, -- [11]
-							204611, -- [12]
-							204574, -- [13]
-							204666, -- [14]
+						[1087] = {
+							209602, -- [1]
+							209676, -- [2]
+							224333, -- [3]
+							209628, -- [4]
+							208165, -- [5]
+							211457, -- [6]
+							207906, -- [7]
+							207261, -- [8]
+							207278, -- [9]
 						},
 						[948] = {
 							167615, -- [1]
 						},
-						[799] = {
-							37066, -- [1]
-							29522, -- [2]
-							29511, -- [3]
-							30753, -- [4]
-							30115, -- [5]
-							30843, -- [6]
+						[781] = {
+							43657, -- [1]
+							43622, -- [2]
+							43299, -- [3]
+							43303, -- [4]
+							43613, -- [5]
+							43501, -- [6]
+							43093, -- [7]
+							43095, -- [8]
+							43150, -- [9]
 						},
 					},
 				},
 				["buff-BeaconofVirtue-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.6,
-						["r"] = 1,
-					},
-					["type"] = "buff",
-					["mine"] = 1,
 					["spellName"] = "Beacon of Virtue",
-				},
-				["buff-AuraofSacrifice-mine"] = {
-					["spellName"] = "Aura of Sacrifice",
 					["type"] = "buff",
 					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
 						["r"] = 1,
-						["g"] = 0.180392156862745,
+						["g"] = 0.6,
 						["b"] = 0,
 					},
+				},
+				["buff-AuraofMercy-mine"] = {
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0.964705882352941,
+						["g"] = 0.262745098039216,
+						["r"] = 0.403921568627451,
+					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Aura of Mercy",
 				},
 			},
 			["versions"] = {
@@ -6542,14 +6542,14 @@ Grid2DB = {
 				["bar-bottom-right"] = {
 					["buff-BestowFaith-mine"] = 51,
 				},
+				["bar-top-right-color"] = {
+					["color-timeroverlay"] = 50,
+				},
+				["bar-top-left-color"] = {
+					["color-timeroverlay"] = 50,
+				},
 				["text-down-color"] = {
 					["debuff-Forbearance"] = 53,
-				},
-				["heals"] = {
-					["heals-incoming"] = 99,
-				},
-				["bar-top-left"] = {
-					["buff-BeaconofVirtue-mine"] = 50,
 				},
 				["side-top-color"] = {
 					["buff-FlashOfLight-mine"] = 99,
@@ -6558,23 +6558,20 @@ Grid2DB = {
 					["ready-check"] = 150,
 					["raid-debuffs"] = 155,
 				},
-				["text-up-color"] = {
+				["top-bar"] = {
+					["buff-Tyr'sDeliverance-mine"] = 51,
+				},
+				["heals"] = {
+					["heals-incoming"] = 99,
+				},
+				["text-up"] = {
+					["resurrection"] = 98,
+					["feign-death"] = 95,
+					["death"] = 93,
 					["charmed"] = 65,
-					["feign-death"] = 96,
-					["health-deficit"] = 50,
-					["offline"] = 93,
-					["death"] = 95,
+					["offline"] = 96,
 					["vehicle"] = 70,
-				},
-				["bar-top-right"] = {
-					["buff-BlessingofSacrifice-mine"] = 52,
-					["buff-BlessingofProtection-mine"] = 51,
-					["buff-BlessingofFreedom-mine"] = 50,
-				},
-				["corner-bottom-left"] = {
-					["buff-AuraofSacrifice-mine"] = 50,
-					["buff-DevotionAura-mine"] = 51,
-					["buff-AuraofMercy-mine"] = 52,
+					["afk"] = 97,
 				},
 				["corner-top-right"] = {
 					["buff-BlessingofSacrifice-mine"] = 51,
@@ -6584,8 +6581,8 @@ Grid2DB = {
 				["heals-color"] = {
 					["classcolor"] = 99,
 				},
-				["icon-right"] = {
-					["raid-icon-target"] = 50,
+				["bar-bottom-right-color"] = {
+					["color-timeroverlay"] = 51,
 				},
 				["alpha"] = {
 					["offline"] = 97,
@@ -6604,30 +6601,33 @@ Grid2DB = {
 				["health"] = {
 					["health-current"] = 99,
 				},
-				["bar-bottom-right-color"] = {
-					["color-timeroverlay"] = 51,
+				["icon-right"] = {
+					["raid-icon-target"] = 50,
 				},
-				["text-up"] = {
-					["resurrection"] = 98,
-					["feign-death"] = 95,
-					["death"] = 93,
-					["offline"] = 96,
-					["afk"] = 97,
-					["vehicle"] = 70,
+				["corner-bottom-left"] = {
+					["buff-AuraofSacrifice-mine"] = 50,
+					["buff-DevotionAura-mine"] = 51,
+					["buff-AuraofMercy-mine"] = 52,
+				},
+				["text-up-color"] = {
 					["charmed"] = 65,
+					["feign-death"] = 96,
+					["health-deficit"] = 50,
+					["offline"] = 93,
+					["vehicle"] = 70,
+					["death"] = 95,
 				},
-				["top-bar"] = {
-					["buff-Tyr'sDeliverance-mine"] = 51,
+				["bar-top-right"] = {
+					["buff-BlessingofSacrifice-mine"] = 52,
+					["buff-BlessingofProtection-mine"] = 51,
+					["buff-BlessingofFreedom-mine"] = 50,
 				},
-				["bar-top-left-color"] = {
-					["color-timeroverlay"] = 50,
-				},
-				["bar-top-right-color"] = {
-					["color-timeroverlay"] = 50,
+				["bar-top-left"] = {
+					["buff-BeaconofVirtue-mine"] = 50,
 				},
 			},
 		},
-		["Drathtix - Madmortem"] = {
+		["Drathia - Madmortem"] = {
 			["hideBlizzardRaidFrames"] = true,
 			["indicators"] = {
 				["corner-top-left"] = {
@@ -6635,55 +6635,55 @@ Grid2DB = {
 					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
 						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
-					["width"] = 12,
+					["font"] = "Friz Quadrata TT",
 					["borderSize"] = 1,
 					["type"] = "square",
-					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOPLEFT",
 						["point"] = "TOPLEFT",
 						["x"] = 1,
 					},
+					["height"] = 7,
 					["level"] = 9,
 					["textlength"] = 12,
-					["font"] = "Friz Quadrata TT",
+					["width"] = 12,
 				},
 				["corner-bottom-right"] = {
-					["color1"] = {
-						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
+					["width"] = 12,
 					["fontSize"] = 8,
-					["borderSize"] = 1,
-					["height"] = 7,
+					["type"] = "square",
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOMRIGHT",
 						["point"] = "BOTTOMRIGHT",
 						["x"] = -1,
 					},
+					["height"] = 7,
 					["level"] = 8,
-					["type"] = "square",
-					["width"] = 12,
+					["borderSize"] = 1,
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
 				},
 				["text-down"] = {
-					["fontSize"] = 10,
 					["type"] = "text",
+					["fontSize"] = 10,
 					["font"] = "Friz Quadrata TT",
-					["shadowDisabled"] = true,
 					["location"] = {
 						["y"] = 1,
 						["relPoint"] = "BOTTOM",
 						["point"] = "BOTTOM",
 						["x"] = 0,
 					},
+					["shadowDisabled"] = true,
 					["level"] = 6,
 					["textlength"] = 5,
 					["fontFlags"] = "OUTLINE",
@@ -6701,13 +6701,13 @@ Grid2DB = {
 					["size"] = 14,
 				},
 				["border"] = {
+					["type"] = "border",
 					["color1"] = {
 						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["type"] = "border",
 				},
 				["role"] = {
 					["fontSize"] = 8,
@@ -6726,44 +6726,65 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["height"] = 5,
+					["orientation"] = "HORIZONTAL",
+					["level"] = 8,
 					["location"] = {
 						["y"] = 2,
 						["relPoint"] = "BOTTOMRIGHT",
 						["point"] = "BOTTOMRIGHT",
 						["x"] = -2,
 					},
-					["height"] = 5,
-					["level"] = 8,
-					["orientation"] = "HORIZONTAL",
 					["texture"] = "Grid2 Flat",
 				},
-				["bar-top-right-color"] = {
+				["bar-top-left-color"] = {
 					["type"] = "bar-color",
 				},
-				["bar-top-left"] = {
-					["width"] = 10,
+				["heals"] = {
 					["type"] = "bar",
+					["texture"] = "Grid2 Flat",
+					["anchorTo"] = "health",
+					["location"] = {
+						["y"] = 0,
+						["relPoint"] = "CENTER",
+						["point"] = "CENTER",
+						["x"] = 0,
+					},
+					["level"] = 1,
+					["opacity"] = 0.25,
+					["color1"] = {
+						["a"] = 0,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
+				},
+				["bar-top-left"] = {
+					["texture"] = "Gradient",
+					["type"] = "bar",
+					["height"] = 5,
+					["level"] = 9,
+					["orientation"] = "HORIZONTAL",
+					["duration"] = true,
 					["location"] = {
 						["y"] = -2,
 						["relPoint"] = "TOPLEFT",
 						["point"] = "TOPLEFT",
 						["x"] = 2,
 					},
-					["duration"] = true,
-					["height"] = 5,
-					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Gradient",
-				},
-				["text-down-color"] = {
-					["type"] = "text-color",
+					["width"] = 10,
 				},
 				["side-top-color"] = {
 					["type"] = "text-color",
 				},
 				["icon-center"] = {
 					["type"] = "icon",
-					["size"] = 20,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 					["location"] = {
 						["y"] = 0,
 						["relPoint"] = "CENTER",
@@ -6772,34 +6793,14 @@ Grid2DB = {
 					},
 					["level"] = 8,
 					["fontSize"] = 8,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
+					["size"] = 20,
 				},
-				["top-bar"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["height"] = 5,
-					["location"] = {
-						["y"] = -2,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
-					},
-					["level"] = 8,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Grid2 Flat",
+				["text-up-color"] = {
+					["type"] = "text-color",
 				},
 				["bar-top-right"] = {
-					["width"] = 10,
+					["texture"] = "Gradient",
 					["type"] = "bar",
-					["height"] = 5,
-					["duration"] = true,
 					["location"] = {
 						["y"] = -2,
 						["relPoint"] = "TOPRIGHT",
@@ -6808,22 +6809,28 @@ Grid2DB = {
 					},
 					["level"] = 9,
 					["orientation"] = "HORIZONTAL",
-					["texture"] = "Gradient",
+					["duration"] = true,
+					["height"] = 5,
+					["width"] = 10,
 				},
-				["text-up"] = {
-					["font"] = "Friz Quadrata TT",
-					["type"] = "text",
-					["fontSize"] = 10,
-					["shadowDisabled"] = true,
-					["location"] = {
-						["y"] = -16,
-						["relPoint"] = "TOP",
-						["point"] = "TOP",
-						["x"] = 0,
+				["corner-bottom-left"] = {
+					["type"] = "square",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["level"] = 7,
-					["textlength"] = 6,
-					["fontFlags"] = "OUTLINE",
+					["location"] = {
+						["y"] = 1,
+						["relPoint"] = "BOTTOMLEFT",
+						["point"] = "BOTTOMLEFT",
+						["x"] = 1,
+					},
+					["height"] = 7,
+					["level"] = 5,
+					["borderSize"] = 1,
+					["width"] = 12,
 				},
 				["icon-right"] = {
 					["fontSize"] = 8,
@@ -6840,17 +6847,37 @@ Grid2DB = {
 				["heals-color"] = {
 					["type"] = "bar-color",
 				},
-				["bar-bottom-right-color"] = {
-					["type"] = "bar-color",
-				},
-				["alpha"] = {
+				["corner-top-right"] = {
+					["fontSize"] = 8,
+					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
 						["b"] = 0,
 						["g"] = 0,
 						["r"] = 0,
 					},
+					["font"] = "Friz Quadrata TT",
+					["borderSize"] = 1,
+					["type"] = "square",
+					["location"] = {
+						["y"] = -1,
+						["relPoint"] = "TOPRIGHT",
+						["point"] = "TOPRIGHT",
+						["x"] = -1,
+					},
+					["height"] = 7,
+					["level"] = 5,
+					["textlength"] = 12,
+					["width"] = 12,
+				},
+				["alpha"] = {
 					["type"] = "alpha",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 				},
 				["health-color"] = {
 					["type"] = "bar-color",
@@ -6859,23 +6886,23 @@ Grid2DB = {
 					["fontSize"] = 10,
 					["color1"] = {
 						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
-					["width"] = 12,
+					["type"] = "square",
+					["borderSize"] = 1,
 					["font"] = "KkthnxUI_Normal",
-					["disableOmniCC"] = true,
+					["height"] = 7,
 					["location"] = {
 						["y"] = -1,
 						["relPoint"] = "TOP",
 						["point"] = "TOP",
 						["x"] = 0,
 					},
-					["height"] = 7,
 					["level"] = 6,
-					["borderSize"] = 1,
-					["type"] = "square",
+					["disableOmniCC"] = true,
+					["width"] = 12,
 				},
 				["top-bar-color"] = {
 					["type"] = "bar-color",
@@ -6889,203 +6916,288 @@ Grid2DB = {
 						["x"] = 0,
 					},
 					["level"] = 2,
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
 					["texture"] = "Blizzard Raid Bar",
-				},
-				["corner-top-right"] = {
-					["fontSize"] = 8,
-					["duration"] = true,
 					["color1"] = {
 						["a"] = 1,
 						["r"] = 0,
 						["g"] = 0,
 						["b"] = 0,
 					},
-					["width"] = 12,
-					["borderSize"] = 1,
-					["type"] = "square",
-					["height"] = 7,
-					["location"] = {
-						["y"] = -1,
-						["relPoint"] = "TOPRIGHT",
-						["point"] = "TOPRIGHT",
-						["x"] = -1,
-					},
-					["level"] = 5,
-					["textlength"] = 12,
-					["font"] = "Friz Quadrata TT",
 				},
-				["corner-bottom-left"] = {
-					["type"] = "square",
-					["width"] = 12,
-					["borderSize"] = 1,
-					["height"] = 7,
-					["level"] = 5,
-					["location"] = {
-						["y"] = 1,
-						["relPoint"] = "BOTTOMLEFT",
-						["point"] = "BOTTOMLEFT",
-						["x"] = 1,
-					},
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-				},
-				["text-up-color"] = {
-					["type"] = "text-color",
-				},
-				["heals"] = {
-					["type"] = "bar",
-					["color1"] = {
-						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["anchorTo"] = "health",
-					["location"] = {
-						["y"] = 0,
-						["relPoint"] = "CENTER",
-						["point"] = "CENTER",
-						["x"] = 0,
-					},
-					["level"] = 1,
-					["opacity"] = 0.25,
-					["texture"] = "Grid2 Flat",
-				},
-				["bar-top-left-color"] = {
+				["bar-bottom-right-color"] = {
 					["type"] = "bar-color",
 				},
+				["text-up"] = {
+					["type"] = "text",
+					["font"] = "Friz Quadrata TT",
+					["fontSize"] = 10,
+					["location"] = {
+						["y"] = -16,
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
+						["x"] = 0,
+					},
+					["shadowDisabled"] = true,
+					["level"] = 7,
+					["textlength"] = 6,
+					["fontFlags"] = "OUTLINE",
+				},
+				["top-bar"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["location"] = {
+						["y"] = -2,
+						["relPoint"] = "TOP",
+						["point"] = "TOP",
+						["x"] = 0,
+					},
+					["orientation"] = "HORIZONTAL",
+					["level"] = 8,
+					["height"] = 5,
+					["texture"] = "Grid2 Flat",
+				},
+				["text-down-color"] = {
+					["type"] = "text-color",
+				},
+				["bar-top-right-color"] = {
+					["type"] = "bar-color",
+				},
+			},
+			["statusMap"] = {
+				["corner-top-left"] = {
+					["buff-BeaconOfLight-mine"] = 101,
+					["buff-BeaconofVirtue-mine"] = 102,
+					["buff-BeaconofFaith-mine"] = 100,
+				},
+				["corner-bottom-right"] = {
+					["buff-BestowFaith-mine"] = 50,
+				},
+				["text-down"] = {
+					["name"] = 99,
+				},
+				["icon-left"] = {
+					["raid-icon-player"] = 155,
+				},
+				["border"] = {
+					["banzai-threat"] = 50,
+				},
+				["role"] = {
+					["dungeon-role"] = 51,
+				},
+				["bar-bottom-right"] = {
+					["buff-BestowFaith-mine"] = 51,
+				},
+				["bar-top-left"] = {
+					["buff-BeaconofVirtue-mine"] = 50,
+				},
+				["heals"] = {
+					["heals-incoming"] = 99,
+				},
+				["text-down-color"] = {
+					["debuff-Forbearance"] = 53,
+				},
+				["bar-top-left-color"] = {
+					["color-timeroverlay"] = 50,
+				},
+				["icon-center"] = {
+					["ready-check"] = 150,
+					["raid-debuffs"] = 155,
+				},
+				["text-up-color"] = {
+					["charmed"] = 65,
+					["feign-death"] = 96,
+					["health-deficit"] = 50,
+					["offline"] = 93,
+					["death"] = 95,
+					["vehicle"] = 70,
+				},
+				["bar-top-right"] = {
+					["buff-BlessingofSacrifice-mine"] = 52,
+					["buff-BlessingofProtection-mine"] = 51,
+					["buff-BlessingofFreedom-mine"] = 50,
+				},
+				["corner-bottom-left"] = {
+					["buff-AuraofSacrifice-mine"] = 50,
+					["buff-DevotionAura-mine"] = 51,
+					["buff-AuraofMercy-mine"] = 52,
+				},
+				["corner-top-right"] = {
+					["buff-BlessingofSacrifice-mine"] = 51,
+					["buff-BlessingofProtection-mine"] = 52,
+					["buff-BlessingofFreedom-mine"] = 50,
+				},
+				["heals-color"] = {
+					["classcolor"] = 99,
+				},
+				["icon-right"] = {
+					["raid-icon-target"] = 50,
+				},
+				["alpha"] = {
+					["offline"] = 97,
+					["range"] = 99,
+					["death"] = 98,
+				},
+				["top-bar-color"] = {
+					["color-timeroverlay"] = 52,
+				},
+				["top"] = {
+					["buff-Tyr'sDeliverance-mine"] = 51,
+				},
+				["health-color"] = {
+					["classcolor"] = 99,
+				},
+				["health"] = {
+					["health-current"] = 99,
+				},
+				["bar-bottom-right-color"] = {
+					["color-timeroverlay"] = 51,
+				},
+				["text-up"] = {
+					["resurrection"] = 98,
+					["feign-death"] = 95,
+					["death"] = 93,
+					["afk"] = 97,
+					["offline"] = 96,
+					["vehicle"] = 70,
+					["charmed"] = 65,
+				},
+				["top-bar"] = {
+					["buff-Tyr'sDeliverance-mine"] = 51,
+				},
+				["side-top-color"] = {
+					["buff-FlashOfLight-mine"] = 99,
+				},
+				["bar-top-right-color"] = {
+					["color-timeroverlay"] = 50,
+				},
+			},
+			["versions"] = {
+				["Grid2"] = 5,
+				["Grid2RaidDebuffs"] = 1,
 			},
 			["statuses"] = {
 				["debuff-Forbearance"] = {
 					["type"] = "debuff",
+					["spellName"] = 25771,
 					["color1"] = {
 						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.298039215686275,
 						["r"] = 1,
+						["g"] = 0.298039215686275,
+						["b"] = 0,
 					},
-					["spellName"] = 25771,
 				},
 				["buff-BeaconOfLight-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.96078431372549,
-						["g"] = 0.180392156862745,
-						["r"] = 0.956862745098039,
-					},
+					["spellName"] = 53563,
 					["type"] = "buff",
 					["mine"] = true,
-					["spellName"] = 53563,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.956862745098039,
+						["g"] = 0.180392156862745,
+						["b"] = 0.96078431372549,
+					},
 				},
 				["buff-DevotionAura-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.952941176470588,
-						["g"] = 0.564705882352941,
-						["r"] = 0.172549019607843,
-					},
+					["spellName"] = "Devotion Aura",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Devotion Aura",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0.172549019607843,
+						["g"] = 0.564705882352941,
+						["b"] = 0.952941176470588,
+					},
 				},
 				["buff-BestowFaith-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.83921568627451,
-						["r"] = 1,
-					},
+					["spellName"] = "Bestow Faith",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Bestow Faith",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 0.83921568627451,
+						["b"] = 0,
+					},
 				},
 				["buff-BlessingofSacrifice-mine"] = {
-					["spellName"] = "Blessing of Sacrifice",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.0980392156862745,
 						["b"] = 0,
+						["g"] = 0.0980392156862745,
+						["r"] = 1,
 					},
-				},
-				["buff-BlessingofProtection-mine"] = {
-					["spellName"] = "Blessing of Protection",
 					["type"] = "buff",
 					["mine"] = 1,
-					["color1"] = {
-						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0.580392156862745,
-						["b"] = 1,
-					},
+					["spellName"] = "Blessing of Sacrifice",
 				},
 				["buff-AuraofSacrifice-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0,
-						["g"] = 0.180392156862745,
-						["r"] = 1,
-					},
+					["spellName"] = "Aura of Sacrifice",
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Aura of Sacrifice",
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 0.180392156862745,
+						["b"] = 0,
+					},
+				},
+				["color-timeroverlay"] = {
+					["type"] = "color",
+					["color1"] = {
+						["a"] = 0.5,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 				},
 				["buff-BlessingofFreedom-mine"] = {
-					["spellName"] = "Blessing of Freedom",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.36078431372549,
 						["b"] = 0,
+						["g"] = 0.36078431372549,
+						["r"] = 1,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Blessing of Freedom",
 				},
 				["buff-Tyr'sDeliverance-mine"] = {
-					["spellName"] = "Tyr's Deliverance",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0.976470588235294,
-						["g"] = 0.76078431372549,
 						["b"] = 0,
+						["g"] = 0.76078431372549,
+						["r"] = 0.976470588235294,
 					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Tyr's Deliverance",
 				},
 				["role"] = {
 					["hideInCombat"] = true,
 				},
-				["color-timeroverlay"] = {
-					["color1"] = {
-						["a"] = 0.5,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["type"] = "color",
-				},
-				["buff-BeaconofFaith-mine"] = {
-					["spellName"] = 156910,
+				["buff-AuraofMercy-mine"] = {
+					["spellName"] = "Aura of Mercy",
 					["type"] = "buff",
 					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 0,
-						["g"] = 0.4,
-						["b"] = 1,
+						["r"] = 0.403921568627451,
+						["g"] = 0.262745098039216,
+						["b"] = 0.964705882352941,
 					},
+				},
+				["buff-BeaconofFaith-mine"] = {
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 1,
+						["g"] = 0.4,
+						["r"] = 0,
+					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = 156910,
 				},
 				["dungeon-role"] = {
 					["hideDamagers"] = true,
@@ -7394,13 +7506,16 @@ Grid2DB = {
 							156932, -- [69]
 							155743, -- [70]
 						},
-						[799] = {
-							37066, -- [1]
-							29522, -- [2]
-							29511, -- [3]
-							30753, -- [4]
-							30115, -- [5]
-							30843, -- [6]
+						[1042] = {
+							194325, -- [1]
+							194216, -- [2]
+							194266, -- [3]
+							197264, -- [4]
+							227233, -- [5]
+							197858, -- [6]
+							193211, -- [7]
+							193364, -- [8]
+							193460, -- [9]
 						},
 						[929] = {
 							137504, -- [1]
@@ -7579,21 +7694,16 @@ Grid2DB = {
 							150032, -- [24]
 							150023, -- [25]
 						},
-						[1067] = {
-							196376, -- [1]
-							198376, -- [2]
-							198408, -- [3]
-							200182, -- [4]
-							200238, -- [5]
-							204502, -- [6]
-							200111, -- [7]
-							199345, -- [8]
-							199460, -- [9]
-							199389, -- [10]
-							191326, -- [11]
-							204611, -- [12]
-							204574, -- [13]
-							204666, -- [14]
+						[1087] = {
+							209602, -- [1]
+							209676, -- [2]
+							224333, -- [3]
+							209628, -- [4]
+							208165, -- [5]
+							211457, -- [6]
+							207906, -- [7]
+							207261, -- [8]
+							207278, -- [9]
 						},
 						[752] = {
 							104936, -- [1]
@@ -7708,11 +7818,21 @@ Grid2DB = {
 							123121, -- [24]
 							123705, -- [25]
 						},
-						[951] = {
-							144638, -- [1]
-							144689, -- [2]
-							144607, -- [3]
-							144630, -- [4]
+						[1067] = {
+							196376, -- [1]
+							198376, -- [2]
+							198408, -- [3]
+							200182, -- [4]
+							200238, -- [5]
+							204502, -- [6]
+							200111, -- [7]
+							199345, -- [8]
+							199460, -- [9]
+							199389, -- [10]
+							191326, -- [11]
+							204611, -- [12]
+							204574, -- [13]
+							204666, -- [14]
 						},
 						[953] = {
 							147705, -- [1]
@@ -7892,39 +8012,34 @@ Grid2DB = {
 							223355, -- [2]
 							219602, -- [3]
 						},
-						[949] = {
-							175915, -- [1]
-							176004, -- [2]
+						[1114] = {
+							228054, -- [1]
+							227982, -- [2]
+							193367, -- [3]
+							227903, -- [4]
+							228058, -- [5]
+							228519, -- [6]
+							202476, -- [7]
+							232450, -- [8]
+							227570, -- [9]
+							227566, -- [10]
+							227539, -- [11]
+							228250, -- [12]
+							228246, -- [13]
+							228226, -- [14]
+							192044, -- [15]
+							198088, -- [16]
+							228915, -- [17]
+							227959, -- [18]
+							227475, -- [19]
+							192044, -- [20]
+							227781, -- [21]
 						},
-						[984] = {
-							154477, -- [1]
-							154218, -- [2]
-							153430, -- [3]
-							157165, -- [4]
-							157170, -- [5]
-							176511, -- [6]
-							157797, -- [7]
-							154852, -- [8]
-							154263, -- [9]
-							157168, -- [10]
-							156954, -- [11]
-							157052, -- [12]
-							156854, -- [13]
-							156856, -- [14]
-							156964, -- [15]
-							156960, -- [16]
-							153234, -- [17]
-							153396, -- [18]
-						},
-						[969] = {
-							153070, -- [1]
-							153501, -- [2]
-							156776, -- [3]
-							152819, -- [4]
-							1604, -- [5]
-							153524, -- [6]
-							154442, -- [7]
-							154469, -- [8]
+						[531] = {
+							39647, -- [1]
+							58936, -- [2]
+							60708, -- [3]
+							57491, -- [4]
 						},
 						[780] = {
 							39042, -- [1]
@@ -7939,6 +8054,16 @@ Grid2DB = {
 							37641, -- [10]
 							37749, -- [11]
 							38280, -- [12]
+						},
+						[969] = {
+							153070, -- [1]
+							153501, -- [2]
+							156776, -- [3]
+							152819, -- [4]
+							1604, -- [5]
+							153524, -- [6]
+							154442, -- [7]
+							154469, -- [8]
 						},
 						[529] = {
 							63276, -- [1]
@@ -7990,6 +8115,422 @@ Grid2DB = {
 						},
 						[532] = {
 							72004, -- [1]
+						},
+						[604] = {
+							70107, -- [1]
+							70106, -- [2]
+							69766, -- [3]
+							71665, -- [4]
+							70126, -- [5]
+							70157, -- [6]
+							70980, -- [7]
+							70450, -- [8]
+							71089, -- [9]
+							69483, -- [10]
+							71163, -- [11]
+							71127, -- [12]
+							70435, -- [13]
+							70671, -- [14]
+							70432, -- [15]
+							71257, -- [16]
+							70873, -- [17]
+							70744, -- [18]
+							70751, -- [19]
+							70633, -- [20]
+							71941, -- [21]
+							70766, -- [22]
+							69290, -- [23]
+							69248, -- [24]
+							72219, -- [25]
+							69278, -- [26]
+							71289, -- [27]
+							71204, -- [28]
+							71237, -- [29]
+							69674, -- [30]
+							69508, -- [31]
+							30494, -- [32]
+							72133, -- [33]
+							68981, -- [34]
+							69242, -- [35]
+							69409, -- [36]
+							70541, -- [37]
+							27177, -- [38]
+							68980, -- [39]
+							69065, -- [40]
+							72999, -- [41]
+							71807, -- [42]
+							69651, -- [43]
+							70838, -- [44]
+							71623, -- [45]
+							70949, -- [46]
+							72151, -- [47]
+							71340, -- [48]
+							72985, -- [49]
+							70923, -- [50]
+							70215, -- [51]
+							72454, -- [52]
+							70341, -- [53]
+							70342, -- [54]
+							70911, -- [55]
+							69774, -- [56]
+							72293, -- [57]
+							72769, -- [58]
+						},
+						[1088] = {
+							206482, -- [1]
+							206788, -- [2]
+							208910, -- [3]
+							208506, -- [4]
+							206641, -- [5]
+							208203, -- [6]
+							205344, -- [7]
+							206677, -- [8]
+							218502, -- [9]
+							219049, -- [10]
+							218424, -- [11]
+							218342, -- [12]
+							218809, -- [13]
+							206585, -- [14]
+							206936, -- [15]
+							206589, -- [16]
+							206388, -- [17]
+							205649, -- [18]
+							206398, -- [19]
+							206965, -- [20]
+							207143, -- [21]
+							212492, -- [22]
+							215458, -- [23]
+							212587, -- [24]
+							212647, -- [25]
+							213083, -- [26]
+							206607, -- [27]
+							206609, -- [28]
+							206615, -- [29]
+							212099, -- [30]
+							212568, -- [31]
+							206883, -- [32]
+							206222, -- [33]
+							206221, -- [34]
+							208672, -- [35]
+							208802, -- [36]
+							221891, -- [37]
+							221603, -- [38]
+							206896, -- [39]
+							211261, -- [40]
+							209615, -- [41]
+							209973, -- [42]
+							209971, -- [43]
+							211887, -- [44]
+							209170, -- [45]
+							209599, -- [46]
+							206480, -- [47]
+							213238, -- [48]
+							212795, -- [49]
+							208230, -- [50]
+							216024, -- [51]
+							216040, -- [52]
+							204766, -- [53]
+							214657, -- [54]
+							214662, -- [55]
+							211659, -- [56]
+							204471, -- [57]
+						},
+						[609] = {
+							74562, -- [1]
+							74567, -- [2]
+							74792, -- [3]
+							74795, -- [4]
+							74502, -- [5]
+							74367, -- [6]
+							74452, -- [7]
+						},
+						[930] = {
+							137341, -- [1]
+							137360, -- [2]
+							137408, -- [3]
+							137440, -- [4]
+							138308, -- [5]
+							138372, -- [6]
+							138349, -- [7]
+							137399, -- [8]
+							138733, -- [9]
+							138002, -- [10]
+							140092, -- [11]
+							134256, -- [12]
+							138319, -- [13]
+							134366, -- [14]
+							140014, -- [15]
+							136050, -- [16]
+							140546, -- [17]
+							137000, -- [18]
+							136228, -- [19]
+							138609, -- [20]
+							138569, -- [21]
+							138659, -- [22]
+							136954, -- [23]
+							134691, -- [24]
+							134647, -- [25]
+							136193, -- [26]
+							135145, -- [27]
+							139822, -- [28]
+							137731, -- [29]
+							139866, -- [30]
+							139841, -- [31]
+							134378, -- [32]
+							139839, -- [33]
+							140179, -- [34]
+							139994, -- [35]
+							137552, -- [36]
+							134916, -- [37]
+							135150, -- [38]
+							139011, -- [39]
+							136478, -- [40]
+							136853, -- [41]
+							136295, -- [42]
+							135703, -- [43]
+							136767, -- [44]
+							136708, -- [45]
+							136719, -- [46]
+							136654, -- [47]
+							136587, -- [48]
+							136512, -- [49]
+							140946, -- [50]
+							136710, -- [51]
+							133767, -- [52]
+							133768, -- [53]
+							134755, -- [54]
+							136413, -- [55]
+							133795, -- [56]
+							133597, -- [57]
+							133598, -- [58]
+							134007, -- [59]
+							137650, -- [60]
+							137085, -- [61]
+							136922, -- [62]
+							136917, -- [63]
+							136903, -- [64]
+							136857, -- [65]
+							137359, -- [66]
+							137891, -- [67]
+						},
+						[800] = {
+							98443, -- [1]
+							98450, -- [2]
+							98535, -- [3]
+							96993, -- [4]
+							76622, -- [5]
+							97151, -- [6]
+							99610, -- [7]
+							99693, -- [8]
+							99695, -- [9]
+							99800, -- [10]
+							99993, -- [11]
+							100767, -- [12]
+							49026, -- [13]
+							97079, -- [14]
+							97202, -- [15]
+							99506, -- [16]
+							99936, -- [17]
+							99837, -- [18]
+							99840, -- [19]
+							99252, -- [20]
+							99256, -- [21]
+							99516, -- [22]
+							99399, -- [23]
+							100238, -- [24]
+							98313, -- [25]
+							100460, -- [26]
+							98981, -- [27]
+							99613, -- [28]
+							98492, -- [29]
+							100094, -- [30]
+							99389, -- [31]
+							99308, -- [32]
+							100640, -- [33]
+							100555, -- [34]
+						},
+						[796] = {
+							34654, -- [1]
+							39674, -- [2]
+							41150, -- [3]
+							41168, -- [4]
+							39837, -- [5]
+							40239, -- [6]
+							40251, -- [7]
+							40604, -- [8]
+							40481, -- [9]
+							40508, -- [10]
+							42005, -- [11]
+							41303, -- [12]
+							41410, -- [13]
+							41376, -- [14]
+							40860, -- [15]
+							41001, -- [16]
+							41485, -- [17]
+							41472, -- [18]
+							41914, -- [19]
+							41917, -- [20]
+							40585, -- [21]
+							40932, -- [22]
+						},
+						[987] = {
+							164837, -- [1]
+							164504, -- [2]
+							172771, -- [3]
+							169341, -- [4]
+							167240, -- [5]
+							172889, -- [6]
+							173113, -- [7]
+							173307, -- [8]
+							158341, -- [9]
+							163390, -- [10]
+							163740, -- [11]
+							163276, -- [12]
+							168398, -- [13]
+							168227, -- [14]
+						},
+						[989] = {
+							176544, -- [1]
+							160149, -- [2]
+							153757, -- [3]
+							153759, -- [4]
+							154043, -- [5]
+							153139, -- [6]
+							153123, -- [7]
+							156841, -- [8]
+							153907, -- [9]
+							160288, -- [10]
+							152982, -- [11]
+							152838, -- [12]
+							153001, -- [13]
+							152999, -- [14]
+							160303, -- [15]
+							154150, -- [16]
+						},
+						[1147] = {
+							233430, -- [1]
+							233983, -- [2]
+							235213, -- [3]
+							235240, -- [4]
+							240209, -- [5]
+							236304, -- [6]
+							236550, -- [7]
+							236519, -- [8]
+							236603, -- [9]
+							234996, -- [10]
+							234995, -- [11]
+							236330, -- [12]
+							236541, -- [13]
+							233263, -- [14]
+							239264, -- [15]
+							236712, -- [16]
+							231363, -- [17]
+							230345, -- [18]
+							234264, -- [19]
+							233279, -- [20]
+							233062, -- [21]
+							231998, -- [22]
+							231729, -- [23]
+							231770, -- [24]
+							234128, -- [25]
+							236449, -- [26]
+							236241, -- [27]
+							236515, -- [28]
+							235989, -- [29]
+							236361, -- [30]
+							235968, -- [31]
+							239932, -- [32]
+							234295, -- [33]
+							240911, -- [34]
+							238505, -- [35]
+							238429, -- [36]
+							239216, -- [37]
+							239155, -- [38]
+							236710, -- [39]
+							241822, -- [40]
+							236555, -- [41]
+							236494, -- [42]
+							236604, -- [43]
+							239739, -- [44]
+							232913, -- [45]
+							230139, -- [46]
+							232754, -- [47]
+							230201, -- [48]
+							230384, -- [49]
+							230358, -- [50]
+						},
+						[993] = {
+							164192, -- [1]
+							176025, -- [2]
+							176033, -- [3]
+							164218, -- [4]
+							176147, -- [5]
+							164241, -- [6]
+							166340, -- [7]
+							166570, -- [8]
+							160681, -- [9]
+							162507, -- [10]
+							162491, -- [11]
+							162057, -- [12]
+							163447, -- [13]
+							161588, -- [14]
+							162065, -- [15]
+						},
+						[995] = {
+							1604, -- [1]
+							153832, -- [2]
+							153897, -- [3]
+							153981, -- [4]
+							155037, -- [5]
+							155586, -- [6]
+							155581, -- [7]
+							167259, -- [8]
+							155572, -- [9]
+							154827, -- [10]
+							163057, -- [11]
+							165944, -- [12]
+							165954, -- [13]
+							155056, -- [14]
+							155065, -- [15]
+							161772, -- [16]
+							161765, -- [17]
+							155589, -- [18]
+							155721, -- [19]
+							157428, -- [20]
+							162600, -- [21]
+						},
+						[824] = {
+							108046, -- [1]
+							108043, -- [2]
+							107567, -- [3]
+							107558, -- [4]
+							110214, -- [5]
+							106794, -- [6]
+							106385, -- [7]
+							105841, -- [8]
+							105445, -- [9]
+							104451, -- [10]
+							105285, -- [11]
+							105316, -- [12]
+							105289, -- [13]
+							105259, -- [14]
+							105465, -- [15]
+							105369, -- [16]
+							106108, -- [17]
+							106415, -- [18]
+							105927, -- [19]
+							106369, -- [20]
+							103687, -- [21]
+							105563, -- [22]
+							105490, -- [23]
+							105479, -- [24]
+							106199, -- [25]
+							106200, -- [26]
+							106005, -- [27]
+							103434, -- [28]
+							104849, -- [29]
+							109389, -- [30]
+							105695, -- [31]
 						},
 						[1026] = {
 							184243, -- [1]
@@ -8101,422 +8642,6 @@ Grid2DB = {
 							184357, -- [107]
 							184652, -- [108]
 						},
-						[824] = {
-							108046, -- [1]
-							108043, -- [2]
-							107567, -- [3]
-							107558, -- [4]
-							110214, -- [5]
-							106794, -- [6]
-							106385, -- [7]
-							105841, -- [8]
-							105445, -- [9]
-							104451, -- [10]
-							105285, -- [11]
-							105316, -- [12]
-							105289, -- [13]
-							105259, -- [14]
-							105465, -- [15]
-							105369, -- [16]
-							106108, -- [17]
-							106415, -- [18]
-							105927, -- [19]
-							106369, -- [20]
-							103687, -- [21]
-							105563, -- [22]
-							105490, -- [23]
-							105479, -- [24]
-							106199, -- [25]
-							106200, -- [26]
-							106005, -- [27]
-							103434, -- [28]
-							104849, -- [29]
-							109389, -- [30]
-							105695, -- [31]
-						},
-						[987] = {
-							164837, -- [1]
-							164504, -- [2]
-							172771, -- [3]
-							169341, -- [4]
-							167240, -- [5]
-							172889, -- [6]
-							173113, -- [7]
-							173307, -- [8]
-							158341, -- [9]
-							163390, -- [10]
-							163740, -- [11]
-							163276, -- [12]
-							168398, -- [13]
-							168227, -- [14]
-						},
-						[993] = {
-							164192, -- [1]
-							176025, -- [2]
-							176033, -- [3]
-							164218, -- [4]
-							176147, -- [5]
-							164241, -- [6]
-							166340, -- [7]
-							166570, -- [8]
-							160681, -- [9]
-							162507, -- [10]
-							162491, -- [11]
-							162057, -- [12]
-							163447, -- [13]
-							161588, -- [14]
-							162065, -- [15]
-						},
-						[989] = {
-							176544, -- [1]
-							160149, -- [2]
-							153757, -- [3]
-							153759, -- [4]
-							154043, -- [5]
-							153139, -- [6]
-							153123, -- [7]
-							156841, -- [8]
-							153907, -- [9]
-							160288, -- [10]
-							152982, -- [11]
-							152838, -- [12]
-							153001, -- [13]
-							152999, -- [14]
-							160303, -- [15]
-							154150, -- [16]
-						},
-						[796] = {
-							34654, -- [1]
-							39674, -- [2]
-							41150, -- [3]
-							41168, -- [4]
-							39837, -- [5]
-							40239, -- [6]
-							40251, -- [7]
-							40604, -- [8]
-							40481, -- [9]
-							40508, -- [10]
-							42005, -- [11]
-							41303, -- [12]
-							41410, -- [13]
-							41376, -- [14]
-							40860, -- [15]
-							41001, -- [16]
-							41485, -- [17]
-							41472, -- [18]
-							41914, -- [19]
-							41917, -- [20]
-							40585, -- [21]
-							40932, -- [22]
-						},
-						[609] = {
-							74562, -- [1]
-							74567, -- [2]
-							74792, -- [3]
-							74795, -- [4]
-							74502, -- [5]
-							74367, -- [6]
-							74452, -- [7]
-						},
-						[800] = {
-							98443, -- [1]
-							98450, -- [2]
-							98535, -- [3]
-							96993, -- [4]
-							76622, -- [5]
-							97151, -- [6]
-							99610, -- [7]
-							99693, -- [8]
-							99695, -- [9]
-							99800, -- [10]
-							99993, -- [11]
-							100767, -- [12]
-							49026, -- [13]
-							97079, -- [14]
-							97202, -- [15]
-							99506, -- [16]
-							99936, -- [17]
-							99837, -- [18]
-							99840, -- [19]
-							99252, -- [20]
-							99256, -- [21]
-							99516, -- [22]
-							99399, -- [23]
-							100238, -- [24]
-							98313, -- [25]
-							100460, -- [26]
-							98981, -- [27]
-							99613, -- [28]
-							98492, -- [29]
-							100094, -- [30]
-							99389, -- [31]
-							99308, -- [32]
-							100640, -- [33]
-							100555, -- [34]
-						},
-						[1147] = {
-							233430, -- [1]
-							233983, -- [2]
-							235213, -- [3]
-							235240, -- [4]
-							240209, -- [5]
-							236304, -- [6]
-							236550, -- [7]
-							236519, -- [8]
-							236603, -- [9]
-							234996, -- [10]
-							234995, -- [11]
-							236330, -- [12]
-							236541, -- [13]
-							233263, -- [14]
-							239264, -- [15]
-							236712, -- [16]
-							231363, -- [17]
-							230345, -- [18]
-							234264, -- [19]
-							233279, -- [20]
-							233062, -- [21]
-							231998, -- [22]
-							231729, -- [23]
-							231770, -- [24]
-							234128, -- [25]
-							236449, -- [26]
-							236241, -- [27]
-							236515, -- [28]
-							235989, -- [29]
-							236361, -- [30]
-							235968, -- [31]
-							239932, -- [32]
-							234295, -- [33]
-							240911, -- [34]
-							238505, -- [35]
-							238429, -- [36]
-							239216, -- [37]
-							239155, -- [38]
-							236710, -- [39]
-							241822, -- [40]
-							236555, -- [41]
-							236494, -- [42]
-							236604, -- [43]
-							239739, -- [44]
-							232913, -- [45]
-							230139, -- [46]
-							232754, -- [47]
-							230201, -- [48]
-							230384, -- [49]
-							230358, -- [50]
-						},
-						[930] = {
-							137341, -- [1]
-							137360, -- [2]
-							137408, -- [3]
-							137440, -- [4]
-							138308, -- [5]
-							138372, -- [6]
-							138349, -- [7]
-							137399, -- [8]
-							138733, -- [9]
-							138002, -- [10]
-							140092, -- [11]
-							134256, -- [12]
-							138319, -- [13]
-							134366, -- [14]
-							140014, -- [15]
-							136050, -- [16]
-							140546, -- [17]
-							137000, -- [18]
-							136228, -- [19]
-							138609, -- [20]
-							138569, -- [21]
-							138659, -- [22]
-							136954, -- [23]
-							134691, -- [24]
-							134647, -- [25]
-							136193, -- [26]
-							135145, -- [27]
-							139822, -- [28]
-							137731, -- [29]
-							139866, -- [30]
-							139841, -- [31]
-							134378, -- [32]
-							139839, -- [33]
-							140179, -- [34]
-							139994, -- [35]
-							137552, -- [36]
-							134916, -- [37]
-							135150, -- [38]
-							139011, -- [39]
-							136478, -- [40]
-							136853, -- [41]
-							136295, -- [42]
-							135703, -- [43]
-							136767, -- [44]
-							136708, -- [45]
-							136719, -- [46]
-							136654, -- [47]
-							136587, -- [48]
-							136512, -- [49]
-							140946, -- [50]
-							136710, -- [51]
-							133767, -- [52]
-							133768, -- [53]
-							134755, -- [54]
-							136413, -- [55]
-							133795, -- [56]
-							133597, -- [57]
-							133598, -- [58]
-							134007, -- [59]
-							137650, -- [60]
-							137085, -- [61]
-							136922, -- [62]
-							136917, -- [63]
-							136903, -- [64]
-							136857, -- [65]
-							137359, -- [66]
-							137891, -- [67]
-						},
-						[995] = {
-							1604, -- [1]
-							153832, -- [2]
-							153897, -- [3]
-							153981, -- [4]
-							155037, -- [5]
-							155586, -- [6]
-							155581, -- [7]
-							167259, -- [8]
-							155572, -- [9]
-							154827, -- [10]
-							163057, -- [11]
-							165944, -- [12]
-							165954, -- [13]
-							155056, -- [14]
-							155065, -- [15]
-							161772, -- [16]
-							161765, -- [17]
-							155589, -- [18]
-							155721, -- [19]
-							157428, -- [20]
-							162600, -- [21]
-						},
-						[1088] = {
-							206482, -- [1]
-							206788, -- [2]
-							208910, -- [3]
-							208506, -- [4]
-							206641, -- [5]
-							208203, -- [6]
-							205344, -- [7]
-							206677, -- [8]
-							218502, -- [9]
-							219049, -- [10]
-							218424, -- [11]
-							218342, -- [12]
-							218809, -- [13]
-							206585, -- [14]
-							206936, -- [15]
-							206589, -- [16]
-							206388, -- [17]
-							205649, -- [18]
-							206398, -- [19]
-							206965, -- [20]
-							207143, -- [21]
-							212492, -- [22]
-							215458, -- [23]
-							212587, -- [24]
-							212647, -- [25]
-							213083, -- [26]
-							206607, -- [27]
-							206609, -- [28]
-							206615, -- [29]
-							212099, -- [30]
-							212568, -- [31]
-							206883, -- [32]
-							206222, -- [33]
-							206221, -- [34]
-							208672, -- [35]
-							208802, -- [36]
-							221891, -- [37]
-							221603, -- [38]
-							206896, -- [39]
-							211261, -- [40]
-							209615, -- [41]
-							209973, -- [42]
-							209971, -- [43]
-							211887, -- [44]
-							209170, -- [45]
-							209599, -- [46]
-							206480, -- [47]
-							213238, -- [48]
-							212795, -- [49]
-							208230, -- [50]
-							216024, -- [51]
-							216040, -- [52]
-							204766, -- [53]
-							214657, -- [54]
-							214662, -- [55]
-							211659, -- [56]
-							204471, -- [57]
-						},
-						[604] = {
-							70107, -- [1]
-							70106, -- [2]
-							69766, -- [3]
-							71665, -- [4]
-							70126, -- [5]
-							70157, -- [6]
-							70980, -- [7]
-							70450, -- [8]
-							71089, -- [9]
-							69483, -- [10]
-							71163, -- [11]
-							71127, -- [12]
-							70435, -- [13]
-							70671, -- [14]
-							70432, -- [15]
-							71257, -- [16]
-							70873, -- [17]
-							70744, -- [18]
-							70751, -- [19]
-							70633, -- [20]
-							71941, -- [21]
-							70766, -- [22]
-							69290, -- [23]
-							69248, -- [24]
-							72219, -- [25]
-							69278, -- [26]
-							71289, -- [27]
-							71204, -- [28]
-							71237, -- [29]
-							69674, -- [30]
-							69508, -- [31]
-							30494, -- [32]
-							72133, -- [33]
-							68981, -- [34]
-							69242, -- [35]
-							69409, -- [36]
-							70541, -- [37]
-							27177, -- [38]
-							68980, -- [39]
-							69065, -- [40]
-							72999, -- [41]
-							71807, -- [42]
-							69651, -- [43]
-							70838, -- [44]
-							71623, -- [45]
-							70949, -- [46]
-							72151, -- [47]
-							71340, -- [48]
-							72985, -- [49]
-							70923, -- [50]
-							70215, -- [51]
-							72454, -- [52]
-							70341, -- [53]
-							70342, -- [54]
-							70911, -- [55]
-							69774, -- [56]
-							72293, -- [57]
-							72769, -- [58]
-						},
 						[1041] = {
 							196838, -- [1]
 							197556, -- [2]
@@ -8554,195 +8679,70 @@ Grid2DB = {
 							214804, -- [17]
 							200904, -- [18]
 						},
-						[531] = {
-							39647, -- [1]
-							58936, -- [2]
-							60708, -- [3]
-							57491, -- [4]
+						[984] = {
+							154477, -- [1]
+							154218, -- [2]
+							153430, -- [3]
+							157165, -- [4]
+							157170, -- [5]
+							176511, -- [6]
+							157797, -- [7]
+							154852, -- [8]
+							154263, -- [9]
+							157168, -- [10]
+							156954, -- [11]
+							157052, -- [12]
+							156854, -- [13]
+							156856, -- [14]
+							156964, -- [15]
+							156960, -- [16]
+							153234, -- [17]
+							153396, -- [18]
 						},
-						[1114] = {
-							228054, -- [1]
-							227982, -- [2]
-							193367, -- [3]
-							227903, -- [4]
-							228058, -- [5]
-							228519, -- [6]
-							202476, -- [7]
-							232450, -- [8]
-							227570, -- [9]
-							227566, -- [10]
-							227539, -- [11]
-							228250, -- [12]
-							228246, -- [13]
-							228226, -- [14]
-							192044, -- [15]
-							198088, -- [16]
-							228915, -- [17]
-							227959, -- [18]
-							227475, -- [19]
-							192044, -- [20]
-							227781, -- [21]
+						[949] = {
+							175915, -- [1]
+							176004, -- [2]
 						},
-						[1087] = {
-							209602, -- [1]
-							209676, -- [2]
-							224333, -- [3]
-							209628, -- [4]
-							208165, -- [5]
-							211457, -- [6]
-							207906, -- [7]
-							207261, -- [8]
-							207278, -- [9]
+						[951] = {
+							144638, -- [1]
+							144689, -- [2]
+							144607, -- [3]
+							144630, -- [4]
 						},
 						[948] = {
 							167615, -- [1]
 						},
-						[1042] = {
-							194325, -- [1]
-							194216, -- [2]
-							194266, -- [3]
-							197264, -- [4]
-							227233, -- [5]
-							197858, -- [6]
-							193211, -- [7]
-							193364, -- [8]
-							193460, -- [9]
+						[799] = {
+							37066, -- [1]
+							29522, -- [2]
+							29511, -- [3]
+							30753, -- [4]
+							30115, -- [5]
+							30843, -- [6]
 						},
 					},
 				},
 				["buff-BeaconofVirtue-mine"] = {
-					["spellName"] = "Beacon of Virtue",
-					["type"] = "buff",
-					["mine"] = 1,
 					["color1"] = {
 						["a"] = 1,
-						["r"] = 1,
-						["g"] = 0.6,
 						["b"] = 0,
-					},
-				},
-				["buff-AuraofMercy-mine"] = {
-					["color1"] = {
-						["a"] = 1,
-						["b"] = 0.964705882352941,
-						["g"] = 0.262745098039216,
-						["r"] = 0.403921568627451,
+						["g"] = 0.6,
+						["r"] = 1,
 					},
 					["type"] = "buff",
 					["mine"] = 1,
-					["spellName"] = "Aura of Mercy",
+					["spellName"] = "Beacon of Virtue",
 				},
-			},
-			["versions"] = {
-				["Grid2"] = 5,
-				["Grid2RaidDebuffs"] = 1,
-			},
-			["statusMap"] = {
-				["corner-top-left"] = {
-					["buff-BeaconOfLight-mine"] = 101,
-					["buff-BeaconofVirtue-mine"] = 102,
-					["buff-BeaconofFaith-mine"] = 100,
-				},
-				["corner-bottom-right"] = {
-					["buff-BestowFaith-mine"] = 50,
-				},
-				["text-down"] = {
-					["name"] = 99,
-				},
-				["icon-left"] = {
-					["raid-icon-player"] = 155,
-				},
-				["border"] = {
-					["banzai-threat"] = 50,
-				},
-				["role"] = {
-					["dungeon-role"] = 51,
-				},
-				["bar-bottom-right"] = {
-					["buff-BestowFaith-mine"] = 51,
-				},
-				["bar-top-right-color"] = {
-					["color-timeroverlay"] = 50,
-				},
-				["bar-top-left-color"] = {
-					["color-timeroverlay"] = 50,
-				},
-				["text-down-color"] = {
-					["debuff-Forbearance"] = 53,
-				},
-				["side-top-color"] = {
-					["buff-FlashOfLight-mine"] = 99,
-				},
-				["icon-center"] = {
-					["ready-check"] = 150,
-					["raid-debuffs"] = 155,
-				},
-				["top-bar"] = {
-					["buff-Tyr'sDeliverance-mine"] = 51,
-				},
-				["bar-top-right"] = {
-					["buff-BlessingofSacrifice-mine"] = 52,
-					["buff-BlessingofProtection-mine"] = 51,
-					["buff-BlessingofFreedom-mine"] = 50,
-				},
-				["text-up"] = {
-					["resurrection"] = 98,
-					["feign-death"] = 95,
-					["death"] = 93,
-					["charmed"] = 65,
-					["offline"] = 96,
-					["vehicle"] = 70,
-					["afk"] = 97,
-				},
-				["corner-top-right"] = {
-					["buff-BlessingofSacrifice-mine"] = 51,
-					["buff-BlessingofProtection-mine"] = 52,
-					["buff-BlessingofFreedom-mine"] = 50,
-				},
-				["heals-color"] = {
-					["classcolor"] = 99,
-				},
-				["bar-bottom-right-color"] = {
-					["color-timeroverlay"] = 51,
-				},
-				["alpha"] = {
-					["offline"] = 97,
-					["range"] = 99,
-					["death"] = 98,
-				},
-				["top-bar-color"] = {
-					["color-timeroverlay"] = 52,
-				},
-				["top"] = {
-					["buff-Tyr'sDeliverance-mine"] = 51,
-				},
-				["health-color"] = {
-					["classcolor"] = 99,
-				},
-				["health"] = {
-					["health-current"] = 99,
-				},
-				["icon-right"] = {
-					["raid-icon-target"] = 50,
-				},
-				["corner-bottom-left"] = {
-					["buff-AuraofSacrifice-mine"] = 50,
-					["buff-DevotionAura-mine"] = 51,
-					["buff-AuraofMercy-mine"] = 52,
-				},
-				["text-up-color"] = {
-					["charmed"] = 65,
-					["feign-death"] = 96,
-					["health-deficit"] = 50,
-					["offline"] = 93,
-					["vehicle"] = 70,
-					["death"] = 95,
-				},
-				["heals"] = {
-					["heals-incoming"] = 99,
-				},
-				["bar-top-left"] = {
-					["buff-BeaconofVirtue-mine"] = 50,
+				["buff-BlessingofProtection-mine"] = {
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 1,
+						["g"] = 0.580392156862745,
+						["r"] = 0,
+					},
+					["type"] = "buff",
+					["mine"] = 1,
+					["spellName"] = "Blessing of Protection",
 				},
 			},
 		},
@@ -8750,7 +8750,7 @@ Grid2DB = {
 }
 XIVBarDB = {
 	["char"] = {
-		["Drathia - Madmortem"] = {
+		["Drathtix - Madmortem"] = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
@@ -8758,22 +8758,59 @@ XIVBarDB = {
 		},
 		["Dronthal - Madmortem"] = {
 			["portItem"] = {
-				["portId"] = 140192,
 				["text"] = "Dalaran",
+				["portId"] = 140192,
 			},
 		},
 		["Drahmoon - Madmortem"] = {
 			["portItem"] = {
-				["portId"] = 140192,
 				["text"] = "Dalaran",
+				["portId"] = 140192,
 			},
 		},
-		["Drathtix - Madmortem"] = {
+		["Drathia - Madmortem"] = {
 			["portItem"] = {
 				["portId"] = 140192,
 				["text"] = "Dalaran",
 			},
 		},
+	},
+	["factionrealm"] = {
+		["Alliance - Madmortem"] = {
+			["Drahmoon"] = {
+				["dailyMoney"] = 0,
+				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["currentMoney"] = 707261350,
+				["lastLoginDate"] = 20170727,
+			},
+			["Dronthal"] = {
+				["dailyMoney"] = -739736888,
+				["sessionMoney"] = 0,
+				["currentMoney"] = 192431296,
+				["lastLoginDate"] = 20170807,
+				["daily"] = 0,
+			},
+			["Drathia"] = {
+				["dailyMoney"] = 0,
+				["sessionMoney"] = 0,
+				["currentMoney"] = 12864863,
+				["lastLoginDate"] = 20170727,
+				["daily"] = 0,
+			},
+			["Drathtix"] = {
+				["lastLoginDate"] = 20170807,
+				["dailyMoney"] = 0,
+				["currentMoney"] = 0,
+				["sessionMoney"] = 0,
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
+		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathia - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Dronthal - Madmortem"] = {
@@ -8783,15 +8820,15 @@ XIVBarDB = {
 		["Drathtix - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
-					["r"] = 1,
-					["g"] = 1,
 					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["r"] = 0,
-					["g"] = 0,
 					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
 				},
 			},
 			["text"] = {
@@ -8809,8 +8846,8 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["showTooltip"] = false,
 					["barCC"] = true,
+					["showTooltip"] = false,
 				},
 				["travel"] = {
 					["enabled"] = false,
@@ -8819,9 +8856,9 @@ XIVBarDB = {
 					["char"] = false,
 					["help"] = false,
 					["talent"] = false,
-					["chat"] = false,
-					["quest"] = false,
 					["pvp"] = false,
+					["quest"] = false,
+					["chat"] = false,
 				},
 				["currency"] = {
 					["currencyTwo"] = "1226",
@@ -8840,28 +8877,28 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["system"] = {
-					["showAllOnShift"] = false,
-					["showTooltip"] = false,
-				},
 				["clock"] = {
 					["hideEventText"] = true,
 					["timeFormat"] = "twoFourNoZero",
+				},
+				["system"] = {
+					["showAllOnShift"] = false,
+					["showTooltip"] = false,
 				},
 			},
 		},
 		["Drahmoon - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
-					["b"] = 1,
-					["g"] = 1,
 					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["b"] = 0,
-					["g"] = 0,
 					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
 				},
 			},
 			["text"] = {
@@ -8879,8 +8916,8 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["barCC"] = true,
 					["showTooltip"] = false,
+					["barCC"] = true,
 				},
 				["travel"] = {
 					["enabled"] = false,
@@ -8889,9 +8926,9 @@ XIVBarDB = {
 					["char"] = false,
 					["help"] = false,
 					["talent"] = false,
-					["pvp"] = false,
-					["quest"] = false,
 					["chat"] = false,
+					["quest"] = false,
+					["pvp"] = false,
 				},
 				["currency"] = {
 					["enabled"] = false,
@@ -8910,54 +8947,17 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["clock"] = {
-					["hideEventText"] = true,
-					["timeFormat"] = "twoFourNoZero",
-				},
 				["system"] = {
 					["showAllOnShift"] = false,
 					["showTooltip"] = false,
 				},
+				["clock"] = {
+					["hideEventText"] = true,
+					["timeFormat"] = "twoFourNoZero",
+				},
 			},
 		},
 		["Drathia - Madmortem"] = {
-		},
-	},
-	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Default",
-		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
-	},
-	["factionrealm"] = {
-		["Alliance - Madmortem"] = {
-			["Dronthal"] = {
-				["dailyMoney"] = -739736888,
-				["sessionMoney"] = 0,
-				["daily"] = 0,
-				["lastLoginDate"] = 20170807,
-				["currentMoney"] = 192431296,
-			},
-			["Drahmoon"] = {
-				["dailyMoney"] = 0,
-				["sessionMoney"] = 0,
-				["currentMoney"] = 707261350,
-				["lastLoginDate"] = 20170727,
-				["daily"] = 0,
-			},
-			["Drathia"] = {
-				["dailyMoney"] = 0,
-				["sessionMoney"] = 0,
-				["daily"] = 0,
-				["lastLoginDate"] = 20170727,
-				["currentMoney"] = 12864863,
-			},
-			["Drathtix"] = {
-				["currentMoney"] = 0,
-				["dailyMoney"] = 0,
-				["lastLoginDate"] = 20170807,
-				["sessionMoney"] = 0,
-			},
 		},
 	},
 }
@@ -8967,210 +8967,23 @@ SkadaDB = {
 		},
 	},
 	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Default",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drahmoon - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
+		["Drathia - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["hidedisables"] = false,
-			["reset"] = {
-				["instance"] = 2,
-				["join"] = 1,
-			},
-			["modeclicks"] = {
-				["Damage"] = 8,
-				["Healing"] = 5,
-			},
-			["windows"] = {
-				{
-					["barheight"] = 17,
-					["barcolor"] = {
-						["a"] = 0.570000022649765,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
-					["barfontsize"] = 12,
-					["barslocked"] = true,
-					["background"] = {
-						["height"] = 108.000099182129,
-						["bordertexture"] = "None",
-						["borderthickness"] = 0,
-						["texture"] = "None",
-					},
-					["bartexture"] = "Tooltip",
-					["barwidth"] = 234.999908447266,
-					["hidden"] = true,
-					["smoothing"] = true,
-					["y"] = 4.00001335144043,
-					["barfont"] = "KkthnxUI_Normal",
-					["title"] = {
-						["font"] = "KkthnxUI_Normal",
-						["borderthickness"] = 0,
-						["color"] = {
-							["a"] = 0,
-							["r"] = 0.6,
-							["g"] = 0.6,
-							["b"] = 0.8,
-						},
-						["fontflags"] = "OUTLINE",
-						["fontsize"] = 12,
-						["height"] = 18,
-						["texture"] = "Tooltip",
-					},
-					["point"] = "BOTTOMRIGHT",
-					["buttons"] = {
-						["report"] = false,
-						["mode"] = false,
-						["menu"] = false,
-						["reset"] = false,
-					},
-					["mode"] = "Damage",
-					["barfontflags"] = "OUTLINE",
-					["x"] = -0.000244140625,
-				}, -- [1]
-				{
-					["titleset"] = true,
-					["barheight"] = 17,
-					["color"] = {
-						["a"] = 0.6,
-						["b"] = 0.3,
-						["g"] = 0.3,
-						["r"] = 0.3,
-					},
-					["issolidbackdrop"] = false,
-					["classicons"] = true,
-					["barslocked"] = true,
-					["useframe"] = true,
-					["clickthrough"] = false,
-					["wipemode"] = "",
-					["set"] = "current",
-					["hidden"] = true,
-					["y"] = 3.99986577033997,
-					["barfont"] = "KkthnxUI_Normal",
-					["name"] = "Heal",
-					["display"] = "bar",
-					["height"] = 30,
-					["barfontflags"] = "OUTLINE",
-					["isusingelvuiskin"] = true,
-					["background"] = {
-						["color"] = {
-							["a"] = 0.4,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["bordertexture"] = "None",
-						["borderthickness"] = 0,
-						["tile"] = false,
-						["height"] = 108.000053405762,
-						["bordercolor"] = {
-							["a"] = 1,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["tilesize"] = 0,
-						["texture"] = "None",
-					},
-					["strata"] = "LOW",
-					["point"] = "BOTTOMRIGHT",
-					["spellschoolcolors"] = true,
-					["barbgcolor"] = {
-						["a"] = 0.6,
-						["b"] = 0.3,
-						["g"] = 0.3,
-						["r"] = 0.3,
-					},
-					["barcolor"] = {
-						["a"] = 0.570000022649765,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
-					["barfontsize"] = 12,
-					["returnaftercombat"] = false,
-					["title"] = {
-						["textcolor"] = {
-							["a"] = 1,
-							["b"] = 0.9,
-							["g"] = 0.9,
-							["r"] = 0.9,
-						},
-						["color"] = {
-							["a"] = 0,
-							["r"] = 0.6,
-							["g"] = 0.6,
-							["b"] = 0.8,
-						},
-						["bordercolor"] = {
-							["a"] = 1,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["font"] = "KkthnxUI_Normal",
-						["fontsize"] = 12,
-						["fontflags"] = "OUTLINE",
-						["height"] = 18,
-						["borderthickness"] = 0,
-						["bordertexture"] = "None",
-						["texture"] = "Tooltip",
-					},
-					["version"] = 1,
-					["snapto"] = true,
-					["roleicons"] = false,
-					["barorientation"] = 1,
-					["mode"] = "Healing",
-					["enabletitle"] = true,
-					["reversegrowth"] = false,
-					["smoothing"] = true,
-					["fixedbarwidth"] = false,
-					["modeincombat"] = "",
-					["buttons"] = {
-						["report"] = false,
-						["segment"] = true,
-						["menu"] = false,
-						["reset"] = false,
-					},
-					["barwidth"] = 244.999984741211,
-					["barspacing"] = 0,
-					["bartexture"] = "Tooltip",
-					["width"] = 600,
-					["textcolor"] = {
-						["b"] = 0.9,
-						["g"] = 0.9,
-						["r"] = 0.9,
-					},
-					["scale"] = 1,
-					["isonnewline"] = false,
-					["classcolorbars"] = true,
-					["isusingclasscolors"] = true,
-					["showself"] = true,
-					["classcolortext"] = false,
-					["x"] = -238.999389648438,
-				}, -- [2]
-			},
-			["showself"] = true,
-			["versions"] = {
-				["1.6.7"] = true,
-				["1.6.4"] = true,
-				["1.6.3"] = true,
-			},
-			["icon"] = {
-				["minimapPos"] = 248.916233791662,
-			},
 			["themes"] = {
 				{
 					["titleset"] = true,
 					["barheight"] = 16,
 					["color"] = {
 						["a"] = 0.6,
-						["r"] = 0.3,
-						["g"] = 0.3,
 						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
 					},
 					["issolidbackdrop"] = false,
 					["classicons"] = true,
@@ -9184,114 +8997,114 @@ SkadaDB = {
 					["x"] = 78.9996032714844,
 					["name"] = "drathal",
 					["display"] = "bar",
-					["barfont"] = "KkthnxUI_Normal",
+					["height"] = 30,
 					["barfontflags"] = "OUTLINE",
 					["isusingelvuiskin"] = true,
-					["classcolortext"] = false,
+					["background"] = {
+						["color"] = {
+							["a"] = 0.4,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["bordertexture"] = "Blizzard Party",
+						["borderthickness"] = 0,
+						["tile"] = false,
+						["height"] = 195,
+						["bordercolor"] = {
+							["a"] = 1,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["tilesize"] = 0,
+						["texture"] = "None",
+					},
 					["strata"] = "LOW",
-					["point"] = "CENTER",
+					["classcolortext"] = false,
 					["spellschoolcolors"] = true,
 					["barbgcolor"] = {
 						["a"] = 0.6,
-						["r"] = 0.3,
-						["g"] = 0.3,
 						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
 					},
 					["barcolor"] = {
 						["a"] = 1,
-						["b"] = 0.396078431372549,
-						["g"] = 0.12156862745098,
 						["r"] = 0.258823529411765,
+						["g"] = 0.12156862745098,
+						["b"] = 0.396078431372549,
 					},
-					["showself"] = true,
+					["returnaftercombat"] = false,
 					["barfontsize"] = 12,
 					["title"] = {
 						["textcolor"] = {
 							["a"] = 1,
-							["r"] = 0.9,
-							["g"] = 0.9,
 							["b"] = 0.9,
+							["g"] = 0.9,
+							["r"] = 0.9,
 						},
 						["color"] = {
 							["a"] = 0,
-							["b"] = 0.8,
-							["g"] = 0.6,
 							["r"] = 0.6,
+							["g"] = 0.6,
+							["b"] = 0.8,
 						},
 						["bordercolor"] = {
 							["a"] = 1,
-							["r"] = 0,
-							["g"] = 0,
 							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
 						},
 						["font"] = "KkthnxUI_Normal",
 						["fontsize"] = 12,
-						["height"] = 18,
 						["fontflags"] = "",
-						["bordertexture"] = "None",
+						["height"] = 18,
 						["borderthickness"] = 0,
+						["bordertexture"] = "None",
 						["texture"] = "Tooltip",
 					},
 					["version"] = 1,
-					["isonnewline"] = false,
+					["mode"] = "Healing",
 					["roleicons"] = false,
 					["barorientation"] = 1,
 					["snapto"] = true,
-					["scale"] = 1,
+					["enabletitle"] = true,
+					["reversegrowth"] = false,
+					["smoothing"] = true,
 					["textcolor"] = {
-						["r"] = 0.9,
-						["g"] = 0.9,
 						["b"] = 0.9,
+						["g"] = 0.9,
+						["r"] = 0.9,
 					},
-					["width"] = 600,
-					["fixedbarwidth"] = false,
+					["modeincombat"] = "",
 					["bartexture"] = "Solid",
+					["barwidth"] = 240,
+					["barspacing"] = 0,
 					["buttons"] = {
 						["segment"] = true,
 						["report"] = true,
 						["menu"] = true,
 						["reset"] = true,
 					},
-					["barwidth"] = 240,
-					["barspacing"] = 0,
-					["modeincombat"] = "",
-					["smoothing"] = true,
-					["reversegrowth"] = false,
-					["enabletitle"] = true,
-					["mode"] = "Healing",
+					["width"] = 600,
+					["fixedbarwidth"] = false,
+					["scale"] = 1,
+					["isonnewline"] = false,
 					["classcolorbars"] = true,
 					["isusingclasscolors"] = true,
-					["returnaftercombat"] = false,
-					["background"] = {
-						["height"] = 195,
-						["bordercolor"] = {
-							["a"] = 1,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["borderthickness"] = 0,
-						["tile"] = false,
-						["color"] = {
-							["a"] = 0.4,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["bordertexture"] = "Blizzard Party",
-						["tilesize"] = 0,
-						["texture"] = "None",
-					},
-					["height"] = 30,
+					["showself"] = true,
+					["point"] = "CENTER",
+					["barfont"] = "KkthnxUI_Normal",
 				}, -- [1]
 				{
 					["titleset"] = true,
 					["barheight"] = 17,
 					["color"] = {
 						["a"] = 0.6,
-						["r"] = 0.3,
-						["g"] = 0.3,
 						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
 					},
 					["issolidbackdrop"] = false,
 					["classicons"] = true,
@@ -9305,59 +9118,86 @@ SkadaDB = {
 					["barfont"] = "KkthnxUI_Normal",
 					["name"] = "drathal",
 					["display"] = "bar",
-					["x"] = 0,
+					["title"] = {
+						["textcolor"] = {
+							["a"] = 1,
+							["b"] = 0.9,
+							["g"] = 0.9,
+							["r"] = 0.9,
+						},
+						["color"] = {
+							["a"] = 0,
+							["r"] = 0.6,
+							["g"] = 0.6,
+							["b"] = 0.8,
+						},
+						["bordercolor"] = {
+							["a"] = 1,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["font"] = "KkthnxUI_Normal",
+						["fontsize"] = 12,
+						["fontflags"] = "OUTLINE",
+						["height"] = 18,
+						["borderthickness"] = 0,
+						["bordertexture"] = "None",
+						["texture"] = "Tooltip",
+					},
 					["barfontflags"] = "OUTLINE",
 					["isusingelvuiskin"] = true,
-					["classcolortext"] = false,
+					["barbgcolor"] = {
+						["a"] = 0.6,
+						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
+					},
 					["strata"] = "LOW",
-					["point"] = "BOTTOMRIGHT",
+					["classcolortext"] = false,
 					["spellschoolcolors"] = true,
 					["showself"] = true,
 					["barcolor"] = {
 						["a"] = 0.570000022649765,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
+					["isonnewline"] = false,
 					["barfontsize"] = 12,
-					["returnaftercombat"] = false,
 					["height"] = 30,
 					["background"] = {
+						["color"] = {
+							["a"] = 0.4,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["bordertexture"] = "None",
+						["borderthickness"] = 0,
+						["tile"] = false,
 						["height"] = 195,
 						["bordercolor"] = {
 							["a"] = 1,
-							["r"] = 0,
-							["g"] = 0,
 							["b"] = 0,
-						},
-						["borderthickness"] = 0,
-						["tile"] = false,
-						["color"] = {
-							["a"] = 0.4,
-							["r"] = 0,
 							["g"] = 0,
-							["b"] = 0,
+							["r"] = 0,
 						},
-						["bordertexture"] = "None",
 						["tilesize"] = 0,
 						["texture"] = "None",
 					},
-					["snapto"] = true,
+					["reversegrowth"] = false,
 					["roleicons"] = false,
 					["barorientation"] = 1,
-					["mode"] = "Damage",
-					["scale"] = 1,
-					["version"] = 1,
-					["smoothing"] = true,
+					["snapto"] = true,
+					["modeincombat"] = "",
+					["fixedbarwidth"] = false,
+					["width"] = 600,
 					["textcolor"] = {
-						["r"] = 0.9,
-						["g"] = 0.9,
 						["b"] = 0.9,
+						["g"] = 0.9,
+						["r"] = 0.9,
 					},
-					["enabletitle"] = true,
-					["bartexture"] = "Tooltip",
-					["barwidth"] = 240,
-					["barspacing"] = 0,
 					["buttons"] = {
 						["report"] = false,
 						["menu"] = false,
@@ -9365,176 +9205,73 @@ SkadaDB = {
 						["segment"] = true,
 						["reset"] = false,
 					},
-					["width"] = 600,
-					["fixedbarwidth"] = false,
-					["modeincombat"] = "",
-					["reversegrowth"] = false,
+					["bartexture"] = "Tooltip",
+					["barwidth"] = 240,
+					["barspacing"] = 0,
+					["enabletitle"] = true,
+					["smoothing"] = true,
+					["version"] = 1,
+					["scale"] = 1,
+					["mode"] = "Damage",
 					["classcolorbars"] = true,
 					["isusingclasscolors"] = true,
-					["isonnewline"] = false,
-					["barbgcolor"] = {
-						["a"] = 0.6,
-						["r"] = 0.3,
-						["g"] = 0.3,
-						["b"] = 0.3,
-					},
-					["title"] = {
-						["textcolor"] = {
-							["a"] = 1,
-							["r"] = 0.9,
-							["g"] = 0.9,
-							["b"] = 0.9,
-						},
-						["color"] = {
-							["a"] = 0,
-							["b"] = 0.8,
-							["g"] = 0.6,
-							["r"] = 0.6,
-						},
-						["bordercolor"] = {
-							["a"] = 1,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["font"] = "KkthnxUI_Normal",
-						["fontsize"] = 12,
-						["height"] = 18,
-						["fontflags"] = "OUTLINE",
-						["bordertexture"] = "None",
-						["borderthickness"] = 0,
-						["texture"] = "Tooltip",
-					},
+					["returnaftercombat"] = false,
+					["point"] = "BOTTOMRIGHT",
+					["x"] = 0,
 				}, -- [2]
 			},
-		},
-		["Drathtix - Madmortem"] = {
-			["tooltips"] = true,
-			["modules"] = {
+			["modeclicks"] = {
+				["Healing"] = 5,
+				["Damage"] = 8,
 			},
-			["hidepvp"] = false,
+			["showself"] = true,
 			["windows"] = {
 				{
-					["titleset"] = true,
 					["barheight"] = 17,
-					["color"] = {
-						["a"] = 0.6,
-						["r"] = 0.3,
-						["g"] = 0.3,
-						["b"] = 0.3,
+					["barcolor"] = {
+						["a"] = 0.570000022649765,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
-					["issolidbackdrop"] = false,
-					["classicons"] = true,
+					["barfontsize"] = 12,
 					["barslocked"] = true,
-					["useframe"] = true,
 					["background"] = {
 						["height"] = 108.000099182129,
 						["bordertexture"] = "None",
 						["borderthickness"] = 0,
-						["tile"] = false,
-						["color"] = {
-							["a"] = 0.4,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["bordercolor"] = {
-							["a"] = 1,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["tilesize"] = 0,
 						["texture"] = "None",
 					},
-					["wipemode"] = "",
-					["set"] = "current",
+					["bartexture"] = "Tooltip",
+					["barwidth"] = 234.999908447266,
 					["hidden"] = true,
+					["smoothing"] = true,
 					["y"] = 4.00001335144043,
 					["barfont"] = "KkthnxUI_Normal",
 					["title"] = {
-						["textcolor"] = {
-							["a"] = 1,
-							["r"] = 0.9,
-							["g"] = 0.9,
-							["b"] = 0.9,
-						},
+						["font"] = "KkthnxUI_Normal",
+						["borderthickness"] = 0,
+						["fontflags"] = "OUTLINE",
 						["color"] = {
 							["a"] = 0,
 							["b"] = 0.8,
 							["g"] = 0.6,
 							["r"] = 0.6,
 						},
-						["bordertexture"] = "None",
-						["font"] = "KkthnxUI_Normal",
-						["borderthickness"] = 0,
-						["bordercolor"] = {
-							["a"] = 1,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["fontflags"] = "OUTLINE",
 						["height"] = 18,
 						["fontsize"] = 12,
 						["texture"] = "Tooltip",
 					},
-					["height"] = 30,
 					["x"] = -0.000244140625,
-					["barfontflags"] = "OUTLINE",
-					["isusingelvuiskin"] = true,
-					["name"] = "Skada",
-					["strata"] = "LOW",
-					["point"] = "BOTTOMRIGHT",
-					["spellschoolcolors"] = true,
-					["barbgcolor"] = {
-						["a"] = 0.6,
-						["r"] = 0.3,
-						["g"] = 0.3,
-						["b"] = 0.3,
-					},
-					["barcolor"] = {
-						["a"] = 0.570000022649765,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["enabletitle"] = true,
-					["barfontsize"] = 12,
-					["clickthrough"] = false,
-					["returnaftercombat"] = false,
-					["showself"] = true,
-					["roleicons"] = false,
-					["barorientation"] = 1,
-					["mode"] = "Damage",
-					["snapto"] = true,
-					["isonnewline"] = false,
-					["smoothing"] = true,
-					["fixedbarwidth"] = false,
 					["buttons"] = {
-						["segment"] = true,
-						["menu"] = false,
-						["mode"] = false,
 						["report"] = false,
+						["mode"] = false,
+						["menu"] = false,
 						["reset"] = false,
 					},
-					["bartexture"] = "Tooltip",
-					["barwidth"] = 234.999908447266,
-					["barspacing"] = 0,
-					["textcolor"] = {
-						["r"] = 0.9,
-						["g"] = 0.9,
-						["b"] = 0.9,
-					},
-					["width"] = 600,
-					["reversegrowth"] = false,
-					["scale"] = 1,
-					["modeincombat"] = "",
-					["classcolorbars"] = true,
-					["isusingclasscolors"] = true,
-					["version"] = 1,
-					["classcolortext"] = false,
-					["display"] = "bar",
+					["mode"] = "Damage",
+					["barfontflags"] = "OUTLINE",
+					["point"] = "BOTTOMRIGHT",
 				}, -- [1]
 				{
 					["titleset"] = true,
@@ -9549,33 +9286,14 @@ SkadaDB = {
 					["classicons"] = true,
 					["barslocked"] = true,
 					["useframe"] = true,
-					["background"] = {
-						["height"] = 108.000053405762,
-						["bordercolor"] = {
-							["a"] = 1,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["borderthickness"] = 0,
-						["tile"] = false,
-						["color"] = {
-							["a"] = 0.4,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["bordertexture"] = "None",
-						["tilesize"] = 0,
-						["texture"] = "None",
-					},
+					["clickthrough"] = false,
 					["wipemode"] = "",
 					["set"] = "current",
 					["hidden"] = true,
 					["y"] = 3.99986577033997,
 					["barfont"] = "KkthnxUI_Normal",
 					["name"] = "Heal",
-					["height"] = 30,
+					["display"] = "bar",
 					["x"] = -238.999389648438,
 					["barfontflags"] = "OUTLINE",
 					["isusingelvuiskin"] = true,
@@ -9597,37 +9315,6 @@ SkadaDB = {
 					},
 					["showself"] = true,
 					["barfontsize"] = 12,
-					["version"] = 1,
-					["clickthrough"] = false,
-					["isonnewline"] = false,
-					["roleicons"] = false,
-					["barorientation"] = 1,
-					["snapto"] = true,
-					["scale"] = 1,
-					["textcolor"] = {
-						["r"] = 0.9,
-						["g"] = 0.9,
-						["b"] = 0.9,
-					},
-					["width"] = 600,
-					["fixedbarwidth"] = false,
-					["bartexture"] = "Tooltip",
-					["buttons"] = {
-						["segment"] = true,
-						["report"] = false,
-						["menu"] = false,
-						["reset"] = false,
-					},
-					["barwidth"] = 244.999984741211,
-					["barspacing"] = 0,
-					["modeincombat"] = "",
-					["smoothing"] = true,
-					["reversegrowth"] = false,
-					["enabletitle"] = true,
-					["mode"] = "Healing",
-					["classcolorbars"] = true,
-					["isusingclasscolors"] = true,
-					["returnaftercombat"] = false,
 					["title"] = {
 						["textcolor"] = {
 							["a"] = 1,
@@ -9655,7 +9342,320 @@ SkadaDB = {
 						["borderthickness"] = 0,
 						["texture"] = "Tooltip",
 					},
+					["version"] = 1,
+					["isonnewline"] = false,
+					["roleicons"] = false,
+					["barorientation"] = 1,
+					["snapto"] = true,
+					["scale"] = 1,
+					["textcolor"] = {
+						["r"] = 0.9,
+						["g"] = 0.9,
+						["b"] = 0.9,
+					},
+					["width"] = 600,
+					["fixedbarwidth"] = false,
+					["bartexture"] = "Tooltip",
+					["buttons"] = {
+						["report"] = false,
+						["segment"] = true,
+						["menu"] = false,
+						["reset"] = false,
+					},
+					["barwidth"] = 244.999984741211,
+					["barspacing"] = 0,
+					["modeincombat"] = "",
+					["smoothing"] = true,
+					["reversegrowth"] = false,
+					["enabletitle"] = true,
+					["mode"] = "Healing",
+					["classcolorbars"] = true,
+					["isusingclasscolors"] = true,
+					["returnaftercombat"] = false,
+					["background"] = {
+						["height"] = 108.000053405762,
+						["bordercolor"] = {
+							["a"] = 1,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["borderthickness"] = 0,
+						["tile"] = false,
+						["color"] = {
+							["a"] = 0.4,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["bordertexture"] = "None",
+						["tilesize"] = 0,
+						["texture"] = "None",
+					},
+					["height"] = 30,
+				}, -- [2]
+			},
+			["versions"] = {
+				["1.6.3"] = true,
+				["1.6.4"] = true,
+				["1.6.7"] = true,
+			},
+			["icon"] = {
+				["minimapPos"] = 248.916233791662,
+			},
+			["reset"] = {
+				["instance"] = 2,
+				["join"] = 1,
+			},
+		},
+		["Drathtix - Madmortem"] = {
+			["tooltips"] = true,
+			["modules"] = {
+			},
+			["hidepvp"] = false,
+			["windows"] = {
+				{
+					["titleset"] = true,
+					["barheight"] = 17,
+					["color"] = {
+						["a"] = 0.6,
+						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
+					},
+					["issolidbackdrop"] = false,
+					["classicons"] = true,
+					["barslocked"] = true,
+					["useframe"] = true,
+					["background"] = {
+						["color"] = {
+							["a"] = 0.4,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["bordercolor"] = {
+							["a"] = 1,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["borderthickness"] = 0,
+						["tile"] = false,
+						["height"] = 108.000099182129,
+						["bordertexture"] = "None",
+						["tilesize"] = 0,
+						["texture"] = "None",
+					},
+					["wipemode"] = "",
+					["set"] = "current",
+					["hidden"] = true,
+					["y"] = 4.00001335144043,
+					["barfont"] = "KkthnxUI_Normal",
+					["title"] = {
+						["textcolor"] = {
+							["a"] = 1,
+							["b"] = 0.9,
+							["g"] = 0.9,
+							["r"] = 0.9,
+						},
+						["color"] = {
+							["a"] = 0,
+							["r"] = 0.6,
+							["g"] = 0.6,
+							["b"] = 0.8,
+						},
+						["bordertexture"] = "None",
+						["font"] = "KkthnxUI_Normal",
+						["borderthickness"] = 0,
+						["bordercolor"] = {
+							["a"] = 1,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["fontflags"] = "OUTLINE",
+						["fontsize"] = 12,
+						["height"] = 18,
+						["texture"] = "Tooltip",
+					},
+					["height"] = 30,
 					["display"] = "bar",
+					["barfontflags"] = "OUTLINE",
+					["isusingelvuiskin"] = true,
+					["classcolortext"] = false,
+					["strata"] = "LOW",
+					["point"] = "BOTTOMRIGHT",
+					["spellschoolcolors"] = true,
+					["barbgcolor"] = {
+						["a"] = 0.6,
+						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
+					},
+					["barcolor"] = {
+						["a"] = 0.570000022649765,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
+					["version"] = 1,
+					["barfontsize"] = 12,
+					["clickthrough"] = false,
+					["returnaftercombat"] = false,
+					["modeincombat"] = "",
+					["roleicons"] = false,
+					["barorientation"] = 1,
+					["mode"] = "Damage",
+					["scale"] = 1,
+					["reversegrowth"] = false,
+					["width"] = 600,
+					["fixedbarwidth"] = false,
+					["textcolor"] = {
+						["b"] = 0.9,
+						["g"] = 0.9,
+						["r"] = 0.9,
+					},
+					["buttons"] = {
+						["segment"] = true,
+						["menu"] = false,
+						["mode"] = false,
+						["report"] = false,
+						["reset"] = false,
+					},
+					["barwidth"] = 234.999908447266,
+					["barspacing"] = 0,
+					["bartexture"] = "Tooltip",
+					["smoothing"] = true,
+					["isonnewline"] = false,
+					["snapto"] = true,
+					["showself"] = true,
+					["classcolorbars"] = true,
+					["isusingclasscolors"] = true,
+					["enabletitle"] = true,
+					["name"] = "Skada",
+					["x"] = -0.000244140625,
+				}, -- [1]
+				{
+					["titleset"] = true,
+					["barheight"] = 17,
+					["color"] = {
+						["a"] = 0.6,
+						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
+					},
+					["issolidbackdrop"] = false,
+					["classicons"] = true,
+					["barslocked"] = true,
+					["useframe"] = true,
+					["background"] = {
+						["color"] = {
+							["a"] = 0.4,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["bordertexture"] = "None",
+						["borderthickness"] = 0,
+						["tile"] = false,
+						["height"] = 108.000053405762,
+						["bordercolor"] = {
+							["a"] = 1,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["tilesize"] = 0,
+						["texture"] = "None",
+					},
+					["wipemode"] = "",
+					["set"] = "current",
+					["hidden"] = true,
+					["y"] = 3.99986577033997,
+					["barfont"] = "KkthnxUI_Normal",
+					["name"] = "Heal",
+					["height"] = 30,
+					["display"] = "bar",
+					["barfontflags"] = "OUTLINE",
+					["isusingelvuiskin"] = true,
+					["title"] = {
+						["textcolor"] = {
+							["a"] = 1,
+							["b"] = 0.9,
+							["g"] = 0.9,
+							["r"] = 0.9,
+						},
+						["color"] = {
+							["a"] = 0,
+							["r"] = 0.6,
+							["g"] = 0.6,
+							["b"] = 0.8,
+						},
+						["bordercolor"] = {
+							["a"] = 1,
+							["b"] = 0,
+							["g"] = 0,
+							["r"] = 0,
+						},
+						["font"] = "KkthnxUI_Normal",
+						["fontsize"] = 12,
+						["fontflags"] = "OUTLINE",
+						["height"] = 18,
+						["borderthickness"] = 0,
+						["bordertexture"] = "None",
+						["texture"] = "Tooltip",
+					},
+					["strata"] = "LOW",
+					["classcolortext"] = false,
+					["spellschoolcolors"] = true,
+					["barbgcolor"] = {
+						["a"] = 0.6,
+						["b"] = 0.3,
+						["g"] = 0.3,
+						["r"] = 0.3,
+					},
+					["barcolor"] = {
+						["a"] = 0.570000022649765,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
+					["returnaftercombat"] = false,
+					["barfontsize"] = 12,
+					["version"] = 1,
+					["clickthrough"] = false,
+					["mode"] = "Healing",
+					["roleicons"] = false,
+					["barorientation"] = 1,
+					["snapto"] = true,
+					["enabletitle"] = true,
+					["reversegrowth"] = false,
+					["smoothing"] = true,
+					["textcolor"] = {
+						["b"] = 0.9,
+						["g"] = 0.9,
+						["r"] = 0.9,
+					},
+					["modeincombat"] = "",
+					["bartexture"] = "Tooltip",
+					["barwidth"] = 244.999984741211,
+					["barspacing"] = 0,
+					["buttons"] = {
+						["segment"] = true,
+						["report"] = false,
+						["menu"] = false,
+						["reset"] = false,
+					},
+					["width"] = 600,
+					["fixedbarwidth"] = false,
+					["scale"] = 1,
+					["isonnewline"] = false,
+					["classcolorbars"] = true,
+					["isusingclasscolors"] = true,
+					["showself"] = true,
+					["point"] = "BOTTOMRIGHT",
+					["x"] = -238.999389648438,
 				}, -- [2]
 			},
 			["icon"] = {
@@ -9672,9 +9672,9 @@ SkadaDB = {
 			},
 			["tooltiprows"] = 3,
 			["versions"] = {
-				["1.6.3"] = true,
-				["1.6.4"] = true,
 				["1.6.7"] = true,
+				["1.6.4"] = true,
+				["1.6.3"] = true,
 			},
 			["hidedisables"] = false,
 			["sortmodesbyusage"] = true,
@@ -9695,9 +9695,9 @@ SkadaDB = {
 					["barheight"] = 16,
 					["color"] = {
 						["a"] = 0.6,
-						["b"] = 0.3,
-						["g"] = 0.3,
 						["r"] = 0.3,
+						["g"] = 0.3,
+						["b"] = 0.3,
 					},
 					["issolidbackdrop"] = false,
 					["classicons"] = true,
@@ -9711,136 +9711,136 @@ SkadaDB = {
 					["barfont"] = "KkthnxUI_Normal",
 					["name"] = "drathal",
 					["display"] = "bar",
-					["height"] = 30,
+					["x"] = 78.9996032714844,
 					["barfontflags"] = "OUTLINE",
 					["isusingelvuiskin"] = true,
-					["background"] = {
-						["color"] = {
-							["a"] = 0.4,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["bordertexture"] = "Blizzard Party",
-						["borderthickness"] = 0,
-						["tile"] = false,
-						["height"] = 195,
-						["bordercolor"] = {
-							["a"] = 1,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["tilesize"] = 0,
-						["texture"] = "None",
-					},
+					["point"] = "CENTER",
 					["strata"] = "LOW",
 					["classcolortext"] = false,
 					["spellschoolcolors"] = true,
 					["barbgcolor"] = {
 						["a"] = 0.6,
-						["b"] = 0.3,
-						["g"] = 0.3,
 						["r"] = 0.3,
+						["g"] = 0.3,
+						["b"] = 0.3,
 					},
 					["barcolor"] = {
 						["a"] = 1,
-						["r"] = 0.258823529411765,
-						["g"] = 0.12156862745098,
 						["b"] = 0.396078431372549,
+						["g"] = 0.12156862745098,
+						["r"] = 0.258823529411765,
 					},
+					["showself"] = true,
 					["returnaftercombat"] = false,
-					["barfontsize"] = 12,
 					["title"] = {
 						["textcolor"] = {
 							["a"] = 1,
-							["b"] = 0.9,
-							["g"] = 0.9,
 							["r"] = 0.9,
+							["g"] = 0.9,
+							["b"] = 0.9,
 						},
 						["color"] = {
 							["a"] = 0,
-							["r"] = 0.6,
-							["g"] = 0.6,
 							["b"] = 0.8,
+							["g"] = 0.6,
+							["r"] = 0.6,
 						},
 						["bordercolor"] = {
 							["a"] = 1,
-							["b"] = 0,
-							["g"] = 0,
 							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
 						},
 						["font"] = "KkthnxUI_Normal",
 						["fontsize"] = 12,
-						["fontflags"] = "",
 						["height"] = 18,
-						["borderthickness"] = 0,
+						["fontflags"] = "",
 						["bordertexture"] = "None",
+						["borderthickness"] = 0,
 						["texture"] = "Tooltip",
 					},
 					["version"] = 1,
-					["mode"] = "Healing",
+					["isonnewline"] = false,
 					["roleicons"] = false,
 					["barorientation"] = 1,
-					["snapto"] = true,
-					["enabletitle"] = true,
-					["reversegrowth"] = false,
-					["smoothing"] = true,
+					["mode"] = "Healing",
+					["scale"] = 1,
+					["fixedbarwidth"] = false,
+					["width"] = 600,
 					["textcolor"] = {
-						["b"] = 0.9,
-						["g"] = 0.9,
 						["r"] = 0.9,
+						["g"] = 0.9,
+						["b"] = 0.9,
 					},
-					["modeincombat"] = "",
-					["bartexture"] = "Solid",
-					["barwidth"] = 240,
-					["barspacing"] = 0,
 					["buttons"] = {
 						["report"] = true,
 						["segment"] = true,
 						["menu"] = true,
 						["reset"] = true,
 					},
-					["width"] = 600,
-					["fixedbarwidth"] = false,
-					["scale"] = 1,
-					["isonnewline"] = false,
+					["bartexture"] = "Solid",
+					["barwidth"] = 240,
+					["barspacing"] = 0,
+					["modeincombat"] = "",
+					["smoothing"] = true,
+					["reversegrowth"] = false,
+					["enabletitle"] = true,
+					["snapto"] = true,
 					["classcolorbars"] = true,
 					["isusingclasscolors"] = true,
-					["showself"] = true,
-					["point"] = "CENTER",
-					["x"] = 78.9996032714844,
+					["barfontsize"] = 12,
+					["background"] = {
+						["height"] = 195,
+						["bordercolor"] = {
+							["a"] = 1,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["borderthickness"] = 0,
+						["tile"] = false,
+						["color"] = {
+							["a"] = 0.4,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["bordertexture"] = "Blizzard Party",
+						["tilesize"] = 0,
+						["texture"] = "None",
+					},
+					["height"] = 30,
 				}, -- [1]
 				{
 					["titleset"] = true,
 					["barheight"] = 17,
 					["color"] = {
 						["a"] = 0.6,
-						["b"] = 0.3,
-						["g"] = 0.3,
 						["r"] = 0.3,
+						["g"] = 0.3,
+						["b"] = 0.3,
 					},
 					["issolidbackdrop"] = false,
 					["classicons"] = true,
 					["barslocked"] = true,
 					["useframe"] = true,
 					["background"] = {
-						["color"] = {
-							["a"] = 0.4,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["bordertexture"] = "None",
-						["borderthickness"] = 0,
-						["tile"] = false,
 						["height"] = 195,
 						["bordercolor"] = {
 							["a"] = 1,
-							["b"] = 0,
-							["g"] = 0,
 							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
 						},
+						["borderthickness"] = 0,
+						["tile"] = false,
+						["color"] = {
+							["a"] = 0.4,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["bordertexture"] = "None",
 						["tilesize"] = 0,
 						["texture"] = "None",
 					},
@@ -9851,67 +9851,38 @@ SkadaDB = {
 					["x"] = 0,
 					["name"] = "drathal",
 					["display"] = "bar",
-					["title"] = {
-						["textcolor"] = {
-							["a"] = 1,
-							["b"] = 0.9,
-							["g"] = 0.9,
-							["r"] = 0.9,
-						},
-						["color"] = {
-							["a"] = 0,
-							["r"] = 0.6,
-							["g"] = 0.6,
-							["b"] = 0.8,
-						},
-						["bordercolor"] = {
-							["a"] = 1,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["font"] = "KkthnxUI_Normal",
-						["fontsize"] = 12,
-						["fontflags"] = "OUTLINE",
-						["height"] = 18,
-						["borderthickness"] = 0,
-						["bordertexture"] = "None",
-						["texture"] = "Tooltip",
-					},
+					["barfont"] = "KkthnxUI_Normal",
 					["barfontflags"] = "OUTLINE",
 					["isusingelvuiskin"] = true,
-					["barbgcolor"] = {
-						["a"] = 0.6,
-						["b"] = 0.3,
-						["g"] = 0.3,
-						["r"] = 0.3,
-					},
+					["point"] = "BOTTOMRIGHT",
 					["strata"] = "LOW",
 					["classcolortext"] = false,
 					["spellschoolcolors"] = true,
-					["showself"] = true,
+					["barbgcolor"] = {
+						["a"] = 0.6,
+						["r"] = 0.3,
+						["g"] = 0.3,
+						["b"] = 0.3,
+					},
 					["barcolor"] = {
 						["a"] = 0.570000022649765,
-						["r"] = 0,
-						["g"] = 0,
 						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
-					["isonnewline"] = false,
+					["returnaftercombat"] = false,
 					["barfontsize"] = 12,
 					["height"] = 30,
 					["clickthrough"] = false,
-					["reversegrowth"] = false,
+					["mode"] = "Damage",
 					["roleicons"] = false,
 					["barorientation"] = 1,
 					["snapto"] = true,
-					["modeincombat"] = "",
+					["scale"] = 1,
+					["version"] = 1,
+					["smoothing"] = true,
 					["fixedbarwidth"] = false,
-					["width"] = 600,
-					["textcolor"] = {
-						["b"] = 0.9,
-						["g"] = 0.9,
-						["r"] = 0.9,
-					},
+					["enabletitle"] = true,
 					["buttons"] = {
 						["segment"] = true,
 						["menu"] = false,
@@ -9919,19 +9890,48 @@ SkadaDB = {
 						["report"] = false,
 						["reset"] = false,
 					},
-					["bartexture"] = "Tooltip",
 					["barwidth"] = 240,
 					["barspacing"] = 0,
-					["enabletitle"] = true,
-					["smoothing"] = true,
-					["version"] = 1,
-					["scale"] = 1,
-					["mode"] = "Damage",
+					["bartexture"] = "Tooltip",
+					["width"] = 600,
+					["textcolor"] = {
+						["r"] = 0.9,
+						["g"] = 0.9,
+						["b"] = 0.9,
+					},
+					["modeincombat"] = "",
+					["reversegrowth"] = false,
 					["classcolorbars"] = true,
 					["isusingclasscolors"] = true,
-					["returnaftercombat"] = false,
-					["point"] = "BOTTOMRIGHT",
-					["barfont"] = "KkthnxUI_Normal",
+					["isonnewline"] = false,
+					["showself"] = true,
+					["title"] = {
+						["textcolor"] = {
+							["a"] = 1,
+							["r"] = 0.9,
+							["g"] = 0.9,
+							["b"] = 0.9,
+						},
+						["color"] = {
+							["a"] = 0,
+							["b"] = 0.8,
+							["g"] = 0.6,
+							["r"] = 0.6,
+						},
+						["bordercolor"] = {
+							["a"] = 1,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["font"] = "KkthnxUI_Normal",
+						["fontsize"] = 12,
+						["height"] = 18,
+						["fontflags"] = "OUTLINE",
+						["bordertexture"] = "None",
+						["borderthickness"] = 0,
+						["texture"] = "Tooltip",
+					},
 				}, -- [2]
 			},
 			["modulesBlocked"] = {
@@ -9941,19 +9941,19 @@ SkadaDB = {
 			},
 			["hidesolo"] = false,
 			["showranks"] = true,
-			["tentativecombatstart"] = false,
-			["updatefrequency"] = 0.25,
+			["tooltippos"] = "smart",
+			["version"] = 1,
 			["modeclicks"] = {
-				["Healing"] = 5,
 				["Damage"] = 8,
+				["Healing"] = 5,
 			},
 			["setformat"] = 3,
 			["numberformat"] = 1,
 			["setstokeep"] = 10,
 			["onlykeepbosses"] = false,
 			["hidecombat"] = false,
-			["version"] = 1,
-			["tooltippos"] = "smart",
+			["updatefrequency"] = 0.25,
+			["tentativecombatstart"] = false,
 		},
 	},
 }
