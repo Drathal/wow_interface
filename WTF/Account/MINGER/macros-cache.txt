@@ -21,8 +21,14 @@ VER 3 00000000000000AC "group" "ACHIEVEMENT_GUILDPERK_QUICK AND DEAD"
 END
 VER 3 00000000000000BC "mFood" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use item:4539
+/use item:3771
 #MMM
+END
+VER 3 00000000000000C2 "moint" "254858"
+/cancelform [noform]
+/leavevehicle [canexitvehicle]
+/dismount [mounted]
+/run Mountz("Primal Flamesaber", "Primal Flamesaber", "Crimson Water Strider")
 END
 VER 3 00000000000000AA "Roll dice" "237285"
 /roll

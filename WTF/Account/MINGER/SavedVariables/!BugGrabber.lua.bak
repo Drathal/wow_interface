@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 1754,
 	["lastSanitation"] = 3,
-	["session"] = 1735,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\dSetup\\dSetup-1.lua:54: unexpected symbol near 'if'",
@@ -51,5 +51,59 @@ BugGrabberDB = {
 			["session"] = 1722,
 			["counter"] = 7,
 		}, -- [6]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:315: attempt to index upvalue 'playerBar' (a nil value)",
+			["time"] = "2017/08/09 11:51:59",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:315: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:55: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AngryAssignments\\libs\\AceEvent-3.0\\AceEvent-3.0-3.lua:120: in function <...\\AngryAssignments\\libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 1737,
+			["counter"] = 1,
+		}, -- [7]
+		{
+			["message"] = "Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: AdiBagsSection6:SetPoint(): AdiBagsSection5 is dependent on this",
+			["time"] = "2017/08/09 12:16:49",
+			["locals"] = "(*temporary) = AdiBagsSection6 {\n 0 = <userdata>\n acquired = true\n buttons = <table> {\n }\n Header = <unnamed> {\n }\n slots = <table> {\n }\n width = 7\n count = 7\n total = 7\n name = \"Junk\"\n category = \"Junk\"\n height = 1\n key = \"Junk#Junk\"\n freeSlots = <table> {\n }\n container = AdiBagsContainer1 {\n }\n}\n(*temporary) = \"TOPLEFT\"\n(*temporary) = AdiBagsSection5 {\n 0 = <userdata>\n acquired = true\n buttons = <table> {\n }\n Header = <unnamed> {\n }\n slots = <table> {\n }\n width = 1\n count = 1\n total = 1\n name = \"Cooking\"\n category = \"Tradeskill\"\n height = 1\n key = \"Tradeskill#Cooking\"\n freeSlots = <table> {\n }\n container = AdiBagsContainer1 {\n }\n}\n(*temporary) = \"TOPRIGHT\"\n(*temporary) = 10.5\n(*temporary) = 0\n",
+			["stack"] = "[C]: in function `SetPoint'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: in function `LayoutSections'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1067: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1041>\n(tail call): ?\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:447: in function `RefreshContents'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:432: in function `ResumeUpdates'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:415: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:407>\n[C]: in function `Show'\nInterface\\AddOns\\AdiBags\\core\\Bags.lua:89: in function `Open'\nInterface\\AddOns\\AdiBags\\core\\Hooks.lua:112: in function <Interface\\AddOns\\AdiBags\\core\\Hooks.lua:109>\n(tail call): ?\n(tail call): ?\n[string \"OPENALLBAGS\"]:1: in function <[string \"OPENALLBAGS\"]:1>",
+			["session"] = 1740,
+			["counter"] = 8,
+		}, -- [8]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:256: function arguments expected near ','",
+			["time"] = "2017/08/09 15:57:22",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1745,
+			["counter"] = 2,
+		}, -- [9]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:73: Usage: RegisterEvent(\"eventname\", \"methodname\"): 'methodname' - method 'PLAYER_LOGOUT' not found on self.",
+			["time"] = "2017/08/09 15:58:59",
+			["stack"] = "[C]: ?\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:138: in function `RegisterEvent'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:73: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:65>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
+			["session"] = 1746,
+			["counter"] = 1,
+		}, -- [10]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:190: ')' expected near '}'",
+			["time"] = "2017/08/09 17:03:29",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1747,
+			["counter"] = 1,
+		}, -- [11]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:279: unexpected symbol near '='",
+			["time"] = "2017/08/09 17:04:18",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1748,
+			["counter"] = 1,
+		}, -- [12]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:298: unexpected symbol near '='",
+			["time"] = "2017/08/09 17:04:53",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1749,
+			["counter"] = 1,
+		}, -- [13]
 	},
 }

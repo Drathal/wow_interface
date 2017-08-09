@@ -1256,9 +1256,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1501288583.575,
 						["amount"] = -44426,
+						["srcname"] = "Millificent Manastorm",
 						["hp"] = 2450597,
 						["spellid"] = 201159,
-						["srcname"] = "Millificent Manastorm",
 					}, -- [4]
 					{
 						["absorb"] = 0,
@@ -1279,9 +1279,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1501288585.575,
 						["amount"] = -44426,
+						["srcname"] = "Millificent Manastorm",
 						["hp"] = 2408758,
 						["spellid"] = 201159,
-						["srcname"] = "Millificent Manastorm",
 					}, -- [7]
 					{
 						["absorb"] = 0,
@@ -1302,9 +1302,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1501288587.581,
 						["amount"] = -44426,
+						["srcname"] = "Millificent Manastorm",
 						["hp"] = 2455651,
 						["spellid"] = 201159,
-						["srcname"] = "Millificent Manastorm",
 					}, -- [10]
 					{
 						["absorb"] = 0,
@@ -1317,9 +1317,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1501288589.581,
 						["amount"] = -44426,
+						["srcname"] = "Millificent Manastorm",
 						["hp"] = 2411767,
 						["spellid"] = 201159,
-						["srcname"] = "Millificent Manastorm",
 					}, -- [12]
 					{
 						["absorb"] = 0,
@@ -1332,9 +1332,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1501288581.579,
 						["amount"] = -44426,
+						["srcname"] = "Millificent Manastorm",
 						["hp"] = 2400614,
 						["spellid"] = 201159,
-						["srcname"] = "Millificent Manastorm",
 					}, -- [14]
 					{
 						["absorb"] = 0,
@@ -1423,17 +1423,17 @@ SkadaPerCharDB = {
 				["class"] = "PALADIN",
 				["healingabsorbed"] = 0,
 				["healingspells"] = {
-					["Blessed Hammer"] = {
-						["shielding"] = 50239,
-						["id"] = 229976,
-						["healing"] = 50239,
-						["min"] = 861,
-						["name"] = "Blessed Hammer",
+					["Leech"] = {
+						["shielding"] = 0,
+						["id"] = 143924,
+						["healing"] = 150401,
+						["min"] = 0,
+						["name"] = "Leech",
 						["absorbed"] = 0,
 						["critical"] = 0,
-						["max"] = 5069,
-						["overhealing"] = 0,
-						["hits"] = 21,
+						["max"] = 95649,
+						["overhealing"] = 1414110,
+						["hits"] = 38,
 					},
 					["Xavaric's Magnum Opus"] = {
 						["shielding"] = 16521973,
@@ -1459,17 +1459,17 @@ SkadaPerCharDB = {
 						["overhealing"] = 303102,
 						["hits"] = 57,
 					},
-					["Light of the Titans"] = {
-						["shielding"] = 0,
-						["id"] = 209540,
-						["healing"] = 0,
-						["min"] = 0,
-						["name"] = "Light of the Titans",
+					["Blessed Hammer"] = {
+						["shielding"] = 50239,
+						["id"] = 229976,
+						["healing"] = 50239,
+						["min"] = 861,
+						["name"] = "Blessed Hammer",
 						["absorbed"] = 0,
 						["critical"] = 0,
-						["max"] = 0,
-						["overhealing"] = 228258,
-						["hits"] = 6,
+						["max"] = 5069,
+						["overhealing"] = 0,
+						["hits"] = 21,
 					},
 					["Judgment of Light"] = {
 						["shielding"] = 0,
@@ -1603,17 +1603,17 @@ SkadaPerCharDB = {
 						["overhealing"] = 1317626,
 						["hits"] = 9,
 					},
-					["Leech"] = {
+					["Light of the Titans"] = {
 						["shielding"] = 0,
-						["id"] = 143924,
-						["healing"] = 150401,
+						["id"] = 209540,
+						["healing"] = 0,
 						["min"] = 0,
-						["name"] = "Leech",
+						["name"] = "Light of the Titans",
 						["absorbed"] = 0,
 						["critical"] = 0,
-						["max"] = 95649,
-						["overhealing"] = 1414110,
-						["hits"] = 38,
+						["max"] = 0,
+						["overhealing"] = 228258,
+						["hits"] = 6,
 					},
 				},
 				["ffdamagedonespells"] = {
@@ -1883,44 +1883,44 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1501289066.47205,
 								["amount"] = -899963,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 3890602,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [5]
 							{
 								["ts"] = 1501289066.47206,
 								["amount"] = -874239,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 3016363,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [6]
 							{
 								["ts"] = 1501289066.47207,
 								["amount"] = -922747,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 2093616,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [7]
 							{
 								["ts"] = 1501289066.47208,
 								["amount"] = -865385,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 1228231,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [8]
 							{
 								["ts"] = 1501289066.56109,
 								["amount"] = -840912,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 387319,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [9]
 							{
 								["ts"] = 1501289066.5751,
 								["amount"] = -833565,
+								["spellid"] = 210916,
 								["hp"] = 1,
 								["srcname"] = "Fel Lord Betrug",
-								["spellid"] = 210916,
 							}, -- [10]
 							{
 								["spellname"] = "Dronthal dies",
@@ -2138,10 +2138,10 @@ SkadaPerCharDB = {
 						["srcname"] = "Dronthal",
 					}, -- [1]
 					{
-						["srcname"] = "Captain Volo'ren",
-						["ts"] = 1502057752.968,
-						["hp"] = 4527747,
 						["spellid"] = 88163,
+						["ts"] = 1502057752.968,
+						["srcname"] = "Captain Volo'ren",
+						["hp"] = 4527747,
 					}, -- [2]
 					{
 						["absorb"] = 0,
@@ -2152,40 +2152,40 @@ SkadaPerCharDB = {
 						["spellid"] = 221720,
 					}, -- [3]
 					{
-						["srcname"] = "Captain Volo'ren",
-						["ts"] = 1502057723.478,
-						["hp"] = 4527747,
 						["spellid"] = 88163,
+						["ts"] = 1502057723.478,
+						["srcname"] = "Captain Volo'ren",
+						["hp"] = 4527747,
 					}, -- [4]
 					{
-						["spellid"] = 88163,
-						["ts"] = 1502057723.478,
-						["hp"] = 4527747,
 						["srcname"] = "Captain Volo'ren",
+						["ts"] = 1502057723.478,
+						["spellid"] = 88163,
+						["hp"] = 4527747,
 					}, -- [5]
 					{
-						["srcname"] = "Captain Volo'ren",
-						["ts"] = 1502057725.485,
-						["hp"] = 4527747,
 						["spellid"] = 88163,
+						["ts"] = 1502057725.485,
+						["srcname"] = "Captain Volo'ren",
+						["hp"] = 4527747,
 					}, -- [6]
 					{
-						["spellid"] = 88163,
-						["ts"] = 1502057725.485,
-						["hp"] = 4527747,
 						["srcname"] = "Captain Volo'ren",
+						["ts"] = 1502057725.485,
+						["spellid"] = 88163,
+						["hp"] = 4527747,
 					}, -- [7]
 					{
-						["spellid"] = 88163,
-						["ts"] = 1502057732.643,
-						["hp"] = 4527747,
 						["srcname"] = "Captain Volo'ren",
+						["ts"] = 1502057732.643,
+						["spellid"] = 88163,
+						["hp"] = 4527747,
 					}, -- [8]
 					{
-						["spellid"] = 88163,
-						["ts"] = 1502057732.643,
-						["hp"] = 4527747,
 						["srcname"] = "Captain Volo'ren",
+						["ts"] = 1502057732.643,
+						["spellid"] = 88163,
+						["hp"] = 4527747,
 					}, -- [9]
 					{
 						["absorb"] = 0,
@@ -2196,22 +2196,22 @@ SkadaPerCharDB = {
 						["spellid"] = 228401,
 					}, -- [10]
 					{
-						["srcname"] = "Captain Volo'ren",
-						["ts"] = 1502057740.801,
-						["hp"] = 4527747,
 						["spellid"] = 88163,
+						["ts"] = 1502057740.801,
+						["srcname"] = "Captain Volo'ren",
+						["hp"] = 4527747,
 					}, -- [11]
 					{
-						["spellid"] = 88163,
-						["ts"] = 1502057742.806,
-						["hp"] = 4527747,
 						["srcname"] = "Captain Volo'ren",
+						["ts"] = 1502057742.806,
+						["spellid"] = 88163,
+						["hp"] = 4527747,
 					}, -- [12]
 					{
-						["spellid"] = 88163,
-						["ts"] = 1502057742.806,
-						["hp"] = 4527747,
 						["srcname"] = "Captain Volo'ren",
+						["ts"] = 1502057742.806,
+						["spellid"] = 88163,
+						["hp"] = 4527747,
 					}, -- [13]
 					{
 						["absorb"] = 0,
@@ -2222,10 +2222,10 @@ SkadaPerCharDB = {
 						["spellid"] = 221720,
 					}, -- [14]
 					{
-						["spellid"] = 88163,
-						["ts"] = 1502057750.902,
-						["hp"] = 4527747,
 						["srcname"] = "Captain Volo'ren",
+						["ts"] = 1502057750.902,
+						["spellid"] = 88163,
+						["hp"] = 4527747,
 					}, -- [15]
 					["pos"] = 3,
 				},
@@ -3207,23 +3207,23 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1501289066.47205,
 								["amount"] = -701750,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 1367008,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [5]
 							{
 								["ts"] = 1501289066.47206,
 								["amount"] = -716317,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 650691,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [6]
 							{
 								["ts"] = 1501289066.47207,
 								["amount"] = -667193,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 1,
 								["spellid"] = 210916,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [7]
 							{
 								["spellname"] = "Ramfone dies",
@@ -3266,9 +3266,9 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1501289061.11913,
 								["amount"] = -352121,
+								["srcname"] = "Fel Lord Betrug",
 								["hp"] = 1716637,
 								["spellid"] = 203619,
-								["srcname"] = "Fel Lord Betrug",
 							}, -- [13]
 							{
 								["absorb"] = 0,
@@ -3845,6 +3845,22 @@ SkadaPerCharDB = {
 						["id"] = 5211,
 						["damage"] = 0,
 					},
+					["Mangle"] = {
+						["hitmin"] = 210424,
+						["criticalamount"] = 8326462,
+						["id"] = 33917,
+						["hitamount"] = 14881957,
+						["criticalmin"] = 459694,
+						["hitmax"] = 336774,
+						["min"] = 210424,
+						["criticalmax"] = 614864,
+						["critical"] = 15,
+						["hit"] = 53,
+						["totalhits"] = 68,
+						["school"] = 1,
+						["max"] = 614864,
+						["damage"] = 23208419,
+					},
 					["Maul"] = {
 						["hitmin"] = 277923,
 						["criticalamount"] = 7468221,
@@ -3861,6 +3877,14 @@ SkadaPerCharDB = {
 						["max"] = 785114,
 						["damage"] = 11556672,
 					},
+					["Bloody Paws"] = {
+						["school"] = 1,
+						["totalhits"] = 39,
+						["max"] = 0,
+						["IMMUNE"] = 39,
+						["id"] = 214995,
+						["damage"] = 0,
+					},
 					["Thrash"] = {
 						["hitmin"] = 12715,
 						["criticalamount"] = 19104465,
@@ -3876,30 +3900,6 @@ SkadaPerCharDB = {
 						["school"] = 1,
 						["max"] = 507804,
 						["damage"] = 43323042,
-					},
-					["Bloody Paws"] = {
-						["school"] = 1,
-						["totalhits"] = 39,
-						["max"] = 0,
-						["IMMUNE"] = 39,
-						["id"] = 214995,
-						["damage"] = 0,
-					},
-					["Mangle"] = {
-						["hitmin"] = 210424,
-						["criticalamount"] = 8326462,
-						["id"] = 33917,
-						["hitamount"] = 14881957,
-						["criticalmin"] = 459694,
-						["hitmax"] = 336774,
-						["min"] = 210424,
-						["criticalmax"] = 614864,
-						["critical"] = 15,
-						["hit"] = 53,
-						["totalhits"] = 68,
-						["school"] = 1,
-						["max"] = 614864,
-						["damage"] = 23208419,
 					},
 					["Attack"] = {
 						["hitmin"] = 34256,
@@ -4166,21 +4166,6 @@ SkadaPerCharDB = {
 						["max"] = 198283,
 						["damage"] = 1894203,
 					},
-					["Chicken Swarm Rockets"] = {
-						["crushing"] = 0,
-						["id"] = 201387,
-						["absorbed"] = 16492,
-						["glancing"] = 0,
-						["critical"] = 0,
-						["min"] = 34626,
-						["school"] = 4,
-						["name"] = "Chicken Swarm Rockets",
-						["blocked"] = 0,
-						["totalhits"] = 2,
-						["resisted"] = 0,
-						["max"] = 39810,
-						["damage"] = 74436,
-					},
 					["Drain Essence"] = {
 						["crushing"] = 0,
 						["id"] = 205112,
@@ -4210,6 +4195,21 @@ SkadaPerCharDB = {
 						["resisted"] = 0,
 						["max"] = 88640,
 						["damage"] = 517418,
+					},
+					["Chicken Swarm Rockets"] = {
+						["crushing"] = 0,
+						["id"] = 201387,
+						["absorbed"] = 16492,
+						["glancing"] = 0,
+						["critical"] = 0,
+						["min"] = 34626,
+						["school"] = 4,
+						["name"] = "Chicken Swarm Rockets",
+						["blocked"] = 0,
+						["totalhits"] = 2,
+						["resisted"] = 0,
+						["max"] = 39810,
+						["damage"] = 74436,
 					},
 					["Blazing Hellfire"] = {
 						["crushing"] = 0,
@@ -5501,14 +5501,15 @@ SkadaPerCharDB = {
 					},
 				},
 				["overhealing"] = 878976,
-				["deathlog"] = {
+				["power"] = {
 				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
 				["maxhp"] = 0,
 				["damagetaken"] = 0,
-				["shielding"] = 0,
+				["deathlog"] = {
+				},
 				["id"] = "Creature-0-3769-1220-8716-111316-000007932A",
 				["healing"] = 0,
 				["ffdamagedonetargets"] = {
@@ -5519,8 +5520,7 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["name"] = "Arator the Redeemer",
 				["alertCount"] = 0,
-				["power"] = {
-				},
+				["shielding"] = 0,
 				["healed"] = {
 					["Player-3696-05E47247"] = {
 						["role"] = "NONE",
@@ -6064,11 +6064,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "HUNTER",
 					},
-					["Infizius-DasKonsortium"] = {
-						["taken"] = 2118947,
+					["Dronthal"] = {
+						["taken"] = 1579915,
 						["done"] = 0,
-						["role"] = "DAMAGER",
-						["class"] = "DEMONHUNTER",
+						["role"] = "HEALER",
+						["class"] = "PALADIN",
 					},
 					["Ramfone-Blackmoore"] = {
 						["taken"] = 1696155,
@@ -6076,11 +6076,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "DEATHKNIGHT",
 					},
-					["Lûzz-Aegwynn"] = {
-						["taken"] = 2350038,
-						["done"] = 437235,
-						["role"] = "TANK",
-						["class"] = "DRUID",
+					["Infizius-DasKonsortium"] = {
+						["taken"] = 2118947,
+						["done"] = 0,
+						["role"] = "DAMAGER",
+						["class"] = "DEMONHUNTER",
 					},
 					["Alfadure-Tichondrius"] = {
 						["taken"] = 1171245,
@@ -6088,11 +6088,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "ROGUE",
 					},
-					["Dronthal"] = {
-						["taken"] = 1579915,
-						["done"] = 0,
-						["role"] = "HEALER",
-						["class"] = "PALADIN",
+					["Lûzz-Aegwynn"] = {
+						["taken"] = 2350038,
+						["done"] = 437235,
+						["role"] = "TANK",
+						["class"] = "DRUID",
 					},
 				},
 				["hdone"] = 0,
@@ -6112,11 +6112,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "HUNTER",
 					},
-					["Infizius-DasKonsortium"] = {
-						["taken"] = 8512031,
+					["Dronthal"] = {
+						["taken"] = 20027508,
 						["done"] = 0,
-						["role"] = "DAMAGER",
-						["class"] = "DEMONHUNTER",
+						["role"] = "HEALER",
+						["class"] = "PALADIN",
 					},
 					["Ramfone-Blackmoore"] = {
 						["taken"] = 9246559,
@@ -6124,11 +6124,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "DEATHKNIGHT",
 					},
-					["Lûzz-Aegwynn"] = {
-						["taken"] = 17701229,
-						["done"] = 2895483,
-						["role"] = "TANK",
-						["class"] = "DRUID",
+					["Infizius-DasKonsortium"] = {
+						["taken"] = 8512031,
+						["done"] = 0,
+						["role"] = "DAMAGER",
+						["class"] = "DEMONHUNTER",
 					},
 					["Alfadure-Tichondrius"] = {
 						["taken"] = 4916457,
@@ -6136,11 +6136,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "ROGUE",
 					},
-					["Dronthal"] = {
-						["taken"] = 20027508,
-						["done"] = 0,
-						["role"] = "HEALER",
-						["class"] = "PALADIN",
+					["Lûzz-Aegwynn"] = {
+						["taken"] = 17701229,
+						["done"] = 2895483,
+						["role"] = "TANK",
+						["class"] = "DRUID",
 					},
 				},
 				["hdone"] = 2882598,
@@ -6176,11 +6176,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "HUNTER",
 					},
-					["Infizius-DasKonsortium"] = {
-						["taken"] = 10393061,
+					["Dronthal"] = {
+						["taken"] = 7903520,
 						["done"] = 0,
-						["role"] = "DAMAGER",
-						["class"] = "DEMONHUNTER",
+						["role"] = "HEALER",
+						["class"] = "PALADIN",
 					},
 					["Ramfone-Blackmoore"] = {
 						["taken"] = 4486904,
@@ -6188,11 +6188,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "DEATHKNIGHT",
 					},
-					["Lûzz-Aegwynn"] = {
-						["taken"] = 8273212,
-						["done"] = 3784008,
-						["role"] = "TANK",
-						["class"] = "DRUID",
+					["Infizius-DasKonsortium"] = {
+						["taken"] = 10393061,
+						["done"] = 0,
+						["role"] = "DAMAGER",
+						["class"] = "DEMONHUNTER",
 					},
 					["Alfadure-Tichondrius"] = {
 						["taken"] = 1114571,
@@ -6200,11 +6200,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "ROGUE",
 					},
-					["Dronthal"] = {
-						["taken"] = 7903520,
-						["done"] = 0,
-						["role"] = "HEALER",
-						["class"] = "PALADIN",
+					["Lûzz-Aegwynn"] = {
+						["taken"] = 8273212,
+						["done"] = 3784008,
+						["role"] = "TANK",
+						["class"] = "DRUID",
 					},
 				},
 				["hdone"] = 6771552,
@@ -6577,11 +6577,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "HUNTER",
 					},
-					["Infizius-DasKonsortium"] = {
-						["taken"] = 13060658,
-						["done"] = 0,
-						["role"] = "DAMAGER",
-						["class"] = "DEMONHUNTER",
+					["Dronthal"] = {
+						["taken"] = 3521882,
+						["done"] = 71941,
+						["role"] = "HEALER",
+						["class"] = "PALADIN",
 					},
 					["Ramfone-Blackmoore"] = {
 						["taken"] = 3572738,
@@ -6589,11 +6589,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "DEATHKNIGHT",
 					},
-					["Lûzz-Aegwynn"] = {
-						["taken"] = 12668461,
-						["done"] = 3914571,
-						["role"] = "TANK",
-						["class"] = "DRUID",
+					["Infizius-DasKonsortium"] = {
+						["taken"] = 13060658,
+						["done"] = 0,
+						["role"] = "DAMAGER",
+						["class"] = "DEMONHUNTER",
 					},
 					["Alfadure-Tichondrius"] = {
 						["taken"] = 4405124,
@@ -6601,11 +6601,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "ROGUE",
 					},
-					["Dronthal"] = {
-						["taken"] = 3521882,
-						["done"] = 71941,
-						["role"] = "HEALER",
-						["class"] = "PALADIN",
+					["Lûzz-Aegwynn"] = {
+						["taken"] = 12668461,
+						["done"] = 3914571,
+						["role"] = "TANK",
+						["class"] = "DRUID",
 					},
 				},
 				["hdone"] = 0,
@@ -6638,11 +6638,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "HUNTER",
 					},
-					["Infizius-DasKonsortium"] = {
-						["taken"] = 7816362,
-						["done"] = 0,
-						["role"] = "DAMAGER",
-						["class"] = "DEMONHUNTER",
+					["Lûzz-Aegwynn"] = {
+						["taken"] = 17226531,
+						["done"] = 3619750,
+						["role"] = "TANK",
+						["class"] = "DRUID",
 					},
 					["Ramfone-Blackmoore"] = {
 						["taken"] = 7717346,
@@ -6650,11 +6650,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "DEATHKNIGHT",
 					},
-					["Dronthal"] = {
-						["taken"] = 15912906,
+					["Infizius-DasKonsortium"] = {
+						["taken"] = 7816362,
 						["done"] = 0,
-						["role"] = "HEALER",
-						["class"] = "PALADIN",
+						["role"] = "DAMAGER",
+						["class"] = "DEMONHUNTER",
 					},
 					["Alfadure-Tichondrius"] = {
 						["taken"] = 9297786,
@@ -6662,11 +6662,11 @@ SkadaPerCharDB = {
 						["role"] = "DAMAGER",
 						["class"] = "ROGUE",
 					},
-					["Lûzz-Aegwynn"] = {
-						["taken"] = 17226531,
-						["done"] = 3619750,
-						["role"] = "TANK",
-						["class"] = "DRUID",
+					["Dronthal"] = {
+						["taken"] = 15912906,
+						["done"] = 0,
+						["role"] = "HEALER",
+						["class"] = "PALADIN",
 					},
 				},
 				["hdone"] = 0,
@@ -9045,7 +9045,12 @@ SkadaPerCharDB = {
 			["time"] = 50,
 			["interrupts"] = 0,
 			["damagetaken"] = 15599814,
-			["gotboss"] = true,
+			["power"] = {
+				[0] = 1019,
+				[10] = 0,
+				[5] = 5,
+				[3] = 0,
+			},
 			["mobname"] = "Fel Lord Betrug",
 			["damage"] = 61830917,
 			["players"] = {
@@ -9361,44 +9366,44 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1501289066.47205,
 									["amount"] = -899963,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 3890602,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [5]
 								{
 									["ts"] = 1501289066.47206,
 									["amount"] = -874239,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 3016363,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [6]
 								{
 									["ts"] = 1501289066.47207,
 									["amount"] = -922747,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 2093616,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [7]
 								{
 									["ts"] = 1501289066.47208,
 									["amount"] = -865385,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 1228231,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [8]
 								{
 									["ts"] = 1501289066.56109,
 									["amount"] = -840912,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 387319,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [9]
 								{
 									["ts"] = 1501289066.5751,
 									["amount"] = -833565,
+									["spellid"] = 210916,
 									["hp"] = 1,
 									["srcname"] = "Fel Lord Betrug",
-									["spellid"] = 210916,
 								}, -- [10]
 								{
 									["spellname"] = "Dronthal dies",
@@ -9639,6 +9644,22 @@ SkadaPerCharDB = {
 							["max"] = 99849,
 							["damage"] = 993056,
 						},
+						["Maul"] = {
+							["hitmin"] = 369547,
+							["criticalamount"] = 704971,
+							["id"] = 6807,
+							["hitamount"] = 369547,
+							["criticalmin"] = 704971,
+							["critical"] = 1,
+							["min"] = 369547,
+							["criticalmax"] = 704971,
+							["hitmax"] = 369547,
+							["hit"] = 1,
+							["totalhits"] = 2,
+							["school"] = 1,
+							["max"] = 704971,
+							["damage"] = 1074518,
+						},
 						["Mangle"] = {
 							["hitmin"] = 210424,
 							["criticalamount"] = 1705043,
@@ -9670,22 +9691,6 @@ SkadaPerCharDB = {
 							["school"] = 1,
 							["max"] = 502389,
 							["damage"] = 2969332,
-						},
-						["Maul"] = {
-							["hitmin"] = 369547,
-							["criticalamount"] = 704971,
-							["id"] = 6807,
-							["hitamount"] = 369547,
-							["criticalmin"] = 704971,
-							["critical"] = 1,
-							["min"] = 369547,
-							["criticalmax"] = 704971,
-							["hitmax"] = 369547,
-							["hit"] = 1,
-							["totalhits"] = 2,
-							["school"] = 1,
-							["max"] = 704971,
-							["damage"] = 1074518,
 						},
 						["Moonfire"] = {
 							["hitmin"] = 54004,
@@ -10965,23 +10970,23 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1501289066.47205,
 									["amount"] = -701750,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 1367008,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [5]
 								{
 									["ts"] = 1501289066.47206,
 									["amount"] = -716317,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 650691,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [6]
 								{
 									["ts"] = 1501289066.47207,
 									["amount"] = -667193,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 1,
 									["spellid"] = 210916,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [7]
 								{
 									["spellname"] = "Ramfone dies",
@@ -11024,9 +11029,9 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1501289061.11913,
 									["amount"] = -352121,
+									["srcname"] = "Fel Lord Betrug",
 									["hp"] = 1716637,
 									["spellid"] = 203619,
-									["srcname"] = "Fel Lord Betrug",
 								}, -- [13]
 								{
 									["absorb"] = 0,
@@ -11180,7 +11185,7 @@ SkadaPerCharDB = {
 					},
 				},
 			},
-			["shielding"] = 2650953,
+			["gotboss"] = true,
 			["dispells"] = 0,
 			["healing"] = 10702451,
 			["auras"] = {
@@ -11190,12 +11195,7 @@ SkadaPerCharDB = {
 			["overhealing"] = 17597172.25,
 			["name"] = "Fel Lord Betrug",
 			["alertCount"] = 0,
-			["power"] = {
-				[0] = 1019,
-				[10] = 0,
-				[5] = 5,
-				[3] = 0,
-			},
+			["shielding"] = 2650953,
 			["mobhdone"] = 0,
 			["last_action"] = 1501289044,
 			["mobdone"] = 15176283,
@@ -11304,6 +11304,22 @@ SkadaPerCharDB = {
 							["totalhits"] = 3,
 							["damage"] = 227432,
 						},
+						["Mangle"] = {
+							["hitmin"] = 294627,
+							["criticalamount"] = 576260,
+							["id"] = 33917,
+							["hitamount"] = 593650,
+							["criticalmin"] = 576260,
+							["hitmax"] = 299023,
+							["min"] = 294627,
+							["criticalmax"] = 576260,
+							["critical"] = 1,
+							["hit"] = 2,
+							["totalhits"] = 3,
+							["school"] = 1,
+							["max"] = 576260,
+							["damage"] = 1169910,
+						},
 						["Maul"] = {
 							["hitmin"] = 380842,
 							["id"] = 6807,
@@ -11331,22 +11347,6 @@ SkadaPerCharDB = {
 							["school"] = 1,
 							["max"] = 492911,
 							["damage"] = 1193259,
-						},
-						["Mangle"] = {
-							["hitmin"] = 294627,
-							["criticalamount"] = 576260,
-							["id"] = 33917,
-							["hitamount"] = 593650,
-							["criticalmin"] = 576260,
-							["hitmax"] = 299023,
-							["min"] = 294627,
-							["criticalmax"] = 576260,
-							["critical"] = 1,
-							["hit"] = 2,
-							["totalhits"] = 3,
-							["school"] = 1,
-							["max"] = 576260,
-							["damage"] = 1169910,
 						},
 						["Moonfire"] = {
 							["hitmin"] = 55062,
@@ -13794,18 +13794,6 @@ SkadaPerCharDB = {
 							["overhealing"] = 0,
 							["hits"] = 10,
 						},
-						["Rethu's Incessant Courage"] = {
-							["shielding"] = 0,
-							["id"] = 242597,
-							["healing"] = 248167,
-							["min"] = 47601,
-							["name"] = "Rethu's Incessant Courage",
-							["absorbed"] = 0,
-							["critical"] = 0,
-							["max"] = 100283,
-							["overhealing"] = 52681,
-							["hits"] = 3,
-						},
 						["Mark of the Ancient Priestess"] = {
 							["shielding"] = 0,
 							["id"] = 228401,
@@ -13816,18 +13804,6 @@ SkadaPerCharDB = {
 							["critical"] = 0,
 							["max"] = 243214,
 							["overhealing"] = 0,
-							["hits"] = 1,
-						},
-						["Flash of Light"] = {
-							["shielding"] = 0,
-							["id"] = 19750,
-							["healing"] = 658975,
-							["min"] = 658975,
-							["name"] = "Flash of Light",
-							["absorbed"] = 0,
-							["critical"] = 1,
-							["max"] = 658975,
-							["overhealing"] = 227135,
 							["hits"] = 1,
 						},
 						["Light of the Martyr"] = {
@@ -13841,6 +13817,30 @@ SkadaPerCharDB = {
 							["max"] = 664578,
 							["overhealing"] = 668694,
 							["hits"] = 4,
+						},
+						["Flash of Light"] = {
+							["shielding"] = 0,
+							["id"] = 19750,
+							["healing"] = 658975,
+							["min"] = 658975,
+							["name"] = "Flash of Light",
+							["absorbed"] = 0,
+							["critical"] = 1,
+							["max"] = 658975,
+							["overhealing"] = 227135,
+							["hits"] = 1,
+						},
+						["Rethu's Incessant Courage"] = {
+							["shielding"] = 0,
+							["id"] = 242597,
+							["healing"] = 248167,
+							["min"] = 47601,
+							["name"] = "Rethu's Incessant Courage",
+							["absorbed"] = 0,
+							["critical"] = 0,
+							["max"] = 100283,
+							["overhealing"] = 52681,
+							["hits"] = 3,
 						},
 						["Pulse"] = {
 							["shielding"] = 0,
@@ -15360,6 +15360,18 @@ SkadaPerCharDB = {
 							["id"] = 214995,
 							["damage"] = 0,
 						},
+						["Thrash"] = {
+							["hitmin"] = 12715,
+							["id"] = 192090,
+							["min"] = 12715,
+							["hitamount"] = 618819,
+							["hitmax"] = 246455,
+							["hit"] = 7,
+							["school"] = 1,
+							["max"] = 246455,
+							["totalhits"] = 7,
+							["damage"] = 618819,
+						},
 						["Maul"] = {
 							["hitmin"] = 379817,
 							["id"] = 6807,
@@ -15387,18 +15399,6 @@ SkadaPerCharDB = {
 							["school"] = 1,
 							["max"] = 576262,
 							["damage"] = 1427770,
-						},
-						["Thrash"] = {
-							["hitmin"] = 12715,
-							["id"] = 192090,
-							["min"] = 12715,
-							["hitamount"] = 618819,
-							["hitmax"] = 246455,
-							["hit"] = 7,
-							["school"] = 1,
-							["max"] = 246455,
-							["totalhits"] = 7,
-							["damage"] = 618819,
 						},
 						["Moonfire"] = {
 							["hitmin"] = 54003,
