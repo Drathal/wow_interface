@@ -12,12 +12,12 @@ PandariaTreasuresDB = {
 		["Drathon - Blackhand"] = "base",
 		["Drathia - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Draltar - Blackhand"] = "Default",
-		["Drathtix - Madmortem"] = "Default",
-		["Dronthal - Blackhand"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
-		["Drathair - Blackhand"] = "base",
 		["Dranathal - Madmortem"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Drathair - Blackhand"] = "base",
+		["Drahmoon - Madmortem"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
+		["Draltar - Blackhand"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

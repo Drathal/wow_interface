@@ -219,11 +219,12 @@ function XpFlag.DeleteMark(name)
 end
 
 function XpFlag.createMessage(msgtype, xp, maxxp)	
-	return { "XpFlag", (msgtype or "XpFlag")..":"..(xp or UnitXP("PLAYER"))..":"..(maxxp or UnitXPMax("PLAYER"))..":"..playerLevel..":"..playerClass, "WHISPER" }
+	return (msgtype or "XpFlag")..":"..(xp or UnitXP("PLAYER"))..":"..(maxxp or UnitXPMax("PLAYER"))..":"..playerLevel..":"..playerClass
 end
 
 function XpFlag.decodeMessage(msg)
 	local msgtype, xp, maxxp, level, class = msg:match("^(.-):(.-):(.-):(.-):(.-)$");
+
 	return {
 		msgtype = msgtype,
 		xp = xp,
@@ -256,7 +257,7 @@ function XpFlag:FRIENDLIST_UPDATE()
 
 		if connected and not friends[friendNameRealm] then
 			friends[friendNameRealm] = true;
-			SendAddonMessage("XpFlag", XpFlag.createMessage("XpFlagRequest"), "WHISPER", target);
+			SendAddonMessage("XpFlag", XpFlag.createMessage("XpFlagRequest"), "WHISPER", friendNameRealm);
 		elseif not connected and friends[friendNameRealm] then 								
 			friends[friendNameRealm] = nil;
 		end		
@@ -270,7 +271,7 @@ function XpFlag:PLAYER_XP_UPDATE(event, unit)
 
 	for target, _ in pairs(friends) do
 		if target then
-			SendAddonMessage("XpFlag", XpFlag.createMessage("XpFlagRequest"), "WHISPER", target);
+			SendAddonMessage("XpFlag", XpFlag.createMessage("XpFlag"), "WHISPER", target);
 		end
 	end
 
@@ -285,8 +286,10 @@ function XpFlag:PLAYER_LEVEL_UP(event,level)
 end
 
 function XpFlag:CHAT_MSG_ADDON(event, pre, msg, chan, sender)
+
 	if pre ~= "XpFlag" then return end 
 	if sender == playerNameRealm then return end
+	if not msg or msg == "" then return end
 
 	local message = XpFlag.decodeMessage(msg)
 
