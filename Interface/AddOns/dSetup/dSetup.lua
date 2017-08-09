@@ -59,19 +59,18 @@ local function copyProfileData(src, dest, path, srcProfile, destProfile)
     );
 end
 
-local function setupGrid2(src, dest, srcProfile)
-    if not src or not dest then return end
-    copyProfileData(src, dest, { "namespaces", "Grid2RaidDebuffs", "profiles" } , srcProfile, baseProfile)
-    copyProfileData(src, dest, { "namespaces", "Grid2Frame", "profiles" } , srcProfile, baseProfile)
-    copyProfileData(src, dest, { "namespaces", "Grid2Layout", "profiles" } , srcProfile, baseProfile)
-    copyProfileData(src, dest, { "namespaces", "Grid2Options", "profiles" } , srcProfile, baseProfile)
-    setupDefault(src, dest, srcProfile)
-    
-end
-
 local function setupDefault(src, dest, srcProfile) 
     if not src or not dest then return end
     copyProfileData(src, dest, { "profiles" } , srcProfile, baseProfile)
+end
+
+local function setupGrid2(src, dest, srcProfile)
+    if not src or not dest then return end    
+    copyProfileData(src, dest, { "namespaces", "Grid2Frame", "profiles" } , srcProfile, baseProfile)
+    copyProfileData(src, dest, { "namespaces", "Grid2Layout", "profiles" } , srcProfile, baseProfile)
+    copyProfileData(src, dest, { "namespaces", "Grid2RaidDebuffs", "profiles" } , srcProfile, baseProfile)
+    setupDefault(src, dest, srcProfile)
+    
 end
 
 local setups = { 
@@ -86,12 +85,14 @@ local function setup(arg)
     print("drathal`s setup")
     SetCVar("checkAddonVersion", 0)
 
+    local done = nil
     for _, data in pairs(setups) do 
 
         local addonName, DBName, srcProfile, setupFunc = unpack(data)
 
-        if arg == "all" or arg == addonName then 
+        if arg == "all" or arg == addonName or arg == addonName:lower() then 
             print("setup: ", addonName)
+            done = true
             
             local profile = setupProfile(_G["setup"..DBName], _G[DBName], srcProfile, baseProfile)
 
@@ -106,6 +107,8 @@ local function setup(arg)
             end 
         end
     end
+
+    if not done then return end
 
     ReloadUI();
 end

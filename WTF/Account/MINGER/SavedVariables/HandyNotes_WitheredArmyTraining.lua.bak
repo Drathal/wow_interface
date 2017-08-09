@@ -1,17 +1,17 @@
 
 HandyNotes_WitheredArmyTrainingDB = {
 	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
-		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
+		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["profiles"] = {
-		["Drathia - Madmortem"] = {
+		["Modranthir - Madmortem"] = {
 		},
 		["Darlaxle - Blackhand"] = {
 		},
@@ -25,7 +25,7 @@ HandyNotes_WitheredArmyTrainingDB = {
 		},
 		["Dranathal - Madmortem"] = {
 		},
-		["Modranthir - Madmortem"] = {
+		["Drathia - Madmortem"] = {
 		},
 	},
 }

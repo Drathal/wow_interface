@@ -1,5 +1,4 @@
 
-TEST_CONFIG = nil
 setupXIVBarDB = {
 	["char"] = {
 		["Drathia - Madmortem"] = {

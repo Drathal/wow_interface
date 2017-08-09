@@ -2,14 +2,25 @@
 KkthnxUIConfigAll = {
 	["Madmortem"] = {
 		["Drathia"] = false,
-		["Drathal"] = false,
-		["Dronthal"] = false,
-		["Drahmoon"] = false,
-		["Dranathal"] = false,
 		["Drathtix"] = false,
+		["Dranathal"] = false,
+		["Drahmoon"] = false,
+		["Dronthal"] = false,
+		["Drathal"] = false,
 	},
 }
 KkthnxUIConfigPublic = {
+	["Nameplates"] = {
+		["Clamp"] = true,
+		["EnhancedThreat"] = true,
+		["AdditionalSize"] = 0,
+		["Width"] = 100,
+		["HealerIcon"] = true,
+		["Height"] = 8,
+		["Smooth"] = true,
+		["HealthValue"] = false,
+		["AurasSize"] = 22,
+	},
 	["Blizzard"] = {
 		["TexturesColor"] = {
 			0.188235294117647, -- [1]
@@ -18,20 +29,9 @@ KkthnxUIConfigPublic = {
 			1, -- [4]
 		},
 	},
-	["Nameplates"] = {
-		["Clamp"] = true,
-		["EnhancedThreat"] = true,
-		["AdditionalSize"] = 0,
-		["Width"] = 100,
-		["HealerIcon"] = true,
-		["Height"] = 8,
-		["AurasSize"] = 22,
-		["HealthValue"] = false,
-		["Smooth"] = true,
-	},
 	["Bags"] = {
-		["SortRightToLeft"] = true,
 		["Spacing"] = 2,
+		["SortRightToLeft"] = true,
 	},
 	["Tooltip"] = {
 		["HealthValue"] = false,
@@ -43,10 +43,10 @@ KkthnxUIConfigPublic = {
 		["ShowMouseoverHighlight"] = false,
 		["Width"] = 70,
 		["RaidAsParty"] = true,
-		["Height"] = 30,
+		["IconSize"] = 16,
 		["ShowRolePrefix"] = true,
 		["MainTankFrames"] = false,
-		["IconSize"] = 16,
+		["Height"] = 30,
 		["ShowThreatText"] = true,
 		["ManabarShow"] = false,
 		["Smooth"] = true,

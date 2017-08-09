@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 1712,
 	["lastSanitation"] = 3,
+	["session"] = 1735,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\dSetup\\dSetup-1.lua:54: unexpected symbol near 'if'",
@@ -43,5 +43,13 @@ BugGrabberDB = {
 			["session"] = 1710,
 			["counter"] = 1,
 		}, -- [5]
+		{
+			["message"] = "Interface\\AddOns\\dSetup\\dSetup-1.lua:67: attempt to call global 'setupDefault' (a nil value)",
+			["time"] = "2017/08/09 10:32:05",
+			["locals"] = "src = <table> {\n namespaces = <table> {\n }\n profileKeys = <table> {\n }\n profiles = <table> {\n }\n}\ndest = <table> {\n namespaces = <table> {\n }\n Default = <table> {\n }\n profileKeys = <table> {\n }\n profiles = <table> {\n }\n}\nsrcProfile = \"Dronthal - Madmortem\"\n(*temporary) = nil\n(*temporary) = <table> {\n namespaces = <table> {\n }\n profileKeys = <table> {\n }\n profiles = <table> {\n }\n}\n(*temporary) = <table> {\n namespaces = <table> {\n }\n Default = <table> {\n }\n profileKeys = <table> {\n }\n profiles = <table> {\n }\n}\n(*temporary) = \"Dronthal - Madmortem\"\n(*temporary) = \"attempt to call global 'setupDefault' (a nil value)\"\ncopyProfileData = <function> defined @Interface\\AddOns\\dSetup\\dSetup.lua:51\nbaseProfile = \"Default\"\n",
+			["stack"] = "Interface\\AddOns\\dSetup\\dSetup-1.lua:67: in function `setupFunc'\nInterface\\AddOns\\dSetup\\dSetup-1.lua:99: in function <Interface\\AddOns\\dSetup\\dSetup.lua:83>\nInterface\\AddOns\\dSetup\\dSetup-1.lua:119: in function `?'\nInterface\\FrameXML\\ChatFrame.lua:4486: in function `ChatEdit_ParseText'\nInterface\\FrameXML\\ChatFrame.lua:4154: in function `ChatEdit_SendText'\nInterface\\FrameXML\\ChatFrame.lua:4190: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
+			["session"] = 1722,
+			["counter"] = 7,
+		}, -- [6]
 	},
 }

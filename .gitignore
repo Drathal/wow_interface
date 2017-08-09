@@ -9,6 +9,7 @@
 /Screenshots
 /Utils
 /down
+*.md5
 *.exe
 *.dll
 *.zip
