@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="vars/Grid2.lua" />
+	<Script file="vars/XIV_Databar.lua" />
+	<Script file="vars/Skada.lua" />
+	<Script file="vars/TellMeWhen.lua" />
+	<Script file="vars/AllTheThings.lua" />
+	
+	<Script file="dSetup.lua" />
+</Ui>

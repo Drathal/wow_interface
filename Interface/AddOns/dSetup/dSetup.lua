@@ -1,10 +1,8 @@
 local _G = _G
 local playerName = UnitName("player")
 local playerRealm = GetRealmName()
-local mainChar = "Dronthal - Madmortem";
 local currentChar = playerName .. " - " .. playerRealm
-local baseProfile = "baseProfile"
-local setupFrame = CreateFrame("Frame")
+local baseProfile = "Default"
 local SetCVar = _G.SetCVar
 
 local function ensurePath(tbl, path)
@@ -67,7 +65,7 @@ local function setupGrid2(src, dest, srcProfile)
     copyProfileData(src, dest, { "namespaces", "Grid2Frame", "profiles" } , srcProfile, baseProfile)
     copyProfileData(src, dest, { "namespaces", "Grid2Layout", "profiles" } , srcProfile, baseProfile)
     copyProfileData(src, dest, { "namespaces", "Grid2Options", "profiles" } , srcProfile, baseProfile)
-    copyProfileData(src, dest, { "profiles" } , srcProfile, baseProfile)
+    setupDefault(src, dest, srcProfile)
     
 end
 

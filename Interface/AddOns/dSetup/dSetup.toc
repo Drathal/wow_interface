@@ -1,14 +1,12 @@
 ## Interface: 70200
 ## Title: dSetup
+## Author: drathal
+## DefaultState: Disabled
 ## Notes: Setup UI
 ## Version: 1
-## RequiredDeps: Grid2, XIV_Databar, Skada, TellMeWhen, AllTheThings
+## OptionalDeps: Grid2, XIV_Databar, Skada, TellMeWhen, AllTheThings
 ## SavedVariables: dsetupDB
+## X-License: The MIT License (MIT)
+## X-eMail: addon@drathal.com
 
-vars/Grid2.lua
-vars/XIV_Databar.lua
-vars/Skada.lua
-vars/TellMeWhen.lua
-vars/AllTheThings.lua
-
-dSetup.lua
+dSetup.xml

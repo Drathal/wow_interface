@@ -323,3 +323,9 @@ function XpFlag.DeleteMark(name)
 	marks[name]:Hide();
 	marks[name] = nil;
 end
+
+--[[
+https://us.battle.net/forums/en/wow/topic/20741994059
+http://www.wowinterface.com/forums/showthread.php?t=35104
+https://github.com/zorker/rothui/blob/bd702c2abaa670c05c5fdd14cd4d2519a2dc201e/wow7.0/_AddonTests/rAnimationWidget/core.lua
+]]--
