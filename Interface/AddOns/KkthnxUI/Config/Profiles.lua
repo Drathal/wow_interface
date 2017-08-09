@@ -96,6 +96,13 @@ C["Position"].RaidUtility = {"TOP", "UIParent", "TOP", -280, -32}
 C["Position"].Alerts = {"TOP", "UIParent", "TOP", 0, -32}
 C["Position"].AltPowerBar = {"TOP", "UIParent", "TOP", 0, -64}
 
+C["General"].UIScale = 0.73 
+
+if K.ScreenWidth > 1920 then
+	C["General"].AutoScale = false 
+else
+	C["General"].AutoScale = true
+end
 
 -- Per class config (overwrites general)
 -- Class type needs to be uppercase -- DRUID, MAGE ect ect...
