@@ -1,4 +1,5 @@
-/WTF/Account/130282038#1/
+/WTF/Account/*
+!/WTF/Account/MINGER
 /Interface/AddOns/Blizzard_*
 /Interface/AddOns/Zygor*
 /AskMrRobotClient
@@ -15,10 +16,13 @@
 *.zip
 *.mfil
 *.app
+*.patch
 .curseclient
 .product.db
 .patch.result
 .build.info
 Launcher.db
 Config.wtf
+CUFProfiles.*
+
 
