@@ -36,17 +36,16 @@ local defaults = {
 
 XpFlag.tooltip = CreateFrame("Frame");
 XpFlag.tooltip:Hide();
-XpFlag.tooltip.delay = 0.2;
+XpFlag.tooltip.delay = 0.25;
 XpFlag.tooltip:SetScript("OnUpdate",function(self,elapsed)
 	XpFlag.tooltip.delay = XpFlag.tooltip.delay - elapsed;
 	if XpFlag.tooltip.delay <= 0 then
-		GameTooltip:ClearLines();
-		GameTooltip:AddLine("XpFlag");
-
 		for k,v in pairs(marks) do
-			if v:IsMouseOver() then
-				
-				GameTooltip:AddLine(" ");
+
+			if v:IsMouseOver() and v.class and v.name and v.level then
+
+				GameTooltip:ClearLines();
+				GameTooltip:AddLine("XpFlag");			
 				GameTooltip:AddLine(k, RAID_CLASS_COLORS[v.class].r, RAID_CLASS_COLORS[v.class].g, RAID_CLASS_COLORS[v.class].b, 1);
 				GameTooltip:AddLine("Level: "..v.level, 1, 1, 1, 1);
 				GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue.." ("..string.format("%.2f",v.value/v.maxvalue*100).."%)", 1, 1, 1, 1);				
@@ -58,6 +57,7 @@ XpFlag.tooltip:SetScript("OnUpdate",function(self,elapsed)
 
 			end
 		end
+		XpFlag.tooltip.delay = 0.25;
 		GameTooltip:Show();
 	end
 end);

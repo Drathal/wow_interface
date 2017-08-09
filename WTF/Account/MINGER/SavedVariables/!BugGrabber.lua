@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 1768,
 	["lastSanitation"] = 3,
+	["session"] = 1773,
 	["errors"] = {
 		{
 			["message"] = "SendAddonMessage(): Whisper message missing target player!",
