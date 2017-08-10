@@ -455,7 +455,11 @@ createMainFrame = function()
 	if (brmV.showOnlyActive == true) then
 		showActiveStatweights:SetChecked(true)
 		hideStatweights(showActiveStatweights)
+	else
+		hideStatweights(showActiveStatweights)
+		hideStatweights(showActiveStatweights)
 	end
+	
 	
 	_G[showActiveStatweights:GetName().."Text"]:SetText("Show only active stats")
 	_G[showActiveStatweights:GetName().."Text"]:ClearAllPoints()

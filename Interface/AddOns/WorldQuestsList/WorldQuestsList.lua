@@ -1,4 +1,4 @@
-local VERSION = 38
+local VERSION = 40
 
 --[[
 Special icons for rares, pvp or pet battle quests in list
@@ -101,6 +101,12 @@ Added TomTom support
 
 Fixed debug numbers in chat
 TomTom now have higher prior if both addons for arrow enabled
+
+Added autoremoving arrow for TomTom if you completed or leaved quest area [in testing]
+Added ignoring quests [right click on quest name]
+
+Added option for changing arrow style (TomTom or ExRT)
+Minor 7.3.0 Updates
 ]]
 
 
@@ -149,6 +155,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Отключить подсветку новых заданий",
 		distance = "Расстояние",
 		disableBountyIcon = "Отключить иконку фракций для заданий посланника",
+		arrow = "Стрелка",
 	} or
 	locale == "deDE" and {
 		gear = "Ausrüstung",
@@ -172,6 +179,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Disable highlight for new quests",
 		distance = "Distance",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	} or
 	locale == "frFR" and {
 		gear = "Équipement",
@@ -195,6 +203,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Disable highlight for new quests",
 		distance = "Distance",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	} or
 	(locale == "esES" or locale == "esMX") and {
 		gear = "Equipo",
@@ -218,6 +227,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Disable highlight for new quests",
 		distance = "Distance",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	} or	
 	locale == "itIT" and {
 		gear = "Equipaggiamento",
@@ -241,6 +251,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Disable highlight for new quests",
 		distance = "Distance",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	} or
 	locale == "ptBR" and {
 		gear = "Equipamento",
@@ -264,6 +275,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Disable highlight for new quests",
 		distance = "Distance",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	} or
 	locale == "koKR" and {
 		gear = "Gear",
@@ -287,6 +299,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Disable highlight for new quests",
 		distance = "Distance",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	} or
 	(locale == "zhCN" or locale == "zhTW") and {	--by cuihuanyu1986
 		gear = "装备",
@@ -310,6 +323,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "禁用 新任务高亮",
 		distance = "距离",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	} or	
 	{
 		gear = "Gear",
@@ -333,6 +347,7 @@ local LOCALE =
 		disabeHighlightNewQuests = "Disable highlight for new quests",
 		distance = "Distance",
 		disableBountyIcon = "Disable Emissary icons for faction names",
+		arrow = "Arrow",
 	}
 
 local orderResName = GetCurrencyInfo(1220)
@@ -377,15 +392,17 @@ end
 local WorldQuestList_Update
 local LastUpdateReset
 local WorldQuestList_Update_PrevZone = nil
+local TomTomQuests = {}
 
 local UpdateTicker = nil
 
 local ELib = {}
 
-local function AddArrow(x,y,worldX,worldY,map,continent,name)
-	if TomTom then
-		TomTom:AddZWaypoint(continent, map, x*100, y*100, name)
-	elseif GExRT and GExRT.F.Arrow then
+local function AddArrow(x,y,worldX,worldY,map,continent,name,questID)
+	if VWQL.ArrowStyle == 2 and TomTom then
+		TomTomQuests[questID or -1] = TomTom:AddZWaypoint(continent, map, x*100, y*100, name) or true
+	end
+	if not VWQL.ArrowStyle and GExRT and GExRT.F.Arrow then
 		GExRT.F.Arrow:ShowRunTo(worldX,worldY,40,nil,true)
 	end
 end
@@ -418,7 +435,7 @@ local function EnableClickArrow()
 						
 						local name = C_TaskQuest.GetQuestInfoByQuestID(info.questId)
 						local continent = GetCurrentMapContinent()
-						AddArrow(info.x,info.y,x,y,z,continent,name)
+						AddArrow(info.x,info.y,x,y,z,continent,name,info.questId)
 						return
 					end
 				end
@@ -652,7 +669,9 @@ WorldQuestList.Close.b = WorldQuestList.Close:CreateTexture(nil,"BACKGROUND")
 WorldQuestList.Close.b:SetAllPoints()
 WorldQuestList.Close.b:SetColorTexture(0,0,0,.8)
 
+
 WorldQuestList:RegisterEvent('ADDON_LOADED')
+WorldQuestList:RegisterEvent('QUEST_REMOVED')
 WorldQuestList:SetScript("OnEvent",function(self,event,...)
 	if event == 'ADDON_LOADED' then
 		self:UnregisterEvent('ADDON_LOADED')
@@ -683,6 +702,8 @@ WorldQuestList:SetScript("OnEvent",function(self,event,...)
 		VWQL.Sort = VWQL.Sort and tonumber(VWQL.Sort) or ActiveSort
 		ActiveSort = VWQL.Sort
 		
+		VWQL.Ignore = VWQL.Ignore or {}
+		
 		WorldMapHideWQLCheck:SetChecked(not VWQL[charKey].HideMap)
 		
 		WorldQuestList.modeSwitcherCheck:SetChecked(not VWQL[charKey].RegularQuestMode)
@@ -700,9 +721,49 @@ WorldQuestList:SetScript("OnEvent",function(self,event,...)
 		UpdateScale()
 		UpdateAnchor()
 		WorldQuestList.header:Update()
+	elseif event == 'QUEST_REMOVED' then
+		local questID = ...
+		if questID then
+			if TomTomQuests[questID] then
+				local qKey = TomTomQuests[questID]
+				if type(qKey) == 'table' then
+					TomTom:RemoveWaypoint(qKey)
+				end
+				return
+			elseif type(TomTom) == 'table' and not VWQL.DisableArrow then
+				local map = GetCurrentMapAreaID()
+				local continent = GetCurrentMapContinent()
+				local name = C_TaskQuest.GetQuestInfoByQuestID(questID)
+				if name and map and continent and type(TomTom.waypoints) == 'table' and TomTom.waypoints[map] then
+					name = name:gsub("%-","%%%-")
+					for key,uid in pairs(TomTom.waypoints[map]) do
+						if type(key) == 'string' and key:find(name) then
+							TomTom:RemoveWaypoint(uid)
+							return
+						end
+					end
+				end
+			end
+		end
+	elseif event == 'ARTIFACT_UPDATE' then
+		WorldQuestList.ak73 = C_ArtifactUI.GetArtifactKnowledgeLevel()
+		if WorldQuestList.ak73 then
+			self:UnregisterEvent("ARTIFACT_UPDATE")
+		end
 	end
 end)
 
+do
+	local version, buildVersion, buildDate, uiVersion = GetBuildInfo()
+	
+	local expansion,majorPatch,minorPatch = (version or "1.0.0"):match("^(%d+)%.(%d+)%.(%d+)")
+	
+	WorldQuestList.is73 = ((expansion or 0) * 10000 + (majorPatch or 0) * 100 + (minorPatch or 0)) >= 70300
+end
+
+if WorldQuestList.is73 then
+	WorldQuestList:RegisterEvent('ARTIFACT_UPDATE')
+end
 
 local function WorldQuestList_Line_OnEnter(self)
 	if not self.questID then
@@ -962,6 +1023,12 @@ local function WorldQuestList_LineName_OnClick(self,button)
 			end
 		end
 		
+		local mapAreaID = GetCurrentMapAreaID()
+		
+		if mapAreaID == 1184 then
+			return
+		end
+		
 		if line.data and not IsShiftKeyDown() then
 			local Wx,Wy = line.data.Wx,line.data.Wy
 			if not VWQL.DisableArrow and Wx and Wy then
@@ -976,15 +1043,15 @@ local function WorldQuestList_LineName_OnClick(self,button)
 				local y = d1 - Wy * abs(d1-b1)
 			
 				--GExRT.F.Arrow:ShowRunTo(x,y,30,nil,true)
-				local name = C_TaskQuest.GetQuestInfoByQuestID(line.data.questId)
+				local name = C_TaskQuest.GetQuestInfoByQuestID(line.questID)
 				local continent = GetCurrentMapContinent()
-				AddArrow(Wx,Wy,x,y,z,continent,name)
+				AddArrow(Wx,Wy,x,y,z,continent,name,line.questID)
 			end
 		end
 
 
 		local info = line.data
-		if info and info.zoneMapID and GetCurrentMapAreaID() == 1007 and not IsShiftKeyDown() then
+		if info and info.zoneMapID and mapAreaID == 1007 and not IsShiftKeyDown() then
 			WorldQuestList.mapC:Hide()
 			WorldQuestList.mapD:Hide()
 			SetMapByID(info.zoneMapID)
@@ -1006,7 +1073,8 @@ local function WorldQuestList_LineName_OnClick(self,button)
 			end)
 		end
 	elseif button == "RightButton" then
-		WorldQuestList_Line_OnClick(self:GetParent(),"RightButton")
+		ELib.ScrollDropDown.ClickButton(self)
+		--WorldQuestList_Line_OnClick(self:GetParent(),"RightButton")
 	end
 end
 
@@ -1046,6 +1114,31 @@ local function WorldQuestList_Timeleft_OnLeave(self)
 	WorldQuestList_Line_OnLeave(self:GetParent())
 	GameTooltip_Hide()
 end
+
+local IgnoreListDropDown = {
+	{
+		text = IGNORE_QUEST,
+		func = function()
+			ELib.ScrollDropDown.Close()
+			local questID = ELib.ScrollDropDown.DropDownList[1].parent:GetParent().questID
+			if questID then
+				VWQL.Ignore[questID] = time()
+				LastUpdateReset()
+				WorldQuestList_Update()
+				if WorldQuestList.BlackListWindow:IsShown() then
+					WorldQuestList.BlackListWindow:Hide()
+					WorldQuestList.BlackListWindow:Show()
+				end
+			end
+		end,
+	},
+	{
+		text = CLOSE,
+		func = function()
+			ELib.ScrollDropDown.Close()
+		end,
+	},	
+}
 
 local NAME_WIDTH = 135
 
@@ -1125,6 +1218,10 @@ local function WorldQuestList_CreateLine(i)
 	line.name.f:SetScript("OnLeave",WorldQuestList_LineName_OnLeave)
 	line.name.f:SetScript("OnClick",WorldQuestList_LineName_OnClick)
 	line.name.f:RegisterForClicks("LeftButtonDown","RightButtonUp")
+	
+	line.name.f.Width = 120
+	line.name.f.isButton = true
+	line.name.f.List = IgnoreListDropDown
 	
 	line.timeleft.f = CreateFrame("Frame",nil,line)
 	line.timeleft.f:SetAllPoints(line.timeleft)
@@ -1514,7 +1611,20 @@ do
 		end,
 		arg1 = "!ignoreFilterLegionfall",
 		checkable = true,
+	}
+	list[#list+1] = {
+		text = IGNORE,
+		func = function()
+			VWQL[charKey].ignoreIgnore = not VWQL[charKey].ignoreIgnore
+			ELib.ScrollDropDown.UpdateChecks()
+			WorldQuestList_Update_PrevZone = nil
+			WorldQuestList_Update()
+		end,
+		arg1 = "!ignoreIgnore",
+		checkable = true,
 	}	
+	
+	
 	
 	
 	
@@ -1538,6 +1648,8 @@ do
 				self.List[i].checkState = VWQL[charKey].epicIgnoreFilter
 			elseif self.List[i].arg1 == "!ignoreFilterLegionfall" then
 				self.List[i].checkState = VWQL[charKey].legionfallIgnoreFilter
+			elseif self.List[i].arg1 == "!ignoreIgnore" then
+				self.List[i].checkState = VWQL[charKey].ignoreIgnore
 			end
 		end
 	end	
@@ -1595,21 +1707,46 @@ WorldQuestList.optionsDropDown:SetScript("OnHide",function () ELib.ScrollDropDow
 do
 	local list = {}
 	WorldQuestList.optionsDropDown.Button.List = list
-
-	list[#list+1] = {
-		text = LOCALE.disableArrow,
-		func = function()
-			VWQL.DisableArrow = not VWQL.DisableArrow
-			ELib.ScrollDropDown.Close()
-			WorldQuestList_Update_PrevZone = nil
-			WorldQuestList_Update()
-			
-			if not VWQL.DisableArrow and EnableClickArrow then
-				EnableClickArrow()
-			end
-		end,
-		checkable = true,
+	
+	local arrowMenu = {
+		{
+			text = LOCALE.disableArrow,
+			func = function()
+				VWQL.DisableArrow = not VWQL.DisableArrow
+				ELib.ScrollDropDown.Close()
+				WorldQuestList_Update_PrevZone = nil
+				WorldQuestList_Update()
+				
+				if not VWQL.DisableArrow and EnableClickArrow then
+					EnableClickArrow()
+				end
+			end,
+			checkable = true,
+		},	
+		{
+			text = "TomTom",
+			func = function()
+				VWQL.ArrowStyle = 2
+				ELib.ScrollDropDown.Close()
+			end,
+			radio = true,
+		},
+		{
+			text = "ExRT",
+			func = function()
+				VWQL.ArrowStyle = nil
+				ELib.ScrollDropDown.Close()
+			end,
+			radio = true,
+		},	
 	}
+	
+	list[#list+1] = {
+		text = LOCALE.arrow,
+		subMenu = arrowMenu,
+		padding = 16,	
+	}
+	
 	list[#list+1] = {
 		text = LOCALE.totalapdisable,
 		func = function()
@@ -1851,11 +1988,17 @@ do
 		checkable = true,
 	}	
 	
+	list[#list+1] = {
+		text = IGNORE,
+		func = function()
+			ELib.ScrollDropDown.Close()
+			WorldQuestList.BlackListWindow:Show()
+		end,
+	}
+	
 	function WorldQuestList.optionsDropDown.Button:additionalToggle()
 		for i=1,#self.List do
-			if self.List[i].text == LOCALE.disableArrow then
-				self.List[i].checkState = VWQL.DisableArrow
-			elseif self.List[i].text == LOCALE.totalapdisable then	
+			if self.List[i].text == LOCALE.totalapdisable then	
 				self.List[i].checkState = VWQL.DisableTotalAP
 			elseif self.List[i].text == LOCALE.barrelsHelper then
 				self.List[i].checkState = not VWQL.DisableBarrels
@@ -1884,6 +2027,9 @@ do
 		apFormatSubMenu[4].checkState = VWQL.APFormat == 4
 		apFormatSubMenu[5].checkState = VWQL.APFormat == 5
 		apFormatSubMenu[6].checkState = not VWQL.APFormat
+		arrowMenu[1].checkState = VWQL.DisableArrow
+		arrowMenu[2].checkState = VWQL.ArrowStyle == 2
+		arrowMenu[3].checkState = not VWQL.ArrowStyle
 	end	
 end
 
@@ -1930,7 +2076,16 @@ local SortFuncs = {
 			return a.faction < b.faction 
 		end
 	end,
-	function(a,b) if a and b then if a.rewardType == b.rewardType then return a.rewardSort > b.rewardSort else return a.rewardType < b.rewardType end end end,
+	function(a,b) if a and b then 
+			if a.rewardType ~= b.rewardType then 
+				return a.rewardType < b.rewardType 
+			elseif a.rewardSort == b.rewardSort then
+				return a.questID > b.questID 
+			else
+				return a.rewardSort > b.rewardSort 
+			end 
+		end 
+	end,
 	function(a,b) if a and b then return a.distance < b.distance end end,
 	
 }
@@ -2329,7 +2484,18 @@ function WorldQuestList_Update(preTastInfo)
 						info.zoneID = i
 						info.zoneMapID = mapID
 						
-						if info.x and info.y then
+						if i == 1 then
+							info.x,info.y = 0.63,0.28
+							info.Wx,info.Wy = 1 - info.x,1 - info.y
+						elseif i == 2 then
+							info.x = 0.34
+							info.y = 0.28
+							info.Wx,info.Wy = 1 - info.x,1 - info.y
+						elseif i == 3 then
+							info.x = 0.30
+							info.y = 0.60
+							info.Wx,info.Wy = 1 - info.x,1 - info.y
+						elseif info.x and info.y then
 							info.x = nil
 							info.y = nil
 						end
@@ -2450,6 +2616,10 @@ function WorldQuestList_Update(preTastInfo)
 	
 	O.artifactKnowlegeLevel = select(2,GetCurrencyInfo(1171)) or 0
 	
+	if WorldQuestList.is73 then
+		O.artifactKnowlegeLevel = WorldQuestList.ak73 or O.artifactKnowlegeLevel or 40
+	end
+	
 	O.isGearLessRelevant = (select(2,GetAverageItemLevel()) or 0) >= 880
 		
 	local bounties = GetQuestBountyInfoForMapID(1007)
@@ -2517,9 +2687,8 @@ function WorldQuestList_Update(preTastInfo)
 	local totalQuestsNumber = 0
 	if ( numTaskPOIs > 0 ) then
 		for i, info  in pairs(taskInfo) do
-			if HaveQuestData(info.questId) and QuestUtils_IsQuestWorldQuest(info.questId) then
-				local questID = info.questId
-				
+			local questID = info.questId
+			if HaveQuestData(questID) and QuestUtils_IsQuestWorldQuest(questID) and (VWQL[charKey].ignoreIgnore or not VWQL.Ignore[questID]) then
 				local isNewQuest = not VWQL[charKey].Quests[ questID ] or (TableQuestsViewed_Time[ questID ] and TableQuestsViewed_Time[ questID ] > currTime)
 				
 				local reward = ""
@@ -3023,8 +3192,6 @@ function WorldQuestList_Update(preTastInfo)
 		result = newResult
 	end
 	
-	Q = result
-	
 	--taskIconIndex = taskIconIndex + 1
 	for i=1,#result do
 		local data = result[i]
@@ -3338,6 +3505,173 @@ WorldMapHideWQLCheck:SetScript("OnClick", function(self,event)
 		WorldQuestList:Show()
 	end
 end)
+
+
+
+
+WorldQuestList.BlackListWindow = CreateFrame("Frame",nil,UIParent)
+WorldQuestList.BlackListWindow:SetBackdrop({bgFile="Interface/Buttons/WHITE8X8"})
+WorldQuestList.BlackListWindow:SetBackdropColor(0.05,0.05,0.07,0.98)
+WorldQuestList.BlackListWindow.title = WorldQuestList.BlackListWindow:CreateFontString(nil,"OVERLAY","GameFontNormal")
+WorldQuestList.BlackListWindow.title:SetPoint("TOP",0,-3)
+WorldQuestList.BlackListWindow.title:SetTextColor(1,0.66,0,1)
+WorldQuestList.BlackListWindow.title:SetText(IGNORE)
+WorldQuestList.BlackListWindow:SetPoint("CENTER")
+WorldQuestList.BlackListWindow:Hide()
+WorldQuestList.BlackListWindow:SetFrameStrata("DIALOG")
+WorldQuestList.BlackListWindow:SetClampedToScreen(true)
+WorldQuestList.BlackListWindow:EnableMouse(true)
+WorldQuestList.BlackListWindow:SetMovable(true)
+WorldQuestList.BlackListWindow:RegisterForDrag("LeftButton")
+WorldQuestList.BlackListWindow:SetDontSavePosition(true)
+WorldQuestList.BlackListWindow:SetScript("OnDragStart", function(self) 
+	self:StartMoving() 
+end)
+WorldQuestList.BlackListWindow:SetScript("OnDragStop", function(self) 
+	self:StopMovingOrSizing() 
+end)
+WorldQuestList.BlackListWindow:SetSize(500,300)
+
+WorldQuestList.BlackListWindow:SetScript("OnShow", function(self) 
+	if not self.created then
+		self.created = true
+		
+		self.close = ELib:Button(self,CLOSE)
+		self.close:SetSize(100,20)
+		self.close:SetPoint("BOTTOM",0,5)
+		self.close:SetScript("OnClick",function() self:Hide() end)
+		
+		--lazy solution
+		self.S = CreateFrame("ScrollFrame", nil, self)
+		self.C = CreateFrame("Frame", nil, self.S) 
+		self.S:SetScrollChild(self.C)
+		self.S:SetSize(470,250)
+		self.C:SetSize(470,250)
+		self.S:SetPoint("TOP",-7,-20)
+		
+		self.S:SetScript("OnMouseWheel",function (self,delta)
+			delta = delta * 5
+			local min,max = self.ScrollBar:GetMinMaxValues()
+			local val = self.ScrollBar:GetValue()
+			if (val - delta) < min then
+				self.ScrollBar:SetValue(min)
+			elseif (val - delta) > max then
+				self.ScrollBar:SetValue(max)
+			else
+				self.ScrollBar:SetValue(val - delta)
+			end  
+		end)
+		
+		self.S.ScrollBar = CreateFrame("Slider", nil, self.S)
+		self.S.ScrollBar:SetPoint("TOPLEFT",self.S,"TOPRIGHT",1,0)
+		self.S.ScrollBar:SetPoint("BOTTOMLEFT",self.S,"BOTTOMRIGHT",1,0)
+		self.S.ScrollBar:SetWidth(14)
+		ELib.Templates:Border(self.S.ScrollBar,.24,.25,.30,1,1)
+
+		self.S.ScrollBar.thumb = self.S.ScrollBar:CreateTexture(nil, "OVERLAY")
+		self.S.ScrollBar.thumb:SetColorTexture(0.44,0.45,0.50,.7)
+		self.S.ScrollBar.thumb:SetSize(10,20)
+		
+		self.S.ScrollBar:SetThumbTexture(self.S.ScrollBar.thumb)
+		self.S.ScrollBar:SetOrientation("VERTICAL")
+		self.S.ScrollBar:SetMinMaxValues(0,0)
+		self.S.ScrollBar:SetValue(0)
+		self.S:SetVerticalScroll(0) 
+		
+		self.S.ScrollBar:SetScript("OnValueChanged",function(_,value)
+			self.S:SetVerticalScroll(value) 
+		end)
+		
+		ELib.Templates:Border(self.S,.24,.25,.30,1,1)
+		
+		self.L = {}
+		
+		local function UnignoreQuest(self)
+			local questID = self:GetParent().d
+			if not questID then
+				return
+			end
+			questID = questID[1]
+			VWQL.Ignore[questID] = nil
+			LastUpdateReset()
+			WorldQuestList_Update()
+			WorldQuestList.BlackListWindow:Hide()
+			WorldQuestList.BlackListWindow:Show()
+		end
+		
+		self.GetLine = function(i)
+			if self.L[i] then
+				return self.L[i]
+			end
+			local line = CreateFrame("Frame",nil,self.C)
+			self.L[i] = line
+			line:SetPoint("TOPLEFT",0,-(i-1)*18)
+			line:SetSize(470,18)
+			
+			line.n = line:CreateFontString(nil,"ARTWORK","GameFontNormal")
+			line.n:SetPoint("LEFT",5,0)
+			line.n:SetSize(140,18)
+			line.n:SetJustifyH("LEFT")
+			line.n:SetFont(line.n:GetFont(),10)
+			
+			line.z = line:CreateFontString(nil,"ARTWORK","GameFontWhite")
+			line.z:SetPoint("LEFT",line.n,"RIGHT",5,0)
+			line.z:SetSize(100,18)
+			line.z:SetJustifyH("LEFT")
+			line.z:SetFont(line.z:GetFont(),10)
+			
+			line.t = line:CreateFontString(nil,"ARTWORK","GameFontWhite")
+			line.t:SetPoint("LEFT",line.z,"RIGHT",5,0)
+			line.t:SetSize(120,18)
+			line.t:SetJustifyH("LEFT")
+			line.t:SetFont(line.t:GetFont(),10)
+			
+			line.d = ELib:Button(line,DELETE)
+			line.d:SetSize(80,16)
+			line.d:SetPoint("RIGHT",-5,0)
+			line.d:SetScript("OnClick",UnignoreQuest)
+						
+			return line
+		end
+	end
+	
+	local list = {}
+	for questID,timeAdded in pairs(VWQL.Ignore) do
+		local name,factionID = C_TaskQuest.GetQuestInfoByQuestID(questID)
+		
+		local factionName
+		if ( factionID ) then
+			factionName = GetFactionInfoByID(factionID)
+		end
+		
+		list[#list+1] = {questID,timeAdded,name or "Quest "..questID,factionName,date("%x %X",timeAdded)}
+	end
+	sort(list,function(a,b) return a[2]>b[2] end)
+	
+	for i=1,#list do
+		local line = self.GetLine(i)
+		line.n:SetText(list[i][3])
+		line.z:SetText(list[i][4] or "")
+		line.t:SetText(list[i][5])
+		
+		line.d = list[i]
+		line:Show()
+	end
+	for i=#list+1,#self.L do
+		self.L[i]:Hide()
+	end
+	
+	self.C:SetHeight(1+#list*18)
+	--self.S:SetVerticalScroll(0) 
+	
+	local maxHeight = max(0,#list*18 - 250)
+	self.S.ScrollBar:SetMinMaxValues(0,maxHeight)
+	
+	local oldVal = self.S.ScrollBar:GetValue()
+	self.S.ScrollBar:SetValue(min(oldVal,maxHeight))
+end)
+
+
 
 
 local function DEV_CreateBorder(parent,sZ)
@@ -3770,6 +4104,7 @@ do
 		--obj:SetParent(parent or UIParent)
 		return obj
 	end
+	ELib.Templates = Templates
 	function Templates:Border(self,cR,cG,cB,cA,size,offsetX,offsetY)
 		offsetX = offsetX or 0
 		offsetY = offsetY or 0
@@ -4376,4 +4711,51 @@ do
 	
 	---> End Scroll Drop Down
 
+	function Templates:ExRTButtonTransparentTemplate(parent)
+		local self = CreateFrame("Button",nil,parent)
+		self:SetSize(40,18)
+		
+		self.HighlightTexture = self:CreateTexture()
+		self.HighlightTexture:SetColorTexture(1,1,1,.3)
+		self.HighlightTexture:SetPoint("TOPLEFT")
+		self.HighlightTexture:SetPoint("BOTTOMRIGHT")
+		self:SetHighlightTexture(self.HighlightTexture)
+		
+		self.PushedTexture = self:CreateTexture()
+		self.PushedTexture:SetColorTexture(.9,.8,.1,.3)
+		self.PushedTexture:SetPoint("TOPLEFT")
+		self.PushedTexture:SetPoint("BOTTOMRIGHT")
+		self:SetPushedTexture(self.PushedTexture)
+		
+		self:SetNormalFontObject("GameFontNormal")
+		self:SetHighlightFontObject("GameFontHighlight")
+		self:SetDisabledFontObject("GameFontDisable")
+		
+		return self
+	end
+	function Templates:ExRTButtonModernTemplate(parent)
+		local self = Templates:ExRTButtonTransparentTemplate(parent)
+		
+		Templates:Border(self,0,0,0,1,1)
+		
+		self.Texture = self:CreateTexture(nil,"BACKGROUND")
+		self.Texture:SetColorTexture(1,1,1,1)
+		self.Texture:SetGradientAlpha("VERTICAL",0.05,0.06,0.09,1, 0.20,0.21,0.25,1)
+		self.Texture:SetPoint("TOPLEFT")
+		self.Texture:SetPoint("BOTTOMRIGHT")
+	
+		self.DisabledTexture = self:CreateTexture()
+		self.DisabledTexture:SetColorTexture(0.20,0.21,0.25,0.5)
+		self.DisabledTexture:SetPoint("TOPLEFT")
+		self.DisabledTexture:SetPoint("BOTTOMRIGHT")
+		self:SetDisabledTexture(self.DisabledTexture)	
+		
+		return self
+	end
+	function ELib:Button(parent,text)
+		local self = ELib:Template("ExRTButtonModernTemplate",parent)
+		self:SetText(text)
+		
+		return self
+	end
 end

@@ -355,7 +355,7 @@ function BonusRollManagerTable.calcBossScore()
 	for bossIndex, bossLoot in pairs(loot) do
 		for lootIndex, currentLoot in pairs(bossLoot) do
 			local t = 0
-			if not isOccupied[currentLoot.slot] then
+			if not isOccupied[currentLoot.slot] and equippedBySlot[currentLoot.slot] then
 				t = currentLoot.score - equippedBySlot[currentLoot.slot].score
 				t = math.max(t, 0)
 				if BiS[currentLoot.slot] and not currentLoot.isTier and BiS[currentLoot.slot].isTier then
@@ -388,6 +388,30 @@ function BonusRollManagerTable.sortBosses()
 		sorted[best.index] = true
 	end
 end
+
+function BonusRollManagerTable.averageItem()
+	local avgItemScore, totalItemScore, numItems = 0, 0, 0
+	for bossIndex, bossLoot in pairs(loot) do
+		for lootIndex, currentLoot in pairs(bossLoot) do
+			numItems = numItems + 1
+			local t = 0
+			if not isOccupied[currentLoot.slot] and equippedBySlot[currentLoot.slot] then
+				t = currentLoot.score - equippedBySlot[currentLoot.slot].score
+				t = math.max(t, 0)
+				if BiS[currentLoot.slot] and not currentLoot.isTier and BiS[currentLoot.slot].isTier then
+					t = 0
+				end
+				if BiS[currentLoot.slot] and currentLoot.isTier and BiS[currentLoot.slot].isTier and not equippedBySlot[currentLoot.slot].isTier then
+					t = t + brmV.statweights[brmT.getSelectedSpecID()][10]
+				end
+			end
+			totalItemScore = totalItemScore + t
+		end
+	end
+	avgItemScore = totalItemScore / numItems
+	print(avgItemScore)
+end
+
 
 
 

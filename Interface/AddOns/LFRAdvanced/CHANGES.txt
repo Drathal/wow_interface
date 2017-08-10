@@ -1,3 +1,9 @@
+commit e7565c8aa640137260430536344a839307e09c63
+Author: TOM_RUS <tom_rus@github.com>
+Date:   Tue Aug 8 01:27:57 2017 +0300
+
+    Fix
+
 commit e77672c92c6668585f65cd9184c3d94646872a72
 Author: TOM_RUS <tom_rus@github.com>
 Date:   Tue Jun 20 14:52:31 2017 +0300
@@ -611,10 +617,4 @@ Author: TOM_RUS <tom_rus@github.com>
 Date:   Tue Dec 10 23:46:13 2013 +0400
 
     Role icons for group members are back
-
-commit 6601517458023bb2d03451982eee879d38dc3ae9
-Author: TOM_RUS <tom_rus@github.com>
-Date:   Tue Dec 10 23:22:35 2013 +0400
-
-    Disabled role icons until I figure out how to add them properly
 
