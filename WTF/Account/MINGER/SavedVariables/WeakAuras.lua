@@ -683,14 +683,14 @@ WeakAurasSaved = {
 		["Feed on the Weak"] = {
 			[200238] = 1357796,
 		},
-		["Deadwind Harvester"] = {
-			[216708] = 1060569,
+		["Corruption Pool"] = {
+			[218759] = "Interface\\Icons\\Ability_Druid_Starfall",
 		},
 		["Bone Chomp"] = {
 			[193639] = 132127,
 		},
-		["Corruption Pool"] = {
-			[218759] = "Interface\\Icons\\Ability_Druid_Starfall",
+		["Tormented Souls"] = {
+			[216695] = 1281092,
 		},
 		["Energy Surge"] = {
 			[204766] = 135734,
@@ -822,8 +822,8 @@ WeakAurasSaved = {
 		["Divinity"] = {
 			[197030] = 1060982,
 		},
-		["Tormented Souls"] = {
-			[216695] = 1281092,
+		["Deadwind Harvester"] = {
+			[216708] = 1060569,
 		},
 		["Soul Harvest"] = {
 			[196098] = 463284,
@@ -888,6 +888,7 @@ WeakAurasSaved = {
 			[231768] = 132844,
 		},
 	},
+	["login_squelch_time"] = 10,
 	["displays"] = {
 		["ST (M) - Frigid Pulse"] = {
 			["glow"] = false,
@@ -1170,7 +1171,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Paladin_Holy_Extra_Afenar",
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -1188,6 +1188,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Point"] = "CENTER",
 			["text2Containment"] = "INSIDE",
 			["displayIcon"] = "Interface\\Icons\\spell_paladin_lightofdawn",
 			["text1Font"] = "Homespun",
@@ -1227,8 +1228,8 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["conditions"] = {
 			},
+			["parent"] = "Paladin_Holy_Extra_Afenar",
 			["selfPoint"] = "CENTER",
-			["text2Point"] = "CENTER",
 		},
 		["GD - Fury of the Fel (Tank)"] = {
 			["glow"] = false,
@@ -1268,8 +1269,8 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["spellName"] = "Detonate: Mark of Frost",
 				["debuffType"] = "HELPFUL",
-				["sourceName"] = "Spellblade Aluriel",
 				["use_sourceName"] = true,
+				["type"] = "aura",
 				["unevent"] = "timed",
 				["subeventSuffix"] = "_CAST_START",
 				["count"] = "9",
@@ -1282,7 +1283,7 @@ WeakAurasSaved = {
 				["name"] = "Fury of the Fel",
 				["countOperator"] = "==",
 				["use_specific_unit"] = true,
-				["type"] = "aura",
+				["sourceName"] = "Spellblade Aluriel",
 				["unit"] = "member",
 				["fullscan"] = true,
 			},
@@ -2178,17 +2179,17 @@ WeakAurasSaved = {
 					["colorG"] = 1,
 					["use_translate"] = true,
 					["type"] = "none",
-					["colorB"] = 1,
-					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["scaley"] = 1,
+					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
+					["preset"] = "alphaPulse",
 					["alpha"] = 0,
 					["y"] = 1,
 					["x"] = -1,
-					["preset"] = "alphaPulse",
 					["scalex"] = 1,
-					["rotate"] = 0,
-					["translateType"] = "spiralandpulse",
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorB"] = 1,
+					["translateType"] = "spiralandpulse",
 				},
 				["finish"] = {
 					["preset"] = "shrink",
@@ -2554,8 +2555,8 @@ WeakAurasSaved = {
 					"Phantom Singularity", -- [1]
 				},
 				["ownOnly"] = true,
-				["custom_hide"] = "timed",
 				["debuffType"] = "HARMFUL",
+				["spellName"] = 205179,
 				["use_unit"] = true,
 				["type"] = "status",
 				["unevent"] = "auto",
@@ -2571,7 +2572,7 @@ WeakAurasSaved = {
 				["name"] = "Soul Effigy",
 				["use_sourceUnit"] = true,
 				["showOn"] = "showOnCooldown",
-				["spellName"] = 205179,
+				["custom_hide"] = "timed",
 				["sourceUnit"] = "player",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -2877,12 +2878,12 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
-						["name"] = "Protected",
+						["inverse"] = true,
 						["countOperator"] = "==",
 						["subeventPrefix"] = "SPELL",
-						["inverse"] = true,
-						["use_spellId"] = true,
 						["count"] = "0",
+						["use_spellId"] = true,
+						["name"] = "Protected",
 						["spellIds"] = {
 							229584, -- [1]
 						},
@@ -3530,10 +3531,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -3543,8 +3541,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -4216,6 +4217,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["xOffset"] = -151.99987792969,
 			["actions"] = {
 				["start"] = {
 					["do_custom"] = false,
@@ -4227,14 +4229,13 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
+			["text2Containment"] = "INSIDE",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["text2Containment"] = "INSIDE",
-			["xOffset"] = -151.99987792969,
 			["text1Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -4324,8 +4325,8 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["custom_hide"] = "timed",
 			},
+			["yOffset"] = 20.999877929688,
 			["parent"] = "T19 - Emerald Nightmare",
-			["icon"] = true,
 			["desaturate"] = false,
 			["progressPrecision"] = 4,
 			["font"] = "Expressway",
@@ -4452,7 +4453,7 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["displayIcon"] = 237515,
 			["stacksPoint"] = "TOP",
-			["yOffset"] = 20.999877929688,
+			["icon"] = true,
 		},
 		["SM - Lunar Fire"] = {
 			["glow"] = false,
@@ -4678,13 +4679,13 @@ WeakAurasSaved = {
 				["unevent"] = "timed",
 				["subeventSuffix"] = "_CAST_START",
 				["sourceName"] = "Spellblade Aluriel",
+				["name"] = "Detonate: Mark of Frost",
+				["countOperator"] = "==",
 				["spellIds"] = {
 				},
-				["countOperator"] = "==",
-				["count"] = "9",
 				["use_spellName"] = false,
 				["use_spellId"] = true,
-				["name"] = "Detonate: Mark of Frost",
+				["count"] = "9",
 				["use_sourceUnit"] = false,
 				["event"] = "Combat Log",
 				["custom_hide"] = "timed",
@@ -5017,18 +5018,18 @@ WeakAurasSaved = {
 				["spellName"] = 102401,
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Holy Avenger", -- [1]
 				},
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Wild Charge",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -5067,8 +5068,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -5080,10 +5084,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -5401,7 +5402,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Containment"] = "OUTSIDE",
 			["actions"] = {
 				["start"] = {
 					["do_custom"] = false,
@@ -5413,15 +5413,11 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["text2Containment"] = "INSIDE",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Font"] = "Expressway",
 			["text2Point"] = "CENTER",
+			["text2Containment"] = "INSIDE",
+			["text1Containment"] = "OUTSIDE",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -5471,7 +5467,12 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = false,
-			["yOffset"] = 20.999877929688,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Verseuchung des Meeres Helya [Maw]"] = {
 			["glow"] = false,
@@ -7183,9 +7184,9 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 				["finish"] = {
-					["do_message"] = false,
 					["custom"] = "aura_env.display = nil",
 					["do_custom"] = true,
+					["do_message"] = false,
 				},
 			},
 			["animation"] = {
@@ -7513,13 +7514,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["use_class"] = true,
-				["use_spec"] = true,
 				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -7527,15 +7522,21 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["class"] = {
 					["single"] = "PALADIN",
 					["multi"] = {
@@ -7830,8 +7831,8 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["custom_hide"] = "timed",
 			},
+			["yOffset"] = 20.999877929688,
 			["parent"] = "T19 - Emerald Nightmare",
-			["icon"] = true,
 			["desaturate"] = false,
 			["progressPrecision"] = 4,
 			["font"] = "Expressway",
@@ -7958,7 +7959,7 @@ WeakAurasSaved = {
 			["xOffset"] = -151.99987792969,
 			["displayIcon"] = 1033474,
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["icon"] = true,
 		},
 		["Dunkler Ansturm [BRH]"] = {
 			["glow"] = false,
@@ -8729,9 +8730,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["xOffset"] = -151.99987792969,
-			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
 			["actions"] = {
 				["start"] = {
 					["do_custom"] = false,
@@ -8743,6 +8741,9 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
+			["xOffset"] = -151.99987792969,
+			["text2Containment"] = "INSIDE",
+			["text1Containment"] = "OUTSIDE",
 			["text1Font"] = "Expressway",
 			["text1Color"] = {
 				1, -- [1]
@@ -9372,17 +9373,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -9391,11 +9394,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -9909,30 +9910,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["do_custom"] = false,
-					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-					["do_sound"] = false,
-				},
-				["init"] = {
-				},
-				["finish"] = {
-					["sound_channel"] = "Dialog",
-					["sound"] = "Sound\\Spells\\SimonGame_Visual_GameStart.ogg",
-					["do_sound"] = false,
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -9982,7 +9970,20 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["do_custom"] = false,
+					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_sound"] = false,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+					["sound_channel"] = "Dialog",
+					["sound"] = "Sound\\Spells\\SimonGame_Visual_GameStart.ogg",
+					["do_sound"] = false,
+				},
+			},
 		},
 		["Odyn - Expel Light"] = {
 			["glow"] = false,
@@ -10453,19 +10454,19 @@ WeakAurasSaved = {
 				["names"] = {
 				},
 				["unit"] = "player",
-				["spellIds"] = {
-				},
+				["events"] = "CHAT_MSG_ADDON, ITEM_COOLDOWN_STARTED",
 				["subeventSuffix"] = "_CAST_START",
 				["check"] = "event",
+				["spellIds"] = {
+				},
 				["custom"] = "function(allstates, event, ...)\n    if event == \"CHAT_MSG_ADDON\" then\n        local prefix, message = ...\n        if not aura_env.last or aura_env.last < GetTime()-1\n        then\n            aura_env.potted = false\n            aura_env.last = GetTime()\n            aura_env.allstates = allstates\n            aura_env.timer = 0\n            \n            if (prefix == \"BigWigs\" and string.find(message, \"Pull\") )\n            then\n                aura_env.last = GetTime()\n                local timer = string.match(message, \"%d+\")\n                timer = tonumber(timer)\n                aura_env.timer = timer\n                \n            elseif prefix == \"D4\" and string.find(message, \"PT\")\n            then\n                aura_env.last = GetTime()\n                local timer = string.match(message, \"\\t(%d+)\\t\")\n                timer = tonumber(timer)\n                aura_env.timer = timer\n                \n            end\n            \n            if aura_env.timer > 0 \n            then\n                aura_env.ends = aura_env.last + aura_env.timer\n                \n                allstates[\"heading\"] = allstates[\"heading\"] or {};\n                local state = allstates[\"heading\"];\n                state.show = true;\n                state.changed = true;\n                state.autoHide = true;\n                state.name = \"heading\"\n                state.progressType = \"timed\"\n                state.duration = aura_env.timer\n                state.expirationTime = GetTime() + aura_env.timer - 0.0001\n                state.stacks = nil\n                state.icon = [[Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White_Border]]\n                state.texture = [[Interface\\AddOns\\WeakAuras\\Media\\Textures\\Square_White_Border]]\n                state.heading = \"PRE\\nPOT\"\n                \n                for k,v in pairs(aura_env.potions) do\n                    if GetItemCount(k) > 0 \n                    then\n                        allstates[k] = allstates[k] or {};\n                        local state = allstates[k];\n                        state.show = true;\n                        state.changed = true;\n                        state.autoHide = true;\n                        state.name = GetItemInfo(k);\n                        state.progressType = \"timed\"\n                        state.duration = aura_env.timer\n                        state.expirationTime = GetTime() + aura_env.timer + (0.001*v)\n                        state.stacks = GetItemCount(k)\n                        state.icon = GetItemIcon(k)\n                        state.texture = GetItemIcon(k)\n                        state.heading = nil\n                        state.itemID = k\n                    end\n                end\n                \n                \n                return true\n            end\n        end            \n    end\n    \n    if event == \"ITEM_COOLDOWN_STARTED\" \n    and aura_env.ends\n    and aura_env.ends > GetTime() \n    then\n        local itemID = ...\n        \n        for k,v in pairs(allstates) do\n            if type(k) == \"number\" then\n                \n                local clone = WeakAuras.GetRegion(aura_env.id, k)\n                clone.icon:SetVertexColor(0.5,0.5,0.5,0.5)\n                clone.stacks:SetTextColor(1,1,1,0.5)\n                \n                if itemID == k then\n                    v.stacks = v.stacks-1\n                    v.show = true;\n                    v.changed = true;\n                end\n            else\n                v.icon = [[Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura78]]\n                v.texture = [[Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura78]]\n                v.heading = nil\n                v.show = true;\n                v.changed = true;\n            end    \n        end\n        PlaySoundKitID(27087, \"Master\")\n        aura_env.potted = true\n        return true\n    end\nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
-				["events"] = "CHAT_MSG_ADDON, ITEM_COOLDOWN_STARTED",
 				["custom_hide"] = "custom",
 			},
 			["desaturate"] = false,
 			["text1Point"] = "BOTTOMRIGHT",
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 64,
-			["selfPoint"] = "CENTER",
+			["yOffset"] = 0,
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -10509,12 +10510,11 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["xOffset"] = 0,
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = true,
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\RobotBlip.ogg",
 					["custom"] = "for k,v in pairs(aura_env.allstates) do\n    if v.name == \"heading\" then\n        local clone = WeakAuras.GetRegion(aura_env.id, k)\n        clone.icon:SetVertexColor(0,0,0,0.3)\n    else\n        \n        local clone = WeakAuras.GetRegion(aura_env.id, k)\n        if not clone.button then\n            local button = CreateFrame(\n                \"Button\", \n                \"UsePotionButton\", \n                clone, \n                \"SecureActionButtonTemplate\"\n            )\n            \n            clone.button = button\n        end\n        clone.button:SetAllPoints(clone)\n        clone.button:Show() \n        clone.button:SetAttribute(\"type\", \"item\")\n        clone.button:SetAttribute(\"item\", \"item:\"..k)\n        \n    end    \nend",
-					["do_custom"] = true,
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -10526,7 +10526,8 @@ WeakAurasSaved = {
 					["do_custom"] = true,
 				},
 			},
-			["parent"] = "pre-pot group",
+			["text2Font"] = "Expressway",
+			["selfPoint"] = "CENTER",
 			["text2Containment"] = "INSIDE",
 			["color"] = {
 				1, -- [1]
@@ -10569,11 +10570,10 @@ WeakAurasSaved = {
 			["text1Font"] = "Expressway",
 			["numTriggers"] = 1,
 			["disjunctive"] = "custom",
-			["init_started"] = 1,
 			["conditions"] = {
 			},
-			["yOffset"] = 0,
-			["text2Font"] = "Expressway",
+			["parent"] = "pre-pot group",
+			["xOffset"] = 0,
 		},
 		["Odyn - Cleansing Flame"] = {
 			["glow"] = false,
@@ -11149,7 +11149,7 @@ WeakAurasSaved = {
 				["group_count"] = "0",
 				["unevent"] = "auto",
 				["spell"] = "Efflorescence",
-				["custom_hide"] = "custom",
+				["debuffType"] = "HELPFUL",
 				["subeventSuffix"] = "_CAST_START",
 				["type"] = "status",
 				["countOperator"] = "==",
@@ -11158,8 +11158,8 @@ WeakAurasSaved = {
 				["unit"] = "group",
 				["event"] = "Totem",
 				["totemName"] = 145205,
+				["custom_hide"] = "custom",
 				["group_countOperator"] = "==",
-				["debuffType"] = "HELPFUL",
 				["count"] = "0",
 				["use_unit"] = true,
 				["remOperator"] = "<",
@@ -11689,15 +11689,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -11894,18 +11894,18 @@ WeakAurasSaved = {
 				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["names"] = {
-					"Flourish", -- [1]
-				},
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Ironbark",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["names"] = {
+					"Flourish", -- [1]
+				},
 				["spellName"] = 102342,
 				["custom_hide"] = "timed",
 			},
@@ -11942,8 +11942,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -11952,10 +11955,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -12213,9 +12213,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = false,
 					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\sonar.ogg",
 					["do_message"] = false,
-					["do_custom"] = false,
 					["do_sound"] = true,
 				},
 				["finish"] = {
@@ -12409,37 +12409,37 @@ WeakAurasSaved = {
 				["use_castType"] = false,
 				["rem"] = "5",
 				["hideAlone"] = true,
-				["use_totemName"] = true,
+				["duration"] = "30",
 				["names"] = {
 					"Lifebloom", -- [1]
 				},
-				["duration"] = "30",
+				["ownOnly"] = true,
 				["use_spell"] = true,
 				["use_unit"] = true,
 				["remaining_operator"] = ">=",
 				["remaining"] = "5",
-				["custom_hide"] = "custom",
+				["debuffType"] = "HELPFUL",
 				["spellIds"] = {
 				},
 				["group_count"] = "0",
-				["debuffType"] = "HELPFUL",
-				["spell"] = "Efflorescence",
 				["group_countOperator"] = ">",
-				["unevent"] = "auto",
 				["type"] = "status",
-				["custom_type"] = "event",
+				["custom_hide"] = "custom",
 				["subeventSuffix"] = "_CAST_START",
+				["use_remaining"] = true,
+				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["unit"] = "group",
 				["use_specific_unit"] = false,
 				["event"] = "Totem",
 				["totemName"] = 145205,
-				["use_remaining"] = true,
+				["spell"] = "Efflorescence",
 				["name_info"] = "aura",
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
 				["stack_info"] = "count",
 				["remOperator"] = ">=",
 				["subeventPrefix"] = "SPELL",
-				["ownOnly"] = true,
+				["use_totemName"] = true,
 				["useRem"] = true,
 			},
 			["desaturate"] = true,
@@ -12650,20 +12650,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
@@ -12672,7 +12671,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_spec"] = true,
+				["use_name"] = false,
 				["class"] = {
 					["single"] = "PALADIN",
 					["multi"] = {
@@ -13050,19 +13050,16 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["ownOnly"] = true,
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["name"] = "Flask of the warm sun ",
 				["spellName"] = "Skull Bash",
-				["inverse"] = true,
-				["debuffType"] = "HELPFUL",
 				["use_specific_sourceunit"] = true,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
-				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 				["use_spellId"] = false,
 				["sourceName"] = "",
 				["unevent"] = "timed",
@@ -13073,12 +13070,15 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_sourceUnit"] = false,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -13149,7 +13149,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -13264,9 +13263,9 @@ WeakAurasSaved = {
 			},
 			["parent"] = "Mythic+ Affixes ",
 			["text2Containment"] = "INSIDE",
-			["xOffset"] = 0,
+			["disjunctive"] = "all",
 			["text1Font"] = "Friz Quadrata TT",
-			["text1Containment"] = "INSIDE",
+			["xOffset"] = 0,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -13309,7 +13308,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["disjunctive"] = "all",
+			["text1Containment"] = "INSIDE",
 		},
 		["Schleichendes Gemetzel [Vio]"] = {
 			["glow"] = false,
@@ -13961,18 +13960,18 @@ WeakAurasSaved = {
 				["spellName"] = 64901,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Symbol of Hope",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -14127,18 +14126,18 @@ WeakAurasSaved = {
 				["spellName"] = 2050,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["names"] = {
-					"Flourish", -- [1]
-				},
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Holy Word: Serenity",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["names"] = {
+					"Flourish", -- [1]
+				},
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -14178,15 +14177,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -14429,14 +14428,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
-						["name"] = "Protected",
-						["countOperator"] = "==",
-						["unit"] = "player",
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["use_spellId"] = true,
+						["countOperator"] = "==",
+						["unit"] = "player",
 						["count"] = "0",
+						["use_spellId"] = true,
+						["name"] = "Protected",
 						["inverse"] = true,
 						["names"] = {
 							"Protected", -- [1]
@@ -14770,15 +14769,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -15247,13 +15246,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["stack_info"] = "count",
 				["rem"] = "0",
+				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
+				["duration"] = "30",
+				["name_info"] = "aura",
 				["names"] = {
 					"Lifebloom", -- [1]
 				},
-				["subeventPrefix"] = "SPELL",
-				["use_totemName"] = true,
-				["name_info"] = "aura",
-				["use_unit"] = true,
 				["ownOnly"] = true,
 				["use_spell"] = true,
 				["spellIds"] = {
@@ -15277,8 +15276,8 @@ WeakAurasSaved = {
 				["use_castType"] = false,
 				["remOperator"] = "<",
 				["use_specific_unit"] = false,
+				["use_totemName"] = true,
 				["use_inverse"] = true,
-				["duration"] = "30",
 			},
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
@@ -15457,15 +15456,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -16934,17 +16933,16 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["role"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -16953,10 +16951,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
 				["class"] = {
 					["single"] = "PALADIN",
 					["multi"] = {
@@ -17447,12 +17446,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
 				["use_class"] = true,
+				["use_talent"] = true,
+				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
@@ -17470,7 +17466,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -18070,18 +18069,18 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Holy Avenger", -- [1]
 				},
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Tranquility",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -18120,11 +18119,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
@@ -18133,7 +18132,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -18284,7 +18283,10 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -18295,15 +18297,11 @@ WeakAurasSaved = {
 					},
 				},
 				["use_talent"] = true,
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -18312,8 +18310,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
-				["use_name"] = false,
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -18487,20 +18486,16 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["use_name"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["use_class"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -18509,7 +18504,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["use_name"] = false,
 				["class"] = {
 					["single"] = "PALADIN",
 					["multi"] = {
@@ -18848,20 +18847,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -18870,8 +18862,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -19386,15 +19385,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -19852,17 +19851,17 @@ WeakAurasSaved = {
 					["colorG"] = 1,
 					["use_translate"] = true,
 					["type"] = "none",
-					["colorA"] = 1,
-					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["scaley"] = 1,
+					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
+					["preset"] = "alphaPulse",
 					["alpha"] = 0,
 					["y"] = 1,
 					["x"] = -1,
-					["preset"] = "alphaPulse",
 					["duration"] = "1",
-					["rotate"] = 0,
-					["colorR"] = 1,
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorA"] = 1,
+					["colorR"] = 1,
 				},
 				["finish"] = {
 					["preset"] = "shrink",
@@ -19877,26 +19876,26 @@ WeakAurasSaved = {
 				["use_percenthealth"] = true,
 				["remOperator"] = ">=",
 				["ownOnly"] = true,
-				["spellName"] = 196447,
+				["use_mounted"] = false,
 				["names"] = {
 					"Dark Pact", -- [1]
 				},
 				["count"] = "9",
-				["use_mounted"] = false,
-				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+				["unevent"] = "auto",
 				["type"] = "status",
 				["countOperator"] = "<",
-				["health_operator"] = ">",
+				["subeventSuffix"] = "_CAST_START",
 				["use_HasPet"] = false,
 				["debuffType"] = "HELPFUL",
 				["use_showOn"] = true,
 				["use_resting"] = false,
 				["use_health"] = true,
-				["unevent"] = "auto",
+				["health_operator"] = ">",
 				["use_vehicle"] = false,
 				["percenthealth"] = "35",
 				["event"] = "Conditions",
-				["custom_hide"] = "timed",
+				["spellName"] = 196447,
 				["realSpellName"] = "Направленный демонический огонь",
 				["use_spellName"] = true,
 				["spellIds"] = {
@@ -19938,9 +19937,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_realm"] = false,
-				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -19957,10 +19959,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
+				["use_realm"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -20108,17 +20107,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["role"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -20127,11 +20125,12 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_combat"] = true,
-				["difficulty"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -20208,11 +20207,11 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 					["message"] = "",
-					["do_message"] = false,
+					["do_custom"] = false,
 					["do_sound"] = false,
 					["sound_kit_id"] = "6241",
+					["do_message"] = false,
 					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
-					["do_custom"] = false,
 					["sound_channel"] = "Dialog",
 				},
 				["finish"] = {
@@ -20596,16 +20595,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -20613,12 +20608,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -21305,17 +21304,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -21324,11 +21325,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -22193,37 +22192,37 @@ WeakAurasSaved = {
 				["use_castType"] = false,
 				["rem"] = "5",
 				["hideAlone"] = true,
-				["use_totemName"] = true,
+				["duration"] = "30",
 				["names"] = {
 					"Lifebloom", -- [1]
 				},
-				["duration"] = "30",
+				["ownOnly"] = true,
 				["use_spell"] = true,
 				["use_unit"] = true,
 				["remaining_operator"] = ">=",
 				["remaining"] = "5",
-				["custom_hide"] = "custom",
+				["debuffType"] = "HELPFUL",
 				["spellIds"] = {
 				},
 				["group_count"] = "0",
-				["debuffType"] = "HELPFUL",
-				["spell"] = "Efflorescence",
 				["group_countOperator"] = ">",
-				["unevent"] = "auto",
 				["type"] = "status",
-				["custom_type"] = "event",
+				["custom_hide"] = "custom",
 				["subeventSuffix"] = "_CAST_START",
+				["use_remaining"] = true,
+				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["unit"] = "group",
 				["use_specific_unit"] = false,
 				["event"] = "Totem",
 				["totemName"] = 145205,
-				["use_remaining"] = true,
+				["spell"] = "Efflorescence",
 				["name_info"] = "aura",
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
 				["stack_info"] = "count",
 				["remOperator"] = ">=",
 				["subeventPrefix"] = "SPELL",
-				["ownOnly"] = true,
+				["use_totemName"] = true,
 				["useRem"] = true,
 			},
 			["stickyDuration"] = false,
@@ -22639,13 +22638,12 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["custom_hide"] = "timed",
 				["sourceName"] = "",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
 				["use_sourceUnit"] = false,
 				["use_sourceName"] = false,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["subeventSuffix"] = "_CAST_SUCCESS",
 				["unevent"] = "timed",
 				["ownOnly"] = true,
@@ -22653,7 +22651,8 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_specific_sourceunit"] = true,
 				["use_destunit"] = false,
 				["spellName"] = "Pummel",
@@ -22729,7 +22728,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -22824,16 +22822,29 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["yOffset"] = 20.999877929688,
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
 			["stickyDuration"] = false,
 			["text2Color"] = {
@@ -22883,20 +22894,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["yOffset"] = 20.999877929688,
 		},
 		["Tyr's_Deliverance_Buff"] = {
 			["glow"] = false,
@@ -23009,12 +23007,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -23023,11 +23023,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
+				["use_class"] = true,
 				["use_name"] = false,
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -23472,8 +23470,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -23485,10 +23486,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -23544,23 +23542,23 @@ WeakAurasSaved = {
 				["names"] = {
 				},
 				["unit"] = "player",
-				["custom_hide"] = "custom",
 				["debuffType"] = "HELPFUL",
+				["spellName"] = "Call Dreadstalkers",
 				["unevent"] = "timed",
 				["type"] = "custom",
-				["spellIds"] = {
-				},
+				["custom"] = "function(_,time,type,_,sguid,_,_,_,_,name,_,_,_,spell)\n    if type == \"SPELL_SUMMON\" and sguid == UnitGUID(\"player\") then\n        if name == \"Dreadstalker\" or name == \"Зловещий охотник\" then\n            aura_env.cur = GetTime()+12\n            return true\n        end\n    end\nend\n\n\n\n\n\n\n\n",
 				["custom_type"] = "event",
 				["use_showOn"] = true,
-				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
+				["spellIds"] = {
+				},
 				["event"] = "Health",
 				["subeventSuffix"] = "_CAST_SUCCESS",
 				["customDuration"] = "function()\n    return 15,aura_env.cur\nend\n\n\n\n\n\n\n\n\n\n\n",
 				["use_spellName"] = true,
-				["custom"] = "function(_,time,type,_,sguid,_,_,_,_,name,_,_,_,spell)\n    if type == \"SPELL_SUMMON\" and sguid == UnitGUID(\"player\") then\n        if name == \"Dreadstalker\" or name == \"Зловещий охотник\" then\n            aura_env.cur = GetTime()+12\n            return true\n        end\n    end\nend\n\n\n\n\n\n\n\n",
+				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
 				["use_sourceUnit"] = true,
 				["showOn"] = "showOnCooldown",
-				["spellName"] = "Call Dreadstalkers",
+				["custom_hide"] = "custom",
 				["sourceUnit"] = "player",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -23955,16 +23953,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["duration"] = "15",
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["ownOnly"] = true,
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["debuffType"] = "HELPFUL",
 				["use_sourceUnit"] = false,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["spellName"] = "Consume Magic",
@@ -23978,12 +23973,15 @@ WeakAurasSaved = {
 				["sourceName"] = "",
 				["use_name"] = true,
 				["use_spellId"] = false,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_specific_sourceunit"] = true,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -24054,7 +24052,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -24159,11 +24156,11 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/EJIDReJXm",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["align"] = "CENTER",
-			["rotation"] = 0,
-			["numTriggers"] = 1,
 			["xOffset"] = 36.9998168945313,
 			["radius"] = 200,
+			["numTriggers"] = 1,
+			["align"] = "CENTER",
+			["rotation"] = 0,
 			["conditions"] = {
 			},
 			["animation"] = {
@@ -24588,18 +24585,18 @@ WeakAurasSaved = {
 				["spellName"] = 73325,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["use_unit"] = true,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Leap of Faith",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["use_unit"] = true,
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -24981,20 +24978,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["use_class"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -25003,8 +24996,12 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_class"] = true,
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -25088,9 +25085,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
-					["custom"] = "aura_env.start = GetTime()\n\n\n\n",
 					["do_custom"] = true,
 					["do_message"] = false,
+					["custom"] = "aura_env.start = GetTime()\n\n\n\n",
 				},
 				["finish"] = {
 				},
@@ -25304,8 +25301,8 @@ WeakAurasSaved = {
 				["debuffType"] = "HELPFUL",
 				["spell"] = "Efflorescence",
 				["type"] = "aura",
-				["custom_type"] = "event",
 				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["spellIds"] = {
 				},
 				["custom_hide"] = "custom",
@@ -25314,7 +25311,7 @@ WeakAurasSaved = {
 				["use_spell"] = true,
 				["stack_info"] = "count",
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
-				["subeventSuffix"] = "_CAST_START",
+				["custom_type"] = "event",
 				["remOperator"] = ">=",
 				["duration"] = "30",
 				["use_specific_unit"] = false,
@@ -25466,9 +25463,10 @@ WeakAurasSaved = {
 				["type"] = "custom",
 				["custom_type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["event"] = "Health",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Health",
+				["names"] = {
+				},
 				["spellIds"] = {
 				},
 				["customName"] = "\n\n",
@@ -25476,21 +25474,20 @@ WeakAurasSaved = {
 				["customIcon"] = "function()\n\n    if aura_env.lowest[4] then \n        return aura_env.lowest[4]\n    else\n        return 136081\n    end\n\nend\n\n\n\n",
 				["check"] = "update",
 				["customTexture"] = "\n\n",
-				["names"] = {
-				},
+				["unit"] = "player",
 				["debuffType"] = "HELPFUL",
 			},
+			["xOffset"] = -108.999633789063,
+			["text2Font"] = "Friz Quadrata TT",
+			["stickyDuration"] = false,
+			["discrete_rotation"] = 0,
+			["text1Point"] = "CENTER",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["xOffset"] = -108.999633789063,
-			["stickyDuration"] = false,
-			["discrete_rotation"] = 0,
-			["text1Point"] = "CENTER",
-			["selfPoint"] = "CENTER",
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 40,
 			["rotate"] = true,
@@ -25523,8 +25520,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -25533,16 +25533,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["text2Font"] = "Friz Quadrata TT",
+			["glow"] = false,
 			["desaturate"] = false,
 			["numTriggers"] = 2,
 			["text2Containment"] = "INSIDE",
@@ -25602,7 +25599,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["glow"] = false,
+			["selfPoint"] = "CENTER",
 		},
 		["Seelengift [BRH]"] = {
 			["text2Point"] = "BOTTOMLEFT",
@@ -25824,8 +25821,8 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
 				["debuffType"] = "HARMFUL",
-				["use_sourceName"] = true,
 				["type"] = "aura",
+				["sourceName"] = "Skorpyron",
 				["unevent"] = "timed",
 				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = "Focused Blast",
@@ -25839,7 +25836,7 @@ WeakAurasSaved = {
 				},
 				["event"] = "Health",
 				["name"] = "Tainted Essence",
-				["sourceName"] = "Skorpyron",
+				["use_sourceName"] = true,
 				["custom_hide"] = "timed",
 				["fullscan"] = true,
 			},
@@ -26508,11 +26505,11 @@ WeakAurasSaved = {
 				["inverse"] = true,
 				["custom_hide"] = "timed",
 				["use_name"] = true,
-				["use_sourceName"] = false,
+				["sourceName"] = "",
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
+				["use_sourceName"] = false,
 				["type"] = "status",
-				["sourceName"] = "",
 				["name"] = "Flask of the warm sun ",
 				["subeventSuffix"] = "_CAST_SUCCESS",
 				["use_showOn"] = true,
@@ -27396,16 +27393,12 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_class"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -27413,12 +27406,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = false,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -28111,10 +28108,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -28124,8 +28118,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -28265,10 +28262,7 @@ WeakAurasSaved = {
 			["text1Point"] = "CENTER",
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 32,
-			["untrigger"] = {
-				["showOn"] = "showAlways",
-				["spellName"] = 18540,
-			},
+			["parent"] = "Warlock_Extra_Afenar",
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -28320,14 +28314,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Warlock_Extra_Afenar",
-			["disjunctive"] = "all",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["untrigger"] = {
+				["showOn"] = "showAlways",
+				["spellName"] = 18540,
+			},
+			["text2Point"] = "CENTER",
 			["text2Containment"] = "INSIDE",
 			["text2Font"] = "Friz Quadrata TT",
 			["text1Color"] = {
@@ -28385,7 +28382,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["text2Point"] = "CENTER",
+			["disjunctive"] = "all",
 		},
 		["Instabile Magie [Arc]"] = {
 			["glow"] = false,
@@ -28437,12 +28434,12 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "196562",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
-				["duration"] = "2",
-				["event"] = "Combat Log",
 				["names"] = {
 					"Volatile Magic", -- [1]
 				},
+				["duration"] = "2",
+				["event"] = "Combat Log",
+				["use_unit"] = true,
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["name"] = "Volatile Magic",
@@ -28451,7 +28448,7 @@ WeakAurasSaved = {
 				["spellIds"] = {
 					196562, -- [1]
 				},
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HARMFUL",
 			},
 			["text1Containment"] = "OUTSIDE",
@@ -30198,11 +30195,11 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
-					["do_custom"] = false,
+					["sound"] = " KitID",
 					["do_sound"] = true,
 					["sound_kit_id"] = "45440",
+					["do_custom"] = false,
 					["do_message"] = false,
-					["sound"] = " KitID",
 					["sound_channel"] = "Master",
 				},
 				["finish"] = {
@@ -30458,18 +30455,18 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -30591,17 +30588,17 @@ WeakAurasSaved = {
 					["colorG"] = 1,
 					["use_translate"] = true,
 					["type"] = "none",
-					["colorA"] = 1,
+					["scalex"] = 1,
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["preset"] = "alphaPulse",
 					["alpha"] = 0,
 					["y"] = -1,
 					["x"] = 1,
-					["scalex"] = 1,
 					["scaley"] = 1,
-					["rotate"] = 0,
-					["colorR"] = 1,
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorA"] = 1,
+					["colorR"] = 1,
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -31481,8 +31478,8 @@ WeakAurasSaved = {
 				["debuffType"] = "HELPFUL",
 				["spell"] = "Efflorescence",
 				["type"] = "aura",
-				["custom_type"] = "event",
 				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["spellIds"] = {
 				},
 				["custom_hide"] = "custom",
@@ -31491,7 +31488,7 @@ WeakAurasSaved = {
 				["use_spell"] = true,
 				["stack_info"] = "count",
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
-				["subeventSuffix"] = "_CAST_START",
+				["custom_type"] = "event",
 				["remOperator"] = ">=",
 				["duration"] = "30",
 				["use_specific_unit"] = false,
@@ -31958,37 +31955,37 @@ WeakAurasSaved = {
 				["use_castType"] = false,
 				["rem"] = "5",
 				["hideAlone"] = true,
-				["use_totemName"] = true,
-				["use_unit"] = true,
 				["duration"] = "30",
+				["use_unit"] = true,
+				["ownOnly"] = true,
 				["use_spell"] = true,
 				["names"] = {
 					"Lifebloom", -- [1]
 				},
 				["remaining_operator"] = "<=",
 				["remaining"] = "5",
-				["custom_hide"] = "custom",
+				["debuffType"] = "HELPFUL",
 				["spellIds"] = {
 				},
 				["group_count"] = "0",
-				["debuffType"] = "HELPFUL",
-				["spell"] = "Efflorescence",
 				["group_countOperator"] = ">",
-				["unevent"] = "auto",
 				["type"] = "status",
-				["custom_type"] = "event",
+				["custom_hide"] = "custom",
 				["subeventSuffix"] = "_CAST_START",
+				["use_remaining"] = true,
+				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["unit"] = "group",
 				["use_specific_unit"] = false,
 				["event"] = "Totem",
 				["totemName"] = 145205,
-				["use_remaining"] = true,
+				["spell"] = "Efflorescence",
 				["name_info"] = "aura",
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
 				["stack_info"] = "count",
 				["remOperator"] = "<=",
 				["subeventPrefix"] = "SPELL",
-				["ownOnly"] = true,
+				["use_totemName"] = true,
 				["useRem"] = true,
 			},
 			["desaturate"] = true,
@@ -32155,19 +32152,19 @@ WeakAurasSaved = {
 				["spellName"] = 34861,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["names"] = {
-					"Rejuvenation", -- [1]
-					"Regrowth", -- [2]
-				},
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Holy Word: Sanctify",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "target",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["names"] = {
+					"Rejuvenation", -- [1]
+					"Regrowth", -- [2]
+				},
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -32207,15 +32204,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -32447,9 +32444,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
-					["do_message"] = false,
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -33048,20 +33045,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["role"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -33070,7 +33060,14 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_class"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -33570,18 +33567,18 @@ WeakAurasSaved = {
 				["spellName"] = 33891,
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Holy Avenger", -- [1]
 				},
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Incarnation: Tree of Life",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -33617,11 +33614,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["spec"] = {
 					["single"] = 4,
 					["multi"] = {
@@ -33632,7 +33629,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -34156,30 +34153,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["message"] = " ",
-					["do_sound"] = false,
-					["message_type"] = "SAY",
-					["do_message"] = false,
-					["do_custom"] = false,
-					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -34229,7 +34213,20 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["message"] = " ",
+					["do_sound"] = false,
+					["message_type"] = "SAY",
+					["do_custom"] = false,
+					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
+					["do_message"] = false,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["Summon_Darkgare"] = {
 			["glow"] = false,
@@ -34992,10 +34989,12 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "196497",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["duration"] = "2",
 				["event"] = "Combat Log",
-				["use_unit"] = true,
+				["names"] = {
+					"Unerring Shear", -- [1]
+				},
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["spellIds"] = {
@@ -35004,9 +35003,7 @@ WeakAurasSaved = {
 				["subeventSuffix"] = "_CAST_START",
 				["fullscan"] = true,
 				["name"] = "Ravenous Leap",
-				["names"] = {
-					"Unerring Shear", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
 			},
 			["xOffset"] = 400,
@@ -35215,16 +35212,29 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["yOffset"] = 20.999877929688,
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
 			["stickyDuration"] = false,
 			["text2Color"] = {
@@ -35272,20 +35282,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["yOffset"] = 20.999877929688,
 		},
 		["Shadowflame"] = {
 			["glow"] = false,
@@ -35384,12 +35381,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_talent"] = true,
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
@@ -35407,7 +35404,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -35566,12 +35563,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -35580,11 +35573,15 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -36504,9 +36501,9 @@ WeakAurasSaved = {
 					["message"] = "Fixate on me!",
 					["do_sound"] = false,
 					["message_type"] = "SAY",
-					["do_message"] = true,
 					["do_custom"] = false,
 					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
+					["do_message"] = true,
 				},
 				["init"] = {
 				},
@@ -36722,15 +36719,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -36954,7 +36951,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_vehicleUi"] = false,
 				["pvptalent"] = {
 					["multi"] = {
 					},
@@ -36963,6 +36959,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_vehicleUi"] = false,
 				["use_combat"] = true,
 				["use_class"] = true,
 				["size"] = {
@@ -37292,16 +37289,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -37309,12 +37302,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -37783,9 +37780,9 @@ WeakAurasSaved = {
 					["message"] = "Fixate on me!",
 					["do_sound"] = false,
 					["message_type"] = "SAY",
-					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_message"] = false,
 				},
 				["init"] = {
 				},
@@ -38422,20 +38419,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
@@ -38444,7 +38440,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_spec"] = true,
+				["use_name"] = false,
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -38455,9 +38452,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Paladin_Holy_Extra_Afenar",
 			["cooldownTextEnabled"] = true,
 			["yOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["text2Containment"] = "INSIDE",
 			["displayIcon"] = "Interface\\Icons\\Spell_Holy_RighteousFury",
 			["text1Font"] = "Homespun",
@@ -38497,13 +38499,8 @@ WeakAurasSaved = {
 			["text2Point"] = "CENTER",
 			["conditions"] = {
 			},
+			["parent"] = "Paladin_Holy_Extra_Afenar",
 			["icon"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 		},
 		["FA - Unbound Chaos"] = {
 			["glow"] = true,
@@ -38909,11 +38906,11 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 					["message"] = "",
-					["sound"] = " KitID",
+					["do_message"] = false,
 					["do_sound"] = true,
 					["sound_kit_id"] = "6240",
+					["sound"] = " KitID",
 					["do_custom"] = false,
-					["do_message"] = false,
 					["sound_channel"] = "Master",
 				},
 				["finish"] = {
@@ -39291,20 +39288,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["use_class"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -39313,8 +39306,12 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_class"] = true,
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -39853,15 +39850,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -39932,11 +39929,16 @@ WeakAurasSaved = {
 		},
 		["EFF Not Active: CAST! - Symbol"] = {
 			["init_started"] = 1,
-			["parent"] = "Koth's Efflo-watch",
+			["disjunctive"] = "all",
 			["yOffset"] = 0,
 			["conditions"] = {
 			},
-			["disjunctive"] = "all",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["mirror"] = false,
 			["untrigger"] = {
 			},
@@ -39944,7 +39946,7 @@ WeakAurasSaved = {
 			["xOffset"] = 0,
 			["blendMode"] = "BLEND",
 			["activeTriggerMode"] = -10,
-			["width"] = 32,
+			["desaturate"] = false,
 			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
@@ -39981,13 +39983,13 @@ WeakAurasSaved = {
 				["use_totemName"] = true,
 			},
 			["discrete_rotation"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 32,
 			["selfPoint"] = "CENTER",
 			["id"] = "EFF Not Active: CAST! - Symbol",
 			["additional_triggers"] = {
 			},
 			["frameStrata"] = 1,
-			["desaturate"] = false,
+			["anchorFrameType"] = "SCREEN",
 			["rotation"] = 0,
 			["animation"] = {
 				["start"] = {
@@ -40061,12 +40063,7 @@ WeakAurasSaved = {
 				},
 				["use_vehicleUi"] = false,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["parent"] = "Koth's Efflo-watch",
 		},
 		["FA - Cleansing Protocol"] = {
 			["glow"] = false,
@@ -40080,9 +40077,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = false,
 					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\sonar.ogg",
 					["do_message"] = false,
-					["do_custom"] = false,
 					["do_sound"] = true,
 				},
 				["finish"] = {
@@ -40520,20 +40517,13 @@ WeakAurasSaved = {
 						true, -- [2]
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["role"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -40542,8 +40532,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -40627,9 +40624,9 @@ WeakAurasSaved = {
 				["start"] = {
 					["do_sound"] = false,
 					["sound_kit_id"] = "16254",
-					["do_custom"] = false,
 					["do_message"] = false,
 					["sound"] = " KitID",
+					["do_custom"] = false,
 				},
 				["finish"] = {
 				},
@@ -41327,11 +41324,16 @@ WeakAurasSaved = {
 		},
 		["Eff Active: Above 5 Seconds - Symbol"] = {
 			["init_started"] = 1,
-			["parent"] = "Koth's Efflo-watch",
+			["disjunctive"] = "all",
 			["yOffset"] = 0,
 			["conditions"] = {
 			},
-			["disjunctive"] = "all",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["mirror"] = false,
 			["untrigger"] = {
 			},
@@ -41339,7 +41341,7 @@ WeakAurasSaved = {
 			["xOffset"] = 0,
 			["blendMode"] = "BLEND",
 			["activeTriggerMode"] = -10,
-			["width"] = 32,
+			["desaturate"] = false,
 			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
@@ -41352,7 +41354,7 @@ WeakAurasSaved = {
 			["texture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura78",
 			["id"] = "Eff Active: Above 5 Seconds - Symbol",
 			["discrete_rotation"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 32,
 			["selfPoint"] = "CENTER",
 			["trigger"] = {
 				["stack_info"] = "count",
@@ -41388,7 +41390,7 @@ WeakAurasSaved = {
 			["additional_triggers"] = {
 			},
 			["frameStrata"] = 1,
-			["desaturate"] = false,
+			["anchorFrameType"] = "SCREEN",
 			["rotation"] = 0,
 			["animation"] = {
 				["start"] = {
@@ -41462,12 +41464,7 @@ WeakAurasSaved = {
 				},
 				["use_vehicleUi"] = false,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["parent"] = "Koth's Efflo-watch",
 		},
 		["Heimtückischer Dolch [HoV]"] = {
 			["glow"] = false,
@@ -42318,14 +42315,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
+						["count"] = "0",
+						["countOperator"] = "==",
+						["unit"] = "player",
+						["inverse"] = true,
+						["use_spellId"] = true,
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["countOperator"] = "==",
-						["unit"] = "player",
-						["count"] = "0",
-						["use_spellId"] = true,
-						["inverse"] = true,
 						["name"] = "Protected",
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Health",
@@ -42613,17 +42610,17 @@ WeakAurasSaved = {
 					},
 				},
 				["use_class"] = true,
-				["use_pvptalent"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["pvptalent"] = {
 					["single"] = 18,
 					["multi"] = {
 					},
 				},
+				["use_pvptalent"] = true,
 				["use_spec"] = true,
-				["faction"] = {
-					["multi"] = {
-					},
-				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -43031,7 +43028,20 @@ WeakAurasSaved = {
 				"Agony bar", -- [1]
 			},
 			["animate"] = false,
-			["radius"] = 200,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["xOffset"] = -49.9994506835938,
 			["width"] = 42.9998779296875,
 			["border"] = "None",
@@ -43051,32 +43061,19 @@ WeakAurasSaved = {
 				},
 			},
 			["constantFactor"] = "RADIUS",
+			["radius"] = 200,
 			["borderOffset"] = 16,
-			["backgroundInset"] = 0,
 			["untrigger"] = {
 			},
 			["selfPoint"] = "BOTTOM",
 			["id"] = "Agony bar Group",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["expanded"] = false,
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
 			["stagger"] = 0,
-			["expanded"] = false,
-			["numTriggers"] = 1,
 			["align"] = "CENTER",
+			["numTriggers"] = 1,
+			["backgroundInset"] = 0,
 			["height"] = 5.00006103515625,
 			["trigger"] = {
 			},
@@ -44073,11 +44070,11 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 					["message"] = "",
-					["do_custom"] = false,
+					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["do_sound"] = false,
 					["sound_kit_id"] = "6241",
+					["do_custom"] = false,
 					["do_message"] = false,
-					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["sound_channel"] = "Dialog",
 				},
 				["finish"] = {
@@ -44485,8 +44482,10 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Mythic+ Affixes ",
+			["text1Containment"] = "INSIDE",
 			["text2Containment"] = "INSIDE",
+			["parent"] = "Mythic+ Affixes ",
+			["text1Font"] = "Friz Quadrata TT",
 			["actions"] = {
 				["start"] = {
 				},
@@ -44495,22 +44494,11 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["text1Font"] = "Friz Quadrata TT",
-			["text1Containment"] = "INSIDE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "alphaPulse",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["text2Color"] = {
 				1, -- [1]
@@ -44545,13 +44533,22 @@ WeakAurasSaved = {
 			["yOffset"] = 5.0000610351562,
 			["conditions"] = {
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 			["cooldownTextEnabled"] = true,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "alphaPulse",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 		},
 		["MV - Grace & Vigor"] = {
 			["glow"] = false,
@@ -44973,8 +44970,8 @@ WeakAurasSaved = {
 					"Havoc", -- [1]
 				},
 				["use_unit"] = true,
-				["debuffType"] = "HARMFUL",
 				["custom_hide"] = "timed",
+				["spellName"] = 80240,
 				["charges_operator"] = ">=",
 				["type"] = "status",
 				["remOperator"] = ">=",
@@ -44990,7 +44987,7 @@ WeakAurasSaved = {
 				["name"] = "Havoc",
 				["unevent"] = "auto",
 				["showOn"] = "showAlways",
-				["spellName"] = 80240,
+				["debuffType"] = "HARMFUL",
 				["use_charges"] = false,
 				["subeventPrefix"] = "SPELL",
 			},
@@ -45770,37 +45767,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["message"] = "Fixate on me!",
-					["do_glow"] = false,
-					["do_sound"] = true,
-					["message_type"] = "SAY",
-					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
-					["do_custom"] = false,
-					["do_message"] = true,
-				},
-				["init"] = {
-				},
-				["finish"] = {
-					["message"] = "BLADES ON ME!",
-					["do_sound"] = false,
-					["message_type"] = "SAY",
-					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-					["do_message"] = false,
-					["sound_channel"] = "Dialog",
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -45850,7 +45827,27 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["message"] = "Fixate on me!",
+					["do_glow"] = false,
+					["do_sound"] = true,
+					["message_type"] = "SAY",
+					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
+					["do_custom"] = false,
+					["do_message"] = true,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+					["message"] = "BLADES ON ME!",
+					["do_sound"] = false,
+					["message_type"] = "SAY",
+					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_message"] = false,
+					["sound_channel"] = "Dialog",
+				},
+			},
 		},
 		["Soul Shard 3 Tick"] = {
 			["textFlags"] = "None",
@@ -45917,8 +45914,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -45930,10 +45930,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -46147,27 +46144,7 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["trigger"] = {
-				["rem"] = "2",
-				["spellId"] = "240447",
-				["unit"] = "player",
-				["debuffType"] = "HARMFUL",
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
-				["fullscan"] = true,
-				["countOperator"] = "<=",
-				["event"] = "Health",
-				["count"] = "73",
-				["use_spellId"] = true,
-				["spellIds"] = {
-				},
-				["names"] = {
-					"Quake", -- [1]
-				},
-				["remOperator"] = "<",
-				["name"] = "Quake",
-				["subeventPrefix"] = "SPELL",
-				["useRem"] = true,
+			["additional_triggers"] = {
 			},
 			["animation"] = {
 				["start"] = {
@@ -46183,11 +46160,31 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["id"] = "STOP CASTING",
+			["trigger"] = {
+				["rem"] = "2",
+				["spellId"] = "240447",
+				["unit"] = "player",
+				["debuffType"] = "HARMFUL",
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["fullscan"] = true,
+				["countOperator"] = "<=",
+				["event"] = "Health",
+				["spellIds"] = {
+				},
+				["use_spellId"] = true,
+				["name"] = "Quake",
+				["names"] = {
+					"Quake", -- [1]
+				},
+				["remOperator"] = "<",
+				["count"] = "73",
+				["subeventPrefix"] = "SPELL",
+				["useRem"] = true,
+			},
 			["justify"] = "LEFT",
 			["selfPoint"] = "BOTTOM",
-			["additional_triggers"] = {
-			},
+			["id"] = "STOP CASTING",
 			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
 			["width"] = 596.000061035156,
@@ -46455,37 +46452,37 @@ WeakAurasSaved = {
 				["use_castType"] = false,
 				["rem"] = "5",
 				["use_specific_unit"] = false,
-				["use_totemName"] = true,
-				["use_unit"] = true,
 				["remaining_operator"] = "<=",
+				["use_unit"] = true,
+				["duration"] = "30",
 				["name_info"] = "aura",
 				["hideAlone"] = true,
 				["ownOnly"] = true,
 				["remaining"] = "5",
-				["spell"] = "Efflorescence",
+				["use_remaining"] = true,
 				["spellIds"] = {
 				},
 				["group_count"] = "0",
-				["custom_hide"] = "custom",
-				["use_remaining"] = true,
 				["debuffType"] = "HELPFUL",
-				["unevent"] = "auto",
 				["type"] = "status",
-				["custom_type"] = "event",
+				["group_countOperator"] = ">",
 				["subeventSuffix"] = "_CAST_START",
+				["spell"] = "Efflorescence",
+				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["names"] = {
 					"Lifebloom", -- [1]
 				},
 				["unit"] = "group",
 				["event"] = "Totem",
 				["totemName"] = 145205,
-				["group_countOperator"] = ">",
+				["custom_hide"] = "custom",
 				["use_spell"] = true,
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
 				["stack_info"] = "count",
 				["remOperator"] = "<=",
 				["subeventPrefix"] = "SPELL",
-				["duration"] = "30",
+				["use_totemName"] = true,
 				["useRem"] = true,
 			},
 			["desaturate"] = true,
@@ -46942,12 +46939,12 @@ WeakAurasSaved = {
 		},
 		["Active: Above 5 Seconds - Symbol"] = {
 			["init_started"] = 1,
-			["xOffset"] = 0,
+			["disjunctive"] = "all",
 			["untrigger"] = {
 			},
 			["conditions"] = {
 			},
-			["disjunctive"] = "all",
+			["parent"] = "Smexy's Lifebloom Group",
 			["mirror"] = false,
 			["yOffset"] = 0,
 			["regionType"] = "texture",
@@ -46959,7 +46956,7 @@ WeakAurasSaved = {
 			},
 			["blendMode"] = "BLEND",
 			["activeTriggerMode"] = -10,
-			["width"] = 32,
+			["desaturate"] = false,
 			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
@@ -46994,13 +46991,13 @@ WeakAurasSaved = {
 				["useRem"] = true,
 			},
 			["discrete_rotation"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 32,
 			["selfPoint"] = "CENTER",
 			["additional_triggers"] = {
 			},
 			["id"] = "Active: Above 5 Seconds - Symbol",
 			["frameStrata"] = 1,
-			["desaturate"] = false,
+			["anchorFrameType"] = "SCREEN",
 			["rotation"] = 0,
 			["animation"] = {
 				["start"] = {
@@ -47074,7 +47071,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Smexy's Lifebloom Group",
+			["xOffset"] = 0,
 		},
 		["Apo Duration"] = {
 			["textFlags"] = "None",
@@ -47143,15 +47140,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -47324,9 +47321,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_message"] = false,
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WaterDrop.ogg",
 					["do_custom"] = false,
-					["do_message"] = false,
 					["do_sound"] = true,
 				},
 				["finish"] = {
@@ -47704,17 +47701,17 @@ WeakAurasSaved = {
 					["colorG"] = 1,
 					["use_translate"] = true,
 					["type"] = "none",
-					["preset"] = "alphaPulse",
+					["duration"] = "0.5",
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["scaley"] = 1,
 					["alpha"] = 0,
 					["y"] = 1,
 					["x"] = -1,
-					["duration"] = "0.5",
 					["colorB"] = 1,
-					["rotate"] = 0,
-					["colorR"] = 1,
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["preset"] = "alphaPulse",
+					["colorR"] = 1,
 				},
 				["finish"] = {
 					["type"] = "none",
@@ -48143,7 +48140,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Containment"] = "OUTSIDE",
 			["actions"] = {
 				["start"] = {
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
@@ -48154,15 +48150,11 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["text2Containment"] = "INSIDE",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Font"] = "Expressway",
 			["text2Point"] = "CENTER",
+			["text2Containment"] = "INSIDE",
+			["text1Containment"] = "OUTSIDE",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -48212,7 +48204,12 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = false,
-			["yOffset"] = 20.999877929688,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Cataclysm 2"] = {
 			["glow"] = false,
@@ -48440,18 +48437,18 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Displacer Beast",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -48491,14 +48488,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
@@ -48507,7 +48501,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -48587,9 +48584,9 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/NyIGCeCnf",
 			["actions"] = {
 				["start"] = {
+					["sound"] = "Sound\\Interface\\AlarmClockWarning3.ogg",
 					["do_custom"] = false,
 					["custom"] = "\n\n\n\n\n\n\n\n\n\n\n",
-					["sound"] = "Sound\\Interface\\AlarmClockWarning3.ogg",
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -48621,10 +48618,10 @@ WeakAurasSaved = {
 			},
 			["desc"] = "Author: Exality; Imported: 12.04.2017; Version: 14; Changed by: (EU)Warpaladin-Aegwynn; Last Update: 24.05.2017; Iteration: 1",
 			["text1Point"] = "TOP",
-			["yOffset"] = 26.999969482422,
+			["text1Containment"] = "OUTSIDE",
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 64,
-			["text1Containment"] = "OUTSIDE",
+			["cooldownTextEnabled"] = true,
 			["load"] = {
 				["use_never"] = false,
 				["class"] = {
@@ -48678,7 +48675,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["cooldownTextEnabled"] = true,
+			["stickyDuration"] = false,
 			["conditions"] = {
 			},
 			["parent"] = "Mythic+ Affixes ",
@@ -48752,8 +48749,8 @@ WeakAurasSaved = {
 			["numTriggers"] = 2,
 			["disjunctive"] = "any",
 			["displayIcon"] = 135799,
+			["yOffset"] = 26.999969482422,
 			["text2Font"] = "Friz Quadrata TT",
-			["stickyDuration"] = false,
 		},
 		["Dimensional_Rift_Stacks"] = {
 			["glow"] = false,
@@ -48789,8 +48786,8 @@ WeakAurasSaved = {
 					"Сверхновая", -- [2]
 				},
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
 				["spellName"] = 196586,
+				["custom_hide"] = "timed",
 				["charges_operator"] = ">=",
 				["type"] = "status",
 				["use_charges"] = false,
@@ -48806,7 +48803,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["remOperator"] = ">=",
 				["subeventSuffix"] = "_CAST_START",
-				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = false,
@@ -49174,14 +49171,14 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["custom_hide"] = "timed",
 				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Divine Purpose", -- [1]
+				},
 				["unevent"] = "auto",
 				["use_showOn"] = true,
 				["ownOnly"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Divine Purpose", -- [1]
-				},
+				["use_unit"] = true,
 				["spellName"] = 114157,
 				["use_spellName"] = true,
 				["spellIds"] = {
@@ -49190,7 +49187,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["showOn"] = "showOnReady",
 				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -49229,10 +49226,7 @@ WeakAurasSaved = {
 						true, -- [3]
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -49242,8 +49236,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -49482,14 +49479,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
-						["name"] = "Protected",
-						["countOperator"] = "==",
-						["unit"] = "player",
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["use_spellId"] = true,
+						["countOperator"] = "==",
+						["unit"] = "player",
 						["count"] = "0",
+						["use_spellId"] = true,
+						["name"] = "Protected",
 						["inverse"] = true,
 						["names"] = {
 							"Protected", -- [1]
@@ -49870,14 +49867,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
+						["count"] = "0",
+						["countOperator"] = "==",
+						["unit"] = "player",
+						["inverse"] = true,
+						["use_spellId"] = true,
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["countOperator"] = "==",
-						["unit"] = "player",
-						["count"] = "0",
-						["use_spellId"] = true,
-						["inverse"] = true,
 						["name"] = "Protected",
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Health",
@@ -49963,8 +49960,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -49976,10 +49976,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -50238,12 +50235,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -50252,11 +50245,15 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -51130,17 +51127,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["role"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -51149,11 +51145,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
-				["difficulty"] = {
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -51773,9 +51770,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["do_message"] = false,
-					["do_custom"] = false,
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -52006,17 +52003,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_talent"] = true,
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -52024,12 +52017,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -52239,11 +52236,11 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 					["message"] = "",
-					["do_custom"] = false,
+					["sound"] = " KitID",
 					["do_sound"] = true,
 					["sound_kit_id"] = "6241",
+					["do_custom"] = false,
 					["do_message"] = false,
-					["sound"] = " KitID",
 					["sound_channel"] = "Master",
 				},
 				["finish"] = {
@@ -52486,8 +52483,8 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["group_count"] = "0",
 				["stack_info"] = "count",
-				["group_countOperator"] = ">",
 				["custom_hide"] = "custom",
+				["debuffType"] = "HELPFUL",
 				["type"] = "aura",
 				["spell"] = "Efflorescence",
 				["use_unit"] = true,
@@ -52504,7 +52501,7 @@ WeakAurasSaved = {
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
 				["subeventSuffix"] = "_CAST_START",
 				["remOperator"] = "<=",
-				["debuffType"] = "HELPFUL",
+				["group_countOperator"] = ">",
 				["use_specific_unit"] = false,
 				["useRem"] = true,
 			},
@@ -52660,6 +52657,19 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["id"] = "Time to Die",
+			["justify"] = "RIGHT",
+			["selfPoint"] = "BOTTOM",
+			["additional_triggers"] = {
+			},
+			["width"] = 9.00000190734863,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["untrigger"] = {
+				["unit"] = "target",
+			},
+			["font"] = "Expressway",
+			["numTriggers"] = 1,
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
@@ -52677,19 +52687,6 @@ WeakAurasSaved = {
 				["use_percenthealth"] = false,
 				["percenthealth_operator"] = ">",
 				["custom_hide"] = "timed",
-			},
-			["justify"] = "RIGHT",
-			["selfPoint"] = "BOTTOM",
-			["id"] = "Time to Die",
-			["width"] = 30.9999675750732,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["untrigger"] = {
-				["unit"] = "target",
-			},
-			["font"] = "Expressway",
-			["numTriggers"] = 1,
-			["additional_triggers"] = {
 			},
 			["height"] = 18.0000038146973,
 			["conditions"] = {
@@ -53212,7 +53209,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -53223,12 +53220,11 @@ WeakAurasSaved = {
 					},
 				},
 				["use_talent"] = true,
-				["use_class"] = true,
-				["race"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -53237,11 +53233,12 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_combat"] = true,
-				["difficulty"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -54250,9 +54247,9 @@ WeakAurasSaved = {
 					"Сверхновая", -- [2]
 				},
 				["use_showgcd"] = true,
-				["debuffType"] = "HELPFUL",
-				["type"] = "status",
 				["custom_hide"] = "timed",
+				["type"] = "status",
+				["spellName"] = 17962,
 				["charges_operator"] = ">=",
 				["charges"] = "1",
 				["use_unit"] = true,
@@ -54268,7 +54265,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["remOperator"] = ">=",
 				["subeventSuffix"] = "_CAST_START",
-				["spellName"] = 17962,
+				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = false,
@@ -55859,19 +55856,24 @@ WeakAurasSaved = {
 		},
 		["Not Active: CAST! - Symbol"] = {
 			["init_started"] = 1,
-			["xOffset"] = 0,
+			["parent"] = "Smexy's Lifebloom Group",
 			["untrigger"] = {
 			},
 			["conditions"] = {
 			},
-			["parent"] = "Smexy's Lifebloom Group",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["mirror"] = false,
 			["yOffset"] = 0,
 			["regionType"] = "texture",
 			["disjunctive"] = "all",
 			["blendMode"] = "BLEND",
 			["activeTriggerMode"] = -10,
-			["width"] = 32,
+			["desaturate"] = false,
 			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
@@ -55884,7 +55886,7 @@ WeakAurasSaved = {
 			["texture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura118",
 			["id"] = "Not Active: CAST! - Symbol",
 			["discrete_rotation"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 32,
 			["selfPoint"] = "CENTER",
 			["additional_triggers"] = {
 			},
@@ -55908,7 +55910,7 @@ WeakAurasSaved = {
 				["group_countOperator"] = "==",
 			},
 			["frameStrata"] = 1,
-			["desaturate"] = false,
+			["anchorFrameType"] = "SCREEN",
 			["rotation"] = 0,
 			["animation"] = {
 				["start"] = {
@@ -55982,12 +55984,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Giftiges Blut [Vio]"] = {
 			["glow"] = false,
@@ -56207,18 +56204,18 @@ WeakAurasSaved = {
 				["spellName"] = 33076,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Prayer of Mending",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -56261,15 +56258,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -56829,16 +56826,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["ownOnly"] = true,
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["duration"] = "15",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["custom_hide"] = "timed",
 				["use_sourceUnit"] = false,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -56852,12 +56846,15 @@ WeakAurasSaved = {
 				["sourceName"] = "Draemii",
 				["use_name"] = true,
 				["use_spellId"] = false,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_specific_sourceunit"] = true,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["zoom"] = 0,
@@ -56870,12 +56867,7 @@ WeakAurasSaved = {
 			["timerFlags"] = "None",
 			["auto"] = true,
 			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["useAdjustededMax"] = false,
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["displayStacks"] = "%c",
 			["width"] = 100,
@@ -56910,7 +56902,12 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["useAdjustededMax"] = false,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
 			["backgroundColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -56919,7 +56916,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -57283,9 +57279,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["do_custom"] = false,
 					["do_message"] = false,
-					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -57662,9 +57658,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = false,
 					["do_message"] = false,
 					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
-					["do_custom"] = false,
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -58083,9 +58079,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
-			["parent"] = "Mythic+ Affixes ",
-			["text2Containment"] = "INSIDE",
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -58100,6 +58093,9 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["text2Point"] = "CENTER",
+			["text2Containment"] = "INSIDE",
+			["parent"] = "Mythic+ Affixes ",
 			["text1Font"] = "Friz Quadrata TT",
 			["text1Color"] = {
 				1, -- [1]
@@ -58482,12 +58478,12 @@ WeakAurasSaved = {
 				["use_destName"] = false,
 				["use_cloneId"] = false,
 				["debuffType"] = "HELPFUL",
-				["use_sourceName"] = false,
 				["type"] = "event",
+				["sourceName"] = "",
 				["unevent"] = "timed",
 				["subeventSuffix"] = "_CAST_SUCCESS",
 				["use_showOn"] = true,
-				["sourceName"] = "",
+				["use_sourceName"] = false,
 				["event"] = "Combat Log",
 				["custom_hide"] = "timed",
 				["realSpellName"] = "Sigil of Silence",
@@ -58536,11 +58532,11 @@ WeakAurasSaved = {
 			["displayStacks"] = "%c",
 			["width"] = 100,
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["additional_triggers"] = {
-			},
+			["id"] = "DH Sigil of Silence",
 			["border"] = false,
 			["borderEdge"] = "None",
-			["id"] = "DH Sigil of Silence",
+			["additional_triggers"] = {
+			},
 			["borderSize"] = 16,
 			["sparkWidth"] = 10,
 			["icon_side"] = "LEFT",
@@ -58570,7 +58566,6 @@ WeakAurasSaved = {
 			["displayTextLeft"] = "Sigil of Silence",
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -60054,6 +60049,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["yOffset"] = 20.999877929688,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["text2Containment"] = "INSIDE",
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -60068,16 +60071,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["yOffset"] = 20.999877929688,
-			["text2Containment"] = "INSIDE",
-			["text2Point"] = "CENTER",
 			["text1Font"] = "Expressway",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["text1Containment"] = "OUTSIDE",
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -60124,7 +60119,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["text1Containment"] = "OUTSIDE",
+			["text2Point"] = "CENTER",
 		},
 		["Manareißzahn [CoS]"] = {
 			["glow"] = false,
@@ -60701,36 +60696,36 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["rem"] = "5",
 				["ownOnly"] = true,
-				["unit"] = "player",
 				["names"] = {
 					"Dark Pact", -- [1]
 				},
+				["subeventPrefix"] = "SPELL",
 				["use_showgcd"] = true,
 				["use_unit"] = true,
-				["count"] = "9",
+				["spellIds"] = {
+					108416, -- [1]
+				},
 				["remOperator"] = ">=",
-				["debuffType"] = "HELPFUL",
-				["health"] = "1",
-				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
-				["health_operator"] = ">",
+				["count"] = "9",
+				["unevent"] = "auto",
+				["spellName"] = 196447,
+				["subeventSuffix"] = "_CAST_START",
 				["type"] = "status",
 				["use_health"] = true,
-				["unevent"] = "auto",
+				["health_operator"] = ">",
 				["use_showOn"] = true,
 				["percenthealth"] = "35",
 				["countOperator"] = "<",
 				["event"] = "Cooldown Progress (Spell)",
 				["realSpellName"] = "Channel Demonfire",
 				["use_spellName"] = true,
-				["spellIds"] = {
-					108416, -- [1]
-				},
-				["spellName"] = 196447,
+				["health"] = "1",
+				["debuffType"] = "HELPFUL",
 				["showOn"] = "showAlways",
 				["use_percenthealth"] = true,
 				["percenthealth_operator"] = "<=",
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 			},
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
@@ -60779,7 +60774,6 @@ WeakAurasSaved = {
 				["use_talent"] = true,
 				["use_class"] = true,
 				["use_realm"] = false,
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -60788,6 +60782,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
 				["race"] = {
 					["multi"] = {
@@ -60961,18 +60956,18 @@ WeakAurasSaved = {
 						true, -- [3]
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -61298,20 +61293,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -61370,9 +61365,9 @@ WeakAurasSaved = {
 				},
 				["main"] = {
 					["y"] = 5,
+					["translateType"] = "bounce",
 					["type"] = "none",
 					["x"] = 0,
-					["translateType"] = "bounce",
 					["preset"] = "pulse",
 					["use_translate"] = false,
 					["duration_type"] = "seconds",
@@ -61521,8 +61516,8 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
 				["debuffType"] = "HARMFUL",
-				["use_sourceName"] = true,
 				["name_operator"] = "==",
+				["type"] = "aura",
 				["unevent"] = "timed",
 				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
@@ -61536,7 +61531,7 @@ WeakAurasSaved = {
 				["count"] = "9",
 				["countOperator"] = "==",
 				["name"] = "Mark of Frost",
-				["type"] = "aura",
+				["use_sourceName"] = true,
 				["spellName"] = "Focused Blast",
 				["fullscan"] = true,
 			},
@@ -62383,11 +62378,11 @@ WeakAurasSaved = {
 				["group_countOperator"] = "==",
 				["spell"] = "Efflorescence",
 				["debuffType"] = "HELPFUL",
-				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["type"] = "aura",
 				["spellIds"] = {
 				},
-				["custom_type"] = "event",
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "custom",
 				["count"] = "0",
 				["countOperator"] = "==",
@@ -62395,7 +62390,7 @@ WeakAurasSaved = {
 				["event"] = "Cast",
 				["ownOnly"] = true,
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["remOperator"] = "<",
 				["use_specific_unit"] = false,
 				["unit"] = "group",
@@ -62512,8 +62507,8 @@ WeakAurasSaved = {
 			["outline"] = "OUTLINE",
 			["fontSize"] = 10,
 			["init_started"] = 1,
-			["parent"] = "Paladin_Holy_Afenar",
 			["disjunctive"] = "all",
+			["xOffset"] = -130,
 			["displayText"] = "%c",
 			["customText"] = "function()\n    local v = aura_env.state.value\n    if v >= 1000000\n    then        \n        return string.format('%.1fm', v/1000000)\n    elseif v >= 1000\n    then\n        return string.format('%.fk', v/1000)\n    else\n        return string.format('%.f', v)\n    end\nend",
 			["yOffset"] = 28,
@@ -62637,7 +62632,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["xOffset"] = -130,
+			["parent"] = "Paladin_Holy_Afenar",
 		},
 		["TR - Succulent Feast"] = {
 			["glow"] = false,
@@ -62841,17 +62836,17 @@ WeakAurasSaved = {
 					["colorG"] = 1,
 					["use_translate"] = true,
 					["type"] = "none",
-					["colorA"] = 1,
-					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["scaley"] = 1,
+					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
+					["preset"] = "alphaPulse",
 					["alpha"] = 0,
 					["y"] = 1,
 					["x"] = -1,
-					["preset"] = "alphaPulse",
 					["duration"] = "1",
-					["rotate"] = 0,
-					["colorR"] = 1,
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorA"] = 1,
+					["colorR"] = 1,
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -62868,24 +62863,24 @@ WeakAurasSaved = {
 				["use_alive"] = true,
 				["showOn"] = "showOnCooldown",
 				["ownOnly"] = true,
-				["use_mounted"] = false,
+				["spellName"] = 196447,
 				["unit"] = "player",
 				["health"] = "1",
-				["spellName"] = 196447,
-				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+				["health_operator"] = ">",
 				["use_resting"] = false,
 				["event"] = "Conditions",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["use_HasPet"] = false,
 				["debuffType"] = "HELPFUL",
 				["use_vehicle"] = false,
 				["type"] = "status",
 				["use_health"] = true,
-				["health_operator"] = ">",
+				["unevent"] = "auto",
 				["use_showOn"] = true,
 				["percenthealth"] = "35",
 				["countOperator"] = "<",
-				["custom_hide"] = "timed",
+				["use_mounted"] = false,
 				["realSpellName"] = "Направленный демонический огонь",
 				["use_spellName"] = true,
 				["spellIds"] = {
@@ -62933,7 +62928,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -62942,10 +62937,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_realm"] = false,
 				["use_spec"] = false,
 				["faction"] = {
 					["multi"] = {
@@ -62956,7 +62948,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_class"] = true,
-				["use_realm"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -63228,12 +63223,12 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["spellId"] = "183088",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
-				["duration"] = "2.5",
-				["event"] = "Combat Log",
 				["names"] = {
 					"Unerring Shear", -- [1]
 				},
+				["duration"] = "2.5",
+				["event"] = "Combat Log",
+				["use_unit"] = true,
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["name"] = "Avalanche",
@@ -63242,7 +63237,7 @@ WeakAurasSaved = {
 				["spellIds"] = {
 					198635, -- [1]
 				},
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["fullscan"] = true,
 			},
 			["text1Containment"] = "OUTSIDE",
@@ -63565,17 +63560,17 @@ WeakAurasSaved = {
 					["use_translate"] = false,
 					["use_alpha"] = false,
 					["type"] = "none",
-					["colorA"] = 1,
+					["scalex"] = 1,
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["preset"] = "alphaPulse",
 					["alpha"] = 0,
 					["y"] = 1,
 					["x"] = 1,
-					["scalex"] = 1,
 					["scaley"] = 1,
-					["rotate"] = 0,
-					["translateType"] = "spiralandpulse",
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorA"] = 1,
+					["translateType"] = "spiralandpulse",
 				},
 				["finish"] = {
 					["preset"] = "fade",
@@ -63627,12 +63622,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_talent"] = true,
+				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
@@ -63650,7 +63645,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -64870,12 +64865,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
 				["use_name"] = false,
+				["use_talent"] = true,
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
@@ -64893,7 +64885,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -65000,8 +64995,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -65014,10 +65012,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -65067,16 +65062,16 @@ WeakAurasSaved = {
 					["alphaFunc"] = "function(progress, start, delta)\n      local angle = (progress * 2 * math.pi) - (math.pi / 2)\n      return start + (((math.sin(angle) + 1)/2) * delta)\n    end\n  ",
 					["use_alpha"] = true,
 					["type"] = "none",
-					["scalex"] = 1,
 					["use_color"] = false,
+					["scaley"] = 1,
 					["alpha"] = 0,
 					["y"] = 0,
 					["colorType"] = "custom",
-					["scaley"] = 1,
 					["colorB"] = 0.788235294117647,
-					["rotate"] = 0,
-					["x"] = 0,
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["scalex"] = 1,
+					["x"] = 0,
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -65272,20 +65267,13 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -65294,8 +65282,15 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -65451,9 +65446,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
-			["parent"] = "Mythic+ Affixes ",
-			["text2Containment"] = "INSIDE",
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -65468,6 +65460,9 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["text2Point"] = "CENTER",
+			["text2Containment"] = "INSIDE",
+			["parent"] = "Mythic+ Affixes ",
 			["text1Font"] = "Friz Quadrata TT",
 			["text1Color"] = {
 				1, -- [1]
@@ -66128,20 +66123,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -66150,8 +66138,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -66778,12 +66773,12 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["spellId"] = "227966",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
-				["duration"] = "3",
-				["event"] = "Combat Log",
 				["names"] = {
 					"Unerring Shear", -- [1]
 				},
+				["duration"] = "3",
+				["event"] = "Combat Log",
+				["use_unit"] = true,
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["name"] = "Flashlight",
@@ -66792,7 +66787,7 @@ WeakAurasSaved = {
 				["spellIds"] = {
 					198635, -- [1]
 				},
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HARMFUL",
 			},
 			["text1Containment"] = "OUTSIDE",
@@ -67139,9 +67134,9 @@ WeakAurasSaved = {
 				["rem"] = "8",
 				["ownOnly"] = true,
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["type"] = "status",
 				["custom_hide"] = "timed",
+				["type"] = "status",
+				["spellName"] = 104316,
 				["charges_operator"] = "==",
 				["charges"] = "2",
 				["unit"] = "player",
@@ -67160,7 +67155,7 @@ WeakAurasSaved = {
 				},
 				["remOperator"] = ">=",
 				["subeventSuffix"] = "_CAST_START",
-				["spellName"] = 104316,
+				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = true,
@@ -67488,12 +67483,12 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:SA - Detoante: MoF",
 					["do_sound"] = false,
+					["glow_action"] = "show",
 					["message_type"] = "SAY",
 					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\runfast.ogg",
 					["do_message"] = false,
-					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:SA - Detoante: MoF",
 				},
 				["init"] = {
 				},
@@ -68331,14 +68326,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
+						["count"] = "0",
+						["countOperator"] = "==",
+						["unit"] = "player",
+						["inverse"] = true,
+						["use_spellId"] = true,
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["countOperator"] = "==",
-						["unit"] = "player",
-						["count"] = "0",
-						["use_spellId"] = true,
-						["inverse"] = true,
 						["name"] = "Protected",
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Health",
@@ -68376,9 +68371,9 @@ WeakAurasSaved = {
 					["message"] = "is going bowling!",
 					["do_sound"] = false,
 					["message_type"] = "EMOTE",
-					["sound"] = "Interface\\Quiet.ogg",
 					["do_message"] = true,
 					["do_custom"] = false,
+					["sound"] = "Interface\\Quiet.ogg",
 				},
 				["finish"] = {
 				},
@@ -68700,24 +68695,19 @@ WeakAurasSaved = {
 		},
 		["Active: Below 5 Seconds - Symbol"] = {
 			["init_started"] = 1,
-			["color"] = {
-				0.933333333333333, -- [1]
-				1, -- [2]
-				0, -- [3]
-				0.75, -- [4]
-			},
+			["disjunctive"] = "all",
 			["untrigger"] = {
 			},
 			["conditions"] = {
 			},
-			["disjunctive"] = "all",
+			["parent"] = "Smexy's Lifebloom Group",
 			["mirror"] = false,
 			["yOffset"] = 0,
 			["regionType"] = "texture",
 			["xOffset"] = 0,
 			["blendMode"] = "BLEND",
 			["activeTriggerMode"] = -10,
-			["width"] = 32,
+			["desaturate"] = false,
 			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
@@ -68751,13 +68741,13 @@ WeakAurasSaved = {
 				["useRem"] = true,
 			},
 			["discrete_rotation"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 32,
 			["selfPoint"] = "CENTER",
 			["additional_triggers"] = {
 			},
 			["id"] = "Active: Below 5 Seconds - Symbol",
 			["frameStrata"] = 1,
-			["desaturate"] = false,
+			["anchorFrameType"] = "SCREEN",
 			["rotation"] = 0,
 			["animation"] = {
 				["start"] = {
@@ -68831,7 +68821,12 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Smexy's Lifebloom Group",
+			["color"] = {
+				0.933333333333333, -- [1]
+				1, -- [2]
+				0, -- [3]
+				0.75, -- [4]
+			},
 		},
 		["Dragons - Bellowing Roar"] = {
 			["glow"] = false,
@@ -69497,16 +69492,29 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["yOffset"] = 20.999877929688,
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
 			["stickyDuration"] = false,
 			["text2Color"] = {
@@ -69554,20 +69562,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["yOffset"] = 20.999877929688,
 		},
 		["Cataclysm_CD"] = {
 			["glow"] = false,
@@ -69611,10 +69606,10 @@ WeakAurasSaved = {
 				},
 				["remaining"] = "1.5",
 				["use_charges"] = false,
-				["debuffType"] = "HELPFUL",
+				["custom_hide"] = "timed",
 				["charges"] = "0",
 				["remOperator"] = ">=",
-				["custom_hide"] = "timed",
+				["spellName"] = 152108,
 				["charges_operator"] = "==",
 				["type"] = "status",
 				["use_remaining"] = false,
@@ -69629,7 +69624,7 @@ WeakAurasSaved = {
 				},
 				["subeventSuffix"] = "_CAST_START",
 				["showOn"] = "showOnCooldown",
-				["spellName"] = 152108,
+				["debuffType"] = "HELPFUL",
 				["remaining_operator"] = ">=",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -69906,11 +69901,10 @@ WeakAurasSaved = {
 				["ownOnly"] = true,
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["spellName"] = "Kick",
 				["use_specific_sourceunit"] = true,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -69924,7 +69918,8 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_sourceUnit"] = false,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
@@ -69944,12 +69939,7 @@ WeakAurasSaved = {
 			["timerFlags"] = "None",
 			["auto"] = true,
 			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["useAdjustededMax"] = false,
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["displayStacks"] = "%c",
 			["width"] = 100,
@@ -69984,7 +69974,12 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["useAdjustededMax"] = false,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
 			["backgroundColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -69993,7 +69988,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -70251,20 +70245,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_name"] = false,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -70273,7 +70263,11 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["class"] = {
 					["single"] = "PALADIN",
 					["multi"] = {
@@ -71028,8 +71022,8 @@ WeakAurasSaved = {
 				["ownOnly"] = true,
 				["unit"] = "target",
 				["use_charges"] = true,
-				["custom_hide"] = "timed",
 				["spellName"] = 205181,
+				["debuffType"] = "HARMFUL",
 				["charges_operator"] = "==",
 				["type"] = "status",
 				["use_unit"] = true,
@@ -71048,7 +71042,7 @@ WeakAurasSaved = {
 				},
 				["showOn"] = "showOnCooldown",
 				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HARMFUL",
+				["custom_hide"] = "timed",
 				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = true,
@@ -71074,7 +71068,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["class"] = {
 					["single"] = "WARLOCK",
 					["multi"] = {
@@ -71085,12 +71079,14 @@ WeakAurasSaved = {
 					},
 				},
 				["use_talent"] = true,
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -71099,11 +71095,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -71373,7 +71367,7 @@ WeakAurasSaved = {
 				},
 				["main"] = {
 					["translateType"] = "shake",
-					["scalex"] = 1,
+					["duration_type"] = "seconds",
 					["colorA"] = 1,
 					["colorG"] = 1,
 					["use_translate"] = false,
@@ -71384,10 +71378,10 @@ WeakAurasSaved = {
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 3,
-					["duration"] = ".75",
+					["scalex"] = 1,
 					["rotate"] = 0,
 					["colorB"] = 1,
-					["duration_type"] = "seconds",
+					["duration"] = ".75",
 				},
 				["finish"] = {
 					["type"] = "none",
@@ -71447,8 +71441,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -71462,10 +71459,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -72590,26 +72584,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-					["do_sound"] = false,
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -72659,7 +72644,16 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_sound"] = false,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["Avenging_Wrath_Holy_Buff"] = {
 			["glow"] = false,
@@ -72759,20 +72753,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -72781,7 +72774,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_spec"] = true,
+				["use_name"] = false,
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -73079,8 +73073,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -73092,10 +73089,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -73540,17 +73534,14 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["id"] = " Imp Count",
-			["justify"] = "CENTER",
-			["selfPoint"] = "BOTTOM",
 			["trigger"] = {
 				["type"] = "custom",
 				["custom_hide"] = "custom",
 				["custom_type"] = "event",
-				["unit"] = "player",
+				["customStacks"] = "function()\n    if aura_env.count > 0 then return aura_env.count end\n    return nil\nend",
 				["duration"] = "12",
 				["event"] = "Health",
-				["customStacks"] = "function()\n    if aura_env.count > 0 then return aura_env.count end\n    return nil\nend",
+				["subeventPrefix"] = "SPELL",
 				["custom"] = "function(_,_,combatEvent,_,sourceGUID,sourceName,_,_,destGUID,destName)\n    if aura_env.time == nil then aura_env.time = {} end\n    if aura_env.count == nil then aura_env.count = 0 end\n    local compTime = GetTime()\n    \n    -- time out any imps\n    if aura_env.time ~= nil then\n        for index, value in pairs(aura_env.time) do\n            if (value + 12) < compTime then\n                aura_env.time[index] = nil\n                aura_env.count = aura_env.count - 1\n                \n                --print((\"Imp timed out. Count: |cff00ff00%d|r\"):format(aura_env.count))\n            end\n        end\n    end\n    -- imp died\n    if combatEvent == \"UNIT_DIED\" then\n        for index, value in pairs(aura_env.time) do\n            if destGUID == index then\n                aura_env.time[index] = nil\n                aura_env.count = aura_env.count - 1\n                \n                --print((\"Imp died. Count: |cff00ff00%d|r\"):format(aura_env.count))\n            end\n        end\n    end\n    -- implosioned\n    if combatEvent == \"SPELL_INSTAKILL\" then\n        for index, value in pairs(aura_env.time) do\n            if destGUID == index then\n                aura_env.time[index] = nil\n                aura_env.count = aura_env.count - 1\n                \n                --print((\"Impplosioned. Count: |cff00ff00%d|r\"):format(aura_env.count))\n            end\n        end\n    end    \n    -- imp summoned\n    if combatEvent == \"SPELL_SUMMON\" and (destName == \"Wild Imp\" or destName == \"Дикий бес\") and sourceGUID == aura_env.pguid \n    then\n        aura_env.time[destGUID] = compTime\n        aura_env.count = aura_env.count + 1\n        --print((\"Imp spawned. Count: |cff00ff00%d|r\"):format(aura_env.count))\n        \n        return true       \n    end\nend\n--based on Lockslap's http://www.curse.com/addons/wow/elvui-wildimps\n\n\n\n\n\n\n\n\n",
 				["customName"] = "\n\n",
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
@@ -73559,8 +73550,12 @@ WeakAurasSaved = {
 				["subeventSuffix"] = "_CAST_START",
 				["names"] = {
 				},
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["debuffType"] = "HELPFUL",
+			},
+			["justify"] = "CENTER",
+			["selfPoint"] = "BOTTOM",
+			["additional_triggers"] = {
 			},
 			["width"] = 9.00006675720215,
 			["frameStrata"] = 4,
@@ -73568,8 +73563,7 @@ WeakAurasSaved = {
 			["xOffset"] = 104.5,
 			["font"] = "Homespun",
 			["numTriggers"] = 1,
-			["additional_triggers"] = {
-			},
+			["id"] = " Imp Count",
 			["height"] = 19.9999523162842,
 			["conditions"] = {
 			},
@@ -73598,11 +73592,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
@@ -73611,7 +73605,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -73950,8 +73944,8 @@ WeakAurasSaved = {
 				["names"] = {
 				},
 				["type"] = "custom",
-				["subeventSuffix"] = "_CAST_START",
 				["power"] = "70",
+				["unevent"] = "auto",
 				["power_operator"] = ">=",
 				["unit"] = "player",
 				["event"] = "Power",
@@ -73959,10 +73953,10 @@ WeakAurasSaved = {
 				["spellIds"] = {
 				},
 				["custom_type"] = "event",
+				["events"] = "CHAT_MSG_RAID_BOSS_WHISPER, CHAT_MSG_WHISPER",
 				["name"] = "Shattering Scream",
 				["custom"] = "function(channel, message, language, channelString, target, flags, unknown, channelNumber, channelName, unknown, counter)\n    if message then\n        if message:find(\"spell:238429\") then\n            return true\n        end\n        if message:find(\"spell:238430\") then\n            return true\n        end\n    end\nend\n\n\n\n",
-				["events"] = "CHAT_MSG_RAID_BOSS_WHISPER, CHAT_MSG_WHISPER",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["duration"] = "4",
 				["use_specific_unit"] = false,
 			},
@@ -74279,9 +74273,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WaterDrop.ogg",
-					["do_message"] = false,
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -74734,16 +74728,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["ownOnly"] = true,
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["duration"] = "15",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["debuffType"] = "HELPFUL",
 				["use_sourceUnit"] = false,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["spellName"] = "Mind Freeze",
@@ -74757,12 +74748,15 @@ WeakAurasSaved = {
 				["sourceName"] = "",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_specific_sourceunit"] = true,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -74833,7 +74827,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -75143,7 +75136,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -75152,6 +75144,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
 				["use_realm"] = false,
 				["size"] = {
@@ -75237,9 +75230,9 @@ WeakAurasSaved = {
 					["message"] = "",
 					["do_sound"] = false,
 					["message_type"] = "SAY",
-					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Interface\\Quiet.ogg",
+					["do_message"] = false,
 				},
 				["finish"] = {
 				},
@@ -75599,9 +75592,9 @@ WeakAurasSaved = {
 					"Сверхновая", -- [2]
 				},
 				["use_showgcd"] = true,
-				["debuffType"] = "HELPFUL",
-				["charges"] = "1",
 				["spellName"] = 196586,
+				["charges"] = "1",
+				["custom_hide"] = "timed",
 				["charges_operator"] = ">=",
 				["type"] = "status",
 				["use_unit"] = true,
@@ -75617,7 +75610,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["showOn"] = "showAlways",
 				["subeventSuffix"] = "_CAST_START",
-				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = false,
@@ -75864,9 +75857,9 @@ WeakAurasSaved = {
 					["message"] = "Fixate on me!",
 					["do_sound"] = false,
 					["message_type"] = "SAY",
-					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_message"] = false,
 				},
 				["init"] = {
 				},
@@ -76131,17 +76124,17 @@ WeakAurasSaved = {
 					["use_translate"] = false,
 					["use_alpha"] = true,
 					["type"] = "none",
-					["colorA"] = 1,
+					["colorR"] = 1,
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      return startX + (progress * deltaX), startY + (progress * deltaY)\n    end\n  ",
 					["preset"] = "pulse",
 					["alpha"] = 0.6,
 					["y"] = 0,
 					["x"] = 0,
-					["colorR"] = 1,
 					["scaley"] = 1,
-					["rotate"] = 0,
-					["scalex"] = 1,
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorA"] = 1,
+					["scalex"] = 1,
 				},
 				["finish"] = {
 					["preset"] = "shrink",
@@ -76203,12 +76196,12 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_class"] = true,
-				["use_talent"] = false,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_talent"] = false,
+				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
@@ -76226,7 +76219,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -76500,9 +76493,11 @@ WeakAurasSaved = {
 				["spellId"] = "219009",
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Chat Message",
 				["use_specific_unit"] = false,
+				["event"] = "Chat Message",
+				["names"] = {
+					"Grace of Nature", -- [1]
+				},
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellId"] = true,
 				["name"] = "Grace of Nature",
@@ -76511,9 +76506,7 @@ WeakAurasSaved = {
 					219009, -- [1]
 				},
 				["unit"] = "target",
-				["names"] = {
-					"Grace of Nature", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -77436,26 +77429,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-					["do_sound"] = false,
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -77505,13 +77489,22 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_sound"] = false,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["Invoke the Naaru"] = {
 			["init_started"] = 1,
-			["parent"] = "Holy Priest HUD",
-			["yOffset"] = 30,
 			["disjunctive"] = "all",
+			["yOffset"] = 30,
+			["xOffset"] = 0,
 			["rotate"] = true,
 			["mirror"] = false,
 			["untrigger"] = {
@@ -77543,7 +77536,7 @@ WeakAurasSaved = {
 				},
 				["main"] = {
 					["colorR"] = 1,
-					["duration_type"] = "seconds",
+					["scalex"] = 1,
 					["alphaType"] = "alphaPulse",
 					["colorB"] = 1,
 					["colorG"] = 1,
@@ -77552,12 +77545,12 @@ WeakAurasSaved = {
 					["type"] = "custom",
 					["scaley"] = 1,
 					["alpha"] = 0.6,
-					["duration"] = "1.5",
+					["duration_type"] = "seconds",
 					["y"] = 0,
 					["x"] = 0,
 					["rotate"] = 0,
 					["colorA"] = 1,
-					["scalex"] = 1,
+					["duration"] = "1.5",
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -77574,9 +77567,9 @@ WeakAurasSaved = {
 				["powertype"] = 13,
 				["unit"] = "player",
 				["use_power"] = true,
-				["custom_hide"] = "timed",
-				["use_powertype"] = true,
 				["spellName"] = "Invoke the Naaru",
+				["use_powertype"] = true,
+				["debuffType"] = "HELPFUL",
 				["use_unit"] = true,
 				["use_sourceName"] = false,
 				["unevent"] = "timed",
@@ -77591,7 +77584,7 @@ WeakAurasSaved = {
 				},
 				["use_sourceUnit"] = true,
 				["subeventSuffix"] = "_SUMMON",
-				["debuffType"] = "HELPFUL",
+				["custom_hide"] = "timed",
 				["sourceUnit"] = "player",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -77640,15 +77633,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -77659,7 +77652,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["xOffset"] = 0,
+			["parent"] = "Holy Priest HUD",
 		},
 		["Odyn - Glowing Fragment"] = {
 			["glow"] = false,
@@ -78518,16 +78511,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["duration"] = "15",
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["ownOnly"] = true,
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["custom_hide"] = "timed",
 				["use_specific_sourceunit"] = true,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -78541,12 +78531,15 @@ WeakAurasSaved = {
 				["spellName"] = "Muzzle",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_sourceUnit"] = false,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -78564,7 +78557,7 @@ WeakAurasSaved = {
 			},
 			["numTriggers"] = 2,
 			["textSize"] = 10,
-			["timer"] = true,
+			["height"] = 18,
 			["timerFlags"] = "None",
 			["color"] = {
 				1, -- [1]
@@ -78573,15 +78566,15 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["width"] = 100,
+			["displayStacks"] = "%c",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["width"] = 100,
-			["displayStacks"] = "%c",
-			["useAdjustededMax"] = false,
 			["sparkWidth"] = 10,
 			["id"] = "Hunter Survival",
 			["border"] = false,
@@ -78631,11 +78624,10 @@ WeakAurasSaved = {
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["height"] = 18,
+			["timer"] = true,
 			["auto"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -79126,17 +79118,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_pvptalent"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["pvptalent"] = {
 					["single"] = 18,
 					["multi"] = {
 					},
 				},
+				["use_pvptalent"] = true,
 				["use_spec"] = true,
-				["faction"] = {
-					["multi"] = {
-					},
-				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -79554,8 +79546,8 @@ WeakAurasSaved = {
 					"Demonic Calling", -- [1]
 				},
 				["use_charges"] = false,
-				["debuffType"] = "HELPFUL",
 				["spellName"] = 113860,
+				["custom_hide"] = "timed",
 				["charges_operator"] = "==",
 				["charges"] = "2",
 				["type"] = "status",
@@ -79572,7 +79564,7 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["showOn"] = "showOnReady",
 				["subeventSuffix"] = "_CAST_START",
-				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = true,
@@ -79947,16 +79939,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -79964,12 +79952,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -80063,18 +80055,18 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Holy Avenger", -- [1]
 				},
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Cenarion Ward",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -80110,8 +80102,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -80125,10 +80120,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -80281,27 +80273,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["do_custom"] = false,
-					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
-					["do_sound"] = false,
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -80351,7 +80333,17 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["do_custom"] = false,
+					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
+					["do_sound"] = false,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["ol Wild Imps UP"] = {
 			["textFlags"] = "None",
@@ -80413,8 +80405,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -80426,10 +80421,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -80584,12 +80576,12 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["spellId"] = "211217",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
-				["duration"] = "4",
-				["event"] = "Combat Log",
 				["names"] = {
 					"Unerring Shear", -- [1]
 				},
+				["duration"] = "4",
+				["event"] = "Combat Log",
+				["use_unit"] = true,
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["name"] = "Arcane Slicer",
@@ -80598,7 +80590,7 @@ WeakAurasSaved = {
 				["spellIds"] = {
 					198635, -- [1]
 				},
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["fullscan"] = true,
 			},
 			["stickyDuration"] = false,
@@ -80992,17 +80984,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_talent"] = true,
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -81010,12 +80998,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -81298,8 +81290,8 @@ WeakAurasSaved = {
 				["debuffType"] = "HELPFUL",
 				["spell"] = "Efflorescence",
 				["type"] = "aura",
-				["custom_type"] = "event",
 				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["spellIds"] = {
 				},
 				["custom_hide"] = "custom",
@@ -81310,7 +81302,7 @@ WeakAurasSaved = {
 				},
 				["stack_info"] = "count",
 				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
-				["subeventSuffix"] = "_CAST_START",
+				["custom_type"] = "event",
 				["remOperator"] = "<=",
 				["use_spell"] = true,
 				["use_specific_unit"] = false,
@@ -81986,18 +81978,18 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Nature's Cure",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -82039,17 +82031,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["use_class"] = true,
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -82398,10 +82390,10 @@ WeakAurasSaved = {
 				["use_showgcd"] = false,
 				["remaining"] = "1.5",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
+				["spellName"] = 196586,
 				["use_remaining"] = false,
 				["remOperator"] = ">=",
-				["spellName"] = 196586,
+				["custom_hide"] = "timed",
 				["charges_operator"] = "==",
 				["type"] = "status",
 				["ownOnly"] = true,
@@ -82416,7 +82408,7 @@ WeakAurasSaved = {
 				},
 				["subeventSuffix"] = "_CAST_START",
 				["showOn"] = "showOnCooldown",
-				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 				["unit"] = "player",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -83061,17 +83053,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_pvptalent"] = true,
 				["pvptalent"] = {
 					["single"] = 14,
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_pvptalent"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -83310,14 +83302,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
-						["name"] = "Protected",
-						["countOperator"] = "==",
-						["unit"] = "player",
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["use_spellId"] = true,
+						["countOperator"] = "==",
+						["unit"] = "player",
 						["count"] = "0",
+						["use_spellId"] = true,
+						["name"] = "Protected",
 						["inverse"] = true,
 						["names"] = {
 							"Protected", -- [1]
@@ -83520,14 +83512,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
-						["name"] = "Protected",
-						["countOperator"] = "==",
-						["unit"] = "player",
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["use_spellId"] = true,
+						["countOperator"] = "==",
+						["unit"] = "player",
 						["count"] = "0",
+						["use_spellId"] = true,
+						["name"] = "Protected",
 						["inverse"] = true,
 						["names"] = {
 							"Protected", -- [1]
@@ -83989,20 +83981,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -84011,8 +83996,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -84574,18 +84566,18 @@ WeakAurasSaved = {
 				["spellName"] = 47788,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Guardian Spirit",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -85424,9 +85416,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["icon"] = true,
 			["parent"] = "Paladin_Holy_Extra_Afenar",
 			["cooldownTextEnabled"] = true,
+			["yOffset"] = 0,
 			["text2Containment"] = "INSIDE",
 			["displayIcon"] = "Interface\\Icons\\ability_paladin_blessedmending",
 			["text1Font"] = "Homespun",
@@ -85466,13 +85458,13 @@ WeakAurasSaved = {
 			["text2Point"] = "CENTER",
 			["conditions"] = {
 			},
+			["icon"] = true,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["yOffset"] = 0,
 		},
 		["Halo Holy"] = {
 			["text2Point"] = "CENTER",
@@ -85568,15 +85560,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -86767,7 +86759,7 @@ WeakAurasSaved = {
 			["animation"] = {
 				["start"] = {
 					["translateType"] = "bounce",
-					["scalex"] = 1,
+					["duration_type"] = "seconds",
 					["colorA"] = 1,
 					["colorG"] = 1,
 					["use_translate"] = false,
@@ -86778,10 +86770,10 @@ WeakAurasSaved = {
 					["alpha"] = 0,
 					["y"] = 3,
 					["x"] = 0,
-					["duration"] = ".4",
+					["scalex"] = 1,
 					["rotate"] = 0,
 					["colorB"] = 1,
-					["duration_type"] = "seconds",
+					["duration"] = ".4",
 				},
 				["main"] = {
 					["type"] = "none",
@@ -86850,8 +86842,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -86865,10 +86860,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -87156,9 +87148,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["do_message"] = false,
-					["do_custom"] = false,
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -87582,10 +87574,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -87596,12 +87585,11 @@ WeakAurasSaved = {
 					},
 				},
 				["use_talent"] = true,
-				["use_name"] = false,
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -87610,8 +87598,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -87711,18 +87703,18 @@ WeakAurasSaved = {
 				["spellName"] = 64843,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["use_unit"] = true,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Divine Hymn",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["use_unit"] = true,
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -87900,8 +87892,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -87913,10 +87908,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -88203,15 +88195,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -88522,7 +88514,7 @@ WeakAurasSaved = {
 			["text1Point"] = "CENTER",
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 32,
-			["stickyDuration"] = false,
+			["text2Font"] = "Friz Quadrata TT",
 			["load"] = {
 				["talent2"] = {
 					["multi"] = {
@@ -88573,9 +88565,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Font"] = "Friz Quadrata TT",
-			["xOffset"] = -114.612609863281,
 			["parent"] = "Warlock_Extra_Afenar",
+			["stickyDuration"] = false,
+			["text2Point"] = "CENTER",
 			["text2Containment"] = "INSIDE",
 			["yOffset"] = -213.875610351562,
 			["text1Color"] = {
@@ -88640,7 +88632,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["text2Point"] = "CENTER",
+			["xOffset"] = -114.612609863281,
 		},
 		["Helya - Taint of the Sea"] = {
 			["glow"] = false,
@@ -89362,14 +89354,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
+						["count"] = "0",
+						["countOperator"] = "==",
+						["unit"] = "player",
+						["inverse"] = true,
+						["use_spellId"] = true,
 						["spellIds"] = {
 							229584, -- [1]
 						},
-						["countOperator"] = "==",
-						["unit"] = "player",
-						["count"] = "0",
-						["use_spellId"] = true,
-						["inverse"] = true,
 						["name"] = "Protected",
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Health",
@@ -90162,15 +90154,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -90444,7 +90436,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
@@ -90453,6 +90444,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
 				["role"] = {
 					["multi"] = {
@@ -91881,18 +91873,18 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -92234,16 +92226,29 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["yOffset"] = 20.999877929688,
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
 			["stickyDuration"] = false,
 			["text2Color"] = {
@@ -92261,9 +92266,9 @@ WeakAurasSaved = {
 					["message"] = "Fixate on me!",
 					["do_sound"] = false,
 					["message_type"] = "SAY",
-					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_message"] = false,
 				},
 				["init"] = {
 				},
@@ -92300,20 +92305,7 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["yOffset"] = 20.999877929688,
 		},
 		["Essenz entziehen [Arc]"] = {
 			["glow"] = false,
@@ -92528,18 +92520,18 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Holy Avenger", -- [1]
 				},
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Barkskin",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -92578,8 +92570,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -92591,10 +92586,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -93097,14 +93089,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
@@ -93113,7 +93102,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -93172,9 +93164,9 @@ WeakAurasSaved = {
 				},
 				["main"] = {
 					["y"] = 5,
+					["type"] = "none",
 					["x"] = 0,
 					["translateType"] = "bounce",
-					["type"] = "none",
 					["preset"] = "alphaPulse",
 					["use_translate"] = false,
 					["duration_type"] = "seconds",
@@ -93290,12 +93282,12 @@ WeakAurasSaved = {
 		},
 		["Power of the Archdruid"] = {
 			["init_started"] = 1,
-			["disjunctive"] = "all",
+			["parent"] = "Resto Druid HUD v1.3",
 			["untrigger"] = {
 			},
 			["conditions"] = {
 			},
-			["parent"] = "Resto Druid HUD v1.3",
+			["xOffset"] = -17.9998779296875,
 			["mirror"] = false,
 			["yOffset"] = -288.999969482422,
 			["regionType"] = "texture",
@@ -93307,7 +93299,7 @@ WeakAurasSaved = {
 			},
 			["blendMode"] = "BLEND",
 			["activeTriggerMode"] = -10,
-			["desaturate"] = false,
+			["width"] = 218,
 			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
@@ -93321,7 +93313,7 @@ WeakAurasSaved = {
 			["additional_triggers"] = {
 			},
 			["discrete_rotation"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["desaturate"] = false,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -93375,7 +93367,7 @@ WeakAurasSaved = {
 			},
 			["id"] = "Power of the Archdruid",
 			["frameStrata"] = 2,
-			["width"] = 218,
+			["anchorFrameType"] = "SCREEN",
 			["rotation"] = 275,
 			["selfPoint"] = "CENTER",
 			["numTriggers"] = 1,
@@ -93408,11 +93400,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
@@ -93421,7 +93413,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -93430,7 +93422,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["xOffset"] = -17.9998779296875,
+			["disjunctive"] = "all",
 		},
 		["ST - Burst Debuffs"] = {
 			["glow"] = false,
@@ -93715,17 +93707,31 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["yOffset"] = 20.999877929688,
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Font"] = "Expressway",
 			["text2Point"] = "CENTER",
+			["text2Containment"] = "INSIDE",
+			["yOffset"] = 20.999877929688,
+			["text1Font"] = "Expressway",
+			["actions"] = {
+				["start"] = {
+					["message"] = "Nightmare Blades on me!",
+					["do_sound"] = true,
+					["message_type"] = "SAY",
+					["do_custom"] = false,
+					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
+					["do_message"] = true,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+					["message"] = "BLADES ON ME!",
+					["do_sound"] = false,
+					["message_type"] = "SAY",
+					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_message"] = false,
+					["sound_channel"] = "Dialog",
+				},
+			},
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -93775,25 +93781,11 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["actions"] = {
-				["start"] = {
-					["message"] = "Nightmare Blades on me!",
-					["do_sound"] = true,
-					["message_type"] = "SAY",
-					["do_message"] = true,
-					["do_custom"] = false,
-					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-					["message"] = "BLADES ON ME!",
-					["do_sound"] = false,
-					["message_type"] = "SAY",
-					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
-					["do_message"] = false,
-					["sound_channel"] = "Dialog",
-				},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 		},
 		["DH - Anguish (Absorb)"] = {
@@ -93807,9 +93799,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["do_message"] = false,
 					["do_custom"] = false,
-					["sound"] = "Interface\\AddOns\\ElvUI\\media\\sounds\\warning.ogg",
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -94053,7 +94045,7 @@ WeakAurasSaved = {
 			["xOffset"] = 0,
 			["blendMode"] = "BLEND",
 			["activeTriggerMode"] = -10,
-			["width"] = 32,
+			["desaturate"] = false,
 			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
@@ -94067,7 +94059,7 @@ WeakAurasSaved = {
 			["additional_triggers"] = {
 			},
 			["discrete_rotation"] = 0,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 32,
 			["selfPoint"] = "CENTER",
 			["id"] = "Eff Active: Below 5 Seconds - Symbol",
 			["trigger"] = {
@@ -94101,7 +94093,7 @@ WeakAurasSaved = {
 				["useRem"] = true,
 			},
 			["frameStrata"] = 1,
-			["desaturate"] = false,
+			["anchorFrameType"] = "SCREEN",
 			["rotation"] = 0,
 			["animation"] = {
 				["start"] = {
@@ -94188,9 +94180,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = false,
 					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\sonar.ogg",
 					["do_message"] = false,
-					["do_custom"] = false,
 					["do_sound"] = true,
 				},
 				["finish"] = {
@@ -94620,7 +94612,7 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_class"] = true,
+				["use_name"] = false,
 				["class"] = {
 					["single"] = "WARLOCK",
 					["multi"] = {
@@ -94631,12 +94623,11 @@ WeakAurasSaved = {
 					},
 				},
 				["use_talent"] = true,
-				["use_name"] = false,
-				["role"] = {
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -94645,11 +94636,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
-				["difficulty"] = {
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -95498,7 +95490,7 @@ WeakAurasSaved = {
 			},
 			["crop_x"] = 0.41,
 			["sameTexture"] = true,
-			["stickyDuration"] = false,
+			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "Homespun",
 			["icon"] = true,
@@ -95554,7 +95546,7 @@ WeakAurasSaved = {
 				},
 			},
 			["xOffset"] = 63,
-			["desc"] = "--tr1: if the buff on target  --tr2: creating targets table  --tr3: tracking time to check table cleaning and cleaning it",
+			["stickyDuration"] = false,
 			["fontSize"] = 20,
 			["displayStacks"] = "%c",
 			["startAngle"] = 0,
@@ -95565,7 +95557,7 @@ WeakAurasSaved = {
 			["crop"] = 0.41,
 			["id"] = "Roaring_Blaze_Afreg's",
 			["blendMode"] = "BLEND",
-			["desaturate"] = false,
+			["desc"] = "--tr1: if the buff on target  --tr2: creating targets table  --tr3: tracking time to check table cleaning and cleaning it",
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["init_completed"] = 1,
 			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
@@ -95652,9 +95644,9 @@ WeakAurasSaved = {
 				},
 				["finish"] = {
 					["do_sound"] = false,
+					["do_custom"] = false,
 					["sound"] = "Sound\\Spells\\SimonGame_Visual_GameStart.ogg",
 					["do_message"] = false,
-					["do_custom"] = false,
 					["sound_channel"] = "Dialog",
 				},
 				["init"] = {
@@ -96226,15 +96218,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -96656,27 +96648,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["do_custom"] = false,
-					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
-					["do_sound"] = false,
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -96726,7 +96708,17 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = false,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["do_custom"] = false,
+					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
+					["do_sound"] = false,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["Paralleldimension [Arc]"] = {
 			["glow"] = false,
@@ -96995,14 +96987,13 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text1Containment"] = "OUTSIDE",
 			["actions"] = {
 				["start"] = {
 					["do_sound"] = false,
 					["message_type"] = "SAY",
-					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Interface\\AddOns\\WeakAuras\\Media\\Sounds\\AirHorn.ogg",
+					["do_message"] = false,
 				},
 				["init"] = {
 				},
@@ -97015,15 +97006,11 @@ WeakAurasSaved = {
 					["sound_channel"] = "Dialog",
 				},
 			},
-			["text2Containment"] = "INSIDE",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["text1Font"] = "Expressway",
 			["text2Point"] = "CENTER",
+			["text2Containment"] = "INSIDE",
+			["text1Containment"] = "OUTSIDE",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -97073,7 +97060,12 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Elerethe - Raking Talons"] = {
 			["glow"] = false,
@@ -97588,8 +97580,8 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["custom_hide"] = "timed",
 			},
+			["yOffset"] = 20.999877929688,
 			["parent"] = "T19 - Emerald Nightmare",
-			["icon"] = true,
 			["desaturate"] = false,
 			["progressPrecision"] = 4,
 			["font"] = "Expressway",
@@ -97716,7 +97708,7 @@ WeakAurasSaved = {
 			["xOffset"] = -151.99987792969,
 			["displayIcon"] = 132358,
 			["stacksPoint"] = "TOP",
-			["yOffset"] = 20.999877929688,
+			["icon"] = true,
 		},
 		["Swiftmend 2"] = {
 			["text2Point"] = "CENTER",
@@ -97820,20 +97812,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["use_class"] = true,
-				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -97976,7 +97968,10 @@ WeakAurasSaved = {
 						true, -- [1]
 					},
 				},
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -97987,15 +97982,8 @@ WeakAurasSaved = {
 					},
 				},
 				["use_talent"] = true,
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["role"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -98004,8 +97992,12 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
-				["use_class"] = true,
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -99001,8 +98993,15 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Mythic+ Affixes ",
+			["disjunctive"] = "all",
 			["text2Containment"] = "INSIDE",
+			["parent"] = "Mythic+ Affixes ",
+			["text1Color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["actions"] = {
 				["start"] = {
 				},
@@ -99011,29 +99010,7 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["text1Color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["disjunctive"] = "all",
-			["animation"] = {
-				["start"] = {
-					["preset"] = "bounceDecay",
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "bounce",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["xOffset"] = 0,
 			["text2Color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -99067,8 +99044,23 @@ WeakAurasSaved = {
 			},
 			["conditions"] = {
 			},
-			["xOffset"] = 0,
 			["text1Containment"] = "INSIDE",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "bounceDecay",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "bounce",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 		},
 		["Soul_Harvest"] = {
 			["glow"] = false,
@@ -99679,18 +99671,18 @@ WeakAurasSaved = {
 				["spellName"] = 208253,
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Flourish", -- [1]
+				},
 				["realSpellName"] = "Essence of G'Hanir",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Flourish", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -99725,14 +99717,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
@@ -99741,7 +99730,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -99850,10 +99842,12 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "197556",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["duration"] = "2",
 				["event"] = "Combat Log",
-				["use_unit"] = true,
+				["names"] = {
+					"Unerring Shear", -- [1]
+				},
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["spellIds"] = {
@@ -99862,9 +99856,7 @@ WeakAurasSaved = {
 				["subeventSuffix"] = "_CAST_START",
 				["fullscan"] = true,
 				["name"] = "Ravenous Leap",
-				["names"] = {
-					"Unerring Shear", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
 			},
 			["text1Containment"] = "OUTSIDE",
@@ -100894,18 +100886,18 @@ WeakAurasSaved = {
 				["spellName"] = 19236,
 				["subeventSuffix"] = "_CAST_START",
 				["use_showOn"] = true,
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["realSpellName"] = "Desperate Prayer",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["use_unit"] = true,
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
@@ -101654,15 +101646,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -101671,8 +101656,15 @@ WeakAurasSaved = {
 					},
 				},
 				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = false,
-				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -102501,10 +102493,12 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["spellId"] = "200404",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["duration"] = "6",
 				["event"] = "Combat Log",
-				["use_unit"] = true,
+				["names"] = {
+					"Unerring Shear", -- [1]
+				},
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["name"] = "Magma Wave",
@@ -102513,9 +102507,7 @@ WeakAurasSaved = {
 				["spellIds"] = {
 					198635, -- [1]
 				},
-				["names"] = {
-					"Unerring Shear", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
 			},
 			["text1Containment"] = "OUTSIDE",
@@ -102667,8 +102659,8 @@ WeakAurasSaved = {
 					"Сверхновая", -- [2]
 				},
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
 				["spellName"] = 17962,
+				["custom_hide"] = "timed",
 				["charges_operator"] = ">=",
 				["type"] = "status",
 				["use_charges"] = false,
@@ -102684,7 +102676,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["showOn"] = "showAlways",
 				["subeventSuffix"] = "_CAST_START",
-				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = false,
@@ -103020,13 +103012,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["stack_info"] = "count",
 				["rem"] = "0",
+				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
+				["duration"] = "30",
+				["name_info"] = "aura",
 				["names"] = {
 					"Lifebloom", -- [1]
 				},
-				["subeventPrefix"] = "SPELL",
-				["use_totemName"] = true,
-				["name_info"] = "aura",
-				["use_unit"] = true,
 				["ownOnly"] = true,
 				["use_spell"] = true,
 				["spellIds"] = {
@@ -103050,8 +103042,8 @@ WeakAurasSaved = {
 				["use_castType"] = false,
 				["remOperator"] = "<",
 				["use_specific_unit"] = false,
+				["use_totemName"] = true,
 				["use_inverse"] = true,
-				["duration"] = "30",
 			},
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
@@ -103195,18 +103187,18 @@ WeakAurasSaved = {
 				["spellName"] = 29166,
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Innervate",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -103245,11 +103237,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
@@ -103258,7 +103250,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -103748,9 +103740,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["use_talent"] = false,
 				["use_name"] = false,
+				["use_talent"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -103768,10 +103763,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -104445,17 +104437,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
 				},
+				["use_pvptalent"] = true,
 				["pvptalent"] = {
 					["single"] = 17,
 					["multi"] = {
 					},
 				},
-				["use_pvptalent"] = true,
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
@@ -104574,8 +104566,8 @@ WeakAurasSaved = {
 				["sourceUnit"] = "Hyrja",
 				["fullscan"] = true,
 			},
+			["yOffset"] = 20.999877929688,
 			["parent"] = "T19 - Trial of Valor",
-			["icon"] = true,
 			["desaturate"] = false,
 			["progressPrecision"] = 4,
 			["font"] = "Expressway",
@@ -104704,7 +104696,7 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["displayIcon"] = 612968,
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["icon"] = true,
 		},
 		["Necrotic Self"] = {
 			["glow"] = false,
@@ -104789,9 +104781,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
-			["parent"] = "Mythic+ Affixes ",
-			["text2Containment"] = "INSIDE",
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -104806,6 +104795,9 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["text2Point"] = "CENTER",
+			["text2Containment"] = "INSIDE",
+			["parent"] = "Mythic+ Affixes ",
 			["text1Font"] = "Friz Quadrata TT",
 			["text1Color"] = {
 				1, -- [1]
@@ -105531,8 +105523,8 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["custom_hide"] = "timed",
 			},
+			["yOffset"] = 20.999877929688,
 			["parent"] = "T19 - Emerald Nightmare",
-			["icon"] = true,
 			["desaturate"] = false,
 			["progressPrecision"] = 4,
 			["font"] = "Expressway",
@@ -105659,7 +105651,7 @@ WeakAurasSaved = {
 			["text1Point"] = "BOTTOMRIGHT",
 			["displayIcon"] = 136134,
 			["cooldown"] = false,
-			["yOffset"] = 20.999877929688,
+			["icon"] = true,
 		},
 		["ST - Chilled/Frozen"] = {
 			["glow"] = false,
@@ -106068,9 +106060,9 @@ WeakAurasSaved = {
 				["start"] = {
 					["do_sound"] = false,
 					["sound_kit_id"] = "",
-					["do_custom"] = false,
 					["do_message"] = false,
 					["sound"] = " KitID",
+					["do_custom"] = false,
 				},
 				["finish"] = {
 				},
@@ -106857,16 +106849,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["duration"] = "12",
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["ownOnly"] = true,
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["custom_hide"] = "timed",
 				["use_sourceUnit"] = false,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -106880,12 +106869,15 @@ WeakAurasSaved = {
 				["sourceName"] = "Draemii",
 				["use_name"] = true,
 				["use_spellId"] = false,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_specific_sourceunit"] = true,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["displayTextLeft"] = "%sourceName",
@@ -106904,19 +106896,19 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["height"] = 18,
+			["timer"] = true,
 			["timerFlags"] = "None",
 			["icon"] = true,
 			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["width"] = 100,
+			["displayStacks"] = "%c",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["width"] = 100,
-			["displayStacks"] = "%c",
-			["useAdjustededMax"] = false,
 			["sparkWidth"] = 10,
 			["id"] = "Shaman",
 			["border"] = false,
@@ -106948,11 +106940,10 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["timer"] = true,
+			["height"] = 18,
 			["auto"] = true,
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -108093,15 +108084,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -108309,17 +108300,17 @@ WeakAurasSaved = {
 					["colorG"] = 1,
 					["use_translate"] = false,
 					["type"] = "none",
-					["colorA"] = 1,
+					["duration"] = "0.5",
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["preset"] = "alphaPulse",
 					["alpha"] = 0,
 					["y"] = 1,
 					["x"] = 1,
-					["duration"] = "0.5",
 					["scaley"] = 1,
-					["rotate"] = 0,
-					["colorR"] = 1,
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorA"] = 1,
+					["colorR"] = 1,
 				},
 				["finish"] = {
 					["preset"] = "fade",
@@ -108373,9 +108364,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["use_talent"] = false,
 				["use_class"] = true,
+				["use_talent"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
@@ -108393,10 +108387,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -111315,14 +111306,14 @@ WeakAurasSaved = {
 						["spellId"] = 229584,
 						["subeventSuffix"] = "_CAST_START",
 						["fullscan"] = true,
-						["inverse"] = true,
+						["count"] = "0",
 						["countOperator"] = "==",
 						["unit"] = "player",
-						["count"] = "0",
-						["use_spellId"] = true,
 						["spellIds"] = {
 							229584, -- [1]
 						},
+						["use_spellId"] = true,
+						["inverse"] = true,
 						["name"] = "Protected",
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Health",
@@ -111624,27 +111615,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "CENTER",
 			["text1Containment"] = "OUTSIDE",
-			["text2Containment"] = "INSIDE",
-			["actions"] = {
-				["start"] = {
-					["do_custom"] = false,
-					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
-					["do_sound"] = false,
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["text1Font"] = "Expressway",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["text2Containment"] = "INSIDE",
+			["text2Point"] = "CENTER",
+			["text1Font"] = "Expressway",
+			["yOffset"] = 20.999877929688,
 			["stickyDuration"] = false,
 			["text2Color"] = {
 				1, -- [1]
@@ -111694,7 +111675,17 @@ WeakAurasSaved = {
 			["conditions"] = {
 			},
 			["cooldown"] = true,
-			["yOffset"] = 20.999877929688,
+			["actions"] = {
+				["start"] = {
+					["do_custom"] = false,
+					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
+					["do_sound"] = false,
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["Fluch der Hoffnung [Maw]"] = {
 			["glow"] = false,
@@ -112087,18 +112078,18 @@ WeakAurasSaved = {
 				["spellName"] = 108238,
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Renewal",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -112140,17 +112131,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["use_spec"] = true,
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
 				["use_class"] = true,
-				["pvptalent"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -112589,9 +112580,9 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_custom"] = false,
 					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\wilhelm.ogg",
 					["do_message"] = false,
-					["do_custom"] = false,
 					["do_sound"] = false,
 				},
 				["finish"] = {
@@ -113011,18 +113002,18 @@ WeakAurasSaved = {
 				["spellName"] = 197721,
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Flourish",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -113059,11 +113050,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["use_spec"] = true,
+				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
@@ -113073,7 +113064,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -113926,20 +113917,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["use_class"] = true,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -113948,8 +113932,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = false,
-				["use_class"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -114489,16 +114480,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["duration"] = "45",
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["ownOnly"] = true,
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["spellName"] = "Silence",
 				["use_sourceUnit"] = false,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -114512,12 +114500,15 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["use_name"] = true,
 				["use_spellId"] = false,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_specific_sourceunit"] = true,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["zoom"] = 0,
@@ -114539,12 +114530,7 @@ WeakAurasSaved = {
 			["timerFlags"] = "None",
 			["auto"] = true,
 			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["useAdjustededMax"] = false,
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["displayStacks"] = "%c",
 			["width"] = 100,
@@ -114579,7 +114565,12 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["useAdjustededMax"] = false,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
 			["backgroundColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -114588,7 +114579,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -114821,36 +114811,36 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["rem"] = "5",
 				["ownOnly"] = true,
-				["unit"] = "player",
 				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["use_showgcd"] = true,
 				["names"] = {
 					"Dark Pact", -- [1]
 				},
-				["count"] = "9",
+				["spellIds"] = {
+					108416, -- [1]
+				},
 				["showOn"] = "showAlways",
-				["debuffType"] = "HELPFUL",
-				["health"] = "1",
-				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
-				["unevent"] = "auto",
+				["count"] = "9",
+				["health_operator"] = ">",
+				["spellName"] = 196447,
+				["subeventSuffix"] = "_CAST_START",
 				["type"] = "status",
 				["use_health"] = true,
-				["health_operator"] = ">",
+				["unevent"] = "auto",
 				["use_showOn"] = true,
 				["percenthealth"] = "35",
 				["event"] = "Cooldown Progress (Spell)",
 				["countOperator"] = "<",
 				["realSpellName"] = "Channel Demonfire",
 				["use_spellName"] = true,
-				["spellIds"] = {
-					108416, -- [1]
-				},
-				["spellName"] = 196447,
+				["health"] = "1",
+				["debuffType"] = "HELPFUL",
 				["remOperator"] = ">=",
 				["use_percenthealth"] = true,
 				["percenthealth_operator"] = "<=",
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 			},
 			["desaturate"] = true,
 			["progressPrecision"] = 0,
@@ -114897,7 +114887,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
 					["multi"] = {
 					},
@@ -114906,6 +114895,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["use_combat"] = true,
 				["use_realm"] = false,
 				["size"] = {
@@ -115200,12 +115190,12 @@ WeakAurasSaved = {
 				["event"] = "Chat Message",
 				["customStacks"] = "function()\n    return aura_env.count;\nend",
 				["customDuration"] = "function()\n    if aura_env.tank then\n        if UnitDebuff(aura_env.tank, aura_env.ability)\n        then\n            local dur = select(6, UnitDebuff(aura_env.tank, aura_env.ability))\n            local exp = select(7, UnitDebuff(aura_env.tank, aura_env.ability))\n            return dur, exp\n        end\n    end    \n    \nend",
-				["spellIds"] = {
-				},
 				["custom"] = "function()    \n    if(aura_env.tank ~= nil) then        \n        \n        if UnitDebuff(aura_env.tank, aura_env.ability) then \n            local _,_,_,count = UnitDebuff(aura_env.tank, aura_env.ability);\n            aura_env.count = count;\n            WeakAuras.ScanEvents(\"BATH_NECROTIC_APPLIED\", aura_env.count, aura_env.tank);\n            return true;       \n        end\n    end\n    \n    \nend\n\n\n\n\n\n",
+				["events"] = "UNIT_AURA",
 				["use_specific_unit"] = false,
 				["custom_type"] = "event",
-				["events"] = "UNIT_AURA",
+				["spellIds"] = {
+				},
 				["custom_hide"] = "custom",
 				["unit"] = "group",
 			},
@@ -115443,14 +115433,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
-					["single"] = 15,
+				["use_spec"] = true,
+				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["use_pvptalent"] = true,
-				["faction"] = {
+				["pvptalent"] = {
+					["single"] = 15,
 					["multi"] = {
 					},
 				},
@@ -115954,10 +115944,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -115967,8 +115954,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -116052,12 +116042,12 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["spellId"] = "212030",
 				["unevent"] = "timed",
-				["subeventPrefix"] = "SPELL",
-				["duration"] = "3",
-				["event"] = "Combat Log",
 				["names"] = {
 					"Unerring Shear", -- [1]
 				},
+				["duration"] = "3",
+				["event"] = "Combat Log",
+				["use_unit"] = true,
 				["unit"] = "player",
 				["use_spellId"] = true,
 				["name"] = "Shadow Slash",
@@ -116066,7 +116056,7 @@ WeakAurasSaved = {
 				["spellIds"] = {
 					198635, -- [1]
 				},
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HARMFUL",
 			},
 			["actions"] = {
@@ -116981,17 +116971,17 @@ WeakAurasSaved = {
 					},
 				},
 				["use_class"] = true,
-				["use_pvptalent"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["pvptalent"] = {
 					["single"] = 17,
 					["multi"] = {
 					},
 				},
+				["use_pvptalent"] = true,
 				["use_spec"] = true,
-				["faction"] = {
-					["multi"] = {
-					},
-				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -117297,10 +117287,10 @@ WeakAurasSaved = {
 			},
 			["desaturate"] = false,
 			["text1Point"] = "BOTTOMRIGHT",
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
 			["text2FontFlags"] = "OUTLINE",
 			["height"] = 60,
-			["selfPoint"] = "CENTER",
+			["text2Point"] = "BOTTOM",
 			["load"] = {
 				["spec"] = {
 					["multi"] = {
@@ -117349,7 +117339,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["text2Point"] = "BOTTOM",
+			["stickyDuration"] = false,
 			["conditions"] = {
 			},
 			["text1Containment"] = "INSIDE",
@@ -117480,16 +117470,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -117497,12 +117483,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_name"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -117604,10 +117594,10 @@ WeakAurasSaved = {
 				},
 				["remaining"] = "1.5",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
+				["custom_hide"] = "timed",
 				["type"] = "status",
 				["showOn"] = "showOnCooldown",
-				["custom_hide"] = "timed",
+				["spellName"] = 17962,
 				["charges_operator"] = "==",
 				["use_remaining"] = false,
 				["ownOnly"] = true,
@@ -117622,7 +117612,7 @@ WeakAurasSaved = {
 				},
 				["subeventSuffix"] = "_CAST_START",
 				["remOperator"] = ">=",
-				["spellName"] = 17962,
+				["debuffType"] = "HELPFUL",
 				["unit"] = "player",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -117786,8 +117776,8 @@ WeakAurasSaved = {
 				["specificUnit"] = "Soul Effigy",
 				["use_unit"] = true,
 				["unit"] = "target",
-				["custom_hide"] = "timed",
 				["spellName"] = 205180,
+				["debuffType"] = "HARMFUL",
 				["ownOnly"] = true,
 				["type"] = "status",
 				["subeventSuffix"] = "_CAST_SUCCESS",
@@ -117803,7 +117793,7 @@ WeakAurasSaved = {
 				},
 				["use_sourceUnit"] = true,
 				["showOn"] = "showAlways",
-				["debuffType"] = "HARMFUL",
+				["custom_hide"] = "timed",
 				["sourceUnit"] = "player",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -118811,18 +118801,18 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -119069,9 +119059,9 @@ WeakAurasSaved = {
 				["start"] = {
 					["do_sound"] = false,
 					["message_type"] = "SAY",
-					["do_message"] = false,
 					["do_custom"] = false,
 					["sound"] = "Sound\\Event Sounds\\Event_wardrum_ogre.ogg",
+					["do_message"] = false,
 				},
 				["init"] = {
 				},
@@ -120147,19 +120137,19 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["debuffType"] = "HELPFUL",
 				["type"] = "custom",
-				["unevent"] = "timed",
 				["subeventSuffix"] = "_CAST_SUCCESS",
+				["custom_type"] = "status",
 				["spellName"] = "Unstable Affliction",
+				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
+				["event"] = "Combat Log",
 				["spellIds"] = {
 				},
-				["event"] = "Combat Log",
-				["custom"] = "function(event, ...)\n    \n    -- resetting everything before we go through the iterator again\n    aura_env.count = 0\n    aura_env.test = \"\"\n    aura_env.duration = 0\n    aura_env.expires = 0\n    aura_env.totalDamage = 0\n    \n    -- main iterator. we're scanning all the debuffs on the target to find the ones we want. \n    -- we do this because there's multiple debuffs all called \"Unstable Affliction\"\n    -- with different spell IDs. this way we can identify them specifically. \n    for i = 1,40 do\n        \n        -- get the info from the debuff\n        local name,_,_,count,_,duration,expires,caster,_,_,spellID = UnitDebuff(\"target\", i, \"PLAYER\")\n        \n        if aura_env.UAIDs[spellID]  -- if the ID is in our table of UA IDs\n        and caster == \"player\"  -- and if it was cast by the player, nobody else\n        then\n            \n            aura_env.count = aura_env.count + 1 -- then we know we have a UA and can count it\n            \n            -- next we check for which of the UAs that are up is gonna last the longest\n            -- and use that info for the WA duration info\n            if expires > aura_env.expires then\n                aura_env.expires = expires\n                aura_env.duration = duration \n            end\n            \n            -- this is  stealing the WeakAuras source code to do soemthing that would\n            -- be difficult to do myself. \n            -- WeakAuras.GetAuraTooltipInfo() checks the debuff tooltip for the \n            -- DoT tick damage info\n            local _,_,ttInfo = WeakAuras.GetAuraTooltipInfo(\"target\", i, \"HARMFUL\")\n            \n            local remaining = (expires - GetTime()) -- calculate remaining debuff time\n            \n            local tick_time = duration / 4 -- calculate the time between ticks (altered by haste)\n            local ticks_remaining = floor(remaining / tick_time) + 1 -- calculate how many ticks are left\n            local damage_remaining = ticks_remaining * ttInfo -- multiple ticks by tick damage\n            \n            aura_env.totalDamage = aura_env.totalDamage + damage_remaining -- add this debuff's damage to any others that exist already\n            \n            \n        end\n    end\n    -- put the output in a format to be displayed\n    aura_env.display_damage = aura_env.shortenNumber(aura_env.totalDamage)\n    \n    --if there's any UAs up then we can return true and make the WA show\n    if aura_env.count > 0 then \n        return true\n    end\nend",
 				["customDuration"] = "function()\n    aura_env.timeRemaining = floor(aura_env.expires - GetTime())\n    return aura_env.duration, aura_env.expires\nend\n\n\n\n\n\n\n\n\n\n\n",
 				["use_spellName"] = true,
-				["events"] = "COMBAT_LOG_EVENT_UNFILTERED",
+				["custom"] = "function(event, ...)\n    \n    -- resetting everything before we go through the iterator again\n    aura_env.count = 0\n    aura_env.test = \"\"\n    aura_env.duration = 0\n    aura_env.expires = 0\n    aura_env.totalDamage = 0\n    \n    -- main iterator. we're scanning all the debuffs on the target to find the ones we want. \n    -- we do this because there's multiple debuffs all called \"Unstable Affliction\"\n    -- with different spell IDs. this way we can identify them specifically. \n    for i = 1,40 do\n        \n        -- get the info from the debuff\n        local name,_,_,count,_,duration,expires,caster,_,_,spellID = UnitDebuff(\"target\", i, \"PLAYER\")\n        \n        if aura_env.UAIDs[spellID]  -- if the ID is in our table of UA IDs\n        and caster == \"player\"  -- and if it was cast by the player, nobody else\n        then\n            \n            aura_env.count = aura_env.count + 1 -- then we know we have a UA and can count it\n            \n            -- next we check for which of the UAs that are up is gonna last the longest\n            -- and use that info for the WA duration info\n            if expires > aura_env.expires then\n                aura_env.expires = expires\n                aura_env.duration = duration \n            end\n            \n            -- this is  stealing the WeakAuras source code to do soemthing that would\n            -- be difficult to do myself. \n            -- WeakAuras.GetAuraTooltipInfo() checks the debuff tooltip for the \n            -- DoT tick damage info\n            local _,_,ttInfo = WeakAuras.GetAuraTooltipInfo(\"target\", i, \"HARMFUL\")\n            \n            local remaining = (expires - GetTime()) -- calculate remaining debuff time\n            \n            local tick_time = duration / 4 -- calculate the time between ticks (altered by haste)\n            local ticks_remaining = floor(remaining / tick_time) + 1 -- calculate how many ticks are left\n            local damage_remaining = ticks_remaining * ttInfo -- multiple ticks by tick damage\n            \n            aura_env.totalDamage = aura_env.totalDamage + damage_remaining -- add this debuff's damage to any others that exist already\n            \n            \n        end\n    end\n    -- put the output in a format to be displayed\n    aura_env.display_damage = aura_env.shortenNumber(aura_env.totalDamage)\n    \n    --if there's any UAs up then we can return true and make the WA show\n    if aura_env.count > 0 then \n        return true\n    end\nend",
 				["use_sourceUnit"] = true,
 				["check"] = "update",
-				["custom_type"] = "status",
+				["unevent"] = "timed",
 				["sourceUnit"] = "player",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -121256,12 +121246,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
 				["use_class"] = true,
+				["use_talent"] = true,
+				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
@@ -121279,7 +121266,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -122258,10 +122248,7 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["use_talent"] = true,
 				["difficulty"] = {
 					["multi"] = {
@@ -122271,8 +122258,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -123240,17 +123230,17 @@ WeakAurasSaved = {
 					["use_translate"] = false,
 					["use_alpha"] = false,
 					["type"] = "preset",
-					["translateType"] = "straightTranslate",
+					["duration"] = "",
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      return startX + (progress * deltaX), startY + (progress * deltaY)\n    end\n  ",
-					["scaley"] = 1,
+					["preset"] = "fade",
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 0,
-					["duration"] = "",
 					["duration_type"] = "seconds",
+					["scaley"] = 1,
 					["rotate"] = 0,
+					["translateType"] = "straightTranslate",
 					["colorA"] = 1,
-					["preset"] = "fade",
 				},
 			},
 			["trigger"] = {
@@ -123480,17 +123470,17 @@ WeakAurasSaved = {
 					["use_translate"] = false,
 					["use_alpha"] = false,
 					["type"] = "preset",
-					["colorR"] = 1,
+					["duration"] = "",
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      return startX + (progress * deltaX), startY + (progress * deltaY)\n    end\n  ",
-					["preset"] = "fade",
+					["scaley"] = 1,
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 0,
-					["duration"] = "",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 					["rotate"] = 0,
+					["colorR"] = 1,
 					["colorA"] = 1,
-					["scaley"] = 1,
 				},
 			},
 			["trigger"] = {
@@ -123853,20 +123843,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_name"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
@@ -123875,7 +123864,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
+				["use_spec"] = true,
+				["use_name"] = false,
 				["class"] = {
 					["single"] = "PALADIN",
 					["multi"] = {
@@ -124259,11 +124249,10 @@ WeakAurasSaved = {
 				["duration"] = "24",
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["spellName"] = "Counter Shot",
 				["use_specific_sourceunit"] = true,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -124277,7 +124266,8 @@ WeakAurasSaved = {
 				["sourceName"] = "",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_sourceUnit"] = false,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
@@ -124311,15 +124301,15 @@ WeakAurasSaved = {
 			["timerFlags"] = "None",
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["width"] = 100,
+			["displayStacks"] = "%c",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["width"] = 100,
-			["displayStacks"] = "%c",
-			["useAdjustededMax"] = false,
 			["sparkWidth"] = 10,
 			["id"] = "Hunter",
 			["border"] = false,
@@ -124378,7 +124368,6 @@ WeakAurasSaved = {
 			["textSize"] = 10,
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -125240,16 +125229,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["spellId"] = "",
 				["ownOnly"] = true,
-				["names"] = {
-					"Greater Draenic Intellect Flask", -- [1]
-				},
 				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["duration"] = "90",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["debuffType"] = "HELPFUL",
 				["use_specific_sourceunit"] = true,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["spellName"] = "Arcane Torrent",
@@ -125263,12 +125249,15 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["use_name"] = true,
 				["use_spellId"] = false,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_sourceUnit"] = false,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
 				["sourceUnit"] = "Benzikura",
-				["unit"] = "player",
+				["names"] = {
+					"Greater Draenic Intellect Flask", -- [1]
+				},
 			},
 			["text"] = true,
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -125339,7 +125328,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["borderOffset"] = 5,
@@ -125380,18 +125368,18 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["unevent"] = "auto",
 				["use_showOn"] = true,
-				["subeventPrefix"] = "SPELL",
-				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Holy Avenger", -- [1]
+				},
 				["realSpellName"] = "Wild Growth",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["unit"] = "player",
 				["showOn"] = "showAlways",
-				["names"] = {
-					"Holy Avenger", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
@@ -125433,8 +125421,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
 				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -125443,10 +125434,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_class"] = true,
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
+				["use_spec"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -125552,17 +125540,17 @@ WeakAurasSaved = {
 					["colorG"] = 1,
 					["use_translate"] = false,
 					["type"] = "none",
-					["colorA"] = 1,
+					["duration"] = "0.5",
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n      local angle = (progress + 0.25) * 2 * math.pi\n      return startX + (math.cos(angle) * deltaX * math.cos(angle*2)), startY + (math.abs(math.cos(angle)) * deltaY * math.sin(angle*2))\n    end\n  ",
 					["preset"] = "alphaPulse",
 					["alpha"] = 0,
 					["y"] = -1,
 					["x"] = -1,
-					["duration"] = "0.5",
 					["scaley"] = 1,
-					["rotate"] = 0,
-					["translateType"] = "spiralandpulse",
 					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["colorA"] = 1,
+					["translateType"] = "spiralandpulse",
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -126028,11 +126016,10 @@ WeakAurasSaved = {
 				["ownOnly"] = true,
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["spellName"] = "Counterspell",
 				["use_specific_sourceunit"] = true,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -126046,7 +126033,8 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_sourceUnit"] = false,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
@@ -126066,12 +126054,7 @@ WeakAurasSaved = {
 			["timerFlags"] = "None",
 			["auto"] = true,
 			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["useAdjustededMax"] = false,
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["displayStacks"] = "%c",
 			["width"] = 100,
@@ -126106,7 +126089,12 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["useAdjustededMax"] = false,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
 			["backgroundColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -126115,7 +126103,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -126440,11 +126427,10 @@ WeakAurasSaved = {
 				["ownOnly"] = true,
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
-				["inverse"] = true,
+				["name"] = "Flask of the warm sun ",
 				["spellName"] = "Rebuke",
 				["use_specific_sourceunit"] = true,
-				["spellIds"] = {
-				},
+				["inverse"] = true,
 				["use_destName"] = false,
 				["use_cloneId"] = true,
 				["debuffType"] = "HELPFUL",
@@ -126458,7 +126444,8 @@ WeakAurasSaved = {
 				["type"] = "event",
 				["use_name"] = true,
 				["use_spellName"] = true,
-				["name"] = "Flask of the warm sun ",
+				["spellIds"] = {
+				},
 				["use_sourceUnit"] = false,
 				["use_destunit"] = false,
 				["use_destUnit"] = false,
@@ -126478,12 +126465,7 @@ WeakAurasSaved = {
 			["timerFlags"] = "None",
 			["auto"] = true,
 			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["useAdjustededMax"] = false,
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["displayStacks"] = "%c",
 			["width"] = 100,
@@ -126518,7 +126500,12 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["useAdjustededMax"] = false,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
 			["backgroundColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -126527,7 +126514,6 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["sparkDesature"] = false,
-			["init_started"] = 1,
 			["conditions"] = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
@@ -126727,6 +126713,5 @@ WeakAurasSaved = {
 		["height"] = 684.555541992188,
 		["yOffset"] = -181.99951171875,
 	},
-	["login_squelch_time"] = 10,
 	["editor_theme"] = "Monokai",
 }

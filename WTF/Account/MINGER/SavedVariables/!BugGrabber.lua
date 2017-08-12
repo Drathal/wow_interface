@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 1788,
+	["session"] = 1796,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -47,5 +47,13 @@ BugGrabberDB = {
 			["session"] = 1787,
 			["counter"] = 1,
 		}, -- [6]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:41: attempt to perform arithmetic on field 'delay' (a nil value)",
+			["time"] = "2017/08/12 14:17:50",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n}\nelapsed = 0.011000000871718\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to perform arithmetic on field 'delay' (a nil value)\"\n",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:41: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:40>",
+			["session"] = 1790,
+			["counter"] = 449,
+		}, -- [7]
 	},
 }

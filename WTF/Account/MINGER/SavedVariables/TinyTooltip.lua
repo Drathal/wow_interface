@@ -100,6 +100,9 @@ BigTipDB = {
 					"role", -- [7]
 					"moveSpeed", -- [8]
 				}, -- [3]
+				{
+					"zone", -- [1]
+				}, -- [4]
 				["guildRank"] = {
 					["enable"] = true,
 					["color"] = "cc88ff",
@@ -116,6 +119,12 @@ BigTipDB = {
 					["enable"] = false,
 					["color"] = "cc88ff",
 					["wildcard"] = "(%s",
+					["filter"] = "none",
+				},
+				["zone"] = {
+					["enable"] = true,
+					["color"] = "ffffff",
+					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
 				["statusDC"] = {

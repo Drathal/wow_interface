@@ -12,8 +12,12 @@ local UnitXP,UnitXPMax = UnitXP,UnitXPMax;
 local GetNumFriends, GetFriendInfo = GetNumFriends, GetFriendInfo;
 local BNGetNumFriends,BNGetFriendInfo,BNGetNumFriendGameAccounts,BNGetFriendGameAccountInfo = BNGetNumFriends,BNGetFriendInfo,BNGetNumFriendGameAccounts,BNGetFriendGameAccountInfo;
 local SendAddonMessage = SendAddonMessage;
-local wipe,pairs = wipe,pairs;
+local GetFramerate = GetFramerate
+local wipe, pairs = wipe, pairs;
 local IsInGuild,GetNumGuildMembers,GetGuildRosterInfo = IsInGuild,GetNumGuildMembers,GetGuildRosterInfo;
+local f = CreateFrame('Frame');
+local min = math.min;
+local max = math.max;
 
 local marks = {};
 local friends = {};
@@ -34,6 +38,59 @@ local defaults = {
   height = 16
 };
 
+f.delay = 1
+f:SetScript('OnUpdate', function(self, elapsed)
+	self.delay = self.delay - elapsed;	
+	if self.delay > 0 then return end
+	self.delay = 0.05;
+
+	local limit = 30/GetFramerate()
+
+	XpFlag.animateBar(playerBar, limit)
+
+	for _, mark in pairs(marks) do
+		if mark and mark.to then
+			XpFlag.animateMark(mark, limit)
+		end
+	end	
+end)
+
+function XpFlag.animateBar(self, limit)
+
+	if not self then return end
+	if not self.to then return end	
+			
+	local cur = self:GetWidth()
+	local new = cur + min((self.to-cur)/3, max(self.to-cur, limit))
+
+	if cur == self.to or abs(new - self.to) < 2 then
+		new = self.to
+		self.to = nil
+	end
+
+	self:SetWidth(new);
+
+end
+
+function XpFlag.animateMark(self, limit)
+
+	if not self then return end
+	if not self.to then return end	
+			
+	local cur = self.cur or 0
+	local new = cur + min((self.to-cur)/3, max(self.to-cur, limit))
+	
+	if cur == self.to or abs(new - self.to) < 2 then
+		new = self.to
+		self.to = nil
+	end
+
+	self:ClearAllPoints();	
+	self:SetPoint("TOPLEFT", _G['UIParent'], new, 0);
+	self.cur = new		
+
+end
+
 XpFlag.tooltip = CreateFrame("Frame");
 XpFlag.tooltip:Hide();
 XpFlag.tooltip.delay = 0.25;
@@ -41,7 +98,6 @@ XpFlag.tooltip:SetScript("OnUpdate",function(self,elapsed)
 	XpFlag.tooltip.delay = XpFlag.tooltip.delay - elapsed;
 	if XpFlag.tooltip.delay <= 0 then
 		for k,v in pairs(marks) do
-
 			if v:IsMouseOver() and v.class and v.name and v.level then
 
 				GameTooltip:ClearLines();
@@ -81,7 +137,8 @@ function XpFlag.CreateBar(value, maxvalue)
 	playerBar = CreateFrame("Frame",'XPFLag-Playerbar');
 	playerBar.texture = playerBar:CreateTexture(nil,"OVERLAY");  
 	playerBar:SetHeight(1);
-	playerBar:SetWidth((maxWidth * value/maxvalue) + 8);
+	playerBar:SetWidth(0);
+	playerBar.to = (maxWidth * value/maxvalue) + 8
 	playerBar:SetParent(_G['UIParent']);
 	playerBar.texture:SetAllPoints(playerBar);
 	playerBar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0);	
@@ -97,7 +154,6 @@ function XpFlag.CreateBar(value, maxvalue)
 	playerBar:SetFrameStrata("DIALOG");
 	playerBar:Show();
 end
-
 
 function XpFlag.CreateMark(name, class)
     
@@ -168,8 +224,7 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 	marks[name].maxvalue = maxvalue;
 	marks[name].level = level;
 
-	marks[name]:ClearAllPoints();	
-	marks[name]:SetPoint("TOPLEFT", _G['UIParent'], maxWidth * value/maxvalue, 0);		
+	marks[name].to = maxWidth * value/maxvalue;		
 	
 	if tonumber(level) < playerLevel then
 		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-minus.tga");	
@@ -198,7 +253,7 @@ function XpFlag.UpdatePlayerBar()
 		return
 	end
 
-	playerBar:SetWidth((maxWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER")) + 8);
+	playerBar.to = (maxWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER")) + 8
 
 	local color = GetXPExhaustion() and XpFlag.db.selfcolorrested or XpFlag.db.selfcolor;
 	playerBar.texture:SetVertexColor(unpack(color));
