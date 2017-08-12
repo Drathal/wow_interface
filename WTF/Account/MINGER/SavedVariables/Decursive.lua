@@ -1,7 +1,7 @@
 
 DecursiveDB = {
 	["global"] = {
-		["LastVersionAnnounce"] = 1502312042,
+		["LastVersionAnnounce"] = 1502404062,
 	},
 	["class"] = {
 		["WARLOCK"] = {
@@ -17,7 +17,7 @@ DecursiveDB = {
 		},
 		["PALADIN"] = {
 			["CureOrder"] = {
-				-13, -- [1]
+				3, -- [1]
 				-15, -- [2]
 				nil, -- [3]
 				-14, -- [4]

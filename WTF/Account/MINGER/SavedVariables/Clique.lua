@@ -73,6 +73,7 @@ CliqueDB3 = {
 			["stopcastingfix"] = true,
 		},
 		["Drathia - Madmortem"] = {
+			["alerthidden"] = true,
 			["blacklist"] = {
 				["LSBoss2Frame"] = true,
 				["Boss3TargetFrame"] = true,
@@ -85,7 +86,6 @@ CliqueDB3 = {
 				["Boss4TargetFrame"] = true,
 				["LSBoss1Frame"] = true,
 			},
-			["alerthidden"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -296,6 +296,18 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [9]
 				{
+					["spell"] = "Ironbark",
+					["key"] = "MOUSEWHEELDOWN",
+					["sets"] = {
+						["hovercast"] = true,
+						["spec4"] = true,
+						["default"] = true,
+						["friend"] = true,
+					},
+					["icon"] = 572025,
+					["type"] = "spell",
+				}, -- [10]
+				{
 					["spell"] = "Skull Bash",
 					["key"] = "ALT-0",
 					["sets"] = {
@@ -306,7 +318,7 @@ CliqueDB3 = {
 					},
 					["icon"] = 236946,
 					["type"] = "spell",
-				}, -- [10]
+				}, -- [11]
 				{
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
@@ -318,19 +330,19 @@ CliqueDB3 = {
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
-				}, -- [11]
-				{
-					["spell"] = "Ironbark",
-					["key"] = "MOUSEWHEELDOWN",
-					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
-						["default"] = true,
-						["friend"] = true,
-					},
-					["icon"] = 572025,
-					["type"] = "spell",
 				}, -- [12]
+				{
+					["spell"] = "Growl",
+					["key"] = "ALT-7",
+					["sets"] = {
+						["spec3"] = true,
+						["hovercast"] = true,
+						["default"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = 132270,
+					["type"] = "spell",
+				}, -- [13]
 				{
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
@@ -342,7 +354,7 @@ CliqueDB3 = {
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
-				}, -- [13]
+				}, -- [14]
 				{
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
@@ -353,18 +365,6 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["icon"] = 134914,
-					["type"] = "spell",
-				}, -- [14]
-				{
-					["spell"] = "Growl",
-					["key"] = "ALT-7",
-					["sets"] = {
-						["spec3"] = true,
-						["hovercast"] = true,
-						["default"] = true,
-						["enemy"] = true,
-					},
-					["icon"] = 132270,
 					["type"] = "spell",
 				}, -- [15]
 				{

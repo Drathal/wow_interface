@@ -1,11 +1,11 @@
 
 MacroToolkitDB = {
 	["char"] = {
-		["Dronthal - Madmortem"] = {
+		["Drathtix - Madmortem"] = {
 			["backups"] = {
 			},
 		},
-		["Drathtix - Madmortem"] = {
+		["Dronthal - Madmortem"] = {
 			["backups"] = {
 			},
 		},

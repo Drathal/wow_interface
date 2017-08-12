@@ -65,8 +65,8 @@ HandyNotesDB = {
 		["Drahdo - Blackhand"] = {
 		},
 		["Dronthal - Madmortem"] = {
-			["icon_scale_minimap"] = 0.89,
 			["icon_alpha_minimap"] = 0.75,
+			["icon_scale_minimap"] = 0.89,
 		},
 		["Draltair - Blackhand"] = {
 			["enabled"] = false,

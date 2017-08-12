@@ -4,7 +4,7 @@
 ## DefaultState: Disabled
 ## Notes: Setup UI
 ## Version: 1
-## OptionalDeps: Grid2, XIV_Databar, Skada, TellMeWhen, AllTheThings
+## OptionalDeps: Grid2, XIV_Databar, Skada
 ## SavedVariables: dsetupDB
 ## X-License: The MIT License (MIT)
 ## X-eMail: addon@drathal.com

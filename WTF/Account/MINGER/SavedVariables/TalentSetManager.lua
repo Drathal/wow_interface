@@ -51,6 +51,21 @@ TalentSetManager_CharacterSaves = {
 			["auto_equip3"] = 0,
 		},
 	},
+	["Drathal-Madmortem"] = {
+		["talents_pvp"] = {
+		},
+		["talents"] = {
+			[4] = {
+			},
+		},
+		["version"] = 0,
+		["interface"] = {
+			["auto_equip2"] = 0,
+			["auto_equip4"] = 0,
+			["auto_equip1"] = 0,
+			["auto_equip3"] = 0,
+		},
+	},
 	["Drathia-Madmortem"] = {
 		["talents_pvp"] = {
 		},
@@ -77,9 +92,9 @@ TalentSetManager_CharacterSaves = {
 					2, -- [5]
 					3, -- [6]
 					3, -- [7]
-					["texture"] = 236249,
-					["name"] = "Dungeon",
 					["tt"] = "talents",
+					["name"] = "Dungeon",
+					["texture"] = 236249,
 				}, -- [1]
 				{
 					2, -- [1]
@@ -89,9 +104,9 @@ TalentSetManager_CharacterSaves = {
 					3, -- [5]
 					3, -- [6]
 					2, -- [7]
-					["texture"] = 571553,
-					["name"] = "Raid",
 					["tt"] = "talents",
+					["name"] = "Raid",
+					["texture"] = 571553,
 				}, -- [2]
 				{
 					3, -- [1]
@@ -101,9 +116,9 @@ TalentSetManager_CharacterSaves = {
 					2, -- [5]
 					2, -- [6]
 					3, -- [7]
-					["texture"] = "interface\\icons\\spell_holy_searinglight",
-					["name"] = "Shockadin",
 					["tt"] = "talents",
+					["name"] = "Shockadin",
+					["texture"] = "interface\\icons\\spell_holy_searinglight",
 				}, -- [3]
 			}, -- [1]
 			{
@@ -119,8 +134,8 @@ TalentSetManager_CharacterSaves = {
 		},
 		["version"] = 0,
 		["interface"] = {
-			["auto_equip2"] = 0,
 			["auto_equip4"] = 0,
+			["auto_equip2"] = 0,
 			["auto_equip1"] = 0,
 			["auto_equip3"] = 0,
 		},

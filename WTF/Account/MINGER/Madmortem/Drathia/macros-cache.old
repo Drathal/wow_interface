@@ -8,7 +8,7 @@ VER 3 0100000000000006 "Force" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000000B "Guardian" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@mouseover,hekp][@target,help][]Guardian Spirit
+/cast [@mouseover,help][@target,help][]Guardian Spirit
 END
 VER 3 0100000000000009 "HW:S" "INV_MISC_QUESTIONMARK"
 #showtooltip

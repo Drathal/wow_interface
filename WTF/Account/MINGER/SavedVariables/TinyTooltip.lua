@@ -50,7 +50,7 @@ BigTipDB = {
 		["statusbarFontFlag"] = "THINOUTLINE",
 		["borderCorner"] = "default",
 		["statusbarOffsetY"] = 0,
-		["statusbarTexture"] = "Blizzard",
+		["statusbarTexture"] = "TukTex",
 		["alwaysShowIdInfo"] = false,
 		["statusbarText"] = false,
 		["statusbarHeight"] = 4,
@@ -113,7 +113,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["guildIndex"] = {
-					["enable"] = true,
+					["enable"] = false,
 					["color"] = "cc88ff",
 					["wildcard"] = "(%s",
 					["filter"] = "none",
@@ -125,13 +125,13 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["raceName"] = {
-					["enable"] = false,
+					["enable"] = true,
 					["color"] = "cccccc",
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
 				["role"] = {
-					["enable"] = false,
+					["enable"] = true,
 					["color"] = "ffffff",
 					["wildcard"] = "(%s)",
 					["filter"] = "none",
@@ -147,7 +147,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["levelValue"] = {
-					["enable"] = false,
+					["enable"] = true,
 					["color"] = "level",
 					["wildcard"] = "%s",
 					["filter"] = "none",
@@ -167,7 +167,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["moveSpeed"] = {
-					["enable"] = false,
+					["enable"] = true,
 					["color"] = "e8e7a8",
 					["wildcard"] = "%d%%",
 					["filter"] = "none",
@@ -185,7 +185,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["statusDND"] = {
-					["enable"] = true,
+					["enable"] = false,
 					["color"] = "ffd200",
 					["wildcard"] = "(%s)",
 					["filter"] = "none",
@@ -197,7 +197,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["title"] = {
-					["enable"] = true,
+					["enable"] = false,
 					["color"] = "ccffff",
 					["wildcard"] = "%s",
 					["filter"] = "none",
@@ -219,13 +219,13 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["className"] = {
-					["enable"] = false,
+					["enable"] = true,
 					["color"] = "ffffff",
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
 				["classIcon"] = {
-					["enable"] = true,
+					["enable"] = false,
 					["filter"] = "none",
 				},
 			},

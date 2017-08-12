@@ -41,6 +41,7 @@ MapsterDB = {
 		["Modranthir - Blackhand"] = "Default",
 		["Drathal - Antonidas"] = "Default",
 		["Modran - Alexstrasza"] = "Default",
+		["Drathal - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
 		["Darlaxle - Blackhand"] = "Default",
 		["Sungleave - Blackhand"] = "Default",

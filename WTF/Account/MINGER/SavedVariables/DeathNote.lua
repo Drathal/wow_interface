@@ -18,23 +18,24 @@ DeathNoteDB = {
 		["Dronthal - Madmortem"] = {
 		},
 		["Drathtix - Madmortem"] = {
+			["keep_data"] = false,
 		},
 		["Drathal - Madmortem"] = {
 			["display_filters"] = {
 				["consolidate_damage"] = true,
 				["heal_threshold"] = 20436,
-				["hide_misses"] = true,
+				["damage_threshold"] = 20112,
 				["consolidate_auras"] = true,
 				["consolidate_heals"] = true,
-				["damage_threshold"] = 20112,
+				["hide_misses"] = true,
 			},
 			["display"] = {
 				["y"] = 30.9998931884766,
-				["h"] = 636.000061035156,
-				["scale"] = 1.05,
-				["x"] = 3.000244140625,
-				["w"] = 938.00048828125,
 				["namelist"] = 2,
+				["scale"] = 1.05,
+				["h"] = 636.000061035156,
+				["w"] = 938.00048828125,
+				["x"] = 3.000244140625,
 			},
 			["keep_data"] = false,
 		},

@@ -27,10 +27,3 @@ X: 247
 Y: 100
 W: 18
 H: 18
-Frame: Butsu
-FrameLevel: 1
-Anchor: TOPLEFT
-X: 245
-Y: -220
-W: 222
-H: 30

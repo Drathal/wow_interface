@@ -51517,7 +51517,7 @@ MasqueDB = {
 					},
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_thrash_cd"] = {
+				["WeakAuras_harbaron_-_summon_shackled_servitor"] = {
 					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
@@ -51661,7 +51661,7 @@ MasqueDB = {
 					},
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_ashamane's_frenzy"] = {
+				["Kaliel's Tracker"] = {
 					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
@@ -51805,7 +51805,7 @@ MasqueDB = {
 					},
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_harbaron_-_summon_shackled_servitor"] = {
+				["WeakAuras_thrash_cd"] = {
 					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
@@ -52497,7 +52497,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "ElvUIesque",
 				},
-				["Kaliel's Tracker"] = {
+				["WeakAuras_ashamane's_frenzy"] = {
 					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {

@@ -17,12 +17,12 @@ KkthnxUIDataPerChar = {
 			-225.000106811523, -- [4]
 			-31.000431060791, -- [5]
 		},
-		["ArtifactAnchor"] = {
-			"TOPRIGHT", -- [1]
+		["oUF_KkthnxPlayer_Castbar"] = {
+			"CENTER", -- [1]
 			"UIParent", -- [2]
-			"TOPRIGHT", -- [3]
-			-4.00016117095947, -- [4]
-			-234.999984741211, -- [5]
+			"CENTER", -- [3]
+			-398.001403808594, -- [4]
+			-67.999755859375, -- [5]
 		},
 		["ShiftHolder"] = {
 			"BOTTOM", -- [1]
@@ -31,12 +31,12 @@ KkthnxUIDataPerChar = {
 			-333.000061035156, -- [4]
 			1.00035214424133, -- [5]
 		},
-		["KkthnxUIDebuffHeader"] = {
-			"LEFT", -- [1]
+		["oUF_KkthnxPet"] = {
+			"BOTTOM", -- [1]
 			"UIParent", -- [2]
-			"LEFT", -- [3]
-			136.499282836914, -- [4]
-			-112.000381469727, -- [5]
+			"BOTTOM", -- [3]
+			-384, -- [4]
+			198.999862670898, -- [5]
 		},
 		["BNToastFrame"] = {
 			"BOTTOMLEFT", -- [1]
@@ -45,12 +45,12 @@ KkthnxUIDataPerChar = {
 			5.00097274780273, -- [4]
 			193.000244140625, -- [5]
 		},
-		["PetActionBarAnchor"] = {
-			"BOTTOM", -- [1]
+		["RaidUtilityPanel"] = {
+			"TOPLEFT", -- [1]
 			"UIParent", -- [2]
-			"BOTTOM", -- [3]
-			7.00051164627075, -- [4]
-			70.9998092651367, -- [5]
+			"TOPLEFT", -- [3]
+			0, -- [4]
+			-111.99991607666, -- [5]
 		},
 		["TicketStatusMoverAnchor"] = {
 			"TOP", -- [1]
@@ -66,12 +66,12 @@ KkthnxUIDataPerChar = {
 			214.999816894531, -- [4]
 			-109.000091552734, -- [5]
 		},
-		["oUF_KkthnxPlayer_Castbar"] = {
-			"CENTER", -- [1]
+		["ArtifactAnchor"] = {
+			"TOPRIGHT", -- [1]
 			"UIParent", -- [2]
-			"CENTER", -- [3]
-			-398.001403808594, -- [4]
-			-67.999755859375, -- [5]
+			"TOPRIGHT", -- [3]
+			-4.00016117095947, -- [4]
+			-234.999984741211, -- [5]
 		},
 		["oUF_KkthnxBossFrame5"] = {
 			"RIGHT", -- [1]
@@ -87,12 +87,12 @@ KkthnxUIDataPerChar = {
 			0, -- [4]
 			145.050155639648, -- [5]
 		},
-		["RaidUtilityPanel"] = {
-			"TOPLEFT", -- [1]
+		["oUF_KkthnxTarget_Castbar"] = {
+			"CENTER", -- [1]
 			"UIParent", -- [2]
-			"TOPLEFT", -- [3]
-			0, -- [4]
-			-111.99991607666, -- [5]
+			"CENTER", -- [3]
+			397.000671386719, -- [4]
+			-82.0000534057617, -- [5]
 		},
 		["TooltipAnchor"] = {
 			"BOTTOMRIGHT", -- [1]
@@ -101,26 +101,26 @@ KkthnxUIDataPerChar = {
 			-3.00015377998352, -- [4]
 			233.000106811523, -- [5]
 		},
-		["TalkingHeadFrame"] = {
-			"TOP", -- [1]
-			"UIParent", -- [2]
-			"TOP", -- [3]
-			3.99996423721314, -- [4]
-			-45.7500152587891, -- [5]
-		},
-		["oUF_KkthnxTarget"] = {
-			"CENTER", -- [1]
-			"UIParent", -- [2]
-			"CENTER", -- [3]
-			389.001007080078, -- [4]
-			-175.00032043457, -- [5]
-		},
 		["ReputationAnchor"] = {
 			"TOPRIGHT", -- [1]
 			"UIParent", -- [2]
 			"TOPRIGHT", -- [3]
 			-4.00029230117798, -- [4]
 			-250.499908447266, -- [5]
+		},
+		["ZoneAbilityHolder"] = {
+			"BOTTOM", -- [1]
+			"UIParent", -- [2]
+			"BOTTOM", -- [3]
+			290.5, -- [4]
+			73.0001220703125, -- [5]
+		},
+		["TalkingHeadFrame"] = {
+			"TOP", -- [1]
+			"UIParent", -- [2]
+			"TOP", -- [3]
+			3.99996423721314, -- [4]
+			-45.7500152587891, -- [5]
 		},
 		["ExtraActionBarHolder"] = {
 			"BOTTOM", -- [1]
@@ -164,12 +164,12 @@ KkthnxUIDataPerChar = {
 			390.000640869141, -- [4]
 			207.999786376953, -- [5]
 		},
-		["oUF_KkthnxTarget_Castbar"] = {
-			"CENTER", -- [1]
+		["PetActionBarAnchor"] = {
+			"BOTTOM", -- [1]
 			"UIParent", -- [2]
-			"CENTER", -- [3]
-			397.000671386719, -- [4]
-			-82.0000534057617, -- [5]
+			"BOTTOM", -- [3]
+			7.00051164627075, -- [4]
+			70.9998092651367, -- [5]
 		},
 		["ActionBarAnchor"] = {
 			"BOTTOM", -- [1]
@@ -185,19 +185,19 @@ KkthnxUIDataPerChar = {
 			-389.999908447266, -- [4]
 			-175.000289916992, -- [5]
 		},
-		["ZoneAbilityHolder"] = {
-			"BOTTOM", -- [1]
+		["oUF_KkthnxTarget"] = {
+			"CENTER", -- [1]
 			"UIParent", -- [2]
-			"BOTTOM", -- [3]
-			290.5, -- [4]
-			73.0001220703125, -- [5]
+			"CENTER", -- [3]
+			389.001007080078, -- [4]
+			-175.00032043457, -- [5]
 		},
-		["oUF_KkthnxPet"] = {
-			"BOTTOM", -- [1]
+		["KkthnxUIDebuffHeader"] = {
+			"LEFT", -- [1]
 			"UIParent", -- [2]
-			"BOTTOM", -- [3]
-			-384, -- [4]
-			198.999862670898, -- [5]
+			"LEFT", -- [3]
+			136.499282836914, -- [4]
+			-112.000381469727, -- [5]
 		},
 		["MinimapAnchor"] = {
 			"TOPRIGHT", -- [1]

@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 1775,
+	["session"] = 1787,
 	["errors"] = {
 		{
 			["message"] = "SendAddonMessage(): Whisper message missing target player!",
@@ -32,5 +32,20 @@ BugGrabberDB = {
 			["session"] = 1774,
 			["counter"] = 5,
 		}, -- [4]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'CompactRaidFrame2:Show()'.",
+			["time"] = "2017/08/10 23:31:12",
+			["locals"] = "",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:341: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:282: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:56: in function <Interface\\FrameXML\\CompactUnitFrame.lua:53>",
+			["session"] = 1785,
+			["counter"] = 1,
+		}, -- [5]
+		{
+			["message"] = "[ADDON_ACTION_FORBIDDEN] AddOn 'EnhancedMenu' tried to call the protected function 'JoinBattlefield()'.",
+			["time"] = "2017/08/11 00:18:17",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `JoinBattlefield'\nInterface\\AddOns\\Blizzard_PVPUI\\Blizzard_PVPUI-1.0.lua:606: in function `HonorFrame_Queue'\n[string \"*:OnClick\"]:2: in function <[string \"*:OnClick\"]:1>",
+			["session"] = 1787,
+			["counter"] = 1,
+		}, -- [6]
 	},
 }

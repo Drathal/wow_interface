@@ -76,8 +76,7 @@ end
 local setups = { 
     { "Grid2",       "Grid2DB",  "Dronthal - Madmortem", setupGrid2 },
     { "XIV_Databar", "XIVBarDB", "Dronthal - Madmortem" },
-    { "Skada",       "SkadaDB",  "Dronthal - Madmortem" },
-    { "TellMeWhen",  "TellMeWhenDB",  "Dronthal - Madmortem" }        
+    { "Skada",       "SkadaDB",  "Dronthal - Madmortem" }    
 }
 
 local function setup(arg)

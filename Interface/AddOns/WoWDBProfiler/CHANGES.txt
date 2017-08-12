@@ -1,0 +1,7 @@
+changeset:   537:ec2ee7b48c21
+tag:         7.2.5-1
+user:        MMOSimca
+date:        Thu May 11 21:23:12 2017 -0400
+summary:     Update for 7.2.5 PTR compatibility; 'texture' arguments for currency conversion can be 'string' or 'number' now.
+
+

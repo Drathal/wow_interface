@@ -77,6 +77,8 @@ VWQL = {
 		},
 	},
 	["APFormat"] = 3,
+	["Ignore"] = {
+	},
 	["Drahmoon-Madmortem"] = {
 		["honorIgnoreFilter"] = false,
 		["apIgnoreFilter"] = false,

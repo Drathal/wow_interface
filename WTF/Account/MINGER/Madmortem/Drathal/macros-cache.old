@@ -19,7 +19,3 @@ VER 3 0100000000000003 "Lifebloom" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help] Lifebloom;Lifebloom
 END
-VER 3 0100000000000004 "Wild Growth" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help] Wild Growth;Wild Growth
-END

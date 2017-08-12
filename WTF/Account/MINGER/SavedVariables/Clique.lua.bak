@@ -73,7 +73,6 @@ CliqueDB3 = {
 			["alerthidden"] = true,
 		},
 		["Drathia - Madmortem"] = {
-			["alerthidden"] = true,
 			["blacklist"] = {
 				["LSBoss2Frame"] = true,
 				["LSBoss1Frame"] = true,
@@ -86,6 +85,7 @@ CliqueDB3 = {
 				["Boss4TargetFrame"] = true,
 				["Boss3TargetFrame"] = true,
 			},
+			["alerthidden"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -296,6 +296,18 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [9]
 				{
+					["spell"] = "Ironbark",
+					["key"] = "MOUSEWHEELDOWN",
+					["sets"] = {
+						["default"] = true,
+						["spec4"] = true,
+						["friend"] = true,
+						["hovercast"] = true,
+					},
+					["icon"] = 572025,
+					["type"] = "spell",
+				}, -- [10]
+				{
 					["spell"] = "Skull Bash",
 					["key"] = "ALT-0",
 					["sets"] = {
@@ -306,7 +318,7 @@ CliqueDB3 = {
 					},
 					["icon"] = 236946,
 					["type"] = "spell",
-				}, -- [10]
+				}, -- [11]
 				{
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
@@ -318,19 +330,19 @@ CliqueDB3 = {
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
-				}, -- [11]
-				{
-					["spell"] = "Ironbark",
-					["key"] = "MOUSEWHEELDOWN",
-					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
-						["friend"] = true,
-						["hovercast"] = true,
-					},
-					["icon"] = 572025,
-					["type"] = "spell",
 				}, -- [12]
+				{
+					["spell"] = "Growl",
+					["key"] = "ALT-7",
+					["sets"] = {
+						["spec3"] = true,
+						["default"] = true,
+						["hovercast"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = 132270,
+					["type"] = "spell",
+				}, -- [13]
 				{
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
@@ -342,7 +354,7 @@ CliqueDB3 = {
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
-				}, -- [13]
+				}, -- [14]
 				{
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
@@ -353,18 +365,6 @@ CliqueDB3 = {
 						["friend"] = true,
 					},
 					["icon"] = 134914,
-					["type"] = "spell",
-				}, -- [14]
-				{
-					["spell"] = "Growl",
-					["key"] = "ALT-7",
-					["sets"] = {
-						["spec3"] = true,
-						["default"] = true,
-						["hovercast"] = true,
-						["enemy"] = true,
-					},
-					["icon"] = 132270,
 					["type"] = "spell",
 				}, -- [15]
 				{
@@ -950,13 +950,6 @@ CliqueDB3 = {
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
-					["type"] = "menu",
-					["key"] = "ALT-BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-				{
 					["spell"] = "Effuse",
 					["key"] = "BUTTON1",
 					["sets"] = {
@@ -964,16 +957,14 @@ CliqueDB3 = {
 					},
 					["icon"] = 1360977,
 					["type"] = "spell",
-				}, -- [3]
+				}, -- [2]
 				{
-					["spell"] = "Enveloping Mist",
-					["key"] = "BUTTON2",
+					["type"] = "menu",
+					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 775461,
-					["type"] = "spell",
-				}, -- [4]
+				}, -- [3]
 				{
 					["spell"] = "Vivify",
 					["key"] = "SHIFT-BUTTON2",
@@ -981,6 +972,15 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["icon"] = 1360980,
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Enveloping Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 775461,
 					["type"] = "spell",
 				}, -- [5]
 				{
