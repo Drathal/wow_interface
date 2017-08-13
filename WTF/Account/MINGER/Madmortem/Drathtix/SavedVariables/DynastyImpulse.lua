@@ -1,0 +1,2 @@
+
+DynastyImpulse_Saved = nil

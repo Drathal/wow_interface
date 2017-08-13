@@ -1,0 +1,2 @@
+
+DynastyEdge_Saved = nil

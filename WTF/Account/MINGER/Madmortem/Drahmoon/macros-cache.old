@@ -29,9 +29,9 @@ END
 VER 3 010000000000000A "Drain" "INV_MISC_QUESTIONMARK"
 #show Drain Soul
 /startattack
-/use 13
-/use 14
-/use Drain Soul
+/use [nomod] 13
+/use [nomod] 14
+/use [nomod] Drain Soul
 END
 VER 3 0100000000000003 "Havoc" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -40,9 +40,10 @@ END
 VER 3 0100000000000009 "Seed" "INV_MISC_QUESTIONMARK"
 #show
 /startattack
-/use [talent:4/1] Phantom Singularity
-/use [talent:4/2] Seed of Corruption
-/use [talent:4/3] Soul Harvest
+/use [talent:4/1,nomod] Phantom Singularity
+/use [talent:4/2,nomod] Seed of Corruption
+/use [talent:4/3,nomod] Soul Harvest
+/use [mod] Seed of Corruption
 END
 VER 3 0100000000000008 "Siphon Life" "INV_MISC_QUESTIONMARK"
 #showtooltip

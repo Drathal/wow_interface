@@ -3,13 +3,6 @@ KkthnxUIDataPerChar = {
 	["SplitBars"] = true,
 	["AutoInvite"] = false,
 	["Movers"] = {
-		["AltPowerBarHolder"] = {
-			"TOP", -- [1]
-			"UIParent", -- [2]
-			"TOP", -- [3]
-			2.00008058547974, -- [4]
-			-41.9999885559082, -- [5]
-		},
 		["AlertFrameHolder"] = {
 			"TOP", -- [1]
 			"UIParent", -- [2]
@@ -31,9 +24,23 @@ KkthnxUIDataPerChar = {
 			-319.000335693359, -- [4]
 			-164.000137329102, -- [5]
 		},
+		["AltPowerBarHolder"] = {
+			"TOP", -- [1]
+			"UIParent", -- [2]
+			"TOP", -- [3]
+			2.00008058547974, -- [4]
+			-41.9999885559082, -- [5]
+		},
+		["KkthnxUIDebuffHeader"] = {
+			"LEFT", -- [1]
+			"UIParent", -- [2]
+			"LEFT", -- [3]
+			217.999694824219, -- [4]
+			-134.000076293945, -- [5]
+		},
 	},
-	["BarsLocked"] = false,
-	["RightBars"] = 2,
-	["BottomBars"] = 3,
 	["Install"] = true,
+	["BottomBars"] = 3,
+	["RightBars"] = 2,
+	["BarsLocked"] = false,
 }

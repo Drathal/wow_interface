@@ -177,3 +177,8 @@ DBM-Ulduar: enabled
 DBM-VoA: enabled
 DBM-VPDeutsch weiblich: enabled
 DBM-WorldEvents: enabled
+DynastyBooster: enabled
+DynastyImpulse: enabled
+DynastyEdge: enabled
+DynastyTycoon: enabled
+DynastyCore: disabled

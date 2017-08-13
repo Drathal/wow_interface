@@ -286,3 +286,4 @@ NiceBubbles: enabled
 QuakeAssist: enabled
 TinyTooltip: enabled
 XpFlag: enabled
+DynastyCore: disabled

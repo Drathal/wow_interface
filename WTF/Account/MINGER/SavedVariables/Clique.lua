@@ -2,6 +2,9 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
+		["Dronthal - Blackhand"] = {
+			["alerthidden"] = true,
+		},
 		["Drathair - Blackhand"] = {
 			["spec1_profileKey"] = "Drathair - Blackhand",
 			["blizzframes"] = {
@@ -26,9 +29,6 @@ CliqueDB3 = {
 			["specswap"] = false,
 			["spec2_profileKey"] = "Drathair - Blackhand",
 			["spec3_profileKey"] = "Drathair - Blackhand",
-		},
-		["Dronthal - Blackhand"] = {
-			["alerthidden"] = true,
 		},
 		["Sungleave - Blackhand"] = {
 			["alerthidden"] = true,
@@ -244,9 +244,9 @@ CliqueDB3 = {
 					["spell"] = "Regrowth",
 					["key"] = "BUTTON2",
 					["sets"] = {
-						["hovercast"] = true,
 						["friend"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 136085,
 					["type"] = "spell",
@@ -266,9 +266,9 @@ CliqueDB3 = {
 					["spell"] = "Healing Touch",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
-						["hovercast"] = true,
 						["friend"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 136041,
 					["type"] = "spell",
@@ -288,9 +288,9 @@ CliqueDB3 = {
 					["spell"] = "Rejuvenation",
 					["key"] = "BUTTON1",
 					["sets"] = {
-						["hovercast"] = true,
 						["friend"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 136081,
 					["type"] = "spell",
@@ -299,10 +299,10 @@ CliqueDB3 = {
 					["spell"] = "Ironbark",
 					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 572025,
 					["type"] = "spell",
@@ -323,10 +323,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -347,10 +347,10 @@ CliqueDB3 = {
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
@@ -359,10 +359,10 @@ CliqueDB3 = {
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 134914,
 					["type"] = "spell",
@@ -637,10 +637,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",

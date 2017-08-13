@@ -31,12 +31,18 @@ local maxWidth = _G['UIParent']:GetWidth()
 local defaults = {
   version = version,
   showself = true,
-  selfcolor = {0.25, 0.5, 1, 0.8},
-  selfcolorrested = {0.5, 0.25, 1, 0.8},
+  selfcolor = {0.25, 0.5, 1, 1},
+  selfcolorrested = {0.5, 0.25, 1, 1},
   flipmarkers = true,
-  width = 16,
-  height = 16
+  width = 15,
+  height = 15
 };
+
+-- spells/7fx_mage_aegwynnsascendance_statehand.m2
+-- local MODEL = "spells/voljin_serpentward_missile.m2"
+-- local MODEL = "spells/7fx_druid_halfmoon_missile.m2"
+local MODEL = "spells/7fx_mage_aegwynnsascendance_statehand.m2"
+local MODEL_SIZE = 64
 
 f.delay = 1
 f:SetScript('OnUpdate', function(self, elapsed)
@@ -83,6 +89,9 @@ function XpFlag.animateMark(self, limit)
 	if cur == self.to or abs(new - self.to) < 2 then
 		new = self.to
 		self.to = nil
+		if self.name == playerNameRealm then
+			UIFrameFadeOut(marks[playerNameRealm].model, 0.2, marks[playerNameRealm].model:GetAlpha(), 0)
+		end		
 	end
 
 	self:ClearAllPoints();	
@@ -152,6 +161,19 @@ function XpFlag.CreateBar(value, maxvalue)
 
 	playerBar:SetFrameLevel(5)
 	playerBar:SetFrameStrata("DIALOG");
+
+	playerBar:SetBackdrop({
+	    bgFile = [[Interface\BUTTONS\WHITE8X8]],
+	    edgeFile = [[Interface\BUTTONS\WHITE8X8]], 
+	    edgeSize = 1,
+	    tileSize = 8, 
+	    tile = true,
+	    insets = { left = 0, right = 0, top = 0, bottom = -1 }
+	})
+	playerBar:SetBackdropColor(0, 0, 0, 1)
+	playerBar:SetBackdropBorderColor(0, 0, 0, 1)
+
+
 	playerBar:Show();
 end
 
@@ -212,6 +234,21 @@ function XpFlag.CreateMark(name, class)
 		GameTooltip:Hide();
 	end);
 
+	if name ~= playerNameRealm then return end
+	
+	local model = CreateFrame('PlayerModel', 'mymodel', marks[name])
+	model:SetPoint('CENTER')
+	model:SetSize(MODEL_SIZE, MODEL_SIZE)
+	model:SetModel(MODEL)
+	model:SetAlpha(1)
+	marks[name].model = model
+
+	--model:SetCamera(1);
+	-- /run _G['mymodel']:SetSequence(0); _G['mymodel']:SetSequenceTime(0, 0)
+	-- /run _G['mymodel']:ClearModel();_G['mymodel']:SetModel("particles/bloodspurts/bloodspurtlarge.m2")
+	-- /run  _G['mymodel']:SetDisplayInfo({enable=true,displayInfo=32368,camDistanceScale=0.95,pos_x=0,pos_y=0.1,rotation=0,portraitZoom=0,alpha=1})
+    -- /run _G['mymodel']:SetCamera(1);
+    -- /run _G['mymodel']:SetSequenceTime(1, 0)
 end
 
 function XpFlag.UpdateMark(name, value, maxvalue, level, class)
@@ -324,6 +361,8 @@ end
 function XpFlag:PLAYER_XP_UPDATE(event, unit)
 	if unit ~= "player" then return end
 
+	
+
 	for target, _ in pairs(friends) do
 		if target then
 			SendAddonMessage("XpFlag", XpFlag.createMessage("XpFlag"), "WHISPER", target);
@@ -331,6 +370,7 @@ function XpFlag:PLAYER_XP_UPDATE(event, unit)
 	end
 
 	if XpFlag.db.showself then
+		UIFrameFadeIn(marks[playerNameRealm].model, 0.5, marks[playerNameRealm].model:GetAlpha(), 1)
 		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
 		XpFlag.UpdatePlayerBar()
 	end

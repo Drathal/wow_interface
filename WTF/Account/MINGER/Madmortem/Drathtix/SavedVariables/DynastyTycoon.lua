@@ -1,0 +1,2 @@
+
+DynastyTycoon_Saved = nil

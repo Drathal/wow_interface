@@ -8,7 +8,7 @@ Postal3DB = {
 				"Dranathal|Madmortem|Alliance|1|SHAMAN", -- [3]
 				"Drathal|Madmortem|Alliance|110|DRUID", -- [4]
 				"Drathia|Madmortem|Alliance|110|PRIEST", -- [5]
-				"Drathtix|Madmortem|Alliance|57|MONK", -- [6]
+				"Drathtix|Madmortem|Alliance|64|MONK", -- [6]
 				"Dronthal|Madmortem|Alliance|110|PALADIN", -- [7]
 				"Modranthir|Madmortem|Alliance|5|PRIEST", -- [8]
 			},
@@ -55,8 +55,9 @@ Postal3DB = {
 		["Drahmoon - Madmortem"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Dronthal|Madmortem|Alliance", -- [1]
-					"Malien|Madmortem|Alliance", -- [2]
+					"Drathtix|Madmortem|Alliance", -- [1]
+					"Dronthal|Madmortem|Alliance", -- [2]
+					"Malien|Madmortem|Alliance", -- [3]
 				},
 			},
 		},
