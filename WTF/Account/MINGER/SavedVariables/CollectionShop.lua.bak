@@ -8,16 +8,16 @@ COLLECTIONSHOP_SAVEDVARIABLES = {
 	["auctionsWonReminder"] = true,
 	["tsmItemValueSource"] = "",
 	["maxItemPriceCopper"] = {
-		["TOYS"] = 0,
 		["MOUNTS"] = 0,
+		["TOYS"] = 0,
 		["APPEARANCES"] = 0,
 		["PETS"] = 0,
 	},
 	["version"] = 2.03,
 	["modeFilters"] = {
-		["TOYS"] = {
-		},
 		["MOUNTS"] = {
+		},
+		["TOYS"] = {
 		},
 		["APPEARANCES"] = {
 		},

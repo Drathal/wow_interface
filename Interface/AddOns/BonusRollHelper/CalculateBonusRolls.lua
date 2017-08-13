@@ -14,23 +14,11 @@ local equippedBySlot = {}
 local loot = {}
 local lootBySlot = {}
 local tierLoot = {}
-local i2s = {"Head", "Neck", "Shoulder", "", "Chest", "Waist", "Legs", "Feet", "Wrist", "Hands", "Finger", "Finger", "Trinket", "Trinket", "Back"}
+local i2s = {INVTYPE_HEAD, INVTYPE_NECK, INVTYPE_SHOULDER, "", INVTYPE_CHEST, INVTYPE_WAIST, INVTYPE_LEGS, INVTYPE_FEET, INVTYPE_WRIST, INVTYPE_HAND, INVTYPE_FINGER, INVTYPE_FINGER, INVTYPE_TRINKET, INVTYPE_TRINKET, INVTYPE_CLOAK}
 local s2i = {}
 for index, slot in ipairs(i2s) do
 	s2i[slot] = index
 end
---[[local BiS = {
-	["Head"] = {},
-	["Neck"] = {},
-	["Shoulder"] = {},
-	["Chest"] = {},
-	["Waist"] = {},
-	["Legs"] = {},
-	["Feet"] = {},
-	["Wrist"] = {},
-	["Hands"] = {},
-	["Back"] = {}
-}]]--
 local bossScore = {}
 local isOccupied = {}
 
@@ -86,7 +74,7 @@ function BonusRollManagerTable.getEquipped()
 		local _, _, slot, link = C_ArtifactUI.GetRelicInfo(i)
 		equipped[i + 15].link = link
 		equipped[i + 15].score = 0
-		equipped[i + 15].slot = slot.." Artifact Relic"
+		equipped[i + 15].slot = slot
 		equipped[i + 15].stats = {}
 		equipped[i + 15].bossIndex = 0
 		equipped[i + 15].isTier = 0
@@ -98,6 +86,7 @@ function BonusRollManagerTable.getEquipped()
 	ArtifactFrame.CloseButton:Click("LeftButton")
 	
 	for slotIndex, item in pairs(equipped) do
+		print(item.slot, equippedBySlot[item.slot], item.link)
 		if not equippedBySlot[item.slot] then
 			equippedBySlot[item.slot] = {}
 		end
@@ -138,6 +127,9 @@ function BonusRollManagerTable.getLoot()
 			--Fuckin Bullshit
 			if not name then
 				return "not name"
+			end
+			if C_ArtifactUI.GetRelicInfoByItemID(itemID) then
+				_, _, slot = C_ArtifactUI.GetRelicInfoByItemID(itemID)
 			end
 			
 			currentLoot.link = link
@@ -184,16 +176,12 @@ function BonusRollManagerTable.printBiS()
 		BonusRollManagerTable.copyVariables()
 	end
 	local output = ""
-	local order = {"Head", "Neck", "Shoulder", "Back", "Chest", "Waist", "Legs", "Feet", "Wrist", "Hands", "Finger 1", "Finger 2", "Trinket 1", "Trinket 2", "Relic 1", "Relic 2", "Relic 3"}
+	local order = {INVTYPE_HEAD, INVTYPE_NECK, INVTYPE_SHOULDER, INVTYPE_CLOAK, INVTYPE_CHEST, INVTYPE_WAIST, INVTYPE_LEGS, INVTYPE_FEET, INVTYPE_WRIST, INVTYPE_HAND, INVTYPE_FINGER.." 1", INVTYPE_FINGER.." 2", INVTYPE_TRINKET.." 1", INVTYPE_TRINKET.." 2", "Relic 1", "Relic 2", "Relic 3"}
 	
 	for i, slot in ipairs(order) do
 		local bossName = EJ_GetEncounterInfoByIndex(BiS[slot].bossIndex or 0 , brmT.raidID) or ""
 		bossName = bossName ~= "" and "("..bossName..")" or ""
 		
-		--[[local name = (BiS[slot].bossIndex or 0) > 0 and GetItemInfo(BiS[slot].link) or GetItemInfo(BiS[slot].link)
-		name = name == nil and "|cFFFF8000 Legendary |r" or name
-		name = BiS[slot].isTier and "|cFF00FF00 "..name.." |r" or name
-		name = (BiS[slot].bossIndex == 0) and "|cFFFF0000 "..name.." |r" or name]]--
 		
 		local name = GetItemInfo(BiS[slot].link)
 		
@@ -217,16 +205,16 @@ end
 function BonusRollManagerTable.calcBiS()
 	wipe(isOccupied)
 	brmV.BiS = {
-		["Head"] = {},
-		["Neck"] = {},
-		["Shoulder"] = {},
-		["Chest"] = {},
-		["Waist"] = {},
-		["Legs"] = {},
-		["Feet"] = {},
-		["Wrist"] = {},
-		["Hands"] = {},
-		["Back"] = {}
+		[INVTYPE_HEAD] = {},
+		[INVTYPE_NECK] = {},
+		[INVTYPE_SHOULDER] = {},
+		[INVTYPE_CHEST] = {},
+		[INVTYPE_WAIST] = {},
+		[INVTYPE_LEGS] = {},
+		[INVTYPE_FEET] = {},
+		[INVTYPE_WRIST] = {},
+		[INVTYPE_HAND] = {},
+		[INVTYPE_CLOAK] = {}
 	}
 	BiS = brmV.BiS
 	for slot, gear in pairs(BiS) do
@@ -243,7 +231,7 @@ function BonusRollManagerTable.calcBiS()
 			end
 		end
 	end
-	local doubleSlot = {"Finger", "Trinket"}
+	local doubleSlot = {INVTYPE_FINGER, INVTYPE_TRINKET}
 	for i, slot in pairs(doubleSlot) do
 		local bestGearLink = ""
 		for gearIndex = 1, 2, 1 do
@@ -338,7 +326,7 @@ function BonusRollManagerTable.calcBiS()
 	for slot, item in pairs(BiS) do
 		local t = ""
 		local itemSlot = slot
-		if string.find(slot, "Finger") or string.find(slot, "Trinket") then
+		if string.find(slot, INVTYPE_FINGER) or string.find(slot, INVTYPE_TRINKET) then
 			t = "1"
 			itemSlot = string.sub(slot, 1, -2)
 		end

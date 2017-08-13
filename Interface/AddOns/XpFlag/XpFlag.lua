@@ -90,7 +90,7 @@ function XpFlag.animateMark(self, limit)
 		new = self.to
 		self.to = nil
 		if self.name == playerNameRealm then
-			UIFrameFadeOut(marks[playerNameRealm].model, 0.2, marks[playerNameRealm].model:GetAlpha(), 0)
+			UIFrameFadeOut(marks[playerNameRealm].model, 1, marks[playerNameRealm].model:GetAlpha(), 0)
 		end		
 	end
 
@@ -135,7 +135,8 @@ function XpFlag:OnInitialize()
 	XpFlag:RegisterEvent("PLAYER_LEVEL_UP");
 	XpFlag:RegisterEvent("CHAT_MSG_ADDON");
 	XpFlag:RegisterEvent("FRIENDLIST_UPDATE");
-
+	XpFlag:RegisterEvent("PLAYER_UPDATE_RESTING");
+	
 	RegisterAddonMessagePrefix("XpFlag")
 end
 
@@ -170,8 +171,8 @@ function XpFlag.CreateBar(value, maxvalue)
 	    tile = true,
 	    insets = { left = 0, right = 0, top = 0, bottom = -1 }
 	})
-	playerBar:SetBackdropColor(0, 0, 0, 1)
-	playerBar:SetBackdropBorderColor(0, 0, 0, 1)
+	playerBar:SetBackdropColor(0, 0, 0, 0.5)
+	playerBar:SetBackdropBorderColor(0, 0, 0, 0.5)
 
 
 	playerBar:Show();
@@ -339,6 +340,13 @@ function XpFlag:PLAYER_ENTERING_WORLD(event)
 	XpFlag:UnregisterEvent("PLAYER_ENTERING_WORLD");
 end
 
+function XpFlag:PLAYER_UPDATE_RESTING(event) 
+	if XpFlag.db.showself then
+		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
+		XpFlag.UpdatePlayerBar()
+	end
+end
+
 
 function XpFlag:FRIENDLIST_UPDATE()
 	local allFriends, onlineFriends = GetNumFriends()
@@ -361,8 +369,6 @@ end
 function XpFlag:PLAYER_XP_UPDATE(event, unit)
 	if unit ~= "player" then return end
 
-	
-
 	for target, _ in pairs(friends) do
 		if target then
 			SendAddonMessage("XpFlag", XpFlag.createMessage("XpFlag"), "WHISPER", target);
@@ -370,7 +376,7 @@ function XpFlag:PLAYER_XP_UPDATE(event, unit)
 	end
 
 	if XpFlag.db.showself then
-		UIFrameFadeIn(marks[playerNameRealm].model, 0.5, marks[playerNameRealm].model:GetAlpha(), 1)
+		UIFrameFadeIn(marks[playerNameRealm].model, 0.15, marks[playerNameRealm].model:GetAlpha(), 1)
 		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
 		XpFlag.UpdatePlayerBar()
 	end

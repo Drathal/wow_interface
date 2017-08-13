@@ -10,36 +10,84 @@ WoWDBProfilerData = {
 	["region"] = "EU",
 	["global"] = {
 		["items"] = {
+			[24607] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 29,
+				["durability"] = 115,
+				["suffix_id"] = -37,
+			},
+			[139879] = {
+				["instance_difficulty_id"] = 32,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[8112] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 85,
+				["unique_id"] = 0,
+			},
+			[121168] = {
+				["instance_difficulty_id"] = 0,
+				["upgrade_value"] = 110,
+				["suffix_id"] = 0,
+				["durability"] = 40,
+				["unique_id"] = 0,
+			},
+			[11625] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[141605] = {
+				["instance_difficulty_id"] = 11,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
 			[122382] = {
 				["instance_difficulty_id"] = 0,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[11764] = {
+			[16248] = {
 				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
-				["durability"] = 50,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[25853] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["suffix_id"] = 0,
 				["unique_id"] = 0,
 			},
-			[128821] = {
+			[25366] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 40,
+				["suffix_id"] = 0,
+			},
+			[144481] = {
+				["instance_difficulty_id"] = 35,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[128866] = {
 				["instance_difficulty_id"] = 9,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
-				["upgrade_value"] = 269,
-			},
-			[147257] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[68673] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["suffix_id"] = 0,
+				["upgrade_value"] = 704,
 			},
 			[122255] = {
 				["instance_difficulty_id"] = 0,
@@ -47,11 +95,854 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
+			[25406] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 85,
+				["unique_id"] = 0,
+			},
+			[25941] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 65,
+				["suffix_id"] = 0,
+			},
+			[120978] = {
+				["instance_difficulty_id"] = 9,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 9,
+			},
+			[51962] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -79,
+				["durability"] = 50,
+				["unique_id"] = 16,
+			},
+			[128867] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 704,
+			},
+			[134519] = {
+				["instance_difficulty_id"] = 23,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[123917] = {
+				["instance_difficulty_id"] = 13,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[134392] = {
+				["instance_difficulty_id"] = 2,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[128868] = {
+				["instance_difficulty_id"] = 9,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 292,
+			},
+			[8751] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
+			},
+			[122353] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[33407] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 115,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[134202] = {
+				["instance_difficulty_id"] = 26,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[28249] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[25710] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[128709] = {
+				["instance_difficulty_id"] = 13,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[51963] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -82,
+				["durability"] = 65,
+				["unique_id"] = 21,
+			},
+			[51995] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 18,
+				["suffix_id"] = -92,
+			},
+			[11885] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[24289] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[137462] = {
+				["instance_difficulty_id"] = 43,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[11925] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[25375] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[139507] = {
+				["instance_difficulty_id"] = 31,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 26,
+			},
+			[133631] = {
+				["instance_difficulty_id"] = 43,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[140849] = {
+				["instance_difficulty_id"] = 4,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[24944] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 29,
+				["durability"] = 115,
+				["suffix_id"] = -16,
+			},
+			[6256] = {
+				["durability"] = 16,
+			},
+			[143661] = {
+				["instance_difficulty_id"] = 11,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[12025] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 13,
+				["suffix_id"] = -84,
+			},
+			[134528] = {
+				["instance_difficulty_id"] = 16,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[28202] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 140,
+				["unique_id"] = 0,
+			},
+			[146666] = {
+				["instance_difficulty_id"] = 0,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 120,
+				["unique_id"] = 0,
+			},
+			[137532] = {
+				["instance_difficulty_id"] = 43,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[132806] = {
+				["instance_difficulty_id"] = 11,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 110,
+			},
+			[146667] = {
+				["instance_difficulty_id"] = 13,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
+			},
+			[13179] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 50,
+				["unique_id"] = 0,
+			},
+			[117376] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 110,
+			},
+			[25360] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 40,
+				["unique_id"] = 0,
+			},
+			[24857] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 26,
+				["durability"] = 40,
+				["suffix_id"] = -40,
+			},
+			[133766] = {
+				["instance_difficulty_id"] = 2,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[25400] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[122359] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[33410] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[18318] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 65,
+				["unique_id"] = 0,
+			},
+			[13283] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[68673] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[18390] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[138815] = {
+				["instance_difficulty_id"] = 11,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[35279] = {
+				["instance_difficulty_id"] = 11,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[24578] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 40,
+				["suffix_id"] = 0,
+			},
+			[134217] = {
+				["instance_difficulty_id"] = 25,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[28187] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[8752] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 70,
+				["suffix_id"] = 0,
+			},
+			[134537] = {
+				["instance_difficulty_id"] = 23,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[122361] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[134218] = {
+				["instance_difficulty_id"] = 27,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 120,
+				["unique_id"] = 0,
+			},
+			[28259] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[15938] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 14,
+				["suffix_id"] = -19,
+			},
+			[139073] = {
+				["instance_difficulty_id"] = 37,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[134219] = {
+				["instance_difficulty_id"] = 27,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 165,
+				["unique_id"] = 0,
+			},
+			[89562] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["durability"] = 50,
+				["unique_id"] = 0,
+			},
+			[128941] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 192,
+			},
+			[122362] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[25305] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -8,
+				["durability"] = 55,
+				["unique_id"] = 15,
+			},
 			[134412] = {
 				["instance_difficulty_id"] = 2,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
+			},
+			[121021] = {
+				["instance_difficulty_id"] = 0,
+				["upgrade_value"] = 110,
+				["suffix_id"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
+			},
+			[25369] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 70,
+				["suffix_id"] = 0,
+			},
+			[138373] = {
+				["instance_difficulty_id"] = 4,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[25385] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 40,
+				["suffix_id"] = 0,
+			},
+			[141567] = {
+				["instance_difficulty_id"] = 26,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[114634] = {
+				["instance_difficulty_id"] = 1,
+				["contains_count"] = 2,
+				["upgrade_value"] = 0,
+				["contains"] = {
+					"112351:1", -- [1]
+					"112360:1", -- [2]
+				},
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[139205] = {
+				["instance_difficulty_id"] = 4,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[10465] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+			},
+			[147765] = {
+				["instance_difficulty_id"] = 3,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[18391] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 50,
+				["unique_id"] = 0,
+			},
+			[65931] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+			},
+			[25122] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 15,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["durability"] = 75,
+				["suffix_id"] = -19,
+			},
+			[24619] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 23,
+				["durability"] = 70,
+				["suffix_id"] = -39,
+			},
+			[138314] = {
+				["instance_difficulty_id"] = 4,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[147065] = {
+				["instance_difficulty_id"] = 4,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 120,
+				["unique_id"] = 0,
+			},
+			[28260] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[25713] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[147257] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[24707] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -14,
+				["durability"] = 70,
+				["unique_id"] = 22,
+			},
+			[24723] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 22,
+				["durability"] = 70,
+				["suffix_id"] = -8,
+			},
+			[128306] = {
+				["instance_difficulty_id"] = 9,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 49,
+			},
+			[8119] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 115,
+				["unique_id"] = 0,
+			},
+			[132375] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[24779] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -33,
+				["durability"] = 70,
+				["unique_id"] = 28,
+			},
+			[11140] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[145598] = {
+				["instance_difficulty_id"] = 8,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 165,
+				["unique_id"] = 0,
+			},
+			[25354] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 70,
+				["suffix_id"] = 0,
+			},
+			[15252] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -18,
+				["durability"] = 85,
+				["unique_id"] = 21,
+			},
+			[138317] = {
+				["instance_difficulty_id"] = 4,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 120,
+				["unique_id"] = 0,
+			},
+			[25378] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 40,
+				["unique_id"] = 0,
+			},
+			[25386] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
+			},
+			[25402] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[33430] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 85,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[144259] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[52002] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+			},
+			[134487] = {
+				["instance_difficulty_id"] = 35,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[126999] = {
+				["instance_difficulty_id"] = 13,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 120,
+				["unique_id"] = 0,
+			},
+			[138320] = {
+				["instance_difficulty_id"] = 5,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 165,
+				["unique_id"] = 0,
+			},
+			[13823] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[10765] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 50,
+				["unique_id"] = 0,
+			},
+			[132444] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[128884] = {
+				["instance_difficulty_id"] = 13,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 165,
+				["unique_id"] = 0,
+			},
+			[10797] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 90,
+				["unique_id"] = 0,
+			},
+			[13372] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[28285] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 85,
+				["unique_id"] = 0,
+			},
+			[35571] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 50,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[138323] = {
+				["instance_difficulty_id"] = 5,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[66000] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[24748] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 20,
+				["durability"] = 40,
+				["suffix_id"] = -40,
+			},
+			[52003] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[24772] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 20,
+				["durability"] = 40,
+				["suffix_id"] = -40,
+			},
+			[25299] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 12,
+				["durability"] = 55,
+				["suffix_id"] = -16,
+			},
+			[25355] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 85,
+				["unique_id"] = 0,
+			},
+			[24357] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 140,
+				["suffix_id"] = 0,
+			},
+			[25387] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[25395] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 85,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[25403] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 55,
+				["suffix_id"] = 0,
 			},
 			[141584] = {
 				["instance_difficulty_id"] = 26,
@@ -59,11 +950,11 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[138333] = {
+			[138327] = {
 				["instance_difficulty_id"] = 4,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
-				["durability"] = 120,
+				["durability"] = 55,
 				["unique_id"] = 0,
 			},
 			[52004] = {
@@ -75,11 +966,237 @@ WoWDBProfilerData = {
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 			},
-			[123913] = {
-				["instance_difficulty_id"] = 13,
+			[12534] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[24613] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 23,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["durability"] = 40,
+				["suffix_id"] = -16,
+			},
+			[24725] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -13,
+				["durability"] = 40,
+				["unique_id"] = 23,
+			},
+			[134242] = {
+				["instance_difficulty_id"] = 42,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
 				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[112360] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["19"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[44374] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[38219] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[130230] = {
+				["instance_difficulty_id"] = 13,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[24709] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -39,
+				["durability"] = 40,
+				["unique_id"] = 22,
+			},
+			[35573] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 65,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[12634] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 50,
+				["suffix_id"] = 0,
+			},
+			[128825] = {
+				["instance_difficulty_id"] = 9,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 748,
+			},
+			[29333] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+			},
+			[3936] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 40,
+				["unique_id"] = 0,
+			},
+			[52005] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+			},
+			[121799] = {
+				["instance_difficulty_id"] = 26,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[128821] = {
+				["instance_difficulty_id"] = 9,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 269,
+			},
+			[25199] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -41,
+				["durability"] = 75,
+				["unique_id"] = 12,
+			},
+			[144400] = {
+				["instance_difficulty_id"] = 6,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[3973] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 40,
+				["suffix_id"] = 0,
+			},
+			[138333] = {
+				["instance_difficulty_id"] = 4,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 120,
+				["unique_id"] = 0,
+			},
+			[140889] = {
+				["instance_difficulty_id"] = 4,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[3945] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[25340] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 115,
+				["unique_id"] = 0,
+			},
+			[25348] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["durability"] = 115,
+				["unique_id"] = 0,
+				["suffix_id"] = 0,
+			},
+			[25356] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
+			},
+			[25364] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
+			},
+			[18729] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[27424] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 90,
+				["unique_id"] = 0,
+			},
+			[18345] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[25230] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 31,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
+				["durability"] = 85,
+				["suffix_id"] = -13,
+			},
+			[132457] = {
+				["instance_difficulty_id"] = 0,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 70,
 				["unique_id"] = 0,
 			},
 			[128886] = {
@@ -95,26 +1212,42 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["suffix_id"] = 0,
 			},
-			[25349] = {
+			[144433] = {
+				["instance_difficulty_id"] = 14,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[134246] = {
+				["instance_difficulty_id"] = 26,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[143691] = {
+				["instance_difficulty_id"] = 25,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[27919] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["unique_id"] = 0,
-				["durability"] = 115,
+				["durability"] = 65,
 				["suffix_id"] = 0,
 			},
-			[3990] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 85,
+			[122262] = {
+				["instance_difficulty_id"] = 0,
 				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
 			},
-			[25369] = {
+			[18734] = {
 				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 70,
 				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
 			},
 			[3993] = {
 				["instance_difficulty_id"] = 1,
@@ -122,6 +1255,25 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["durability"] = 55,
 				["suffix_id"] = 0,
+			},
+			[121098] = {
+				["instance_difficulty_id"] = 0,
+				["upgrade_value"] = 110,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[122663] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[128827] = {
+				["instance_difficulty_id"] = 9,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 119,
 			},
 			[128823] = {
 				["instance_difficulty_id"] = 9,
@@ -136,41 +1288,48 @@ WoWDBProfilerData = {
 				["durability"] = 55,
 				["unique_id"] = 0,
 			},
-			[3995] = {
+			[21947] = {
 				["instance_difficulty_id"] = 1,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[25397] = {
+			[24782] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 40,
+				["unique_id"] = 0,
+			},
+			[11764] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 50,
+				["unique_id"] = 0,
+			},
+			[25401] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["unique_id"] = 0,
 				["durability"] = 75,
 				["suffix_id"] = 0,
 			},
-			[13372] = {
-				["instance_difficulty_id"] = 1,
+			[144404] = {
+				["instance_difficulty_id"] = 5,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[29330] = {
+				["instance_difficulty_id"] = 11,
+				["upgrade_value"] = 0,
 				["seen_bonuses"] = {
 					["0"] = true,
 				},
-				["durability"] = 100,
 				["unique_id"] = 0,
-			},
-			[137508] = {
-				["instance_difficulty_id"] = 34,
-				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
-				["durability"] = 80,
-				["unique_id"] = 0,
-			},
-			[138815] = {
-				["instance_difficulty_id"] = 11,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
 			},
 			[141652] = {
 				["instance_difficulty_id"] = 11,
@@ -178,17 +1337,12 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[122353] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[15938] = {
+			[24755] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["unique_id"] = 14,
-				["suffix_id"] = -19,
+				["suffix_id"] = -18,
+				["durability"] = 70,
+				["unique_id"] = 26,
 			},
 			[140792] = {
 				["instance_difficulty_id"] = 5,
@@ -196,15 +1350,20 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[10842] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
+			[143702] = {
+				["instance_difficulty_id"] = 25,
 				["suffix_id"] = 0,
-				["durability"] = 100,
 				["unique_id"] = 0,
+				["upgrade_value"] = 0,
 			},
-			[143661] = {
-				["instance_difficulty_id"] = 11,
+			[25093] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = -33,
+				["unique_id"] = 20,
+				["upgrade_value"] = 0,
+			},
+			[137540] = {
+				["instance_difficulty_id"] = 16,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
@@ -215,6 +1374,25 @@ WoWDBProfilerData = {
 				["suffix_id"] = 0,
 				["durability"] = 55,
 				["unique_id"] = 0,
+			},
+			[121163] = {
+				["instance_difficulty_id"] = 23,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 80,
+				["unique_id"] = 0,
+			},
+			[128860] = {
+				["instance_difficulty_id"] = 9,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 428,
+			},
+			[122249] = {
+				["instance_difficulty_id"] = 0,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
 			},
 			[142004] = {
 				["instance_difficulty_id"] = 11,
@@ -228,14 +1406,36 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[35279] = {
-				["instance_difficulty_id"] = 11,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[18345] = {
+			[24963] = {
 				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 33,
+				["durability"] = 85,
+				["suffix_id"] = -9,
+			},
+			[123910] = {
+				["instance_difficulty_id"] = 13,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 165,
+				["unique_id"] = 0,
+			},
+			[3989] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 85,
+				["unique_id"] = 0,
+			},
+			[3990] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[145534] = {
+				["instance_difficulty_id"] = 8,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
@@ -247,53 +1447,85 @@ WoWDBProfilerData = {
 				["durability"] = 80,
 				["unique_id"] = 0,
 			},
-			[139073] = {
-				["instance_difficulty_id"] = 37,
+			[137508] = {
+				["instance_difficulty_id"] = 34,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
-				["durability"] = 55,
+				["durability"] = 80,
 				["unique_id"] = 0,
 			},
-			[21947] = {
+			[24620] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 17,
+				["durability"] = 40,
+				["suffix_id"] = -21,
+			},
+			[3995] = {
 				["instance_difficulty_id"] = 1,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[13179] = {
+			[10842] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[144471] = {
+				["instance_difficulty_id"] = 43,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 80,
+				["unique_id"] = 0,
+			},
+			[51959] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 23,
 				["durability"] = 50,
-				["unique_id"] = 0,
+				["suffix_id"] = -42,
 			},
-			[132444] = {
+			[132374] = {
 				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
 				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 70,
+				["unique_id"] = 0,
 			},
-			[66000] = {
-				["instance_difficulty_id"] = 11,
+			[51991] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = -39,
+				["unique_id"] = 18,
 				["upgrade_value"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
-				["unique_id"] = 0,
-				["suffix_id"] = 0,
-			},
-			[123917] = {
-				["instance_difficulty_id"] = 13,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
 			},
 			[128858] = {
 				["instance_difficulty_id"] = 9,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 407,
+			},
+			[25342] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 55,
+				["unique_id"] = 0,
+			},
+			[140192] = {
+				["instance_difficulty_id"] = 11,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[123911] = {
+				["instance_difficulty_id"] = 13,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 80,
+				["unique_id"] = 0,
 			},
 			[4020] = {
 				["instance_difficulty_id"] = 1,
@@ -315,24 +1547,12 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[25354] = {
-				["instance_difficulty_id"] = 1,
+			[138311] = {
+				["instance_difficulty_id"] = 4,
 				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 70,
 				["suffix_id"] = 0,
-			},
-			[140192] = {
-				["instance_difficulty_id"] = 11,
-				["suffix_id"] = 0,
+				["durability"] = 55,
 				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[144400] = {
-				["instance_difficulty_id"] = 6,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
 			},
 			[129082] = {
 				["instance_difficulty_id"] = 0,
@@ -341,48 +1561,19 @@ WoWDBProfilerData = {
 				["durability"] = 50,
 				["unique_id"] = 0,
 			},
-			[134519] = {
-				["instance_difficulty_id"] = 23,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[139205] = {
-				["instance_difficulty_id"] = 4,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[6256] = {
-				["durability"] = 16,
-			},
-			[24963] = {
+			[24611] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["unique_id"] = 33,
-				["durability"] = 85,
-				["suffix_id"] = -9,
+				["unique_id"] = 22,
+				["durability"] = 70,
+				["suffix_id"] = -8,
 			},
-			[121799] = {
-				["instance_difficulty_id"] = 26,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[144433] = {
-				["instance_difficulty_id"] = 14,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[3989] = {
+			[25349] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 85,
 				["unique_id"] = 0,
+				["durability"] = 115,
+				["suffix_id"] = 0,
 			},
 			[146792] = {
 				["instance_difficulty_id"] = 27,
@@ -391,85 +1582,25 @@ WoWDBProfilerData = {
 				["durability"] = 55,
 				["unique_id"] = 0,
 			},
-			[121098] = {
-				["instance_difficulty_id"] = 0,
-				["upgrade_value"] = 110,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[24620] = {
+			[25365] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["unique_id"] = 17,
-				["durability"] = 40,
-				["suffix_id"] = -21,
+				["suffix_id"] = 0,
+				["durability"] = 115,
+				["unique_id"] = 0,
 			},
-			[24357] = {
+			[25373] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["unique_id"] = 0,
-				["durability"] = 140,
+				["durability"] = 115,
 				["suffix_id"] = 0,
 			},
-			[140849] = {
-				["instance_difficulty_id"] = 4,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[134202] = {
-				["instance_difficulty_id"] = 26,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[138314] = {
-				["instance_difficulty_id"] = 4,
+			[18738] = {
+				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
 				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[24944] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 29,
-				["durability"] = 115,
-				["suffix_id"] = -16,
-			},
-			[128860] = {
-				["instance_difficulty_id"] = 9,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 428,
-			},
-			[18318] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 65,
-				["unique_id"] = 0,
-			},
-			[122262] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[3973] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 40,
-				["suffix_id"] = 0,
-			},
-			[146666] = {
-				["instance_difficulty_id"] = 0,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 120,
 				["unique_id"] = 0,
 			},
 			[144403] = {
@@ -478,307 +1609,18 @@ WoWDBProfilerData = {
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[13283] = {
+			[25397] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["unique_id"] = 0,
+				["durability"] = 75,
 				["suffix_id"] = 0,
 			},
-			[143702] = {
-				["instance_difficulty_id"] = 25,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[25406] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 85,
-				["unique_id"] = 0,
-			},
-			[25366] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 40,
-				["suffix_id"] = 0,
-			},
-			[145534] = {
-				["instance_difficulty_id"] = 8,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[134537] = {
-				["instance_difficulty_id"] = 23,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[141567] = {
-				["instance_difficulty_id"] = 26,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[121163] = {
-				["instance_difficulty_id"] = 23,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 80,
-				["unique_id"] = 0,
-			},
-			[12534] = {
-				["instance_difficulty_id"] = 1,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[137540] = {
-				["instance_difficulty_id"] = 16,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[137105] = {
-				["instance_difficulty_id"] = 0,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 70,
-				["unique_id"] = 0,
-			},
-			[128825] = {
-				["instance_difficulty_id"] = 9,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 748,
-			},
-			[18390] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[133631] = {
-				["instance_difficulty_id"] = 43,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[122359] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[13823] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 85,
-				["suffix_id"] = 0,
-			},
-			[10765] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 50,
-				["unique_id"] = 0,
-			},
-			[139879] = {
-				["instance_difficulty_id"] = 32,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[25299] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 12,
-				["durability"] = 55,
-				["suffix_id"] = -16,
-			},
-			[25385] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 40,
-				["suffix_id"] = 0,
-			},
-			[134487] = {
-				["instance_difficulty_id"] = 35,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[128827] = {
-				["instance_difficulty_id"] = 9,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 119,
-			},
-			[24709] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = -39,
-				["durability"] = 40,
-				["unique_id"] = 22,
-			},
-			[51995] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 18,
-				["suffix_id"] = -43,
-			},
-			[132375] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[140900] = {
+			[140894] = {
 				["instance_difficulty_id"] = 5,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
-			},
-			[134217] = {
-				["instance_difficulty_id"] = 25,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[12025] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 13,
-				["suffix_id"] = -84,
-			},
-			[8749] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 70,
-				["unique_id"] = 0,
-			},
-			[24578] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 40,
-				["suffix_id"] = 0,
-			},
-			[121021] = {
-				["instance_difficulty_id"] = 0,
-				["upgrade_value"] = 110,
-				["suffix_id"] = 0,
-				["durability"] = 70,
-				["unique_id"] = 0,
-			},
-			[128942] = {
-				["instance_difficulty_id"] = 9,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 334,
-			},
-			[10797] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 90,
-				["unique_id"] = 0,
-			},
-			[144471] = {
-				["instance_difficulty_id"] = 43,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 80,
-				["unique_id"] = 0,
-			},
-			[130230] = {
-				["instance_difficulty_id"] = 13,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[128941] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 192,
-			},
-			[25400] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 85,
-				["suffix_id"] = 0,
-			},
-			[122663] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[51960] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = -88,
-				["durability"] = 50,
-				["unique_id"] = 24,
-			},
-			[18729] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[138320] = {
-				["instance_difficulty_id"] = 5,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 165,
-				["unique_id"] = 0,
-			},
-			[25713] = {
-				["instance_difficulty_id"] = 11,
-				["upgrade_value"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
-				["unique_id"] = 0,
-				["suffix_id"] = 0,
-			},
-			[122249] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[132806] = {
-				["instance_difficulty_id"] = 11,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 110,
-			},
-			[8752] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 70,
-				["suffix_id"] = 0,
-			},
-			[141285] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 110,
 			},
 			[24391] = {
 				["instance_difficulty_id"] = 1,
@@ -787,102 +1629,54 @@ WoWDBProfilerData = {
 				["durability"] = 100,
 				["suffix_id"] = 0,
 			},
-			[128943] = {
-				["instance_difficulty_id"] = 9,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 815,
-			},
-			[24611] = {
+			[33404] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["unique_id"] = 22,
-				["durability"] = 70,
-				["suffix_id"] = -8,
-			},
-			[134528] = {
-				["instance_difficulty_id"] = 16,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[122361] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[3936] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
 				["durability"] = 40,
 				["unique_id"] = 0,
+				["suffix_id"] = 0,
 			},
-			[8112] = {
+			[140900] = {
+				["instance_difficulty_id"] = 5,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[140897] = {
+				["instance_difficulty_id"] = 4,
+				["suffix_id"] = 0,
+				["unique_id"] = 0,
+				["upgrade_value"] = 0,
+			},
+			[24753] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 85,
-				["unique_id"] = 0,
+				["suffix_id"] = -41,
+				["durability"] = 70,
+				["unique_id"] = 35,
 			},
-			[126999] = {
-				["instance_difficulty_id"] = 13,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 120,
-				["unique_id"] = 0,
-			},
-			[132457] = {
+			[137105] = {
 				["instance_difficulty_id"] = 0,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
 				["durability"] = 70,
 				["unique_id"] = 0,
 			},
-			[141605] = {
-				["instance_difficulty_id"] = 11,
+			[13212] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 0,
 				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
 			},
-			[134242] = {
-				["instance_difficulty_id"] = 42,
+			[112351] = {
+				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[25710] = {
-				["instance_difficulty_id"] = 11,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
 				["durability"] = 85,
-				["suffix_id"] = 0,
-			},
-			[12634] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
+				["seen_bonuses"] = {
+					["39"] = true,
+				},
 				["unique_id"] = 0,
-				["durability"] = 50,
 				["suffix_id"] = 0,
-			},
-			[8119] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 115,
-				["unique_id"] = 0,
-			},
-			[18738] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
 			},
 			[22411] = {
 				["instance_difficulty_id"] = 1,
@@ -893,214 +1687,24 @@ WoWDBProfilerData = {
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 			},
-			[89562] = {
-				["instance_difficulty_id"] = 11,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
-				["durability"] = 50,
-				["unique_id"] = 0,
-			},
-			[134392] = {
-				["instance_difficulty_id"] = 2,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[138323] = {
-				["instance_difficulty_id"] = 5,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 100,
-				["unique_id"] = 0,
-			},
-			[25356] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 70,
-				["unique_id"] = 0,
-			},
-			[122362] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[51993] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 17,
-				["suffix_id"] = -40,
-			},
-			[140899] = {
-				["instance_difficulty_id"] = 4,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[3945] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[140897] = {
-				["instance_difficulty_id"] = 4,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[13212] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["suffix_id"] = 0,
-			},
-			[138317] = {
-				["instance_difficulty_id"] = 4,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 120,
-				["unique_id"] = 0,
-			},
-			[133766] = {
-				["instance_difficulty_id"] = 2,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[137462] = {
-				["instance_difficulty_id"] = 43,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[18391] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 50,
-				["unique_id"] = 0,
-			},
-			[11140] = {
-				["instance_difficulty_id"] = 1,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[3949] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 85,
-				["suffix_id"] = 0,
-			},
-			[128306] = {
-				["instance_difficulty_id"] = 9,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 49,
-			},
-			[51959] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 23,
-				["durability"] = 50,
-				["suffix_id"] = -42,
-			},
-			[16248] = {
-				["instance_difficulty_id"] = 1,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[140889] = {
-				["instance_difficulty_id"] = 4,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[52002] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-			},
-			[51962] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = -79,
-				["durability"] = 50,
-				["unique_id"] = 16,
-			},
-			[146667] = {
-				["instance_difficulty_id"] = 13,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 70,
-				["unique_id"] = 0,
-			},
 			[139237] = {
 				["instance_difficulty_id"] = 4,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 0,
 			},
-			[11925] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 0,
-				["durability"] = 85,
-				["suffix_id"] = 0,
-			},
-			[121168] = {
-				["instance_difficulty_id"] = 0,
-				["upgrade_value"] = 110,
-				["suffix_id"] = 0,
-				["durability"] = 40,
-				["unique_id"] = 0,
-			},
-			[134246] = {
-				["instance_difficulty_id"] = 26,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[3966] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 85,
-				["unique_id"] = 0,
-			},
-			[128866] = {
+			[128943] = {
 				["instance_difficulty_id"] = 9,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
-				["upgrade_value"] = 704,
+				["upgrade_value"] = 815,
 			},
-			[25340] = {
+			[51960] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 115,
-				["unique_id"] = 0,
-			},
-			[15252] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = -18,
-				["durability"] = 85,
-				["unique_id"] = 21,
+				["suffix_id"] = -88,
+				["durability"] = 50,
+				["unique_id"] = 24,
 			},
 			[9970] = {
 				["instance_difficulty_id"] = 1,
@@ -1115,254 +1719,86 @@ WoWDBProfilerData = {
 				["unique_id"] = 13,
 				["upgrade_value"] = 0,
 			},
-			[11885] = {
-				["instance_difficulty_id"] = 1,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[138327] = {
-				["instance_difficulty_id"] = 4,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[25386] = {
+			[8749] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
 				["durability"] = 70,
 				["unique_id"] = 0,
 			},
-			[18734] = {
-				["instance_difficulty_id"] = 1,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[123910] = {
-				["instance_difficulty_id"] = 13,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 165,
-				["unique_id"] = 0,
-			},
-			[24607] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 29,
-				["durability"] = 115,
-				["suffix_id"] = -37,
-			},
-			[139507] = {
-				["instance_difficulty_id"] = 31,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 26,
-			},
-			[128868] = {
+			[128942] = {
 				["instance_difficulty_id"] = 9,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
-				["upgrade_value"] = 292,
+				["upgrade_value"] = 334,
 			},
-			[24619] = {
-				["instance_difficulty_id"] = 1,
+			[25541] = {
+				["instance_difficulty_id"] = 11,
 				["upgrade_value"] = 0,
-				["unique_id"] = 23,
-				["durability"] = 70,
-				["suffix_id"] = -39,
-			},
-			[140894] = {
-				["instance_difficulty_id"] = 5,
-				["suffix_id"] = 0,
+				["seen_bonuses"] = {
+					["0"] = true,
+				},
 				["unique_id"] = 0,
-				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
 			},
-			[117376] = {
-				["instance_difficulty_id"] = 1,
+			[123913] = {
+				["instance_difficulty_id"] = 13,
+				["upgrade_value"] = 0,
+				["suffix_id"] = 0,
+				["durability"] = 100,
+				["unique_id"] = 0,
+			},
+			[141285] = {
+				["instance_difficulty_id"] = 0,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
 				["upgrade_value"] = 110,
 			},
-			[128867] = {
-				["instance_difficulty_id"] = 0,
+			[140899] = {
+				["instance_difficulty_id"] = 4,
 				["suffix_id"] = 0,
 				["unique_id"] = 0,
-				["upgrade_value"] = 704,
-			},
-			[120978] = {
-				["instance_difficulty_id"] = 9,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 9,
-			},
-			[144404] = {
-				["instance_difficulty_id"] = 5,
 				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
 			},
-			[51963] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["suffix_id"] = -82,
-				["durability"] = 65,
-				["unique_id"] = 21,
-			},
-			[25355] = {
+			[3966] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
 				["durability"] = 85,
 				["unique_id"] = 0,
 			},
-			[137532] = {
-				["instance_difficulty_id"] = 43,
-				["suffix_id"] = 0,
+			[51993] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["unique_id"] = 17,
+				["suffix_id"] = -40,
+			},
+			[3949] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
 				["unique_id"] = 0,
+				["durability"] = 85,
+				["suffix_id"] = 0,
+			},
+			[51961] = {
+				["instance_difficulty_id"] = 1,
+				["upgrade_value"] = 0,
+				["suffix_id"] = -40,
+				["durability"] = 85,
+				["unique_id"] = 24,
+			},
+			[25094] = {
+				["instance_difficulty_id"] = 1,
+				["suffix_id"] = -39,
+				["unique_id"] = 20,
 				["upgrade_value"] = 0,
 			},
-			[8751] = {
+			[25380] = {
 				["instance_difficulty_id"] = 1,
 				["upgrade_value"] = 0,
 				["suffix_id"] = 0,
 				["durability"] = 70,
 				["unique_id"] = 0,
-			},
-			[144481] = {
-				["instance_difficulty_id"] = 35,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[52003] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
-				["unique_id"] = 0,
-				["suffix_id"] = 0,
-			},
-			[123911] = {
-				["instance_difficulty_id"] = 13,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 80,
-				["unique_id"] = 0,
-			},
-			[138311] = {
-				["instance_difficulty_id"] = 4,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 55,
-				["unique_id"] = 0,
-			},
-			[132374] = {
-				["instance_difficulty_id"] = 0,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 70,
-				["unique_id"] = 0,
-			},
-			[11625] = {
-				["instance_difficulty_id"] = 1,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[134218] = {
-				["instance_difficulty_id"] = 27,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 120,
-				["unique_id"] = 0,
-			},
-			[147765] = {
-				["instance_difficulty_id"] = 3,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[10465] = {
-				["instance_difficulty_id"] = 11,
-				["upgrade_value"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-			},
-			[144259] = {
-				["instance_difficulty_id"] = 0,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[128884] = {
-				["instance_difficulty_id"] = 13,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 165,
-				["unique_id"] = 0,
-			},
-			[145598] = {
-				["instance_difficulty_id"] = 8,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 165,
-				["unique_id"] = 0,
-			},
-			[65931] = {
-				["instance_difficulty_id"] = 11,
-				["upgrade_value"] = 0,
-				["seen_bonuses"] = {
-					["0"] = true,
-				},
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-			},
-			[138373] = {
-				["instance_difficulty_id"] = 4,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[134219] = {
-				["instance_difficulty_id"] = 27,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 165,
-				["unique_id"] = 0,
-			},
-			[128709] = {
-				["instance_difficulty_id"] = 13,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
-			},
-			[24723] = {
-				["instance_difficulty_id"] = 1,
-				["upgrade_value"] = 0,
-				["unique_id"] = 22,
-				["durability"] = 70,
-				["suffix_id"] = -8,
-			},
-			[147065] = {
-				["instance_difficulty_id"] = 4,
-				["upgrade_value"] = 0,
-				["suffix_id"] = 0,
-				["durability"] = 120,
-				["unique_id"] = 0,
-			},
-			[143691] = {
-				["instance_difficulty_id"] = 25,
-				["suffix_id"] = 0,
-				["unique_id"] = 0,
-				["upgrade_value"] = 0,
 			},
 		},
 		["objects"] = {
@@ -1392,6 +1828,8 @@ WoWDBProfilerData = {
 					["locations"] = {
 						["Stormwind City:301"] = {
 							["0:624:746"] = true,
+							["0:624:750"] = true,
+							["0:626:748"] = true,
 						},
 					},
 				},
@@ -1426,10 +1864,10 @@ WoWDBProfilerData = {
 							},
 						},
 						["loot_counts"] = {
-							["drops"] = 4,
+							["drops"] = 5,
 						},
 						["spells"] = {
-							[16856] = 51,
+							[16856] = 57,
 							[1604] = 2,
 						},
 						["drops"] = {
@@ -1438,18 +1876,19 @@ WoWDBProfilerData = {
 							"25116:1", -- [3]
 							"24931:1", -- [4]
 							"24944:1", -- [5]
+							"25199:1", -- [6]
 						},
 					},
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "60:Alliance:HOSTILE",
+				["reaction"] = "66:Alliance:HOSTILE",
 			},
 			["17307"] = {
-				["reaction"] = "60:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
 				["genders"] = {
 					["MALE"] = true,
 				},
+				["class"] = "WARRIOR",
+				["reaction"] = "66:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
@@ -1458,8 +1897,8 @@ WoWDBProfilerData = {
 							},
 						},
 						["spells"] = {
-							[30926] = 2,
-							[33793] = 3,
+							[30926] = 3,
+							[33793] = 5,
 							[30691] = 8,
 						},
 					},
@@ -1509,15 +1948,17 @@ WoWDBProfilerData = {
 				},
 			},
 			["21128"] = {
-				["reaction"] = "63:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
+				["reputations"] = {
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
 				["genders"] = {
 					["UNKNOWN"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
-							[34984] = 2,
+							[34984] = 17,
+							[1604] = 2,
 						},
 						["stats"] = {
 							["level_64"] = {
@@ -1526,6 +1967,8 @@ WoWDBProfilerData = {
 						},
 					},
 				},
+				["class"] = "WARRIOR",
+				["reaction"] = "66:Alliance:HOSTILE",
 			},
 			["43769"] = {
 				["teaches"] = {
@@ -1561,15 +2004,54 @@ WoWDBProfilerData = {
 						},
 					},
 				},
-				["reaction"] = "63:Alliance:FRIENDLY",
+				["reaction"] = "68:Alliance:FRIENDLY",
+			},
+			["21148"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 50,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["The sands of time shall be scattered to the winds!"] = true,
+						["You will never defeat us all!"] = true,
+						["You will accomplish nothing!"] = true,
+						["History is about to be rewritten!"] = true,
+					},
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["The rift must be protected!"] = true,
+					},
+				},
+				["reaction"] = "69:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[36277] = 1,
+							[8269] = 6,
+							[36279] = 36,
+						},
+						["stats"] = {
+							["level_71"] = {
+								["power"] = "MANA:32310",
+								["max_health"] = 39987,
+							},
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["genders"] = {
+					["FEMALE"] = true,
+				},
 			},
 			["17455"] = {
+				["reputations"] = {
+					["Honor Hold:FRIENDLY"] = 5,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
 						},
 						["spells"] = {
-							[10966] = 2,
+							[10966] = 3,
 							[81219] = 8,
 						},
 					},
@@ -1599,7 +2081,7 @@ WoWDBProfilerData = {
 							["drops"] = 3,
 						},
 						["spells"] = {
-							[15241] = 364,
+							[15241] = 450,
 							[31598] = 24,
 						},
 						["drops"] = {
@@ -1611,7 +2093,7 @@ WoWDBProfilerData = {
 					},
 				},
 				["class"] = "MAGE",
-				["reaction"] = "61:Alliance:HOSTILE",
+				["reaction"] = "66:Alliance:HOSTILE",
 			},
 			["17398"] = {
 				["reputations"] = {
@@ -1647,13 +2129,42 @@ WoWDBProfilerData = {
 				["reaction"] = "62:Alliance:HOSTILE",
 			},
 			["17960"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["My blood is like venom!"] = true,
+					},
+				},
+				["reaction"] = "65:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
 							[30923] = 2,
-							[15791] = 5,
+							[15791] = 7,
 							[31555] = 3,
 							[1604] = 1,
+						},
+						["stats"] = {
+							["level_62"] = {
+								["power"] = "MANA:6015",
+								["max_health"] = 7244,
+							},
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+			},
+			["18179"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[33132] = 1,
 						},
 						["stats"] = {
 						},
@@ -1687,14 +2198,13 @@ WoWDBProfilerData = {
 			["17962"] = {
 				["reputations"] = {
 					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
 				},
-				["genders"] = {
-					["MALE"] = true,
-				},
+				["reaction"] = "66:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["loot_counts"] = {
-							["drops"] = 2,
+							["drops"] = 3,
 						},
 						["stats"] = {
 							["level_62"] = {
@@ -1702,17 +2212,41 @@ WoWDBProfilerData = {
 							},
 						},
 						["spells"] = {
-							[8269] = 10,
+							[8269] = 46,
 							[1604] = 1,
 						},
 						["drops"] = {
 							"24620:1", -- [1]
 							"24723:1", -- [2]
+							"25286:1", -- [3]
 						},
 					},
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "63:Alliance:HOSTILE",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
+			["24083"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[43931] = 12,
+							[50653] = 1,
+							[49722] = 4,
+						},
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 34392,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "69:Alliance:HOSTILE",
 			},
 			["17371"] = {
 				["reputations"] = {
@@ -1756,40 +2290,67 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["18521"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 8,
+				},
+			},
 			["17816"] = {
 				["reputations"] = {
 					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
 				},
+				["reaction"] = "66:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["loot_counts"] = {
-							["drops"] = 1,
+							["drops"] = 2,
 						},
 						["stats"] = {
+							["level_62"] = {
+								["max_health"] = 9054,
+							},
 						},
 						["spells"] = {
-							[31551] = 2,
+							[31551] = 6,
+							[1604] = 1,
 						},
 						["drops"] = {
 							"24476:1", -- [1]
 							"25429:4", -- [2]
+							"money:903", -- [3]
+							"25429:3", -- [4]
 						},
 					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
 				},
 			},
 			["17959"] = {
 				["reputations"] = {
 					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["genders"] = {
+					["MALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
-							[6754] = 2,
+							[6754] = 8,
+							[9080] = 8,
 						},
 						["stats"] = {
+							["level_62"] = {
+								["max_health"] = 9366,
+							},
 						},
 					},
 				},
+				["class"] = "WARRIOR",
+				["reaction"] = "66:Alliance:HOSTILE",
 			},
 			["9938"] = {
 				["reaction"] = "56:Alliance:HOSTILE",
@@ -1828,6 +2389,23 @@ WoWDBProfilerData = {
 						["stats"] = {
 						},
 					},
+				},
+			},
+			["54692"] = {
+				["reaction"] = "64:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 3352,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["faction"] = "The Consortium",
+				["genders"] = {
+					["MALE"] = true,
 				},
 			},
 			["17381"] = {
@@ -2066,7 +2644,7 @@ WoWDBProfilerData = {
 							},
 						},
 						["spells"] = {
-							[18501] = 16,
+							[18501] = 20,
 						},
 					},
 				},
@@ -2082,6 +2660,39 @@ WoWDBProfilerData = {
 							[131656] = 25,
 						},
 					},
+				},
+			},
+			["18495"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["reaction"] = "66:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_65"] = {
+								["max_health"] = 10196,
+								["power"] = "MANA:8370",
+							},
+							["level_66"] = {
+								["max_health"] = 10542,
+								["power"] = "MANA:8538",
+							},
+						},
+						["spells"] = {
+							[32857] = 1,
+							[32854] = 4,
+							[32856] = 2,
+							[32861] = 30,
+							[32853] = 3,
+							[32855] = 3,
+							[17439] = 3,
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
 				},
 			},
 			["18105"] = {
@@ -2109,6 +2720,27 @@ WoWDBProfilerData = {
 					["UNKNOWN"] = true,
 				},
 			},
+			["17820"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[16100] = 34,
+							[115199] = 3,
+						},
+						["drops"] = {
+							"25093:1", -- [1]
+						},
+					},
+				},
+			},
 			["17270"] = {
 				["reputations"] = {
 					["Honor Hold:FRIENDLY"] = 5,
@@ -2133,6 +2765,30 @@ WoWDBProfilerData = {
 					["MALE"] = true,
 				},
 			},
+			["18309"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[33871] = 5,
+							[34920] = 8,
+							[33865] = 6,
+						},
+						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 9721,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "65:Alliance:HOSTILE",
+			},
 			["19016"] = {
 				["reputations"] = {
 					["Honor Hold:FRIENDLY"] = 1,
@@ -2156,6 +2812,29 @@ WoWDBProfilerData = {
 				},
 				["class"] = "PALADIN",
 				["reaction"] = "62:Alliance:HOSTILE",
+			},
+			["18982"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[22766] = 19,
+							[1604] = 2,
+						},
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 5730,
+							},
+							["level_68"] = {
+								["max_health"] = 5787,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "69:Alliance:HOSTILE",
 			},
 			["10400"] = {
 				["reaction"] = "48:Alliance:HOSTILE",
@@ -2236,19 +2915,22 @@ WoWDBProfilerData = {
 			["17957"] = {
 				["reputations"] = {
 					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
 				},
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_YELL"] = {
 						["Intrudersss with the prisssoner!  Kill them!!!"] = true,
 					},
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["By Nazjatar's Depths! "] = true,
+						["For the Master!"] = true,
+					},
 				},
-				["genders"] = {
-					["MALE"] = true,
-				},
+				["reaction"] = "66:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["loot_counts"] = {
-							["drops"] = 1,
+							["drops"] = 2,
 						},
 						["stats"] = {
 							["level_63"] = {
@@ -2256,16 +2938,20 @@ WoWDBProfilerData = {
 							},
 						},
 						["spells"] = {
-							[1604] = 1,
-							[15284] = 1,
+							[1604] = 2,
+							[15284] = 2,
 						},
 						["drops"] = {
 							"5760:1", -- [1]
+							"money:1703", -- [2]
+							"24948:1", -- [3]
 						},
 					},
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "63:Alliance:HOSTILE",
+				["genders"] = {
+					["MALE"] = true,
+				},
 			},
 			["8921"] = {
 				["genders"] = {
@@ -2329,6 +3015,32 @@ WoWDBProfilerData = {
 				},
 				["class"] = "PALADIN",
 				["reaction"] = "49:Alliance:HOSTILE",
+			},
+			["24200"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["A warrior's death."] = true,
+						["Pfagh! What sort of necromancer lets death stop him? I knew you were worthless!"] = true,
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[48583] = 6,
+							[43651] = 6,
+						},
+						["stats"] = {
+							["level_72"] = {
+								["max_health"] = 46080,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "70:Alliance:HOSTILE",
 			},
 			["9217"] = {
 				["encounter_data"] = {
@@ -2404,10 +3116,10 @@ WoWDBProfilerData = {
 						["spells"] = {
 							[9613] = 21,
 							[12557] = 1,
-							[11975] = 2,
+							[9672] = 11,
 							[13787] = 54,
 							[37361] = 11,
-							[9672] = 11,
+							[11975] = 2,
 							[8364] = 7,
 						},
 						["drops"] = {
@@ -2415,6 +3127,39 @@ WoWDBProfilerData = {
 						},
 					},
 				},
+			},
+			["19219"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["Bully!"] = true,
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 107475,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["spells"] = {
+							[35161] = 2,
+							[35159] = 4,
+						},
+						["drops"] = {
+							"28253:1", -- [1]
+							"24684:1", -- [2]
+							"28254:1", -- [3]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "68:Alliance:HOSTILE",
 			},
 			["20465"] = {
 				["encounter_data"] = {
@@ -2457,6 +3202,21 @@ WoWDBProfilerData = {
 						},
 						["spells"] = {
 							[87081] = 9,
+						},
+					},
+				},
+			},
+			["18312"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[17883] = 11,
+							[37470] = 4,
+						},
+						["stats"] = {
 						},
 					},
 				},
@@ -2529,6 +3289,26 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["19205"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "67:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[33527] = 1,
+						},
+						["stats"] = {
+							["level_69"] = {
+								["max_health"] = 1987,
+								["power"] = "MANA:3080",
+							},
+						},
+					},
+				},
+			},
 			["9239"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -2593,9 +3373,11 @@ WoWDBProfilerData = {
 			["62822"] = {
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_SAY"] = {
-						["I feel like a blood sausage."] = true,
-						["You could die of dysentery out here."] = true,
 						["Shame to sit on something so pretty."] = true,
+						["I feel like a blood sausage."] = true,
+						["Ten years. I have faithfully brushed yak for ten years."] = true,
+						["You could die of dysentery out here."] = true,
+						["Does yak tail assist in maintaining balance?"] = true,
 						["Would you kindly show me the way back to Kunlai?"] = true,
 					},
 				},
@@ -2609,18 +3391,29 @@ WoWDBProfilerData = {
 								["locations"] = {
 									["Stormwind City:301"] = {
 										["0:660:730"] = true,
-										["0:636:716"] = true,
+										["0:622:766"] = true,
 										["0:622:758"] = true,
-										["0:628:730"] = true,
 										["0:634:710"] = true,
 										["0:634:722"] = true,
+										["0:766:890"] = true,
 										["0:622:740"] = true,
+										["0:636:716"] = true,
+										["0:708:730"] = true,
+										["0:628:730"] = true,
+										["0:624:772"] = true,
 										["0:620:750"] = true,
 									},
 									["Kun-Lai Summit:809"] = {
 										["0:492:430"] = true,
 									},
 								},
+								["max_health"] = 11494,
+							},
+						},
+					},
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_90"] = {
 								["max_health"] = 11494,
 							},
 						},
@@ -2639,14 +3432,14 @@ WoWDBProfilerData = {
 					[64670] = "-1:5:[4000:0:0]",
 					[81414] = "-1:5:[26000]",
 					[60335] = "-1:1:[120000:0:0]",
-					[81401] = "-1:5:[24000]",
 					[4470] = "-1:1:[38:0:0]",
+					[81401] = "-1:5:[24000]",
 					[52188] = "-1:1:[15000:0:0]",
 					[39354] = "-1:5:[15:0:0]",
 					[38682] = "-1:1:[1000:0:0]",
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "63:Alliance:FRIENDLY",
+				["reaction"] = "70:Alliance:FRIENDLY",
 				["can_repair"] = true,
 			},
 			["10405"] = {
@@ -2731,6 +3524,21 @@ WoWDBProfilerData = {
 					["FEMALE"] = true,
 				},
 			},
+			["17819"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[15496] = 2,
+							[9080] = 4,
+						},
+					},
+				},
+			},
 			["8317"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -2751,6 +3559,38 @@ WoWDBProfilerData = {
 						["stats"] = {
 						},
 					},
+				},
+			},
+			["17879"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["Time... is on our side."] = true,
+					},
+				},
+				["reaction"] = "69:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_72"] = {
+								["power"] = "MANA:33090",
+								["max_health"] = 103680,
+							},
+						},
+						["spells"] = {
+							[31457] = 1,
+							[31472] = 2,
+						},
+						["drops"] = {
+							"27987:1", -- [1]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
 				},
 			},
 			["17771"] = {
@@ -2904,6 +3744,39 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["18313"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["You're far from home, stranger."] = true,
+					},
+				},
+				["reaction"] = "65:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[25603] = 30,
+							[15791] = 27,
+						},
+						["stats"] = {
+							["level_65"] = {
+								["power"] = "MANA:32215",
+								["max_health"] = 8158,
+							},
+							["level_64"] = {
+								["power"] = "MANA:31495",
+								["max_health"] = 7778,
+							},
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
 			["9018"] = {
 				["reaction"] = "49:Alliance:HOSTILE",
 				["class"] = "PALADIN",
@@ -2946,6 +3819,57 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["18322"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["reaction"] = "67:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[34970] = 16,
+							[32651] = 3,
+						},
+						["stats"] = {
+							["level_68"] = {
+								["max_health"] = 11188,
+							},
+						},
+						["drops"] = {
+							"money:5755", -- [1]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
+			["19510"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[35185] = 1,
+							[35178] = 2,
+						},
+						["stats"] = {
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["drops"] = {
+							"25305:1", -- [1]
+						},
+					},
+				},
+			},
 			["17885"] = {
 				["is_pvp"] = true,
 				["genders"] = {
@@ -2965,6 +3889,32 @@ WoWDBProfilerData = {
 				},
 				["reaction"] = "63:Alliance:FRIENDLY",
 			},
+			["23177"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["Thrall's trapped himself in the chapel. He can't escape now."] = true,
+						["He's here, stop him!"] = true,
+					},
+				},
+				["reaction"] = "67:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 11078,
+								["power"] = "MANA:2933",
+							},
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
 			["9045"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -2976,6 +3926,32 @@ WoWDBProfilerData = {
 						},
 					},
 				},
+			},
+			["20988"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_67"] = {
+								["power"] = "MANA:2933",
+								["max_health"] = 11460,
+							},
+						},
+						["spells"] = {
+							[36341] = 9,
+							[36346] = 8,
+							[36345] = 4,
+							[1604] = 2,
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "68:Alliance:HOSTILE",
 			},
 			["8893"] = {
 				["genders"] = {
@@ -3011,6 +3987,11 @@ WoWDBProfilerData = {
 					["Honor Hold:FRIENDLY"] = 5,
 					["Honor Hold:NEUTRAL"] = 5,
 				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["This world is OURS!"] = true,
+					},
+				},
 				["genders"] = {
 					["MALE"] = true,
 				},
@@ -3025,21 +4006,22 @@ WoWDBProfilerData = {
 							},
 						},
 						["loot_counts"] = {
-							["drops"] = 1,
+							["drops"] = 2,
 						},
 						["spells"] = {
-							[14516] = 35,
-							[6713] = 36,
+							[14516] = 44,
+							[6713] = 48,
 							[1604] = 3,
-							[16244] = 135,
+							[16244] = 163,
 						},
 						["drops"] = {
 							"24825:1", -- [1]
+							"24945:1", -- [2]
 						},
 					},
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "62:Alliance:HOSTILE",
+				["reaction"] = "66:Alliance:HOSTILE",
 			},
 			["67066"] = {
 				["encounter_data"] = {
@@ -3062,6 +4044,112 @@ WoWDBProfilerData = {
 							[6742] = 4,
 							[15979] = 5,
 							[13747] = 14,
+						},
+					},
+				},
+			},
+			["5512"] = {
+				["is_pvp"] = true,
+				["reaction"] = "67:Alliance:FRIENDLY",
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["sells"] = {
+					[66111] = "-1:1:[0]",
+					[66115] = "-1:1:[0]",
+					[66119] = "-1:1:[0]",
+					[66123] = "-1:1:[0]",
+					[66127] = "-1:1:[0]",
+					[66131] = "-1:1:[0]",
+					[66100] = "-1:1:[0]",
+					[66104] = "-1:1:[0]",
+					[66108] = "-1:1:[0]",
+					[66112] = "-1:1:[0]",
+					[66116] = "-1:1:[0]",
+					[66120] = "-1:1:[0]",
+					[2880] = "-1:1:[100:0:0]",
+					[66128] = "-1:1:[0]",
+					[66132] = "-1:1:[0]",
+					[3857] = "-1:1:[500:0:0]",
+					[66101] = "-1:1:[0]",
+					[66105] = "-1:1:[0]",
+					[18567] = "-1:1:[30000:0:0]",
+					[66113] = "-1:1:[0]",
+					[66117] = "-1:1:[0]",
+					[66121] = "-1:1:[0]",
+					[66125] = "-1:1:[0]",
+					[66129] = "-1:1:[0]",
+					[67606] = "-1:1:[0]",
+					[3466] = "-1:1:[2000:0:0]",
+					[66106] = "-1:1:[0]",
+					[66110] = "-1:1:[0]",
+					[66114] = "-1:1:[0]",
+					[66118] = "-1:1:[0]",
+					[66122] = "-1:1:[0]",
+					[5956] = "-1:1:[18:0:0]",
+					[66130] = "-1:1:[0]",
+					[66124] = "-1:1:[0]",
+					[67603] = "-1:1:[0]",
+					[66126] = "-1:1:[0]",
+					[66103] = "-1:1:[0]",
+					[2901] = "-1:1:[81]",
+					[66107] = "-1:1:[0]",
+					[66109] = "-1:1:[0]",
+				},
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_30"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:634:374"] = true,
+									},
+								},
+								["max_health"] = 997,
+							},
+						},
+					},
+				},
+				["can_repair"] = true,
+			},
+			["24201"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["See... you... soon."] = true,
+						["By all means, don't assess the situation, you halfwit! Just jump into the fray!"] = true,
+						["There's no... greater... glory."] = true,
+						["Skarvald, you incompetent slug! Return and make yourself useful!"] = true,
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[43649] = 33,
+							[43650] = 4,
+						},
+						["stats"] = {
+							["level_72"] = {
+								["power"] = "MANA:39708",
+								["max_health"] = 46080,
+							},
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "69:Alliance:HOSTILE",
+			},
+			["62913"] = {
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["spells"] = {
+							[79962] = 2,
+						},
+						["stats"] = {
 						},
 					},
 				},
@@ -3092,6 +4180,11 @@ WoWDBProfilerData = {
 							"13257:1", -- [2]
 						},
 					},
+				},
+			},
+			["4076"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
 				},
 			},
 			["9039"] = {
@@ -3187,6 +4280,21 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["18371"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 80,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[32264] = 26,
+							[36383] = 4,
+						},
+					},
+				},
+			},
 			["10220"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -3204,6 +4312,23 @@ WoWDBProfilerData = {
 						},
 					},
 				},
+			},
+			["24111"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Valiance Expedition",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 4299,
+							},
+						},
+					},
+				},
+				["reaction"] = "69:Alliance:FRIENDLY",
 			},
 			["17731"] = {
 				["reputations"] = {
@@ -3227,6 +4352,17 @@ WoWDBProfilerData = {
 				["class"] = "WARRIOR",
 				["reaction"] = "63:Alliance:HOSTILE",
 			},
+			["17815"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[15620] = 2,
+						},
+					},
+				},
+			},
 			["104091"] = {
 				["encounter_data"] = {
 					["NONE:0:false"] = {
@@ -3237,6 +4373,36 @@ WoWDBProfilerData = {
 						},
 					},
 				},
+			},
+			["5509"] = {
+				["is_pvp"] = true,
+				["reaction"] = "67:Alliance:FRIENDLY",
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["sells"] = {
+					[2530] = "-1:1:[52220:0:0]",
+					[2523] = "-1:1:[28286]",
+					[2522] = "-1:1:[22548:0:0]",
+					[2531] = "-1:1:[56171]",
+				},
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_30"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:594:340"] = true,
+									},
+								},
+								["max_health"] = 997,
+							},
+						},
+					},
+				},
+				["can_repair"] = true,
 			},
 			["17735"] = {
 				["reputations"] = {
@@ -3267,24 +4433,83 @@ WoWDBProfilerData = {
 				["class"] = "WARRIOR",
 				["reaction"] = "63:Alliance:HOSTILE",
 			},
-			["17958"] = {
-				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 5,
-				},
+			["18172"] = {
+				["reaction"] = "67:Alliance:HOSTILE",
+				["class"] = "PALADIN",
 				["genders"] = {
 					["MALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
+							["level_68"] = {
+								["max_health"] = 11188,
+								["power"] = "MANA:8973",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[31976] = 2,
+						},
+						["drops"] = {
+							"25005:1", -- [1]
+						},
+					},
+				},
+			},
+			["17958"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["reaction"] = "64:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15655] = 5,
+						},
+						["stats"] = {
 							["level_63"] = {
 								["max_health"] = 9300,
 							},
 						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["drops"] = {
+							"24613:1", -- [1]
+						},
 					},
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "63:Alliance:HOSTILE",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
+			["5500"] = {
+				["is_pvp"] = true,
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["class"] = "WARRIOR",
+				["reaction"] = "68:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_31"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:556:856"] = true,
+									},
+								},
+								["max_health"] = 1154,
+							},
+						},
+					},
+				},
 			},
 			["2630"] = {
 				["encounter_data"] = {
@@ -3298,23 +4523,33 @@ WoWDBProfilerData = {
 				},
 			},
 			["21127"] = {
-				["reaction"] = "63:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
-				["genders"] = {
-					["MALE"] = true,
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
 				},
+				["reaction"] = "65:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["spells"] = {
-							[15667] = 1,
-							[1604] = 1,
+						["loot_counts"] = {
+							["drops"] = 1,
 						},
 						["stats"] = {
 							["level_63"] = {
 								["max_health"] = 9300,
 							},
 						},
+						["spells"] = {
+							[15667] = 3,
+							[1604] = 1,
+						},
+						["drops"] = {
+							"24619:1", -- [1]
+						},
 					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
 				},
 			},
 			["45892"] = {
@@ -3340,7 +4575,7 @@ WoWDBProfilerData = {
 					["Honor Hold:FRIENDLY"] = 3,
 					["Honor Hold:NEUTRAL"] = 2,
 				},
-				["reaction"] = "60:Alliance:HOSTILE",
+				["reaction"] = "66:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
@@ -3352,9 +4587,9 @@ WoWDBProfilerData = {
 							["drops"] = 1,
 						},
 						["spells"] = {
-							[30639] = 46,
+							[30639] = 52,
 							[1604] = 2,
-							[30636] = 147,
+							[30636] = 175,
 						},
 						["drops"] = {
 							"24583:1", -- [1]
@@ -3374,8 +4609,8 @@ WoWDBProfilerData = {
 						["spells"] = {
 							[12540] = 2,
 							[15582] = 1,
-							[1604] = 3,
 							[76583] = 2,
+							[1604] = 3,
 						},
 					},
 				},
@@ -3386,7 +4621,7 @@ WoWDBProfilerData = {
 						["stats"] = {
 						},
 						["spells"] = {
-							[58506] = 32,
+							[58506] = 36,
 						},
 					},
 				},
@@ -3419,9 +4654,54 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["24078"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15572] = 25,
+							[8599] = 46,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
 			["17964"] = {
 				["reputations"] = {
 					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["We have waited forever for this day to come!"] = true,
+						["Free at last!"] = true,
+						["The pain is finally over."] = true,
+						["I spit on the corpse of these filthy naga."] = true,
+					},
+				},
+				["reaction"] = "64:Alliance:NEUTRAL",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_63"] = {
+								["max_health"] = 3207,
+							},
+						},
+						["spells"] = {
+							[13738] = 2,
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["drops"] = {
+							"24853:1", -- [1]
+							"24941:1", -- [2]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
 				},
 			},
 			["46077"] = {
@@ -3520,6 +4800,29 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["1416"] = {
+				["is_pvp"] = true,
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Ironforge",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_50"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:596:340"] = true,
+									},
+								},
+								["max_health"] = 2588,
+							},
+						},
+					},
+				},
+				["reaction"] = "67:Alliance:FRIENDLY",
+			},
 			["66254"] = {
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_SAY"] = {
@@ -3555,7 +4858,7 @@ WoWDBProfilerData = {
 						["stats"] = {
 						},
 						["spells"] = {
-							[79849] = 40,
+							[79849] = 44,
 						},
 					},
 				},
@@ -3621,6 +4924,26 @@ WoWDBProfilerData = {
 							[131980] = 46,
 							[131957] = 92,
 							[131956] = 92,
+						},
+					},
+				},
+			},
+			["18498"] = {
+				["genders"] = {
+					["MALE"] = true,
+					["FEMALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "66:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_65"] = {
+								["max_health"] = 4747,
+							},
+						},
+						["spells"] = {
+							[32828] = 11,
 						},
 					},
 				},
@@ -3772,6 +5095,17 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["23970"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[42702] = 6,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
 			["45331"] = {
 				["genders"] = {
 					["MALE"] = true,
@@ -3785,6 +5119,26 @@ WoWDBProfilerData = {
 							["level_50"] = {
 								["max_health"] = 103500,
 							},
+						},
+					},
+				},
+			},
+			["19429"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+						},
+						["spells"] = {
+							[38059] = 1,
+						},
+						["drops"] = {
+							"24995:1", -- [1]
 						},
 					},
 				},
@@ -3806,8 +5160,8 @@ WoWDBProfilerData = {
 						["spells"] = {
 							[12039] = 8,
 							[12471] = 31,
-							[12040] = 2,
 							[8362] = 6,
+							[12040] = 2,
 						},
 					},
 				},
@@ -3890,16 +5244,456 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["17963"] = {
-				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 5,
+			["27389"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[43649] = 6,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["23954"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+						},
+						["spells"] = {
+							[42729] = 7,
+							[42724] = 6,
+							[42705] = 5,
+							[42708] = 2,
+							[42730] = 3,
+							[42669] = 2,
+							[42723] = 8,
+						},
+						["drops"] = {
+							"35576:1", -- [1]
+						},
+					},
+				},
+			},
+			["5511"] = {
+				["is_pvp"] = true,
+				["teaches"] = {
+					["MONK"] = {
+						["General"] = {
+							[2018] = "5:0:9",
+						},
+						["Blacksmithing"] = {
+							[54944] = "0:385:27000",
+							[76259] = "0:490:58500",
+							[9983] = "0:30:90",
+							[9985] = "0:125:225",
+							[9987] = "0:135:450",
+							[9993] = "0:210:9000",
+							[56554] = "0:425:40500",
+							[10001] = "0:230:13500",
+							[55056] = "0:400:36000",
+							[54554] = "0:395:36000",
+							[122638] = "0:545:72000",
+							[16639] = "0:250:9000",
+							[16643] = "0:250:9000",
+							[16647] = "0:265:9000",
+							[52570] = "0:375:27000",
+							[16663] = "0:300:10800",
+							[122637] = "0:545:72000",
+							[61009] = "0:420:108000",
+							[76291] = "0:450:45000",
+							[76436] = "0:480:58500",
+							[76434] = "0:470:54000",
+							[76181] = "0:460:49500",
+							[122639] = "0:560:72000",
+							[55201] = "0:380:31500",
+							[55200] = "0:380:31500",
+							[3100] = "10:50:450",
+							[8768] = "0:150:225",
+							[55304] = "0:425:40500",
+							[76293] = "0:470:54000",
+							[61008] = "0:425:108000",
+							[55376] = "0:440:108000",
+							[76438] = "0:475:54000",
+							[55374] = "0:440:108000",
+							[55017] = "0:410:36000",
+							[56555] = "0:425:40500",
+							[122641] = "0:565:72000",
+							[122576] = "0:550:72000",
+							[76437] = "0:480:58500",
+							[55057] = "0:405:36000",
+							[54555] = "0:405:36000",
+							[122640] = "0:565:72000",
+							[55055] = "0:395:36000",
+							[3491] = "0:105:540",
+							[3502] = "0:170:1125",
+							[7223] = "0:185:900",
+							[2739] = "0:25:45",
+							[52571] = "0:370:27000",
+							[2740] = "0:110:180",
+							[29545] = "0:300:13500",
+							[29549] = "0:315:18000",
+							[29553] = "0:315:18000",
+							[29557] = "0:310:16200",
+							[122577] = "0:540:72000",
+							[29565] = "0:320:19800",
+							[55185] = "0:415:40500",
+							[110396] = "80:500:540000",
+							[239415] = "0:800:2250000",
+							[3116] = "0:65:90",
+							[15972] = "0:180:6750",
+							[29844] = "50:275:90000",
+							[2741] = "0:115:180",
+							[55310] = "0:425:40500",
+							[3501] = "0:165:900",
+							[55302] = "0:425:40500",
+							[2737] = "0:15:45",
+							[19668] = "0:200:2250",
+							[2738] = "0:20:45",
+							[2742] = "0:120:180",
+							[122578] = "0:550:72000",
+							[55305] = "0:420:40500",
+							[55058] = "0:415:40500",
+							[54556] = "0:405:36000",
+							[3506] = "0:155:4500",
+							[56357] = "0:420:37800",
+							[76264] = "0:460:49500",
+							[76280] = "0:440:36000",
+							[16652] = "0:280:9000",
+							[55369] = "0:440:162000",
+							[52572] = "0:360:27000",
+							[76180] = "0:450:45000",
+							[56553] = "0:420:40500",
+							[55656] = "0:415:45000",
+							[8880] = "0:30:90",
+							[54946] = "0:395:27000",
+							[122579] = "0:525:72000",
+							[34607] = "0:300:13500",
+							[76433] = "0:460:45000",
+							[9918] = "0:200:2250",
+							[54947] = "0:395:31500",
+							[9920] = "0:200:2250",
+							[76265] = "0:470:54000",
+							[76281] = "0:450:45000",
+							[16971] = "0:280:13500",
+							[76289] = "0:500:67500",
+							[55177] = "0:395:45000",
+							[9926] = "0:205:4500",
+							[9928] = "0:205:4500",
+							[56549] = "0:420:40500",
+							[76182] = "0:470:54000",
+							[55206] = "0:405:36000",
+							[122580] = "0:530:72000",
+							[76441] = "0:490:58500",
+							[76262] = "0:440:36000",
+							[6517] = "0:110:720",
+							[76263] = "0:450:45000",
+							[55375] = "0:440:108000",
+							[76266] = "0:480:58500",
+							[55377] = "0:440:108000",
+							[59442] = "0:410:36000",
+							[55370] = "0:440:135000",
+							[55298] = "0:420:40500",
+							[55312] = "0:425:40500",
+							[54557] = "0:390:36000",
+							[29550] = "0:325:22500",
+							[122581] = "0:500:72000",
+							[29558] = "0:315:18000",
+							[9968] = "0:235:18000",
+							[55179] = "0:400:45000",
+							[54948] = "0:400:27000",
+							[76474] = "0:470:54000",
+							[55203] = "0:385:31500",
+							[16658] = "0:295:9000",
+							[76267] = "0:490:58500",
+							[76283] = "0:460:49500",
+							[52568] = "0:350:27000",
+							[9986] = "0:130:450",
+							[3508] = "0:180:6750",
+							[59440] = "0:405:36000",
+							[7817] = "0:95:180",
+							[19669] = "0:275:9000",
+							[55311] = "0:425:40500",
+							[76666] = "75:425:450000",
+							[122582] = "0:530:72000",
+							[55307] = "0:420:40500",
+							[54550] = "0:360:27000",
+							[55839] = "0:420:37800",
+							[3538] = "20:125:4500",
+							[16641] = "0:250:9000",
+							[16657] = "0:295:9000",
+							[16649] = "0:270:9000",
+							[16653] = "0:280:9000",
+							[55371] = "0:440:135000",
+							[55835] = "0:370:27000",
+							[55303] = "0:425:40500",
+							[9785] = "35:200:45000",
+							[54917] = "0:375:27000",
+							[56552] = "0:420:40500",
+							[76269] = "0:500:67500",
+							[122583] = "0:525:72000",
+							[2674] = "0:125:900",
+							[55014] = "0:410:31500",
+							[54941] = "0:385:27000",
+							[54949] = "0:400:27000",
+							[32284] = "0:325:22500",
+							[3292] = "0:95:450",
+							[76285] = "0:470:54000",
+							[3293] = "0:35:225",
+							[52567] = "0:370:27000",
+							[3294] = "0:70:450",
+							[56280] = "0:410:36000",
+							[55013] = "0:390:36000",
+							[56551] = "0:420:40500",
+							[3296] = "0:130:900",
+							[76286] = "0:480:58500",
+							[55300] = "0:420:40500",
+							[55308] = "0:420:40500",
+							[54551] = "0:395:36000",
+							[55834] = "0:360:27000",
+							[2664] = "0:90:450",
+							[2662] = "0:1:45",
+							[76270] = "0:500:67500",
+							[59436] = "0:395:36000",
+							[2666] = "0:70:180",
+							[55372] = "0:440:108000",
+							[51300] = "65:350:315000",
+							[2665] = "0:65:90",
+							[29547] = "0:305:13500",
+							[29551] = "0:300:13500",
+							[56550] = "0:420:40500",
+							[2668] = "0:105:270",
+							[54918] = "0:380:27000",
+							[55181] = "0:405:45000",
+							[61010] = "0:420:108000",
+							[122633] = "0:500:72000",
+							[54945] = "0:390:31500",
+							[2670] = "0:105:450",
+							[55306] = "0:420:40500",
+							[76287] = "0:480:58500",
+							[56400] = "0:440:135000",
+							[2672] = "0:120:450",
+							[2661] = "0:35:90",
+							[59441] = "0:415:40500",
+							[19666] = "0:100:90",
+							[63182] = "0:440:135000",
+							[55204] = "0:390:31500",
+							[2675] = "0:145:900",
+							[55301] = "0:420:40500",
+							[55309] = "0:420:40500",
+							[54552] = "0:400:36000",
+							[59405] = "0:350:27000",
+							[29654] = "0:300:13500",
+							[16642] = "0:250:9000",
+							[16646] = "0:265:9000",
+							[76288] = "0:490:58500",
+							[56556] = "0:425:40500",
+							[55373] = "0:440:108000",
+							[16662] = "0:300:10800",
+							[3117] = "0:125:900",
+							[3319] = "0:20:45",
+							[16640] = "0:250:9000",
+							[3320] = "0:25:90",
+							[76179] = "0:440:36000",
+							[55174] = "0:390:45000",
+							[55182] = "0:410:36000",
+							[19667] = "0:150:225",
+							[122635] = "0:540:72000",
+							[3323] = "0:40:90",
+							[56234] = "0:440:135000",
+							[3324] = "0:45:180",
+							[16969] = "0:275:13500",
+							[9921] = "0:200:2250",
+							[9916] = "0:200:2250",
+							[3326] = "0:75:225",
+							[16730] = "0:300:10800",
+							[55015] = "0:415:36000",
+							[9931] = "0:210:4500",
+							[3328] = "0:110:450",
+							[9935] = "0:215:4500",
+							[76178] = "0:425:13500",
+							[7408] = "0:65:270",
+							[54553] = "0:400:36000",
+							[59406] = "0:430:40500",
+							[3331] = "0:130:450",
+							[76258] = "0:480:58500",
+							[16644] = "0:255:9000",
+							[59438] = "0:400:36000",
+							[3333] = "0:135:900",
+							[52569] = "0:350:27000",
+							[122636] = "0:545:72000",
+							[9959] = "0:230:13500",
+							[29548] = "0:315:18000",
+							[29552] = "0:310:16200",
+							[29556] = "0:320:19800",
+							[9961] = "0:230:13500",
+							[3337] = "0:125:900",
+							[76261] = "0:500:67500",
+							[76435] = "0:480:58500",
+							[76260] = "0:490:58500",
+						},
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_33"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:636:368"] = true,
+										["0:634:374"] = true,
+									},
+								},
+								["max_health"] = 1260,
+							},
+						},
+					},
+				},
+				["reaction"] = "67:Alliance:FRIENDLY",
+			},
+			["28410"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[51587] = 29,
+							[51586] = 1,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["29735"] = {
+				["genders"] = {
+					["MALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
-							[15497] = 30,
+							[55077] = 37,
+							[1604] = 1,
 						},
 						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 4299,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "70:Alliance:HOSTILE",
+			},
+			["17729"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 7,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[8599] = 4,
+							[31407] = 15,
+							[1604] = 1,
+							[22887] = 18,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["17963"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["The pain is finally over."] = true,
+						["Free at last!"] = true,
+						["We have waited forever for this day to come!"] = true,
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15497] = 126,
+							[32192] = 6,
+						},
+						["stats"] = {
+							["level_63"] = {
+								["max_health"] = 2566,
+								["power"] = "MANA:6156",
+							},
+							["level_62"] = {
+								["max_health"] = 2498,
+								["power"] = "MANA:6015",
+							},
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["reaction"] = "66:Alliance:NEUTRAL",
+			},
+			["19220"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["I prefer to be hands-on..."] = true,
+						["The project will... continue."] = true,
+					},
+				},
+				["reaction"] = "69:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 96728,
+								["power"] = "MANA:31550",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["spells"] = {
+							[36992] = 4,
+							[35280] = 2,
+							[36021] = 4,
+						},
+						["drops"] = {
+							"28202:1", -- [1]
+							"24780:1", -- [2]
+							"28285:1", -- [3]
+							"28285:1", -- [4]
+							"28267:1", -- [5]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
+			["17814"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "67:Alliance:NEUTRAL",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_65"] = {
+								["max_health"] = 10196,
+							},
 						},
 					},
 				},
@@ -3963,6 +5757,48 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["1313"] = {
+				["sells"] = {
+					[3371] = "-1:20:[150:0:0]",
+				},
+			},
+			["27390"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[1604] = 1,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["24080"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 17196,
+							},
+						},
+						["spells"] = {
+							[42724] = 6,
+						},
+						["drops"] = {
+							"money:5893", -- [1]
+							"33444:1", -- [2]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "69:Alliance:HOSTILE",
+			},
 			["17827"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -3974,6 +5810,29 @@ WoWDBProfilerData = {
 						},
 					},
 				},
+			},
+			["49748"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_85"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:622:310"] = true,
+										["0:622:304"] = true,
+									},
+								},
+								["max_health"] = 23961,
+							},
+						},
+					},
+				},
+				["reaction"] = "67:Alliance:FRIENDLY",
 			},
 			["8903"] = {
 				["genders"] = {
@@ -4000,6 +5859,38 @@ WoWDBProfilerData = {
 						},
 						["drops"] = {
 							"11754:1", -- [1]
+						},
+					},
+				},
+			},
+			["18702"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[35839] = 14,
+							[33325] = 33,
+							[32863] = 3,
+						},
+					},
+				},
+			},
+			["17880"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 120,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[31475] = 1,
+							[31458] = 2,
+							[31464] = 3,
+						},
+						["stats"] = {
 						},
 					},
 				},
@@ -4046,6 +5937,84 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["23176"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+			},
+			["24084"] = {
+				["reaction"] = "70:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 3,
+						},
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 3439,
+							},
+						},
+						["spells"] = {
+							[42702] = 31,
+							[13446] = 1,
+						},
+						["drops"] = {
+							"36474:1", -- [1]
+							"35974:1", -- [2]
+							"35978:1", -- [3]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
+			["24085"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[35570] = 18,
+							[38232] = 46,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["18497"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 10,
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_66"] = {
+								["max_health"] = 11268,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[1604] = 1,
+							[32854] = 3,
+							[32856] = 1,
+							[32853] = 3,
+							[38168] = 12,
+							[32855] = 2,
+						},
+						["drops"] = {
+							"24981:1", -- [1]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "66:Alliance:HOSTILE",
+			},
 			["9196"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -4065,6 +6034,64 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["17833"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[15586] = 9,
+							[15654] = 7,
+						},
+						["drops"] = {
+							"25039:1", -- [1]
+						},
+					},
+				},
+			},
+			["23953"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["Your blood is mine!"] = true,
+						["I join... the night."] = true,
+						["Aranal, ledel! Their fate shall be yours!"] = true,
+						["Darkness waits."] = true,
+						["Not so fast."] = true,
+					},
+				},
+				["reaction"] = "70:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 3,
+						},
+						["stats"] = {
+							["level_72"] = {
+								["power"] = "MANA:49635",
+								["max_health"] = 92160,
+							},
+						},
+						["spells"] = {
+							[43667] = 40,
+						},
+						["drops"] = {
+							"35572:1", -- [1]
+							"35571:1", -- [2]
+							"35572:1", -- [3]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
 			["42973"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -4072,6 +6099,61 @@ WoWDBProfilerData = {
 						},
 						["spells"] = {
 							[16380] = 8,
+						},
+					},
+				},
+			},
+			["23960"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 3,
+						},
+						["stats"] = {
+							["level_71"] = {
+								["power"] = "MANA:3231",
+								["max_health"] = 17772,
+							},
+							["level_70"] = {
+								["power"] = "MANA:3155",
+								["max_health"] = 17196,
+							},
+						},
+						["spells"] = {
+							[54965] = 54,
+							[42740] = 35,
+						},
+						["drops"] = {
+							"35580:1", -- [1]
+							"36655:1", -- [2]
+							"35968:1", -- [3]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "70:Alliance:HOSTILE",
+			},
+			["24082"] = {
+				["reaction"] = "69:Alliance:HOSTILE",
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[38621] = 7,
+							[43664] = 6,
+							[54983] = 38,
+						},
+						["stats"] = {
+							["level_70"] = {
+								["power"] = "MANA:3155",
+								["max_health"] = 17196,
+							},
 						},
 					},
 				},
@@ -4098,7 +6180,7 @@ WoWDBProfilerData = {
 							["drops"] = 1,
 						},
 						["spells"] = {
-							[30621] = 31,
+							[30621] = 34,
 							[1604] = 1,
 						},
 						["drops"] = {
@@ -4137,6 +6219,41 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["9178"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "56:Alliance:NEUTRAL",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[13489] = 19,
+						},
+						["stats"] = {
+							["level_30"] = {
+								["max_health"] = 997,
+							},
+						},
+					},
+				},
+			},
+			["28419"] = {
+				["reaction"] = "70:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 1720,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
 			["9199"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -4150,13 +6267,45 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["10409"] = {
+				["reaction"] = "48:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_49"] = {
+								["max_health"] = 10220,
+							},
+						},
+						["spells"] = {
+							[80781] = 26,
+							[13730] = 4,
+						},
+					},
+				},
+			},
+			["17876"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[12169] = 6,
+							[14516] = 3,
+						},
+					},
+				},
+			},
 			["54668"] = {
 				["genders"] = {
 					["MALE"] = true,
 				},
 				["faction"] = "Cenarion Expedition",
 				["class"] = "PALADIN",
-				["reaction"] = "63:Alliance:FRIENDLY",
+				["reaction"] = "65:Alliance:FRIENDLY",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
@@ -4164,6 +6313,70 @@ WoWDBProfilerData = {
 								["max_health"] = 3352,
 								["power"] = "MANA:2705",
 							},
+						},
+					},
+				},
+			},
+			["17881"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 120,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[40504] = 1,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["23956"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 17196,
+							},
+						},
+						["spells"] = {
+							[54962] = 6,
+							[42772] = 10,
+							[42972] = 4,
+						},
+						["drops"] = {
+							"35975:1", -- [1]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "70:Alliance:HOSTILE",
+			},
+			["18326"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["stats"] = {
+						},
+						["spells"] = {
+							[15501] = 5,
+							[32663] = 2,
+						},
+						["drops"] = {
+							"25083:1", -- [1]
+							"25012:1", -- [2]
 						},
 					},
 				},
@@ -4189,6 +6402,34 @@ WoWDBProfilerData = {
 							},
 						},
 					},
+				},
+			},
+			["17726"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 7,
+				},
+				["reaction"] = "63:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 9721,
+							},
+						},
+						["spells"] = {
+							[31410] = 6,
+						},
+						["drops"] = {
+							"25049:1", -- [1]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
 				},
 			},
 			["17723"] = {
@@ -4221,6 +6462,25 @@ WoWDBProfilerData = {
 				["class"] = "WARRIOR",
 				["reaction"] = "63:Alliance:HOSTILE",
 			},
+			["11197"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "49:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_51"] = {
+								["max_health"] = 239,
+							},
+						},
+						["spells"] = {
+							[1604] = 2,
+						},
+					},
+				},
+			},
 			["17477"] = {
 				["reputations"] = {
 					["Honor Hold:FRIENDLY"] = 1,
@@ -4244,6 +6504,116 @@ WoWDBProfilerData = {
 				},
 				["class"] = "PALADIN",
 				["reaction"] = "61:Alliance:HOSTILE",
+			},
+			["17952"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[34370] = 4,
+							[1604] = 1,
+						},
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 5730,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "69:Alliance:HOSTILE",
+			},
+			["18983"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[34366] = 1,
+							[1604] = 1,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["20201"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Keepers of Time",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_73"] = {
+								["max_health"] = 4886,
+							},
+						},
+					},
+				},
+				["reaction"] = "69:Alliance:FRIENDLY",
+			},
+			["18473"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["You die -- ka! Stay away from trinkets!"] = true,
+						["Ikiss will not -- rak, rak -- die..."] = true,
+					},
+				},
+				["reaction"] = "68:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_69"] = {
+								["power"] = "MANA:42186",
+								["max_health"] = 79475,
+							},
+						},
+						["spells"] = {
+							[38197] = 8,
+							[38194] = 5,
+							[35059] = 1,
+							[38245] = 3,
+						},
+						["drops"] = {
+							"27946:1", -- [1]
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
+			["19710"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["My calculations did not..."] = true,
+						["You have approximately five seconds to live."] = true,
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 107475,
+							},
+						},
+						["spells"] = {
+							[35326] = 4,
+							[35322] = 3,
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "68:Alliance:HOSTILE",
 			},
 			["10393"] = {
 				["encounter_data"] = {
@@ -4280,6 +6650,99 @@ WoWDBProfilerData = {
 					["MALE"] = true,
 				},
 			},
+			["18315"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[17145] = 4,
+							[15580] = 2,
+						},
+						["stats"] = {
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["drops"] = {
+							"25304:1", -- [1]
+						},
+					},
+				},
+			},
+			["5513"] = {
+				["is_pvp"] = true,
+				["teaches"] = {
+					["MONK"] = {
+						["General"] = {
+							[2575] = "0:0:9",
+						},
+						["Mining"] = {
+							[55208] = "0:450:180000",
+							[10248] = "25:200:45000",
+							[102167] = "0:600:54000",
+							[2658] = "0:65:180",
+							[50310] = "55:350:315000",
+							[3304] = "0:50:45",
+							[74530] = "0:475:45000",
+							[2659] = "0:50:180",
+							[10097] = "0:150:4500",
+							[10098] = "0:165:9000",
+							[16153] = "0:200:18000",
+							[55211] = "0:450:180000",
+							[102161] = "80:500:540000",
+							[35750] = "0:300:9000",
+							[3308] = "0:115:540",
+							[2576] = "0:50:450",
+							[29354] = "40:275:90000",
+							[49252] = "0:350:90000",
+							[29356] = "0:275:36000",
+							[70524] = "0:250:9000",
+							[29358] = "0:325:36000",
+							[29359] = "0:350:36000",
+							[29360] = "0:350:36000",
+							[29361] = "0:375:90000",
+							[3307] = "0:100:450",
+							[74517] = "75:425:450000",
+							[3564] = "10:125:4500",
+							[84038] = "0:425:45000",
+							[74529] = "0:525:45000",
+							[35751] = "0:300:9000",
+							[74537] = "0:500:45000",
+							[3569] = "0:125:675",
+							[49258] = "0:400:135000",
+							[29686] = "0:375:90000",
+							[102165] = "0:500:54000",
+						},
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_35"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:596:376"] = true,
+									},
+								},
+								["max_health"] = 1370,
+							},
+						},
+					},
+				},
+				["reaction"] = "67:Alliance:FRIENDLY",
+			},
+			["18170"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+			},
 			["45329"] = {
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_YELL"] = {
@@ -4299,6 +6762,41 @@ WoWDBProfilerData = {
 								["max_health"] = 238810,
 								["power"] = "MANA:9320",
 							},
+						},
+					},
+				},
+			},
+			["17380"] = {
+				["reaction"] = "62:Alliance:HOSTILE",
+				["class"] = "MAGE",
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[30917] = 4,
+						},
+						["stats"] = {
+							["level_63"] = {
+								["power"] = "MANA:18468",
+								["max_health"] = 30792,
+							},
+						},
+					},
+				},
+			},
+			["67095"] = {
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[131980] = 41,
+							[131962] = 41,
+							[131956] = 92,
+							[131957] = 90,
+							[1604] = 5,
 						},
 					},
 				},
@@ -4362,6 +6860,46 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["32639"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_80"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:622:758"] = true,
+									},
+								},
+								["max_health"] = 5534,
+							},
+						},
+					},
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_80"] = {
+								["max_health"] = 5534,
+							},
+						},
+					},
+				},
+				["sells"] = {
+					[4565] = "-1:1:[194]",
+					[3371] = "-1:20:[150:0:0]",
+					[6532] = "-1:1:[250]",
+					[39505] = "-1:1:[750]",
+					[14341] = "-1:1:[5000:0:0]",
+					[38426] = "-1:1:[30000:0:0]",
+					[20815] = "-1:1:[800:0:0]",
+					[64670] = "-1:5:[4000:0:0]",
+					[39354] = "-1:5:[15:0:0]",
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "67:Alliance:FRIENDLY",
+				["can_repair"] = true,
+			},
 			["10411"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -4369,6 +6907,23 @@ WoWDBProfilerData = {
 						},
 						["spells"] = {
 							[16380] = 12,
+						},
+					},
+				},
+			},
+			["19204"] = {
+				["reaction"] = "68:Alliance:HOSTILE",
+				["class"] = "PALADIN",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_69"] = {
+								["power"] = "MANA:3080",
+								["max_health"] = 1987,
+							},
 						},
 					},
 				},
@@ -4406,6 +6961,133 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["21904"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_68"] = {
+								["max_health"] = 11574,
+							},
+						},
+						["spells"] = {
+							[32901] = 2,
+						},
+						["drops"] = {
+							"24871:1", -- [1]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "68:Alliance:HOSTILE",
+			},
+			["5499"] = {
+				["is_pvp"] = true,
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_35"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:556:856"] = true,
+									},
+								},
+								["max_health"] = 1370,
+							},
+						},
+					},
+				},
+				["reaction"] = "68:Alliance:FRIENDLY",
+			},
+			["17991"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 50,
+					["Cenarion Expedition:FRIENDLY"] = 50,
+				},
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 87152,
+							},
+						},
+						["spells"] = {
+							[1604] = 1,
+							[35008] = 6,
+							[34970] = 8,
+							[31956] = 6,
+							[31948] = 8,
+						},
+						["drops"] = {
+							"24376:1", -- [1]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "64:Alliance:HOSTILE",
+			},
+			["17478"] = {
+				["reputations"] = {
+					["Honor Hold:FRIENDLY"] = 5,
+					["Honor Hold:NEUTRAL"] = 5,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["Lok'tar Illadari!\r\n"] = true,
+					},
+				},
+				["reaction"] = "66:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_60"] = {
+								["max_health"] = 6815,
+								["power"] = "MANA:5751",
+							},
+							["level_61"] = {
+								["max_health"] = 7047,
+								["power"] = "MANA:5875",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["spells"] = {
+							[30659] = 45,
+							[30615] = 34,
+							[12471] = 100,
+						},
+						["drops"] = {
+							"24709:1", -- [1]
+							"24710:1", -- [2]
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
 			["66943"] = {
 				["encounter_data"] = {
 					["NONE:0:false"] = {
@@ -4415,6 +7097,66 @@ WoWDBProfilerData = {
 							[131572] = 48,
 						},
 					},
+				},
+			},
+			["17893"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["Uh oh!  It would appear that all of the noise you've been making has attracted some unwanted attention!"] = true,
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[1604] = 1,
+							[34906] = 2,
+						},
+						["stats"] = {
+							["level_64"] = {
+								["power"] = "MANA:2705",
+								["max_health"] = 3352,
+							},
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "65:Alliance:FRIENDLY",
+			},
+			["9499"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[13787] = 8,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["18723"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["That spell should wipe their memories of us and what just happened. All they should remember now is what reality would be like without the attempted temporal interference. Well done. Thrall will journey on to find his destiny, and Taretha..."] = true,
+						["I believe I can explain everything to you two if you give me a moment of your time."] = true,
+						["Her fate is regrettably unavoidable."] = true,
+					},
+				},
+				["reaction"] = "67:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 4299,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
 				},
 			},
 			["10406"] = {
@@ -4436,6 +7178,35 @@ WoWDBProfilerData = {
 							[1604] = 2,
 						},
 					},
+				},
+			},
+			["18327"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["reaction"] = "67:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[35013] = 5,
+						},
+						["stats"] = {
+							["level_67"] = {
+								["power"] = "MANA:33745",
+								["max_health"] = 8862,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["drops"] = {
+							"25317:1", -- [1]
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["genders"] = {
+					["UNKNOWN"] = true,
 				},
 			},
 			["10417"] = {
@@ -4478,13 +7249,52 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["11030"] = {
+			["18328"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
+							["level_68"] = {
+								["power"] = "MANA:34410",
+								["max_health"] = 8949,
+							},
 						},
 						["spells"] = {
-							[1604] = 1,
+							[32129] = 22,
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["reaction"] = "68:Alliance:HOSTILE",
+			},
+			["10391"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "51:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_44"] = {
+								["max_health"] = 1688,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[11976] = 1,
+						},
+						["drops"] = {
+							"money:398", -- [1]
+							"4338:6", -- [2]
 						},
 					},
 				},
@@ -4551,6 +7361,41 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["21140"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 50,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["The sands of time shall be scattered to the winds!"] = true,
+						["You will never defeat us all!"] = true,
+						["You will accomplish nothing!"] = true,
+						["History is about to be rewritten!"] = true,
+						["No! The rift..."] = true,
+						["Let the siege begin!"] = true,
+					},
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["Victory or death!"] = true,
+					},
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[8269] = 10,
+						},
+						["stats"] = {
+							["level_71"] = {
+								["max_health"] = 39987,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "69:Alliance:HOSTILE",
+			},
 			["9029"] = {
 				["genders"] = {
 					["MALE"] = true,
@@ -4572,6 +7417,22 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["48632"] = {
+				["reaction"] = "63:Alliance:FRIENDLY",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_40"] = {
+								["max_health"] = 1474,
+							},
+						},
+					},
+				},
+			},
 			["5280"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -4580,6 +7441,22 @@ WoWDBProfilerData = {
 						["spells"] = {
 							[15653] = 62,
 							[15970] = 15,
+						},
+					},
+				},
+			},
+			["18700"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 1,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[13584] = 9,
+							[1604] = 13,
+							[13444] = 17,
 						},
 					},
 				},
@@ -4603,6 +7480,60 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["54334"] = {
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[101260] = 238,
+						},
+					},
+				},
+			},
+			["29684"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[54954] = 2,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["17817"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["reaction"] = "66:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 3,
+						},
+						["stats"] = {
+							["level_62"] = {
+								["max_health"] = 9054,
+							},
+						},
+						["spells"] = {
+							[35760] = 16,
+							[1604] = 1,
+						},
+						["drops"] = {
+							"money:3566", -- [1]
+							"25300:1", -- [2]
+							"24598:1", -- [3]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
 			["54667"] = {
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_SAY"] = {
@@ -4624,10 +7555,73 @@ WoWDBProfilerData = {
 						},
 					},
 				},
-				["reaction"] = "63:Alliance:FRIENDLY",
+				["reaction"] = "65:Alliance:FRIENDLY",
+			},
+			["17537"] = {
+				["reputations"] = {
+					["Honor Hold:FRIENDLY"] = 50,
+					["Honor Hold:NEUTRAL"] = 50,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["Your time is running out!"] = true,
+						["My lord will be... the end of you all!"] = true,
+					},
+				},
+				["reaction"] = "66:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_62"] = {
+								["max_health"] = 16859,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
+				},
 			},
 			["62821"] = {
 				["transmogrifier"] = true,
+			},
+			["8904"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["class"] = "MAGE",
+				["reaction"] = "56:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15547] = 32,
+							[14034] = 27,
+							[2601] = 19,
+							[14868] = 12,
+							[12471] = 49,
+							[11831] = 3,
+							[11436] = 6,
+							[15498] = 51,
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_54"] = {
+								["max_health"] = 1867,
+								["power"] = "MANA:4896",
+							},
+							["level_55"] = {
+								["max_health"] = 1938,
+								["power"] = "MANA:5013",
+							},
+						},
+						["drops"] = {
+							"10070:1", -- [1]
+						},
+					},
+				},
 			},
 			["9036"] = {
 				["reaction"] = "56:Alliance:HOSTILE",
@@ -4651,24 +7645,40 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["9038"] = {
-				["reaction"] = "56:Alliance:HOSTILE",
-				["class"] = "MAGE",
+			["18501"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[1604] = 1,
+							[31975] = 3,
+						},
+					},
+				},
+			},
+			["10413"] = {
+				["reaction"] = "50:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
 				["genders"] = {
-					["FEMALE"] = true,
+					["UNKNOWN"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["spells"] = {
-							[6136] = 8,
-							[12544] = 4,
-							[12675] = 13,
-						},
 						["stats"] = {
-							["level_56"] = {
-								["power"] = "MANA:26030",
-								["max_health"] = 17766,
+							["level_49"] = {
+								["max_health"] = 10220,
 							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[4962] = 44,
+							[16427] = 11,
+						},
+						["drops"] = {
+							"15323:1", -- [1]
 						},
 					},
 				},
@@ -4702,6 +7712,17 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["18556"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[32828] = 8,
+						},
+					},
+				},
+			},
 			["108323"] = {
 				["genders"] = {
 					["MALE"] = true,
@@ -4716,6 +7737,109 @@ WoWDBProfilerData = {
 								["max_health"] = 4157070,
 								["power"] = "MANA:533107",
 							},
+						},
+					},
+				},
+			},
+			["54847"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "The Consortium",
+				["class"] = "WARRIOR",
+				["reaction"] = "68:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_65"] = {
+								["max_health"] = 4395,
+							},
+						},
+					},
+				},
+			},
+			["45898"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "50:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_58"] = {
+								["max_health"] = 5186,
+							},
+						},
+					},
+				},
+			},
+			["54725"] = {
+				["reaction"] = "67:Alliance:FRIENDLY",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_66"] = {
+								["max_health"] = 3635,
+							},
+						},
+					},
+				},
+			},
+			["18319"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["spells"] = {
+							[17843] = 4,
+							[33989] = 11,
+							[12160] = 4,
+							[32689] = 108,
+						},
+						["stats"] = {
+							["level_67"] = {
+								["power"] = "MANA:33745",
+								["max_health"] = 8862,
+							},
+							["level_68"] = {
+								["power"] = "MANA:34410",
+								["max_health"] = 8949,
+							},
+						},
+						["drops"] = {
+							"24984:1", -- [1]
+							"money:5035", -- [2]
+							"21877:3", -- [3]
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["reaction"] = "68:Alliance:HOSTILE",
+			},
+			["19306"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 1,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[34933] = 35,
+							[1604] = 1,
+						},
+						["stats"] = {
 						},
 					},
 				},
@@ -4765,13 +7889,91 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["19221"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[35314] = 1,
+							[45195] = 2,
+							[35250] = 4,
+						},
+					},
+				},
+			},
+			["23178"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[15620] = 8,
+						},
+					},
+				},
+			},
+			["17941"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 50,
+					["Cenarion Expedition:FRIENDLY"] = 50,
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 4,
+						},
+						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 80448,
+								["power"] = "MANA:6762",
+							},
+						},
+						["spells"] = {
+							[1604] = 1,
+							[34980] = 1,
+							[35010] = 8,
+							[31991] = 1,
+							[31985] = 1,
+						},
+						["drops"] = {
+							"24357:1", -- [1]
+							"24359:1", -- [2]
+							"24361:1", -- [3]
+							"24357:1", -- [4]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "66:Alliance:HOSTILE",
+			},
+			["17826"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[31932] = 12,
+							[31946] = 2,
+							[31566] = 1,
+							[31623] = 2,
+							[31547] = 1,
+							[31615] = 3,
+							[22907] = 2,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
 			["2456"] = {
 				["is_pvp"] = true,
 				["genders"] = {
 					["MALE"] = true,
 				},
 				["faction"] = "Stormwind",
-				["reaction"] = "52:Alliance:FRIENDLY",
+				["reaction"] = "66:Alliance:FRIENDLY",
 				["class"] = "WARRIOR",
 				["encounter_data"] = {
 					["NONE:0:false"] = {
@@ -4789,11 +7991,76 @@ WoWDBProfilerData = {
 				},
 				["banker"] = true,
 			},
+			["17990"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "63:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_65"] = {
+								["max_health"] = 21096,
+							},
+						},
+					},
+				},
+			},
+			["19428"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[38110] = 6,
+							[38238] = 11,
+							[38193] = 6,
+						},
+						["drops"] = {
+							"72480:1", -- [1]
+						},
+					},
+				},
+			},
 			["67009"] = {
 				["encounter_data"] = {
 					["NONE:0:false"] = {
 						["spells"] = {
 							[131612] = 14,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["8319"] = {
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "52:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_53"] = {
+								["max_health"] = 2300,
+							},
+						},
+					},
+				},
+			},
+			["24069"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[9791] = 4,
 						},
 						["stats"] = {
 						},
@@ -4816,6 +8083,30 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["17626"] = {
+				["reputations"] = {
+					["Honor Hold:FRIENDLY"] = 5,
+					["Honor Hold:NEUTRAL"] = 5,
+				},
+				["reaction"] = "61:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[8599] = 24,
+							[10966] = 2,
+						},
+						["stats"] = {
+							["level_61"] = {
+								["max_health"] = 8807,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
 			["8915"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -4827,6 +8118,29 @@ WoWDBProfilerData = {
 							[15499] = 2,
 						},
 						["stats"] = {
+						},
+					},
+				},
+			},
+			["9241"] = {
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "58:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_58"] = {
+								["max_health"] = 12965,
+							},
+							["level_57"] = {
+								["max_health"] = 12815,
+							},
+						},
+						["spells"] = {
+							[15795] = 44,
+							[16001] = 3,
 						},
 					},
 				},
@@ -4845,6 +8159,93 @@ WoWDBProfilerData = {
 						["drops"] = {
 							"11928:1", -- [1]
 							"11930:1", -- [2]
+						},
+					},
+				},
+			},
+			["54698"] = {
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "66:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_66"] = {
+								["max_health"] = 3635,
+							},
+						},
+					},
+				},
+			},
+			["8891"] = {
+				["reaction"] = "50:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_50"] = {
+								["max_health"] = 10350,
+							},
+							["level_51"] = {
+								["max_health"] = 10855,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[12169] = 50,
+							[6713] = 12,
+							[11971] = 19,
+							[1604] = 1,
+						},
+						["drops"] = {
+							"11754:1", -- [1]
+						},
+					},
+				},
+			},
+			["9198"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[15981] = 2,
+							[15659] = 1,
+							[15982] = 4,
+						},
+					},
+				},
+			},
+			["18499"] = {
+				["reaction"] = "66:Alliance:HOSTILE",
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_65"] = {
+								["max_health"] = 4747,
+								["power"] = "MANA:8370",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[15043] = 10,
+							[12466] = 8,
+						},
+						["drops"] = {
+							"24755:1", -- [1]
 						},
 					},
 				},
@@ -4869,6 +8270,139 @@ WoWDBProfilerData = {
 						},
 					},
 				},
+			},
+			["18311"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+				["reaction"] = "65:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 3,
+						},
+						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 9721,
+							},
+						},
+						["spells"] = {
+							[32315] = 16,
+							[22911] = 33,
+							[8599] = 50,
+							[31403] = 9,
+						},
+						["drops"] = {
+							"24621:1", -- [1]
+							"25302:1", -- [2]
+							"24950:1", -- [3]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
+				},
+			},
+			["18318"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["Ssssekk-sara Rith-nealaak!"] = true,
+					},
+				},
+				["reaction"] = "67:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[16145] = 8,
+							[33961] = 3,
+						},
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 11078,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 5,
+						},
+						["drops"] = {
+							"24981:1", -- [1]
+							"24980:1", -- [2]
+							"money:2906", -- [3]
+							"24979:1", -- [4]
+							"24870:1", -- [5]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
+			["8911"] = {
+				["reaction"] = "55:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_54"] = {
+								["max_health"] = 11670,
+							},
+						},
+						["spells"] = {
+							[15243] = 6,
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["drops"] = {
+							"15271:1", -- [1]
+						},
+					},
+				},
+			},
+			["3300"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+			},
+			["17961"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15234] = 13,
+							[32173] = 4,
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+							["level_62"] = {
+								["max_health"] = 9054,
+								["power"] = "MANA:2568",
+							},
+						},
+						["drops"] = {
+							"24725:1", -- [1]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "66:Alliance:HOSTILE",
 			},
 			["17727"] = {
 				["reputations"] = {
@@ -4895,6 +8429,146 @@ WoWDBProfilerData = {
 					["MALE"] = true,
 				},
 			},
+			["66257"] = {
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[131604] = 290,
+						},
+					},
+				},
+			},
+			["23961"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["stats"] = {
+							["level_70"] = {
+								["max_health"] = 17196,
+							},
+						},
+						["spells"] = {
+							[42780] = 6,
+							[57846] = 13,
+							[42771] = 6,
+						},
+						["drops"] = {
+							"36670:1", -- [1]
+							"35957:1", -- [2]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "70:Alliance:HOSTILE",
+			},
+			["9266"] = {
+				["genders"] = {
+					["MALE"] = true,
+					["FEMALE"] = true,
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "58:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_58"] = {
+								["power"] = "MANA:2289",
+								["max_health"] = 12965,
+							},
+							["level_57"] = {
+								["power"] = "MANA:2241",
+								["max_health"] = 12815,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[8262] = 3,
+							[15869] = 6,
+							[15867] = 2,
+						},
+						["drops"] = {
+							"10234:1", -- [1]
+						},
+					},
+				},
+			},
+			["6066"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[8377] = 15,
+						},
+					},
+				},
+			},
+			["10412"] = {
+				["reaction"] = "51:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_49"] = {
+								["max_health"] = 10220,
+							},
+							["level_50"] = {
+								["max_health"] = 10350,
+							},
+						},
+						["spells"] = {
+							[31601] = 96,
+							[15471] = 8,
+						},
+					},
+				},
+			},
+			["18323"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["reaction"] = "68:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 11078,
+							},
+							["level_68"] = {
+								["max_health"] = 11188,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 4,
+						},
+						["spells"] = {
+							[33967] = 4,
+						},
+						["drops"] = {
+							"25001:1", -- [1]
+							"25305:1", -- [2]
+							"25002:1", -- [3]
+							"24767:1", -- [4]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
 			["9267"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -4907,11 +8581,35 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["18314"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+						},
+						["spells"] = {
+							[33925] = 10,
+							[34940] = 8,
+						},
+						["drops"] = {
+							"24754:1", -- [1]
+						},
+					},
+				},
+			},
 			["17940"] = {
 				["reputations"] = {
 					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
 				},
-				["reaction"] = "63:Alliance:HOSTILE",
+				["genders"] = {
+					["MALE"] = true,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
@@ -4921,16 +8619,26 @@ WoWDBProfilerData = {
 							},
 						},
 						["loot_counts"] = {
-							["drops"] = 1,
+							["drops"] = 2,
 						},
 						["drops"] = {
 							"24838:1", -- [1]
+							"25048:1", -- [2]
 						},
 					},
 				},
 				["class"] = "PALADIN",
-				["genders"] = {
-					["MALE"] = true,
+				["reaction"] = "66:Alliance:HOSTILE",
+			},
+			["8905"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[15621] = 1,
+						},
+					},
 				},
 			},
 			["18362"] = {
@@ -4955,16 +8663,28 @@ WoWDBProfilerData = {
 				},
 			},
 			["17942"] = {
+				["reputations"] = {
+					["Cenarion Expedition:FRIENDLY"] = 50,
+				},
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
+							[38153] = 6,
 							[34780] = 6,
-							[38153] = 3,
+							[40504] = 3,
 						},
 						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 90504,
+							},
 						},
 					},
 				},
+				["class"] = "WARRIOR",
+				["reaction"] = "65:Alliance:HOSTILE",
 			},
 			["17540"] = {
 				["reputations"] = {
@@ -4989,6 +8709,105 @@ WoWDBProfilerData = {
 				},
 				["class"] = "PALADIN",
 				["reaction"] = "60:Alliance:HOSTILE",
+			},
+			["61836"] = {
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[79849] = 44,
+						},
+					},
+				},
+			},
+			["18325"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+			},
+			["54674"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "64:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[35230] = 2,
+						},
+						["stats"] = {
+							["level_63"] = {
+								["max_health"] = 3207,
+							},
+						},
+					},
+				},
+			},
+			["2457"] = {
+				["is_pvp"] = true,
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Stormwind",
+				["encounter_data"] = {
+					["NONE:0:false"] = {
+						["stats"] = {
+							["level_45"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:624:782"] = true,
+									},
+								},
+								["max_health"] = 5379,
+							},
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "64:Alliance:FRIENDLY",
+				["banker"] = true,
+			},
+			["17397"] = {
+				["reputations"] = {
+					["Honor Hold:FRIENDLY"] = 5,
+					["Honor Hold:NEUTRAL"] = 5,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_SAY"] = {
+						["Lok narash!"] = true,
+					},
+				},
+				["reaction"] = "62:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 4,
+						},
+						["stats"] = {
+							["level_61"] = {
+								["power"] = "MANA:2486",
+								["max_health"] = 8807,
+							},
+						},
+						["spells"] = {
+							[3391] = 24,
+							[11978] = 2,
+						},
+						["drops"] = {
+							"23894:3", -- [1]
+							"23894:3", -- [2]
+							"23894:3", -- [3]
+							"24604:1", -- [4]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["genders"] = {
+					["MALE"] = true,
+				},
 			},
 			["8895"] = {
 				["reaction"] = "51:Alliance:HOSTILE",
@@ -5033,6 +8852,62 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["18331"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["stats"] = {
+						},
+						["spells"] = {
+							[16592] = 24,
+							[34942] = 10,
+							[34931] = 10,
+						},
+						["drops"] = {
+							"25204:1", -- [1]
+						},
+					},
+				},
+			},
+			["18320"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
+				},
+				["reaction"] = "68:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[32682] = 3,
+						},
+						["stats"] = {
+							["level_69"] = {
+								["power"] = "MANA:35155",
+								["max_health"] = 9219,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 4,
+						},
+						["drops"] = {
+							"money:3671", -- [1]
+							"21877:3", -- [2]
+							"money:4007", -- [3]
+							"money:2069", -- [4]
+							"25004:1", -- [5]
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
 			["9017"] = {
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_SAY"] = {
@@ -5067,6 +8942,17 @@ WoWDBProfilerData = {
 				["class"] = "WARRIOR",
 				["reaction"] = "50:Alliance:HOSTILE",
 			},
+			["10414"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[77978] = 6,
+						},
+					},
+				},
+			},
 			["9596"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -5077,6 +8963,70 @@ WoWDBProfilerData = {
 							[13737] = 6,
 						},
 						["stats"] = {
+						},
+					},
+				},
+			},
+			["10463"] = {
+				["reaction"] = "48:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_49"] = {
+								["max_health"] = 10220,
+							},
+							["level_50"] = {
+								["max_health"] = 10350,
+							},
+						},
+						["spells"] = {
+							[3589] = 65,
+							[80780] = 140,
+							[1604] = 2,
+						},
+					},
+				},
+			},
+			["18096"] = {
+				["reaction"] = "67:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_68"] = {
+								["max_health"] = 86805,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[33834] = 2,
+							[31916] = 2,
+						},
+						["drops"] = {
+							"27434:1", -- [1]
+						},
+					},
+				},
+			},
+			["19712"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[35047] = 1,
 						},
 					},
 				},
@@ -5106,6 +9056,20 @@ WoWDBProfilerData = {
 						["drops"] = {
 							"18738:1", -- [1]
 							"13530:1", -- [2]
+						},
+					},
+				},
+			},
+			["18431"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 3,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15254] = 12,
+						},
+						["stats"] = {
 						},
 					},
 				},
@@ -5153,6 +9117,40 @@ WoWDBProfilerData = {
 					},
 				},
 			},
+			["10398"] = {
+				["reaction"] = "51:Alliance:HOSTILE",
+				["class"] = "MAGE",
+				["genders"] = {
+					["MALE"] = true,
+					["FEMALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_50"] = {
+								["max_health"] = 8280,
+								["power"] = "MANA:8786",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 5,
+						},
+						["spells"] = {
+							[12739] = 135,
+							[16429] = 39,
+							[1604] = 1,
+							[11443] = 37,
+						},
+						["drops"] = {
+							"10093:1", -- [1]
+							"9952:1", -- [2]
+							"8113:1", -- [3]
+							"21947:1", -- [4]
+							"money:2427", -- [5]
+						},
+					},
+				},
+			},
 			["17306"] = {
 				["reputations"] = {
 					["Honor Hold:NEUTRAL"] = 50,
@@ -5165,7 +9163,7 @@ WoWDBProfilerData = {
 						["Heal me, quickly!"] = true,
 					},
 				},
-				["reaction"] = "59:Alliance:HOSTILE",
+				["reaction"] = "66:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
@@ -5174,19 +9172,20 @@ WoWDBProfilerData = {
 							},
 						},
 						["loot_counts"] = {
-							["drops"] = 2,
+							["drops"] = 3,
 						},
 						["spells"] = {
-							[30641] = 9,
-							[34645] = 4,
+							[30641] = 11,
+							[34645] = 5,
 							[1604] = 1,
-							[22857] = 8,
+							[22857] = 10,
 						},
 						["drops"] = {
 							"money:2766", -- [1]
 							"24021:1", -- [2]
 							"23881:1", -- [3]
 							"24022:1", -- [4]
+							"24023:1", -- [5]
 						},
 					},
 				},
@@ -5195,9 +9194,68 @@ WoWDBProfilerData = {
 					["MALE"] = true,
 				},
 			},
-			["17882"] = {
+			["18094"] = {
+				["reaction"] = "67:Alliance:HOSTILE",
+				["class"] = "PALADIN",
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 11078,
+								["power"] = "MANA:8799",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[15620] = 6,
+							[15232] = 1,
+						},
+						["drops"] = {
+							"25037:1", -- [1]
+						},
+					},
+				},
+			},
+			["9269"] = {
+				["genders"] = {
+					["MALE"] = true,
+					["FEMALE"] = true,
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "58:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_58"] = {
+								["power"] = "MANA:4578",
+								["max_health"] = 12965,
+							},
+							["level_57"] = {
+								["power"] = "MANA:4482",
+								["max_health"] = 12815,
+							},
+						},
+						["spells"] = {
+							[15801] = 74,
+							[15802] = 3,
+							[13585] = 38,
+							[12492] = 5,
+						},
+					},
+				},
+			},
+			["17395"] = {
 				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 70,
+					["Honor Hold:FRIENDLY"] = 5,
+					["Honor Hold:NEUTRAL"] = 5,
+				},
+				["genders"] = {
+					["MALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -5205,30 +9263,71 @@ WoWDBProfilerData = {
 							["drops"] = 1,
 						},
 						["stats"] = {
+							["level_61"] = {
+								["power"] = "MANA:17625",
+								["max_health"] = 7047,
+							},
 						},
 						["spells"] = {
-							[31717] = 2,
-							[31704] = 2,
+							[30851] = 7,
+							[18399] = 9,
+							[30853] = 5,
+							[15242] = 28,
 						},
 						["drops"] = {
-							"24465:1", -- [1]
+							"25185:1", -- [1]
 						},
 					},
 				},
+				["class"] = "MAGE",
+				["reaction"] = "62:Alliance:HOSTILE",
 			},
-			["17826"] = {
+			["17653"] = {
+				["reputations"] = {
+					["Honor Hold:FRIENDLY"] = 5,
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
-							[31932] = 12,
-							[31946] = 2,
-							[31566] = 1,
-							[31623] = 2,
-							[31547] = 1,
-							[31615] = 3,
-							[22907] = 2,
+							[12739] = 11,
+							[30937] = 3,
 						},
 						["stats"] = {
+							["level_62"] = {
+								["power"] = "MANA:6015",
+								["max_health"] = 7244,
+							},
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["reaction"] = "61:Alliance:HOSTILE",
+			},
+			["9097"] = {
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "58:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_56"] = {
+								["max_health"] = 12335,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[11972] = 3,
+							[15496] = 5,
+						},
+						["drops"] = {
+							"19234:1", -- [1]
 						},
 					},
 				},
@@ -5245,49 +9344,15 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["17729"] = {
-				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 7,
-				},
+			["67021"] = {
 				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["spells"] = {
-							[1604] = 1,
-							[22887] = 18,
-							[8599] = 4,
-							[31407] = 15,
-						},
+					["NONE:0:false"] = {
 						["stats"] = {
 						},
-					},
-				},
-			},
-			["17726"] = {
-				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 7,
-				},
-				["reaction"] = "63:Alliance:HOSTILE",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["stats"] = {
-							["level_64"] = {
-								["max_health"] = 9721,
-							},
-						},
 						["spells"] = {
-							[31410] = 6,
-						},
-						["drops"] = {
-							"25049:1", -- [1]
+							[131769] = 1754,
 						},
 					},
-				},
-				["class"] = "WARRIOR",
-				["genders"] = {
-					["MALE"] = true,
 				},
 			},
 			["54603"] = {
@@ -5302,13 +9367,48 @@ WoWDBProfilerData = {
 							},
 						},
 						["spells"] = {
-							[58506] = 8,
+							[58506] = 10,
 						},
 					},
 				},
 				["class"] = "WARRIOR",
 				["faction"] = "Honor Hold",
 				["reaction"] = "60:Alliance:FRIENDLY",
+			},
+			["18341"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 70,
+				},
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["To the Void... once more."] = true,
+					},
+				},
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["stats"] = {
+							["level_66"] = {
+								["max_health"] = 65430,
+							},
+						},
+						["spells"] = {
+							[32325] = 10,
+							[32358] = 3,
+						},
+						["drops"] = {
+							"25941:1", -- [1]
+							"25941:1", -- [2]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "65:Alliance:HOSTILE",
 			},
 			["10268"] = {
 				["encounter_data"] = {
@@ -5334,8 +9434,8 @@ WoWDBProfilerData = {
 						},
 						["spells"] = {
 							[15537] = 9,
-							[8362] = 4,
 							[15586] = 4,
+							[8362] = 4,
 							[15654] = 8,
 						},
 						["drops"] = {
@@ -5408,21 +9508,35 @@ WoWDBProfilerData = {
 				["class"] = "MAGE",
 				["reaction"] = "62:Alliance:HOSTILE",
 			},
-			["17990"] = {
-				["genders"] = {
-					["UNKNOWN"] = true,
+			["20059"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+					["The Sha'tar:FRIENDLY"] = 12,
 				},
-				["class"] = "WARRIOR",
-				["reaction"] = "63:Alliance:HOSTILE",
+				["genders"] = {
+					["FEMALE"] = true,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_65"] = {
-								["max_health"] = 21096,
+							["level_68"] = {
+								["power"] = "MANA:6882",
+								["max_health"] = 9258,
 							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[35243] = 6,
+						},
+						["drops"] = {
+							"25109:1", -- [1]
 						},
 					},
 				},
+				["class"] = "MAGE",
+				["reaction"] = "68:Alliance:HOSTILE",
 			},
 			["5710"] = {
 				["reaction"] = "52:Alliance:HOSTILE",
@@ -5459,25 +9573,29 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["45849"] = {
-				["genders"] = {
-					["FEMALE"] = true,
-				},
-				["class"] = "WARRIOR",
-				["reaction"] = "51:Alliance:FRIENDLY",
+			["10407"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_53"] = {
-								["max_health"] = 5290,
-							},
+						},
+						["spells"] = {
+							[13738] = 16,
 						},
 					},
 				},
 			},
-			["1420"] = {
+			["19206"] = {
 				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 7,
+					["Lower City:NEUTRAL"] = 90,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[33529] = 1,
+						},
+						["stats"] = {
+						},
+					},
 				},
 			},
 			["8896"] = {
@@ -5491,33 +9609,23 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["17871"] = {
-				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 7,
-				},
-				["reaction"] = "63:Alliance:HOSTILE",
+			["24079"] = {
+				["reaction"] = "69:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
-							[34163] = 7,
-							[32329] = 12,
-							[1604] = 1,
+							[43757] = 15,
 						},
 						["stats"] = {
-							["level_62"] = {
-								["power"] = "MANA:5136",
-								["max_health"] = 9054,
-							},
-							["level_63"] = {
-								["power"] = "MANA:5240",
-								["max_health"] = 9300,
+							["level_70"] = {
+								["max_health"] = 17196,
 							},
 						},
 					},
 				},
-				["class"] = "PALADIN",
+				["class"] = "WARRIOR",
 				["genders"] = {
-					["UNKNOWN"] = true,
+					["MALE"] = true,
 				},
 			},
 			["66947"] = {
@@ -5531,10 +9639,14 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["10435"] = {
+			["17839"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 50,
+				},
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_YELL"] = {
-						["Intruders at the Service Gate! Lord Rivendare must be warned!"] = true,
+						["No! The rift..."] = true,
+						["History is about to be rewritten!"] = true,
 					},
 				},
 				["genders"] = {
@@ -5542,105 +9654,72 @@ WoWDBProfilerData = {
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_51"] = {
-								["max_health"] = 62959,
-							},
-						},
 						["spells"] = {
-							[16793] = 3,
-							[16791] = 18,
-							[10887] = 2,
-							[14099] = 3,
+							[8269] = 4,
+							[11428] = 2,
+						},
+						["stats"] = {
+							["level_71"] = {
+								["max_health"] = 39987,
+							},
 						},
 					},
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "48:Alliance:HOSTILE",
+				["reaction"] = "69:Alliance:HOSTILE",
 			},
-			["10398"] = {
-				["reaction"] = "51:Alliance:HOSTILE",
-				["class"] = "MAGE",
+			["18093"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+			},
+			["54840"] = {
 				["genders"] = {
-					["MALE"] = true,
+					["UNKNOWN"] = true,
+				},
+				["faction"] = "Lower City",
+				["class"] = "PALADIN",
+				["reaction"] = "68:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 32470,
+								["power"] = "MANA:2933",
+							},
+						},
+					},
+				},
+			},
+			["18493"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 10,
+				},
+				["genders"] = {
 					["FEMALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_50"] = {
-								["max_health"] = 8280,
-								["power"] = "MANA:8786",
-							},
-						},
-						["loot_counts"] = {
-							["drops"] = 5,
-						},
-						["spells"] = {
-							[16429] = 39,
-							[12739] = 135,
-							[11443] = 37,
-							[1604] = 1,
-						},
-						["drops"] = {
-							"10093:1", -- [1]
-							"9952:1", -- [2]
-							"8113:1", -- [3]
-							"21947:1", -- [4]
-							"money:2427", -- [5]
-						},
-					},
-				},
-			},
-			["8891"] = {
-				["reaction"] = "50:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
-				["genders"] = {
-					["MALE"] = true,
-				},
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_50"] = {
-								["max_health"] = 10350,
-							},
-							["level_51"] = {
-								["max_health"] = 10855,
-							},
-						},
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["spells"] = {
-							[12169] = 50,
-							[6713] = 12,
-							[11971] = 19,
-							[1604] = 1,
-						},
-						["drops"] = {
-							"11754:1", -- [1]
-						},
-					},
-				},
-			},
-			["11197"] = {
-				["genders"] = {
-					["UNKNOWN"] = true,
-				},
-				["class"] = "WARRIOR",
-				["reaction"] = "49:Alliance:HOSTILE",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_51"] = {
-								["max_health"] = 239,
+							["level_66"] = {
+								["max_health"] = 10542,
+								["power"] = "MANA:8538",
 							},
 						},
 						["spells"] = {
-							[1604] = 2,
+							[32857] = 2,
+							[32859] = 3,
+							[32854] = 1,
+							[32856] = 1,
+							[32858] = 3,
+							[32853] = 2,
+							[32855] = 2,
+							[32860] = 47,
 						},
 					},
 				},
+				["class"] = "PALADIN",
+				["reaction"] = "66:Alliance:HOSTILE",
 			},
 			["17624"] = {
 				["reputations"] = {
@@ -5700,29 +9779,41 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["2457"] = {
-				["is_pvp"] = true,
-				["genders"] = {
-					["MALE"] = true,
-				},
-				["faction"] = "Stormwind",
+			["18373"] = {
 				["encounter_data"] = {
-					["NONE:0:false"] = {
+					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_45"] = {
-								["locations"] = {
-									["Stormwind City:301"] = {
-										["0:624:782"] = true,
-									},
-								},
-								["max_health"] = 5379,
+						},
+						["spells"] = {
+							[32346] = 3,
+							[32424] = 1,
+							[32422] = 10,
+							[32421] = 3,
+						},
+					},
+				},
+			},
+			["9034"] = {
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "56:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15580] = 1,
+							[15232] = 5,
+							[12040] = 2,
+						},
+						["stats"] = {
+							["level_55"] = {
+								["power"] = "MANA:10585",
+								["max_health"] = 21798,
 							},
 						},
 					},
 				},
-				["class"] = "WARRIOR",
-				["reaction"] = "64:Alliance:FRIENDLY",
-				["banker"] = true,
 			},
 			["8897"] = {
 				["reaction"] = "50:Alliance:HOSTILE",
@@ -5740,17 +9831,6 @@ WoWDBProfilerData = {
 						["spells"] = {
 							[15619] = 13,
 							[9143] = 2,
-						},
-					},
-				},
-			},
-			["10407"] = {
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[13738] = 16,
 						},
 					},
 				},
@@ -5781,129 +9861,116 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["17893"] = {
+			["5291"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[5708] = 2,
+						},
+					},
+				},
+			},
+			["66260"] = {
 				["quotes"] = {
 					["CHAT_MSG_MONSTER_SAY"] = {
-						["Uh oh!  It would appear that all of the noise you've been making has attracted some unwanted attention!"] = true,
+						["My assistant will show you to Master Cheng.  Good Luck!"] = true,
 					},
 				},
 				["genders"] = {
 					["MALE"] = true,
 				},
 				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["spells"] = {
-							[1604] = 1,
-						},
+					["NONE:0:false"] = {
 						["stats"] = {
-							["level_64"] = {
-								["power"] = "MANA:2705",
-								["max_health"] = 3352,
+							["level_90"] = {
+								["locations"] = {
+									["Kun-Lai Summit:809"] = {
+										["0:486:428"] = true,
+									},
+								},
+								["max_health"] = 34482,
 							},
 						},
 					},
 				},
-				["class"] = "PALADIN",
-				["reaction"] = "63:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["reaction"] = "62:Alliance:FRIENDLY",
 			},
-			["17478"] = {
+			["18343"] = {
 				["reputations"] = {
-					["Honor Hold:FRIENDLY"] = 5,
-					["Honor Hold:NEUTRAL"] = 5,
+					["The Consortium:NEUTRAL"] = 70,
 				},
-				["reaction"] = "61:Alliance:HOSTILE",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_60"] = {
-								["max_health"] = 6815,
-								["power"] = "MANA:5751",
-							},
-							["level_61"] = {
-								["max_health"] = 7047,
-								["power"] = "MANA:5875",
-							},
-						},
 						["loot_counts"] = {
 							["drops"] = 1,
 						},
+						["stats"] = {
+							["level_66"] = {
+								["max_health"] = 81788,
+							},
+						},
 						["spells"] = {
-							[30659] = 36,
-							[30615] = 34,
-							[12471] = 75,
+							[33919] = 15,
+							[8374] = 1,
+							[32361] = 2,
 						},
 						["drops"] = {
-							"24709:1", -- [1]
+							"25944:1", -- [1]
 						},
 					},
 				},
-				["class"] = "MAGE",
-				["genders"] = {
-					["MALE"] = true,
-				},
-			},
-			["9269"] = {
-				["genders"] = {
-					["MALE"] = true,
-					["FEMALE"] = true,
-				},
-				["class"] = "PALADIN",
-				["reaction"] = "58:Alliance:HOSTILE",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_58"] = {
-								["power"] = "MANA:4578",
-								["max_health"] = 12965,
-							},
-							["level_57"] = {
-								["power"] = "MANA:4482",
-								["max_health"] = 12815,
-							},
-						},
-						["spells"] = {
-							[15801] = 74,
-							[13585] = 38,
-							[15802] = 3,
-							[12492] = 5,
-						},
-					},
-				},
-			},
-			["45328"] = {
-				["is_pvp"] = true,
-				["genders"] = {
-					["MALE"] = true,
-				},
-				["faction"] = "Argent Crusade",
 				["class"] = "WARRIOR",
-				["reaction"] = "49:Alliance:FRIENDLY",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_48"] = {
-								["max_health"] = 43472,
-							},
-						},
+				["reaction"] = "65:Alliance:HOSTILE",
+			},
+			["10435"] = {
+				["quotes"] = {
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["Intruders at the Service Gate! Lord Rivendare must be warned!"] = true,
 					},
 				},
-			},
-			["17380"] = {
-				["reaction"] = "62:Alliance:HOSTILE",
-				["class"] = "MAGE",
 				["genders"] = {
 					["MALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["spells"] = {
-							[30917] = 4,
-						},
 						["stats"] = {
-							["level_63"] = {
-								["power"] = "MANA:18468",
-								["max_health"] = 30792,
+							["level_51"] = {
+								["max_health"] = 62959,
 							},
+						},
+						["spells"] = {
+							[16793] = 3,
+							[16791] = 18,
+							[10887] = 2,
+							[14099] = 3,
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "48:Alliance:HOSTILE",
+			},
+			["10408"] = {
+				["reaction"] = "50:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_49"] = {
+								["max_health"] = 10220,
+							},
+						},
+						["spells"] = {
+							[1604] = 5,
+							[13444] = 23,
 						},
 					},
 				},
@@ -5939,46 +10006,18 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["17941"] = {
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["stats"] = {
-						},
-						["spells"] = {
-							[35010] = 2,
-							[1604] = 1,
-							[34980] = 1,
-						},
-						["drops"] = {
-							"24357:1", -- [1]
-						},
-					},
+			["1420"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 7,
 				},
 			},
-			["8911"] = {
-				["reaction"] = "55:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
-				["genders"] = {
-					["UNKNOWN"] = true,
-				},
+			["8923"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_54"] = {
-								["max_health"] = 11670,
-							},
-						},
 						["spells"] = {
-							[15243] = 6,
+							[9941] = 2,
 						},
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["drops"] = {
-							"15271:1", -- [1]
+						["stats"] = {
 						},
 					},
 				},
@@ -5994,99 +10033,87 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["17817"] = {
-				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 5,
-				},
-				["reaction"] = "63:Alliance:HOSTILE",
+			["9200"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
 						["stats"] = {
-							["level_62"] = {
-								["max_health"] = 9054,
-							},
 						},
 						["spells"] = {
-							[35760] = 8,
-							[1604] = 1,
-						},
-						["drops"] = {
-							"money:3566", -- [1]
+							[15284] = 3,
 						},
 					},
 				},
-				["class"] = "WARRIOR",
+			},
+			["10375"] = {
 				["genders"] = {
 					["UNKNOWN"] = true,
 				},
-			},
-			["17938"] = {
-				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 5,
-				},
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-						},
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["drops"] = {
-							"25131:1", -- [1]
-						},
-					},
-				},
-			},
-			["9241"] = {
-				["genders"] = {
-					["FEMALE"] = true,
-				},
 				["class"] = "WARRIOR",
-				["reaction"] = "58:Alliance:HOSTILE",
+				["reaction"] = "57:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_58"] = {
-								["max_health"] = 12965,
-							},
 							["level_57"] = {
-								["max_health"] = 12815,
+								["max_health"] = 2563,
 							},
 						},
 						["spells"] = {
-							[15795] = 44,
-							[16001] = 3,
+							[1604] = 2,
 						},
 					},
 				},
 			},
-			["10391"] = {
+			["8719"] = {
+				["is_pvp"] = true,
 				["genders"] = {
-					["UNKNOWN"] = true,
+					["MALE"] = true,
 				},
-				["class"] = "WARRIOR",
-				["reaction"] = "51:Alliance:HOSTILE",
+				["faction"] = "Stormwind",
+				["reaction"] = "66:Alliance:FRIENDLY",
+				["auctioneer"] = true,
 				["encounter_data"] = {
-					["PARTY:1:false"] = {
+					["NONE:0:false"] = {
 						["stats"] = {
-							["level_44"] = {
-								["max_health"] = 1688,
+							["level_110"] = {
+								["locations"] = {
+									["Stormwind City:301"] = {
+										["0:612:708"] = true,
+										["0:612:714"] = true,
+									},
+								},
+								["max_health"] = 3117801,
 							},
 						},
+					},
+				},
+				["class"] = "WARRIOR",
+			},
+			["19166"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+				},
+				["reaction"] = "68:Alliance:HOSTILE",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
 						["loot_counts"] = {
 							["drops"] = 1,
 						},
 						["spells"] = {
-							[11976] = 1,
+							[35012] = 1,
+						},
+						["stats"] = {
+							["level_69"] = {
+								["max_health"] = 19870,
+							},
 						},
 						["drops"] = {
-							"money:398", -- [1]
-							"4338:6", -- [2]
+							"25123:1", -- [1]
 						},
 					},
+				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["UNKNOWN"] = true,
 				},
 			},
 			["10439"] = {
@@ -6125,8 +10152,8 @@ WoWDBProfilerData = {
 						},
 						["spells"] = {
 							[12466] = 4,
-							[12544] = 58,
 							[15043] = 15,
+							[12544] = 58,
 							[15288] = 326,
 							[13748] = 10,
 							[6136] = 2,
@@ -6135,13 +10162,13 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["8905"] = {
+			["10217"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
 						},
 						["spells"] = {
-							[15621] = 1,
+							[9574] = 5,
 						},
 					},
 				},
@@ -6157,56 +10184,65 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["17961"] = {
+			["45849"] = {
+				["genders"] = {
+					["FEMALE"] = true,
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "51:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_53"] = {
+								["max_health"] = 5290,
+							},
+						},
+					},
+				},
+			},
+			["17840"] = {
 				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Keepers of Time:NEUTRAL"] = 1,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["spells"] = {
-							[15234] = 5,
-							[32173] = 4,
-						},
 						["stats"] = {
+						},
+						["spells"] = {
+							[8269] = 8,
 						},
 					},
 				},
 			},
-			["10409"] = {
-				["reaction"] = "48:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
+			["21891"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 2,
+					["Lower City:NEUTRAL"] = 2,
+				},
 				["genders"] = {
 					["UNKNOWN"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
 						["stats"] = {
-							["level_49"] = {
-								["max_health"] = 10220,
+							["level_67"] = {
+								["max_health"] = 2483,
 							},
 						},
 						["spells"] = {
-							[80781] = 26,
-							[13730] = 4,
+							[38056] = 2,
+						},
+						["drops"] = {
+							"25426:1", -- [1]
+							"25051:1", -- [2]
 						},
 					},
 				},
-			},
-			["48632"] = {
-				["reaction"] = "63:Alliance:FRIENDLY",
 				["class"] = "WARRIOR",
-				["genders"] = {
-					["UNKNOWN"] = true,
-				},
-				["encounter_data"] = {
-					["NONE:0:false"] = {
-						["stats"] = {
-							["level_40"] = {
-								["max_health"] = 1474,
-							},
-						},
-					},
-				},
+				["reaction"] = "67:Alliance:HOSTILE",
 			},
 			["9956"] = {
 				["reaction"] = "56:Alliance:HOSTILE",
@@ -6230,58 +10266,74 @@ WoWDBProfilerData = {
 			["21126"] = {
 				["reputations"] = {
 					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["spells"] = {
-							[34944] = 3,
+						["loot_counts"] = {
+							["drops"] = 2,
 						},
 						["stats"] = {
+						},
+						["spells"] = {
+							[34945] = 3,
+							[1604] = 1,
+							[34944] = 8,
+						},
+						["drops"] = {
+							"25146:1", -- [1]
+							"24620:1", -- [2]
 						},
 					},
 				},
 			},
-			["9178"] = {
-				["genders"] = {
-					["UNKNOWN"] = true,
+			["18171"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
 				},
-				["class"] = "WARRIOR",
-				["reaction"] = "56:Alliance:NEUTRAL",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[15232] = 11,
+							[21068] = 3,
+						},
+					},
+				},
+			},
+			["23965"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["spells"] = {
-							[13489] = 19,
+							[48400] = 2,
 						},
 						["stats"] = {
-							["level_30"] = {
-								["max_health"] = 997,
-							},
 						},
 					},
 				},
 			},
-			["54334"] = {
-				["encounter_data"] = {
-					["NONE:0:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[101260] = 238,
-						},
-					},
+			["18344"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 70,
 				},
-			},
-			["67095"] = {
 				["encounter_data"] = {
-					["NONE:0:false"] = {
+					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
 						["stats"] = {
 						},
 						["spells"] = {
-							[131980] = 41,
-							[131962] = 41,
-							[131956] = 92,
-							[131957] = 90,
-							[1604] = 5,
+							[32363] = 6,
+							[32364] = 13,
+							[32365] = 4,
+						},
+						["drops"] = {
+							"24748:1", -- [1]
+							"25956:1", -- [2]
+							"25956:1", -- [3]
+							"22921:1", -- [4]
 						},
 					},
 				},
@@ -6304,50 +10356,54 @@ WoWDBProfilerData = {
 				},
 				["reaction"] = "64:Alliance:FRIENDLY",
 			},
-			["10413"] = {
-				["reaction"] = "50:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
-				["genders"] = {
-					["UNKNOWN"] = true,
+			["17871"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 7,
 				},
+				["reaction"] = "63:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_49"] = {
-								["max_health"] = 10220,
-							},
-						},
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
 						["spells"] = {
-							[4962] = 44,
-							[16427] = 11,
+							[34163] = 7,
+							[32329] = 12,
+							[1604] = 1,
 						},
-						["drops"] = {
-							"15323:1", -- [1]
+						["stats"] = {
+							["level_62"] = {
+								["power"] = "MANA:5136",
+								["max_health"] = 9054,
+							},
+							["level_63"] = {
+								["power"] = "MANA:5240",
+								["max_health"] = 9300,
+							},
 						},
 					},
 				},
-			},
-			["9034"] = {
-				["genders"] = {
-					["FEMALE"] = true,
-				},
 				["class"] = "PALADIN",
-				["reaction"] = "56:Alliance:HOSTILE",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+			},
+			["17860"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["spells"] = {
-							[15580] = 1,
-							[15232] = 5,
-							[12040] = 2,
-						},
 						["stats"] = {
-							["level_55"] = {
-								["power"] = "MANA:10585",
-								["max_health"] = 21798,
-							},
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["spells"] = {
+							[15582] = 1,
+							[15581] = 1,
+							[1604] = 1,
+						},
+						["drops"] = {
+							"24753:1", -- [1]
+							"24983:1", -- [2]
 						},
 					},
 				},
@@ -6397,29 +10453,48 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["8319"] = {
-				["genders"] = {
-					["UNKNOWN"] = true,
+			["18092"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
 				},
-				["class"] = "WARRIOR",
-				["reaction"] = "52:Alliance:HOSTILE",
+				["reaction"] = "67:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_53"] = {
-								["max_health"] = 2300,
+							["level_67"] = {
+								["max_health"] = 11078,
 							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["drops"] = {
+							"25094:1", -- [1]
 						},
 					},
 				},
+				["class"] = "WARRIOR",
+				["genders"] = {
+					["MALE"] = true,
+				},
 			},
-			["61836"] = {
+			["17862"] = {
 				["encounter_data"] = {
-					["NONE:0:false"] = {
+					["PARTY:1:false"] = {
 						["stats"] = {
 						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
 						["spells"] = {
-							[79849] = 40,
+							[29380] = 1,
+							[29427] = 3,
+							[31904] = 2,
+							[8258] = 4,
+							[13005] = 2,
+						},
+						["drops"] = {
+							"27424:1", -- [1]
 						},
 					},
 				},
@@ -6436,7 +10511,7 @@ WoWDBProfilerData = {
 						["I will not be defeated!"] = true,
 					},
 				},
-				["reaction"] = "60:Alliance:HOSTILE",
+				["reaction"] = "66:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
@@ -6445,11 +10520,17 @@ WoWDBProfilerData = {
 								["power"] = "MANA:12840",
 							},
 						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
 						["spells"] = {
-							[31901] = 8,
-							[30686] = 8,
+							[31901] = 10,
+							[30686] = 10,
 							[30695] = 7,
 							[30707] = 6,
+						},
+						["drops"] = {
+							"24096:1", -- [1]
 						},
 					},
 				},
@@ -6458,204 +10539,173 @@ WoWDBProfilerData = {
 					["UNKNOWN"] = true,
 				},
 			},
-			["10463"] = {
-				["reaction"] = "48:Alliance:HOSTILE",
+			["24849"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[43665] = 20,
+							[32908] = 1,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["19168"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[17195] = 4,
+							[35265] = 4,
+							[35267] = 7,
+						},
+					},
+				},
+			},
+			["45328"] = {
+				["is_pvp"] = true,
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "Argent Crusade",
 				["class"] = "WARRIOR",
+				["reaction"] = "49:Alliance:FRIENDLY",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_48"] = {
+								["max_health"] = 43472,
+							},
+						},
+					},
+				},
+			},
+			["17938"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 5,
+					["Cenarion Expedition:FRIENDLY"] = 5,
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_62"] = {
+								["power"] = "MANA:2568",
+								["max_health"] = 9054,
+							},
+						},
+						["spells"] = {
+							[32191] = 1,
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["drops"] = {
+							"25131:1", -- [1]
+							"24606:1", -- [2]
+						},
+					},
+				},
+				["class"] = "PALADIN",
+				["reaction"] = "66:Alliance:HOSTILE",
+			},
+			["18524"] = {
+				["reputations"] = {
+					["Lower City:NEUTRAL"] = 8,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[32886] = 5,
+						},
+					},
+				},
+			},
+			["18934"] = {
+				["reputations"] = {
+					["Keepers of Time:NEUTRAL"] = 8,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[6136] = 24,
+							[12466] = 12,
+							[12544] = 6,
+						},
+					},
+				},
+			},
+			["9038"] = {
+				["reaction"] = "56:Alliance:HOSTILE",
+				["class"] = "MAGE",
 				["genders"] = {
 					["FEMALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_49"] = {
-								["max_health"] = 10220,
-							},
-							["level_50"] = {
-								["max_health"] = 10350,
-							},
-						},
 						["spells"] = {
-							[3589] = 65,
-							[80780] = 140,
-							[1604] = 2,
+							[6136] = 8,
+							[12544] = 4,
+							[12675] = 13,
+						},
+						["stats"] = {
+							["level_56"] = {
+								["power"] = "MANA:26030",
+								["max_health"] = 17766,
+							},
 						},
 					},
 				},
 			},
-			["17397"] = {
+			["19218"] = {
 				["reputations"] = {
-					["Honor Hold:FRIENDLY"] = 5,
-					["Honor Hold:NEUTRAL"] = 5,
+					["The Sha'tar:NEUTRAL"] = 90,
 				},
 				["quotes"] = {
-					["CHAT_MSG_MONSTER_SAY"] = {
-						["Lok narash!"] = true,
+					["CHAT_MSG_MONSTER_YELL"] = {
+						["An unforeseen... contingency."] = true,
+						["I predict a painful death."] = true,
 					},
-				},
-				["reaction"] = "62:Alliance:HOSTILE",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["loot_counts"] = {
-							["drops"] = 4,
-						},
-						["stats"] = {
-							["level_61"] = {
-								["power"] = "MANA:2486",
-								["max_health"] = 8807,
-							},
-						},
-						["spells"] = {
-							[3391] = 24,
-							[11978] = 2,
-						},
-						["drops"] = {
-							"23894:3", -- [1]
-							"23894:3", -- [2]
-							"23894:3", -- [3]
-							"24604:1", -- [4]
-						},
-					},
-				},
-				["class"] = "PALADIN",
-				["genders"] = {
-					["MALE"] = true,
-				},
-			},
-			["10414"] = {
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[77978] = 6,
-						},
-					},
-				},
-			},
-			["17395"] = {
-				["reputations"] = {
-					["Honor Hold:FRIENDLY"] = 5,
-					["Honor Hold:NEUTRAL"] = 5,
 				},
 				["genders"] = {
 					["MALE"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
 						["stats"] = {
-							["level_61"] = {
-								["power"] = "MANA:17625",
-								["max_health"] = 7047,
+							["level_70"] = {
+								["max_health"] = 81681,
 							},
 						},
 						["spells"] = {
-							[30851] = 7,
-							[18399] = 9,
-							[30853] = 5,
-							[15242] = 28,
-						},
-						["drops"] = {
-							"25185:1", -- [1]
+							[35311] = 2,
 						},
 					},
-				},
-				["class"] = "MAGE",
-				["reaction"] = "62:Alliance:HOSTILE",
-			},
-			["67021"] = {
-				["encounter_data"] = {
-					["NONE:0:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[131769] = 1754,
-						},
-					},
-				},
-			},
-			["10375"] = {
-				["genders"] = {
-					["UNKNOWN"] = true,
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "57:Alliance:HOSTILE",
+				["reaction"] = "68:Alliance:HOSTILE",
+			},
+			["20481"] = {
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_57"] = {
-								["max_health"] = 2563,
-							},
 						},
 						["spells"] = {
-							[1604] = 2,
+							[1604] = 1,
+							[35268] = 8,
 						},
 					},
-				},
-			},
-			["10408"] = {
-				["reaction"] = "50:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
-				["genders"] = {
-					["UNKNOWN"] = true,
-				},
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_49"] = {
-								["max_health"] = 10220,
-							},
-						},
-						["spells"] = {
-							[1604] = 5,
-							[13444] = 23,
-						},
-					},
-				},
-			},
-			["8904"] = {
-				["genders"] = {
-					["MALE"] = true,
-				},
-				["class"] = "MAGE",
-				["reaction"] = "56:Alliance:HOSTILE",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["spells"] = {
-							[15547] = 32,
-							[14034] = 27,
-							[2601] = 19,
-							[14868] = 12,
-							[12471] = 49,
-							[11831] = 3,
-							[11436] = 6,
-							[15498] = 51,
-						},
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["stats"] = {
-							["level_54"] = {
-								["max_health"] = 1867,
-								["power"] = "MANA:4896",
-							},
-							["level_55"] = {
-								["max_health"] = 1938,
-								["power"] = "MANA:5013",
-							},
-						},
-						["drops"] = {
-							"10070:1", -- [1]
-						},
-					},
-				},
-			},
-			["17537"] = {
-				["reputations"] = {
-					["Honor Hold:FRIENDLY"] = 50,
-					["Honor Hold:NEUTRAL"] = 50,
 				},
 			},
 			["5277"] = {
@@ -6677,60 +10727,69 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["5291"] = {
+			["18317"] = {
+				["reputations"] = {
+					["The Consortium:NEUTRAL"] = 7,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["stats"] = {
-						},
 						["spells"] = {
-							[5708] = 2,
+							[17139] = 14,
+							[34944] = 13,
+							[34945] = 3,
+						},
+						["stats"] = {
 						},
 					},
 				},
 			},
-			["66260"] = {
-				["quotes"] = {
-					["CHAT_MSG_MONSTER_SAY"] = {
-						["My assistant will show you to Master Cheng.  Good Luck!"] = true,
+			["54694"] = {
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["faction"] = "The Consortium",
+				["class"] = "WARRIOR",
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_64"] = {
+								["max_health"] = 3352,
+							},
+						},
 					},
 				},
+				["reaction"] = "65:Alliance:FRIENDLY",
+			},
+			["68"] = {
+				["is_pvp"] = true,
 				["genders"] = {
 					["MALE"] = true,
 				},
 				["encounter_data"] = {
 					["NONE:0:false"] = {
+						["spells"] = {
+							[95826] = 130,
+							[58511] = 1,
+						},
 						["stats"] = {
-							["level_90"] = {
+							["level_110"] = {
 								["locations"] = {
-									["Kun-Lai Summit:809"] = {
-										["0:486:428"] = true,
+									["Stormwind City:301"] = {
+										["0:618:316"] = true,
 									},
 								},
-								["max_health"] = 34482,
+								["max_health"] = 1558901,
 							},
 						},
 					},
 				},
 				["class"] = "WARRIOR",
-				["reaction"] = "62:Alliance:FRIENDLY",
+				["reaction"] = "67:Alliance:FRIENDLY",
+				["faction"] = "Stormwind",
 			},
-			["68"] = {
-				["encounter_data"] = {
-					["NONE:0:false"] = {
-						["spells"] = {
-							[95826] = 130,
-						},
-						["stats"] = {
-						},
-					},
-				},
-			},
-			["17991"] = {
+			["19307"] = {
 				["reputations"] = {
-					["Cenarion Expedition:NEUTRAL"] = 50,
-				},
-				["genders"] = {
-					["UNKNOWN"] = true,
+					["The Consortium:NEUTRAL"] = 7,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
@@ -6738,22 +10797,17 @@ WoWDBProfilerData = {
 							["drops"] = 1,
 						},
 						["stats"] = {
-							["level_64"] = {
-								["max_health"] = 87152,
-							},
 						},
 						["spells"] = {
-							[34970] = 2,
-							[35008] = 2,
-							[31948] = 1,
+							[34322] = 25,
+							[34925] = 1,
+							[34922] = 24,
 						},
 						["drops"] = {
-							"24376:1", -- [1]
+							"24633:1", -- [1]
 						},
 					},
 				},
-				["class"] = "WARRIOR",
-				["reaction"] = "63:Alliance:HOSTILE",
 			},
 			["8910"] = {
 				["genders"] = {
@@ -6784,214 +10838,245 @@ WoWDBProfilerData = {
 					},
 				},
 			},
-			["9266"] = {
+			["11030"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[1604] = 1,
+						},
+					},
+				},
+			},
+			["18887"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[33125] = 1,
+						},
+					},
+				},
+			},
+			["18506"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[32888] = 3,
+						},
+					},
+				},
+			},
+			["18472"] = {
+				["reputations"] = {
+					["Lower City:FRIENDLY"] = 90,
+				},
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[15659] = 4,
+							[12548] = 2,
+						},
+						["stats"] = {
+							["level_69"] = {
+								["max_health"] = 92191,
+								["power"] = "MANA:140620",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["drops"] = {
+							"27914:1", -- [1]
+							"27919:1", -- [2]
+						},
+					},
+				},
+				["class"] = "MAGE",
+				["reaction"] = "68:Alliance:HOSTILE",
+			},
+			["19735"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 24,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["spells"] = {
+							[35783] = 10,
+							[36582] = 16,
+							[1604] = 1,
+						},
+					},
+				},
+			},
+			["17848"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[9080] = 2,
+							[31911] = 2,
+						},
+						["drops"] = {
+							"27423:1", -- [1]
+						},
+					},
+				},
+			},
+			["23175"] = {
+				["reaction"] = "67:Alliance:HOSTILE",
+				["class"] = "WARRIOR",
 				["genders"] = {
 					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_68"] = {
+								["max_health"] = 11188,
+							},
+						},
+					},
+				},
+			},
+			["24071"] = {
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["spells"] = {
+							[32908] = 2,
+							[43665] = 47,
+							[31551] = 2,
+						},
+						["stats"] = {
+						},
+					},
+				},
+			},
+			["19167"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+				},
+				["genders"] = {
+					["MALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_68"] = {
+								["max_health"] = 11574,
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 1,
+						},
+						["spells"] = {
+							[12531] = 1,
+							[13736] = 10,
+							[15589] = 4,
+							[35189] = 2,
+						},
+						["drops"] = {
+							"24872:1", -- [1]
+						},
+					},
+				},
+				["class"] = "WARRIOR",
+				["reaction"] = "68:Alliance:HOSTILE",
+			},
+			["20990"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 12,
+				},
+				["genders"] = {
 					["FEMALE"] = true,
+				},
+				["encounter_data"] = {
+					["PARTY:1:false"] = {
+						["stats"] = {
+							["level_67"] = {
+								["max_health"] = 11460,
+								["power"] = "MANA:14665",
+							},
+						},
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
+						["spells"] = {
+							[36348] = 12,
+							[36340] = 3,
+							[1604] = 2,
+							[36333] = 16,
+						},
+						["drops"] = {
+							"29739:1", -- [1]
+							"29739:1", -- [2]
+						},
+					},
 				},
 				["class"] = "PALADIN",
-				["reaction"] = "58:Alliance:HOSTILE",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_58"] = {
-								["power"] = "MANA:2289",
-								["max_health"] = 12965,
-							},
-							["level_57"] = {
-								["power"] = "MANA:2241",
-								["max_health"] = 12815,
-							},
-						},
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["spells"] = {
-							[8262] = 3,
-							[15869] = 6,
-							[15867] = 2,
-						},
-						["drops"] = {
-							"10234:1", -- [1]
-						},
-					},
-				},
+				["reaction"] = "68:Alliance:HOSTILE",
 			},
-			["9200"] = {
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[15284] = 3,
-						},
-					},
+			["19716"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 6,
 				},
-			},
-			["9499"] = {
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["spells"] = {
-							[13787] = 8,
-						},
-						["stats"] = {
-						},
-					},
-				},
-			},
-			["54674"] = {
-				["genders"] = {
-					["MALE"] = true,
-				},
-				["class"] = "WARRIOR",
-				["reaction"] = "64:Alliance:FRIENDLY",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["spells"] = {
-							[35230] = 2,
-						},
-						["stats"] = {
-							["level_63"] = {
-								["max_health"] = 3207,
-							},
-						},
-					},
-				},
-			},
-			["9097"] = {
-				["genders"] = {
-					["FEMALE"] = true,
-				},
-				["class"] = "WARRIOR",
-				["reaction"] = "58:Alliance:HOSTILE",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_56"] = {
-								["max_health"] = 12335,
-							},
-						},
-						["loot_counts"] = {
-							["drops"] = 1,
-						},
-						["spells"] = {
-							[11972] = 3,
-							[15496] = 5,
-						},
-						["drops"] = {
-							"19234:1", -- [1]
-						},
-					},
-				},
-			},
-			["9198"] = {
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[15981] = 2,
-							[15659] = 1,
-							[15982] = 4,
-						},
-					},
-				},
-			},
-			["45898"] = {
-				["genders"] = {
-					["MALE"] = true,
-				},
-				["class"] = "WARRIOR",
-				["reaction"] = "50:Alliance:FRIENDLY",
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-							["level_58"] = {
-								["max_health"] = 5186,
-							},
-						},
-					},
-				},
-			},
-			["6066"] = {
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[8377] = 15,
-						},
-					},
-				},
-			},
-			["10412"] = {
-				["reaction"] = "51:Alliance:HOSTILE",
-				["class"] = "WARRIOR",
 				["genders"] = {
 					["UNKNOWN"] = true,
 				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
-							["level_49"] = {
-								["max_health"] = 10220,
-							},
-							["level_50"] = {
-								["max_health"] = 10350,
+							["level_67"] = {
+								["max_health"] = 5730,
 							},
 						},
 						["spells"] = {
-							[31601] = 96,
-							[15471] = 8,
+							[35057] = 146,
+							[35062] = 13,
+							[35058] = 21,
 						},
 					},
 				},
+				["class"] = "WARRIOR",
+				["reaction"] = "68:Alliance:HOSTILE",
 			},
-			["10217"] = {
+			["19713"] = {
+				["reputations"] = {
+					["The Sha'tar:NEUTRAL"] = 6,
+				},
+				["reaction"] = "68:Alliance:HOSTILE",
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
 						["stats"] = {
+							["level_68"] = {
+								["max_health"] = 11574,
+							},
 						},
-						["spells"] = {
-							[9574] = 5,
+						["loot_counts"] = {
+							["drops"] = 1,
 						},
-					},
-				},
-			},
-			["66257"] = {
-				["encounter_data"] = {
-					["NONE:0:false"] = {
-						["stats"] = {
-						},
-						["spells"] = {
-							[131604] = 290,
+						["drops"] = {
+							"29740:1", -- [1]
 						},
 					},
 				},
-			},
-			["17653"] = {
-				["reputations"] = {
-					["Honor Hold:FRIENDLY"] = 5,
-				},
+				["class"] = "WARRIOR",
 				["genders"] = {
 					["MALE"] = true,
 				},
-				["encounter_data"] = {
-					["PARTY:1:false"] = {
-						["spells"] = {
-							[12739] = 11,
-							[30937] = 3,
-						},
-						["stats"] = {
-							["level_62"] = {
-								["power"] = "MANA:6015",
-								["max_health"] = 7244,
-							},
-						},
-					},
-				},
-				["class"] = "MAGE",
-				["reaction"] = "61:Alliance:HOSTILE",
 			},
 			["17400"] = {
 				["reputations"] = {
@@ -7019,37 +11104,55 @@ WoWDBProfilerData = {
 				["class"] = "WARRIOR",
 				["reaction"] = "62:Alliance:HOSTILE",
 			},
-			["17626"] = {
+			["18321"] = {
 				["reputations"] = {
-					["Honor Hold:FRIENDLY"] = 5,
-					["Honor Hold:NEUTRAL"] = 5,
+					["Lower City:FRIENDLY"] = 9,
+					["Lower City:NEUTRAL"] = 9,
 				},
-				["reaction"] = "61:Alliance:HOSTILE",
+				["genders"] = {
+					["UNKNOWN"] = true,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
+						["loot_counts"] = {
+							["drops"] = 2,
+						},
 						["spells"] = {
-							[8599] = 24,
-							[10966] = 2,
+							[32674] = 39,
+							[32654] = 4,
 						},
 						["stats"] = {
-							["level_61"] = {
-								["max_health"] = 8807,
+							["level_69"] = {
+								["power"] = "MANA:3080",
+								["max_health"] = 11525,
 							},
+						},
+						["drops"] = {
+							"4500:1", -- [1]
+							"money:2987", -- [2]
 						},
 					},
 				},
-				["class"] = "WARRIOR",
-				["genders"] = {
-					["MALE"] = true,
-				},
+				["class"] = "PALADIN",
+				["reaction"] = "68:Alliance:HOSTILE",
 			},
-			["8923"] = {
+			["17882"] = {
+				["reputations"] = {
+					["Cenarion Expedition:NEUTRAL"] = 70,
+				},
 				["encounter_data"] = {
 					["PARTY:1:false"] = {
-						["spells"] = {
-							[9941] = 2,
+						["loot_counts"] = {
+							["drops"] = 1,
 						},
 						["stats"] = {
+						},
+						["spells"] = {
+							[31717] = 2,
+							[31704] = 2,
+						},
+						["drops"] = {
+							"24465:1", -- [1]
 						},
 					},
 				},
@@ -7065,6 +11168,14 @@ WoWDBProfilerData = {
 					["NPC:66260"] = true,
 				},
 			},
+			[29575] = {
+				["reward_text"] = "I didn't honestly think a <race> would be able to defeat a Nexus-Prince. You've surprised me, and you've earned the handsome reward you were promised.",
+				["progress_text"] = "Were you interested in the bounty on Shaffar's head?",
+				["can_share"] = true,
+				["end"] = {
+					["NPC:54692"] = true,
+				},
+			},
 			[27676] = {
 				["can_share"] = true,
 			},
@@ -7072,6 +11183,9 @@ WoWDBProfilerData = {
 				["can_share"] = true,
 			},
 			[43547] = {
+			},
+			[29591] = {
+				["can_share"] = true,
 			},
 			[42420] = {
 			},
@@ -7094,6 +11208,13 @@ WoWDBProfilerData = {
 			},
 			[39773] = {
 				["can_share"] = true,
+			},
+			[29605] = {
+				["reward_text"] = "Knowing that Lakka is free means I can cut the rest of my ties to the Sethekk.\n\nPart of me will never forgive myself for Syth's death, but it had to be done. When I reach Skettis, I will perform the death rites for him.",
+				["can_share"] = true,
+				["end"] = {
+					["NPC:54840"] = true,
+				},
 			},
 			[39781] = {
 				["can_share"] = true,
@@ -7151,6 +11272,8 @@ WoWDBProfilerData = {
 			},
 			[45088] = {
 			},
+			[29659] = {
+			},
 			[48021] = {
 				["can_share"] = true,
 			},
@@ -7176,7 +11299,11 @@ WoWDBProfilerData = {
 			[44263] = {
 			},
 			[29564] = {
+				["reward_text"] = "Mennu's death will not fix the broken backs of my family and friends, but it will give them a chance to live the rest of their lives free.",
 				["can_share"] = true,
+				["end"] = {
+					["NPC:54668"] = true,
+				},
 			},
 			[26137] = {
 				["can_share"] = true,
@@ -7188,7 +11315,38 @@ WoWDBProfilerData = {
 			},
 			[44283] = {
 			},
+			[29574] = {
+				["reward_text"] = "These samples are absolutely fascinating. They'll work very nicely.",
+				["can_share"] = true,
+				["progress_text"] = "If you don't have what I'm looking for, stop wasting my time.",
+				["end"] = {
+					["NPC:54694"] = true,
+				},
+			},
 			[27677] = {
+			},
+			[31860] = {
+			},
+			[29763] = {
+				["reward_text"] = "Outstanding!\n\nThis could be the turn of luck we've all been hoping for.",
+				["progress_text"] = "Good to see you're well, <name>.\n\nWe've had about as many casualties as we can handle.",
+				["end"] = {
+					["NPC:24111"] = true,
+				},
+			},
+			[29590] = {
+				["reward_text"] = "Perhaps now we can finally be at peace.",
+				["can_share"] = true,
+				["end"] = {
+					["NPC:54725"] = true,
+				},
+			},
+			[29764] = {
+				["reward_text"] = "<Mordun whistles.>\n\nWill ya just look at 'em? Incredible.\n\nI half expected these neanderthals to be swingin' around clubs and throwin' rock.\n\nNo such luck...",
+				["progress_text"] = "You pinch a load a' them vrykul axes?",
+				["end"] = {
+					["NPC:24111"] = true,
+				},
 			},
 			[29594] = {
 				["reward_text"] = "Well done! The long term effects of this attack will be far worse than slaying a few orcs could ever be.",
@@ -7203,7 +11361,44 @@ WoWDBProfilerData = {
 			},
 			[7781] = {
 			},
+			[29803] = {
+				["reward_text"] = "I bet the pale whelp felt that!\n\nThat's one more step towards yer judgment day, Arthas!",
+				["end"] = {
+					["NPC:24111"] = true,
+				},
+			},
+			[29567] = {
+				["reward_text"] = "The Black Stalker is dead!  Normally I would not revel in such butchery, but the pain that the great mother and her brood have put my people through over the centuries is unspeakable.\n\nYou have my deepest thanks, brave <class>.",
+				["can_share"] = true,
+				["progress_text"] = "You have returned.  Does this mean that The Black Stalker is no more?",
+				["end"] = {
+					["NPC:54674"] = true,
+				},
+			},
+			[29657] = {
+			},
 			[40668] = {
+			},
+			[353] = {
+			},
+			[10297] = {
+			},
+			[29692] = {
+				["progress_text"] = "We can still use more sanguine hibiscus. We're always struggling to find more.\n\nBring them to me in bunches of five and I will be most grateful.",
+			},
+			[29563] = {
+				["reward_text"] = "The loss of life...it pains me.\n\n<Watcher Jhang sighs.>\n\nThank you, <name>. When we are all reunited, the naga won't stand a chance.",
+				["can_share"] = true,
+				["end"] = {
+					["NPC:54667"] = true,
+				},
+			},
+			[29573] = {
+				["reward_text"] = "Splendid! Haramad will be delighted to hear the good news! All of this ripe for his taking!",
+				["can_share"] = true,
+				["end"] = {
+					["NPC:54692"] = true,
+				},
 			},
 			[29570] = {
 				["reward_text"] = "Soon we'll all be together again, and I owe it all to you!\n\nWe'll bring the naga down before you know it, they don't stand a chance!",
@@ -7212,8 +11407,6 @@ WoWDBProfilerData = {
 					["NPC:54675"] = true,
 				},
 			},
-			[44891] = {
-			},
 			[29568] = {
 				["reward_text"] = "You've done all of Zangarmarsh a favor this day, <name>. The spore giants may be naturally aggressive, but they're still a vital part of the ecosystem.",
 				["can_share"] = true,
@@ -7221,20 +11414,28 @@ WoWDBProfilerData = {
 					["NPC:54678"] = true,
 				},
 			},
-			[29567] = {
-				["reward_text"] = "The Black Stalker is dead!  Normally I would not revel in such butchery, but the pain that the great mother and her brood have put my people through over the centuries is unspeakable.\n\nYou have my deepest thanks, brave <class>.",
-				["progress_text"] = "You have returned.  Does this mean that The Black Stalker is no more?",
+			[44891] = {
+			},
+			[43905] = {
+			},
+			[29691] = {
+				["reward_text"] = "These will do nicely, but we can always use more.  Perhaps you will find yourself in the Underbog again soon?",
+				["can_share"] = true,
+				["progress_text"] = "Were you able to gather any hibiscus?",
 				["end"] = {
 					["NPC:54674"] = true,
 				},
 			},
-			[29692] = {
-				["progress_text"] = "We can still use more sanguine hibiscus. We're always struggling to find more.\n\nBring them to me in bunches of five and I will be most grateful.",
-			},
-			[29563] = {
+			[27605] = {
+				["reward_text"] = "You only defeated Eranikus' Shade? This is most troubling...\n\nLet us hope that his full form does not still exist outside the Temple. Only Ysera herself is stronger than him in our flight.",
 				["can_share"] = true,
+				["end"] = {
+					["NPC:46077"] = true,
+				},
 			},
-			[43905] = {
+			[31836] = {
+			},
+			[44219] = {
 			},
 			[42375] = {
 				["can_share"] = true,
@@ -7262,31 +11463,28 @@ WoWDBProfilerData = {
 					["NPC:45329"] = true,
 				},
 			},
-			[29691] = {
-				["reward_text"] = "These will do nicely, but we can always use more.  Perhaps you will find yourself in the Underbog again soon?",
-				["can_share"] = true,
-				["progress_text"] = "Were you able to gather any hibiscus?",
-				["end"] = {
-					["NPC:54674"] = true,
-				},
+			[44271] = {
 			},
 			[42170] = {
 			},
-			[44284] = {
-			},
-			[44219] = {
-			},
-			[31858] = {
-				["reward_text"] = "Welcome back, <name>.  It is time to continue your training.",
+			[27567] = {
+				["reward_text"] = "I see...she did not cooperate. Hopefully we can still stop them before something else terrible happens.",
+				["can_share"] = true,
 				["end"] = {
-					["NPC:66260"] = true,
+					["NPC:45898"] = true,
 				},
+			},
+			[27125] = {
+				["can_share"] = true,
 			},
 			[27633] = {
 				["reward_text"] = "You have successfully stopped Hakkar here, but I fear we are far from done. The Atal'ai transported most of the blood they produced to Zul'Gurub, where the Hakkari work to summon The Blood God there.\n\n<name>, I do not think that this was ever meant to be the place of Hakkar's arrival - it was merely a test to see if the blood was potent enough! Hakkar can only be summoned in Zul'Gurub...and I fear we may be too late to stop the Hakkari with the blood they now have in their possession.",
 				["end"] = {
 					["NPC:46077"] = true,
 				},
+			},
+			[26932] = {
+				["can_share"] = true,
 			},
 			[29529] = {
 				["reward_text"] = "So it's true. The fel orcs and the Burning Legion are working together in some capacity.",
@@ -7302,26 +11500,6 @@ WoWDBProfilerData = {
 			[40010] = {
 				["can_share"] = true,
 			},
-			[27567] = {
-				["reward_text"] = "I see...she did not cooperate. Hopefully we can still stop them before something else terrible happens.",
-				["can_share"] = true,
-				["end"] = {
-					["NPC:45898"] = true,
-				},
-			},
-			[27125] = {
-				["can_share"] = true,
-			},
-			[26932] = {
-				["can_share"] = true,
-			},
-			[29539] = {
-				["reward_text"] = "<You tell Gunny everything you saw in the Blood Furnace.>\n\nYou brought back some loot for ol' Gunny, right?\n\nNo, no, you're right, clearly I owe you a reward for all your hard work. Not like Gunny didn't arrange all this and send you in there in the first place.",
-				["can_share"] = true,
-				["end"] = {
-					["NPC:54629"] = true,
-				},
-			},
 			[44814] = {
 				["can_share"] = true,
 			},
@@ -7334,6 +11512,23 @@ WoWDBProfilerData = {
 			[26928] = {
 				["can_share"] = true,
 			},
+			[29539] = {
+				["reward_text"] = "<You tell Gunny everything you saw in the Blood Furnace.>\n\nYou brought back some loot for ol' Gunny, right?\n\nNo, no, you're right, clearly I owe you a reward for all your hard work. Not like Gunny didn't arrange all this and send you in there in the first place.",
+				["can_share"] = true,
+				["end"] = {
+					["NPC:54629"] = true,
+				},
+			},
+			[31858] = {
+				["reward_text"] = "Welcome back, <name>.  It is time to continue your training.",
+				["end"] = {
+					["NPC:66260"] = true,
+				},
+			},
+			[42234] = {
+			},
+			[44284] = {
+			},
 			[39788] = {
 				["can_share"] = true,
 			},
@@ -7343,7 +11538,7 @@ WoWDBProfilerData = {
 					["NPC:66260"] = true,
 				},
 			},
-			[42234] = {
+			[43904] = {
 			},
 			[38911] = {
 				["can_share"] = true,
@@ -7354,26 +11549,43 @@ WoWDBProfilerData = {
 					["NPC:66260"] = true,
 				},
 			},
-			[44271] = {
+			[45382] = {
 			},
-			[43904] = {
+			[29598] = {
 			},
-			[31836] = {
+			[29596] = {
+				["reward_text"] = "You have done our realm a great service. You will not be forgotten.",
+				["can_share"] = true,
+				["end"] = {
+					["NPC:54725"] = true,
+				},
 			},
 			[42233] = {
 			},
 			[29565] = {
+				["reward_text"] = "I'm glad that their spirits are now free. I wish we could say the same for the rest of their kind.\n\nThere is still much work to be done, especially elsewhere in Coilfang.",
 				["can_share"] = true,
+				["progress_text"] = "Did you slay them?",
+				["end"] = {
+					["NPC:54667"] = true,
+				},
 			},
 			[44908] = {
 			},
-			[45382] = {
-			},
-			[27605] = {
-				["reward_text"] = "You only defeated Eranikus' Shade? This is most troubling...\n\nLet us hope that his full form does not still exist outside the Temple. Only Ysera herself is stronger than him in our flight.",
+			[29606] = {
+				["reward_text"] = "I may never truly be forgiven for my role in the crimes of the Sethekk, but perhaps by restoring the relics of Terokk to my people, I can begin to redeem myself.",
 				["can_share"] = true,
+				["progress_text"] = "The relics of Terokk have been absent from Skettis for too long. Were you able to recover them from the Sethekk?",
 				["end"] = {
-					["NPC:46077"] = true,
+					["NPC:54840"] = true,
+				},
+			},
+			[29607] = {
+				["reward_text"] = "These are marvelous. Well done!\n\nHere's your cut, as promised.",
+				["can_share"] = true,
+				["progress_text"] = "Did you bring the eyes?",
+				["end"] = {
+					["NPC:54847"] = true,
 				},
 			},
 		},

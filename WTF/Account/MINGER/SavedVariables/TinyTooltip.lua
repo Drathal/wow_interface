@@ -45,20 +45,20 @@ BigTipDB = {
 		},
 		["statusbarPosition"] = "bottom",
 		["statusbarOffsetX"] = 0,
-		["skinMoreFrames"] = true,
-		["bodyFontSize"] = "default",
-		["statusbarFontFlag"] = "THINOUTLINE",
-		["statusbarOffsetY"] = 0,
-		["borderCorner"] = "default",
-		["statusbarTexture"] = "TukTex",
-		["alwaysShowIdInfo"] = false,
-		["statusbarText"] = false,
 		["statusbarHeight"] = 4,
-		["headerFontFlag"] = "default",
-		["headerFontSize"] = "default",
-		["statusbarColor"] = "auto",
-		["bodyFont"] = "default",
+		["bodyFontSize"] = "default",
 		["bodyFontFlag"] = "default",
+		["bodyFont"] = "default",
+		["borderCorner"] = "default",
+		["statusbarColor"] = "auto",
+		["headerFontSize"] = "default",
+		["statusbarText"] = false,
+		["skinMoreFrames"] = true,
+		["headerFontFlag"] = "default",
+		["alwaysShowIdInfo"] = false,
+		["statusbarTexture"] = "TukTex",
+		["statusbarOffsetY"] = 0,
+		["statusbarFontFlag"] = "THINOUTLINE",
 	},
 	["version"] = 2,
 	["item"] = {
@@ -217,8 +217,10 @@ BigTipDB = {
 					["wildcard"] = "<%s>",
 					["filter"] = "none",
 				},
-				["factionIcon"] = {
+				["className"] = {
 					["enable"] = true,
+					["color"] = "ffffff",
+					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
 				["name"] = {
@@ -227,10 +229,8 @@ BigTipDB = {
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
-				["className"] = {
+				["factionIcon"] = {
 					["enable"] = true,
-					["color"] = "ffffff",
-					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
 				["classIcon"] = {
@@ -256,7 +256,6 @@ BigTipDB = {
 			["grayForDead"] = true,
 		},
 		["npc"] = {
-			["coloredBorder"] = "reaction",
 			["elements"] = {
 				{
 					"raidIcon", -- [1]
@@ -340,7 +339,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 			},
-			["showTarget"] = true,
+			["coloredBorder"] = "reaction",
 			["anchor"] = {
 				["returnOnUnitFrame"] = false,
 				["position"] = "inherit",
@@ -348,6 +347,7 @@ BigTipDB = {
 				["p"] = "BOTTOMRIGHT",
 				["returnInCombat"] = true,
 			},
+			["showTarget"] = true,
 			["background"] = {
 				["colorfunc"] = "default",
 				["alpha"] = 0.9,

@@ -4,8 +4,8 @@ FrameLevel: 1
 Anchor: CENTER
 X: 0
 Y: 0
-W: 900
-H: 660
+W: 873
+H: 711
 Frame: ColorPickerFrame
 FrameLevel: 22
 Anchor: CENTER
@@ -27,3 +27,10 @@ X: 119
 Y: 17
 W: 709
 H: 312
+Frame: Butsu
+FrameLevel: 1
+Anchor: TOPLEFT
+X: 245
+Y: -220
+W: 222
+H: 63

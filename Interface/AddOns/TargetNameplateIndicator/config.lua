@@ -66,8 +66,8 @@ CONFIG.TEXTURE_PATH = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\Sh
 
 
 -- The height/width of the texture. Using a height:width ratio different to that of the texture file may result in distortion.
-CONFIG.TEXTURE_HEIGHT = 30
-CONFIG.TEXTURE_WIDTH = 30
+CONFIG.TEXTURE_HEIGHT = 25
+CONFIG.TEXTURE_WIDTH = 25
 
 -------
 -- These four variables control how the texture is anchored to the nameplate.
@@ -77,8 +77,8 @@ CONFIG.TEXTURE_WIDTH = 30
 -- See http://www.wowpedia.org/API_Region_SetPoint for explanation.
 CONFIG.TEXTURE_POINT = "BOTTOM" -- The point of the texture that should be anchored to the nameplate.
 CONFIG.ANCHOR_POINT  = "TOP"	   -- The point of the nameplate the texture should be anchored to.
-CONFIG.OFFSET_X = 60 			   -- The x/y offset of the texture relative to the anchor point.
-CONFIG.OFFSET_Y = -43
+CONFIG.OFFSET_X = 40 			   -- The x/y offset of the texture relative to the anchor point.
+CONFIG.OFFSET_Y = -33
 
 -------------------
 -- END OF CONFIG --
