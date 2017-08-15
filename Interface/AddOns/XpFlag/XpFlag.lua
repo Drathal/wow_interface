@@ -244,10 +244,41 @@ function XpFlag.CreateMark(name, class)
 	model:SetAlpha(1)
 	marks[name].model = model
 
-	--model:SetCamera(1);
+	marks[name].xp = CreateFrame("Frame",'XPFLag-'..name..'-xp');
+	marks[name].xp:SetHeight(1);
+	marks[name].xp:SetWidth(1);
+	marks[name].xp:SetParent(marks[name]);
+	marks[name].xp:SetPoint("TOP", marks[name], "TOP", 0, -20);		
+	marks[name].xp.text = marks[name].xp:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+	marks[name].xp.text:SetPoint("CENTER")
+	marks[name].xp.text:SetText("")
+
+	local ag = marks[name].xp:CreateAnimationGroup()  
+    local a1 = ag:CreateAnimation("Translation")
+    a1:SetOffset(0, -100)    
+    a1:SetDuration(1.5)
+    a1:SetSmoothing("OUT")
+
+    local a2 = ag:CreateAnimation("Alpha")
+	a2:SetFromAlpha(1)
+	a2:SetToAlpha(0)
+    a2:SetDuration(1.5)
+    a2:SetSmoothing("OUT")   
+
+    ag:HookScript("OnPlay", function(self)
+  		self:GetParent().text:SetText(self:GetParent():GetParent().gain)
+	end) 
+
+    ag:HookScript("OnFinished", function(self)
+  		self:GetParent().text:SetText("")
+	end) 
+
+    marks[name].xp.ag = ag
+
+	-- /run _G['XPFLag-Drathtix-Madmortem-xp'].ag:Play()
 	-- /run _G['mymodel']:SetSequence(0); _G['mymodel']:SetSequenceTime(0, 0)
 	-- /run _G['mymodel']:ClearModel();_G['mymodel']:SetModel("particles/bloodspurts/bloodspurtlarge.m2")
-	-- /run  _G['mymodel']:SetDisplayInfo({enable=true,displayInfo=32368,camDistanceScale=0.95,pos_x=0,pos_y=0.1,rotation=0,portraitZoom=0,alpha=1})
+	-- /run _G['mymodel']:SetDisplayInfo({enable=true,displayInfo=32368,camDistanceScale=0.95,pos_x=0,pos_y=0.1,rotation=0,portraitZoom=0,alpha=1})
     -- /run _G['mymodel']:SetCamera(1);
     -- /run _G['mymodel']:SetSequenceTime(1, 0)
 end
@@ -257,10 +288,12 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 	if not marks[name] then
 		XpFlag.CreateMark(name, class);
 	end
-  
+
+	marks[name].prev = marks[name].value or value;  
 	marks[name].value = value;
 	marks[name].maxvalue = maxvalue;
 	marks[name].level = level;
+	marks[name].gain = value - marks[name].prev or 0
 
 	marks[name].to = maxWidth * value/maxvalue;		
 	
@@ -276,6 +309,7 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 
 	local color = GetXPExhaustion() and XpFlag.db.selfcolorrested or XpFlag.db.selfcolor;
 	marks[name].texture:SetVertexColor(unpack(color));
+	marks[name].xp.ag:Play()
 
 	if level == MAX_PLAYER_LEVEL then
 		marks[name]:Hide();
@@ -375,7 +409,7 @@ function XpFlag:PLAYER_XP_UPDATE(event, unit)
 		end
 	end
 
-	if XpFlag.db.showself then
+	if XpFlag.db.showself then		
 		UIFrameFadeIn(marks[playerNameRealm].model, 0.15, marks[playerNameRealm].model:GetAlpha(), 1)
 		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
 		XpFlag.UpdatePlayerBar()

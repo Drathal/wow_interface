@@ -59,10 +59,10 @@ XIVBarDB = {
 				["daily"] = 0,
 			},
 			["Drathtix"] = {
-				["dailyMoney"] = 58870267,
-				["sessionMoney"] = 1873190,
-				["lastLoginDate"] = 20170813,
-				["currentMoney"] = 59268004,
+				["dailyMoney"] = 20932447,
+				["sessionMoney"] = 377074,
+				["lastLoginDate"] = 20170815,
+				["currentMoney"] = 21330184,
 				["daily"] = 0,
 			},
 			["Drahmoon"] = {

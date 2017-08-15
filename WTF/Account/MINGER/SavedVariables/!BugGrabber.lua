@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 1853,
+	["session"] = 1881,
 	["errors"] = {
 		{
 			["message"] = "SendAddonMessage(): Whisper message missing target player!",
@@ -115,21 +115,13 @@ BugGrabberDB = {
 			["counter"] = 10,
 		}, -- [15]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'CompactRaidFrame1:Show()'.",
-			["time"] = "2017/08/13 14:38:09",
-			["locals"] = "",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:341: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:282: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:56: in function <Interface\\FrameXML\\CompactUnitFrame.lua:53>",
-			["session"] = 1838,
-			["counter"] = 1,
-		}, -- [16]
-		{
 			["message"] = "Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: AdiBagsSection4:SetPoint(): AdiBagsSection3 is dependent on this",
 			["time"] = "2017/08/13 14:42:12",
 			["locals"] = "(*temporary) = AdiBagsSection4 {\n 0 = <userdata>\n acquired = true\n buttons = <table> {\n }\n Header = <unnamed> {\n }\n slots = <table> {\n }\n width = 5\n count = 5\n total = 5\n name = \"Junk\"\n category = \"Junk\"\n height = 1\n key = \"Junk#Junk\"\n freeSlots = <table> {\n }\n container = AdiBagsContainer1 {\n }\n}\n(*temporary) = \"TOPLEFT\"\n(*temporary) = AdiBagsSection3 {\n 0 = <userdata>\n acquired = true\n buttons = <table> {\n }\n Header = <unnamed> {\n }\n slots = <table> {\n }\n width = 1\n count = 1\n total = 1\n name = \"Hearthstones\"\n category = \"Hearthstones\"\n height = 1\n key = \"Hearthstones#Hearthstones\"\n freeSlots = <table> {\n }\n container = AdiBagsContainer1 {\n }\n}\n(*temporary) = \"TOPRIGHT\"\n(*temporary) = 10.5\n(*temporary) = 0\n",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: in function `LayoutSections'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1067: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1041>\n(tail call): ?\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:447: in function `RefreshContents'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:432: in function `ResumeUpdates'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:415: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:407>\n[C]: in function `Show'\nInterface\\AddOns\\AdiBags\\core\\Bags.lua:89: in function `Open'\nInterface\\AddOns\\AdiBags\\core\\Hooks.lua:112: in function <Interface\\AddOns\\AdiBags\\core\\Hooks.lua:109>\n(tail call): ?\n(tail call): ?\n[string \"OPENALLBAGS\"]:1: in function <[string \"OPENALLBAGS\"]:1>",
 			["session"] = 1838,
 			["counter"] = 2,
-		}, -- [17]
+		}, -- [16]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'CompactRaidFrame2:Show()'.",
 			["time"] = "2017/08/10 23:31:12",
@@ -137,14 +129,14 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:341: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:282: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:56: in function <Interface\\FrameXML\\CompactUnitFrame.lua:53>",
 			["session"] = 1840,
 			["counter"] = 2,
-		}, -- [18]
+		}, -- [17]
 		{
 			["message"] = "Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: AdiBagsSection2:SetPoint(): AdiBagsSection7 is dependent on this",
 			["time"] = "2017/08/13 15:27:12",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: in function `LayoutSections'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1067: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1041>\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:155: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:155>\n[string \"safecall Dispatcher[2]\"]:4: in function <[string \"safecall Dispatcher[2]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[2]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `SendMessage'\nInterface\\AddOns\\AdiBags\\core\\Core.lua:445: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:85>\n(tail call): ?",
 			["session"] = 1840,
 			["counter"] = 3,
-		}, -- [19]
+		}, -- [18]
 		{
 			["message"] = "Interface\\AddOns\\flyPlateBuffs\\utils\\fixBlizzard.lua:24: Attempt to access forbidden object from code tainted by an AddOn",
 			["time"] = "2017/08/13 15:28:23",
@@ -152,7 +144,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `IsShown'\nInterface\\AddOns\\flyPlateBuffs\\utils\\fixBlizzard.lua:24: in function <Interface\\AddOns\\flyPlateBuffs\\utils\\fixBlizzard.lua:23>\n[C]: in function `CompactUnitFrame_UpdateName'\nInterface\\FrameXML\\CompactUnitFrame.lua:290: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:173: in function `CompactUnitFrame_SetUnit'\n...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:331: in function `OnAdded'\n...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:86: in function `OnNamePlateAdded'\n...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:44: in function <...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:35>\n[C]: ?",
 			["session"] = 1841,
 			["counter"] = 4,
-		}, -- [20]
+		}, -- [19]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:343: unexpected symbol near '{'",
 			["time"] = "2017/08/13 16:58:15",
@@ -160,6 +152,51 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 1852,
 			["counter"] = 1,
+		}, -- [20]
+		{
+			["message"] = "Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: AdiBagsSection5:SetPoint(): AdiBagsSection18 is dependent on this",
+			["time"] = "2017/08/13 21:35:51",
+			["locals"] = "(*temporary) = AdiBagsSection5 {\n 0 = <userdata>\n acquired = true\n buttons = <table> {\n }\n Header = <unnamed> {\n }\n slots = <table> {\n }\n width = 6\n count = 6\n total = 6\n name = \"Junk\"\n category = \"Junk\"\n height = 1\n key = \"Junk#Junk\"\n freeSlots = <table> {\n }\n container = AdiBagsContainer1 {\n }\n}\n(*temporary) = \"TOPLEFT\"\n(*temporary) = AdiBagsSection18 {\n 0 = <userdata>\n acquired = true\n buttons = <table> {\n }\n Header = <unnamed> {\n }\n slots = <table> {\n }\n width = 3\n count = 3\n total = 3\n name = \"BoE\"\n category = \"BoE\"\n height = 1\n key = \"BoE#BoE\"\n freeSlots = <table> {\n }\n container = AdiBagsContainer1 {\n }\n}\n(*temporary) = \"TOPRIGHT\"\n(*temporary) = 10.5\n(*temporary) = 0\n",
+			["stack"] = "[C]: in function `SetPoint'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: in function `LayoutSections'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1067: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1041>\n(tail call): ?\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:447: in function `RefreshContents'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:432: in function `ResumeUpdates'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:415: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:407>\n[C]: in function `Show'\nInterface\\AddOns\\AdiBags\\core\\Bags.lua:89: in function `Open'\nInterface\\AddOns\\AdiBags\\core\\Bags.lua:209: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[3]\"]:4: in function <[string \"safecall Dispatcher[3]\"]:4>\n...\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `SendMessage'\nInterface\\AddOns\\AdiBags\\core\\Core.lua:447: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:85>\n(tail call): ?\n[C]: in function `TurnOrActionStop'\n[string \"TURNORACTION\"]:4: in function <[string \"TURNORACTION\"]:1>",
+			["session"] = 1854,
+			["counter"] = 2,
 		}, -- [21]
+		{
+			["message"] = "Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: AdiBagsSection5:SetPoint(): AdiBagsSection3 is dependent on this",
+			["time"] = "2017/08/13 21:35:53",
+			["stack"] = "[C]: in function `SetPoint'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:996: in function `LayoutSections'\nInterface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1067: in function <Interface\\AddOns\\AdiBags\\widgets\\ContainerFrame.lua:1041>\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:155: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:155>\n[string \"safecall Dispatcher[2]\"]:4: in function <[string \"safecall Dispatcher[2]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[2]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `SendMessage'\nInterface\\AddOns\\AdiBags\\core\\Core.lua:445: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:85>\n(tail call): ?",
+			["session"] = 1854,
+			["counter"] = 1,
+		}, -- [22]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:262: attempt to call method 'SetChange' (a nil value)",
+			["time"] = "2017/08/15 00:42:37",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:262: in function `CreateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:279: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:356: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 1864,
+			["counter"] = 1,
+		}, -- [23]
+		{
+			["message"] = "[string \"_G['XPFLag-Drathtix-Madmortem-xp'].xp.ag:Pl...\"]:1: attempt to index field 'xp' (a nil value)",
+			["time"] = "2017/08/15 00:47:02",
+			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index field 'xp' (a nil value)\"\n",
+			["stack"] = "[string \"_G['XPFLag-Drathtix-Madmortem-xp'].xp.ag:Pl...\"]:1: in main chunk\n[C]: in function `RunScript'\nInterface\\FrameXML\\ChatFrame.lua:2060: in function `?'\nInterface\\FrameXML\\ChatFrame.lua:4486: in function `ChatEdit_ParseText'\nInterface\\FrameXML\\ChatFrame.lua:4154: in function `ChatEdit_SendText'\nInterface\\FrameXML\\ChatFrame.lua:4190: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
+			["session"] = 1865,
+			["counter"] = 1,
+		}, -- [24]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:263: attempt to call method 'SetAlpha' (a nil value)",
+			["time"] = "2017/08/15 00:49:37",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:263: in function `CreateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:281: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:358: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 1867,
+			["counter"] = 1,
+		}, -- [25]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'CompactRaidFrame1:Show()'.",
+			["time"] = "2017/08/13 14:38:09",
+			["locals"] = "",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:341: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:282: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:56: in function <Interface\\FrameXML\\CompactUnitFrame.lua:53>",
+			["session"] = 1881,
+			["counter"] = 3,
+		}, -- [26]
 	},
 }

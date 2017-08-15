@@ -144,12 +144,12 @@ AdiBagsDB = {
 		["Drahmoon - Madmortem"] = {
 			["collapsedSections"] = {
 				["Broken Shore#Broken Shore"] = true,
+				["Hearthstones#Hearthstones"] = true,
 				["Equipment#Set: AMR Affliction"] = true,
-				["Junk#Junk"] = true,
 				["Equipment#Set: AMR Destruction"] = true,
 				["Equipment#Legenday"] = true,
 				["Equipment#Set: AMR Demonology"] = true,
-				["Hearthstones#Hearthstones"] = true,
+				["Junk#Junk"] = true,
 			},
 		},
 	},
