@@ -90,7 +90,7 @@ function XpFlag.animateMark(self, limit)
 		new = self.to
 		self.to = nil
 		if self.name == playerNameRealm then
-			UIFrameFadeOut(marks[playerNameRealm].model, 1, marks[playerNameRealm].model:GetAlpha(), 0)
+			UIFrameFadeOut(marks[playerNameRealm].model, 2, marks[playerNameRealm].model:GetAlpha(), 0)
 		end		
 	end
 
@@ -244,44 +244,75 @@ function XpFlag.CreateMark(name, class)
 	model:SetAlpha(1)
 	marks[name].model = model
 
-	marks[name].xp = CreateFrame("Frame",'XPFLag-'..name..'-xp');
-	marks[name].xp:SetHeight(1);
-	marks[name].xp:SetWidth(1);
-	marks[name].xp:SetParent(marks[name]);
-	marks[name].xp:SetPoint("TOP", marks[name], "TOP", 0, -20);		
-	marks[name].xp.text = marks[name].xp:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-	marks[name].xp.text:SetPoint("CENTER")
-	marks[name].xp.text:SetText("")
+	marks[name].xp = {}
+	marks[name].xp[1] = XpFlag.AddSpark(marks[name], 1)
+	marks[name].xp[2] = XpFlag.AddSpark(marks[name], 2)
+	marks[name].xp[3] = XpFlag.AddSpark(marks[name], 3)
+	marks[name].xp[4] = XpFlag.AddSpark(marks[name], 4)
 
-	local ag = marks[name].xp:CreateAnimationGroup()  
-    local a1 = ag:CreateAnimation("Translation")
-    a1:SetOffset(0, -100)    
-    a1:SetDuration(1.5)
-    a1:SetSmoothing("OUT")
+	marks[name].Play = function()
+		for k,spark in pairs(marks[name].xp) do
+			if not spark.isAnimating then
+				spark.ag:Play()
+				break 
+			end
+		end			
+	end
 
-    local a2 = ag:CreateAnimation("Alpha")
-	a2:SetFromAlpha(1)
-	a2:SetToAlpha(0)
-    a2:SetDuration(1.5)
-    a2:SetSmoothing("OUT")   
 
-    ag:HookScript("OnPlay", function(self)
-  		self:GetParent().text:SetText(self:GetParent():GetParent().gain)
-	end) 
-
-    ag:HookScript("OnFinished", function(self)
-  		self:GetParent().text:SetText("")
-	end) 
-
-    marks[name].xp.ag = ag
-
-	-- /run _G['XPFLag-Drathtix-Madmortem-xp'].ag:Play()
+	-- /run _G['XPFLag-Dranathal-Madmortem']:Play();
 	-- /run _G['mymodel']:SetSequence(0); _G['mymodel']:SetSequenceTime(0, 0)
 	-- /run _G['mymodel']:ClearModel();_G['mymodel']:SetModel("particles/bloodspurts/bloodspurtlarge.m2")
 	-- /run _G['mymodel']:SetDisplayInfo({enable=true,displayInfo=32368,camDistanceScale=0.95,pos_x=0,pos_y=0.1,rotation=0,portraitZoom=0,alpha=1})
     -- /run _G['mymodel']:SetCamera(1);
     -- /run _G['mymodel']:SetSequenceTime(1, 0)
 end
+
+local xoffset = { 0, 15, -15, 8 }
+local yoffset = { -60, -45, -55, -65 }
+local dur = { 2, 1.5, 1.2, 1.8 }
+
+function XpFlag.AddSpark(parent, num)
+
+	local name = "xp"..num
+
+	local f = CreateFrame("Frame",'XPFLag-spark-'..name);
+	f:SetHeight(1);
+	f:SetWidth(1);
+	f:SetParent(parent);	
+	f:SetPoint("TOP", parent, "TOP", 0, -20);		
+
+	f.text = f:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+	f.text:SetPoint("CENTER")
+
+	f.ag = f:CreateAnimationGroup()  
+    
+    f.ag.a1 = f.ag:CreateAnimation("Translation")
+    f.ag.a1:SetOffset(xoffset[num], yoffset[num])    
+    f.ag.a1:SetDuration(dur[num])
+    f.ag.a1:SetSmoothing("IN_OUT")
+
+    f.ag.a2 = f.ag:CreateAnimation("Alpha")
+	f.ag.a2:SetFromAlpha(1)
+	f.ag.a2:SetToAlpha(0)
+    f.ag.a2:SetDuration(dur[num])
+    f.ag.a2:SetSmoothing("IN_OUT")   
+
+    f.ag:HookScript("OnPlay", function(self)
+    	f.isAnimating = true
+    	self:GetParent().text:SetAlpha(1)
+  		self:GetParent().text:SetText(self:GetParent():GetParent().gain)
+	end) 
+
+    f.ag:HookScript("OnFinished", function(self)
+    	f.isAnimating = false
+  		self:GetParent().text:SetText("")
+  		self:GetParent().text:SetAlpha(0)
+	end) 
+
+    return f
+
+end	
 
 function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 
@@ -309,7 +340,7 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 
 	local color = GetXPExhaustion() and XpFlag.db.selfcolorrested or XpFlag.db.selfcolor;
 	marks[name].texture:SetVertexColor(unpack(color));
-	marks[name].xp.ag:Play()
+	marks[name].Play() 
 
 	if level == MAX_PLAYER_LEVEL then
 		marks[name]:Hide();
@@ -410,7 +441,7 @@ function XpFlag:PLAYER_XP_UPDATE(event, unit)
 	end
 
 	if XpFlag.db.showself then		
-		UIFrameFadeIn(marks[playerNameRealm].model, 0.15, marks[playerNameRealm].model:GetAlpha(), 1)
+		UIFrameFadeIn(marks[playerNameRealm].model, 0.1, marks[playerNameRealm].model:GetAlpha(), 1)
 		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
 		XpFlag.UpdatePlayerBar()
 	end

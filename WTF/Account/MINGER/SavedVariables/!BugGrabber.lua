@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 1902,
 	["lastSanitation"] = 3,
-	["session"] = 1881,
 	["errors"] = {
 		{
 			["message"] = "SendAddonMessage(): Whisper message missing target player!",
@@ -198,5 +198,50 @@ BugGrabberDB = {
 			["session"] = 1881,
 			["counter"] = 3,
 		}, -- [26]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:266: ')' expected (to close '(' at line 265) near 'a2'",
+			["time"] = "2017/08/15 15:22:29",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1882,
+			["counter"] = 1,
+		}, -- [27]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:324: attempt to index field 'ag' (a nil value)",
+			["time"] = "2017/08/15 16:11:54",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:324: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:379: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 1886,
+			["counter"] = 1,
+		}, -- [28]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:247: attempt to index field 'xp' (a nil value)",
+			["time"] = "2017/08/15 16:29:12",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:247: in function `CreateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:312: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:390: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 1889,
+			["counter"] = 1,
+		}, -- [29]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:247: unexpected symbol near '['",
+			["time"] = "2017/08/15 16:30:21",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1890,
+			["counter"] = 1,
+		}, -- [30]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:288: '}' expected (to close '{' at line 287) near '='",
+			["time"] = "2017/08/15 16:37:51",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 1893,
+			["counter"] = 1,
+		}, -- [31]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:292: Usage: <unnamed>:SetOffset(x, y)",
+			["time"] = "2017/08/15 16:44:46",
+			["stack"] = "[C]: in function `SetOffset'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:292: in function `AddSpark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:248: in function `CreateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:319: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:397: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 1897,
+			["counter"] = 3,
+		}, -- [32]
 	},
 }
