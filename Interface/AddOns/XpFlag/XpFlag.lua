@@ -418,6 +418,8 @@ function XpFlag:FRIENDLIST_UPDATE()
 	 
 	for i=1, allFriends do
 		local name, level, class, area, connected, status, note, raf, id = GetFriendInfo(i);
+		if not name then break end
+
 		local friendNameRealm = name.."-"..playerRealm
 
 		if connected and not friends[friendNameRealm] then

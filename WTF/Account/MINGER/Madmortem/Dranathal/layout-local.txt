@@ -26,4 +26,4 @@ Anchor: TOPLEFT
 X: 245
 Y: -220
 W: 222
-H: 30
+H: 63

@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 1902,
 	["lastSanitation"] = 3,
+	["session"] = 1907,
 	["errors"] = {
 		{
 			["message"] = "SendAddonMessage(): Whisper message missing target player!",
@@ -191,35 +191,27 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [25]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'CompactRaidFrame1:Show()'.",
-			["time"] = "2017/08/13 14:38:09",
-			["locals"] = "",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:341: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:282: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:56: in function <Interface\\FrameXML\\CompactUnitFrame.lua:53>",
-			["session"] = 1881,
-			["counter"] = 3,
-		}, -- [26]
-		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:266: ')' expected (to close '(' at line 265) near 'a2'",
 			["time"] = "2017/08/15 15:22:29",
 			["locals"] = "",
 			["stack"] = "",
 			["session"] = 1882,
 			["counter"] = 1,
-		}, -- [27]
+		}, -- [26]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:324: attempt to index field 'ag' (a nil value)",
 			["time"] = "2017/08/15 16:11:54",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:324: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:379: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 1886,
 			["counter"] = 1,
-		}, -- [28]
+		}, -- [27]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:247: attempt to index field 'xp' (a nil value)",
 			["time"] = "2017/08/15 16:29:12",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:247: in function `CreateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:312: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:390: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 1889,
 			["counter"] = 1,
-		}, -- [29]
+		}, -- [28]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:247: unexpected symbol near '['",
 			["time"] = "2017/08/15 16:30:21",
@@ -227,7 +219,7 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 1890,
 			["counter"] = 1,
-		}, -- [30]
+		}, -- [29]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:288: '}' expected (to close '{' at line 287) near '='",
 			["time"] = "2017/08/15 16:37:51",
@@ -235,13 +227,36 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 1893,
 			["counter"] = 1,
-		}, -- [31]
+		}, -- [30]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:292: Usage: <unnamed>:SetOffset(x, y)",
 			["time"] = "2017/08/15 16:44:46",
 			["stack"] = "[C]: in function `SetOffset'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:292: in function `AddSpark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:248: in function `CreateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:319: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:397: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 1897,
 			["counter"] = 3,
+		}, -- [31]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:421: attempt to concatenate local 'name' (a nil value)",
+			["time"] = "2017/08/15 17:20:00",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-1.lua:421: in function `FRIENDLIST_UPDATE'\nInterface\\AddOns\\XpFlag\\XpFlag-1.lua:403: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 1906,
+			["counter"] = 1,
 		}, -- [32]
+		{
+			["message"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:268: script ran too long",
+			["time"] = "2017/08/15 17:20:01",
+			["locals"] = "self = <unnamed> {\n SoundRepeatStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:87\n DoResize = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:285\n xOffset = -1.9999389648438\n adjustedMax = false\n adjustedMin = false\n EnsureControlledRegions = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:125\n anchorPoint = \"CENTER\"\n DoControlChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:542\n currentHeight = 28.999938964844\n GetXOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:190\n background = <unnamed> {\n }\n SetOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:181\n SetAnchor = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:168\n SendChat = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:140\n toShow = true\n Suspend = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:514\n SetOffsetAnim = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:198\n Resume = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:518\n suspended = 0\n cloneId = \"\"\n xOffsetAnim = 0\n yOffsetAnim = 0\n needToControlChildren = false\n relativePoint = \"CENTER\"\n currentWidth = 317\n SoundStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:94\n SoundPlay = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:127\n Expand = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:469\n EnsureTrays = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:266\n relativeTo = WeakAurasFrame {\n }\n previousWidth = 317\n Collapse = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:466\n id = \"Resto Druid CD\"\n ResetPosition = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:162\n Scale = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:655\n previousHeight = 28.999938964844\n ControlChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:529\n 0 = <userdata>\n controlledRegions = <table> {\n }\n GetYOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:194\n trays = <table> {\n }\n PositionChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:368\n yOffset = -100.00015258789\n RunCode = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:144\n}\n(for generator) = <function> defined =[C]:-1\n(for state) = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n 8 = <table> {\n }\n 9 = <table> {\n }\n 10 = <table> {\n }\n 11 = <table> {\n }\n 12 = <table> {\n }\n 13 = <table> {\n }\n 14 = <table> {\n }\n}\n(for control) = 7\n(*temporary) = 7\n(*temporary) = <table> {\n key = \"table: 000002B4B4EA14E0\"\n region = <unnamed> {\n }\n id = \"Ironbark\"\n data = <table> {\n }\n dataIndex = 7\n}\n(*temporary) = <unnamed> {\n SoundRepeatStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:87\n DoResize = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:285\n xOffset = -1.9999389648438\n adjustedMax = false\n adjustedMin = false\n EnsureControlledRegions = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:125\n anchorPoint = \"CENTER\"\n DoControlChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:542\n currentHeight = 28.999938964844\n GetXOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:190\n background = <unnamed> {\n }\n SetOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:181\n SetAnchor = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:168\n SendChat = <function> defined @Interface\\AddOns\\WeakAuras",
+			["stack"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:268: in function `EnsureTrays'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:369: in function `PositionChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:551: in function `DoControlChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:538: in function `ControlChildren'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:371: in function `onFinished'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2716: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2599>",
+			["session"] = 1906,
+			["counter"] = 1,
+		}, -- [33]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'CompactRaidFrame1:Show()'.",
+			["time"] = "2017/08/13 14:38:09",
+			["locals"] = "",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:341: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:282: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:56: in function <Interface\\FrameXML\\CompactUnitFrame.lua:53>",
+			["session"] = 1907,
+			["counter"] = 4,
+		}, -- [34]
 	},
 }
