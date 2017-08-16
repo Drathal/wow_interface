@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+	<!-- 3rd party libs -->
+	<Script file="libs\LibStub\LibStub.lua"/>
+	<Include file="libs\CallbackHandler-1.0\CallbackHandler-1.0.xml"/>
+	<Include file="libs\AceAddon-3.0\AceAddon-3.0.xml" />
+	<Include file="libs\AceEvent-3.0\AceEvent-3.0.xml" />
+
+	<!-- app -->
+	<Script file="modules\init.lua" />
+	<Script file="modules\utils.lua" />
+	<Script file="config.lua" />	
+	<Script file="modules\communication.lua" />
+	<Script file="modules\animation.lua" />
+	<Script file="modules\spark.lua" />
+	<Script file="modules\model.lua" />
+	<Script file="modules\tooltip.lua" />
+	<Script file="modules\bar.lua" />
+	<Script file="XpFlag.lua" />
+
+</Ui>

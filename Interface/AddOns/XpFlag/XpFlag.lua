@@ -1,3 +1,5 @@
+local D, C, L = unpack(select(2, ...))
+
 local version = GetAddOnMetadata("XpFlag", "Version");
 local playerClass = select(2,UnitClass("PLAYER"));
 local playerName = UnitName("PLAYER");
@@ -7,6 +9,7 @@ local playerRealm = GetRealmName();
 local playerNameRealm = playerName.."-"..playerRealm
 
 local MAX_PLAYER_LEVEL,BNET_CLIENT_WOW = MAX_PLAYER_LEVEL,BNET_CLIENT_WOW;
+local BONUS_OBJECTIVE_EXPERIENCE_FORMAT = BONUS_OBJECTIVE_EXPERIENCE_FORMAT;
 local RAID_CLASS_COLORS = RAID_CLASS_COLORS;
 local UnitXP,UnitXPMax = UnitXP,UnitXPMax;
 local GetNumFriends, GetFriendInfo = GetNumFriends, GetFriendInfo;
@@ -15,7 +18,7 @@ local SendAddonMessage = SendAddonMessage;
 local GetFramerate = GetFramerate
 local wipe, pairs = wipe, pairs;
 local IsInGuild,GetNumGuildMembers,GetGuildRosterInfo = IsInGuild,GetNumGuildMembers,GetGuildRosterInfo;
-local f = CreateFrame('Frame');
+
 local min = math.min;
 local max = math.max;
 
@@ -23,10 +26,8 @@ local marks = {};
 local friends = {};
 local playerBar = nil;
 
-local LibStub = LibStub;
-local XpFlag = LibStub("AceAddon-3.0"):NewAddon("XpFlag", "AceEvent-3.0");
-
-local maxWidth = _G['UIParent']:GetWidth()
+local XpFlag = D;
+local f = D.f
 
 local defaults = {
   version = version,
@@ -36,146 +37,31 @@ local defaults = {
   flipmarkers = true,
   width = 15,
   height = 15
-};
+}
 
--- spells/7fx_mage_aegwynnsascendance_statehand.m2
--- local MODEL = "spells/voljin_serpentward_missile.m2"
--- local MODEL = "spells/7fx_druid_halfmoon_missile.m2"
-local MODEL = "spells/7fx_mage_aegwynnsascendance_statehand.m2"
-local MODEL_SIZE = 64
+D.tooltip = D.createTooltip(marks);
 
-f.delay = 1
-f:SetScript('OnUpdate', function(self, elapsed)
-	self.delay = self.delay - elapsed;	
-	if self.delay > 0 then return end
-	self.delay = 0.05;
+D.f:SetScript('OnUpdate', function(self, elapsed)
+	if D.throttle(self, elapsed) then return end
 
-	local limit = 30/GetFramerate()
-
-	XpFlag.animateBar(playerBar, limit)
-
-	for _, mark in pairs(marks) do
-		if mark and mark.to then
-			XpFlag.animateMark(mark, limit)
-		end
-	end	
+	D.animateWidth(playerBar)
+	D.animateMarks(marks)
 end)
 
-function XpFlag.animateBar(self, limit)
-
-	if not self then return end
-	if not self.to then return end	
-			
-	local cur = self:GetWidth()
-	local new = cur + min((self.to-cur)/3, max(self.to-cur, limit))
-
-	if cur == self.to or abs(new - self.to) < 2 then
-		new = self.to
-		self.to = nil
-	end
-
-	self:SetWidth(new);
-
-end
-
-function XpFlag.animateMark(self, limit)
-
-	if not self then return end
-	if not self.to then return end	
-			
-	local cur = self.cur or 0
-	local new = cur + min((self.to-cur)/3, max(self.to-cur, limit))
-	
-	if cur == self.to or abs(new - self.to) < 2 then
-		new = self.to
-		self.to = nil
-		if self.name == playerNameRealm then
-			UIFrameFadeOut(marks[playerNameRealm].model, 2, marks[playerNameRealm].model:GetAlpha(), 0)
-		end		
-	end
-
-	self:ClearAllPoints();	
-	self:SetPoint("TOPLEFT", _G['UIParent'], new, 0);
-	self.cur = new		
-
-end
-
-XpFlag.tooltip = CreateFrame("Frame");
-XpFlag.tooltip:Hide();
-XpFlag.tooltip.delay = 0.25;
-XpFlag.tooltip:SetScript("OnUpdate",function(self,elapsed)
-	XpFlag.tooltip.delay = XpFlag.tooltip.delay - elapsed;
-	if XpFlag.tooltip.delay <= 0 then
-		for k,v in pairs(marks) do
-			if v:IsMouseOver() and v.class and v.name and v.level then
-
-				GameTooltip:ClearLines();
-				GameTooltip:AddLine("XpFlag");			
-				GameTooltip:AddLine(k, RAID_CLASS_COLORS[v.class].r, RAID_CLASS_COLORS[v.class].g, RAID_CLASS_COLORS[v.class].b, 1);
-				GameTooltip:AddLine("Level: "..v.level, 1, 1, 1, 1);
-				GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue.." ("..string.format("%.2f",v.value/v.maxvalue*100).."%)", 1, 1, 1, 1);				
-
-				local rested = GetXPExhaustion()
-				if rested and v.player then
-					GameTooltip:AddLine("Rested: "..rested.." ("..string.format("%.2f",rested/v.maxvalue*100).."%)", 1, 1, 1, 1);
-				end
-
-			end
-		end
-		XpFlag.tooltip.delay = 0.25;
-		GameTooltip:Show();
-	end
-end);
-
-function XpFlag:OnInitialize()
+function D:OnInitialize()
 	self.db = defaults;
 		
-	XpFlag:RegisterEvent("PLAYER_ENTERING_WORLD");
-	XpFlag:RegisterEvent("PLAYER_XP_UPDATE");
-	XpFlag:RegisterEvent("PLAYER_LEVEL_UP");
-	XpFlag:RegisterEvent("CHAT_MSG_ADDON");
-	XpFlag:RegisterEvent("FRIENDLIST_UPDATE");
-	XpFlag:RegisterEvent("PLAYER_UPDATE_RESTING");
+	D:RegisterEvent("PLAYER_ENTERING_WORLD");
+	D:RegisterEvent("PLAYER_XP_UPDATE");
+	D:RegisterEvent("PLAYER_LEVEL_UP");
+	D:RegisterEvent("CHAT_MSG_ADDON");
+	D:RegisterEvent("FRIENDLIST_UPDATE");
+	D:RegisterEvent("PLAYER_UPDATE_RESTING");
+
+	D:RegisterMessage("XpFlag-sparkmodel-show", D.onShowSparkModel)
+	D:RegisterMessage("XpFlag-sparkmodel-hide", D.onHideSparkModel)
 	
 	RegisterAddonMessagePrefix("XpFlag")
-end
-
-function XpFlag.CreateBar(value, maxvalue) 
-
-	if playerLevel == MAX_PLAYER_LEVEL then return end
-
-	playerBar = CreateFrame("Frame",'XPFLag-Playerbar');
-	playerBar.texture = playerBar:CreateTexture(nil,"OVERLAY");  
-	playerBar:SetHeight(1);
-	playerBar:SetWidth(0);
-	playerBar.to = (maxWidth * value/maxvalue) + 8
-	playerBar:SetParent(_G['UIParent']);
-	playerBar.texture:SetAllPoints(playerBar);
-	playerBar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0);	
-	playerBar.texture:SetTexture("Interface\\AddOns\\XpFlag\\bar.blp");
-
-	if GetXPExhaustion() then
-		playerBar.texture:SetVertexColor(unpack(XpFlag.db.selfcolorrested));	
-	else		
-		playerBar.texture:SetVertexColor(unpack(XpFlag.db.selfcolor));	
-	end
-
-	playerBar:SetFrameLevel(5)
-	playerBar:SetFrameStrata("DIALOG");
-
-	playerBar:SetBackdrop({
-	    bgFile = [[Interface\BUTTONS\WHITE8X8]],
-	    edgeFile = [[Interface\BUTTONS\WHITE8X8]], 
-	    edgeSize = 1,
-	    tileSize = 8, 
-	    tile = true,
-	    insets = { left = 0, right = 0, top = 0, bottom = -1 }
-	})
-	playerBar:SetBackdropColor(0, 0, 0, 0.5)
-	playerBar:SetBackdropBorderColor(0, 0, 0, 0.5)
-
-
-	playerBar:Show();
 end
 
 function XpFlag.CreateMark(name, class)
@@ -188,8 +74,8 @@ function XpFlag.CreateMark(name, class)
 	marks[name]:SetWidth(XpFlag.db.width);
 	marks[name]:SetParent(_G['UIParent']);
 	marks[name].texture:SetAllPoints(marks[name]);
-	marks[name]:SetPoint("TOP", _G['UIParent'], "TOPLEFT", 0, 0);	
-	marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle.tga");
+	marks[name]:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0);	
+	marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\media\\circle.tga");
 	marks[name]:SetFrameStrata("DIALOG");
 	marks[name]:Show();
 
@@ -237,77 +123,95 @@ function XpFlag.CreateMark(name, class)
 
 	if name ~= playerNameRealm then return end
 	
-	local model = CreateFrame('PlayerModel', 'mymodel', marks[name])
-	model:SetPoint('CENTER')
-	model:SetSize(MODEL_SIZE, MODEL_SIZE)
-	model:SetModel(MODEL)
-	model:SetAlpha(1)
-	marks[name].model = model
+
+	marks[name].model = D.createSparkModel(marks[name])
 
 	marks[name].xp = {}
-	marks[name].xp[1] = XpFlag.AddSpark(marks[name], 1)
-	marks[name].xp[2] = XpFlag.AddSpark(marks[name], 2)
-	marks[name].xp[3] = XpFlag.AddSpark(marks[name], 3)
-	marks[name].xp[4] = XpFlag.AddSpark(marks[name], 4)
 
-	marks[name].Play = function()
+	for i = 1, 10, 1 do
+		marks[name].xp[i] = XpFlag.AddSpark(marks[name], i)
+	end
+
+	marks[name].Play = function(xp)
+		--print("try play")
 		for k,spark in pairs(marks[name].xp) do
-			if not spark.isAnimating then
+			if not spark.ag:IsPlaying() then
+			
+				local _, _, _, xOfs, yOfs = marks[name]:GetPoint()
+				local x = xOfs * UIParent:GetScale()
+
+				spark:ClearAllPoints()
+				spark:SetPoint("TOP", _G[UIParent], "TOPLEFT", x + 16, -20);
+
+				local d = math.random(1,2)
+		        spark.ag.a1:SetOffset( math.random(-15,15), math.random(-120,-80))    
+		    	spark.ag.a1:SetDuration(d)
+		    	spark.ag.a2:SetDuration(d)
+
+		    	spark.xp = xp
 				spark.ag:Play()
 				break 
 			end
 		end			
 	end
 
-
-	-- /run _G['XPFLag-Dranathal-Madmortem']:Play();
-	-- /run _G['mymodel']:SetSequence(0); _G['mymodel']:SetSequenceTime(0, 0)
-	-- /run _G['mymodel']:ClearModel();_G['mymodel']:SetModel("particles/bloodspurts/bloodspurtlarge.m2")
-	-- /run _G['mymodel']:SetDisplayInfo({enable=true,displayInfo=32368,camDistanceScale=0.95,pos_x=0,pos_y=0.1,rotation=0,portraitZoom=0,alpha=1})
-    -- /run _G['mymodel']:SetCamera(1);
-    -- /run _G['mymodel']:SetSequenceTime(1, 0)
 end
 
-local xoffset = { 0, 15, -15, 8 }
-local yoffset = { -60, -45, -55, -65 }
-local dur = { 2, 1.5, 1.2, 1.8 }
+function XpFlag.AddSpark(parent, num)	
 
-function XpFlag.AddSpark(parent, num)
+	local f = CreateFrame("Frame");
+	f:SetHeight(16);
+	f:SetWidth(32);
+	f:SetParent( _G[UIParent] );	
+	f:SetPoint("TOP", _G[UIParent], "TOPLEFT", 960, -20);		
 
-	local name = "xp"..num
+	--local t = f:CreateTexture(nil, "BACKGROUND", nil, 0)
+	--t:SetTexture(1,0,1)
+	--t:SetVertexColor(1,0,1)
+	--t:SetAllPoints()
 
-	local f = CreateFrame("Frame",'XPFLag-spark-'..name);
-	f:SetHeight(1);
-	f:SetWidth(1);
-	f:SetParent(parent);	
-	f:SetPoint("TOP", parent, "TOP", 0, -20);		
+	--f.text = f:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+	--f.text:SetPoint("CENTER")
+	
+	f.text = f:CreateFontString(nil, "OVERLAY")
+  	f.text:SetPoint("CENTER")
+  	f.text:SetFont( GameFontNormal:GetFont(), 8, "OUTLINE")
+  	f.text:SetShadowColor(0, 0, 0, 0)
+  	f.text:SetShadowOffset(0, 0)
+  	f.text:SetTextColor(1,0.82,0,1)
+  	f.text:SetText("")
 
-	f.text = f:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-	f.text:SetPoint("CENTER")
-
-	f.ag = f:CreateAnimationGroup()  
-    
+	f.ag = f:CreateAnimationGroup() 
+	--f.ag:SetLooping("REPEAT")
+	    
     f.ag.a1 = f.ag:CreateAnimation("Translation")
-    f.ag.a1:SetOffset(xoffset[num], yoffset[num])    
-    f.ag.a1:SetDuration(dur[num])
+    f.ag.a1:SetParent(f.ag);
+    f.ag.a1:SetOffset(0,0)    
+    f.ag.a1:SetDuration(2)
     f.ag.a1:SetSmoothing("IN_OUT")
 
-    f.ag.a2 = f.ag:CreateAnimation("Alpha")
+    f.ag.a2 = f.ag:CreateAnimation("Alpha")	
+    f.ag.a2:SetParent(f.ag);
 	f.ag.a2:SetFromAlpha(1)
 	f.ag.a2:SetToAlpha(0)
-    f.ag.a2:SetDuration(dur[num])
+    f.ag.a2:SetDuration(2)
     f.ag.a2:SetSmoothing("IN_OUT")   
 
     f.ag:HookScript("OnPlay", function(self)
-    	f.isAnimating = true
-    	self:GetParent().text:SetAlpha(1)
-  		self:GetParent().text:SetText(self:GetParent():GetParent().gain)
+    	--print("OnPlay", num)
+    	local xp = self:GetParent().xp    	
+    	if not xp or xp == "0" then    
+			self:GetParent().text:SetText("")
+			f.ag:Stop()
+			--print("OnPlay stop", num)
+    	else    		
+			self:GetParent().text:SetFormattedText("%s XP" , tostring(xp))
+    	end  		
 	end) 
 
     f.ag:HookScript("OnFinished", function(self)
-    	f.isAnimating = false
-  		self:GetParent().text:SetText("")
-  		self:GetParent().text:SetAlpha(0)
+    	--print("OnFinished", num)
+    	self:GetParent().text:SetText("")
 	end) 
 
     return f
@@ -324,23 +228,30 @@ function XpFlag.UpdateMark(name, value, maxvalue, level, class)
 	marks[name].value = value;
 	marks[name].maxvalue = maxvalue;
 	marks[name].level = level;
-	marks[name].gain = value - marks[name].prev or 0
+	marks[name].gain = tonumber(value) - tonumber(marks[name].prev) or 0
 
-	marks[name].to = maxWidth * value/maxvalue;		
+	marks[name].to = D.screenWidth * value/maxvalue;	
+
+	if marks[name].player and marks[name].gain > 0 then		
+		D:SendMessage("XpFlag-sparkmodel-show", marks[name])
+	end	
 	
 	if tonumber(level) < playerLevel then
-		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-minus.tga");	
+		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\media\\circle-minus.tga");	
 	elseif tonumber(level) > playerLevel then
-		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle-plus.tga");
+		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\media\\circle-plus.tga");
 	else
-		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\circle.tga");		
+		marks[name].texture:SetTexture("Interface\\AddOns\\XpFlag\\media\\circle.tga");		
 	end
 	
 	if not marks[name].player then return end
 
 	local color = GetXPExhaustion() and XpFlag.db.selfcolorrested or XpFlag.db.selfcolor;
 	marks[name].texture:SetVertexColor(unpack(color));
-	marks[name].Play() 
+
+	if marks[name].gain > 0 then
+		marks[name].Play(marks[name].gain) 
+	end
 
 	if level == MAX_PLAYER_LEVEL then
 		marks[name]:Hide();
@@ -356,7 +267,7 @@ function XpFlag.UpdatePlayerBar()
 		return
 	end
 
-	playerBar.to = (maxWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER")) + 8
+	playerBar.to = (D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER"))
 
 	local color = GetXPExhaustion() and XpFlag.db.selfcolorrested or XpFlag.db.selfcolor;
 	playerBar.texture:SetVertexColor(unpack(color));
@@ -392,11 +303,15 @@ function XpFlag.decodeMessage(msg)
 	}
 end
 
-function XpFlag:PLAYER_ENTERING_WORLD(event)
+function D:PLAYER_ENTERING_WORLD(event)
 
-	if XpFlag.db.showself then
-		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
-		XpFlag.CreateBar(UnitXP("PLAYER"), UnitXPMax("PLAYER"))
+	if C.player.show then
+		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);		
+	end
+
+	if C.player.show and C.bar.show then	
+		playerBar = D.createBar()
+		playerBar.to = (D.screenWidth * UnitXP("PLAYER")/UnitXPMax("PLAYER"))
 	end
 
 	ShowFriends();
@@ -443,7 +358,7 @@ function XpFlag:PLAYER_XP_UPDATE(event, unit)
 	end
 
 	if XpFlag.db.showself then		
-		UIFrameFadeIn(marks[playerNameRealm].model, 0.1, marks[playerNameRealm].model:GetAlpha(), 1)
+		--print("PLAYER_XP_UPDATE")		
 		XpFlag.UpdateMark(playerNameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
 		XpFlag.UpdatePlayerBar()
 	end
@@ -468,10 +383,3 @@ function XpFlag:CHAT_MSG_ADDON(event, pre, msg, chan, sender)
 	friends[sender] = true
 	XpFlag.UpdateMark(sender, message.xp, message.maxxp, message.level, message.class);		
 end
-
-
---[[
-	https://us.battle.net/forums/en/wow/topic/20741994059
-	http://www.wowinterface.com/forums/showthread.php?t=35104
-	https://github.com/zorker/rothui/blob/bd702c2abaa670c05c5fdd14cd4d2519a2dc201e/wow7.0/_AddonTests/rAnimationWidget/core.lua
-]]--

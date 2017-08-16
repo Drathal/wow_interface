@@ -1,7 +1,7 @@
 
 DecursiveDB = {
 	["global"] = {
-		["LastVersionAnnounce"] = 1502809211,
+		["LastVersionAnnounce"] = 1502828470,
 	},
 	["class"] = {
 		["WARLOCK"] = {
@@ -92,6 +92,7 @@ DecursiveDB = {
 			["Show_Stealthed_Status"] = false,
 			["MainBarX"] = 3.55539423756738,
 			["MainBarY"] = -195.555386679698,
+			["ShowDebuffsFrame"] = false,
 			["Scan_Pets"] = false,
 			["DebuffsFrameElemBorderShow"] = false,
 			["Print_CustomFrame"] = false,

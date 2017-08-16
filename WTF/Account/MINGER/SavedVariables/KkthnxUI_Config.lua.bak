@@ -4,8 +4,8 @@ KkthnxUIConfigAll = {
 		["Drathia"] = false,
 		["Drathtix"] = false,
 		["Dranathal"] = false,
-		["Dronthal"] = false,
 		["Drahmoon"] = false,
+		["Dronthal"] = false,
 		["Drathal"] = false,
 	},
 }

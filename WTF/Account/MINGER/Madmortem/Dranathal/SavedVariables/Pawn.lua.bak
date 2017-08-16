@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0209,
+	["LastVersion"] = 2.0211,
 	["LastPlayerFullName"] = "Dranathal-Madmortem",
 	["AutoSelectScales"] = true,
 	["UpgradeTracking"] = false,
