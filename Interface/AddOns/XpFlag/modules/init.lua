@@ -21,7 +21,7 @@ local AddOn = LibStub("AceAddon-3.0"):NewAddon(AddOnName, "AceEvent-3.0")
 Engine[1] = AddOn
 Engine[2] = {}
 Engine[3] = {}
-_G[AddOnName] = Engine 
+_G[AddOnName] = Engine
 
 -- Addon API
 AddOn.addonName = AddOnName

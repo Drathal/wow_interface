@@ -16,12 +16,12 @@ D.createSparkModel = createSparkModel
 
 local function onShowSparkModel(msg, f)
 	if not f.model then return end
-	UIFrameFadeIn(f.model, 0.1, f.model:GetAlpha(), 0.5)	
+	UIFrameFadeIn(f.model, 0.1, f.model:GetAlpha(), 0.5)
 end
 D.onShowSparkModel = onShowSparkModel
 
 local function onHideSparkModel(msg, f)
 	if not f.model then return end
-	UIFrameFadeOut(f.model, 1, f.model:GetAlpha(), 0)	
+	UIFrameFadeOut(f.model, 1, f.model:GetAlpha(), 0)
 end
 D.onHideSparkModel = onHideSparkModel
