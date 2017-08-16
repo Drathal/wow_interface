@@ -3,10 +3,11 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
 local RAID_CLASS_COLORS = _G.RAID_CLASS_COLORS
+local format = string.format
 
 local t = nil
 
-local function createTooltip(marks)
+local function CreateTooltip(marks)
 
     t = CreateFrame("Frame")
     t:Hide()
@@ -26,10 +27,10 @@ local function createTooltip(marks)
                 GameTooltip:AddLine("XpFlag")
                 GameTooltip:AddLine(k, RAID_CLASS_COLORS[v.class].r, RAID_CLASS_COLORS[v.class].g, RAID_CLASS_COLORS[v.class].b, 1)
                 GameTooltip:AddLine("Level: "..v.level, 1, 1, 1, 1)
-                GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue.." ("..string.format("%.2f", v.value / v.maxvalue * 100).."%)", 1, 1, 1, 1)
+                GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue.." ("..format("%.2f", v.value / v.maxvalue * 100).."%)", 1, 1, 1, 1)
 
                 if rested and v.player then
-                    GameTooltip:AddLine("Rested: "..rested.." ("..string.format("%.2f", rested / v.maxvalue * 100).."%)", 1, 1, 1, 1)
+                    GameTooltip:AddLine("Rested: "..rested.." ("..format("%.2f", rested / v.maxvalue * 100).."%)", 1, 1, 1, 1)
                 end
 
                 GameTooltip:Show()
@@ -42,16 +43,16 @@ local function createTooltip(marks)
 
     return t
 end
-D.createTooltip = createTooltip
+D.CreateTooltip = CreateTooltip
 
-local function onTooltipEnter(self)
+local function OnTooltipEnter(self)
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
     t:Show();
 end
-D.onTooltipEnter = onTooltipEnter
+D.OnTooltipEnter = OnTooltipEnter
 
-local function onTooltipLeave(self)
+local function OnTooltipLeave(self)
     t:Hide();
     GameTooltip:Hide();
 end
-D.onTooltipLeave = onTooltipLeave
+D.OnTooltipLeave = OnTooltipLeave

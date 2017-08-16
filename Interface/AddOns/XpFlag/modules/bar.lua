@@ -3,34 +3,47 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
 
-local function createBar()
+local function CreateBar()
 
-	if not C.bar.show then return end
+    if not C.bar.show then return end
 
-	local bar = CreateFrame("Frame", 'XPFLag-XpBar', _G['UIParent'])
-	bar:SetHeight(C.bar.height)
-	bar:SetWidth(0)
-	bar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0)
-	bar:SetFrameLevel(5)
-	bar:SetFrameStrata("DIALOG");
+    local bar = CreateFrame("Frame", 'XPFLag-XpBar', _G['UIParent'])
+    bar:SetHeight(C.bar.height)
+    bar:SetWidth(0)
+    bar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0)
+    bar:SetFrameLevel(5)
+    bar:SetFrameStrata("DIALOG");
 
-	bar.texture = bar:CreateTexture(nil, "OVERLAY")
-	bar.texture:SetTexture(C.bar.texture)
-	bar.texture:SetAllPoints(bar)
-	bar.texture:SetVertexColor(unpack(D.getXpColor()));
+    bar.texture = bar:CreateTexture(nil, "OVERLAY")
+    bar.texture:SetTexture(C.bar.texture)
+    bar.texture:SetAllPoints(bar)
+    bar.texture:SetVertexColor(unpack(D.GetXpColor()));
 
-	bar:SetBackdrop({
-		bgFile = [[Interface\BUTTONS\WHITE8X8]],
-	    edgeFile = [[Interface\BUTTONS\WHITE8X8]], 
-	    edgeSize = 1,
-	    tileSize = 8, 
-	    tile = true,
-	    insets = { left = 0, right = 0, top = 0, bottom = -1 }
-	})
-	bar:SetBackdropColor(0, 0, 0, 0.5)
-	bar:SetBackdropBorderColor(0, 0, 0, 0.5)
-	bar:Show()
+    bar:SetBackdrop({
+        bgFile = C.bar.backdrop,
+        edgeFile = C.bar.edge,
+        edgeSize = 1,
+        tileSize = 8,
+        tile = true,
+        insets = { left = 0, right = 0, top = 0, bottom = -1 }
+    })
+    bar:SetBackdropColor(0, 0, 0, 0.5)
+    bar:SetBackdropBorderColor(0, 0, 0, 0.5)
+    bar:Show()
 
-	return bar
+    return bar
 end
-D.createBar = createBar
+D.CreateBar = CreateBar
+
+local function UpdatePlayerBar(bar)
+    if not bar then return end
+
+    if D.level == D.maxLevel then
+        bar:Hide();
+        return
+    end
+
+    bar.to = (D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER"))
+    bar.texture:SetVertexColor(unpack(D.GetXpColor()));
+end
+D.UpdatePlayerBar = UpdatePlayerBar

@@ -4,9 +4,10 @@ local _G = _G
 local CreateFrame = _G.CreateFrame
 
 local marks = D.marks
+local friends = D.friends
 local rcolor = RAID_CLASS_COLORS[D.class]
 
-local function createMark(name, class)
+local function CreateMark(name, class)
     local m = CreateFrame("Frame", 'XPFLag-'..name, _G['UIParent'])
     m:SetHeight(C.mark.height)
     m:SetWidth(C.mark.width)
@@ -32,16 +33,15 @@ local function createMark(name, class)
     m.player = true;
     m.texture:SetVertexColor(unpack(D.getXpColor));
     m:SetFrameLevel(5)
-    m.model = D.createSparkModel(m)
-    m.xp = D.createSparks()
+    m.model = D.CreateSparkModel(m)
+    m.xp = D.CreateSparks()
     m.Play = D.playSpark
 
     return m
 end
-D.createMark = createMark
+D.CreateMark = CreateMark
 
-local function updateMark(name, value, maxvalue, level, class)
-
+local function UpdateMark(name, value, maxvalue, level, class)
     local m = marks[name] or D.CreateMark(name, class);
 
     if level == MAX_PLAYER_LEVEL then
@@ -56,14 +56,29 @@ local function updateMark(name, value, maxvalue, level, class)
     m.gain = tonumber(value) - tonumber(m.prev) or 0
 
     m.to = D.screenWidth * value / maxvalue;
-    m.texture:SetVertexColor(unpack(D.getXpColor()));
-    m.texture:SetTexture(D.getMarkTexture(level, D.level));
+    m.texture:SetVertexColor(unpack(D.GetXpColor()));
+    m.texture:SetTexture(D.GetMarkTexture(level, D.level));
 
     if not m.player then return end
     if m.gain <= 0 then return end
 
     m.Play(m.gain)
     D:SendMessage("XpFlag-sparkmodel-show", m)
-
 end
-D.updateMark = updateMark
+D.UpdateMark = UpdateMark
+
+local function RefreshMarks()
+    for k, mark in pairs(marks) do
+        if not (friends[k] or (k == D.nameRealm)) then
+            DeleteMark(mark);
+        end
+    end
+end
+D.RefreshMarks = RefreshMarks
+
+local function DeleteMark(mark)
+    if not mark then return end
+    mark:Hide();
+    mark = nil;
+end
+D.DeleteMark = DeleteMark

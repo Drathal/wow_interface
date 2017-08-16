@@ -1,8 +1,9 @@
 local D, C, L = unpack(select(2, ...))
 
 local _G = _G
+local random = math.random
 
-local function playSpark(xp)
+local function PlaySpark(xp)
     for k, spark in pairs(m.xp) do
         if not spark.ag:IsPlaying() then
 
@@ -12,7 +13,7 @@ local function playSpark(xp)
             spark:ClearAllPoints()
             spark:SetPoint("TOP", _G[UIParent], "TOPLEFT", x + C.mark.width, - 20);
 
-            local d = math.random(1, 2)
+            local d = random(1, 2)
             spark.ag.a1:SetOffset( math.random(-15, 15), math.random(-120, - 80))
             spark.ag.a1:SetDuration(d)
             spark.ag.a2:SetDuration(d)
@@ -23,9 +24,9 @@ local function playSpark(xp)
         end
     end
 end
-D.playSpark = playSpark
+D.PlaySpark = PlaySpark
 
-local function onSparkPlay(self)
+local function OnSparkPlay(self)
     local xp = self:GetParent().xp
     if not xp or xp == "0" then
         self:GetParent().text:SetText("")
@@ -36,11 +37,11 @@ local function onSparkPlay(self)
     self:GetParent().text:SetFormattedText(C.sparkXP.format, tostring(xp))
 end
 
-local function onSparkFinished(self)
+local function OnSparkFinished(self)
     self:GetParent().text:SetText("")
 end
 
-local function addSpark(parent, num)
+local function AddSpark(parent, num)
     local f = CreateFrame("Frame", nil, _G['UIParent']);
     f:SetHeight(1);
     f:SetWidth(1);
@@ -68,17 +69,17 @@ local function addSpark(parent, num)
     f.ag.a2:SetDuration(0)
     f.ag.a2:SetSmoothing("IN_OUT")
 
-    f.ag:HookScript("OnPlay", onSparkPlay)
-    f.ag:HookScript("OnFinished", onSparkFinished)
+    f.ag:HookScript("OnPlay", OnSparkPlay)
+    f.ag:HookScript("OnFinished", OnSparkFinished)
 
     return f
 end
 
-local function createSparks()
+local function CreateSparks()
     local f = {}
     for i = 1, C.sparkXP.max, 1 do
-        f[i] = addSpark(f, i)
+        f[i] = AddSpark(f, i)
     end
     return f
 end
-D.createSparks = createSparks
+D.CreateSparks = CreateSparks

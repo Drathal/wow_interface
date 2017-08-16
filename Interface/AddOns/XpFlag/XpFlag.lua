@@ -38,13 +38,13 @@ local defaults = {
     height = 15
 }
 
-D.tooltip = D.createTooltip(marks);
+D.tooltip = D.CreateTooltip(marks);
 
 D.f:SetScript('OnUpdate', function(self, elapsed)
-    if D.throttle(self, elapsed) then return end
+    if D.Throttle(self, elapsed) then return end
 
-    D.animateWidth(playerBar)
-    D.animateMarks(marks)
+    D.AnimateWidth(playerBar)
+    D.AnimateMarks(marks)
 end)
 
 function D:OnInitialize()
@@ -61,34 +61,6 @@ function D:OnInitialize()
     D:RegisterMessage("XpFlag-sparkmodel-hide", D.onHideSparkModel)
 
     RegisterAddonMessagePrefix("XpFlag")
-end
-
-function XpFlag.UpdatePlayerBar()
-    if not playerBar then return end
-
-    if playerLevel == MAX_PLAYER_LEVEL then
-        playerBar:Hide();
-        return
-    end
-
-    playerBar.to = (D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER"))
-
-    local color = GetXPExhaustion() and XpFlag.db.selfcolorrested or XpFlag.db.selfcolor;
-    playerBar.texture:SetVertexColor(unpack(color));
-end
-
-function XpFlag.RefreshMarks()
-    for k, _ in pairs(marks) do
-        if not (friends[k] or (k == D.nameRealm)) then
-            XpFlag.DeleteMark(k);
-        end
-    end
-end
-
-function XpFlag.DeleteMark(name)
-    if not marks[name] then return end
-    marks[name]:Hide();
-    marks[name] = nil;
 end
 
 function XpFlag.createMessage(msgtype, xp, maxxp)
@@ -127,7 +99,7 @@ end
 function XpFlag:PLAYER_UPDATE_RESTING(event)
     if XpFlag.db.showself then
         D.UpdateMark(D.nameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
-        XpFlag.UpdatePlayerBar()
+        D.UpdatePlayerBar(playerBar)
     end
 end
 
@@ -148,7 +120,7 @@ function XpFlag:FRIENDLIST_UPDATE()
         end
     end
 
-    XpFlag.RefreshMarks();
+    D.RefreshMarks();
 end
 
 function XpFlag:PLAYER_XP_UPDATE(event, unit)
@@ -161,9 +133,8 @@ function XpFlag:PLAYER_XP_UPDATE(event, unit)
     end
 
     if XpFlag.db.showself then
-        --print("PLAYER_XP_UPDATE")
         D.UpdateMark(D.nameRealm, UnitXP("PLAYER"), UnitXPMax("PLAYER"), playerLevel, playerClass);
-        XpFlag.UpdatePlayerBar()
+        D.UpdatePlayerBar(playerBar)
     end
 end
 
