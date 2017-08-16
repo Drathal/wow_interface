@@ -42,3 +42,5 @@ AddOn.woWBuild = tonumber(AddOn.woWBuild)
 
 -- main Frame
 AddOn.f = CreateFrame('Frame')
+AddOn.marks = {}
+AddOn.friends = {}

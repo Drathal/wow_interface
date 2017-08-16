@@ -4,10 +4,13 @@ local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
 local RAID_CLASS_COLORS = _G.RAID_CLASS_COLORS
 
+local t
+
 local function createTooltip(marks)
-	local t = CreateFrame("Frame");
-	t:Hide();
-	t.delay = 0.25;
+	
+    t = CreateFrame("Frame")
+	t:Hide()
+	t.delay = 0.25
 
 	t:SetScript("OnUpdate",function(self,elapsed)
 		
@@ -40,3 +43,15 @@ local function createTooltip(marks)
 	return t
 end
 D.createTooltip = createTooltip
+
+local function onTooltipEnter(self)
+    GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+    t:Show();
+end
+D.onTooltipEnter = onTooltipEnter
+
+local function onTooltipLeave(self)
+    t:Hide();
+    GameTooltip:Hide();
+end
+D.onTooltipLeave = onTooltipLeave

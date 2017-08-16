@@ -3,9 +3,8 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local GameFontNormal = _G.GameFontNormal
 
--- Actionbar
 C["player"] = {
-	["show"] = true,	
+	["show"] = true,
 	["color"] = { 0.25, 0.5, 1, 1 },
 	["colorRested"] = { 0.5, 0.25, 1, 1 }
 }
@@ -37,9 +36,8 @@ C["bar"] = {
 	["animationSpeed"] = 6
 }
 
-C["marker"] = {
+C["mark"] = {
 	["width"] = 15,
-	["height"] = 15,
 	["height"] = 15,
 	["flip"] = true,
 	["animationSpeed"] = 6,
@@ -49,5 +47,3 @@ C["marker"] = {
 		["over"] = "Interface\\AddOns\\XpFlag\\media\\circle-plus.tga",
 	}
 }
-
-

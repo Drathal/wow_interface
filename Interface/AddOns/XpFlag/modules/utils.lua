@@ -15,3 +15,14 @@ local function getXpColor()
 	return GetXPExhaustion() and C.player.colorRested or C.player.color
 end
 D.getXpColor = getXpColor
+
+local function getMarkTexture(friend, player)
+    local texture = C.mark.texture.default 
+    if tonumber(friend) < tonumber(player) then
+        texture = C.mark.texture.below 
+    elseif tonumber(friend) > tonumber(player) then
+        texture = C.mark.texture.over
+    end
+    return texture 
+end
+D.getMarkTexture = getMarkTexture
