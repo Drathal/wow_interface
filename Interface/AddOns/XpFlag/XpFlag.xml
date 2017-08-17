@@ -11,6 +11,7 @@
 	<Script file="modules\init.lua" />
 	<Script file="modules\utils.lua" />
 	<Script file="config.lua" />	
+    <Script file="modules\friends.lua" />
 	<Script file="modules\communication.lua" />
 	<Script file="modules\animation.lua" />
 	<Script file="modules\tooltip.lua" />

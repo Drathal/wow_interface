@@ -39,8 +39,3 @@ AddOn.resolution = ({GetScreenResolutions()})[GetCurrentResolution()] or GetCVar
 AddOn.screenWidth, AddOn.screenHeight = DecodeResolution(AddOn.resolution)
 AddOn.woWPatch, AddOn.woWBuild, AddOn.woWPatchReleaseDate, AddOn.tocVersion = GetBuildInfo()
 AddOn.woWBuild = tonumber(AddOn.woWBuild)
-
--- main Frame
-AddOn.f = CreateFrame('Frame')
-AddOn.marks = {}
-AddOn.friends = {}

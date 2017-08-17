@@ -5,7 +5,6 @@ local min = _G.math.min;
 local max = _G.math.max;
 
 local function AnimateWidth(f)
-
     if not f then return end
     if not f.to then return end
 
@@ -18,12 +17,10 @@ local function AnimateWidth(f)
     end
 
     f:SetWidth(new)
-
 end
 D.AnimateWidth = AnimateWidth
 
 local function AnimateX(f)
-
     if not f then return end
     if not f.to then return end
 

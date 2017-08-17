@@ -4,7 +4,6 @@ local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
 
 local function CreateBar()
-
     if not C.bar.show then return end
 
     local bar = CreateFrame("Frame", 'XPFLag-XpBar', _G['UIParent'])
@@ -44,6 +43,6 @@ local function UpdatePlayerBar(bar)
     end
 
     bar.to = (D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER"))
-    bar.texture:SetVertexColor(unpack(D.GetXpColor()));
+    bar.texture:SetVertexColor(unpack(D.GetXpColor()))
 end
 D.UpdatePlayerBar = UpdatePlayerBar

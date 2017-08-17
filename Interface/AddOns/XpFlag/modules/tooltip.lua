@@ -46,13 +46,13 @@ end
 D.CreateTooltip = CreateTooltip
 
 local function OnTooltipEnter(self)
-    GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
     t:Show();
 end
 D.OnTooltipEnter = OnTooltipEnter
 
 local function OnTooltipLeave(self)
     t:Hide();
-    GameTooltip:Hide();
+    GameTooltip:Hide()
 end
 D.OnTooltipLeave = OnTooltipLeave

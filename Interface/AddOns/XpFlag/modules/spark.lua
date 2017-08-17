@@ -42,10 +42,10 @@ local function OnSparkFinished(self)
 end
 
 local function AddSpark(parent, num)
-    local f = CreateFrame("Frame", nil, _G['UIParent']);
-    f:SetHeight(1);
-    f:SetWidth(1);
-    f:SetPoint("TOP", _G[UIParent], "TOPLEFT", 0, - 20);
+    local f = CreateFrame("Frame", nil, _G['UIParent'])
+    f:SetHeight(1)
+    f:SetWidth(1)
+    f:SetPoint("TOP", _G[UIParent], "TOPLEFT", 0, - 20)
 
     f.text = f:CreateFontString(nil, "OVERLAY")
     f.text:SetPoint("CENTER")
@@ -57,13 +57,13 @@ local function AddSpark(parent, num)
     f.ag = f:CreateAnimationGroup()
 
     f.ag.a1 = f.ag:CreateAnimation("Translation")
-    f.ag.a1:SetParent(f.ag);
+    f.ag.a1:SetParent(f.ag)
     f.ag.a1:SetOffset(0, 0)
     f.ag.a1:SetDuration(0)
     f.ag.a1:SetSmoothing("IN_OUT")
 
     f.ag.a2 = f.ag:CreateAnimation("Alpha")
-    f.ag.a2:SetParent(f.ag);
+    f.ag.a2:SetParent(f.ag)
     f.ag.a2:SetFromAlpha(1)
     f.ag.a2:SetToAlpha(0)
     f.ag.a2:SetDuration(0)

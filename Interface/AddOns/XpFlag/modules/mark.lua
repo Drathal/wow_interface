@@ -3,8 +3,6 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local CreateFrame = _G.CreateFrame
 
-local marks = D.marks
-local friends = D.friends
 local rcolor = RAID_CLASS_COLORS[D.class]
 
 local function CreateMark(name, class)
@@ -41,23 +39,23 @@ local function CreateMark(name, class)
 end
 D.CreateMark = CreateMark
 
-local function UpdateMark(name, value, maxvalue, level, class)
+local function UpdateMark(marks, name, value, maxvalue, level, class)
     local m = marks[name] or D.CreateMark(name, class);
 
     if level == MAX_PLAYER_LEVEL then
-        m:Hide();
+        m:Hide()
         return
     end
 
-    m.prev = m.value or value;
-    m.value = value;
-    m.maxvalue = maxvalue;
-    m.level = level;
+    m.prev = m.value or value
+    m.value = value
+    m.maxvalue = maxvalue
+    m.level = level
     m.gain = tonumber(value) - tonumber(m.prev) or 0
 
-    m.to = D.screenWidth * value / maxvalue;
-    m.texture:SetVertexColor(unpack(D.GetXpColor()));
-    m.texture:SetTexture(D.GetMarkTexture(level, D.level));
+    m.to = D.screenWidth * value / maxvalue
+    m.texture:SetVertexColor(unpack(D.GetXpColor()))
+    m.texture:SetTexture(D.GetMarkTexture(level, D.level))
 
     if not m.player then return end
     if m.gain <= 0 then return end
@@ -67,10 +65,10 @@ local function UpdateMark(name, value, maxvalue, level, class)
 end
 D.UpdateMark = UpdateMark
 
-local function RefreshMarks()
-    for k, mark in pairs(marks) do
-        if not (friends[k] or (k == D.nameRealm)) then
-            DeleteMark(mark);
+local function RefreshMarks(marks, friends)
+    for name, mark in pairs(marks) do
+        if not (friends[name] or (name == D.nameRealm)) then
+            DeleteMark(mark)
         end
     end
 end
@@ -78,7 +76,7 @@ D.RefreshMarks = RefreshMarks
 
 local function DeleteMark(mark)
     if not mark then return end
-    mark:Hide();
-    mark = nil;
+    mark:Hide()
+    mark = nil
 end
 D.DeleteMark = DeleteMark

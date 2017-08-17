@@ -1,8 +1,8 @@
 local D, C, L = unpack(select(2, ...))
 
 local _G = _G
-local UIFrameFadeIn = _G.UIFrameFadeIn;
-local UIFrameFadeOut = _G.UIFrameFadeOut;
+local UIFrameFadeIn = _G.UIFrameFadeIn
+local UIFrameFadeOut = _G.UIFrameFadeOut
 
 local function CreateSparkModel(parent)
     local m = CreateFrame('PlayerModel', 'XpFlagPlayerSparkModel', parent)
