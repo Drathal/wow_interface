@@ -7,7 +7,7 @@ local function PlaySpark(xp, sparks, parent)
     for k, spark in pairs(sparks) do
         if not spark.ag:IsPlaying() then
             local _, _, _, xOfs, yOfs = parent:GetPoint()
-            local x = (xOfs + (C.mark.width / 2)) * UIParent:GetEffectiveScale()
+            local x = (xOfs + (C.mark.width / 2)) --* UIParent:GetEffectiveScale()
 
             spark:ClearAllPoints()
             spark:SetPoint("TOP", _G[UIParent], "TOPLEFT", x, C.sparkXP.y);
@@ -28,7 +28,7 @@ local function OnSparkPlay(self)
     local xp = self:GetParent().xp
     if not xp or xp == "0" then
         self:GetParent().text:SetText("")
-        f.ag:Stop()
+        self.ag:Stop()
         return
     end
 
@@ -43,7 +43,6 @@ local function AddSpark(parent, num)
     local f = CreateFrame("Frame", nil, _G['UIParent'])
     f:SetHeight(1)
     f:SetWidth(1)
-    f:SetPoint("TOP", _G[UIParent], "TOPLEFT", 0, - 20)
     f:Show()
 
     f.text = f:CreateFontString(nil, "OVERLAY")

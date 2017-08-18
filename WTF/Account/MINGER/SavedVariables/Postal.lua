@@ -15,7 +15,7 @@ Postal3DB = {
 			["alts"] = {
 				"Darlaxle|Blackhand|Horde|100|WARLOCK", -- [1]
 				"Drahmoon|Madmortem|Alliance|110|WARLOCK", -- [2]
-				"Dranathal|Madmortem|Alliance|5|SHAMAN", -- [3]
+				"Dranathal|Madmortem|Alliance|6|SHAMAN", -- [3]
 				"Drathal|Madmortem|Alliance|110|DRUID", -- [4]
 				"Drathia|Madmortem|Alliance|110|PRIEST", -- [5]
 				"Drathtix|Madmortem|Alliance|78|MONK", -- [6]

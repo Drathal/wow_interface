@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 2100,
+	["session"] = 2106,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -637,5 +637,20 @@ BugGrabberDB = {
 			["session"] = 2099,
 			["counter"] = 3,
 		}, -- [83]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:71: attempt to call global 'GetFriends' (a nil value)",
+			["time"] = "2017/08/18 15:17:07",
+			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:71: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 2102,
+			["counter"] = 1,
+		}, -- [84]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\modules\\spark.lua:31: attempt to index global 'f' (a nil value)",
+			["time"] = "2017/08/18 15:18:25",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n a2 = <unnamed> {\n }\n a1 = <unnamed> {\n }\n}\nxp = nil\n(*temporary) = nil\n(*temporary) = <unnamed> {\n 0 = <userdata>\n}\n(*temporary) = \"\"\n(*temporary) = <userdata>\n(*temporary) = nil\n(*temporary) = \"attempt to index global 'f' (a nil value)\"\nC = <table> {\n sparkXP = <table> {\n }\n debug = true\n mark = <table> {\n }\n player = <table> {\n }\n sparkModel = <table> {\n }\n bar = <table> {\n }\n}\n",
+			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\spark.lua:31: in function <Interface\\AddOns\\XpFlag\\modules\\spark.lua:27>\n[C]: in function `Play'\nInterface\\AddOns\\XpFlag\\modules\\spark.lua:21: in function <Interface\\AddOns\\XpFlag\\modules\\spark.lua:6>\nInterface\\AddOns\\XpFlag\\modules\\spark.lua:81: in function `XpFlagPlaySpark'\n[string \"XpFlagPlaySpark()\"]:1: in main chunk\n[C]: in function `RunScript'\nInterface\\FrameXML\\ChatFrame.lua:2060: in function `?'\nInterface\\FrameXML\\ChatFrame.lua:4486: in function `ChatEdit_ParseText'\nInterface\\FrameXML\\ChatFrame.lua:4154: in function `ChatEdit_SendText'\nInterface\\FrameXML\\ChatFrame.lua:4190: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
+			["session"] = 2103,
+			["counter"] = 1,
+		}, -- [85]
 	},
 }

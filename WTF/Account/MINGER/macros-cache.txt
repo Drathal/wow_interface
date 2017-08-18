@@ -29,6 +29,12 @@ VER 3 00000000000000C2 "moint" "254858"
 /dismount [mounted]
 /run Mountz("Primal Flamesaber", "Primal Flamesaber", "Crimson Water Strider")
 END
+VER 3 00000000000000C4 "PlaySpark" "136010"
+/run XpFlagPlaySpark(555)
+END
+VER 3 00000000000000C3 "reload" "135863"
+/reload
+END
 VER 3 00000000000000AA "Roll dice" "237285"
 /roll
 END
