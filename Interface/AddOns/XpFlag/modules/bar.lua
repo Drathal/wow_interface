@@ -3,14 +3,14 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
 
-local function CreateBar()
+D.CreateBar = function()
     if not C.bar.show then return end
 
     local bar = CreateFrame("Frame", 'XPFLag-XpBar', _G['UIParent'])
     bar:SetHeight(C.bar.height)
     bar:SetWidth(0)
     bar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0)
-    bar:SetFrameLevel(5)
+    bar:SetFrameLevel(1)
     bar:SetFrameStrata("DIALOG");
 
     bar.texture = bar:CreateTexture(nil, "OVERLAY")
@@ -32,9 +32,8 @@ local function CreateBar()
 
     return bar
 end
-D.CreateBar = CreateBar
 
-local function UpdatePlayerBar(bar)
+D.UpdatePlayerBar = function(bar)
     if not bar then return end
 
     if D.level == D.maxLevel then
@@ -45,4 +44,3 @@ local function UpdatePlayerBar(bar)
     bar.to = (D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER"))
     bar.texture:SetVertexColor(unpack(D.GetXpColor()))
 end
-D.UpdatePlayerBar = UpdatePlayerBar

@@ -4,12 +4,11 @@ local _G = _G
 local UnitXP = _G.UnitXP
 local UnitXPMax = _G.UnitXPMax
 
-local function CreateMessage(type, xp, max)
+D.CreateMessage = function(type, xp, max)
     return (type or "XpFlag")..":"..(xp or UnitXP("PLAYER"))..":"..(max or UnitXPMax("PLAYER"))..":"..D.level..":"..D.class
 end
-D.CreateMessage = CreateMessage
 
-local function DecodeMessage(msg)
+D.DecodeMessage = function(msg)
     local type, xp, maxxp, level, class = msg:match("^(.-):(.-):(.-):(.-):(.-)$");
 
     return {
@@ -20,4 +19,11 @@ local function DecodeMessage(msg)
         class = class
     }
 end
-D.DecodeMessage = DecodeMessage
+
+D.UpdateFriends = function(marks)
+    for target, _ in pairs(marks) do
+        if target and target ~= D.nameRealm then
+            SendAddonMessage("XpFlag", D.CreateMessage("XpFlag"), "WHISPER", target)
+        end
+    end
+end

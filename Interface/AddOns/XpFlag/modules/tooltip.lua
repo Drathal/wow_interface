@@ -7,8 +7,7 @@ local format = string.format
 
 local t = nil
 
-local function CreateTooltip(marks)
-
+D.CreateTooltip = function(marks)
     t = CreateFrame("Frame")
     t:Hide()
     t.delay = 0.25
@@ -43,16 +42,13 @@ local function CreateTooltip(marks)
 
     return t
 end
-D.CreateTooltip = CreateTooltip
 
-local function OnTooltipEnter(self)
+D.OnTooltipEnter = function(self)
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
     t:Show();
 end
-D.OnTooltipEnter = OnTooltipEnter
 
-local function OnTooltipLeave(self)
+D.OnTooltipLeave = function(self)
     t:Hide();
     GameTooltip:Hide()
 end
-D.OnTooltipLeave = OnTooltipLeave

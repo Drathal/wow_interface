@@ -5,16 +5,16 @@ local CreateFrame = _G.CreateFrame
 
 local rcolor = RAID_CLASS_COLORS[D.class]
 
-local function CreateMark(name, class)
+D.CreateMark = function(name, class)
     local m = CreateFrame("Frame", 'XPFLag-'..name, _G['UIParent'])
     m:SetHeight(C.mark.height)
     m:SetWidth(C.mark.width)
     m:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0)
     m:EnableMouse()
-    m:SetScript("OnEnter", D.onTooltipEnter);
-    m:SetScript("OnLeave", D.onTooltipLeave);
+    m:SetScript("OnEnter", D.OnTooltipEnter);
+    m:SetScript("OnLeave", D.OnTooltipLeave);
     m:SetFrameStrata("DIALOG")
-    m:SetFrameLevel(1)
+    m:SetFrameLevel(2)
     m:Show()
 
     m.texture = m:CreateTexture(nil, "OVERLAY")
@@ -29,18 +29,26 @@ local function CreateMark(name, class)
     if name ~= D.nameRealm then return end
 
     m.player = true;
-    m.texture:SetVertexColor(unpack(D.getXpColor));
+    m.texture:SetVertexColor(unpack(D.GetXpColor()));
     m:SetFrameLevel(5)
     m.model = D.CreateSparkModel(m)
-    m.xp = D.CreateSparks()
-    m.Play = D.playSpark
+    m.xpSparks = D.CreateSparks(m)
 
     return m
 end
-D.CreateMark = CreateMark
 
-local function UpdateMark(marks, name, value, maxvalue, level, class)
+D.UpdateMark = function(marks, name, value, maxvalue, level, class)
+
+    local name = name or D.nameRealm
+    local value = value or UnitXP("PLAYER")
+    local maxvalue = maxvalue or UnitXPMax("PLAYER")
+    local level = level or D.level
+    local class = class or D.class
     local m = marks[name] or D.CreateMark(name, class);
+
+    if not marks[name] then
+        marks[name] = m
+    end
 
     if level == MAX_PLAYER_LEVEL then
         m:Hide()
@@ -60,23 +68,21 @@ local function UpdateMark(marks, name, value, maxvalue, level, class)
     if not m.player then return end
     if m.gain <= 0 then return end
 
-    m.Play(m.gain)
+    m.xpSparks.Play(m.gain)
     D:SendMessage("XpFlag-sparkmodel-show", m)
 end
-D.UpdateMark = UpdateMark
+D.UpdatePlayerMark = D.UpdateMark
 
-local function RefreshMarks(marks, friends)
+D.DeleteOldMarks = function(marks, friends)
     for name, mark in pairs(marks) do
         if not (friends[name] or (name == D.nameRealm)) then
             DeleteMark(mark)
         end
     end
 end
-D.RefreshMarks = RefreshMarks
 
-local function DeleteMark(mark)
+D.DeleteMark = function(mark)
     if not mark then return end
     mark:Hide()
     mark = nil
 end
-D.DeleteMark = DeleteMark

@@ -3,18 +3,17 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local random = math.random
 
-local function PlaySpark(xp)
-    for k, spark in pairs(m.xp) do
+local function PlaySpark(xp, sparks, parent)
+    for k, spark in pairs(sparks) do
         if not spark.ag:IsPlaying() then
-
-            local _, _, _, xOfs, yOfs = m:GetPoint()
-            local x = xOfs * UIParent:GetScale()
+            local _, _, _, xOfs, yOfs = parent:GetPoint()
+            local x = (xOfs + (C.mark.width / 2)) * UIParent:GetEffectiveScale()
 
             spark:ClearAllPoints()
-            spark:SetPoint("TOP", _G[UIParent], "TOPLEFT", x + C.mark.width, - 20);
+            spark:SetPoint("TOP", _G[UIParent], "TOPLEFT", x, C.sparkXP.y);
 
-            local d = random(1, 2)
-            spark.ag.a1:SetOffset( math.random(-15, 15), math.random(-120, - 80))
+            local d = random(unpack(C.sparkXP.durationSpread))
+            spark.ag.a1:SetOffset(random(unpack(C.sparkXP.xSpread)), random(unpack(C.sparkXP.ySpread)))
             spark.ag.a1:SetDuration(d)
             spark.ag.a2:SetDuration(d)
 
@@ -24,7 +23,6 @@ local function PlaySpark(xp)
         end
     end
 end
-D.PlaySpark = PlaySpark
 
 local function OnSparkPlay(self)
     local xp = self:GetParent().xp
@@ -46,6 +44,7 @@ local function AddSpark(parent, num)
     f:SetHeight(1)
     f:SetWidth(1)
     f:SetPoint("TOP", _G[UIParent], "TOPLEFT", 0, - 20)
+    f:Show()
 
     f.text = f:CreateFontString(nil, "OVERLAY")
     f.text:SetPoint("CENTER")
@@ -53,6 +52,7 @@ local function AddSpark(parent, num)
     f.text:SetShadowColor(0, 0, 0, 0)
     f.text:SetShadowOffset(0, 0)
     f.text:SetTextColor(unpack(C.sparkXP.fontColor))
+    --f.text:SetText("DEBUG")
 
     f.ag = f:CreateAnimationGroup()
 
@@ -75,11 +75,14 @@ local function AddSpark(parent, num)
     return f
 end
 
-local function CreateSparks()
+D.CreateSparks = function(parent)
     local f = {}
+    f.sparks = {}
+    f.Play = function(xp) PlaySpark(xp, f.sparks, parent) end
+    _G.XpFlagPlaySpark = f.Play
+
     for i = 1, C.sparkXP.max, 1 do
-        f[i] = AddSpark(f, i)
+        f.sparks[i] = AddSpark(f, i)
     end
     return f
 end
-D.CreateSparks = CreateSparks

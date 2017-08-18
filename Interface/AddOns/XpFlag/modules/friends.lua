@@ -2,7 +2,7 @@ local D, C, L = unpack(select(2, ...))
 
 local _G = _G
 
-local function GetFriends()
+D.GetFriends = function()
     local friends = {}
     local allFriends, onlineFriends = GetNumFriends()
 
