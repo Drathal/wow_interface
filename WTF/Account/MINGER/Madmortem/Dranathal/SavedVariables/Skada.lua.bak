@@ -9,41 +9,42 @@ SkadaPerCharDB = {
 		["ffdamagedone"] = 0,
 		["power"] = {
 		},
-		["damage"] = 15852,
+		["damage"] = 16023,
 		["players"] = {
 			{
 				["healingabsorbed"] = 0,
+				["class"] = "SHAMAN",
 				["ffdamagedonespells"] = {
 				},
-				["class"] = "SHAMAN",
 				["damaged"] = {
 				},
 				["alertDamage"] = 0,
 				["overhealing"] = 0,
-				["ffdamagedone"] = 0,
-				["time"] = 458,
+				["healingspells"] = {
+				},
+				["time"] = 463,
 				["interrupts"] = 0,
 				["dispells"] = 0,
 				["auras"] = {
 				},
 				["maxhp"] = 234,
-				["damage"] = 15852,
+				["damage"] = 16023,
 				["damagespells"] = {
 					["Lightning Bolt"] = {
 						["hitmin"] = 44,
 						["criticalamount"] = 1511,
 						["id"] = 188196,
-						["hitamount"] = 14328,
+						["hitamount"] = 14499,
 						["criticalmin"] = 89,
-						["critical"] = 15,
+						["hitmax"] = 57,
 						["min"] = 44,
 						["criticalmax"] = 114,
-						["hitmax"] = 57,
-						["hit"] = 280,
+						["critical"] = 15,
+						["hit"] = 283,
+						["totalhits"] = 298,
 						["school"] = 8,
-						["totalhits"] = 295,
 						["max"] = 114,
-						["damage"] = 15839,
+						["damage"] = 16010,
 					},
 					["Attack"] = {
 						["hitmin"] = 13,
@@ -62,7 +63,113 @@ SkadaPerCharDB = {
 				},
 				["healed"] = {
 				},
-				["power"] = {
+				["deathlog"] = {
+					{
+						["ts"] = 1503103705.619,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 234,
+						["spellid"] = 88163,
+					}, -- [1]
+					{
+						["ts"] = 1503103707.685,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 231,
+						["spellid"] = 88163,
+					}, -- [2]
+					{
+						["ts"] = 1503103722.05,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 234,
+						["spellid"] = 88163,
+					}, -- [3]
+					{
+						["ts"] = 1503103724.057,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 231,
+						["spellid"] = 88163,
+					}, -- [4]
+					{
+						["ts"] = 1503103738.023,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 234,
+						["spellid"] = 88163,
+					}, -- [5]
+					{
+						["ts"] = 1503103739.995,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 231,
+						["spellid"] = 88163,
+					}, -- [6]
+					{
+						["ts"] = 1503103742.026,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 228,
+						["spellid"] = 88163,
+					}, -- [7]
+					{
+						["ts"] = 1503104226.536,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 234,
+						["spellid"] = 88163,
+					}, -- [8]
+					{
+						["ts"] = 1503104228.552,
+						["amount"] = -3,
+						["spellid"] = 88163,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 231,
+					}, -- [9]
+					{
+						["ts"] = 1503062252.519,
+						["amount"] = -3,
+						["srcname"] = "Mutated Root Lasher",
+						["hp"] = 234,
+						["spellid"] = 88163,
+					}, -- [10]
+					{
+						["ts"] = 1503062772.908,
+						["amount"] = -3,
+						["hp"] = 234,
+						["spellid"] = 88163,
+						["srcname"] = "Mutated Root Lasher",
+					}, -- [11]
+					{
+						["ts"] = 1503062802.314,
+						["amount"] = -3,
+						["hp"] = 234,
+						["spellid"] = 88163,
+						["srcname"] = "Mutated Root Lasher",
+					}, -- [12]
+					{
+						["ts"] = 1503062804.31,
+						["amount"] = -3,
+						["hp"] = 231,
+						["spellid"] = 88163,
+						["srcname"] = "Mutated Root Lasher",
+					}, -- [13]
+					{
+						["ts"] = 1503062814.453,
+						["amount"] = -3,
+						["hp"] = 234,
+						["spellid"] = 88163,
+						["srcname"] = "Mutated Root Lasher",
+					}, -- [14]
+					{
+						["ts"] = 1503062816.4,
+						["amount"] = -3,
+						["hp"] = 231,
+						["spellid"] = 88163,
+						["srcname"] = "Mutated Root Lasher",
+					}, -- [15]
+					["pos"] = 10,
 				},
 				["id"] = "Player-3696-060668CA",
 				["healing"] = 0,
@@ -72,146 +179,39 @@ SkadaPerCharDB = {
 						["crushing"] = 0,
 						["id"] = 6603,
 						["absorbed"] = 0,
-						["min"] = 1,
-						["critical"] = 0,
 						["glancing"] = 0,
+						["critical"] = 0,
+						["min"] = 1,
 						["school"] = 1,
 						["name"] = "Attack",
 						["blocked"] = 1,
-						["totalhits"] = 187,
+						["totalhits"] = 189,
 						["resisted"] = 0,
 						["max"] = 4,
-						["damage"] = 461,
+						["damage"] = 467,
 					},
 				},
 				["role"] = "NONE",
-				["damagetaken"] = 461,
+				["damagetaken"] = 467,
 				["name"] = "Dranathal",
 				["alertCount"] = 0,
-				["deathlog"] = {
-					{
-						["ts"] = 1503103705.619,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 234,
-					}, -- [1]
-					{
-						["ts"] = 1503103707.685,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 231,
-					}, -- [2]
-					{
-						["ts"] = 1503103722.05,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 234,
-					}, -- [3]
-					{
-						["ts"] = 1503103724.057,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 231,
-					}, -- [4]
-					{
-						["ts"] = 1503103738.023,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 234,
-					}, -- [5]
-					{
-						["ts"] = 1503103739.995,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 231,
-					}, -- [6]
-					{
-						["ts"] = 1503103742.026,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 228,
-					}, -- [7]
-					{
-						["ts"] = 1502898744.727,
-						["amount"] = -2,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 221,
-					}, -- [8]
-					{
-						["ts"] = 1502898746.725,
-						["amount"] = -2,
-						["hp"] = 219,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-					}, -- [9]
-					{
-						["ts"] = 1503062252.519,
-						["amount"] = -3,
-						["spellid"] = 88163,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 234,
-					}, -- [10]
-					{
-						["ts"] = 1503062772.908,
-						["amount"] = -3,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 234,
-						["spellid"] = 88163,
-					}, -- [11]
-					{
-						["ts"] = 1503062802.314,
-						["amount"] = -3,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 234,
-						["spellid"] = 88163,
-					}, -- [12]
-					{
-						["ts"] = 1503062804.31,
-						["amount"] = -3,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 231,
-						["spellid"] = 88163,
-					}, -- [13]
-					{
-						["ts"] = 1503062814.453,
-						["amount"] = -3,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 234,
-						["spellid"] = 88163,
-					}, -- [14]
-					{
-						["ts"] = 1503062816.4,
-						["amount"] = -3,
-						["srcname"] = "Mutated Root Lasher",
-						["hp"] = 231,
-						["spellid"] = 88163,
-					}, -- [15]
-					["pos"] = 8,
+				["power"] = {
 				},
 				["ccbreaks"] = 0,
 				["alert"] = {
 				},
-				["healingspells"] = {
-				},
+				["ffdamagedone"] = 0,
 			}, -- [1]
 		},
 		["deaths"] = 0,
-		["damagetaken"] = 461,
+		["damagetaken"] = 467,
 		["shielding"] = 0,
 		["dispells"] = 0,
 		["healing"] = 0,
 		["auras"] = {
 		},
 		["starttime"] = 1502223886,
-		["mobtaken"] = 15852,
+		["mobtaken"] = 16023,
 		["overhealing"] = 0,
 		["name"] = "Total",
 		["alertCount"] = 0,
@@ -226,10 +226,10 @@ SkadaPerCharDB = {
 					},
 				},
 				["hdone"] = 0,
+				["done"] = 41,
+				["taken"] = 4331,
 				["htakenspell"] = {
 				},
-				["taken"] = 4331,
-				["done"] = 41,
 				["htaken"] = 0,
 				["hdonespell"] = {
 				},
@@ -238,8 +238,6 @@ SkadaPerCharDB = {
 				["players"] = {
 				},
 				["hdone"] = 3,
-				["done"] = 0,
-				["taken"] = 0,
 				["htakenspell"] = {
 					["Swift Hand of Justice"] = {
 						["min"] = 3,
@@ -250,6 +248,8 @@ SkadaPerCharDB = {
 						["hits"] = 1,
 					},
 				},
+				["taken"] = 0,
+				["done"] = 0,
 				["htaken"] = 3,
 				["hdonespell"] = {
 					["Swift Hand of Justice"] = {
@@ -277,8 +277,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 0,
 				["htakenspell"] = {
 					["Swift Hand of Justice"] = {
 						["min"] = 0,
@@ -289,11 +287,15 @@ SkadaPerCharDB = {
 						["hits"] = 1,
 					},
 				},
+				["htaken"] = 0,
+				["done"] = 0,
 			},
 			["Pampos-Antonidas"] = {
 				["players"] = {
 				},
 				["hdone"] = 0,
+				["done"] = 0,
+				["taken"] = 0,
 				["htakenspell"] = {
 					["Swift Hand of Justice"] = {
 						["min"] = 0,
@@ -304,8 +306,6 @@ SkadaPerCharDB = {
 						["hits"] = 1,
 					},
 				},
-				["taken"] = 0,
-				["done"] = 0,
 				["htaken"] = 0,
 				["hdonespell"] = {
 					["Swift Hand of Justice"] = {
@@ -328,10 +328,10 @@ SkadaPerCharDB = {
 					},
 				},
 				["hdone"] = 0,
+				["done"] = 6,
+				["taken"] = 1350,
 				["htakenspell"] = {
 				},
-				["taken"] = 1350,
-				["done"] = 6,
 				["htaken"] = 0,
 				["hdonespell"] = {
 				},
@@ -339,17 +339,17 @@ SkadaPerCharDB = {
 			["Mutated Root Lasher"] = {
 				["players"] = {
 					["Dranathal"] = {
-						["taken"] = 10171,
-						["done"] = 414,
+						["taken"] = 10342,
+						["done"] = 420,
 						["role"] = "NONE",
 						["class"] = "SHAMAN",
 					},
 				},
 				["hdone"] = 0,
+				["done"] = 420,
+				["taken"] = 10342,
 				["htakenspell"] = {
 				},
-				["taken"] = 10171,
-				["done"] = 414,
 				["htaken"] = 0,
 				["hdonespell"] = {
 				},
@@ -357,7 +357,7 @@ SkadaPerCharDB = {
 		},
 		["mobhdone"] = 3,
 		["last_action"] = 1502223886,
-		["mobdone"] = 461,
+		["mobdone"] = 467,
 	},
 	["sets"] = {
 		{
@@ -368,7 +368,94 @@ SkadaPerCharDB = {
 			["time"] = 8,
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
+			},
+			["damage"] = 114,
+			["players"] = {
+				{
+					["last"] = 1503103742,
+					["healingabsorbed"] = 0,
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
+					["damaged"] = {
+						["Mutated Root Lasher"] = 114,
+					},
+					["alertDamage"] = 0,
+					["time"] = 4,
+					["ffdamagedone"] = 0,
+					["overhealing"] = 0,
+					["interrupts"] = 0,
+					["maxhp"] = 234,
+					["power"] = {
+					},
+					["healing"] = 0,
+					["damage"] = 114,
+					["damagespells"] = {
+						["Lightning Bolt"] = {
+							["hitmin"] = 57,
+							["id"] = 188196,
+							["min"] = 57,
+							["damage"] = 114,
+							["hitmax"] = 57,
+							["hit"] = 2,
+							["school"] = 8,
+							["totalhits"] = 2,
+							["max"] = 57,
+							["hitamount"] = 114,
+						},
+					},
+					["name"] = "Dranathal",
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-3696-060668CA",
+					["first"] = 1503103738,
+					["damagetaken"] = 9,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["damage"] = 9,
+							["max"] = 3,
+							["name"] = "Attack",
+							["glancing"] = 0,
+							["totalhits"] = 3,
+							["critical"] = 0,
+							["blocked"] = 0,
+							["school"] = 1,
+							["resisted"] = 0,
+							["min"] = 3,
+							["absorbed"] = 0,
+						},
+					},
+					["role"] = "NONE",
+					["ccbreaks"] = 0,
+					["ffdamagedonetargets"] = {
+					},
+					["alertCount"] = 0,
+					["auras"] = {
+					},
+					["dispells"] = 0,
+					["alert"] = {
+					},
+					["class"] = "SHAMAN",
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["damagetaken"] = 9,
 			["shielding"] = 0,
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 114,
+			["starttime"] = 1503103736,
+			["name"] = "Mutated Root Lasher (69)",
+			["mobname"] = "Mutated Root Lasher",
 			["mobs"] = {
 				["Mutated Root Lasher"] = {
 					["players"] = {
@@ -383,31 +470,48 @@ SkadaPerCharDB = {
 					["hdonespell"] = {
 					},
 					["taken"] = 114,
+					["done"] = 9,
+					["htaken"] = 0,
 					["htakenspell"] = {
 					},
-					["htaken"] = 0,
-					["done"] = 9,
 				},
+			},
+			["mobhdone"] = 0,
+			["last_action"] = 1503103736,
+			["endtime"] = 1503103744,
+		}, -- [1]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["mobdone"] = 6,
+			["ccbreaks"] = 0,
+			["time"] = 8,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["power"] = {
 			},
 			["damage"] = 114,
 			["players"] = {
 				{
-					["last"] = 1503103742,
+					["last"] = 1503103726,
 					["healingabsorbed"] = 0,
-					["healing"] = 0,
-					["class"] = "SHAMAN",
+					["healingspells"] = {
+					},
+					["ffdamagedonespells"] = {
+					},
 					["damaged"] = {
 						["Mutated Root Lasher"] = 114,
 					},
 					["alertDamage"] = 0,
-					["ffdamagedone"] = 0,
-					["healingspells"] = {
-					},
 					["time"] = 4,
-					["interrupts"] = 0,
+					["ffdamagedone"] = 0,
 					["overhealing"] = 0,
+					["interrupts"] = 0,
 					["maxhp"] = 234,
-					["shielding"] = 0,
+					["power"] = {
+					},
+					["healing"] = 0,
 					["damage"] = 114,
 					["damagespells"] = {
 						["Lightning Bolt"] = {
@@ -426,25 +530,24 @@ SkadaPerCharDB = {
 					["name"] = "Dranathal",
 					["healed"] = {
 					},
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["id"] = "Player-3696-060668CA",
-					["first"] = 1503103738,
-					["damagetaken"] = 9,
+					["first"] = 1503103722,
+					["damagetaken"] = 6,
 					["damagetakenspells"] = {
 						["Attack"] = {
 							["crushing"] = 0,
 							["id"] = 6603,
-							["damage"] = 9,
+							["damage"] = 6,
 							["max"] = 3,
 							["name"] = "Attack",
-							["min"] = 3,
-							["totalhits"] = 3,
+							["glancing"] = 0,
+							["totalhits"] = 2,
 							["critical"] = 0,
 							["blocked"] = 0,
 							["school"] = 1,
 							["resisted"] = 0,
-							["glancing"] = 0,
+							["min"] = 3,
 							["absorbed"] = 0,
 						},
 					},
@@ -458,37 +561,21 @@ SkadaPerCharDB = {
 					["dispells"] = 0,
 					["alert"] = {
 					},
-					["ffdamagedonespells"] = {
-					},
+					["class"] = "SHAMAN",
 				}, -- [1]
 			},
 			["deaths"] = 0,
-			["damagetaken"] = 9,
-			["power"] = {
-			},
+			["damagetaken"] = 6,
+			["shielding"] = 0,
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["auras"] = {
 			},
 			["overhealing"] = 0,
 			["mobtaken"] = 114,
-			["starttime"] = 1503103736,
-			["name"] = "Mutated Root Lasher (69)",
+			["starttime"] = 1503103720,
+			["name"] = "Mutated Root Lasher (68)",
 			["mobname"] = "Mutated Root Lasher",
-			["dispells"] = 0,
-			["mobhdone"] = 0,
-			["last_action"] = 1503103736,
-			["endtime"] = 1503103744,
-		}, -- [1]
-		{
-			["healingabsorbed"] = 0,
-			["alertDamage"] = 0,
-			["mobdone"] = 6,
-			["ccbreaks"] = 0,
-			["time"] = 8,
-			["interrupts"] = 0,
-			["ffdamagedone"] = 0,
-			["shielding"] = 0,
 			["mobs"] = {
 				["Mutated Root Lasher"] = {
 					["players"] = {
@@ -503,99 +590,12 @@ SkadaPerCharDB = {
 					["hdonespell"] = {
 					},
 					["taken"] = 114,
+					["done"] = 6,
+					["htaken"] = 0,
 					["htakenspell"] = {
 					},
-					["htaken"] = 0,
-					["done"] = 6,
 				},
 			},
-			["damage"] = 114,
-			["players"] = {
-				{
-					["last"] = 1503103726,
-					["healingabsorbed"] = 0,
-					["healing"] = 0,
-					["class"] = "SHAMAN",
-					["damaged"] = {
-						["Mutated Root Lasher"] = 114,
-					},
-					["alertDamage"] = 0,
-					["ffdamagedone"] = 0,
-					["healingspells"] = {
-					},
-					["time"] = 4,
-					["interrupts"] = 0,
-					["overhealing"] = 0,
-					["maxhp"] = 234,
-					["shielding"] = 0,
-					["damage"] = 114,
-					["damagespells"] = {
-						["Lightning Bolt"] = {
-							["hitmin"] = 57,
-							["id"] = 188196,
-							["min"] = 57,
-							["damage"] = 114,
-							["hitmax"] = 57,
-							["hit"] = 2,
-							["school"] = 8,
-							["totalhits"] = 2,
-							["max"] = 57,
-							["hitamount"] = 114,
-						},
-					},
-					["name"] = "Dranathal",
-					["healed"] = {
-					},
-					["power"] = {
-					},
-					["id"] = "Player-3696-060668CA",
-					["first"] = 1503103722,
-					["damagetaken"] = 6,
-					["damagetakenspells"] = {
-						["Attack"] = {
-							["crushing"] = 0,
-							["id"] = 6603,
-							["damage"] = 6,
-							["max"] = 3,
-							["name"] = "Attack",
-							["min"] = 3,
-							["totalhits"] = 2,
-							["critical"] = 0,
-							["blocked"] = 0,
-							["school"] = 1,
-							["resisted"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
-						},
-					},
-					["role"] = "NONE",
-					["ccbreaks"] = 0,
-					["ffdamagedonetargets"] = {
-					},
-					["alertCount"] = 0,
-					["auras"] = {
-					},
-					["dispells"] = 0,
-					["alert"] = {
-					},
-					["ffdamagedonespells"] = {
-					},
-				}, -- [1]
-			},
-			["deaths"] = 0,
-			["damagetaken"] = 6,
-			["power"] = {
-			},
-			["alertCount"] = 0,
-			["healing"] = 0,
-			["auras"] = {
-			},
-			["overhealing"] = 0,
-			["mobtaken"] = 114,
-			["starttime"] = 1503103720,
-			["name"] = "Mutated Root Lasher (68)",
-			["mobname"] = "Mutated Root Lasher",
-			["dispells"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1503103720,
 			["endtime"] = 1503103728,
@@ -608,22 +608,42 @@ SkadaPerCharDB = {
 			["time"] = 6,
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
-			["damagetaken"] = 6,
 			["dispells"] = 0,
+			["mobs"] = {
+				["Mutated Root Lasher"] = {
+					["players"] = {
+						["Dranathal"] = {
+							["taken"] = 114,
+							["done"] = 6,
+							["role"] = "NONE",
+							["class"] = "SHAMAN",
+						},
+					},
+					["hdone"] = 0,
+					["htakenspell"] = {
+					},
+					["taken"] = 114,
+					["done"] = 6,
+					["htaken"] = 0,
+					["hdonespell"] = {
+					},
+				},
+			},
 			["damage"] = 114,
 			["players"] = {
 				{
 					["last"] = 1503062816,
 					["healingabsorbed"] = 0,
+					["class"] = "SHAMAN",
 					["ffdamagedonespells"] = {
 					},
-					["class"] = "SHAMAN",
 					["damaged"] = {
 						["Mutated Root Lasher"] = 114,
 					},
 					["alertDamage"] = 0,
 					["overhealing"] = 0,
-					["ffdamagedone"] = 0,
+					["healingspells"] = {
+					},
 					["time"] = 2,
 					["interrupts"] = 0,
 					["dispells"] = 0,
@@ -649,18 +669,19 @@ SkadaPerCharDB = {
 					},
 					["healed"] = {
 					},
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "Player-3696-060668CA",
-					["healing"] = 0,
+					["maxhp"] = 234,
 					["ccbreaks"] = 0,
 					["damagetakenspells"] = {
 						["Attack"] = {
 							["crushing"] = 0,
 							["id"] = 6603,
 							["absorbed"] = 0,
-							["glancing"] = 0,
-							["critical"] = 0,
 							["min"] = 3,
+							["critical"] = 0,
+							["glancing"] = 0,
 							["school"] = 1,
 							["name"] = "Attack",
 							["blocked"] = 0,
@@ -674,37 +695,17 @@ SkadaPerCharDB = {
 					["damagetaken"] = 6,
 					["name"] = "Dranathal",
 					["alertCount"] = 0,
-					["power"] = {
-					},
-					["maxhp"] = 234,
+					["shielding"] = 0,
+					["healing"] = 0,
 					["alert"] = {
 					},
-					["healingspells"] = {
-					},
+					["ffdamagedone"] = 0,
 				}, -- [1]
 			},
 			["deaths"] = 0,
-			["mobs"] = {
-				["Mutated Root Lasher"] = {
-					["players"] = {
-						["Dranathal"] = {
-							["taken"] = 114,
-							["done"] = 6,
-							["role"] = "NONE",
-							["class"] = "SHAMAN",
-						},
-					},
-					["hdone"] = 0,
-					["done"] = 6,
-					["taken"] = 114,
-					["htakenspell"] = {
-					},
-					["htaken"] = 0,
-					["hdonespell"] = {
-					},
-				},
+			["damagetaken"] = 6,
+			["power"] = {
 			},
-			["shielding"] = 0,
 			["mobname"] = "Mutated Root Lasher",
 			["healing"] = 0,
 			["auras"] = {
@@ -714,8 +715,7 @@ SkadaPerCharDB = {
 			["overhealing"] = 0,
 			["name"] = "Mutated Root Lasher (67)",
 			["alertCount"] = 0,
-			["power"] = {
-			},
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1503062811,
 			["mobdone"] = 6,
@@ -728,22 +728,42 @@ SkadaPerCharDB = {
 			["time"] = 7,
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
-			["damagetaken"] = 6,
 			["dispells"] = 0,
+			["mobs"] = {
+				["Mutated Root Lasher"] = {
+					["players"] = {
+						["Dranathal"] = {
+							["taken"] = 114,
+							["done"] = 6,
+							["role"] = "NONE",
+							["class"] = "SHAMAN",
+						},
+					},
+					["hdone"] = 0,
+					["htakenspell"] = {
+					},
+					["taken"] = 114,
+					["done"] = 6,
+					["htaken"] = 0,
+					["hdonespell"] = {
+					},
+				},
+			},
 			["damage"] = 114,
 			["players"] = {
 				{
 					["last"] = 1503062805,
 					["healingabsorbed"] = 0,
+					["class"] = "SHAMAN",
 					["ffdamagedonespells"] = {
 					},
-					["class"] = "SHAMAN",
 					["damaged"] = {
 						["Mutated Root Lasher"] = 114,
 					},
 					["alertDamage"] = 0,
 					["overhealing"] = 0,
-					["ffdamagedone"] = 0,
+					["healingspells"] = {
+					},
 					["time"] = 3,
 					["interrupts"] = 0,
 					["dispells"] = 0,
@@ -769,18 +789,19 @@ SkadaPerCharDB = {
 					},
 					["healed"] = {
 					},
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "Player-3696-060668CA",
-					["healing"] = 0,
+					["maxhp"] = 234,
 					["ccbreaks"] = 0,
 					["damagetakenspells"] = {
 						["Attack"] = {
 							["crushing"] = 0,
 							["id"] = 6603,
 							["absorbed"] = 0,
-							["glancing"] = 0,
-							["critical"] = 0,
 							["min"] = 3,
+							["critical"] = 0,
+							["glancing"] = 0,
 							["school"] = 1,
 							["name"] = "Attack",
 							["blocked"] = 0,
@@ -794,37 +815,17 @@ SkadaPerCharDB = {
 					["damagetaken"] = 6,
 					["name"] = "Dranathal",
 					["alertCount"] = 0,
-					["power"] = {
-					},
-					["maxhp"] = 234,
+					["shielding"] = 0,
+					["healing"] = 0,
 					["alert"] = {
 					},
-					["healingspells"] = {
-					},
+					["ffdamagedone"] = 0,
 				}, -- [1]
 			},
 			["deaths"] = 0,
-			["mobs"] = {
-				["Mutated Root Lasher"] = {
-					["players"] = {
-						["Dranathal"] = {
-							["taken"] = 114,
-							["done"] = 6,
-							["role"] = "NONE",
-							["class"] = "SHAMAN",
-						},
-					},
-					["hdone"] = 0,
-					["done"] = 6,
-					["taken"] = 114,
-					["htakenspell"] = {
-					},
-					["htaken"] = 0,
-					["hdonespell"] = {
-					},
-				},
+			["damagetaken"] = 6,
+			["power"] = {
 			},
-			["shielding"] = 0,
 			["mobname"] = "Mutated Root Lasher",
 			["healing"] = 0,
 			["auras"] = {
@@ -834,8 +835,7 @@ SkadaPerCharDB = {
 			["overhealing"] = 0,
 			["name"] = "Mutated Root Lasher (66)",
 			["alertCount"] = 0,
-			["power"] = {
-			},
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1503062799,
 			["mobdone"] = 6,
@@ -848,22 +848,42 @@ SkadaPerCharDB = {
 			["time"] = 6,
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
-			["damagetaken"] = 0,
 			["dispells"] = 0,
+			["mobs"] = {
+				["Mutated Root Lasher"] = {
+					["players"] = {
+						["Dranathal"] = {
+							["taken"] = 170,
+							["done"] = 0,
+							["role"] = "NONE",
+							["class"] = "SHAMAN",
+						},
+					},
+					["hdone"] = 0,
+					["htakenspell"] = {
+					},
+					["taken"] = 170,
+					["done"] = 0,
+					["htaken"] = 0,
+					["hdonespell"] = {
+					},
+				},
+			},
 			["damage"] = 170,
 			["players"] = {
 				{
 					["last"] = 1503062785,
 					["healingabsorbed"] = 0,
+					["class"] = "SHAMAN",
 					["ffdamagedonespells"] = {
 					},
-					["class"] = "SHAMAN",
 					["damaged"] = {
 						["Mutated Root Lasher"] = 170,
 					},
 					["alertDamage"] = 0,
 					["overhealing"] = 0,
-					["ffdamagedone"] = 0,
+					["healingspells"] = {
+					},
 					["time"] = 5,
 					["interrupts"] = 0,
 					["dispells"] = 0,
@@ -889,9 +909,10 @@ SkadaPerCharDB = {
 					},
 					["healed"] = {
 					},
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "Player-3696-060668CA",
-					["healing"] = 0,
+					["maxhp"] = 234,
 					["ccbreaks"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -899,37 +920,17 @@ SkadaPerCharDB = {
 					["damagetaken"] = 0,
 					["name"] = "Dranathal",
 					["alertCount"] = 0,
-					["power"] = {
-					},
-					["maxhp"] = 234,
+					["shielding"] = 0,
+					["healing"] = 0,
 					["alert"] = {
 					},
-					["healingspells"] = {
-					},
+					["ffdamagedone"] = 0,
 				}, -- [1]
 			},
 			["deaths"] = 0,
-			["mobs"] = {
-				["Mutated Root Lasher"] = {
-					["players"] = {
-						["Dranathal"] = {
-							["taken"] = 170,
-							["done"] = 0,
-							["role"] = "NONE",
-							["class"] = "SHAMAN",
-						},
-					},
-					["hdone"] = 0,
-					["done"] = 0,
-					["taken"] = 170,
-					["htakenspell"] = {
-					},
-					["htaken"] = 0,
-					["hdonespell"] = {
-					},
-				},
+			["damagetaken"] = 0,
+			["power"] = {
 			},
-			["shielding"] = 0,
 			["mobname"] = "Mutated Root Lasher",
 			["healing"] = 0,
 			["auras"] = {
@@ -939,8 +940,7 @@ SkadaPerCharDB = {
 			["overhealing"] = 0,
 			["name"] = "Mutated Root Lasher (65)",
 			["alertCount"] = 0,
-			["power"] = {
-			},
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1503062780,
 			["mobdone"] = 0,
@@ -953,22 +953,42 @@ SkadaPerCharDB = {
 			["time"] = 6,
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
-			["damagetaken"] = 3,
 			["dispells"] = 0,
+			["mobs"] = {
+				["Mutated Root Lasher"] = {
+					["players"] = {
+						["Dranathal"] = {
+							["taken"] = 114,
+							["done"] = 3,
+							["role"] = "NONE",
+							["class"] = "SHAMAN",
+						},
+					},
+					["hdone"] = 0,
+					["htakenspell"] = {
+					},
+					["taken"] = 114,
+					["done"] = 3,
+					["htaken"] = 0,
+					["hdonespell"] = {
+					},
+				},
+			},
 			["damage"] = 114,
 			["players"] = {
 				{
 					["last"] = 1503062775,
 					["healingabsorbed"] = 0,
+					["class"] = "SHAMAN",
 					["ffdamagedonespells"] = {
 					},
-					["class"] = "SHAMAN",
 					["damaged"] = {
 						["Mutated Root Lasher"] = 114,
 					},
 					["alertDamage"] = 0,
 					["overhealing"] = 0,
-					["ffdamagedone"] = 0,
+					["healingspells"] = {
+					},
 					["time"] = 3,
 					["interrupts"] = 0,
 					["dispells"] = 0,
@@ -994,18 +1014,19 @@ SkadaPerCharDB = {
 					},
 					["healed"] = {
 					},
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "Player-3696-060668CA",
-					["healing"] = 0,
+					["maxhp"] = 234,
 					["ccbreaks"] = 0,
 					["damagetakenspells"] = {
 						["Attack"] = {
 							["crushing"] = 0,
 							["id"] = 6603,
 							["absorbed"] = 0,
-							["glancing"] = 0,
-							["critical"] = 0,
 							["min"] = 3,
+							["critical"] = 0,
+							["glancing"] = 0,
 							["school"] = 1,
 							["name"] = "Attack",
 							["blocked"] = 0,
@@ -1019,37 +1040,17 @@ SkadaPerCharDB = {
 					["damagetaken"] = 3,
 					["name"] = "Dranathal",
 					["alertCount"] = 0,
-					["power"] = {
-					},
-					["maxhp"] = 234,
+					["shielding"] = 0,
+					["healing"] = 0,
 					["alert"] = {
 					},
-					["healingspells"] = {
-					},
+					["ffdamagedone"] = 0,
 				}, -- [1]
 			},
 			["deaths"] = 0,
-			["mobs"] = {
-				["Mutated Root Lasher"] = {
-					["players"] = {
-						["Dranathal"] = {
-							["taken"] = 114,
-							["done"] = 3,
-							["role"] = "NONE",
-							["class"] = "SHAMAN",
-						},
-					},
-					["hdone"] = 0,
-					["done"] = 3,
-					["taken"] = 114,
-					["htakenspell"] = {
-					},
-					["htaken"] = 0,
-					["hdonespell"] = {
-					},
-				},
+			["damagetaken"] = 3,
+			["power"] = {
 			},
-			["shielding"] = 0,
 			["mobname"] = "Mutated Root Lasher",
 			["healing"] = 0,
 			["auras"] = {
@@ -1059,8 +1060,7 @@ SkadaPerCharDB = {
 			["overhealing"] = 0,
 			["name"] = "Mutated Root Lasher (64)",
 			["alertCount"] = 0,
-			["power"] = {
-			},
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1503062770,
 			["mobdone"] = 3,
@@ -1074,21 +1074,69 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
 			["dispells"] = 0,
-			["damagetaken"] = 4,
+			["mobs"] = {
+				["Tankyerace-Antonidas"] = {
+					["players"] = {
+					},
+					["hdone"] = 3,
+					["htakenspell"] = {
+						["Swift Hand of Justice"] = {
+							["min"] = 3,
+							["crits"] = 0,
+							["max"] = 3,
+							["healing"] = 3,
+							["overhealing"] = 2,
+							["hits"] = 1,
+						},
+					},
+					["taken"] = 0,
+					["done"] = 0,
+					["htaken"] = 3,
+					["hdonespell"] = {
+						["Swift Hand of Justice"] = {
+							["min"] = 3,
+							["crits"] = 0,
+							["max"] = 3,
+							["healing"] = 3,
+							["overhealing"] = 2,
+							["hits"] = 1,
+						},
+					},
+				},
+				["Mutated Root Lasher"] = {
+					["players"] = {
+						["Dranathal"] = {
+							["taken"] = 106,
+							["done"] = 4,
+							["role"] = "NONE",
+							["class"] = "SHAMAN",
+						},
+					},
+					["hdone"] = 0,
+					["htakenspell"] = {
+					},
+					["taken"] = 106,
+					["done"] = 4,
+					["htaken"] = 0,
+					["hdonespell"] = {
+					},
+				},
+			},
 			["damage"] = 106,
 			["players"] = {
 				{
 					["last"] = 1502898747,
 					["healingabsorbed"] = 0,
+					["class"] = "SHAMAN",
 					["ffdamagedonespells"] = {
 					},
-					["class"] = "SHAMAN",
 					["damaged"] = {
 						["Mutated Root Lasher"] = 106,
 					},
 					["alertDamage"] = 0,
 					["overhealing"] = 0,
-					["ffdamagedone"] = 0,
+					["healingspells"] = {
+					},
 					["time"] = 4,
 					["interrupts"] = 0,
 					["dispells"] = 0,
@@ -1114,174 +1162,6 @@ SkadaPerCharDB = {
 					},
 					["healed"] = {
 					},
-					["shielding"] = 0,
-					["id"] = "Player-3696-060668CA",
-					["healing"] = 0,
-					["ccbreaks"] = 0,
-					["damagetakenspells"] = {
-						["Attack"] = {
-							["crushing"] = 0,
-							["id"] = 6603,
-							["absorbed"] = 0,
-							["glancing"] = 0,
-							["critical"] = 0,
-							["min"] = 2,
-							["school"] = 1,
-							["name"] = "Attack",
-							["blocked"] = 0,
-							["totalhits"] = 2,
-							["resisted"] = 0,
-							["max"] = 2,
-							["damage"] = 4,
-						},
-					},
-					["role"] = "NONE",
-					["damagetaken"] = 4,
-					["name"] = "Dranathal",
-					["alertCount"] = 0,
-					["power"] = {
-					},
-					["maxhp"] = 234,
-					["alert"] = {
-					},
-					["healingspells"] = {
-					},
-				}, -- [1]
-			},
-			["deaths"] = 0,
-			["mobs"] = {
-				["Tankyerace-Antonidas"] = {
-					["players"] = {
-					},
-					["hdone"] = 3,
-					["done"] = 0,
-					["taken"] = 0,
-					["htakenspell"] = {
-						["Swift Hand of Justice"] = {
-							["min"] = 3,
-							["crits"] = 0,
-							["max"] = 3,
-							["healing"] = 3,
-							["overhealing"] = 2,
-							["hits"] = 1,
-						},
-					},
-					["htaken"] = 3,
-					["hdonespell"] = {
-						["Swift Hand of Justice"] = {
-							["min"] = 3,
-							["crits"] = 0,
-							["max"] = 3,
-							["healing"] = 3,
-							["overhealing"] = 2,
-							["hits"] = 1,
-						},
-					},
-				},
-				["Mutated Root Lasher"] = {
-					["players"] = {
-						["Dranathal"] = {
-							["taken"] = 106,
-							["done"] = 4,
-							["role"] = "NONE",
-							["class"] = "SHAMAN",
-						},
-					},
-					["hdone"] = 0,
-					["done"] = 4,
-					["taken"] = 106,
-					["htakenspell"] = {
-					},
-					["htaken"] = 0,
-					["hdonespell"] = {
-					},
-				},
-			},
-			["shielding"] = 0,
-			["mobname"] = "Mutated Root Lasher",
-			["healing"] = 0,
-			["auras"] = {
-			},
-			["starttime"] = 1502898741,
-			["mobtaken"] = 106,
-			["overhealing"] = 0,
-			["name"] = "Mutated Root Lasher (63)",
-			["alertCount"] = 0,
-			["power"] = {
-			},
-			["mobhdone"] = 3,
-			["last_action"] = 1502898741,
-			["mobdone"] = 4,
-		}, -- [7]
-		{
-			["healingabsorbed"] = 0,
-			["alertDamage"] = 0,
-			["endtime"] = 1502898184,
-			["ccbreaks"] = 0,
-			["time"] = 6,
-			["interrupts"] = 0,
-			["ffdamagedone"] = 0,
-			["dispells"] = 0,
-			["mobs"] = {
-				["Mutated Root Lasher"] = {
-					["players"] = {
-						["Dranathal"] = {
-							["taken"] = 107,
-							["done"] = 4,
-							["role"] = "NONE",
-							["class"] = "SHAMAN",
-						},
-					},
-					["hdone"] = 0,
-					["htakenspell"] = {
-					},
-					["taken"] = 107,
-					["done"] = 4,
-					["htaken"] = 0,
-					["hdonespell"] = {
-					},
-				},
-			},
-			["damage"] = 107,
-			["players"] = {
-				{
-					["last"] = 1502898184,
-					["healingabsorbed"] = 0,
-					["class"] = "SHAMAN",
-					["ffdamagedonespells"] = {
-					},
-					["damaged"] = {
-						["Mutated Root Lasher"] = 107,
-					},
-					["alertDamage"] = 0,
-					["overhealing"] = 0,
-					["healingspells"] = {
-					},
-					["time"] = 3,
-					["interrupts"] = 0,
-					["dispells"] = 0,
-					["auras"] = {
-					},
-					["first"] = 1502898181,
-					["damage"] = 107,
-					["damagespells"] = {
-						["Lightning Bolt"] = {
-							["hitmin"] = 53,
-							["id"] = 188196,
-							["min"] = 53,
-							["hitamount"] = 107,
-							["hitmax"] = 54,
-							["hit"] = 2,
-							["school"] = 8,
-							["max"] = 54,
-							["totalhits"] = 2,
-							["damage"] = 107,
-						},
-					},
-					["ffdamagedonetargets"] = {
-					},
-					["healed"] = {
-					},
 					["power"] = {
 					},
 					["id"] = "Player-3696-060668CA",
@@ -1323,12 +1203,132 @@ SkadaPerCharDB = {
 			["healing"] = 0,
 			["auras"] = {
 			},
+			["starttime"] = 1502898741,
+			["mobtaken"] = 106,
+			["overhealing"] = 0,
+			["name"] = "Mutated Root Lasher (63)",
+			["alertCount"] = 0,
+			["shielding"] = 0,
+			["mobhdone"] = 3,
+			["last_action"] = 1502898741,
+			["mobdone"] = 4,
+		}, -- [7]
+		{
+			["healingabsorbed"] = 0,
+			["alertDamage"] = 0,
+			["endtime"] = 1502898184,
+			["ccbreaks"] = 0,
+			["time"] = 6,
+			["interrupts"] = 0,
+			["ffdamagedone"] = 0,
+			["dispells"] = 0,
+			["damagetaken"] = 4,
+			["damage"] = 107,
+			["players"] = {
+				{
+					["last"] = 1502898184,
+					["healingabsorbed"] = 0,
+					["ffdamagedonespells"] = {
+					},
+					["class"] = "SHAMAN",
+					["damaged"] = {
+						["Mutated Root Lasher"] = 107,
+					},
+					["alertDamage"] = 0,
+					["overhealing"] = 0,
+					["ffdamagedone"] = 0,
+					["time"] = 3,
+					["interrupts"] = 0,
+					["dispells"] = 0,
+					["auras"] = {
+					},
+					["first"] = 1502898181,
+					["damage"] = 107,
+					["damagespells"] = {
+						["Lightning Bolt"] = {
+							["hitmin"] = 53,
+							["id"] = 188196,
+							["min"] = 53,
+							["hitamount"] = 107,
+							["hitmax"] = 54,
+							["hit"] = 2,
+							["school"] = 8,
+							["max"] = 54,
+							["totalhits"] = 2,
+							["damage"] = 107,
+						},
+					},
+					["ffdamagedonetargets"] = {
+					},
+					["healed"] = {
+					},
+					["shielding"] = 0,
+					["id"] = "Player-3696-060668CA",
+					["healing"] = 0,
+					["ccbreaks"] = 0,
+					["damagetakenspells"] = {
+						["Attack"] = {
+							["crushing"] = 0,
+							["id"] = 6603,
+							["absorbed"] = 0,
+							["glancing"] = 0,
+							["critical"] = 0,
+							["min"] = 2,
+							["school"] = 1,
+							["name"] = "Attack",
+							["blocked"] = 0,
+							["totalhits"] = 2,
+							["resisted"] = 0,
+							["max"] = 2,
+							["damage"] = 4,
+						},
+					},
+					["role"] = "NONE",
+					["damagetaken"] = 4,
+					["name"] = "Dranathal",
+					["alertCount"] = 0,
+					["power"] = {
+					},
+					["maxhp"] = 234,
+					["alert"] = {
+					},
+					["healingspells"] = {
+					},
+				}, -- [1]
+			},
+			["deaths"] = 0,
+			["mobs"] = {
+				["Mutated Root Lasher"] = {
+					["players"] = {
+						["Dranathal"] = {
+							["taken"] = 107,
+							["done"] = 4,
+							["role"] = "NONE",
+							["class"] = "SHAMAN",
+						},
+					},
+					["hdone"] = 0,
+					["done"] = 4,
+					["taken"] = 107,
+					["htakenspell"] = {
+					},
+					["htaken"] = 0,
+					["hdonespell"] = {
+					},
+				},
+			},
+			["shielding"] = 0,
+			["mobname"] = "Mutated Root Lasher",
+			["healing"] = 0,
+			["auras"] = {
+			},
 			["starttime"] = 1502898178,
 			["mobtaken"] = 107,
 			["overhealing"] = 0,
 			["name"] = "Mutated Root Lasher (62)",
 			["alertCount"] = 0,
-			["shielding"] = 0,
+			["power"] = {
+			},
 			["mobhdone"] = 0,
 			["last_action"] = 1502898178,
 			["mobdone"] = 4,
@@ -1342,29 +1342,26 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
 			["dispells"] = 0,
-			["power"] = {
-			},
+			["shielding"] = 0,
 			["damage"] = 160,
 			["players"] = {
 				{
 					["last"] = 1502895885,
 					["healingabsorbed"] = 0,
-					["healingspells"] = {
-					},
-					["ffdamagedonespells"] = {
-					},
+					["ffdamagedone"] = 0,
+					["class"] = "SHAMAN",
 					["damaged"] = {
 						["Mutated Root Lasher"] = 160,
 					},
 					["alertDamage"] = 0,
 					["time"] = 5,
-					["ffdamagedone"] = 0,
+					["healingspells"] = {
+					},
 					["overhealing"] = 0,
 					["interrupts"] = 0,
-					["maxhp"] = 234,
-					["power"] = {
-					},
 					["healing"] = 0,
+					["shielding"] = 0,
+					["maxhp"] = 234,
 					["damage"] = 160,
 					["damagespells"] = {
 						["Lightning Bolt"] = {
@@ -1383,7 +1380,8 @@ SkadaPerCharDB = {
 					["name"] = "Dranathal",
 					["healed"] = {
 					},
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "Player-3696-060668CA",
 					["first"] = 1502895880,
 					["damagetaken"] = 9,
@@ -1394,13 +1392,13 @@ SkadaPerCharDB = {
 							["damage"] = 9,
 							["max"] = 3,
 							["name"] = "Attack",
-							["glancing"] = 0,
+							["min"] = 3,
 							["totalhits"] = 3,
 							["critical"] = 0,
 							["blocked"] = 0,
 							["school"] = 1,
 							["resisted"] = 0,
-							["min"] = 3,
+							["glancing"] = 0,
 							["absorbed"] = 0,
 						},
 					},
@@ -1414,21 +1412,11 @@ SkadaPerCharDB = {
 					["dispells"] = 0,
 					["alert"] = {
 					},
-					["class"] = "SHAMAN",
+					["ffdamagedonespells"] = {
+					},
 				}, -- [1]
 			},
 			["deaths"] = 0,
-			["damagetaken"] = 9,
-			["shielding"] = 0,
-			["alertCount"] = 0,
-			["healing"] = 0,
-			["auras"] = {
-			},
-			["overhealing"] = 0,
-			["mobtaken"] = 160,
-			["starttime"] = 1502895880,
-			["name"] = "Mutated Root Lasher (61)",
-			["mobname"] = "Mutated Root Lasher",
 			["mobs"] = {
 				["Mutated Root Lasher"] = {
 					["players"] = {
@@ -1443,12 +1431,24 @@ SkadaPerCharDB = {
 					["hdonespell"] = {
 					},
 					["taken"] = 160,
-					["done"] = 9,
-					["htaken"] = 0,
 					["htakenspell"] = {
 					},
+					["htaken"] = 0,
+					["done"] = 9,
 				},
 			},
+			["power"] = {
+			},
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 160,
+			["starttime"] = 1502895880,
+			["name"] = "Mutated Root Lasher (61)",
+			["mobname"] = "Mutated Root Lasher",
+			["damagetaken"] = 9,
 			["mobhdone"] = 0,
 			["last_action"] = 1502895880,
 			["endtime"] = 1502895886,
@@ -1462,29 +1462,26 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["ffdamagedone"] = 0,
 			["dispells"] = 0,
-			["power"] = {
-			},
+			["shielding"] = 0,
 			["damage"] = 106,
 			["players"] = {
 				{
 					["last"] = 1502883316,
 					["healingabsorbed"] = 0,
-					["healingspells"] = {
-					},
-					["ffdamagedonespells"] = {
-					},
+					["ffdamagedone"] = 0,
+					["class"] = "SHAMAN",
 					["damaged"] = {
 						["Mutated Root Lasher"] = 106,
 					},
 					["alertDamage"] = 0,
 					["time"] = 3,
-					["ffdamagedone"] = 0,
+					["healingspells"] = {
+					},
 					["overhealing"] = 0,
 					["interrupts"] = 0,
-					["maxhp"] = 234,
-					["power"] = {
-					},
 					["healing"] = 0,
+					["shielding"] = 0,
+					["maxhp"] = 234,
 					["damage"] = 106,
 					["damagespells"] = {
 						["Lightning Bolt"] = {
@@ -1503,7 +1500,8 @@ SkadaPerCharDB = {
 					["name"] = "Dranathal",
 					["healed"] = {
 					},
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "Player-3696-060668CA",
 					["first"] = 1502883313,
 					["damagetaken"] = 6,
@@ -1514,13 +1512,13 @@ SkadaPerCharDB = {
 							["damage"] = 6,
 							["max"] = 3,
 							["name"] = "Attack",
-							["glancing"] = 0,
+							["min"] = 3,
 							["totalhits"] = 2,
 							["critical"] = 0,
 							["blocked"] = 0,
 							["school"] = 1,
 							["resisted"] = 0,
-							["min"] = 3,
+							["glancing"] = 0,
 							["absorbed"] = 0,
 						},
 					},
@@ -1534,21 +1532,11 @@ SkadaPerCharDB = {
 					["dispells"] = 0,
 					["alert"] = {
 					},
-					["class"] = "SHAMAN",
+					["ffdamagedonespells"] = {
+					},
 				}, -- [1]
 			},
 			["deaths"] = 0,
-			["damagetaken"] = 6,
-			["shielding"] = 0,
-			["alertCount"] = 0,
-			["healing"] = 0,
-			["auras"] = {
-			},
-			["overhealing"] = 0,
-			["mobtaken"] = 106,
-			["starttime"] = 1502883311,
-			["name"] = "Mutated Root Lasher (60)",
-			["mobname"] = "Mutated Root Lasher",
 			["mobs"] = {
 				["Mutated Root Lasher"] = {
 					["players"] = {
@@ -1563,12 +1551,24 @@ SkadaPerCharDB = {
 					["hdonespell"] = {
 					},
 					["taken"] = 106,
-					["done"] = 6,
-					["htaken"] = 0,
 					["htakenspell"] = {
 					},
+					["htaken"] = 0,
+					["done"] = 6,
 				},
 			},
+			["power"] = {
+			},
+			["alertCount"] = 0,
+			["healing"] = 0,
+			["auras"] = {
+			},
+			["overhealing"] = 0,
+			["mobtaken"] = 106,
+			["starttime"] = 1502883311,
+			["name"] = "Mutated Root Lasher (60)",
+			["mobname"] = "Mutated Root Lasher",
+			["damagetaken"] = 6,
 			["mobhdone"] = 0,
 			["last_action"] = 1502883311,
 			["endtime"] = 1502883318,

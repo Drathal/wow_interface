@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 2258,
 	["lastSanitation"] = 3,
-	["session"] = 2255,
 	["errors"] = {
 		{
 			["message"] = "SendAddonMessage(): Whisper message missing target player!",
@@ -862,8 +862,8 @@ BugGrabberDB = {
 			["time"] = "2017/08/19 02:02:53",
 			["locals"] = "(*temporary) = nil\n",
 			["stack"] = "[C]: in function `BNGetGameAccountInfo'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:28: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:26>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:55: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:47>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:860: in function `FriendsFrame_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>",
-			["session"] = 2236,
-			["counter"] = 2,
+			["session"] = 2257,
+			["counter"] = 32,
 		}, -- [113]
 	},
 }

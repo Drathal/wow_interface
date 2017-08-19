@@ -25,6 +25,7 @@ end
 
 local function GetBNFriendName(id)
     local bnetIDAccount , _, _, isBattleTagPresence, characterName, bnetIDGameAccount, client, isOnline, _, isAFK, isDND, _, _, isRIDFriend, _, _ = BNGetFriendInfo(id)
+    if not bnetIDGameAccount then return end
     local _, characterName, client, realmName, realmID, faction, race, class, _, zoneName, _, _, _, _, _, _ = BNGetGameAccountInfo(bnetIDGameAccount)
 
     if not isOnline or not characterName or client ~= 'WoW' then return nil end
