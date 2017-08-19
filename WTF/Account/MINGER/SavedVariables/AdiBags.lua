@@ -17,17 +17,17 @@ AdiBagsDB = {
 						[132457] = "Equipment#Legenday",
 						[146666] = "Equipment#Legenday",
 						[128941] = "Equipment#Legenday",
-						[23247] = "Quest#Quest",
+						[128943] = "Equipment#Legenday",
 						[144259] = "Equipment#Legenday",
 						[138111] = "Quest#Quest",
-						[128823] = "Equipment#Legenday",
+						[141652] = "Quest#Quest",
 						[141190] = "Quest#Quest",
-						[120978] = "Equipment#Legenday",
+						[138019] = "Quest#Quest",
 						[132374] = "Equipment#Legenday",
 						[128866] = "Equipment#Legenday",
-						[138019] = "Quest#Quest",
-						[141652] = "Quest#Quest",
-						[128943] = "Equipment#Legenday",
+						[120978] = "Equipment#Legenday",
+						[128823] = "Equipment#Legenday",
+						[23247] = "Quest#Quest",
 					},
 				},
 			},
@@ -104,22 +104,11 @@ AdiBagsDB = {
 		},
 		["Legion"] = {
 		},
-		["CurrencyFrame"] = {
+		["ItemLevel"] = {
 			["profiles"] = {
 				["Default"] = {
-					["shown"] = {
-						["Curious Coin"] = false,
-						["Apexis Crystal"] = false,
-						["Darkmoon Prize Ticket"] = false,
-						["Garrison Resources"] = false,
-						["Sightless Eye"] = false,
-						["Lingering Soul Fragment"] = false,
-						["Timewarped Badge"] = false,
-					},
-					["text"] = {
-						["name"] = "KkthnxUI_Normal",
-						["size"] = 15,
-					},
+					["minLevel"] = 850,
+					["colorScheme"] = "level",
 				},
 			},
 		},
@@ -129,11 +118,22 @@ AdiBagsDB = {
 		},
 		["Bound"] = {
 		},
-		["ItemLevel"] = {
+		["CurrencyFrame"] = {
 			["profiles"] = {
 				["Default"] = {
-					["minLevel"] = 850,
-					["colorScheme"] = "level",
+					["shown"] = {
+						["Curious Coin"] = false,
+						["Apexis Crystal"] = false,
+						["Darkmoon Prize Ticket"] = false,
+						["Garrison Resources"] = false,
+						["Lingering Soul Fragment"] = false,
+						["Sightless Eye"] = false,
+						["Timewarped Badge"] = false,
+					},
+					["text"] = {
+						["name"] = "KkthnxUI_Normal",
+						["size"] = 15,
+					},
 				},
 			},
 		},
@@ -144,12 +144,12 @@ AdiBagsDB = {
 		["Drahmoon - Madmortem"] = {
 			["collapsedSections"] = {
 				["Broken Shore#Broken Shore"] = true,
-				["Junk#Junk"] = true,
 				["Hearthstones#Hearthstones"] = true,
-				["Equipment#Set: AMR Destruction"] = true,
-				["Equipment#Legenday"] = true,
-				["Equipment#Set: AMR Demonology"] = true,
 				["Equipment#Set: AMR Affliction"] = true,
+				["Equipment#Legenday"] = true,
+				["Equipment#Set: AMR Destruction"] = true,
+				["Equipment#Set: AMR Demonology"] = true,
+				["Junk#Junk"] = true,
 			},
 		},
 	},
@@ -163,10 +163,7 @@ AdiBagsDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
-			["columnWidth"] = {
-				["Bank"] = 14,
-				["Backpack"] = 14,
-			},
+			["scale"] = 0.9,
 			["skin"] = {
 				["ReagentBankColor"] = {
 					nil, -- [1]
@@ -185,21 +182,24 @@ AdiBagsDB = {
 					["xOffset"] = -155.99951171875,
 					["yOffset"] = 199,
 				},
+				["Backpack"] = {
+					["xOffset"] = -151.999155722748,
+					["yOffset"] = 155.000702375817,
+				},
 				["Bank"] = {
 					["xOffset"] = -685.750008282397,
 					["point"] = "TOPRIGHT",
 					["yOffset"] = -125.999134159109,
-				},
-				["Backpack"] = {
-					["xOffset"] = -151.999155722748,
-					["yOffset"] = 155.000702375817,
 				},
 			},
 			["compactLayout"] = true,
 			["rightClickConfig"] = false,
 			["autoDeposit"] = true,
 			["positionMode"] = "manual",
-			["scale"] = 0.9,
+			["columnWidth"] = {
+				["Backpack"] = 14,
+				["Bank"] = 14,
+			},
 		},
 	},
 }

@@ -3,10 +3,10 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local CreateFrame = _G.CreateFrame
 
-local rcolor = RAID_CLASS_COLORS[D.class]
+
 
 D.CreateMark = function(name, class)
-    local m = CreateFrame("Frame", 'XPFLag-'..name, _G['UIParent'])
+    local m = CreateFrame("Frame", nil, _G['UIParent'])
     m:SetHeight(C.mark.height)
     m:SetWidth(C.mark.width)
     m:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0)
@@ -17,6 +17,8 @@ D.CreateMark = function(name, class)
     m:SetFrameLevel(2)
     m:Show()
 
+    local rcolor = RAID_CLASS_COLORS[class]
+
     m.texture = m:CreateTexture(nil, "OVERLAY")
     m.texture:SetAllPoints(m)
     m.texture:SetTexture(C.mark.texture.default)
@@ -26,7 +28,7 @@ D.CreateMark = function(name, class)
     m.name = name
     m.class = class
 
-    if name ~= D.nameRealm then return end
+    if name ~= D.nameRealm then return m end
 
     m.player = true;
     m.texture:SetVertexColor(unpack(D.GetXpColor()));
@@ -38,6 +40,7 @@ D.CreateMark = function(name, class)
 end
 
 D.UpdateMark = function(marks, name, value, maxvalue, level, class)
+    if not marks then return end    
 
     local name = name or D.nameRealm
     local value = value or UnitXP("PLAYER")
@@ -62,10 +65,12 @@ D.UpdateMark = function(marks, name, value, maxvalue, level, class)
     m.gain = tonumber(value) - tonumber(m.prev) or 0
 
     m.to = D.screenWidth * value / maxvalue
-    m.texture:SetVertexColor(unpack(D.GetXpColor()))
+    
     m.texture:SetTexture(D.GetMarkTexture(level, D.level))
 
-    if not m.player then return end
+    if not m.player then return end    
+    m.texture:SetVertexColor(unpack(D.GetXpColor()))
+
     if m.gain <= 0 then return end
 
     m.xpSparks.Play(m.gain)
@@ -73,16 +78,9 @@ D.UpdateMark = function(marks, name, value, maxvalue, level, class)
 end
 D.UpdatePlayerMark = D.UpdateMark
 
-D.DeleteOldMarks = function(marks, friends)
-    for name, mark in pairs(marks) do
-        if not (friends[name] or (name == D.nameRealm)) then
-            DeleteMark(mark)
-        end
-    end
-end
-
 D.DeleteMark = function(mark)
     if not mark then return end
     mark:Hide()
     mark = nil
+    return nil
 end

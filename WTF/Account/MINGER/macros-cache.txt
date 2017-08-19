@@ -30,7 +30,7 @@ VER 3 00000000000000C2 "moint" "254858"
 /run Mountz("Primal Flamesaber", "Primal Flamesaber", "Crimson Water Strider")
 END
 VER 3 00000000000000C4 "PlaySpark" "136010"
-/run XpFlagPlaySpark(555)
+/run XpFlagPlaySpark(math.random(500,3000))
 END
 VER 3 00000000000000C3 "reload" "135863"
 /reload

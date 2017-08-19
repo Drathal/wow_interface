@@ -4,6 +4,7 @@ local _G = _G
 local CreateFrame = _G.CreateFrame
 
 D.f = CreateFrame('Frame')
+D.confirm = {}
 D.marks = {}
 D.bars = {}
 D.tooltip = D.CreateTooltip(D.marks)
@@ -21,11 +22,13 @@ function D:OnInitialize()
     D:RegisterEvent("PLAYER_XP_UPDATE")
     D:RegisterEvent("PLAYER_LEVEL_UP")
     D:RegisterEvent("CHAT_MSG_ADDON")
-    D:RegisterEvent("FRIENDLIST_UPDATE")
+    --D:RegisterEvent("FRIENDLIST_UPDATE")
     D:RegisterEvent("PLAYER_UPDATE_RESTING")
 
     D:RegisterMessage("XpFlag-sparkmodel-show", D.OnShowSparkModel)
     D:RegisterMessage("XpFlag-sparkmodel-hide", D.OnHideSparkModel)
+
+    D.RegisterFriends()
 end
 
 function D:PLAYER_ENTERING_WORLD(event)
@@ -40,7 +43,7 @@ function D:PLAYER_ENTERING_WORLD(event)
     end
 
     --ShowFriends()
-    D.DeleteOldMarks(D.marks, D.GetFriends())
+    --D.DeleteOldMarks(D.marks, D.GetFriends())
 
     D:UnregisterEvent("PLAYER_ENTERING_WORLD");
 end
@@ -55,7 +58,7 @@ end
 function D:PLAYER_XP_UPDATE(event, unit)
     if unit ~= "player" then return end
 
-    D.UpdateFriends(D.marks)
+    D.UpdateFriends()
 
     if C.player.show then
         D.UpdatePlayerMark(D.marks)
@@ -67,20 +70,10 @@ function D:PLAYER_LEVEL_UP(event, level)
     D.level = tonumber(level);
 end
 
-function D:FRIENDLIST_UPDATE()
-    D.DeleteOldMarks(D.marks, GetFriends())
-end
+--function D:FRIENDLIST_UPDATE()
+--    D.DeleteOldMarks(D.marks, D.GetFriends())
+--end
 
-function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
-    if pre ~= "XpFlag" then return end
-    if sender == D.nameRealm then return end
-    if not rawmsg or rawmsg == "" then return end
-
-    local msg = D.DecodeMessage(rawmsg)
-
-    if msg.type == "XpFlagRequest" then
-        SendAddonMessage("XpFlag", D.CreateMessage(), "WHISPER", sender)
-    end
-
-    D.UpdateMark(D.marks, sender, msg.xp, msg.maxxp, msg.level, msg.class)
+function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)    
+    D.HandleMessages(event, pre, rawmsg, chan, sender, D.marks)
 end
