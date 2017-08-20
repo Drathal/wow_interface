@@ -23,6 +23,7 @@ local function DecodeMessage(msg)
     }
 end
 
+<<<<<<< HEAD
 D.SendRequest = function(target)
     if not string.match(target, "%-") then return end
     SendAddonMessage(MessagePrefix, CreateMessage("XpFlagRequest"), "WHISPER", target)
@@ -51,6 +52,19 @@ D.SendUpdate = function(target)
 end
 
 D.SendUpdates = function()
+=======
+D.AddFriend = function(target)
+    if not string.match(target, "%-") then return end
+    SendAddonMessage("XpFlag", D.CreateMessage("XpFlagRequest"), "WHISPER", target)
+end
+
+D.RemoveFriend = function(target)
+    if not string.match(target, "%-") then return end
+    SendAddonMessage("XpFlag", D.CreateMessage("XpFlagDelete"), "WHISPER", target)
+end
+
+D.UpdateFriends = function()
+>>>>>>> 2280e620161ac6335d806c9516e2f16c10dd3bd8
     for target, _ in pairs(D.marks) do
         if target and target ~= D.nameRealm then
             D.SendUpdate(target)
@@ -58,6 +72,7 @@ D.SendUpdates = function()
     end
 end
 
+<<<<<<< HEAD
 D.InitCommunication = function()
     D:RegisterEvent("CHAT_MSG_ADDON")
     RegisterAddonMessagePrefix(MessagePrefix)
@@ -65,10 +80,15 @@ end
 
 function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
     if pre ~= MessagePrefix then return end
+=======
+D.HandleMessages = function(event, pre, rawmsg, chan, sender, marks)
+    if pre ~= "XpFlag" then return end
+>>>>>>> 2280e620161ac6335d806c9516e2f16c10dd3bd8
     if sender == D.nameRealm then return end
     if not string.match(sender, "%-") then return end
     if not rawmsg or rawmsg == "" then return end
 
+<<<<<<< HEAD
     local msg = DecodeMessage(rawmsg)
 
     if msg.type == "XpFlag" then
@@ -88,10 +108,25 @@ function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
         D.SendUpdate(sender)
         D.UpdateMark(sender, msg.xp, msg.maxxp, msg.level, msg.class)
         D.On_FriendsFrame_Update()
+=======
+    local msg = D.DecodeMessage(rawmsg)
+
+    if msg.type == "XpFlagRequest" then
+        SendAddonMessage("XpFlag", D.CreateMessage(), "WHISPER", sender)        
+>>>>>>> 2280e620161ac6335d806c9516e2f16c10dd3bd8
     end
 
     if msg.type == "XpFlagDelete" then
         D.marks[sender] = D.DeleteMark(D.marks[sender])
+<<<<<<< HEAD
         D.On_FriendsFrame_Update()
     end
+=======
+    else
+        D.UpdateMark(marks, sender, msg.xp, msg.maxxp, msg.level, msg.class)
+    end
+
+    D.On_FriendsFrame_Update()
+      
+>>>>>>> 2280e620161ac6335d806c9516e2f16c10dd3bd8
 end

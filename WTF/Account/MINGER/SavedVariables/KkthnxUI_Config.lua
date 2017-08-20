@@ -3,8 +3,8 @@ KkthnxUIConfigAll = {
 	["Madmortem"] = {
 		["Drathia"] = false,
 		["Drathal"] = false,
-		["Dronthal"] = false,
 		["Drahmoon"] = false,
+		["Dronthal"] = false,
 		["Dranathal"] = false,
 		["Drathtix"] = false,
 	},

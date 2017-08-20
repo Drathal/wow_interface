@@ -86,7 +86,6 @@ function BonusRollManagerTable.getEquipped()
 	ArtifactFrame.CloseButton:Click("LeftButton")
 	
 	for slotIndex, item in pairs(equipped) do
-		print(item.slot, equippedBySlot[item.slot], item.link)
 		if not equippedBySlot[item.slot] then
 			equippedBySlot[item.slot] = {}
 		end

@@ -27,10 +27,10 @@ X: 119
 Y: 17
 W: 709
 H: 312
-Frame: Butsu
+Frame: WowLuaFrame
 FrameLevel: 1
-Anchor: TOPLEFT
-X: 245
-Y: -220
-W: 222
-H: 63
+Anchor: CENTER
+X: -7
+Y: -132
+W: 640
+H: 512

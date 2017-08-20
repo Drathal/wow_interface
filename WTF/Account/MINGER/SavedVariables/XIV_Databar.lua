@@ -54,37 +54,37 @@ XIVBarDB = {
 			["Drathia"] = {
 				["dailyMoney"] = 0,
 				["sessionMoney"] = 0,
-				["lastLoginDate"] = 20170810,
 				["currentMoney"] = 12864863,
+				["lastLoginDate"] = 20170810,
 				["daily"] = 0,
 			},
 			["Drathtix"] = {
-				["dailyMoney"] = 25478159,
-				["sessionMoney"] = 137321,
-				["lastLoginDate"] = 20170815,
-				["currentMoney"] = 25875896,
+				["dailyMoney"] = 33429239,
+				["sessionMoney"] = 0,
+				["currentMoney"] = 33826976,
+				["lastLoginDate"] = 20170819,
+				["daily"] = 0,
+			},
+			["Dronthal"] = {
+				["dailyMoney"] = -739736888,
+				["sessionMoney"] = 0,
+				["currentMoney"] = 192431296,
+				["lastLoginDate"] = 20170810,
 				["daily"] = 0,
 			},
 			["Drahmoon"] = {
 				["dailyMoney"] = -100000030,
 				["sessionMoney"] = 0,
 				["daily"] = 0,
-				["lastLoginDate"] = 20170815,
 				["currentMoney"] = 607261320,
-			},
-			["Dronthal"] = {
-				["dailyMoney"] = -739736888,
-				["sessionMoney"] = 0,
-				["lastLoginDate"] = 20170810,
-				["currentMoney"] = 192431296,
-				["daily"] = 0,
+				["lastLoginDate"] = 20170815,
 			},
 			["Dranathal"] = {
 				["dailyMoney"] = 50,
 				["sessionMoney"] = 0,
 				["daily"] = 0,
+				["lastLoginDate"] = 20170819,
 				["currentMoney"] = 50,
-				["lastLoginDate"] = 20170816,
 			},
 			["Drathal"] = {
 				["currentMoney"] = 26496445,
@@ -119,8 +119,8 @@ XIVBarDB = {
 			},
 			["general"] = {
 				["ohHide"] = true,
-				["moduleSpacing"] = 29,
 				["barPosition"] = "TOP",
+				["moduleSpacing"] = 29,
 			},
 			["modules"] = {
 				["tradeskill"] = {
@@ -135,11 +135,11 @@ XIVBarDB = {
 					["enabled"] = false,
 				},
 				["microMenu"] = {
-					["char"] = false,
-					["help"] = false,
-					["talent"] = false,
 					["chat"] = false,
+					["help"] = false,
 					["quest"] = false,
+					["talent"] = false,
+					["char"] = false,
 					["pvp"] = false,
 				},
 				["currency"] = {
@@ -164,8 +164,8 @@ XIVBarDB = {
 					["enabled"] = false,
 				},
 				["system"] = {
-					["showAllOnShift"] = false,
 					["showTooltip"] = false,
+					["showAllOnShift"] = false,
 				},
 			},
 		},
@@ -189,8 +189,8 @@ XIVBarDB = {
 			},
 			["general"] = {
 				["barPosition"] = "TOP",
-				["ohHide"] = true,
 				["moduleSpacing"] = 29,
+				["ohHide"] = true,
 			},
 			["modules"] = {
 				["tradeskill"] = {
@@ -205,12 +205,12 @@ XIVBarDB = {
 					["enabled"] = false,
 				},
 				["microMenu"] = {
-					["chat"] = false,
-					["help"] = false,
-					["quest"] = false,
-					["talent"] = false,
 					["char"] = false,
+					["help"] = false,
+					["talent"] = false,
 					["pvp"] = false,
+					["quest"] = false,
+					["chat"] = false,
 				},
 				["currency"] = {
 					["currencyTwo"] = "1226",
@@ -230,8 +230,8 @@ XIVBarDB = {
 					["enabled"] = true,
 				},
 				["system"] = {
-					["showTooltip"] = false,
 					["showAllOnShift"] = false,
+					["showTooltip"] = false,
 				},
 				["clock"] = {
 					["hideEventText"] = true,

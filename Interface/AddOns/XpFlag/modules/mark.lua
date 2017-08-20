@@ -66,6 +66,8 @@ D.UpdateMark = function(name, value, maxvalue, level, class)
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
     if not m.player then return end
+    m.texture:SetVertexColor(unpack(D.GetXpColor()))
+
     if m.gain <= 0 then return end
 
     m.xpSparks.Play(m.gain)
