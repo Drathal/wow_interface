@@ -4,6 +4,13 @@ local _G = _G
 local min = _G.math.min;
 local max = _G.math.max;
 
+D.animationFrame = CreateFrame('Frame')
+D.animationFrame:SetScript('OnUpdate', function(self, elapsed)
+    if D.Throttle(self, elapsed) then return end
+    D.AnimateWidth(D.bars.player)
+    D.AnimateMarks(D.marks)
+end)
+
 D.AnimateWidth = function(f)
     if not f then return end
     if not f.to then return end
