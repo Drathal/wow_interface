@@ -2,6 +2,14 @@ local D, C, L = unpack(select(2, ...))
 
 local _G = _G
 
+local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagFriends", "AceEvent-3.0")
+
+function module:OnEnable()
+    module:RegisterEvent("FRIENDLIST_UPDATE")
+    hooksecurefunc(FriendsFrameFriendsScrollFrame, 'update', D.On_FriendsFrame_Update)
+    hooksecurefunc('FriendsFrame_UpdateFriends', D.On_FriendsFrame_Update)
+end
+
 D.GetFriends = function()
     local friends = {}
     local allFriends, onlineFriends = GetNumFriends()
@@ -116,12 +124,6 @@ D.On_FriendsFrame_Update = function()
     end
 end
 
-D.RegisterFriendsFrameUpdate = function()
-    D:RegisterEvent("FRIENDLIST_UPDATE")
-    hooksecurefunc(FriendsFrameFriendsScrollFrame, 'update', D.On_FriendsFrame_Update)
-    hooksecurefunc('FriendsFrame_UpdateFriends', D.On_FriendsFrame_Update)
-end
-
 D.CreateMiniButton = function(parent)
     local b = CreateFrame("Button", nil, parent)
     b:SetFrameLevel(8)
@@ -135,6 +137,6 @@ D.CreateMiniButton = function(parent)
     return b
 end
 
-function D:FRIENDLIST_UPDATE()
+function module:FRIENDLIST_UPDATE()
     --D.On_FriendsFrame_Update()
 end

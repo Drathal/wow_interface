@@ -5,6 +5,58 @@ local GetXPExhaustion = _G.GetXPExhaustion
 
 local bars = {}
 
+local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagBar", "AceEvent-3.0")
+
+module.animationFrame = CreateFrame('Frame')
+module.animationFrame:SetScript('OnUpdate', function(self, elapsed)
+    if D.Throttle(self, elapsed) then return end
+    D.AnimateWidth(bars.player)
+end)
+
+local function CreatePlayerBar()
+    bars.player = D.CreateBar()
+    return bars.player
+end
+
+local function UpdatePlayerBar()
+    local bar = bars.player or CreatePlayerBar()
+
+    if UnitLevel("player") == D.maxLevel then
+        bar:Hide()
+        return
+    end
+
+    bar.to = D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER")
+    bar.texture:SetVertexColor(unpack(D.GetXpColor()))
+end
+
+function module:OnEnable()
+    module:RegisterEvent("PLAYER_ENTERING_WORLD")
+    module:RegisterEvent("PLAYER_UPDATE_RESTING")
+    module:RegisterEvent("PLAYER_XP_UPDATE")
+end
+
+function module:PLAYER_ENTERING_WORLD(event)
+    if C.player.show and C.bar.show then
+        UpdatePlayerBar()
+    end
+    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
+end
+
+function module:PLAYER_UPDATE_RESTING(event)
+    if C.player.show then
+        UpdatePlayerBar()
+    end
+end
+
+function module:PLAYER_XP_UPDATE(event, unit)
+    if unit ~= "player" then return end
+
+    if C.player.show then
+        UpdatePlayerBar()
+    end
+end
+
 D.CreateBar = function()
     if not C.bar.show then return end
 
@@ -33,25 +85,4 @@ D.CreateBar = function()
     bar:Show()
 
     return bar
-end
-
-D.AnimatePlayerBar = function()
-    D.AnimateWidth(bars.player)
-end
-
-local function CreatePlayerBar()
-    bars.player = D.CreateBar()
-    return bars.player
-end
-
-D.UpdatePlayerBar = function()
-    local bar = bars.player or CreatePlayerBar()
-
-    if D.level == D.maxLevel then
-        bar:Hide()
-        return
-    end
-
-    bar.to = D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER")
-    bar.texture:SetVertexColor(unpack(D.GetXpColor()))
 end

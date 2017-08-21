@@ -14,12 +14,10 @@
 	<Script file="config.lua" />	
     <Script file="modules\friends.lua" />
 	<Script file="modules\communication.lua" />
-	<Script file="modules\animation.lua" />
 	<Script file="modules\markTooltip.lua" />
 	<Script file="modules\mark.lua" />
 	<Script file="modules\markSparks.lua" />
 	<Script file="modules\markModel.lua" />	
 	<Script file="modules\bar.lua" />
-    <Script file="modules\main.lua" />
 
 </Ui>

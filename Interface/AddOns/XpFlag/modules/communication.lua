@@ -9,8 +9,16 @@ local MessagePrefix = 'XpFlag'
 local pingedFriends = {}
 local friendsWithAddon = {}
 
-local function CreateMessage(type, xp, max)
-    return (type or "XpFlag")..":"..(xp or UnitXP("PLAYER"))..":"..(max or UnitXPMax("PLAYER"))..":"..D.level..":"..D.class
+local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagCommunication", "AceEvent-3.0")
+
+function module:OnEnable()
+    module:RegisterEvent("CHAT_MSG_ADDON")
+    module:RegisterEvent("PLAYER_XP_UPDATE")
+    RegisterAddonMessagePrefix(MessagePrefix)
+end
+
+local function CreateMessage(type, xp, max, level, class)
+    return (type or "XpFlag")..":"..(xp or UnitXP("PLAYER"))..":"..(max or UnitXPMax("PLAYER"))..":"..(level or UnitLevel("player"))..":"..(class or D.class)
 end
 
 local function DecodeMessage(msg)
@@ -71,12 +79,7 @@ D.hasAddon = function(friend)
     return true
 end
 
-D.InitCommunication = function()
-    D:RegisterEvent("CHAT_MSG_ADDON")
-    RegisterAddonMessagePrefix(MessagePrefix)
-end
-
-function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
+function module:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
     if pre ~= MessagePrefix then return end
     if sender == D.nameRealm then return end
     if not string.match(sender, "%-") then return end
@@ -108,4 +111,9 @@ function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
         D.DeleteMark(sender)
         D.On_FriendsFrame_Update()
     end
+end
+
+function module:PLAYER_XP_UPDATE(event, unit)
+    if unit ~= "player" then return end
+    D.SendUpdates()
 end

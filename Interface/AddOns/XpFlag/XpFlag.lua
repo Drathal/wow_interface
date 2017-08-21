@@ -30,7 +30,6 @@ AddOn.version = GetAddOnMetadata(AddOnName, "Version")
 AddOn.maxLevel = MAX_PLAYER_LEVEL
 AddOn.name = UnitName("player")
 AddOn.GUID = UnitGUID("player")
-AddOn.level = UnitLevel("player")
 AddOn.class = select(2, UnitClass("player"))
 AddOn.realm = GetRealmName()
 AddOn.nameRealm = AddOn.name.."-"..AddOn.realm

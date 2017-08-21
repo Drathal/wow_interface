@@ -5,7 +5,52 @@ local CreateFrame = _G.CreateFrame
 
 local marks = {}
 
-D.XpFlagUpdateMark = function(f)end
+local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagMark", "AceEvent-3.0")
+
+module.animationFrame = CreateFrame('Frame')
+module.animationFrame:SetScript('OnUpdate', function(self, elapsed)
+    if D.Throttle(self, elapsed) then return end
+    for _, mark in pairs(marks) do
+        if mark and mark.to then
+            D.AnimateX(mark)
+        end
+    end
+end)
+
+function module:OnEnable()
+    module:RegisterEvent("PLAYER_ENTERING_WORLD")
+    module:RegisterEvent("PLAYER_XP_UPDATE")
+    module:RegisterEvent("PLAYER_LEVEL_UP")
+    module:RegisterEvent("PLAYER_UPDATE_RESTING")
+end
+
+function module:PLAYER_ENTERING_WORLD(event)
+    if C.player.show then
+        D.UpdatePlayerMark()
+    end
+    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
+end
+
+function module:PLAYER_UPDATE_RESTING(event)
+    if C.player.show then
+        D.UpdatePlayerMark()
+    end
+end
+
+function module:PLAYER_XP_UPDATE(event, unit)
+    if unit ~= "player" then return end
+
+    if C.player.show then
+        D.UpdatePlayerMark()
+    end
+end
+
+function module:PLAYER_LEVEL_UP(event, level)
+    D.level = tonumber(level);
+end
+
+
+D.XpFlagUpdateMark = function(f) end
 
 D.CreateMark = function(name, class)
     local rcolor = RAID_CLASS_COLORS[class]
@@ -50,7 +95,7 @@ D.UpdateMark = function(name, value, maxvalue, level, class)
     local name = name or D.nameRealm
     local value = value or UnitXP("PLAYER")
     local maxvalue = maxvalue or UnitXPMax("PLAYER")
-    local level = level or D.level
+    local level = level or UnitLevel("player")
     local class = class or D.class
     local m = marks[name] or D.CreateMark(name, class);
 
@@ -66,7 +111,7 @@ D.UpdateMark = function(name, value, maxvalue, level, class)
     m.gain = tonumber(value) - tonumber(m.prev) or 0
     m.to = D.screenWidth * value / maxvalue
 
-    m.texture:SetTexture(D.GetMarkTexture(level, D.level))
+    m.texture:SetTexture(D.GetMarkTexture(level, UnitLevel("player")))
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
     if not m.player then return end
@@ -81,14 +126,6 @@ D.DeleteMark = function(friend)
     if not marks[friend] then return end
     marks[friend]:Hide()
     marks[friend] = nil
-end
-
-D.AnimateMarks = function()
-    for _, mark in pairs(marks) do
-        if mark and mark.to then
-            D.AnimateX(mark)
-        end
-    end
 end
 
 D.GetMark = function()
