@@ -74,6 +74,11 @@ local function AddSpark(parent, num)
     return f
 end
 
+D.PlayXpSpark = function(f)
+    if not f.xpSparks then return end
+    f.xpSparks.Play(f.gain)
+end
+
 D.CreateSparks = function(parent)
     local f = {}
     f.sparks = {}

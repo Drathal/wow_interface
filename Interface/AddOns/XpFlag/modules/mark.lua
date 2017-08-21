@@ -70,7 +70,6 @@ D.UpdateMark = function(name, value, maxvalue, level, class)
 
     if m.gain <= 0 then return end
 
-    m.xpSparks.Play(m.gain)
     D:SendMessage("XpFlag-sparkmodel-show", m)
 end
 D.UpdatePlayerMark = D.UpdateMark

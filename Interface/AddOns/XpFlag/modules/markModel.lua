@@ -13,12 +13,12 @@ D.CreateSparkModel = function(parent)
     return m
 end
 
-D.OnShowSparkModel = function(msg, f)
-    if not f.model then return end
+D.FadeInMarkModel = function(f)
+    if not f or not f.model then return end
     UIFrameFadeIn(f.model, 0.1, f.model:GetAlpha(), 0.5)
 end
 
-D.OnHideSparkModel = function(msg, f)
-    if not f.model then return end
+D.FadeOutMarkModel = function(f)
+    if not f or not f.model then return end
     UIFrameFadeOut(f.model, 1, f.model:GetAlpha(), 0)
 end

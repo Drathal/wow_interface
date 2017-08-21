@@ -18,8 +18,14 @@ function D:OnInitialize()
     D:RegisterEvent("FRIENDLIST_UPDATE")
     D:RegisterEvent("PLAYER_UPDATE_RESTING")
 
-    D:RegisterMessage("XpFlag-sparkmodel-show", D.OnShowSparkModel)
-    D:RegisterMessage("XpFlag-sparkmodel-hide", D.OnHideSparkModel)
+    D:RegisterMessage("XpFlag-sparkmodel-show", function(msg, f)
+        D.FadeInMarkModel(f)
+        D.PlayXpSpark(f)
+    end)
+
+    D:RegisterMessage("XpFlag-sparkmodel-hide", function(msg, f)
+        D.FadeOutMarkModel(f)
+    end)
 
     D.RegisterFriendsFrameUpdate()
 end
