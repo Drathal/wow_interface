@@ -103,12 +103,12 @@ D.On_FriendsFrame_Update = function()
     for friend, button in pairs(onlineFriends) do
         if not button:IsShown() then break end
 
-        if not D.friendsWithAddon[friend] and not D.pingedFriends[friend] then
+        if D.ShouldSendPing(friend) then
             D.SendPing(friend)
             break
         end
 
-        if not D.friendsWithAddon[friend] then return end
+        if not D.hasAddon(friend) then return end
 
         if not button.xpflagbutton then
             button.xpflagbutton = D.CreateMiniButton(button)
@@ -120,6 +120,7 @@ D.On_FriendsFrame_Update = function()
 end
 
 D.RegisterFriendsFrameUpdate = function()
+    D:RegisterEvent("FRIENDLIST_UPDATE")
     hooksecurefunc(FriendsFrameFriendsScrollFrame, 'update', D.On_FriendsFrame_Update)
     hooksecurefunc('FriendsFrame_UpdateFriends', D.On_FriendsFrame_Update)
 end
@@ -135,4 +136,8 @@ D.CreateMiniButton = function(parent)
     b:SetHighlightTexture("Interface\\COMMON\\Indicator-Gray")
     b:Show()
     return b
+end
+
+function D:FRIENDLIST_UPDATE()
+    --D.On_FriendsFrame_Update()
 end

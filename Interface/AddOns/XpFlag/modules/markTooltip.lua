@@ -7,7 +7,7 @@ local format = string.format
 
 local t = nil
 
-D.CreateTooltip = function(marks)
+D.CreateMarkTooltip = function()
     t = CreateFrame("Frame")
     t:Hide()
     t.delay = 0.25
@@ -19,7 +19,7 @@ D.CreateTooltip = function(marks)
 
         local rested = GetXPExhaustion()
 
-        for k, v in pairs(marks) do
+        for k, v in pairs(D.marks) do
             if v:IsMouseOver() and v.class and v.name and v.level then
 
                 GameTooltip:ClearLines()
@@ -43,12 +43,14 @@ D.CreateTooltip = function(marks)
     return t
 end
 
-D.OnTooltipEnter = function(self)
+D.OnMarkTooltipEnter = function(self)
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
     t:Show();
 end
 
-D.OnTooltipLeave = function(self)
+D.OnMarkTooltipLeave = function(self)
     t:Hide();
     GameTooltip:Hide()
 end
+
+D.tooltip = D.CreateMarkTooltip()

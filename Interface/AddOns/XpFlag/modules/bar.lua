@@ -3,6 +3,8 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
 
+local bars = {}
+
 D.CreateBar = function()
     if not C.bar.show then return end
 
@@ -33,14 +35,19 @@ D.CreateBar = function()
     return bar
 end
 
-D.UpdatePlayerBar = function(bar)
-    if not bar then return end
+local function CreatePlayerBar()
+    bars.player = D.CreateBar()
+    return bars.player
+end
+
+D.UpdatePlayerBar = function()
+    local bar = bars.player or CreatePlayerBar()
 
     if D.level == D.maxLevel then
         bar:Hide();
         return
     end
 
-    bar.to = (D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER"))
+    bar.to = D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER")
     bar.texture:SetVertexColor(unpack(D.GetXpColor()))
 end

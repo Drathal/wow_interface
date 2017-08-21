@@ -6,6 +6,8 @@ local UnitXPMax = _G.UnitXPMax
 local random = math.random
 
 local MessagePrefix = 'XpFlag'
+local pingedFriends = {}
+local friendsWithAddon = {}
 
 local function CreateMessage(type, xp, max)
     return (type or "XpFlag")..":"..(xp or UnitXP("PLAYER"))..":"..(max or UnitXPMax("PLAYER"))..":"..D.level..":"..D.class
@@ -36,8 +38,9 @@ end
 
 D.SendPing = function(target)
     if not string.match(target, "%-") then return end
+    if friendsWithAddon[friend] or pingedFriends[friend] then return end
     local x = SendAddonMessage(MessagePrefix, CreateMessage("XpFlagPing"), "WHISPER", target)
-    D.pingedFriends[target] = true
+    pingedFriends[target] = true
 end
 
 D.SendPong = function(target)
@@ -56,6 +59,16 @@ D.SendUpdates = function()
             D.SendUpdate(target)
         end
     end
+end
+
+D.ShouldSendPing = function(friend)
+    if friendsWithAddon[friend] or pingedFriends[friend] then return end
+    return true
+end
+
+D.hasAddon = function(friend)
+    if not friendsWithAddon[friend] then return end
+    return true
 end
 
 D.InitCommunication = function()
@@ -80,7 +93,8 @@ function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
     end
 
     if msg.type == "XpFlagPong" then
-        D.friendsWithAddon[sender] = true
+        pingedFriends[sender] = nil
+        friendsWithAddon[sender] = true
         D.On_FriendsFrame_Update()
     end
 
