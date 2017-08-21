@@ -48,7 +48,7 @@ D.UpdatePlayerBar = function()
     local bar = bars.player or CreatePlayerBar()
 
     if D.level == D.maxLevel then
-        bar:Hide();
+        bar:Hide()
         return
     end
 
