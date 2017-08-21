@@ -7,8 +7,8 @@ local max = _G.math.max;
 D.animationFrame = CreateFrame('Frame')
 D.animationFrame:SetScript('OnUpdate', function(self, elapsed)
     if D.Throttle(self, elapsed) then return end
-    D.AnimateWidth(D.bars.player)
-    D.AnimateMarks(D.marks)
+    D.AnimatePlayerBar()
+    D.AnimateMarks()
 end)
 
 D.AnimateWidth = function(f)
@@ -44,12 +44,4 @@ D.AnimateX = function(f)
     f:SetPoint(p1, p, p2, new - f:GetWidth() / 2, 0);
 
     f.cur = new
-end
-
-D.AnimateMarks = function(marks)
-    for _, mark in pairs(marks) do
-        if mark and mark.to then
-            D.AnimateX(mark)
-        end
-    end
 end

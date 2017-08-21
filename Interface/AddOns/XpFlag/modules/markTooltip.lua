@@ -19,21 +19,17 @@ D.CreateMarkTooltip = function()
 
         local rested = GetXPExhaustion()
 
-        for k, v in pairs(D.marks) do
+        for k, v in pairs(D.GetMarks()) do
             if v:IsMouseOver() and v.class and v.name and v.level then
-
                 GameTooltip:ClearLines()
                 GameTooltip:AddLine("XpFlag")
                 GameTooltip:AddLine(k, RAID_CLASS_COLORS[v.class].r, RAID_CLASS_COLORS[v.class].g, RAID_CLASS_COLORS[v.class].b, 1)
                 GameTooltip:AddLine("Level: "..v.level, 1, 1, 1, 1)
                 GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue.." ("..format("%.2f", v.value / v.maxvalue * 100).."%)", 1, 1, 1, 1)
-
                 if rested and v.player then
                     GameTooltip:AddLine("Rested: "..rested.." ("..format("%.2f", rested / v.maxvalue * 100).."%)", 1, 1, 1, 1)
                 end
-
                 GameTooltip:Show()
-
             end
         end
         t.delay = 0.25
@@ -52,5 +48,3 @@ D.OnMarkTooltipLeave = function(self)
     t:Hide();
     GameTooltip:Hide()
 end
-
-D.tooltip = D.CreateMarkTooltip()

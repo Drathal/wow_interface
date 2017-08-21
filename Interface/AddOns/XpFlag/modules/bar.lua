@@ -35,6 +35,10 @@ D.CreateBar = function()
     return bar
 end
 
+D.AnimatePlayerBar = function()
+    D.AnimateWidth(bars.player)
+end
+
 local function CreatePlayerBar()
     bars.player = D.CreateBar()
     return bars.player

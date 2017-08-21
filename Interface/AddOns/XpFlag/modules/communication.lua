@@ -32,7 +32,7 @@ end
 
 D.SendDelete = function(target)
     if not string.match(target, "%-") then return end
-    D.marks[friend] = D.DeleteMark(D.marks[friend])
+    D.DeleteMark(friend)
     SendAddonMessage(MessagePrefix, CreateMessage("XpFlagDelete"), "WHISPER", target)
 end
 
@@ -54,7 +54,7 @@ D.SendUpdate = function(target)
 end
 
 D.SendUpdates = function()
-    for target, _ in pairs(D.marks) do
+    for target, _ in pairs(D.GetMarks()) do
         if target and target ~= D.nameRealm then
             D.SendUpdate(target)
         end
@@ -105,7 +105,7 @@ function D:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
     end
 
     if msg.type == "XpFlagDelete" then
-        D.marks[sender] = D.DeleteMark(D.marks[sender])
+        D.DeleteMark(sender)
         D.On_FriendsFrame_Update()
     end
 end

@@ -56,12 +56,9 @@ local function GetFriendNameByButton(button)
 end
 
 local function OnXpFlagFriendButtonClick(button, friend)
-    --print("OnXpFlagFriendButtonClick", button, friend)
-    if D.marks[friend] then
-        --print(" DISABLE ")
+    if D.GetMark(friend) then
         D.SendDelete(friend)
     else
-        --print(" ENABLE ")
         D.SendRequest(friend)
     end
 end
@@ -93,9 +90,9 @@ D.On_FriendsFrame_Update = function()
         onlineFriends[friend] = buttons[i]
     end
 
-    for friend, _ in pairs(D.marks) do
+    for friend, _ in pairs(D.GetMarks()) do
         if friend and friend ~= D.nameRealm and not onlineFriends[friend] then
-            D.marks[friend] = D.DeleteMark(D.marks[friend])
+            D.DeleteMark(friend)
             D.SendDelete(friend)
         end
     end
@@ -115,7 +112,7 @@ D.On_FriendsFrame_Update = function()
             button.xpflagbutton:SetScript("OnClick", function(self) OnXpFlagFriendButtonClick(self, friend) end)
         end
 
-        SetXpFlagButtonState(button.xpflagbutton, D.marks[friend])
+        SetXpFlagButtonState(button.xpflagbutton, D.GetMark(friend))
     end
 end
 

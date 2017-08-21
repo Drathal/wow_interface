@@ -6,9 +6,10 @@
 	<Include file="libs\CallbackHandler-1.0\CallbackHandler-1.0.xml"/>
 	<Include file="libs\AceAddon-3.0\AceAddon-3.0.xml" />
 	<Include file="libs\AceEvent-3.0\AceEvent-3.0.xml" />
+    <Include file="libs\AceHook-3.0\AceHook-3.0.xml" />
 
 	<!-- app -->
-	<Script file="modules\init.lua" />
+    <Script file="XpFlag.lua" />
 	<Script file="modules\utils.lua" />
 	<Script file="config.lua" />	
     <Script file="modules\friends.lua" />
@@ -19,6 +20,6 @@
 	<Script file="modules\markSparks.lua" />
 	<Script file="modules\markModel.lua" />	
 	<Script file="modules\bar.lua" />
-	<Script file="XpFlag.lua" />
+    <Script file="modules\main.lua" />
 
 </Ui>

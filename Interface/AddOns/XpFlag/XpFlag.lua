@@ -1,61 +1,40 @@
-local D, C, L = unpack(select(2, ...))
+local AddOnName, Engine = ...
 
+-- speed up local calls
 local _G = _G
+local MAX_PLAYER_LEVEL = _G.MAX_PLAYER_LEVEL
+local UnitName = _G.UnitName
+local UnitLevel = _G.UnitLevel
+local UnitGUID = _G.UnitGUID
+local GetRealmName = _G.GetRealmName
+local GetScreenResolution = _G.GetScreenResolution
+local GetScreenResolutions = _G.GetScreenResolutions
+local DecodeResolution = _G.DecodeResolution
+local GetCVar = _G.GetCVar
+local GetBuildInfo = _G.GetBuildInfo
 local CreateFrame = _G.CreateFrame
 
-D.marks = {}
+-- init addon
+local AddOn = LibStub("AceAddon-3.0"):NewAddon(AddOnName, "AceEvent-3.0", "AceHook-3.0")
 
+-- export to Global (kkthnx)
+Engine[1] = AddOn
+Engine[2] = {}
+Engine[3] = {}
+_G[AddOnName] = Engine
 
-function D:OnInitialize()
-    D.InitCommunication()
-
-    D:RegisterEvent("PLAYER_ENTERING_WORLD")
-    D:RegisterEvent("PLAYER_XP_UPDATE")
-    D:RegisterEvent("PLAYER_LEVEL_UP")
-    D:RegisterEvent("PLAYER_UPDATE_RESTING")
-
-    D:RegisterMessage("XpFlag-sparkmodel-show", function(msg, f)
-        D.FadeInMarkModel(f)
-        D.PlayXpSpark(f)
-    end)
-
-    D:RegisterMessage("XpFlag-sparkmodel-hide", function(msg, f)
-        D.FadeOutMarkModel(f)
-    end)
-
-    D.RegisterFriendsFrameUpdate()
-end
-
-function D:PLAYER_ENTERING_WORLD(event)
-    if C.player.show then
-        D.UpdatePlayerMark()
-    end
-
-    if C.player.show and C.bar.show then
-        D.UpdatePlayerBar()
-    end
-
-    D:UnregisterEvent("PLAYER_ENTERING_WORLD");
-end
-
-function D:PLAYER_UPDATE_RESTING(event)
-    if C.player.show then
-        D.UpdatePlayerMark()
-        D.UpdatePlayerBar()
-    end
-end
-
-function D:PLAYER_XP_UPDATE(event, unit)
-    if unit ~= "player" then return end
-
-    D.SendUpdates()
-
-    if C.player.show then
-        D.UpdatePlayerMark()
-        D.UpdatePlayerBar()
-    end
-end
-
-function D:PLAYER_LEVEL_UP(event, level)
-    D.level = tonumber(level);
-end
+-- Addon API
+AddOn.addonName = AddOnName
+AddOn.title = GetAddOnMetadata(AddOnName, "Title")
+AddOn.version = GetAddOnMetadata(AddOnName, "Version")
+AddOn.maxLevel = MAX_PLAYER_LEVEL
+AddOn.name = UnitName("player")
+AddOn.GUID = UnitGUID("player")
+AddOn.level = UnitLevel("player")
+AddOn.class = select(2, UnitClass("player"))
+AddOn.realm = GetRealmName()
+AddOn.nameRealm = AddOn.name.."-"..AddOn.realm
+AddOn.screenWidth = GetScreenWidth()
+AddOn.screenHeight = GetScreenHeight()
+AddOn.woWPatch, AddOn.woWBuild, AddOn.woWPatchReleaseDate, AddOn.tocVersion = GetBuildInfo()
+AddOn.woWBuild = tonumber(AddOn.woWBuild)

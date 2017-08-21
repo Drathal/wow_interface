@@ -23,6 +23,8 @@
 .build.info
 Launcher.db
 Config.wtf
+config-cache.old
+config-cache.wtf
 CUFProfiles.*
 
 
