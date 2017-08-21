@@ -1,12 +1,6 @@
 local D, C, L = unpack(select(2, ...))
 
-D.OnSparkModelShow = function(msg, f)
-    D.FadeInMarkModel(f)
-    D.PlayXpSpark(f)
-end
-
-D.OnSparkModelHide = function(msg, f)
-    D.FadeOutMarkModel(f)
+function D:OnEnable()
 end
 
 function D:OnInitialize()
@@ -17,11 +11,7 @@ function D:OnInitialize()
     D:RegisterEvent("PLAYER_LEVEL_UP")
     D:RegisterEvent("PLAYER_UPDATE_RESTING")
 
-    D:RegisterMessage("XpFlag-sparkmodel-show", D.OnSparkModelShow)
-    D:RegisterMessage("XpFlag-sparkmodel-hide", D.OnSparkModelHide )
-
     D.RegisterFriendsFrameUpdate()
-    D.CreateMarkTooltip()
 end
 
 function D:PLAYER_ENTERING_WORLD(event)

@@ -2,6 +2,7 @@ local D, C, L = unpack(select(2, ...))
 
 local _G = _G
 local random = math.random
+local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagSpark", "AceHook-3.0")
 
 local function PlaySpark(xp, sparks, parent)
     for k, spark in pairs(sparks) do
@@ -74,8 +75,9 @@ local function AddSpark(parent, num)
     return f
 end
 
-D.PlayXpSpark = function(f)
+local function PlayXpSpark(f)
     if not f.xpSparks then return end
+    if not f.gain then return end
     f.xpSparks.Play(f.gain)
 end
 
@@ -89,4 +91,10 @@ D.CreateSparks = function(parent)
         f.sparks[i] = AddSpark(f, i)
     end
     return f
+end
+
+function module:OnEnable()
+    self:Hook(D, "XpFlagUpdateMark", function(f)
+        PlayXpSpark(f)
+    end)
 end

@@ -5,6 +5,8 @@ local CreateFrame = _G.CreateFrame
 
 local marks = {}
 
+D.XpFlagUpdateMark = function(f)end
+
 D.CreateMark = function(name, class)
     local rcolor = RAID_CLASS_COLORS[class]
     local m = CreateFrame("Frame", nil, _G['UIParent'])
@@ -70,9 +72,7 @@ D.UpdateMark = function(name, value, maxvalue, level, class)
     if not m.player then return end
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
-    if m.gain <= 0 then return end
-
-    D:SendMessage("XpFlag-sparkmodel-show", m)
+    D.XpFlagUpdateMark(m)
 end
 D.UpdatePlayerMark = D.UpdateMark
 

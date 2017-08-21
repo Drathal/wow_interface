@@ -5,10 +5,15 @@ local GetXPExhaustion = _G.GetXPExhaustion
 local RAID_CLASS_COLORS = _G.RAID_CLASS_COLORS
 local format = string.format
 
-local t = nil
+local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagMarkTooltip")
+
+function module:OnEnable()
+    module.t = D.CreateMarkTooltip()
+end
 
 D.CreateMarkTooltip = function()
-    t = CreateFrame("Frame")
+    local t = CreateFrame("Frame")
+
     t:Hide()
     t.delay = 0.25
 
@@ -41,10 +46,10 @@ end
 
 D.OnMarkTooltipEnter = function(self)
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-    t:Show();
+    module.t:Show();
 end
 
 D.OnMarkTooltipLeave = function(self)
-    t:Hide();
+    module.t:Hide();
     GameTooltip:Hide()
 end

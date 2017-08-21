@@ -4,6 +4,8 @@ local _G = _G
 local min = _G.math.min;
 local max = _G.math.max;
 
+D.XpFlagMarkModelHide = function(f) end
+
 D.animationFrame = CreateFrame('Frame')
 D.animationFrame:SetScript('OnUpdate', function(self, elapsed)
     if D.Throttle(self, elapsed) then return end
@@ -36,7 +38,7 @@ D.AnimateX = function(f)
     if cur == f.to or abs(new - f.to) < 2 then
         new = f.to
         f.to = nil
-        D:SendMessage("XpFlag-sparkmodel-hide", f)
+        D.XpFlagMarkModelHide(f)
     end
 
     local p1, p, p2, xOfs, yOfs = f:GetPoint()
