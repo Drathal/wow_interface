@@ -15,6 +15,10 @@ VER 3 0100000000000004 "Res" "INV_Misc_QuestionMark"
 #showtooltip
 /use [@mouseover,help,dead][]Resuscitate
 END
+VER 3 0100000000000006 "Statue" "INV_Misc_QuestionMark"
+#show
+/use [@cursor][]Summon Jade Serpent Statue
+END
 VER 3 0100000000000002 "Wave" "INV_Misc_QuestionMark"
 #showtooltip
 /use [@mouseover,help][]Chi Wave

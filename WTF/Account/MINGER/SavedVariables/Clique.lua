@@ -5,6 +5,31 @@ CliqueDB3 = {
 		["Dronthal - Blackhand"] = {
 			["alerthidden"] = true,
 		},
+		["Drathair - Blackhand"] = {
+			["spec1_profileKey"] = "Drathair - Blackhand",
+			["blizzframes"] = {
+				["PetFrame"] = false,
+				["FocusFrameToT"] = false,
+				["PlayerFrame"] = false,
+				["party"] = false,
+				["TargetFrameToT"] = false,
+				["compactraid"] = false,
+				["FocusFrame"] = false,
+				["arena"] = false,
+				["TargetFrame"] = false,
+				["boss"] = false,
+			},
+			["fastooc"] = true,
+			["blacklist"] = {
+				["PlayerFrame"] = true,
+			},
+			["alerthidden"] = true,
+			["downclick"] = false,
+			["spec3_profileKey"] = "Drathair - Blackhand",
+			["spec2_profileKey"] = "Drathair - Blackhand",
+			["specswap"] = false,
+			["stopcastingfix"] = true,
+		},
 		["Sungleave - Blackhand"] = {
 			["alerthidden"] = true,
 		},
@@ -19,19 +44,7 @@ CliqueDB3 = {
 			["spec2_profileKey"] = "base",
 			["spec3_profileKey"] = "base",
 		},
-		["Drathia - Madmortem"] = {
-			["blacklist"] = {
-				["LSBoss2Frame"] = true,
-				["LSBoss1Frame"] = true,
-				["Boss1TargetFrame"] = true,
-				["Boss2TargetFrame"] = true,
-				["LSBoss5Frame"] = true,
-				["LSBoss4Frame"] = true,
-				["LSTargetTargetFrame"] = true,
-				["LSBoss3Frame"] = true,
-				["Boss4TargetFrame"] = true,
-				["Boss3TargetFrame"] = true,
-			},
+		["Drathal - Madmortem"] = {
 			["alerthidden"] = true,
 		},
 		["Dronthal - Madmortem"] = {
@@ -59,33 +72,20 @@ CliqueDB3 = {
 		["Drathtix - Madmortem"] = {
 			["alerthidden"] = true,
 		},
-		["Drathal - Madmortem"] = {
-			["alerthidden"] = true,
-		},
-		["Drathair - Blackhand"] = {
-			["spec1_profileKey"] = "Drathair - Blackhand",
-			["blizzframes"] = {
-				["PetFrame"] = false,
-				["FocusFrameToT"] = false,
-				["PlayerFrame"] = false,
-				["party"] = false,
-				["TargetFrameToT"] = false,
-				["compactraid"] = false,
-				["FocusFrame"] = false,
-				["arena"] = false,
-				["TargetFrame"] = false,
-				["boss"] = false,
-			},
-			["fastooc"] = true,
+		["Drathia - Madmortem"] = {
 			["blacklist"] = {
-				["PlayerFrame"] = true,
+				["LSBoss2Frame"] = true,
+				["LSBoss1Frame"] = true,
+				["Boss1TargetFrame"] = true,
+				["Boss2TargetFrame"] = true,
+				["LSBoss5Frame"] = true,
+				["LSBoss4Frame"] = true,
+				["LSTargetTargetFrame"] = true,
+				["LSBoss3Frame"] = true,
+				["Boss4TargetFrame"] = true,
+				["Boss3TargetFrame"] = true,
 			},
 			["alerthidden"] = true,
-			["downclick"] = false,
-			["spec3_profileKey"] = "Drathair - Blackhand",
-			["spec2_profileKey"] = "Drathair - Blackhand",
-			["specswap"] = false,
-			["stopcastingfix"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -950,13 +950,6 @@ CliqueDB3 = {
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
-					["type"] = "menu",
-					["key"] = "ALT-BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-				{
 					["spell"] = "Effuse",
 					["key"] = "BUTTON1",
 					["sets"] = {
@@ -964,16 +957,14 @@ CliqueDB3 = {
 					},
 					["icon"] = 1360977,
 					["type"] = "spell",
-				}, -- [3]
+				}, -- [2]
 				{
-					["spell"] = "Enveloping Mist",
-					["key"] = "BUTTON2",
+					["type"] = "menu",
+					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 775461,
-					["type"] = "spell",
-				}, -- [4]
+				}, -- [3]
 				{
 					["spell"] = "Vivify",
 					["key"] = "SHIFT-BUTTON2",
@@ -981,6 +972,15 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["icon"] = 1360980,
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Enveloping Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 775461,
 					["type"] = "spell",
 				}, -- [5]
 				{

@@ -78,7 +78,8 @@ local function RemoveOffineFriends()
 end
 
 local function Ping(friend)
-    if pinged[friend] or hasAddon[friends] then return end
+    -- pinged[friend] or
+    if hasAddon[friends] then return end
     D.SendPing(friend)
     pinged[friend] = true
 end

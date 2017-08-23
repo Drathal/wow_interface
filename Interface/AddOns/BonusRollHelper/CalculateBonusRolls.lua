@@ -21,6 +21,7 @@ for index, slot in ipairs(i2s) do
 end
 local bossScore = {}
 local isOccupied = {}
+local bestEquippedItem = {}
 
 --Local copies of global Variables:
 local statweights = {}	--Copy of BonusRollManagerVariables.statweights, but its keys are blizz's statnames
@@ -57,7 +58,7 @@ function BonusRollManagerTable.getEquipped()
 		equipped[i].score = 0
 		equipped[i].link = GetInventoryItemLink("player", i)
 		equipped[i].slot = i2s[i]
-		equipped[i].isTier = not not string.find(GetItemInfo(equipped[i].link), brmT.tierNames[brmV.selectedClass])
+		equipped[i].isTier = select(16, GetItemInfo(equipped[i].link)) == brmT.tierIDs[brmV.selectedClass]
 		equipped[i].bossIndex = 0
 		equipped[i].stats = {}
 		if equipped[i].link ~= nil then
@@ -88,13 +89,28 @@ function BonusRollManagerTable.getEquipped()
 	for slotIndex, item in pairs(equipped) do
 		if not equippedBySlot[item.slot] then
 			equippedBySlot[item.slot] = {}
-		end
-		local currentSlot = equippedBySlot[item.slot]
-		if not currentSlot.score or currentSlot.score > item.score then
 			for k, v in pairs(item) do
-				currentSlot[k] = v
+				equippedBySlot[item.slot][k] = v
 			end
-		end
+			bestEquippedItem[item.slot] = {}
+			bestEquippedItem[item.slot].link = ""
+		else
+			if item.score <= equippedBySlot[item.slot].score then
+				bestEquippedItem[item.slot] = {}
+				for k, v in pairs(equippedBySlot[item.slot]) do
+					bestEquippedItem[item.slot][k] = v
+				end
+				wipe(equippedBySlot[item.slot])
+				for k, v in pairs(item) do
+					equippedBySlot[item.slot][k] = v
+				end
+			else
+				bestEquippedItem[item.slot] = {}
+				for k, v in pairs(item) do
+					bestEquippedItem[item.slot][k] = v
+				end
+			end
+		end		
 	end
 end
 
@@ -139,7 +155,7 @@ function BonusRollManagerTable.getLoot()
 				currentLoot.score = currentLoot.score + ((statweights[stat] or 0) * value)
 			end
 			
-			if string.find(name, brmT.tierNames[brmV.selectedClass]) then
+			if select(16, GetItemInfo(link)) == brmT.tierIDs[brmV.selectedClass] then
 				currentLoot.isTier = true
 				tierLoot[currentLoot.slot] = {}
 				tierLoot.num = tierLoot.num + 1
@@ -232,7 +248,7 @@ function BonusRollManagerTable.calcBiS()
 	end
 	local doubleSlot = {INVTYPE_FINGER, INVTYPE_TRINKET}
 	for i, slot in pairs(doubleSlot) do
-		local bestGearLink = ""
+		local bestGearLink, bestGearName = "", ""
 		for gearIndex = 1, 2, 1 do
 			BiS[slot.." "..gearIndex] = {}
 			local gear = BiS[slot.." "..gearIndex]
@@ -240,6 +256,7 @@ function BonusRollManagerTable.calcBiS()
 			gear.score = -1
 			gear.isTier = false
 			gear.bossIndex = 0
+			local equippedNames = {}
 			for index, equippedGear in pairs(equipped) do
 				if equippedGear.slot == slot and equippedGear.score > gear.score and equippedGear.link ~= bestGearLink then
 					gear.link = equippedGear.link
@@ -249,7 +266,8 @@ function BonusRollManagerTable.calcBiS()
 				end
 			end
 			for i = 1, lootBySlot[slot] and lootBySlot[slot].numLoot or 0, 1 do
-				if lootBySlot[slot][i].score > gear.score and lootBySlot[slot][i].link ~= bestGearLink then
+				local lootName = GetItemInfo(lootBySlot[slot][i].link)
+				if lootBySlot[slot][i].score > gear.score and bestGearName ~= lootName then
 					gear.link = lootBySlot[slot][i].link
 					gear.score = lootBySlot[slot][i].score
 					gear.isTier = lootBySlot[slot][i].isTier
@@ -258,6 +276,7 @@ function BonusRollManagerTable.calcBiS()
 			end
 			
 			bestGearLink = gear.link
+			bestGearName = GetItemInfo(gear.link)
 		end
 	end
 	for i = 1, 3, 1 do
@@ -343,7 +362,13 @@ function BonusRollManagerTable.calcBossScore()
 		for lootIndex, currentLoot in pairs(bossLoot) do
 			local t = 0
 			if not isOccupied[currentLoot.slot] and equippedBySlot[currentLoot.slot] then
-				t = currentLoot.score - equippedBySlot[currentLoot.slot].score
+			
+				if GetItemInfo(currentLoot.link) == GetItemInfo(bestEquippedItem[currentLoot.slot].link) then
+					t = currentLoot.score - bestEquippedItem[currentLoot.slot].score
+				else
+					t = currentLoot.score - equippedBySlot[currentLoot.slot].score
+				end
+								
 				t = math.max(t, 0)
 				if BiS[currentLoot.slot] and not currentLoot.isTier and BiS[currentLoot.slot].isTier then
 					t = 0
@@ -383,7 +408,11 @@ function BonusRollManagerTable.averageItem()
 			numItems = numItems + 1
 			local t = 0
 			if not isOccupied[currentLoot.slot] and equippedBySlot[currentLoot.slot] then
-				t = currentLoot.score - equippedBySlot[currentLoot.slot].score
+				if GetItemInfo(currentLoot.link) == GetItemInfo(bestEquippedItem[currentLoot.slot].link) then
+					t = currentLoot.score - bestEquippedItem[currentLoot.slot].score
+				else
+					t = currentLoot.score - equippedBySlot[currentLoot.slot].score
+				end
 				t = math.max(t, 0)
 				if BiS[currentLoot.slot] and not currentLoot.isTier and BiS[currentLoot.slot].isTier then
 					t = 0

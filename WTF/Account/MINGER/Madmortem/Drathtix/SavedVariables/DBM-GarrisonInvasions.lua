@@ -1,6 +1,6 @@
 
-DBMWorldEvents_SavedStats = {
-	["d288"] = {
+DBMGarrisonInvasions_SavedStats = {
+	["Gaur"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -19,7 +19,7 @@ DBMWorldEvents_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["d286"] = {
+	["LadyFleshsear"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -38,7 +38,7 @@ DBMWorldEvents_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["d287"] = {
+	["Drogan"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -57,7 +57,7 @@ DBMWorldEvents_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["DemonInvasions"] = {
+	["Goggnathog"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -76,7 +76,7 @@ DBMWorldEvents_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Greench"] = {
+	["Teluur"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -95,7 +95,7 @@ DBMWorldEvents_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["PlantsVsZombies"] = {
+	["Annihilon"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -114,45 +114,7 @@ DBMWorldEvents_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["d285"] = {
-		["normalPulls"] = 0,
-		["challengeKills"] = 0,
-		["challengeBestRank"] = 0,
-		["mythicKills"] = 0,
-		["lfr25Kills"] = 0,
-		["heroic25Pulls"] = 0,
-		["lfr25Pulls"] = 0,
-		["normal25Pulls"] = 0,
-		["normalKills"] = 0,
-		["heroic25Kills"] = 0,
-		["timewalkerPulls"] = 0,
-		["heroicKills"] = 0,
-		["heroicPulls"] = 0,
-		["normal25Kills"] = 0,
-		["timewalkerKills"] = 0,
-		["mythicPulls"] = 0,
-		["challengePulls"] = 0,
-	},
-	["Omen"] = {
-		["normalPulls"] = 0,
-		["challengeKills"] = 0,
-		["challengeBestRank"] = 0,
-		["mythicKills"] = 0,
-		["lfr25Kills"] = 0,
-		["heroic25Pulls"] = 0,
-		["lfr25Pulls"] = 0,
-		["normal25Pulls"] = 0,
-		["normalKills"] = 0,
-		["heroic25Kills"] = 0,
-		["timewalkerPulls"] = 0,
-		["heroicKills"] = 0,
-		["heroicPulls"] = 0,
-		["normal25Kills"] = 0,
-		["timewalkerKills"] = 0,
-		["mythicPulls"] = 0,
-		["challengePulls"] = 0,
-	},
-	["Brew"] = {
+	["GarrisonInvasions"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,

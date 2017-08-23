@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- 	Leatrix Plus 7.2.15 (17th August 2017, www.leatrix.com)
+-- 	Leatrix Plus 7.2.16 (20th August 2017, www.leatrix.com)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:Player		72:Profile		
@@ -20,7 +20,7 @@
 	local void
 
 --	Version
-	LeaPlusLC["AddonVer"] = "7.2.15"
+	LeaPlusLC["AddonVer"] = "7.2.16"
 
 ----------------------------------------------------------------------
 -- 	Locale
@@ -6162,16 +6162,7 @@
 
 		if LeaPlusLC["ShowDressTab"] == "On" then
 
-			-- Add buttons to main dressup frame
-			LeaPlusLC:CreateButton("DressUpTabBtn", DressUpFrame, "Tabard", "BOTTOMLEFT", 26, 79, 80, 22, false, "")
-			if ClientVersion == "7.3.0" then
-				LeaPlusCB["DressUpTabBtn"]:ClearAllPoints()
-				LeaPlusCB["DressUpTabBtn"]:SetPoint("RIGHT", LeaPlusCB["DressUpNudeBtn"], "LEFT", 0, 0)
-			end
-			LeaPlusCB["DressUpTabBtn"]:SetScript("OnClick", function()
-				DressUpModel:UndressSlot(19)
-			end)
-
+			-- Add nude button to dressing room frame (main)
 			LeaPlusLC:CreateButton("DressUpNudeBtn", DressUpFrame, "Nude", "BOTTOMLEFT", 106, 79, 80, 22, false, "")
 			if ClientVersion == "7.3.0" then
 				LeaPlusCB["DressUpNudeBtn"]:ClearAllPoints()
@@ -6182,6 +6173,16 @@
 				for i = 1, 19 do
 					DressUpModel:UndressSlot(i) -- Done this way to prevent issues with Undress
 				end
+			end)
+
+			-- Add tabard button to dressing room frame (main)
+			LeaPlusLC:CreateButton("DressUpTabBtn", DressUpFrame, "Tabard", "BOTTOMLEFT", 26, 79, 80, 22, false, "")
+			if ClientVersion == "7.3.0" then
+				LeaPlusCB["DressUpTabBtn"]:ClearAllPoints()
+				LeaPlusCB["DressUpTabBtn"]:SetPoint("RIGHT", LeaPlusCB["DressUpNudeBtn"], "LEFT", 0, 0)
+			end
+			LeaPlusCB["DressUpTabBtn"]:SetScript("OnClick", function()
+				DressUpModel:UndressSlot(19)
 			end)
 
 			local BtnStrata, BtnLevel = SideDressUpModelResetButton:GetFrameStrata(), SideDressUpModelResetButton:GetFrameLevel()
@@ -6886,15 +6887,11 @@
 				["Stormheim"] = {"AggrammarsVault:199:185:361:210", "BlackbeakOverlook:297:210:154:129", "Dreadwake:215:247:457:412", "Dreyrgrot:132:145:689:266", "Greywatch:173:163:648:339", "HallsOfValor:252:280:585:372",	"Haustvald:200:174:612:187", "Hrydshal:631:315:0:353", "MawOfNashal:509:251:17:0", "Morheim:150:180:741:313", "Nastrondir:241:194:345:95", "QatchmansRock:135:162:623:81",	"Runewood:194:214:592:226", "ShieldsRest:289:172:689:0", "SkoldAshil:177:169:506:345", "StormsReach:180:160:510:118", "TalonRest:291:208:316:282",	"TideskornHarbor:205:199:479:183", "Valdisdall:186:158:522:288", "WeepingBluffs:386:314:56:185",},
 				["Suramar"] = {"Ambervale:222:311:132:179", "CrimsonThicket:327:381:492:0", "Falanaar:248:317:23:136", "FelsoulHold:289:363:183:305", "GrandPromenade:355:291:344:285", "Jandvik:419:538:583:0", "MoonguardStronghold:480:245:58:0", "MoonwhisperGulch:428:316:201:0", "RuinsOfEluneeth:221:224:264:226", "SuramarCity:470:337:390:331", "Telanor:387:372:327:0",},
 				["Valsharah"] = {"Andutalah:241:240:587:250", "BlackrookHold:250:253:262:175", "BradensBrook:311:244:259:275", "DreamGrove:294:364:283:0",	"GloamingReef:239:301:136:274",	"GroveOfCenarius:171:150:457:351", "Lorlathil:177:156:467:413",	"MoonclawVale:254:281:549:380",	"Shalanir:326:360:419:0", "Smolderhide:341:188:324:480", "TempleOfElune:216:219:459:240", "Thastalah:218:168:342:416",},
+				["ArgusCore"] = {"DefiledPath:626:385:293:0", "FelfireArmory:660:668:0:0", "Terminus:467:430:535:238",},
+				["ArgusMacAree"] = {"Conservatory:313:353:498:111", "RuinsOfOronaar:265:310:278:284", "SeatOfTriumvirate:463:519:265:54", "Shadowguard:498:461:0:0", "Triumvirates:284:264:410:375", "UpperTerrace:701:323:0:0",},
+				["ArgusSurface"] = {"AnnihilanPits:296:336:371:178", "KrokulHovel:307:304:428:364", "Nathraxas:835:422:167:0", "PetrifiedForest:445:379:557:289", "ShatteredFields:498:530:37:138",},
 
 			}
-
-			-- Argus for 7.3.0
-			if ClientVersion == "7.3.0" then
-				LeaPlusMapData["ArgusCore"] = {"DEFILEDPATH:626:385:293:0", "FELFIREARMORY:660:668:0:0", "TERMINUS:467:430:535:238",}
-				LeaPlusMapData["ArgusMacAree"] = {"CONSERVATORY:313:353:498:111", "RUINSOFORONAAR:265:310:278:284", "SEATOFTRIUMVIRATE:463:519:265:54", "SHADOWGUARD:498:461:0:0", "TRIUMVIRATES:284:264:410:375", "UPPERTERRACE:701:323:0:0",}
-				LeaPlusMapData["ArgusSurface"] = {"ANNIHILANPITS:296:336:371:178", "KROKULHOVEL:307:304:428:364", "NATHRAXAS:835:422:167:0", "PETRIFIEDFOREST:445:379:557:289", "SHATTEREDFIELDS:498:530:37:138",}
-			end
 
 			-- Initialise counters
 			local createdtex = 0
@@ -8627,6 +8624,38 @@
 			SetTipScale()
 
 			----------------------------------------------------------------------
+			-- Contribution frame
+			----------------------------------------------------------------------
+
+			local function ContributionTipFunc()
+
+				-- Function to set tooltip scale
+				local function SetContributionTipScale()
+					ContributionTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"])
+					ContributionBuffTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"])
+				end
+
+				-- Set tooltip scale when slider changes and on startup
+				LeaPlusCB["LeaPlusTipSize"]:HookScript("OnValueChanged", SetContributionTipScale)
+				SetContributionTipScale()
+
+			end
+
+			-- Run function when Blizzard addon has loaded
+			if IsAddOnLoaded("Blizzard_Contribution") then
+				ContributionTipFunc()
+			else
+				local waitFrame = CreateFrame("FRAME")
+				waitFrame:RegisterEvent("ADDON_LOADED")
+				waitFrame:SetScript("OnEvent", function(self, event, arg1)
+					if arg1 == "Blizzard_Contribution" then
+						ContributionTipFunc()
+						waitFrame:UnregisterAllEvents()
+					end
+				end)
+			end
+
+			----------------------------------------------------------------------
 			-- Pet Journal tooltips
 			----------------------------------------------------------------------
 
@@ -9616,22 +9645,8 @@
 				end
 			end
 
-			-- Give function file level scope (it's used in SetPlusScale)
+			-- Give function file level scope (it's used in SetPlusScale to set the highlight bar scale)
 			LeaPlusLC.UpdateList = UpdateList
-
-			-- Function to return to the zone list for the current tracklist continent
-			local function BackClickFunc()
-				if type(ListData[1]) == "string" then
-					-- Strip the color code from the list data
-					local nocol = string.gsub(ListData[1], "|cffffd800", "")
-					-- Strip the zone
-					local backzone = strsplit(":", nocol, 2)
-					-- Show the tracklist continent 
-					if ZoneList[backzone] then ListData = ZoneList[backzone] end
-					UpdateList()
-					scrollFrame:SetVerticalScroll(ZonePage or 0)
-				end
-			end
 
 			-- Function to make navigation menu buttons
 			local function MakeButton(where, y)
@@ -9855,7 +9870,7 @@
 
 				button:RegisterForClicks("LeftButtonUp", "RightButtonUp")
 
-				-- Click handler for track or zone item
+				-- Click handler for track, zone and back button
 				button:SetScript("OnClick", function(self, btn)
 					if btn == "LeftButton" then
 						-- Get clicked track text
@@ -9942,11 +9957,19 @@
 
 							end
 						end
-
 					elseif btn == "RightButton" then
-						BackClickFunc()
+						-- Return to the current zone list (back button)
+						if type(ListData[1]) == "string" then
+							-- Strip the color code from the list data
+							local nocol = string.gsub(ListData[1], "|cffffd800", "")
+							-- Strip the zone
+							local backzone = strsplit(":", nocol, 2)
+							-- Show the tracklist continent 
+							if ZoneList[backzone] then ListData = ZoneList[backzone] end
+							UpdateList()
+							scrollFrame:SetVerticalScroll(ZonePage or 0)
+						end
 					end
-
 				end)
 
 			end

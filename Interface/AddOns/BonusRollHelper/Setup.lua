@@ -64,8 +64,22 @@ BonusRollManagerTable.tierNames = {							--Table of Names of current Tier piece
 	["Druid"] = "Stormheart",
 	["Demon Hunter"] = "Demonbane"
 }
+BonusRollManagerTable.tierIDs = {							--Table of IDs of current Tier sets for all classes
+	["Warrior"] = 1312,
+	["Paladin"] = 1307,
+	["Hunter"] = 1304,
+	["Rogue"] = 1309,
+	["Priest"] = 1308,
+	["Death Knight"] = 1301,
+	["Shaman"] = 1310,
+	["Mage"] = 1305,
+	["Warlock"] = 1311,
+	["Monk"] = 1306,
+	["Druid"] = 1303,
+	["Demon Hunter"] = 1302
+}
 BonusRollManagerTable.tierSlots = {}						--Table of the slots of current Tier Pieces
-BonusRollManagerTable.slotNames = {"Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Finger", "Trinket"}
+BonusRollManagerTable.slotNames = {INVTYPE_HEAD, INVTYPE_NECK, INVTYPE_SHOULDER, INVTYPE_CLOAK, INVTYPE_CHEST, INVTYPE_WRIST, INVTYPE_HAND, INVTYPE_WAIST, INVTYPE_LEGS, INVTYPE_FEET, INVTYPE_FINGER, INVTYPE_TRINKET}
 BonusRollManagerTable.numLoot = {}
 BonusRollManagerTable.bossID = {}
 

@@ -30,8 +30,8 @@ LS_TOASTS_GLOBAL_CONFIG = {
 				["loot_special"] = {
 					["enabled"] = true,
 					["threshold"] = 1,
-					["ilvl"] = true,
 					["dnd"] = false,
+					["ilvl"] = true,
 				},
 				["achievement"] = {
 					["enabled"] = true,

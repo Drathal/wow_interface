@@ -2,66 +2,6 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
-		["Dronthal - Blackhand"] = {
-			["alerthidden"] = true,
-		},
-		["Sungleave - Blackhand"] = {
-			["alerthidden"] = true,
-		},
-		["Drathon - Blackhand"] = {
-			["spec1_profileKey"] = "base",
-			["fastooc"] = false,
-			["alerthidden"] = true,
-			["downclick"] = false,
-			["spec3_profileKey"] = "base",
-			["spec4_profileKey"] = "base",
-			["spec2_profileKey"] = "base",
-			["stopcastingfix"] = true,
-			["specswap"] = false,
-		},
-		["Drathia - Madmortem"] = {
-			["alerthidden"] = true,
-			["blacklist"] = {
-				["LSBoss2Frame"] = true,
-				["Boss3TargetFrame"] = true,
-				["Boss1TargetFrame"] = true,
-				["Boss2TargetFrame"] = true,
-				["LSBoss4Frame"] = true,
-				["LSBoss5Frame"] = true,
-				["LSBoss3Frame"] = true,
-				["LSTargetTargetFrame"] = true,
-				["Boss4TargetFrame"] = true,
-				["LSBoss1Frame"] = true,
-			},
-		},
-		["Dronthal - Madmortem"] = {
-			["spec1_profileKey"] = "Dronthal - Madmortem",
-			["blizzframes"] = {
-				["PetFrame"] = false,
-				["FocusFrameToT"] = false,
-				["PlayerFrame"] = false,
-				["party"] = false,
-				["TargetFrameToT"] = false,
-				["compactraid"] = false,
-				["FocusFrame"] = false,
-				["arena"] = false,
-				["boss"] = false,
-				["TargetFrame"] = false,
-			},
-			["fastooc"] = false,
-			["spec2_profileKey"] = "Dronthal - Madmortem",
-			["downclick"] = true,
-			["spec3_profileKey"] = "Dronthal - Madmortem",
-			["alerthidden"] = true,
-			["specswap"] = false,
-			["stopcastingfix"] = true,
-		},
-		["Drathtix - Madmortem"] = {
-			["alerthidden"] = true,
-		},
-		["Drathal - Madmortem"] = {
-			["alerthidden"] = true,
-		},
 		["Drathair - Blackhand"] = {
 			["spec1_profileKey"] = "Drathair - Blackhand",
 			["blizzframes"] = {
@@ -86,6 +26,66 @@ CliqueDB3 = {
 			["specswap"] = false,
 			["spec2_profileKey"] = "Drathair - Blackhand",
 			["spec3_profileKey"] = "Drathair - Blackhand",
+		},
+		["Dronthal - Blackhand"] = {
+			["alerthidden"] = true,
+		},
+		["Sungleave - Blackhand"] = {
+			["alerthidden"] = true,
+		},
+		["Drathon - Blackhand"] = {
+			["spec1_profileKey"] = "base",
+			["fastooc"] = false,
+			["alerthidden"] = true,
+			["downclick"] = false,
+			["spec3_profileKey"] = "base",
+			["spec4_profileKey"] = "base",
+			["spec2_profileKey"] = "base",
+			["stopcastingfix"] = true,
+			["specswap"] = false,
+		},
+		["Drathal - Madmortem"] = {
+			["alerthidden"] = true,
+		},
+		["Drathtix - Madmortem"] = {
+			["alerthidden"] = true,
+		},
+		["Dronthal - Madmortem"] = {
+			["spec1_profileKey"] = "Dronthal - Madmortem",
+			["blizzframes"] = {
+				["PetFrame"] = false,
+				["FocusFrameToT"] = false,
+				["PlayerFrame"] = false,
+				["party"] = false,
+				["TargetFrameToT"] = false,
+				["compactraid"] = false,
+				["FocusFrame"] = false,
+				["arena"] = false,
+				["boss"] = false,
+				["TargetFrame"] = false,
+			},
+			["fastooc"] = false,
+			["spec2_profileKey"] = "Dronthal - Madmortem",
+			["downclick"] = true,
+			["spec3_profileKey"] = "Dronthal - Madmortem",
+			["alerthidden"] = true,
+			["specswap"] = false,
+			["stopcastingfix"] = true,
+		},
+		["Drathia - Madmortem"] = {
+			["alerthidden"] = true,
+			["blacklist"] = {
+				["LSBoss2Frame"] = true,
+				["Boss3TargetFrame"] = true,
+				["Boss1TargetFrame"] = true,
+				["Boss2TargetFrame"] = true,
+				["LSBoss4Frame"] = true,
+				["LSBoss5Frame"] = true,
+				["LSBoss3Frame"] = true,
+				["LSTargetTargetFrame"] = true,
+				["Boss4TargetFrame"] = true,
+				["LSBoss1Frame"] = true,
+			},
 		},
 	},
 	["profileKeys"] = {
@@ -901,13 +901,6 @@ CliqueDB3 = {
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
-					["type"] = "menu",
-					["key"] = "ALT-BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-				{
 					["spell"] = "Effuse",
 					["key"] = "BUTTON1",
 					["sets"] = {
@@ -915,16 +908,14 @@ CliqueDB3 = {
 					},
 					["icon"] = 1360977,
 					["type"] = "spell",
-				}, -- [3]
+				}, -- [2]
 				{
-					["spell"] = "Enveloping Mist",
-					["key"] = "BUTTON2",
+					["type"] = "menu",
+					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 775461,
-					["type"] = "spell",
-				}, -- [4]
+				}, -- [3]
 				{
 					["spell"] = "Vivify",
 					["key"] = "SHIFT-BUTTON2",
@@ -932,6 +923,15 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["icon"] = 1360980,
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Enveloping Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 775461,
 					["type"] = "spell",
 				}, -- [5]
 				{
