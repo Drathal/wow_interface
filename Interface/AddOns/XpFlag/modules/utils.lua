@@ -3,6 +3,8 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local min = _G.math.min;
 local max = _G.math.max;
+local GetXPExhaustion = _G.GetXPExhaustion
+local GetFramerate = _G.GetFramerate
 
 D.Throttle = function(self, elapsed)
     self.delay = min((self.delay or 0.01) - elapsed, 0.15);

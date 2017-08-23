@@ -101,12 +101,23 @@ local function UpdateMark(name, value, maxvalue, level, class)
     D:SendMessage("UpdateMark", name)
 end
 
+local function OnUpdateMark(event, friend, msg )
+    UpdateMark(friend, msg.xp, msg.maxxp, msg.level, msg.class)
+end
+
+local function OnDeleteMark(event, friend )
+    DeleteMark(friend)
+end
 
 function module:OnEnable()
     module:RegisterEvent("PLAYER_ENTERING_WORLD")
     module:RegisterEvent("PLAYER_XP_UPDATE")
     module:RegisterEvent("PLAYER_LEVEL_UP")
     module:RegisterEvent("PLAYER_UPDATE_RESTING")
+
+    self:RegisterMessage("ReceiveData", OnUpdateMark)
+    self:RegisterMessage("ReceiveRequest", OnUpdateMark)
+    self:RegisterMessage("ReceiveDelete", OnDeleteMark)
 end
 
 function module:PLAYER_ENTERING_WORLD(event)
@@ -134,8 +145,7 @@ function module:PLAYER_LEVEL_UP(event, level)
     D.level = tonumber(level);
 end
 
-
-D.DeleteMark = function(friend)
+local function DeleteMark(friend)
     if not friend then return end
     if not marks[friend] then return end
     marks[friend]:Hide()
@@ -143,13 +153,16 @@ D.DeleteMark = function(friend)
     D:SendMessage("DeleteMark", friend)
 end
 
-D.GetMark = function(friend)
+local function GetMark(friend)
     return marks[friend]
 end
 
-D.GetMarks = function()
+local function GetMarks()
     return marks
 end
 
 -- API
 D.UpdateMark = UpdateMark
+D.DeleteMark = DeleteMark
+D.GetMark = GetMark
+D.GetMarks = GetMarks

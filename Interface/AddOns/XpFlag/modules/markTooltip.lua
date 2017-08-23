@@ -7,11 +7,7 @@ local format = string.format
 
 local module = D:NewModule("MarkTooltip")
 
-function module:OnEnable()
-    module.t = D.CreateMarkTooltip()
-end
-
-D.CreateMarkTooltip = function()
+local function CreateMarkTooltip()
     local t = CreateFrame("Frame")
 
     t:Hide()
@@ -44,12 +40,21 @@ D.CreateMarkTooltip = function()
     return t
 end
 
-D.OnMarkTooltipEnter = function(self)
+local function OnMarkTooltipEnter(self)
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
     module.t:Show();
 end
 
-D.OnMarkTooltipLeave = function(self)
+local function OnMarkTooltipLeave(self)
     module.t:Hide();
     GameTooltip:Hide()
 end
+
+function module:OnEnable()
+    module.t = CreateMarkTooltip()
+end
+
+-- API
+D.CreateMarkTooltip = CreateMarkTooltip
+D.OnMarkTooltipEnter = OnMarkTooltipEnter
+D.OnMarkTooltipLeave = OnMarkTooltipLeave

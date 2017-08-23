@@ -81,7 +81,7 @@ local function PlayXpSpark(msg, f)
     f.xpSparks.Play(f.gain)
 end
 
-D.CreateSparks = function(parent)
+local function CreateSparks(parent)
     local f = {}
     f.sparks = {}
     f.Play = function(xp) PlaySpark(xp, f.sparks, parent) end
@@ -98,3 +98,6 @@ end
 function module:OnEnable()
     self:RegisterMessage("UpdateMark", PlayXpSpark)
 end
+
+-- API
+D.CreateSparks = CreateSparks

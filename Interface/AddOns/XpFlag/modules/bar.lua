@@ -2,6 +2,10 @@ local D, C, L = unpack(select(2, ...))
 
 local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
+local CreateFrame = _G.CreateFrame
+local UnitLevel = _G.UnitLevel
+local UnitXP = _G.UnitXP
+local UnitXPMax = _G.UnitXPMax
 
 local bars = {}
 local parent = select(2, unpack(C.bar.position))
