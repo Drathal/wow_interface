@@ -74,8 +74,11 @@ end
 function module:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
     if pre ~= MessagePrefix then return end
     if sender == D.nameRealm then return end
-    if not string.match(sender, "%-") then return end
     if not rawmsg or rawmsg == "" then return end
+
+    if not string.match(sender, "%-") then
+        sender = sender.."-"..D.realm
+    end
 
     local msg = DecodeMessage(rawmsg)
 
