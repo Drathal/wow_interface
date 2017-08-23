@@ -1,8 +1,10 @@
 local D, C, L = unpack(select(2, ...))
 
 local _G = _G
+local buttonOff = "Interface\\COMMON\\Indicator-Gray"
+local buttonOn = "Interface\\COMMON\\Indicator-Green"
 
-local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagFriends", "AceEvent-3.0")
+local module = D:NewModule("Friends", "AceEvent-3.0")
 
 function module:OnEnable()
     module:RegisterEvent("FRIENDLIST_UPDATE")
@@ -63,7 +65,7 @@ local function GetFriendNameByButton(button)
     return nil
 end
 
-local function OnXpFlagFriendButtonClick(button, friend)
+local function OnStateButtonClick(button, friend)
     if D.GetMark(friend) then
         D.SendDelete(friend)
     else
@@ -71,19 +73,19 @@ local function OnXpFlagFriendButtonClick(button, friend)
     end
 end
 
-local function SetXpFlagButtonState(button, state)
+local function SetButtonTexture(button, state)
     if not button then return end
 
     if state then
-        button:SetNormalTexture("Interface\\COMMON\\Indicator-Green")
-        button:SetPushedTexture("Interface\\COMMON\\Indicator-Green")
-        button:SetHighlightTexture("Interface\\COMMON\\Indicator-Green")
+        button:SetNormalTexture(buttonOn)
+        button:SetPushedTexture(buttonOn)
+        button:SetHighlightTexture(buttonOn)
         return
     end
 
-    button:SetNormalTexture("Interface\\COMMON\\Indicator-Gray")
-    button:SetPushedTexture("Interface\\COMMON\\Indicator-Gray")
-    button:SetHighlightTexture("Interface\\COMMON\\Indicator-Gray")
+    button:SetNormalTexture(buttonOff)
+    button:SetPushedTexture(buttonOff)
+    button:SetHighlightTexture(buttonOff)
 end
 
 D.On_FriendsFrame_Update = function()
@@ -115,12 +117,12 @@ D.On_FriendsFrame_Update = function()
 
         if not D.hasAddon(friend) then return end
 
-        if not button.xpflagbutton then
-            button.xpflagbutton = D.CreateMiniButton(button)
-            button.xpflagbutton:SetScript("OnClick", function(self) OnXpFlagFriendButtonClick(self, friend) end)
+        if not button.statusbutton then
+            button.statusbutton = D.CreateMiniButton(button)
+            button.statusbutton:SetScript("OnClick", function(self) OnStateButtonClick(self, friend) end)
         end
 
-        SetXpFlagButtonState(button.xpflagbutton, D.GetMark(friend))
+        SetButtonTexture(button.statusbutton, D.GetMark(friend))
     end
 end
 
@@ -130,9 +132,9 @@ D.CreateMiniButton = function(parent)
     b:SetFrameStrata("DIALOG")
     b:SetSize(16, 16)
     b:SetPoint("LEFT", parent, "LEFT", 3, - 8)
-    b:SetNormalTexture("Interface\\COMMON\\Indicator-Gray")
-    b:SetPushedTexture("Interface\\COMMON\\Indicator-Gray")
-    b:SetHighlightTexture("Interface\\COMMON\\Indicator-Gray")
+    b:SetNormalTexture(buttonOff)
+    b:SetPushedTexture(buttonOff)
+    b:SetHighlightTexture(buttonOff)
     b:Show()
     return b
 end

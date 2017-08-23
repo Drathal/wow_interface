@@ -5,7 +5,7 @@ local GetXPExhaustion = _G.GetXPExhaustion
 local RAID_CLASS_COLORS = _G.RAID_CLASS_COLORS
 local format = string.format
 
-local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagMarkTooltip")
+local module = D:NewModule("MarkTooltip")
 
 function module:OnEnable()
     module.t = D.CreateMarkTooltip()
@@ -27,7 +27,7 @@ D.CreateMarkTooltip = function()
         for k, v in pairs(D.GetMarks()) do
             if v:IsMouseOver() and v.class and v.name and v.level then
                 GameTooltip:ClearLines()
-                GameTooltip:AddLine("XpFlag")
+                GameTooltip:AddLine(D.addonName)
                 GameTooltip:AddLine(k, RAID_CLASS_COLORS[v.class].r, RAID_CLASS_COLORS[v.class].g, RAID_CLASS_COLORS[v.class].b, 1)
                 GameTooltip:AddLine("Level: "..v.level, 1, 1, 1, 1)
                 GameTooltip:AddLine("XP: "..v.value.." / "..v.maxvalue.." ("..format("%.2f", v.value / v.maxvalue * 100).."%)", 1, 1, 1, 1)

@@ -5,54 +5,31 @@ local CreateFrame = _G.CreateFrame
 
 local marks = {}
 
-local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagMark", "AceEvent-3.0")
+local module = D:NewModule("Mark", "AceEvent-3.0")
 
 module.animationFrame = CreateFrame('Frame')
-module.animationFrame:SetScript('OnUpdate', function(self, elapsed)
+
+local function UpdateAnimation(self, elapsed)
     if D.Throttle(self, elapsed) then return end
+
+    local count = 0
     for _, mark in pairs(marks) do
         if mark and mark.to then
             D.AnimateX(mark)
+            count = count + 1
         end
     end
-end)
 
-function module:OnEnable()
-    module:RegisterEvent("PLAYER_ENTERING_WORLD")
-    module:RegisterEvent("PLAYER_XP_UPDATE")
-    module:RegisterEvent("PLAYER_LEVEL_UP")
-    module:RegisterEvent("PLAYER_UPDATE_RESTING")
-end
-
-function module:PLAYER_ENTERING_WORLD(event)
-    if C.player.show then
-        D.UpdatePlayerMark()
-    end
-    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
-end
-
-function module:PLAYER_UPDATE_RESTING(event)
-    if C.player.show then
-        D.UpdatePlayerMark()
+    if count == 0 then
+        module.animationFrame:SetScript("OnUpdate", nil)
     end
 end
 
-function module:PLAYER_XP_UPDATE(event, unit)
-    if unit ~= "player" then return end
-
-    if C.player.show then
-        D.UpdatePlayerMark()
-    end
+local function StartAnimation()
+    module.animationFrame:SetScript("OnUpdate", UpdateAnimation)
 end
 
-function module:PLAYER_LEVEL_UP(event, level)
-    D.level = tonumber(level);
-end
-
-
-D.XpFlagUpdateMark = function(f) end
-
-D.CreateMark = function(name, class)
+local function CreateMark(name, class)
     local rcolor = RAID_CLASS_COLORS[class]
     local m = CreateFrame("Frame", nil, _G['UIParent'])
     m:SetHeight(C.mark.height)
@@ -89,7 +66,7 @@ D.CreateMark = function(name, class)
     return m
 end
 
-D.UpdateMark = function(name, value, maxvalue, level, class)
+local function UpdateMark(name, value, maxvalue, level, class)
     if not marks then return end
 
     local name = name or D.nameRealm
@@ -97,7 +74,7 @@ D.UpdateMark = function(name, value, maxvalue, level, class)
     local maxvalue = maxvalue or UnitXPMax("PLAYER")
     local level = level or UnitLevel("player")
     local class = class or D.class
-    local m = marks[name] or D.CreateMark(name, class);
+    local m = marks[name] or CreateMark(name, class);
 
     if level == MAX_PLAYER_LEVEL then
         m:Hide()
@@ -114,12 +91,49 @@ D.UpdateMark = function(name, value, maxvalue, level, class)
     m.texture:SetTexture(D.GetMarkTexture(level, UnitLevel("player")))
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
+    if m.to then
+        StartAnimation()
+    end
+
     if not m.player then return end
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
-    D.XpFlagUpdateMark(m)
+    D:SendMessage("UpdateMark", m)
 end
-D.UpdatePlayerMark = D.UpdateMark
+
+
+function module:OnEnable()
+    module:RegisterEvent("PLAYER_ENTERING_WORLD")
+    module:RegisterEvent("PLAYER_XP_UPDATE")
+    module:RegisterEvent("PLAYER_LEVEL_UP")
+    module:RegisterEvent("PLAYER_UPDATE_RESTING")
+end
+
+function module:PLAYER_ENTERING_WORLD(event)
+    if C.player.show then
+        UpdateMark()
+    end
+    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
+end
+
+function module:PLAYER_UPDATE_RESTING(event)
+    if C.player.show then
+        UpdateMark()
+    end
+end
+
+function module:PLAYER_XP_UPDATE(event, unit)
+    if unit ~= "player" then return end
+
+    if C.player.show then
+        UpdateMark()
+    end
+end
+
+function module:PLAYER_LEVEL_UP(event, level)
+    D.level = tonumber(level);
+end
+
 
 D.DeleteMark = function(friend)
     if not friend then return end
@@ -135,3 +149,6 @@ end
 D.GetMarks = function()
     return marks
 end
+
+-- API
+D.UpdateMark = UpdateMark

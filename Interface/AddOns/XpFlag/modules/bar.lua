@@ -4,66 +4,34 @@ local _G = _G
 local GetXPExhaustion = _G.GetXPExhaustion
 
 local bars = {}
+local parent = select(2, unpack(C.bar.position))
 
-local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagBar", "AceEvent-3.0")
+if not C.player.show then return end
+if not C.bar.show then return end
+
+local module = D:NewModule("Bar", "AceEvent-3.0")
 
 module.animationFrame = CreateFrame('Frame')
-module.animationFrame:SetScript('OnUpdate', function(self, elapsed)
+
+local function UpdateAnimation(self, elapsed)
     if D.Throttle(self, elapsed) then return end
+
+    if not bars.player.to then
+        module.animationFrame:SetScript("OnUpdate", nil)
+    end
+
     D.AnimateWidth(bars.player)
-end)
-
-local function CreatePlayerBar()
-    bars.player = D.CreateBar()
-    return bars.player
 end
 
-local function UpdatePlayerBar()
-    local bar = bars.player or CreatePlayerBar()
-
-    if UnitLevel("player") == D.maxLevel then
-        bar:Hide()
-        return
-    end
-
-    bar.to = D.screenWidth * UnitXP("PLAYER") / UnitXPMax("PLAYER")
-    bar.texture:SetVertexColor(unpack(D.GetXpColor()))
+local function StartAnimation()
+    module.animationFrame:SetScript("OnUpdate", UpdateAnimation)
 end
 
-function module:OnEnable()
-    module:RegisterEvent("PLAYER_ENTERING_WORLD")
-    module:RegisterEvent("PLAYER_UPDATE_RESTING")
-    module:RegisterEvent("PLAYER_XP_UPDATE")
-end
-
-function module:PLAYER_ENTERING_WORLD(event)
-    if C.player.show and C.bar.show then
-        UpdatePlayerBar()
-    end
-    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
-end
-
-function module:PLAYER_UPDATE_RESTING(event)
-    if C.player.show then
-        UpdatePlayerBar()
-    end
-end
-
-function module:PLAYER_XP_UPDATE(event, unit)
-    if unit ~= "player" then return end
-
-    if C.player.show then
-        UpdatePlayerBar()
-    end
-end
-
-D.CreateBar = function()
-    if not C.bar.show then return end
-
-    local bar = CreateFrame("Frame", 'XPFLag-XpBar', _G['UIParent'])
+local function CreateBar()
+    local bar = CreateFrame("Frame", D.addonName..'-XpBar', parent)
     bar:SetHeight(C.bar.height)
     bar:SetWidth(0)
-    bar:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0)
+    bar:SetPoint(unpack(C.bar.position))
     bar:SetFrameLevel(1)
     bar:SetFrameStrata("DIALOG");
 
@@ -85,4 +53,48 @@ D.CreateBar = function()
     bar:Show()
 
     return bar
+end
+
+local function CreatePlayerBar()
+    bars.player = CreateBar()
+    return bars.player
+end
+
+local function UpdatePlayerBar()
+    local bar = bars.player or CreatePlayerBar()
+
+    if UnitLevel("player") == D.maxLevel then
+        bar:Hide()
+        module:UnregisterEvent("PLAYER_ENTERING_WORLD")
+        module:UnregisterEvent("PLAYER_UPDATE_RESTING")
+        module:UnregisterEvent("PLAYER_XP_UPDATE")
+        return
+    end
+
+    bar.to = parent:GetWidth() * UnitXP("PLAYER") / UnitXPMax("PLAYER")
+    bar.texture:SetVertexColor(unpack(D.GetXpColor()))
+
+    if bar.to then
+        StartAnimation()
+    end
+end
+
+function module:OnEnable()
+    module:RegisterEvent("PLAYER_ENTERING_WORLD")
+    module:RegisterEvent("PLAYER_UPDATE_RESTING")
+    module:RegisterEvent("PLAYER_XP_UPDATE")
+end
+
+function module:PLAYER_ENTERING_WORLD()
+    UpdatePlayerBar()
+    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
+end
+
+function module:PLAYER_UPDATE_RESTING()
+    UpdatePlayerBar()
+end
+
+function module:PLAYER_XP_UPDATE(event, unit)
+    if unit ~= "player" then return end
+    UpdatePlayerBar()
 end

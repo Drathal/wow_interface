@@ -15,7 +15,7 @@ local GetBuildInfo = _G.GetBuildInfo
 local CreateFrame = _G.CreateFrame
 
 -- init addon
-local AddOn = LibStub("AceAddon-3.0"):NewAddon(AddOnName, "AceEvent-3.0", "AceHook-3.0")
+local AddOn = LibStub("AceAddon-3.0"):NewAddon(AddOnName, "AceEvent-3.0")
 
 -- export to Global (kkthnx)
 Engine[1] = AddOn

@@ -31,8 +31,9 @@ C["sparkModel"] = {
 }
 
 C["bar"] = {
+    ["position"] = { "TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0 },
     ["show"] = true,
-    ["texture"] = "Interface\\AddOns\\XpFlag\\media\\bar.blp",
+    ["texture"] = "Interface\\AddOns\\"..D.addonName.."\\media\\bar.blp",
     ["backdrop"] = [[Interface\BUTTONS\WHITE8X8]],
 	["edge"] = [[Interface\BUTTONS\WHITE8X8]],
 	["height"] = 1,
@@ -45,8 +46,8 @@ C["mark"] = {
 	["flip"] = true,
 	["animationSpeed"] = 6,
 	["texture"] = {
-		["default"] = "Interface\\AddOns\\XpFlag\\media\\circle.tga",
-		["below"] = "Interface\\AddOns\\XpFlag\\media\\circle-minus.tga",
-		["over"] = "Interface\\AddOns\\XpFlag\\media\\circle-plus.tga",
+		["default"] = "Interface\\AddOns\\"..D.addonName.."\\media\\circle.tga",
+		["below"] = "Interface\\AddOns\\"..D.addonName.."\\media\\circle-minus.tga",
+		["over"] = "Interface\\AddOns\\"..D.addonName.."\\media\\circle-plus.tga",
 	}
 }

@@ -5,11 +5,17 @@ local UnitXP = _G.UnitXP
 local UnitXPMax = _G.UnitXPMax
 local random = math.random
 
-local MessagePrefix = 'XpFlag'
+local MessagePrefix = D.addonName
 local pingedFriends = {}
 local friendsWithAddon = {}
 
-local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagCommunication", "AceEvent-3.0")
+local MSG_TYPE_DATA = "DATA"
+local MSG_TYPE_REQUEST = "RESQUEST"
+local MSG_TYPE_DELETE = "DELETE"
+local MSG_TYPE_PING = "PING"
+local MSG_TYPE_PONG = "PONG"
+
+local module = D:NewModule("Communication", "AceEvent-3.0")
 
 function module:OnEnable()
     module:RegisterEvent("CHAT_MSG_ADDON")
@@ -18,7 +24,7 @@ function module:OnEnable()
 end
 
 local function CreateMessage(type, xp, max, level, class)
-    return (type or "XpFlag")..":"..(xp or UnitXP("PLAYER"))..":"..(max or UnitXPMax("PLAYER"))..":"..(level or UnitLevel("player"))..":"..(class or D.class)
+    return (type or MSG_TYPE_DATA)..":"..(xp or UnitXP("PLAYER"))..":"..(max or UnitXPMax("PLAYER"))..":"..(level or UnitLevel("player"))..":"..(class or D.class)
 end
 
 local function DecodeMessage(msg)
@@ -35,30 +41,30 @@ end
 
 D.SendRequest = function(target)
     if not string.match(target, "%-") then return end
-    SendAddonMessage(MessagePrefix, CreateMessage("XpFlagRequest"), "WHISPER", target)
+    SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_REQUEST), "WHISPER", target)
 end
 
 D.SendDelete = function(target)
     if not string.match(target, "%-") then return end
     D.DeleteMark(friend)
-    SendAddonMessage(MessagePrefix, CreateMessage("XpFlagDelete"), "WHISPER", target)
+    SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_DELETE), "WHISPER", target)
 end
 
 D.SendPing = function(target)
     if not string.match(target, "%-") then return end
     if friendsWithAddon[friend] or pingedFriends[friend] then return end
-    local x = SendAddonMessage(MessagePrefix, CreateMessage("XpFlagPing"), "WHISPER", target)
+    local x = SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_PING), "WHISPER", target)
     pingedFriends[target] = true
 end
 
 D.SendPong = function(target)
     if not string.match(target, "%-") then return end
-    local x = SendAddonMessage(MessagePrefix, CreateMessage("XpFlagPong"), "WHISPER", target)
+    local x = SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_PONG), "WHISPER", target)
 end
 
 D.SendUpdate = function(target)
     if not string.match(target, "%-") then return end
-    SendAddonMessage(MessagePrefix, CreateMessage("XpFlag"), "WHISPER", target)
+    SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_DATA), "WHISPER", target)
 end
 
 D.SendUpdates = function()
@@ -87,27 +93,27 @@ function module:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
 
     local msg = DecodeMessage(rawmsg)
 
-    if msg.type == "XpFlag" then
+    if msg.type == MSG_TYPE_DATA then
         D.UpdateMark(sender, msg.xp, msg.maxxp, msg.level, msg.class)
     end
 
-    if msg.type == "XpFlagPing" then
+    if msg.type == MSG_TYPE_PING then
         D.SendPong(sender)
     end
 
-    if msg.type == "XpFlagPong" then
+    if msg.type == MSG_TYPE_PONG then
         pingedFriends[sender] = nil
         friendsWithAddon[sender] = true
         D.On_FriendsFrame_Update()
     end
 
-    if msg.type == "XpFlagRequest" then
+    if msg.type == MSG_TYPE_REQUEST then
         D.SendUpdate(sender)
         D.UpdateMark(sender, msg.xp, msg.maxxp, msg.level, msg.class)
         D.On_FriendsFrame_Update()
     end
 
-    if msg.type == "XpFlagDelete" then
+    if msg.type == MSG_TYPE_DELETE then
         D.DeleteMark(sender)
         D.On_FriendsFrame_Update()
     end

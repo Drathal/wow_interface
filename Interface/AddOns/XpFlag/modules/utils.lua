@@ -4,8 +4,6 @@ local _G = _G
 local min = _G.math.min;
 local max = _G.math.max;
 
-D.XpFlagMarkModelHide = function(f) end
-
 D.Throttle = function(self, elapsed)
     self.delay = min((self.delay or 0.01) - elapsed, 0.15);
     if self.delay > 0 then return true end
@@ -41,6 +39,8 @@ D.AnimateWidth = function(f)
     end
 
     f:SetWidth(new)
+
+    return f.to
 end
 
 D.AnimateX = function(f)
@@ -53,7 +53,7 @@ D.AnimateX = function(f)
     if cur == f.to or abs(new - f.to) < 2 then
         new = f.to
         f.to = nil
-        D.XpFlagMarkModelHide(f)
+        D:SendMessage("AnimateXEnd", f)
     end
 
     local p1, p, p2, xOfs, yOfs = f:GetPoint()
@@ -61,4 +61,5 @@ D.AnimateX = function(f)
     f:SetPoint(p1, p, p2, new - f:GetWidth() / 2, 0);
 
     f.cur = new
+    return f.to
 end

@@ -4,10 +4,10 @@ local _G = _G
 local UIFrameFadeIn = _G.UIFrameFadeIn
 local UIFrameFadeOut = _G.UIFrameFadeOut
 
-local module = LibStub("AceAddon-3.0"):NewAddon("XPFlagSparkModel", "AceHook-3.0")
+local module = D:NewModule("SparkModel", "AceEvent-3.0")
 
 D.CreateSparkModel = function(parent)
-    local m = CreateFrame('PlayerModel', 'XpFlagPlayerSparkModel', parent)
+    local m = CreateFrame('PlayerModel', D.addonName..'-SparkModel', parent)
     m:SetPoint('CENTER')
     m:SetSize(C.sparkModel.size, C.sparkModel.size)
     m:SetModel(C.sparkModel.model)
@@ -15,21 +15,17 @@ D.CreateSparkModel = function(parent)
     return m
 end
 
-local function FadeInMarkModel(f)
+local function FadeInMarkModel(msg, f)
     if not f or not f.model then return end
     UIFrameFadeIn(f.model, 0.1, f.model:GetAlpha(), 0.5)
 end
 
-local function FadeOutMarkModel(f)
+local function FadeOutMarkModel(msg, f)
     if not f or not f.model then return end
     UIFrameFadeOut(f.model, 1, f.model:GetAlpha(), 0)
 end
 
 function module:OnEnable()
-    self:Hook(D, "XpFlagUpdateMark", function(f)
-        FadeInMarkModel(f)
-    end)
-    self:Hook(D, "XpFlagMarkModelHide", function(f)
-        FadeOutMarkModel(f)
-    end)
+    self:RegisterMessage("UpdateMark", FadeInMarkModel)
+    self:RegisterMessage("AnimateXEnd", FadeOutMarkModel)
 end

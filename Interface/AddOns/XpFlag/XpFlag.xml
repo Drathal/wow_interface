@@ -10,8 +10,8 @@
 
 	<!-- app -->
     <Script file="XpFlag.lua" />
+    <Script file="config.lua" />	
 	<Script file="modules\utils.lua" />
-	<Script file="config.lua" />	
     <Script file="modules\friends.lua" />
 	<Script file="modules\communication.lua" />
 	<Script file="modules\markTooltip.lua" />
