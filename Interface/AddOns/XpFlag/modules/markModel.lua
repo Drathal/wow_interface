@@ -15,7 +15,7 @@ D.CreateSparkModel = function(parent)
     return m
 end
 
-local function FadeInMarkModel(msg, f)
+local function FadeInMarkModel(msg, name, f)
     if not f or not f.model then return end
     UIFrameFadeIn(f.model, 0.1, f.model:GetAlpha(), 0.5)
 end

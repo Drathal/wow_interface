@@ -75,7 +75,7 @@ local function AddSpark(parent, num)
     return f
 end
 
-local function PlayXpSpark(msg, f)
+local function PlayXpSpark(msg, name, f)
     if not f.xpSparks then return end
     if not f.gain then return end
     f.xpSparks.Play(f.gain)

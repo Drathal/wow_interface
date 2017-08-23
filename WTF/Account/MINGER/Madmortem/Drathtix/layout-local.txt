@@ -34,3 +34,10 @@ X: -7
 Y: -132
 W: 640
 H: 512
+Frame: Butsu
+FrameLevel: 1
+Anchor: TOPLEFT
+X: 245
+Y: -220
+W: 222
+H: 96

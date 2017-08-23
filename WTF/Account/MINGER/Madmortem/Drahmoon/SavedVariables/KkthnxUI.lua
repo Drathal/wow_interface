@@ -10,12 +10,12 @@ KkthnxUIDataPerChar = {
 			-229.678985595703, -- [4]
 			-152.1533203125, -- [5]
 		},
-		["MinimapAnchor"] = {
+		["KkthnxUIBuffHeader"] = {
 			"TOPRIGHT", -- [1]
 			"UIParent", -- [2]
 			"TOPRIGHT", -- [3]
-			0, -- [4]
-			-30.0000267028809, -- [5]
+			-230.000274658203, -- [4]
+			-33.0000495910645, -- [5]
 		},
 		["ShiftHolder"] = {
 			"BOTTOM", -- [1]
@@ -38,12 +38,12 @@ KkthnxUIDataPerChar = {
 			5.00097274780273, -- [4]
 			193.000244140625, -- [5]
 		},
-		["RaidUtilityPanel"] = {
-			"TOPLEFT", -- [1]
+		["KkthnxUIDebuffHeader"] = {
+			"LEFT", -- [1]
 			"UIParent", -- [2]
-			"TOPLEFT", -- [3]
-			0, -- [4]
-			-111.99991607666, -- [5]
+			"LEFT", -- [3]
+			292.4990234375, -- [4]
+			-117.000259399414, -- [5]
 		},
 		["TicketStatusMoverAnchor"] = {
 			"TOP", -- [1]
@@ -66,12 +66,12 @@ KkthnxUIDataPerChar = {
 			-4.00016117095947, -- [4]
 			-234.999984741211, -- [5]
 		},
-		["TooltipAnchor"] = {
-			"BOTTOMRIGHT", -- [1]
+		["oUF_KkthnxPlayer_Castbar"] = {
+			"CENTER", -- [1]
 			"UIParent", -- [2]
-			"BOTTOMRIGHT", -- [3]
-			-131.999938964844, -- [4]
-			206.000030517578, -- [5]
+			"CENTER", -- [3]
+			10.9990968704224, -- [4]
+			-218.999771118164, -- [5]
 		},
 		["oUF_KkthnxParty"] = {
 			"LEFT", -- [1]
@@ -80,26 +80,19 @@ KkthnxUIDataPerChar = {
 			0, -- [4]
 			145.050155639648, -- [5]
 		},
-		["oUF_KkthnxTarget"] = {
-			"CENTER", -- [1]
-			"UIParent", -- [2]
-			"CENTER", -- [3]
-			226.999786376953, -- [4]
-			-172.000198364258, -- [5]
-		},
-		["oUF_KkthnxBossFrame5"] = {
-			"RIGHT", -- [1]
-			"UIParent", -- [2]
-			"RIGHT", -- [3]
-			-140.000122070313, -- [4]
-			-201.000061035156, -- [5]
-		},
 		["PetActionBarAnchor"] = {
 			"BOTTOM", -- [1]
 			"UIParent", -- [2]
 			"BOTTOM", -- [3]
 			2.00021195411682, -- [4]
 			0, -- [5]
+		},
+		["TooltipAnchor"] = {
+			"BOTTOMRIGHT", -- [1]
+			"UIParent", -- [2]
+			"BOTTOMRIGHT", -- [3]
+			-131.999938964844, -- [4]
+			206.000030517578, -- [5]
 		},
 		["ZoneAbilityHolder"] = {
 			"BOTTOM", -- [1]
@@ -108,19 +101,26 @@ KkthnxUIDataPerChar = {
 			203.499755859375, -- [4]
 			0, -- [5]
 		},
+		["RaidUtilityPanel"] = {
+			"TOPLEFT", -- [1]
+			"UIParent", -- [2]
+			"TOPLEFT", -- [3]
+			0, -- [4]
+			-111.99991607666, -- [5]
+		},
+		["TalkingHeadFrame"] = {
+			"TOP", -- [1]
+			"UIParent", -- [2]
+			"TOP", -- [3]
+			3.99996423721314, -- [4]
+			-45.7500152587891, -- [5]
+		},
 		["ReputationAnchor"] = {
 			"TOPRIGHT", -- [1]
 			"UIParent", -- [2]
 			"TOPRIGHT", -- [3]
 			-5.00056266784668, -- [4]
 			-233.499969482422, -- [5]
-		},
-		["ExtraActionBarHolder"] = {
-			"BOTTOM", -- [1]
-			"UIParent", -- [2]
-			"BOTTOM", -- [3]
-			-199.500442504883, -- [4]
-			0, -- [5]
 		},
 		["oUF_KkthnxTarget_Castbar"] = {
 			"CENTER", -- [1]
@@ -129,12 +129,12 @@ KkthnxUIDataPerChar = {
 			18.0002002716064, -- [4]
 			-35.9999084472656, -- [5]
 		},
-		["AlertFrameHolder"] = {
+		["AltPowerBarHolder"] = {
 			"TOP", -- [1]
 			"UIParent", -- [2]
 			"TOP", -- [3]
-			0, -- [4]
-			-45.0000724792481, -- [5]
+			8.00012493133545, -- [4]
+			-44.999942779541, -- [5]
 		},
 		["VehicleButtonAnchor"] = {
 			"CENTER", -- [1]
@@ -143,12 +143,12 @@ KkthnxUIDataPerChar = {
 			-224.499908447266, -- [4]
 			-249.000152587891, -- [5]
 		},
-		["AltPowerBarHolder"] = {
+		["AlertFrameHolder"] = {
 			"TOP", -- [1]
 			"UIParent", -- [2]
 			"TOP", -- [3]
-			8.00012493133545, -- [4]
-			-44.999942779541, -- [5]
+			0, -- [4]
+			-45.0000724792481, -- [5]
 		},
 		["oUF_KkthnxFocus"] = {
 			"RIGHT", -- [1]
@@ -157,12 +157,12 @@ KkthnxUIDataPerChar = {
 			-425.99951171875, -- [4]
 			-168.999862670898, -- [5]
 		},
-		["TalkingHeadFrame"] = {
-			"TOP", -- [1]
+		["ExtraActionBarHolder"] = {
+			"BOTTOM", -- [1]
 			"UIParent", -- [2]
-			"TOP", -- [3]
-			3.99996423721314, -- [4]
-			-45.7500152587891, -- [5]
+			"BOTTOM", -- [3]
+			-199.500442504883, -- [4]
+			0, -- [5]
 		},
 		["ActionBarAnchor"] = {
 			"BOTTOM", -- [1]
@@ -178,30 +178,30 @@ KkthnxUIDataPerChar = {
 			-231.999633789063, -- [4]
 			-168.999984741211, -- [5]
 		},
-		["oUF_KkthnxPlayer_Castbar"] = {
+		["oUF_KkthnxBossFrame5"] = {
+			"RIGHT", -- [1]
+			"UIParent", -- [2]
+			"RIGHT", -- [3]
+			-140.000122070313, -- [4]
+			-201.000061035156, -- [5]
+		},
+		["oUF_KkthnxTarget"] = {
 			"CENTER", -- [1]
 			"UIParent", -- [2]
 			"CENTER", -- [3]
-			10.9990968704224, -- [4]
-			-218.999771118164, -- [5]
+			226.999786376953, -- [4]
+			-172.000198364258, -- [5]
 		},
-		["KkthnxUIDebuffHeader"] = {
-			"LEFT", -- [1]
-			"UIParent", -- [2]
-			"LEFT", -- [3]
-			292.4990234375, -- [4]
-			-117.000259399414, -- [5]
-		},
-		["KkthnxUIBuffHeader"] = {
+		["MinimapAnchor"] = {
 			"TOPRIGHT", -- [1]
 			"UIParent", -- [2]
 			"TOPRIGHT", -- [3]
-			-230.000274658203, -- [4]
-			-33.0000495910645, -- [5]
+			0, -- [4]
+			-30.0000267028809, -- [5]
 		},
 	},
-	["Install"] = true,
-	["BottomBars"] = 3,
-	["RightBars"] = 2,
 	["BarsLocked"] = false,
+	["RightBars"] = 2,
+	["BottomBars"] = 3,
+	["Install"] = true,
 }

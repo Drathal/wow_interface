@@ -459,7 +459,7 @@ SkadaDB = {
 					["barslocked"] = true,
 					["hidden"] = true,
 					["y"] = 4.00001335144043,
-					["x"] = -0.000244140625,
+					["barfont"] = "KkthnxUI_Normal",
 					["title"] = {
 						["color"] = {
 							["a"] = 0,
@@ -499,7 +499,7 @@ SkadaDB = {
 					["barwidth"] = 234.999908447266,
 					["smoothing"] = true,
 					["bartexture"] = "Tooltip",
-					["barfont"] = "KkthnxUI_Normal",
+					["x"] = -0.000244140625,
 				}, -- [1]
 				{
 					["titleset"] = true,

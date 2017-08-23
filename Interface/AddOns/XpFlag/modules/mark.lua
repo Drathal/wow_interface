@@ -98,7 +98,7 @@ local function UpdateMark(name, value, maxvalue, level, class)
     if not m.player then return end
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
-    D:SendMessage("UpdateMark", name)
+    D:SendMessage("UpdateMark", name, m)
 end
 
 local function OnUpdateMark(event, friend, msg )

@@ -1,7 +1,7 @@
 
-LS_TOASTS_CFG_GLOBAL = nil
 LS_TOASTS_GLOBAL_CONFIG = {
 	["profileKeys"] = {
+		["Drahmoon - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 	},
@@ -10,7 +10,7 @@ LS_TOASTS_GLOBAL_CONFIG = {
 			["point"] = {
 				["y"] = -53,
 			},
-			["version"] = 7020010,
+			["version"] = 7020011,
 			["colors"] = {
 				["enabled"] = true,
 			},
@@ -50,9 +50,10 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["dnd"] = true,
 				},
 				["loot_common"] = {
-					["enabled"] = true,
 					["threshold"] = 1,
 					["ilvl"] = true,
+					["enabled"] = true,
+					["quest"] = false,
 					["dnd"] = false,
 				},
 				["recipe"] = {
