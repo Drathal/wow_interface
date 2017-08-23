@@ -1,6 +1,8 @@
 /WTF/Account/*
 !/WTF/Account/MINGER
 /Interface/AddOns/Blizzard_*
+/WTF/Account/MINGER/SavedVariables/Blizzard_*
+/WTF/Account/MINGER/SavedVariables/!BugGrabber.lua
 /Interface/AddOns/Zygor*
 /AskMrRobotClient
 /Cache
@@ -25,6 +27,11 @@ Launcher.db
 Config.wtf
 config-cache.old
 config-cache.wtf
+layout-local.txt
+chat-cache.txt
+AddOns.txt
+Blizzard_CombatLog.lua
+*.lua.bak
 CUFProfiles.*
 
 
