@@ -1,2 +1,0 @@
-dSetup: enabled
-DynastyCore: disabled
