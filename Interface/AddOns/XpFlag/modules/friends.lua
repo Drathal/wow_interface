@@ -108,7 +108,7 @@ local function OnFriendsFrameUpdate()
     end
 
     for friend, button in pairs(online) do
-
+        RemoveOffineFriends()
         Ping(friend)
 
         if not hasAddon[friends] then return end
