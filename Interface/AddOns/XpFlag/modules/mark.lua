@@ -61,8 +61,6 @@ local function CreateMark(name, class)
     m.model = D.CreateSparkModel(m)
     m.xpSparks = D.CreateSparks(m)
 
-    --D.On_FriendsFrame_Update()
-
     return m
 end
 

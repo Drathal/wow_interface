@@ -6,8 +6,6 @@ local UnitXPMax = _G.UnitXPMax
 local random = math.random
 
 local MessagePrefix = D.addonName
-local pingedFriends = {}
-local friendsWithAddon = {}
 
 local MSG_TYPE_DATA = "DATA"
 local MSG_TYPE_REQUEST = "RESQUEST"
@@ -52,19 +50,18 @@ end
 
 D.SendPing = function(target)
     if not string.match(target, "%-") then return end
-    if friendsWithAddon[friend] or pingedFriends[friend] then return end
-    local x = SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_PING), "WHISPER", target)
-    pingedFriends[target] = true
+    SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_PING), "WHISPER", target)
 end
 
 D.SendPong = function(target)
     if not string.match(target, "%-") then return end
-    local x = SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_PONG), "WHISPER", target)
+    SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_PONG), "WHISPER", target)
 end
 
 D.SendUpdate = function(target)
     if not string.match(target, "%-") then return end
     SendAddonMessage(MessagePrefix, CreateMessage(MSG_TYPE_DATA), "WHISPER", target)
+    D:SendMessage("SendData", sender)
 end
 
 D.SendUpdates = function()
@@ -73,16 +70,6 @@ D.SendUpdates = function()
             D.SendUpdate(target)
         end
     end
-end
-
-D.ShouldSendPing = function(friend)
-    if friendsWithAddon[friend] or pingedFriends[friend] then return end
-    return true
-end
-
-D.hasAddon = function(friend)
-    if not friendsWithAddon[friend] then return end
-    return true
 end
 
 function module:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
@@ -95,27 +82,27 @@ function module:CHAT_MSG_ADDON(event, pre, rawmsg, chan, sender)
 
     if msg.type == MSG_TYPE_DATA then
         D.UpdateMark(sender, msg.xp, msg.maxxp, msg.level, msg.class)
+        D:SendMessage("ReceiveData", sender, msg)
     end
 
     if msg.type == MSG_TYPE_PING then
         D.SendPong(sender)
+        D:SendMessage("ReceivePing", sender, msg)
     end
 
     if msg.type == MSG_TYPE_PONG then
-        pingedFriends[sender] = nil
-        friendsWithAddon[sender] = true
-        D.On_FriendsFrame_Update()
+        D:SendMessage("ReceivePong", sender, msg)
     end
 
     if msg.type == MSG_TYPE_REQUEST then
         D.SendUpdate(sender)
         D.UpdateMark(sender, msg.xp, msg.maxxp, msg.level, msg.class)
-        D.On_FriendsFrame_Update()
+        D:SendMessage("ReceiveRequest", sender, msg)
     end
 
     if msg.type == MSG_TYPE_DELETE then
         D.DeleteMark(sender)
-        D.On_FriendsFrame_Update()
+        D:SendMessage("ReceiveDelete", sender, msg)
     end
 end
 
