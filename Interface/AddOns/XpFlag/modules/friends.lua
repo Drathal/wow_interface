@@ -41,14 +41,6 @@ local function GetFriendNameByButton(button)
     return nil
 end
 
-local function OnStateButtonClick(button, friend)
-    if D.GetMark(friend) then
-        D.SendDelete(friend)
-    else
-        D.SendRequest(friend)
-    end
-end
-
 local function SetButtonTexture(button, state)
     if not button then return end
 
@@ -86,14 +78,18 @@ local function RemoveOffineFriends()
 end
 
 local function Ping(friend)
-    if not pinged[friend] and not hasAddon[friends] then
-        D.SendPing(friend)
-        pinged[friend] = true
-    end
+    if pinged[friend] or hasAddon[friends] then return end
+    D.SendPing(friend)
+    pinged[friend] = true
 end
 
-local function OnPong(event, friend, msg)
-    hasAddon[friend] = true
+local function OnStateButtonClick(button, friend)
+    if D.GetMark(friend) then
+        D.DeleteMark(friend)
+        D.SendDelete(friend)
+    else
+        D.SendRequest(friend)
+    end
 end
 
 local function OnFriendsFrameUpdate()
@@ -102,34 +98,44 @@ local function OnFriendsFrameUpdate()
 
     for i = 1, #buttons do
         local friend = GetFriendNameByButton(buttons[i])
-        if not friend then break end
-        buttons[i].friendName = friend
-        online[friend] = buttons[i]
+        if friend then
+            online[friend] = buttons[i]
+        end
     end
 
     for friend, button in pairs(online) do
         RemoveOffineFriends()
         Ping(friend)
 
-        if not hasAddon[friends] then return end
-        if not button:IsShown() then break end
+        if hasAddon[friend] and button:IsShown() then
+            if not button.statusbutton then
+                button.statusbutton = CreateMiniButton(button)
+                button.statusbutton:SetScript("OnClick", function(self) OnStateButtonClick(self, friend) end)
+            end
 
-        if not button.statusbutton then
-            button.statusbutton = CreateMiniButton(button)
-            button.statusbutton:SetScript("OnClick", function(self) OnStateButtonClick(self, friend) end)
+            SetButtonTexture(button.statusbutton, D.GetMark(friend))
         end
 
-        SetButtonTexture(button.statusbutton, D.GetMark(friend))
     end
 end
 
-function module:FRIENDLIST_UPDATE()
-    --D.OnFriendsFrameUpdate()
+local function OnPong(event, friend)
+    hasAddon[friend] = true
+    OnFriendsFrameUpdate()
+end
+
+local function OnNewMark(event, friend)
+    OnFriendsFrameUpdate()
+end
+
+local function OnDeleteMark(event, friend)
+    OnFriendsFrameUpdate()
 end
 
 function module:OnEnable()
-    module:RegisterEvent("FRIENDLIST_UPDATE")
     hooksecurefunc(_G['FriendsFrameFriendsScrollFrame'], 'update', OnFriendsFrameUpdate)
     hooksecurefunc('FriendsFrame_UpdateFriends', OnFriendsFrameUpdate)
     self:RegisterMessage("ReceivePong", OnPong)
+    self:RegisterMessage("CreateMark", OnNewMark)
+    self:RegisterMessage("DeleteMark", OnDeleteMark)
 end

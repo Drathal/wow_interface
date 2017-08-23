@@ -53,6 +53,8 @@ local function CreateMark(name, class)
     m.name = name
     m.class = class
 
+    D:SendMessage("CreateMark", name)
+
     if name ~= D.nameRealm then return m end
 
     m.player = true;
@@ -87,7 +89,7 @@ local function UpdateMark(name, value, maxvalue, level, class)
     m.to = D.screenWidth * value / maxvalue
 
     m.texture:SetTexture(D.GetMarkTexture(level, UnitLevel("player")))
-    m.texture:SetVertexColor(unpack(D.GetXpColor()))
+    m.texture:SetVertexColor(RAID_CLASS_COLORS[class].r, RAID_CLASS_COLORS[class].g, RAID_CLASS_COLORS[class].b)
 
     if m.to then
         StartAnimation()
@@ -96,7 +98,7 @@ local function UpdateMark(name, value, maxvalue, level, class)
     if not m.player then return end
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
-    D:SendMessage("UpdateMark", m)
+    D:SendMessage("UpdateMark", name)
 end
 
 
@@ -138,9 +140,10 @@ D.DeleteMark = function(friend)
     if not marks[friend] then return end
     marks[friend]:Hide()
     marks[friend] = nil
+    D:SendMessage("DeleteMark", friend)
 end
 
-D.GetMark = function()
+D.GetMark = function(friend)
     return marks[friend]
 end
 
