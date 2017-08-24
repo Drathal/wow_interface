@@ -107,6 +107,10 @@ end
 
 function module:PLAYER_XP_UPDATE(event, unit)
     if unit ~= "player" then return end
+    if D.IsMaxLevel() then
+        module:UnregisterEvent("PLAYER_XP_UPDATE")
+        return
+    end
     SendUpdates()
 end
 

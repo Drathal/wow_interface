@@ -6,12 +6,14 @@ local buttonOn = "Interface\\COMMON\\Indicator-Green"
 local pinged = {}
 local online = {}
 local hasAddon = {}
+local throttleTime = 10
 
 local module = D:NewModule("Friends", "AceEvent-3.0")
 
 local function GetBNFriendName(id)
     local bnetIDAccount, _, _, isBattleTagPresence, characterName, bnetIDGameAccount, client, isOnline, _, isAFK, isDND, _, _, isRIDFriend, _, _ = BNGetFriendInfo(id)
     if not bnetIDGameAccount then return end
+    if not CanCooperateWithGameAccount(bnetIDGameAccount) then return end
     local _, characterName, client, realmName, realmID, faction, race, class, _, zoneName, _, _, _, _, _, _ = BNGetGameAccountInfo(bnetIDGameAccount)
 
     if not isOnline or not characterName or client ~= 'WoW' then return nil end
@@ -35,7 +37,7 @@ local function GetFriendNameByButton(button)
     if button.buttonType == FRIENDS_BUTTON_TYPE_BNET then
         return GetBNFriendName(button.id)
     elseif button.buttonType == FRIENDS_BUTTON_TYPE_WOW then
-        -- return GetFriendName(button.id)
+        return GetFriendName(button.id)
     end
 
     return nil
@@ -78,10 +80,10 @@ local function RemoveOffineFriends()
 end
 
 local function Ping(friend)
-    -- pinged[friend] or
+    if pinged[friend] and pinged[friend] > GetTime() - throttleTime then return end
     if hasAddon[friends] then return end
     D.SendPing(friend)
-    pinged[friend] = true
+    pinged[friend] = GetTime()
 end
 
 local function OnStateButtonClick(button, friend)

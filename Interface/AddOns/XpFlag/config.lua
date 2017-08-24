@@ -3,7 +3,61 @@ local D, C, L = unpack(select(2, ...))
 local _G = _G
 local GameFontNormal = _G.GameFontNormal
 
-C["debug"] = true
+local options = nil
+
+local function Get(section)
+    return function(info)
+        local key = info[#info]
+        if section then
+            return C.db.profile[section][key]
+        end
+        return C.db.profile[key]
+    end
+end
+
+local function Set(moduleName)
+    return function(info, value)
+        local key = info[#info]
+        if moduleName then
+            C.db.profile[moduleName][key] = value
+            local module = D:GetModule(moduleName)
+            module:Update()
+        else
+            C.db.profile[key] = value
+        end
+    end
+end
+
+D.options = {
+    name = D.addonName,
+    type = 'group',
+    args = {
+        bar = {
+            type = 'group',
+            name = L["SECTION_BAR"],
+            get = Get('bar'),
+            set = Set('bar'),
+            args = {
+                show = {
+                    type = 'toggle',
+                    name = L["SHOW_PLAYER_XP_BAR_LABEL"],
+                    desc = L["SHOW_PLAYER_XP_BAR_DESC"]
+                },
+            }
+        },
+
+    },
+}
+
+function D:OnInitialize()
+    local default = {}
+    default.profile = CopyTable(C)
+
+    C.db = LibStub("AceDB-3.0"):New("XpFlagDB", default, "Default")
+
+    LibStub("AceConfigRegistry-3.0"):RegisterOptionsTable(self.addonName, self.options)
+    LibStub("AceConfigDialog-3.0"):AddToBlizOptions(self.addonName)
+end
 
 C["player"] = {
     ["show"] = true,

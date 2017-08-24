@@ -19,15 +19,14 @@ local AddOn = LibStub("AceAddon-3.0"):NewAddon(AddOnName, "AceEvent-3.0")
 
 -- export to Global (kkthnx)
 Engine[1] = AddOn
-Engine[2] = {}
-Engine[3] = {}
+Engine[2] = {} -- C config default
+Engine[3] = {} -- L locale
 _G[AddOnName] = Engine
 
 -- Addon API
 AddOn.addonName = AddOnName
 AddOn.title = GetAddOnMetadata(AddOnName, "Title")
 AddOn.version = GetAddOnMetadata(AddOnName, "Version")
-AddOn.maxLevel = MAX_PLAYER_LEVEL
 AddOn.name = UnitName("player")
 AddOn.GUID = UnitGUID("player")
 AddOn.class = select(2, UnitClass("player"))

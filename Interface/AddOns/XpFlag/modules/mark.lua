@@ -76,7 +76,7 @@ local function UpdateMark(name, value, maxvalue, level, class)
     local class = class or D.class
     local m = marks[name] or CreateMark(name, class);
 
-    if level == MAX_PLAYER_LEVEL then
+    if D.IsMaxLevel(level) then
         m:Hide()
         return
     end
@@ -109,6 +109,15 @@ local function OnDeleteMark(event, friend )
     DeleteMark(friend)
 end
 
+local function UnregisterOnMaxLevel()
+    if D.IsMaxLevel() then
+        module:UnregisterEvent("PLAYER_UPDATE_RESTING");
+        module:UnregisterEvent("PLAYER_XP_UPDATE");
+        module:UnregisterEvent("PLAYER_LEVEL_UP");
+        return true
+    end
+end
+
 function module:OnEnable()
     module:RegisterEvent("PLAYER_ENTERING_WORLD")
     module:RegisterEvent("PLAYER_XP_UPDATE")
@@ -118,16 +127,20 @@ function module:OnEnable()
     self:RegisterMessage("ReceiveData", OnUpdateMark)
     self:RegisterMessage("ReceiveRequest", OnUpdateMark)
     self:RegisterMessage("ReceiveDelete", OnDeleteMark)
+
+    UnregisterOnMaxLevel()
 end
 
 function module:PLAYER_ENTERING_WORLD(event)
     if C.player.show then
         UpdateMark()
     end
-    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
+    module:UnregisterEvent("PLAYER_ENTERING_WORLD")
 end
 
 function module:PLAYER_UPDATE_RESTING(event)
+    if UnregisterOnMaxLevel() then return end
+
     if C.player.show then
         UpdateMark()
     end
@@ -135,6 +148,7 @@ end
 
 function module:PLAYER_XP_UPDATE(event, unit)
     if unit ~= "player" then return end
+    if UnregisterOnMaxLevel() then return end
 
     if C.player.show then
         UpdateMark()
@@ -142,7 +156,10 @@ function module:PLAYER_XP_UPDATE(event, unit)
 end
 
 function module:PLAYER_LEVEL_UP(event, level)
-    D.level = tonumber(level);
+    if UnregisterOnMaxLevel() then return end
+    if C.player.show then
+        UpdateMark()
+    end
 end
 
 local function DeleteMark(friend)

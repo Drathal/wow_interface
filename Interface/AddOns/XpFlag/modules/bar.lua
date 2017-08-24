@@ -10,10 +10,7 @@ local UnitXPMax = _G.UnitXPMax
 local bars = {}
 local parent = select(2, unpack(C.bar.position))
 
-if not C.player.show then return end
-if not C.bar.show then return end
-
-local module = D:NewModule("Bar", "AceEvent-3.0")
+local module = D:NewModule("bar", "AceEvent-3.0")
 
 module.animationFrame = CreateFrame('Frame')
 
@@ -59,46 +56,66 @@ local function CreateBar()
     return bar
 end
 
-local function CreatePlayerBar()
+function module:OnEnable()
+    if not C.player.show then return end
+    if not C.db.profile.bar.show then return end
+
+    self:RegisterEvent("PLAYER_ENTERING_WORLD")
+    self:RegisterEvent("PLAYER_UPDATE_RESTING")
+    self:RegisterEvent("PLAYER_XP_UPDATE")
+end
+
+function module:OnDisable()
+    if bars.player then
+        bars.player:Hide()
+    end
+    self:UnregisterEvent("PLAYER_UPDATE_RESTING")
+    self:UnregisterEvent("PLAYER_XP_UPDATE")
+end
+
+function module:CreatePlayerBar()
     bars.player = CreateBar()
     return bars.player
 end
 
-local function UpdatePlayerBar()
-    local bar = bars.player or CreatePlayerBar()
+function module:UpdatePlayerBar()
+    local bar = bars.player or self:CreatePlayerBar()
 
-    if UnitLevel("player") == D.maxLevel then
-        bar:Hide()
-        module:UnregisterEvent("PLAYER_ENTERING_WORLD")
-        module:UnregisterEvent("PLAYER_UPDATE_RESTING")
-        module:UnregisterEvent("PLAYER_XP_UPDATE")
+    if D.IsMaxLevel() then
+        module:Disable()
         return
     end
 
     bar.to = parent:GetWidth() * UnitXP("PLAYER") / UnitXPMax("PLAYER")
     bar.texture:SetVertexColor(unpack(D.GetXpColor()))
+    bar:Show()
 
-    if bar.to then
+    if bar.to and bar.to > 0 then
         StartAnimation()
     end
 end
 
-function module:OnEnable()
-    module:RegisterEvent("PLAYER_ENTERING_WORLD")
-    module:RegisterEvent("PLAYER_UPDATE_RESTING")
-    module:RegisterEvent("PLAYER_XP_UPDATE")
-end
-
 function module:PLAYER_ENTERING_WORLD()
-    UpdatePlayerBar()
-    module:UnregisterEvent("PLAYER_ENTERING_WORLD");
+    self:UpdatePlayerBar()
+    self:UnregisterEvent("PLAYER_ENTERING_WORLD");
 end
 
 function module:PLAYER_UPDATE_RESTING()
-    UpdatePlayerBar()
+    self:UpdatePlayerBar()
 end
 
 function module:PLAYER_XP_UPDATE(event, unit)
     if unit ~= "player" then return end
-    UpdatePlayerBar()
+    self:UpdatePlayerBar()
+end
+
+function module:Update()
+    if not C.db.profile.bar.show then
+        self:Disable()
+        return
+    elseif not module:IsEnabled() then
+        self:Enable()
+    end
+
+    self:UpdatePlayerBar()
 end

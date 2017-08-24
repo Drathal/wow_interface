@@ -1,12 +1,31 @@
 local D, C, L = unpack(select(2, ...))
 
 local _G = _G
-local min = _G.math.min;
-local max = _G.math.max;
+local min = math.min;
+local max = math.max;
+local floor = math.floor
 local GetXPExhaustion = _G.GetXPExhaustion
 local GetFramerate = _G.GetFramerate
+local GetExpansionLevel = _G.GetExpansionLevel
+local UnitLevel = _G.UnitLevel
 
-D.Throttle = function(self, elapsed)
+local function CopyTable(src, dest)
+    if type(dest) ~= "table" then
+        dest = {}
+    end
+
+    for k, v in next, src do
+        if type(v) == "table" then
+            dest[k] = CopyTable(v, dest[k])
+        else
+            dest[k] = v
+        end
+    end
+
+    return dest
+end
+
+local function Throttle(self, elapsed)
     self.delay = min((self.delay or 0.01) - elapsed, 0.15);
     if self.delay > 0 then return true end
     self.delay = 12 / GetFramerate();
@@ -14,11 +33,11 @@ D.Throttle = function(self, elapsed)
     return nil
 end
 
-D.GetXpColor = function()
+local function GetXpColor()
     return GetXPExhaustion() and C.player.colorRested or C.player.color
 end
 
-D.GetMarkTexture = function(friend, player)
+local function GetMarkTexture(friend, player)
     local texture = C.mark.texture.default
     if tonumber(friend) < tonumber(player) then
         texture = C.mark.texture.below
@@ -28,7 +47,7 @@ D.GetMarkTexture = function(friend, player)
     return texture
 end
 
-D.AnimateWidth = function(f)
+local function AnimateWidth(f)
     if not f then return end
     if not f.to then return end
 
@@ -45,7 +64,7 @@ D.AnimateWidth = function(f)
     return f.to
 end
 
-D.AnimateX = function(f)
+local function AnimateX(f)
     if not f then return end
     if not f.to then return end
 
@@ -65,3 +84,17 @@ D.AnimateX = function(f)
     f.cur = new
     return f.to
 end
+
+local function IsMaxLevel(level)
+    return MAX_PLAYER_LEVEL_TABLE[GetExpansionLevel()] == (level or UnitLevel("player"));
+end
+
+-- API
+D.FormatNumber = FormatNumber
+D.Throttle = Throttle
+D.GetXpColor = GetXpColor
+D.GetMarkTexture = GetMarkTexture
+D.AnimateWidth = AnimateWidth
+D.AnimateX = AnimateX
+D.IsMaxLevel = IsMaxLevel
+D.CopyTable = CopyTable
