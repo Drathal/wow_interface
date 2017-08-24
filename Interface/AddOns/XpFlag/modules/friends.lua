@@ -22,7 +22,7 @@ local function GetBNFriendName(id)
 end
 
 local function GetFriendName(id)
-    local name, level, class, area, connected, status, note, raf, id = GetFriendInfo(i)
+    local name, level, class, area, connected, status, note, raf, id = GetFriendInfo(id)
 
     if not name or not connected then return nil end
 

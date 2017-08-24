@@ -12,22 +12,6 @@ local parent = select(2, unpack(C.bar.position))
 
 local module = D:NewModule("bar", "AceEvent-3.0")
 
-module.animationFrame = CreateFrame('Frame')
-
-local function UpdateAnimation(self, elapsed)
-    if D.Throttle(self, elapsed) then return end
-
-    if not bars.player.to then
-        module.animationFrame:SetScript("OnUpdate", nil)
-    end
-
-    D.AnimateWidth(bars.player)
-end
-
-local function StartAnimation()
-    module.animationFrame:SetScript("OnUpdate", UpdateAnimation)
-end
-
 local function CreateBar()
     local bar = CreateFrame("Frame", D.addonName..'-XpBar', parent)
     bar:SetHeight(C.bar.height)
@@ -56,10 +40,18 @@ local function CreateBar()
     return bar
 end
 
+function module:OnAnimation(elapsed)
+    if not bars.player.to then
+        self:Stop()
+    end
+
+    D.AnimateWidth(bars.player)
+end
+
 function module:OnEnable()
     if not C.player.show then return end
     if not C.db.profile.bar.show then return end
-
+    
     self:RegisterEvent("PLAYER_ENTERING_WORLD")
     self:RegisterEvent("PLAYER_UPDATE_RESTING")
     self:RegisterEvent("PLAYER_XP_UPDATE")
@@ -75,6 +67,7 @@ end
 
 function module:CreatePlayerBar()
     bars.player = CreateBar()
+    bars.player.anim = D.CreateUpdateAnimation(self.OnAnimation)
     return bars.player
 end
 
@@ -91,7 +84,7 @@ function module:UpdatePlayerBar()
     bar:Show()
 
     if bar.to and bar.to > 0 then
-        StartAnimation()
+        bar.anim.Start()
     end
 end
 

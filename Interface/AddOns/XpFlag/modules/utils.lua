@@ -33,6 +33,25 @@ local function Throttle(self, elapsed)
     return nil
 end
 
+local function CreateUpdateAnimation(cb)
+    local anim = CreateFrame('Frame')
+
+    anim.UpdateAnimation = function(self, elapsed)
+        if Throttle(self, elapsed) then return end
+        cb(anim, elapsed)
+    end
+
+    anim.Start = function()
+        anim:SetScript("OnUpdate", anim.UpdateAnimation)
+    end
+
+    anim.Stop = function()
+        anim:SetScript("OnUpdate", nil)
+    end
+
+    return anim    
+end
+
 local function GetXpColor()
     return GetXPExhaustion() and C.player.colorRested or C.player.color
 end
@@ -98,3 +117,4 @@ D.AnimateWidth = AnimateWidth
 D.AnimateX = AnimateX
 D.IsMaxLevel = IsMaxLevel
 D.CopyTable = CopyTable
+D.CreateUpdateAnimation = CreateUpdateAnimation

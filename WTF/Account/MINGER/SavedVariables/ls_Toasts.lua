@@ -10,10 +10,10 @@ LS_TOASTS_GLOBAL_CONFIG = {
 			["point"] = {
 				["y"] = -53,
 			},
+			["version"] = 7020011,
 			["colors"] = {
 				["enabled"] = true,
 			},
-			["version"] = 7020011,
 			["types"] = {
 				["garrison_6_0"] = {
 					["enabled"] = false,
@@ -29,19 +29,34 @@ LS_TOASTS_GLOBAL_CONFIG = {
 				},
 				["loot_special"] = {
 					["enabled"] = true,
+					["threshold"] = 1,
 					["ilvl"] = true,
 					["dnd"] = false,
-					["threshold"] = 1,
 				},
 				["achievement"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
-				["world"] = {
+				["transmog"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
 				["archaeology"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["garrison_7_0"] = {
+					["enabled"] = true,
+					["dnd"] = true,
+				},
+				["loot_common"] = {
+					["threshold"] = 1,
+					["ilvl"] = true,
+					["enabled"] = true,
+					["quest"] = false,
+					["dnd"] = false,
+				},
+				["recipe"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
@@ -50,22 +65,7 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["dnd"] = false,
 					["threshold"] = 1,
 				},
-				["recipe"] = {
-					["enabled"] = true,
-					["dnd"] = false,
-				},
-				["loot_common"] = {
-					["threshold"] = 1,
-					["ilvl"] = true,
-					["dnd"] = false,
-					["quest"] = false,
-					["enabled"] = true,
-				},
-				["garrison_7_0"] = {
-					["enabled"] = true,
-					["dnd"] = true,
-				},
-				["transmog"] = {
+				["world"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},

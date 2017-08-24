@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 2344,
 	["lastSanitation"] = 3,
+	["session"] = 2357,
 	["errors"] = {
 		{
 			["message"] = "SendAddonMessage(): Whisper message missing target player!",
@@ -389,21 +389,13 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [51]
 		{
-			["message"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:465: script ran too long",
-			["time"] = "2017/08/16 13:22:10",
-			["locals"] = "self = <unnamed> {\n SoundRepeatStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:87\n DoResize = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:285\n xOffset = 36.000610351563\n adjustedMax = false\n adjustedMin = false\n EnsureControlledRegions = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:125\n anchorPoint = \"RIGHT\"\n DoControlChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:542\n currentHeight = 59.999877929688\n GetXOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:190\n background = <unnamed> {\n }\n SetOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:181\n SetAnchor = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:168\n SendChat = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:140\n toShow = true\n Suspend = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:514\n SetOffsetAnim = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:198\n Resume = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:518\n suspended = 0\n cloneId = \"\"\n xOffsetAnim = 0\n yOffsetAnim = 0\n needToControlChildren = false\n relativePoint = \"CENTER\"\n currentWidth = 1858.0000610352\n SoundStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:94\n SoundPlay = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:127\n Expand = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:469\n EnsureTrays = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:266\n relativeTo = WeakAurasFrame {\n }\n previousWidth = 1858.0000610352\n Collapse = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:466\n id = \"T19 - Nighthold\"\n ResetPosition = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:162\n Scale = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:655\n previousHeight = 59.999877929688\n ControlChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:529\n 0 = <userdata>\n controlledRegions = <table> {\n }\n GetYOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:194\n trays = <table> {\n }\n PositionChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:368\n yOffset = 332.00012207031\n RunCode = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:144\n}\nchildData = <table> {\n glow = false\n text1FontSize = 22\n disjunctive = \"any\"\n untrigger = <table> {\n }\n anchorPoint = \"CENTER\"\n activeTriggerMode = -10\n customTextUpdate = \"update\"\n icon = true\n text1Enabled = true\n animation = <table> {\n }\n trigger = <table> {\n }\n desaturate = false\n text1Point = \"CENTER\"\n yOffset = 0\n text2FontFlags = \"OUTLINE\"\n height = 60\n parent = \"T19 - Nighthold\"\n load = <table> {\n }\n displayIcon = 135794\n cooldownTextEnabled = true\n selfPoint = \"CENTER\"\n text2Containment = \"INSIDE\"\n numTriggers = 1\n text1Color = <table> {\n }\n text1Font = \"Accidental Presidency\"\n text1Containment = \"INSIDE\"\n text2Color = <table> {\n }\n regionType = \"icon\"\n width = 60\n text2Enabled = false\n text2FontSize = 24\n xOffset = 0\n init_completed = 1\n text1 = \" \"\n id = \"TC - Feast of Blood (Tank)\"\n text2 = \"%p\"\n zoom = 0\n auto = true\n text1FontFlags = \"OUTLINE\"\n additional_triggers = <table> {\n }\n text2Font = \"Friz Quadrata TT\"\n frameStrata = 1\n anchorFrameType = \"SCREEN\"\n stickyDuration = false\n text2Point = \"CENTER\"\n inverse = false\n color = <table> {\n }\n conditions = <table> {\n }\n cooldown = true\n actions = <table> {\n }\n}\nchildRegion = <unnamed> {\n SetText1Height = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:502\n Shadow = <unnamed> {\n }\n xOffset = 0\n adjustedMax = false\n Expand = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:402\n yO",
-			["stack"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:465: in function `PositionChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:551: in function `DoControlChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:538: in function `ControlChildren'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:371: in function `onFinished'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2716: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2599>",
-			["session"] = 2015,
-			["counter"] = 1,
-		}, -- [52]
-		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:30: Usage: NewAddon([object,] name, [lib, lib, lib, ...]): 'name' - Addon 'XpFlag' already exists.",
 			["time"] = "2017/08/16 13:34:08",
 			["locals"] = "(*temporary) = \"Usage: NewAddon([object,] name, [lib, lib, lib, ...]): 'name' - Addon 'XpFlag' already exists.\"\n",
 			["stack"] = "[C]: ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:150: in function `NewAddon'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:30: in main chunk",
 			["session"] = 2018,
 			["counter"] = 1,
-		}, -- [53]
+		}, -- [52]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\init.lua:16: attempt to index global 'Addon' (a nil value)",
 			["time"] = "2017/08/16 13:52:26",
@@ -411,7 +403,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\init.lua:16: in main chunk",
 			["session"] = 2020,
 			["counter"] = 1,
-		}, -- [54]
+		}, -- [53]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\init.lua:38: bad argument #2 to 'tonumber' (number expected, got string)",
 			["time"] = "2017/08/16 14:03:13",
@@ -419,7 +411,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `tonumber'\nInterface\\AddOns\\XpFlag\\modules\\init.lua:38: in main chunk",
 			["session"] = 2022,
 			["counter"] = 1,
-		}, -- [55]
+		}, -- [54]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\init.lua:35: attempt to index global 'Addon' (a nil value)",
 			["time"] = "2017/08/16 14:09:45",
@@ -427,7 +419,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\init.lua:35: in main chunk",
 			["session"] = 2025,
 			["counter"] = 1,
-		}, -- [56]
+		}, -- [55]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\utils.lua:24: attempt to index global 'K' (a nil value)",
 			["time"] = "2017/08/16 14:33:59",
@@ -435,7 +427,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\utils.lua:24: in main chunk",
 			["session"] = 2031,
 			["counter"] = 2,
-		}, -- [57]
+		}, -- [56]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:97: bad argument #2 to 'max' (number expected, got nil)",
 			["time"] = "2017/08/16 14:39:22",
@@ -443,7 +435,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: ?\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:97: in function `animateMark'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:69: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:58>",
 			["session"] = 2034,
 			["counter"] = 99,
-		}, -- [58]
+		}, -- [57]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:80: unexpected symbol near ')'",
 			["time"] = "2017/08/16 14:48:32",
@@ -451,7 +443,7 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2041,
 			["counter"] = 1,
-		}, -- [59]
+		}, -- [58]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:65: attempt to index global 'K' (a nil value)",
 			["time"] = "2017/08/16 14:52:27",
@@ -459,7 +451,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:65: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:58>",
 			["session"] = 2046,
 			["counter"] = 120,
-		}, -- [60]
+		}, -- [59]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\utils.lua:7: ')' expected near '='",
 			["time"] = "2017/08/16 15:09:42",
@@ -467,7 +459,7 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2053,
 			["counter"] = 1,
-		}, -- [61]
+		}, -- [60]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:63: attempt to call field 'animateWidth' (a nil value)",
 			["time"] = "2017/08/16 15:09:45",
@@ -475,7 +467,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:63: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:58>",
 			["session"] = 2056,
 			["counter"] = 1245,
-		}, -- [62]
+		}, -- [61]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\utils.lua:19: '=' expected near 'and'",
 			["time"] = "2017/08/16 15:10:29",
@@ -483,7 +475,7 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2057,
 			["counter"] = 4,
-		}, -- [63]
+		}, -- [62]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\animation-Animation.lua:36: attempt to call method 'SendMessage' (a nil value)",
 			["time"] = "2017/08/16 16:21:59",
@@ -491,14 +483,14 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\animation-Animation.lua:36: in function `animateX'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:85: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:76>",
 			["session"] = 2064,
 			["counter"] = 1,
-		}, -- [64]
+		}, -- [63]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:70: Usage: RegisterMessage(\"eventname\", \"methodname\"): 'methodname' - method 'XpFlag-sparkmodel-show' not found on self.",
 			["time"] = "2017/08/16 16:21:46",
 			["stack"] = "[C]: ?\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:138: in function `RegisterMessage'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:70: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:60>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
 			["session"] = 2065,
 			["counter"] = 2,
-		}, -- [65]
+		}, -- [64]
 		{
 			["message"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:462: script ran too long",
 			["time"] = "2017/08/16 16:28:28",
@@ -506,7 +498,7 @@ BugGrabberDB = {
 			["stack"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:462: in function `PositionChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:551: in function `DoControlChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:538: in function `ControlChildren'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:371: in function `onFinished'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2716: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2599>",
 			["session"] = 2067,
 			["counter"] = 1,
-		}, -- [66]
+		}, -- [65]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\tooltip.lua:1: '=' expected near '<eof>'",
 			["time"] = "2017/08/16 16:28:23",
@@ -514,21 +506,21 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2068,
 			["counter"] = 2,
-		}, -- [67]
+		}, -- [66]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:71: Usage: RegisterMessage(\"eventname\", \"methodname\"): 'methodname' - method 'XpFlag-sparkmodel-hide' not found on self.",
 			["time"] = "2017/08/16 16:27:25",
 			["stack"] = "[C]: ?\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:138: in function `RegisterMessage'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:71: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:60>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
 			["session"] = 2069,
 			["counter"] = 4,
-		}, -- [68]
+		}, -- [67]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:74: Usage: RegisterMessage(\"eventname\", \"methodname\"): 'methodname' - method 'XpFlag-sparkmodel-hide' not found on self.",
 			["time"] = "2017/08/16 16:31:54",
 			["stack"] = "[C]: ?\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:138: in function `RegisterMessage'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:74: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:63>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
 			["session"] = 2070,
 			["counter"] = 1,
-		}, -- [69]
+		}, -- [68]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:76: attempt to call global 'createTooltip' (a nil value)",
 			["time"] = "2017/08/16 16:59:31",
@@ -536,14 +528,14 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:76: in main chunk",
 			["session"] = 2079,
 			["counter"] = 1,
-		}, -- [70]
+		}, -- [69]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:56: Usage: RegisterEvent(\"eventname\", \"methodname\"): 'methodname' - method 'PLAYER_ENTERING_WORLD' not found on self.",
 			["time"] = "2017/08/16 16:59:31",
 			["stack"] = "[C]: ?\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:138: in function `RegisterEvent'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:56: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:53>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
 			["session"] = 2079,
 			["counter"] = 1,
-		}, -- [71]
+		}, -- [70]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:51: function arguments expected near '='",
 			["time"] = "2017/08/16 17:01:43",
@@ -551,14 +543,14 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2081,
 			["counter"] = 1,
-		}, -- [72]
+		}, -- [71]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:52: attempt to index global 'self' (a nil value)",
 			["time"] = "2017/08/16 17:02:02",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:52: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:51>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
 			["session"] = 2082,
 			["counter"] = 1,
-		}, -- [73]
+		}, -- [72]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\bar.lua:20: ')' expected near ';'",
 			["time"] = "2017/08/16 17:30:53",
@@ -566,14 +558,14 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2094,
 			["counter"] = 4,
-		}, -- [74]
+		}, -- [73]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:321: attempt to call field 'createBar' (a nil value)",
 			["time"] = "2017/08/16 17:30:56",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:321: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2094,
 			["counter"] = 4,
-		}, -- [75]
+		}, -- [74]
 		{
 			["message"] = "[string \"GetXPExhaustion() and 5 or 10\"]:1: unexpected symbol near 'and'",
 			["time"] = "2017/08/16 17:37:14",
@@ -581,7 +573,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `RunScript'\nInterface\\FrameXML\\ChatFrame.lua:2060: in function `?'\nInterface\\FrameXML\\ChatFrame.lua:4486: in function `ChatEdit_ParseText'\nInterface\\FrameXML\\ChatFrame.lua:4154: in function `ChatEdit_SendText'\nInterface\\FrameXML\\ChatFrame.lua:4190: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
 			["session"] = 2096,
 			["counter"] = 1,
-		}, -- [76]
+		}, -- [75]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\utils.lua:15: 'end' expected (to close 'function' at line 14) near ')'",
 			["time"] = "2017/08/16 17:42:00",
@@ -589,14 +581,14 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2097,
 			["counter"] = 1,
-		}, -- [77]
+		}, -- [76]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\bar.lua:20: attempt to call field 'getXpColor' (a nil value)",
 			["time"] = "2017/08/16 17:42:03",
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\bar.lua:20: in function `createBar'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:316: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2097,
 			["counter"] = 1,
-		}, -- [78]
+		}, -- [77]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:47: attempt to call field 'throttle' (a nil value)",
 			["time"] = "2017/08/16 17:42:03",
@@ -604,7 +596,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:47: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:46>",
 			["session"] = 2097,
 			["counter"] = 349,
-		}, -- [79]
+		}, -- [78]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\model-Model.lua:18: attempt to index local 'f' (a nil value)",
 			["time"] = "2017/08/16 17:04:45",
@@ -612,7 +604,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\model-Model.lua:18: in function <Interface\\AddOns\\XpFlag\\modules\\model.lua:17>\n[string \"safecall Dispatcher[2]\"]:4: in function <[string \"safecall Dispatcher[2]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[2]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `SendMessage'\nInterface\\AddOns\\XpFlag\\XpFlag-0.1.0.lua:408: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[2]\"]:4: in function <[string \"safecall Dispatcher[2]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[2]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2099,
 			["counter"] = 3,
-		}, -- [80]
+		}, -- [79]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\spark.lua:31: attempt to index global 'f' (a nil value)",
 			["time"] = "2017/08/18 15:18:25",
@@ -620,14 +612,14 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\spark.lua:31: in function <Interface\\AddOns\\XpFlag\\modules\\spark.lua:27>\n[C]: in function `Play'\nInterface\\AddOns\\XpFlag\\modules\\spark.lua:21: in function <Interface\\AddOns\\XpFlag\\modules\\spark.lua:6>\nInterface\\AddOns\\XpFlag\\modules\\spark.lua:81: in function `XpFlagPlaySpark'\n[string \"XpFlagPlaySpark()\"]:1: in main chunk\n[C]: in function `RunScript'\nInterface\\FrameXML\\ChatFrame.lua:2060: in function `?'\nInterface\\FrameXML\\ChatFrame.lua:4486: in function `ChatEdit_ParseText'\nInterface\\FrameXML\\ChatFrame.lua:4154: in function `ChatEdit_SendText'\nInterface\\FrameXML\\ChatFrame.lua:4190: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
 			["session"] = 2103,
 			["counter"] = 1,
-		}, -- [81]
+		}, -- [80]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:71: attempt to call global 'GetFriends' (a nil value)",
 			["time"] = "2017/08/18 15:17:07",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:71: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2109,
 			["counter"] = 2,
-		}, -- [82]
+		}, -- [81]
 		{
 			["message"] = "[string \"dump(1)\"]:1: attempt to call global 'dump' (a nil value)",
 			["time"] = "2017/08/18 17:44:01",
@@ -635,7 +627,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"dump(1)\"]:1: in main chunk\n[C]: in function `RunScript'\nInterface\\FrameXML\\ChatFrame.lua:2060: in function `?'\nInterface\\FrameXML\\ChatFrame.lua:4486: in function `ChatEdit_ParseText'\nInterface\\FrameXML\\ChatFrame.lua:4154: in function `ChatEdit_SendText'\nInterface\\FrameXML\\ChatFrame.lua:4190: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>",
 			["session"] = 2112,
 			["counter"] = 1,
-		}, -- [83]
+		}, -- [82]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:32: attempt to get length of local 'buttons' (a nil value)",
 			["time"] = "2017/08/18 18:05:27",
@@ -643,7 +635,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:32: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:26>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2118,
 			["counter"] = 8,
-		}, -- [84]
+		}, -- [83]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:27: Usage: BNGetFriendInfo(index)",
 			["time"] = "2017/08/18 18:11:04",
@@ -651,7 +643,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `BNGetFriendInfo'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:27: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:26>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:46: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:31>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2120,
 			["counter"] = 2,
-		}, -- [85]
+		}, -- [84]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:40: attempt to index global 'button' (a nil value)",
 			["time"] = "2017/08/18 18:21:09",
@@ -659,7 +651,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:40: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:36>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2125,
 			["counter"] = 6,
-		}, -- [86]
+		}, -- [85]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:35: Usage: GetFriendInfo(index or name)",
 			["time"] = "2017/08/18 18:45:34",
@@ -667,7 +659,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `GetFriendInfo'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:35: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:34>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:59: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:48>\n[C]: in function `update'\nInterface\\SharedXML\\HybridScrollFrame.lua:190: in function `HybridScrollFrame_SetOffset'\nInterface\\SharedXML\\HybridScrollFrame.lua:30: in function <Interface\\SharedXML\\HybridScrollFrame.lua:29>\n[C]: in function `SetValue'\nInterface\\SharedXML\\HybridScrollFrame.lua:67: in function <Interface\\SharedXML\\HybridScrollFrame.lua:57>",
 			["session"] = 2129,
 			["counter"] = 3,
-		}, -- [87]
+		}, -- [86]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:66: attempt to index global 'button' (a nil value)",
 			["time"] = "2017/08/18 18:49:14",
@@ -675,7 +667,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:66: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:48>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2131,
 			["counter"] = 12,
-		}, -- [88]
+		}, -- [87]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:78: Wrong object type for function",
 			["time"] = "2017/08/18 19:11:24",
@@ -683,7 +675,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `CreateFrame'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:78: in function `CreateMiniButton'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:61: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:48>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2134,
 			["counter"] = 10,
-		}, -- [89]
+		}, -- [88]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:81: attempt to index global 'minibtn' (a nil value)",
 			["time"] = "2017/08/18 19:14:23",
@@ -691,7 +683,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:81: in function `CreateMiniButton'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:61: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:48>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2135,
 			["counter"] = 6,
-		}, -- [90]
+		}, -- [89]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:28: attempt to call global 'BNGetToonInfo' (a nil value)",
 			["time"] = "2017/08/18 19:20:49",
@@ -699,7 +691,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:28: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:26>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:57: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:49>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2137,
 			["counter"] = 2,
-		}, -- [91]
+		}, -- [90]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:77: Wrong object type for function",
 			["time"] = "2017/08/18 19:46:49",
@@ -707,7 +699,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `CreateFrame'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:77: in function `CreateMiniButton'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:63: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:47>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2153,
 			["counter"] = 5,
-		}, -- [92]
+		}, -- [91]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:81: ')' expected near '0'",
 			["time"] = "2017/08/18 19:50:18",
@@ -715,28 +707,28 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2159,
 			["counter"] = 1,
-		}, -- [93]
+		}, -- [92]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:45: attempt to call field 'GetFriends' (a nil value)",
 			["time"] = "2017/08/18 19:50:21",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:45: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2159,
 			["counter"] = 1,
-		}, -- [94]
+		}, -- [93]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:73: attempt to call field 'GetFriends' (a nil value)",
 			["time"] = "2017/08/18 19:50:23",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:73: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2159,
 			["counter"] = 3,
-		}, -- [95]
+		}, -- [94]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:30: attempt to call field 'RegisterFriends' (a nil value)",
 			["time"] = "2017/08/18 19:50:18",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:30: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:17>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
 			["session"] = 2168,
 			["counter"] = 2,
-		}, -- [96]
+		}, -- [95]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:87: unexpected symbol near ')'",
 			["time"] = "2017/08/18 20:13:29",
@@ -744,7 +736,7 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2169,
 			["counter"] = 2,
-		}, -- [97]
+		}, -- [96]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\communication.lua:57: '}' expected (to close '{' at line 55) near 'msg'",
 			["time"] = "2017/08/18 20:50:06",
@@ -752,14 +744,14 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2188,
 			["counter"] = 1,
-		}, -- [98]
+		}, -- [97]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\mark.lua:58: attempt to index local 'm' (a nil value)",
 			["time"] = "2017/08/18 20:50:53",
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\mark.lua:58: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\modules\\communication.lua:61: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:78: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2190,
 			["counter"] = 4,
-		}, -- [99]
+		}, -- [98]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\mark.lua:44: 'then' expected near 'return'",
 			["time"] = "2017/08/18 20:55:26",
@@ -767,49 +759,49 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2192,
 			["counter"] = 1,
-		}, -- [100]
+		}, -- [99]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:36: attempt to call field 'UpdatePlayerMark' (a nil value)",
 			["time"] = "2017/08/18 20:55:29",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:36: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[1]\"]:4: in function <[string \"safecall Dispatcher[1]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2192,
 			["counter"] = 1,
-		}, -- [101]
+		}, -- [100]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\communication.lua:58: bad argument #1 to 'random' (interval is empty)",
 			["time"] = "2017/08/18 21:06:05",
 			["stack"] = "[C]: ?\nInterface\\AddOns\\XpFlag\\modules\\communication.lua:58: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:77: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2198,
 			["counter"] = 2,
-		}, -- [102]
+		}, -- [101]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\communication.lua:59: bad argument #1 to 'random' (interval is empty)",
 			["time"] = "2017/08/18 21:07:00",
 			["stack"] = "[C]: ?\nInterface\\AddOns\\XpFlag\\modules\\communication.lua:59: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:77: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2199,
 			["counter"] = 2,
-		}, -- [103]
+		}, -- [102]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\communication.lua:46: attempt to index global 'console' (a nil value)",
 			["time"] = "2017/08/18 21:11:19",
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\communication.lua:46: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:77: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2203,
 			["counter"] = 1,
-		}, -- [104]
+		}, -- [103]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\mark.lua:61: attempt to index local 'm' (a nil value)",
 			["time"] = "2017/08/18 20:58:00",
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\mark.lua:61: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\modules\\communication.lua:62: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:77: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2210,
 			["counter"] = 20,
-		}, -- [105]
+		}, -- [104]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\mark.lua:62: attempt to index local 'm' (a nil value)",
 			["time"] = "2017/08/18 21:23:46",
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\mark.lua:62: in function `UpdateMark'\nInterface\\AddOns\\XpFlag\\modules\\communication.lua:65: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:77: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2211,
 			["counter"] = 2,
-		}, -- [106]
+		}, -- [105]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:36: Usage: GetFriendInfo(index or name)",
 			["time"] = "2017/08/19 00:20:23",
@@ -817,7 +809,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `GetFriendInfo'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:36: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:35>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:57: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:47>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2213,
 			["counter"] = 2,
-		}, -- [107]
+		}, -- [106]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'EnhancedMenu' tried to call the protected function '<unnamed>:Hide()'.",
 			["time"] = "2017/08/19 00:21:17",
@@ -825,7 +817,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Hide'\nInterface\\FrameXML\\WorldMapActionButton.lua:58: in function `Clear'\nInterface\\FrameXML\\WorldMapActionButton.lua:67: in function `Refresh'\nInterface\\FrameXML\\WorldMapActionButton.lua:19: in function `SetMapAreaID'\nInterface\\FrameXML\\WorldMapFrame.lua:429: in function <Interface\\FrameXML\\WorldMapFrame.lua:392>\n[C]: ?\n[C]: in function `Hide'\nInterface\\FrameXML\\UIParent.lua:2405: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2432: in function `MoveUIPanel'\nInterface\\FrameXML\\UIParent.lua:2463: in function `HideUIPanel'\nInterface\\FrameXML\\UIParent.lua:2137: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2931: in function `HideUIPanel'\nInterface\\FrameXML\\UIParent.lua:2897: in function `ToggleFrame'\nInterface\\FrameXML\\WorldMapFrame.lua:244: in function `ToggleWorldMap'\n[string \"TOGGLEWORLDMAP\"]:1: in function <[string \"TOGGLEWORLDMAP\"]:1>",
 			["session"] = 2213,
 			["counter"] = 1,
-		}, -- [108]
+		}, -- [107]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] AddOn 'KkthnxUI' tried to call the protected function 'CompactRaidFrame1:Show()'.",
 			["time"] = "2017/08/13 14:38:09",
@@ -833,14 +825,14 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:573>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:341: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:282: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:56: in function <Interface\\FrameXML\\CompactUnitFrame.lua:53>",
 			["session"] = 2214,
 			["counter"] = 6,
-		}, -- [109]
+		}, -- [108]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:74: bad argument #1 to 'pairs' (table expected, got nil)",
 			["time"] = "2017/08/19 01:12:33",
 			["stack"] = "[C]: in function `pairs'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:74: in function `UpdateFriendButton'\nInterface\\AddOns\\XpFlag\\modules\\communication.lua:47: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:78: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2218,
 			["counter"] = 1,
-		}, -- [110]
+		}, -- [109]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:28: Usage: BNGetGameAccountInfo(ID)",
 			["time"] = "2017/08/19 02:02:53",
@@ -848,7 +840,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `BNGetGameAccountInfo'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:28: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:26>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:55: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:47>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:860: in function `FriendsFrame_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>",
 			["session"] = 2257,
 			["counter"] = 32,
-		}, -- [111]
+		}, -- [110]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:91: attempt to index global 'button' (a nil value)",
 			["time"] = "2017/08/19 15:09:21",
@@ -856,7 +848,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:91: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:86>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2263,
 			["counter"] = 3,
-		}, -- [112]
+		}, -- [111]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:92: attempt to index global 'button' (a nil value)",
 			["time"] = "2017/08/19 15:10:53",
@@ -864,7 +856,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:92: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:86>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2264,
 			["counter"] = 3,
-		}, -- [113]
+		}, -- [112]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:106: bad argument #1 to 'pairs' (table expected, got nil)",
 			["time"] = "2017/08/19 15:11:46",
@@ -872,7 +864,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `pairs'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:106: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:86>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2266,
 			["counter"] = 6,
-		}, -- [114]
+		}, -- [113]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:115: attempt to index local 'button' (a number value)",
 			["time"] = "2017/08/19 15:29:04",
@@ -880,7 +872,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:115: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:86>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
 			["session"] = 2277,
 			["counter"] = 12,
-		}, -- [115]
+		}, -- [114]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:65: attempt to index global 'buttons' (a nil value)",
 			["time"] = "2017/08/19 17:21:48",
@@ -888,7 +880,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:65: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:58>",
 			["session"] = 2286,
 			["counter"] = 2,
-		}, -- [116]
+		}, -- [115]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:73: 'then' expected near 'return'",
 			["time"] = "2017/08/19 17:24:53",
@@ -896,21 +888,21 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 2287,
 			["counter"] = 1,
-		}, -- [117]
+		}, -- [116]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:31: attempt to call field 'RegisterFriends' (a nil value)",
 			["time"] = "2017/08/19 17:24:53",
 			["stack"] = "Interface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:31: in function <Interface\\AddOns\\XpFlag\\XpFlag.lua:18>\n(tail call): ?\n[C]: ?\n[string \"safecall Dispatcher[1]\"]:9: in function <[string \"safecall Dispatcher[1]\"]:5>\n(tail call): ?\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:529: in function `InitializeAddon'\n...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:644: in function <...ce\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:636>",
 			["session"] = 2287,
 			["counter"] = 1,
-		}, -- [118]
+		}, -- [117]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\communication.lua:66: attempt to index global 'friendsWithAddon' (a nil value)",
 			["time"] = "2017/08/19 17:36:01",
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\communication.lua:66: in function `HandleMessages'\nInterface\\AddOns\\XpFlag\\XpFlag-0.2.0.lua:75: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:145: in function <...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:145>\n[string \"safecall Dispatcher[10]\"]:4: in function <[string \"safecall Dispatcher[10]\"]:4>\n[C]: ?\n[string \"safecall Dispatcher[10]\"]:13: in function `?'\n...ags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0-6.lua:90: in function `Fire'\n...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...\\AddOns\\WeakAuras\\Libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 2293,
 			["counter"] = 1,
-		}, -- [119]
+		}, -- [118]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:66: attempt to index global 'buttons' (a nil value)",
 			["time"] = "2017/08/19 17:36:45",
@@ -918,7 +910,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:66: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:58>",
 			["session"] = 2294,
 			["counter"] = 8,
-		}, -- [120]
+		}, -- [119]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:59: attempt to index global 'self' (a nil value)",
 			["time"] = "2017/08/19 17:42:08",
@@ -926,7 +918,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:59: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:58>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:121: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:121>",
 			["session"] = 2297,
 			["counter"] = 1,
-		}, -- [121]
+		}, -- [120]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:66: table index is nil",
 			["time"] = "2017/08/19 17:38:55",
@@ -934,7 +926,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:66: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:58>",
 			["session"] = 2305,
 			["counter"] = 4,
-		}, -- [122]
+		}, -- [121]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:67: table index is nil",
 			["time"] = "2017/08/19 17:59:22",
@@ -942,7 +934,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:67: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:58>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:118: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:118>",
 			["session"] = 2306,
 			["counter"] = 1,
-		}, -- [123]
+		}, -- [122]
 		{
 			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:60: attempt to index global 'button' (a nil value)",
 			["time"] = "2017/08/19 18:01:16",
@@ -950,7 +942,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:60: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:58>\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:118: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:118>",
 			["session"] = 2308,
 			["counter"] = 1,
-		}, -- [124]
+		}, -- [123]
 		{
 			["message"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:562: script ran too long",
 			["time"] = "2017/08/16 13:20:48",
@@ -958,14 +950,46 @@ BugGrabberDB = {
 			["stack"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:562: in function `DoControlChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:538: in function `ControlChildren'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:371: in function `onFinished'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2716: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2599>",
 			["session"] = 2335,
 			["counter"] = 3,
-		}, -- [125]
+		}, -- [124]
 		{
 			["message"] = "Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:468: attempt to index field '?' (a nil value)",
 			["time"] = "2017/08/15 18:11:04",
 			["locals"] = "modifierFunc = <function> defined =[C]:-1\ntooltip = <unnamed> {\n 0 = <userdata>\n regularFont = GameTooltipText {\n }\n columns = <table> {\n }\n scrollChild = <unnamed> {\n }\n colspans = <table> {\n }\n cell_margin_v = 3\n width = 243.47010040283\n headerFont = GameTooltipHeaderText {\n }\n cell_margin_h = 6\n key = \"SocialToolTip\"\n scripts = <table> {\n }\n height = 85.205156326294\n labelProvider = <table> {\n }\n lines = <table> {\n }\n scrollFrame = <unnamed> {\n }\n}\ntotalBNFriends = 24\ntotalBNOnlineFriends = 6\ntotalFriends = 1\ntotalOnlineFriends = 0\ncharNameFormat = \"\"\n(for index) = 4\n(for limit) = 24\n(for step) = 1\ni = 4\nbattleID = 6\nbattleName = \"|Kf12|k000000|k\"\nbattleTag = \"ottang#2256\"\n_ = true\ncharName = nil\ngameAccount = 32\ngameClient = \"S1\"\nisOnline = true\n_ = 1502810905\nisAfk = false\nisDnd = false\n_ = \"\"\nnote = \"\"\n_ = true\n_ = \"\"\n_ = \"S1\"\nrealmName = \"\"\n_ = 0\nstatus = \"Online\"\nstatusIcon = \"Interface\\FriendsFrame\\StatusIcon-Online\"\n(*temporary) = nil\n(*temporary) = \"\"\n(*temporary) = \"\"\n(*temporary) = \"\"\n(*temporary) = \"\"\n(*temporary) = \"\"\n(*temporary) = \"Playing campaign\"\n(*temporary) = \"\"\n(*temporary) = 0\n(*temporary) = \"attempt to index field '?' (a nil value)\"\nxb = <table> {\n defaults = <table> {\n }\n ResetUI = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:360\n HoverColors = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:164\n HexToRGBA = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:307\n modules = <table> {\n }\n baseName = \"XIV_Databar\"\n IterateEmbeds = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:473\n GetColor = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:159\n fontFlags = <table> {\n }\n GetTextColorOptions = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:564\n RegisterFrame = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:182\n Printf = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceConsole-3.0\\AceConsole-3.0.lua:69\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:440\n GetHeight = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:239\n defaultModuleState = true\n IsEnabled = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:482\n DisableModule = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:381\n GetFont = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:290\n PrintTable = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:315\n RegisterMessage = <function> defined @Interface\\AddOns\\AdiBags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:116\n GetArgs = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceConsole-3.0\\AceConsole-3.0.lua:144\n frames = <table> {\n }\n miniTextPosition = \"BOTTOM\"\n db = <table> {\n }\n modulesOptionFrame = <unnamed> {\n }\n SetEnabledState = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:455\n enabledState = true\n RegisterEvent = <function> defined @Interface\\AddOns\\AdiBags\\libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:116\n IterateModules = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:468\n GetClassColors = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:294\n SetColor = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:150\n OnInitialize = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:72\n NewModule = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:266\n GetModule = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:241\n defaultModuleLibraries = <table> {\n }\n optionsFrame = <unnamed> {\n }\n GetTextOptions = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:508\n UnregisterChatCommand = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceConsole-3.0\\AceConsole-3.0.lua:111\n GetName = <function> defined @Interface\\AddOns\\AdiBags\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:310\n name = \"XIV_Databar\"\n HideBarEvent = <function> defined @Interface\\AddOns\\XIV_Databar\\core.lua:203\n orderedModules = <table> {\n }\n ",
 			["stack"] = "Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:468: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:425>",
-			["session"] = 2344,
-			["counter"] = 43,
+			["session"] = 2345,
+			["counter"] = 44,
+		}, -- [125]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\modules\\bar.lua:17: unexpected symbol near '.'",
+			["time"] = "2017/08/24 17:38:35",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 2348,
+			["counter"] = 1,
 		}, -- [126]
+		{
+			["message"] = "Interface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:25: Usage: GetFriendInfo(index or name)",
+			["time"] = "2017/08/24 21:19:46",
+			["locals"] = "(*temporary) = nil\n",
+			["stack"] = "[C]: in function `GetFriendInfo'\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:25: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:24>\n(tail call): ?\nInterface\\AddOns\\XpFlag\\modules\\friends-Friends.lua:103: in function <Interface\\AddOns\\XpFlag\\modules\\friends.lua:98>\n[C]: in function `FriendsFrame_UpdateFriends'\nInterface\\FrameXML\\FriendsFrame.lua:577: in function `FriendsList_Update'\nInterface\\FrameXML\\FriendsFrame.lua:295: in function <Interface\\FrameXML\\FriendsFrame.lua:293>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2421: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:2262: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2133: in function <Interface\\FrameXML\\UIParent.lua:2129>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2915: in function `ShowUIPanel'\nInterface\\FrameXML\\FriendsFrame.lua:1070: in function `ToggleFriendsFrame'\nInterface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:678: in function <Interface\\AddOns\\XIV_Databar\\modules\\micromenu.lua:675>",
+			["session"] = 2353,
+			["counter"] = 7,
+		}, -- [127]
+		{
+			["message"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:465: script ran too long",
+			["time"] = "2017/08/16 13:22:10",
+			["locals"] = "self = <unnamed> {\n SoundRepeatStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:87\n DoResize = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:285\n xOffset = 36.000610351563\n adjustedMax = false\n adjustedMin = false\n EnsureControlledRegions = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:125\n anchorPoint = \"RIGHT\"\n DoControlChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:542\n currentHeight = 59.999877929688\n GetXOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:190\n background = <unnamed> {\n }\n SetOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:181\n SetAnchor = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:168\n SendChat = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:140\n toShow = true\n Suspend = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:514\n SetOffsetAnim = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:198\n Resume = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:518\n suspended = 0\n cloneId = \"\"\n xOffsetAnim = 0\n yOffsetAnim = 0\n needToControlChildren = false\n relativePoint = \"CENTER\"\n currentWidth = 1858.0000610352\n SoundStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:94\n SoundPlay = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:127\n Expand = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:469\n EnsureTrays = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:266\n relativeTo = WeakAurasFrame {\n }\n previousWidth = 1858.0000610352\n Collapse = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:466\n id = \"T19 - Nighthold\"\n ResetPosition = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:162\n Scale = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:655\n previousHeight = 59.999877929688\n ControlChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:529\n 0 = <userdata>\n controlledRegions = <table> {\n }\n GetYOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:194\n trays = <table> {\n }\n PositionChildren = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:368\n yOffset = 332.00012207031\n RunCode = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:144\n}\nchildData = <table> {\n glow = false\n text1FontSize = 22\n disjunctive = \"any\"\n untrigger = <table> {\n }\n anchorPoint = \"CENTER\"\n activeTriggerMode = -10\n customTextUpdate = \"update\"\n icon = true\n text1Enabled = true\n animation = <table> {\n }\n trigger = <table> {\n }\n desaturate = false\n text1Point = \"CENTER\"\n yOffset = 0\n text2FontFlags = \"OUTLINE\"\n height = 60\n parent = \"T19 - Nighthold\"\n load = <table> {\n }\n displayIcon = 135794\n cooldownTextEnabled = true\n selfPoint = \"CENTER\"\n text2Containment = \"INSIDE\"\n numTriggers = 1\n text1Color = <table> {\n }\n text1Font = \"Accidental Presidency\"\n text1Containment = \"INSIDE\"\n text2Color = <table> {\n }\n regionType = \"icon\"\n width = 60\n text2Enabled = false\n text2FontSize = 24\n xOffset = 0\n init_completed = 1\n text1 = \" \"\n id = \"TC - Feast of Blood (Tank)\"\n text2 = \"%p\"\n zoom = 0\n auto = true\n text1FontFlags = \"OUTLINE\"\n additional_triggers = <table> {\n }\n text2Font = \"Friz Quadrata TT\"\n frameStrata = 1\n anchorFrameType = \"SCREEN\"\n stickyDuration = false\n text2Point = \"CENTER\"\n inverse = false\n color = <table> {\n }\n conditions = <table> {\n }\n cooldown = true\n actions = <table> {\n }\n}\nchildRegion = <unnamed> {\n SetText1Height = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:502\n Shadow = <unnamed> {\n }\n xOffset = 0\n adjustedMax = false\n Expand = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:402\n yO",
+			["stack"] = "...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:465: in function `PositionChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:551: in function `DoControlChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:538: in function `ControlChildren'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:371: in function `onFinished'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2716: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2599>",
+			["session"] = 2355,
+			["counter"] = 2,
+		}, -- [128]
+		{
+			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2905: script ran too long",
+			["time"] = "2017/08/24 23:49:24",
+			["locals"] = "region = <unnamed> {\n SetText1Height = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:502\n Shadow = <unnamed> {\n }\n xOffset = 0\n adjustedMax = false\n Expand = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:402\n yOffset = 0\n anchorPoint = \"RIGHT\"\n SetValueFromCustomValueFunc = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:305\n GetColor = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:334\n button = <unnamed> {\n }\n icon = <unnamed> {\n }\n SetOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:181\n SendChat = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:140\n SetInverse = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:514\n toShow = false\n SetRegionHeight = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:489\n useAuto = true\n Color = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:306\n cloneId = \"\"\n stacks = <unnamed> {\n }\n SetDesaturated = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:480\n relativePoint = \"RIGHT\"\n SoundPlay = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:127\n text2 = <unnamed> {\n }\n color_b = 1\n scaley = 1\n color_r = 1\n MSQGroup = <table> {\n }\n SetRegionWidth = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:484\n RunCode = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:144\n GetYOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:194\n values = <table> {\n }\n duration = 0\n adjustedMin = false\n expirationTime = 1.#INF\n SetText2Height = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:508\n GetXOffset = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:190\n color_g = 1\n SetAnchor = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:168\n ColorAnim = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:320\n stickyDuration = false\n SetName = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:433\n height = 60\n SetText2Color = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:498\n SetOffsetAnim = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:198\n generatedSetDurationInfo = true\n SetText1Color = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:494\n frameId = \"gd_-_essence_of_aman'thul\"\n xOffsetAnim = 0\n yOffsetAnim = 0\n SetDurationInfo = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:312\n SoundRepeatStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:87\n SetStacks = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:411\n SoundStop = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:94\n Collapse = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:386\n PreShow = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:555\n relativeTo = <unnamed> {\n }\n TimerTick = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:551\n Scale = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:438\n id = \"GD - Essence of Aman'Thul\"\n ResetPosition = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:162\n 0 = <userdata>\n width = 60\n SetTime = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:541\n SetIcon = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:420\n SetGlow = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:518\n SetFrameLevel = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:205\n color_a = 1\n scalex = 1\n cooldown = WeakAurasCooldowngd_-_essence_of_aman'thul {\n }\n SetValue = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\Icon.lua:536\n}\n(*temporary) = \"table: 000001E4B7A8DBF0\"\n(*temporary) = ",
+			["stack"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2905: in function `IsAnimating'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:379: in function `PositionChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:551: in function `DoControlChildren'\n...erface\\AddOns\\WeakAuras\\RegionTypes\\DynamicGroup.lua:538: in function `ControlChildren'\n...ace\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:371: in function `onFinished'\nInterface\\AddOns\\WeakAuras\\WeakAuras-2.4.17.lua:2716: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2599>",
+			["session"] = 2357,
+			["counter"] = 1,
+		}, -- [129]
 	},
 }

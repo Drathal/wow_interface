@@ -1,2 +1,10 @@
 
-XpFlagDB = nil
+XpFlagDB = {
+	["profileKeys"] = {
+		["Drathtix - Madmortem"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}
