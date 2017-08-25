@@ -1,3 +1,0 @@
-
-LS_PROSPECTOR_CFG = {
-}

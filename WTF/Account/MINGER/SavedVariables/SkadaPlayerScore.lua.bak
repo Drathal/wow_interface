@@ -1,3 +1,0 @@
-
-PScoresRaid = nil
-PSMultipliers = nil

@@ -1,6 +1,7 @@
 /WTF/Account/*
 !/WTF/Account/MINGER
 /Interface/AddOns/Blizzard_*
+/Interface/AddOns/XpFlag
 /WTF/Account/MINGER/SavedVariables/Blizzard_*
 /WTF/Account/MINGER/SavedVariables/!BugGrabber.lua
 /Interface/AddOns/Zygor*

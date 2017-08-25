@@ -1,6 +1,0 @@
-
-KkthnxUIConfigPrivate = {
-	["General"] = {
-		["SpellTolerance"] = true,
-	},
-}

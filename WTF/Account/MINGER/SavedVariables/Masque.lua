@@ -23209,9 +23209,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_gift_spucken_[vio]"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_shield_slam_cd_low"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -23219,15 +23217,9 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
 					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_lifetap_(noservice)"] = {
 					["Colors"] = {
@@ -24867,7 +24859,11 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_dargrul_-_magma_wave"] = {
+				["WeakAuras_mass_entanglement_"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
+					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -24875,9 +24871,13 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
 					},
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
 				},
 				["WeakAuras_force_of_nature_cd"] = {
 					["Disabled"] = true,
@@ -26404,19 +26404,27 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_breath_of_fire_available"] = {
+				["WeakAuras_gm_-_permeliative_torment"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_gm_-_permeliative_torment"] = {
+				["WeakAuras_helya_-_dark_hatred"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
 					["Colors"] = {
@@ -26947,9 +26955,11 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_st_(m)_-_frigid_pulse"] = {
+				["WeakAuras_siphon_life_abs"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
+					["SkinID"] = "Masque: Shadow 3",
+					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -26964,10 +26974,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_ms_-_consuming_hunger"] = {
+				["WeakAuras_hand_of_the_protector_rdy"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
 					["Colors"] = {
@@ -28359,7 +28367,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_tranquility"] = {
+				["WeakAuras_demon's_vigor"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -28377,7 +28385,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["Disabled"] = true,
 					["Backdrop"] = true,
-					["SkinID"] = "Caith",
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_light_of_dawn_2"] = {
 					["Colors"] = {
@@ -28554,7 +28562,7 @@ MasqueDB = {
 						},
 					},
 				},
-				["WeakAuras_confraglation_of_chaos"] = {
+				["WeakAuras_pur_off_cd"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -28570,9 +28578,8 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
-					["Disabled"] = true,
 					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "kenzo",
 				},
 				["WeakAuras_siphon_life_on"] = {
 					["Disabled"] = true,
@@ -28906,17 +28913,24 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_sef_charge_1"] = {
+				["WeakAuras_soul_effigy_"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["Backdrop"] = true,
+					["SkinID"] = "Dream",
 				},
 				["WeakAuras_armor_pot_-_use"] = {
 					["Colors"] = {
@@ -29152,7 +29166,9 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_alptraumblitz"] = {
+				["WeakAuras_dh_-_wailing_souls"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -29167,8 +29183,6 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
-					["Disabled"] = true,
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
@@ -29295,42 +29309,23 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_af_stacks"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["Backdrop"] = true,
-					["SkinID"] = "kenzo",
-				},
-				["WeakAuras_grimoire_of_sacrificebuff_2"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
+				["WeakAuras_brandzeichen_[kara]"] = {
 					["Disabled"] = true,
+					["Inherit"] = false,
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
@@ -29353,6 +29348,26 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+				},
+				["WeakAuras_grimoire_of_sacrificebuff_2"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["Disabled"] = true,
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_ks_up"] = {
 					["Colors"] = {
@@ -29585,17 +29600,25 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_75diffuse_magic"] = {
+				["WeakAuras_geschwächte_seele_[votw]"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_shattering_star"] = {
 					["Colors"] = {
@@ -29669,25 +29692,17 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_geschwächte_seele_[votw]"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_75diffuse_magic"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["Inherit"] = false,
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_summon_darkgare_cd"] = {
 					["Colors"] = {
@@ -29847,26 +29862,6 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_xavius_-_meteor"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
-				},
 				["WeakAuras_bristling_fur"] = {
 					["Colors"] = {
 						["Normal"] = {
@@ -29886,6 +29881,26 @@ MasqueDB = {
 					["Disabled"] = true,
 					["Backdrop"] = true,
 					["SkinID"] = "Caith",
+				},
+				["WeakAuras_xavius_-_meteor"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_conflagrate"] = {
 					["Disabled"] = true,
@@ -29995,9 +30010,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_summon_doomguard_cd"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_ravager_cd"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -30005,15 +30018,9 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
 					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_pets_3"] = {
 					["Disabled"] = true,
@@ -30074,7 +30081,9 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Dream",
 				},
-				["WeakAuras_ravager_cd"] = {
+				["WeakAuras_summon_doomguard_cd"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -30082,9 +30091,15 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
 					},
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_sef_cd"] = {
 					["Colors"] = {
@@ -30483,17 +30498,25 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_avenging_wrath_up_2"] = {
+				["WeakAuras_wild_charge_cd_"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
+					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_power_of_the_naaru"] = {
 					["Colors"] = {
@@ -30538,18 +30561,6 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_seraphim_on_cd"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
-				},
 				["WeakAuras_befragendes_starren"] = {
 					["Colors"] = {
 						["Normal"] = {
@@ -30569,6 +30580,18 @@ MasqueDB = {
 					["Disabled"] = true,
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
+				},
+				["WeakAuras_seraphim_on_cd"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_rapture_cd"] = {
 					["Colors"] = {
@@ -30674,6 +30697,18 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["Disabled"] = true,
 				},
+				["WeakAuras_bastion_of_light"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
+				},
 				["WeakAuras_shield_of_the_righteous_buff+stacks"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
@@ -30693,18 +30728,6 @@ MasqueDB = {
 					},
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
-				},
-				["WeakAuras_bastion_of_light"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
 				},
 				["WeakAuras_wdp_up"] = {
 					["Colors"] = {
@@ -31247,9 +31270,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_odyn_(m)_-_green_smite"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_light_of_t'uure_up"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -31264,8 +31285,9 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
 					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "kenzo",
 				},
 				["WeakAuras_demonic_circle_-_teleport_cooldown_2"] = {
 					["Disabled"] = true,
@@ -31307,7 +31329,9 @@ MasqueDB = {
 						},
 					},
 				},
-				["WeakAuras_light_of_t'uure_up"] = {
+				["WeakAuras_odyn_(m)_-_green_smite"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -31322,9 +31346,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
 					["Backdrop"] = true,
-					["SkinID"] = "kenzo",
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["TellMeWhen_Group: 22"] = {
 					["Colors"] = {
@@ -31595,17 +31618,17 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_motc3"] = {
+				["WeakAuras_eye_of_tyr"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_unending_resolve_-_cd_2"] = {
 					["Disabled"] = true,
@@ -31883,17 +31906,17 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_amalgam_-_reap_soul_2"] = {
+				["WeakAuras_avengers_schield_2"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "Caith",
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_body_and_soul-up"] = {
 					["Colors"] = {
@@ -31914,26 +31937,6 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_4set_t19_buff"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
-					["SkinID"] = "Masque: Shadow 3",
-					["Backdrop"] = true,
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-				},
 				["WeakAuras_mv_-_remnance"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
@@ -31953,6 +31956,26 @@ MasqueDB = {
 					},
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
+				},
+				["WeakAuras_4set_t19_buff"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
+					["SkinID"] = "Masque: Shadow 3",
+					["Backdrop"] = true,
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
 				},
 				["WeakAuras_mangle"] = {
 					["Colors"] = {
@@ -31986,17 +32009,17 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_trash_-_thundering_stomp"] = {
+				["WeakAuras_judgment_up_2"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "Caith",
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_demonic_empowerment_on"] = {
 					["Disabled"] = true,
@@ -32038,11 +32061,9 @@ MasqueDB = {
 						},
 					},
 				},
-				["WeakAuras_moonfire_on"] = {
+				["WeakAuras_eye_of_tyr_rdy"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
-					["SkinID"] = "Caith",
-					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -32057,6 +32078,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_sk_-_energy_surge"] = {
 					["Disabled"] = true,
@@ -32249,7 +32272,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_crusader_strike_cd"] = {
+				["WeakAuras_keg_smash_up"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -32383,9 +32406,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_seraphim_buff"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_blutrünstiger_sprung"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -32400,6 +32421,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
+					["Disabled"] = true,
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
@@ -32443,9 +32466,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_seelenklinge_[brh]"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_phantom_singularity_-_usable"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -32460,8 +32481,9 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
 					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "Dream",
 				},
 				["WeakAuras_gd_-_bad_stuff"] = {
 					["Disabled"] = true,
@@ -32483,7 +32505,9 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_blutrünstiger_sprung"] = {
+				["WeakAuras_seraphim_buff"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -32498,43 +32522,10 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
-					["Disabled"] = true,
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_rv"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
-				},
-				["WeakAuras_sephuz's_secret_-_cd"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["Backdrop"] = true,
-					["SkinID"] = "Dream",
-				},
-				["WeakAuras_divine_purpose_holy_shock"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -32566,7 +32557,19 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_pom-not_found"] = {
+				["WeakAuras_divine_purpose_holy_shock"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["SkinID"] = "SimpleSquare Thin",
+				},
+				["WeakAuras_sephuz's_secret_-_cd"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -32583,9 +32586,29 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 					["Backdrop"] = true,
-					["SkinID"] = "kenzo",
+					["SkinID"] = "Dream",
 				},
-				["WeakAuras_beacon_of_virtue_2"] = {
+				["WeakAuras_elerethe_-_web_of_pain"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
+				},
+				["WeakAuras_bof_up_2"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -32609,7 +32632,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_runenbrandmal"] = {
+				["WeakAuras_harvest"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -32625,9 +32648,8 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
-					["Disabled"] = true,
 					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "Dream",
 				},
 				["WeakAuras_revenge_glow"] = {
 					["Colors"] = {
@@ -32641,9 +32663,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_elerethe_-_web_of_pain"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_pom-not_found"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -32658,8 +32678,9 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
 					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "kenzo",
 				},
 				["WeakAuras_angelic_feather"] = {
 					["Colors"] = {
@@ -32700,7 +32721,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_bof_up_2"] = {
+				["WeakAuras_totm_buff"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -32994,18 +33015,6 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_fortifying_brew_2"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
-				},
 				["WeakAuras_warrior_of_elune_cd"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
@@ -33044,6 +33053,18 @@ MasqueDB = {
 					["Inherit"] = false,
 					["Disabled"] = true,
 					["Backdrop"] = true,
+					["SkinID"] = "Caith",
+				},
+				["WeakAuras_fortifying_brew_2"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
 				["WeakAuras_stechender_schwarm"] = {
@@ -33562,7 +33583,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_haunt_cd"] = {
+				["WeakAuras_hymn-up_2"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -33578,9 +33599,8 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
-					["Disabled"] = true,
 					["Backdrop"] = true,
-					["SkinID"] = "Dream",
+					["SkinID"] = "kenzo",
 				},
 				["WeakAuras_flourishassist"] = {
 					["Colors"] = {
@@ -33642,7 +33662,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_hymn-up_2"] = {
+				["WeakAuras_haunt_cd"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -33658,14 +33678,11 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
-					["Backdrop"] = true,
-					["SkinID"] = "kenzo",
-				},
-				["WeakAuras_rd_call_dreadstalkers"] = {
 					["Disabled"] = true,
-					["Inherit"] = false,
-					["SkinID"] = "Masque: Shadow 3",
 					["Backdrop"] = true,
+					["SkinID"] = "Dream",
+				},
+				["WeakAuras_cursed_blood_2"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -33673,13 +33690,10 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
 					},
+					["Inherit"] = false,
+					["Disabled"] = true,
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_xakal_-_wake_of_shadows"] = {
 					["Colors"] = {
@@ -33694,18 +33708,6 @@ MasqueDB = {
 					["SkinID"] = "Caith",
 				},
 				["WeakAuras_trash_-_polymorph:_fish"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
-				},
-				["WeakAuras_trash_-_venom_nova"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -33736,6 +33738,18 @@ MasqueDB = {
 					},
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
+				},
+				["WeakAuras_trash_-_venom_nova"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_verwundendes_fegen"] = {
 					["Colors"] = {
@@ -34167,7 +34181,7 @@ MasqueDB = {
 						},
 					},
 				},
-				["WeakAuras_gm_-_conflexive_burst"] = {
+				["WeakAuras_teufelsdetonation_[cos]"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
 					["Colors"] = {
@@ -34250,38 +34264,6 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_hw:c_off_cd"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["Backdrop"] = true,
-					["SkinID"] = "kenzo",
-				},
-				["WeakAuras_beacon_of_virtue"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["Disabled"] = true,
-					["SkinID"] = "SimpleSquare Thin",
-				},
 				["WeakAuras_st_-_gravitational_(tank)"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
@@ -34301,6 +34283,31 @@ MasqueDB = {
 					},
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
+				},
+				["WeakAuras_beacon_of_virtue"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["Disabled"] = true,
+					["SkinID"] = "SimpleSquare Thin",
+				},
+				["WeakAuras_tod_2"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_summon_doomguard_-_cd"] = {
 					["Colors"] = {
@@ -34691,7 +34698,20 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_ms_-_hydra_shot"] = {
+				["WeakAuras_mark_of_ysondre"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["Disabled"] = true,
+					["SkinID"] = "Caith",
+				},
+				["WeakAuras_stechender_splitter_[nl]"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
 					["Colors"] = {
@@ -34710,19 +34730,6 @@ MasqueDB = {
 					},
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
-				},
-				["WeakAuras_mark_of_ysondre"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["Disabled"] = true,
-					["SkinID"] = "Caith",
 				},
 				["WeakAuras_demonic_circle_-_oor"] = {
 					["Colors"] = {
@@ -34953,7 +34960,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_invoke_xuen,_the_white_tiger"] = {
+				["WeakAuras_ne-m_agony"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -34961,9 +34968,17 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "Caith",
+					["Disabled"] = true,
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_nal'tira_-_tangled_web"] = {
 					["Colors"] = {
@@ -35259,25 +35274,6 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_purify-cd_2"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["Backdrop"] = true,
-					["SkinID"] = "kenzo",
-				},
 				["WeakAuras_eelixir:_cooldown_2"] = {
 					["Colors"] = {
 						["Normal"] = {
@@ -35309,6 +35305,25 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+				},
+				["WeakAuras_purify-cd_2"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["Backdrop"] = true,
+					["SkinID"] = "kenzo",
 				},
 				["WeakAuras_hpup2"] = {
 					["Colors"] = {
@@ -35481,11 +35496,7 @@ MasqueDB = {
 						},
 					},
 				},
-				["WeakAuras_corruption_g"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
-					["SkinID"] = "Masque: Shadow 3",
-					["Backdrop"] = true,
+				["WeakAuras_corruption__<_4.2"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -35500,6 +35511,9 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
+					["Backdrop"] = true,
+					["SkinID"] = "Dream",
 				},
 				["WeakAuras_würgeranken_[coen]"] = {
 					["Disabled"] = true,
@@ -35541,7 +35555,11 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_corruption__<_4.2"] = {
+				["WeakAuras_corruption_g"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
+					["SkinID"] = "Masque: Shadow 3",
+					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -35556,9 +35574,6 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
-					["Backdrop"] = true,
-					["SkinID"] = "Dream",
 				},
 				["WeakAuras_doomguard"] = {
 					["Disabled"] = true,
@@ -35838,7 +35853,7 @@ MasqueDB = {
 						},
 					},
 				},
-				["WeakAuras_odyn_-_runic_brand"] = {
+				["WeakAuras_spew_corruption_2"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -35848,6 +35863,7 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
+					["Disabled"] = true,
 					["SkinID"] = "Caith",
 				},
 				["WeakAuras_talixae_-_infernal_eruption"] = {
@@ -36030,17 +36046,25 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Dream",
 				},
-				["WeakAuras_avenging_wrath_-_active_buff"] = {
+				["WeakAuras_helya_-_orb_of_corruption"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_malgath_-_shadow_bomb"] = {
 					["Colors"] = {
@@ -36066,25 +36090,17 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_helya_-_orb_of_corruption"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_avenging_wrath_-_active_buff"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["Inherit"] = false,
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_detox"] = {
 					["Colors"] = {
@@ -36435,18 +36451,6 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_dargrul_-_molten_crash"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
-				},
 				["WeakAuras_tyr's_deliverance_buff"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
@@ -36466,6 +36470,18 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+				},
+				["WeakAuras_dargrul_-_molten_crash"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_ee_nocd"] = {
 					["Colors"] = {
@@ -36963,7 +36979,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_spew_corruption_2"] = {
+				["WeakAuras_odyn_-_runic_brand"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -36973,7 +36989,6 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
-					["Disabled"] = true,
 					["SkinID"] = "Caith",
 				},
 				["WeakAuras_fof_up"] = {
@@ -37467,7 +37482,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_ne-m_agony"] = {
+				["WeakAuras_invoke_xuen,_the_white_tiger"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -37475,17 +37490,9 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
 					},
 					["Inherit"] = false,
-					["Disabled"] = true,
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_sef_ready"] = {
 					["Colors"] = {
@@ -37559,7 +37566,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_stechender_splitter_[nl]"] = {
+				["WeakAuras_ms_-_hydra_shot"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
 					["Colors"] = {
@@ -37795,17 +37802,24 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_tod_2"] = {
+				["WeakAuras_hw:c_off_cd"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["Backdrop"] = true,
+					["SkinID"] = "kenzo",
 				},
 				["WeakAuras_empowered_life_tap_mia"] = {
 					["Disabled"] = true,
@@ -37846,7 +37860,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Dream",
 				},
-				["WeakAuras_teufelsdetonation_[cos]"] = {
+				["WeakAuras_gm_-_conflexive_burst"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
 					["Colors"] = {
@@ -38153,7 +38167,11 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_cursed_blood_2"] = {
+				["WeakAuras_rd_call_dreadstalkers"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
+					["SkinID"] = "Masque: Shadow 3",
+					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -38161,10 +38179,13 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
 					},
-					["Inherit"] = false,
-					["Disabled"] = true,
-					["SkinID"] = "Caith",
 				},
 				["WeakAuras_call_dreadstalkers_glow"] = {
 					["Disabled"] = true,
@@ -38685,7 +38706,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_totm_buff"] = {
+				["WeakAuras_beacon_of_virtue_2"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -38697,7 +38718,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_harvest"] = {
+				["WeakAuras_runenbrandmal"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -38713,8 +38734,9 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
+					["Disabled"] = true,
 					["Backdrop"] = true,
-					["SkinID"] = "Dream",
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_soul_harvest_2"] = {
 					["Disabled"] = true,
@@ -38774,7 +38796,9 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_phantom_singularity_-_usable"] = {
+				["WeakAuras_seelenklinge_[brh]"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -38789,9 +38813,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
 					["Backdrop"] = true,
-					["SkinID"] = "Dream",
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_body_and_soul-cd"] = {
 					["Colors"] = {
@@ -38851,7 +38874,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_keg_smash_up"] = {
+				["WeakAuras_crusader_strike_cd"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -38903,9 +38926,11 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_eye_of_tyr_rdy"] = {
+				["WeakAuras_moonfire_on"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
+					["SkinID"] = "Caith",
+					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -38920,20 +38945,18 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_judgment_up_2"] = {
+				["WeakAuras_trash_-_thundering_stomp"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_havocready"] = {
 					["Disabled"] = true,
@@ -38975,17 +38998,17 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_avengers_schield_2"] = {
+				["WeakAuras_amalgam_-_reap_soul_2"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
+							0.125490196078431, -- [1]
+							0.125490196078431, -- [2]
+							0.125490196078431, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "SimpleSquare Thin",
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_revival_2"] = {
 					["Colors"] = {
@@ -39209,17 +39232,17 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_eye_of_tyr"] = {
+				["WeakAuras_motc3"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["SkinID"] = "Caith",
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_seelenentzug"] = {
 					["Colors"] = {
@@ -39754,25 +39777,17 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Caith",
 				},
-				["WeakAuras_wild_charge_cd_"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
-					["Backdrop"] = true,
+				["WeakAuras_avenging_wrath_up_2"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_seelenschwächung_[votw]"] = {
 					["Disabled"] = true,
@@ -40395,9 +40410,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_brandzeichen_[kara]"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_af_stacks"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -40412,8 +40425,9 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
 					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "kenzo",
 				},
 				["WeakAuras_eyasu's_mulligan_on_cd*"] = {
 					["Colors"] = {
@@ -40519,9 +40533,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_dh_-_wailing_souls"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_alptraumblitz"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -40536,6 +40548,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Inherit"] = false,
+					["Disabled"] = true,
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
@@ -40668,24 +40682,17 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Dream",
 				},
-				["WeakAuras_soul_effigy_"] = {
+				["WeakAuras_sef_charge_1"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
 					["Inherit"] = false,
-					["Backdrop"] = true,
-					["SkinID"] = "Dream",
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_axe_toss"] = {
 					["Colors"] = {
@@ -40847,7 +40854,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_pur_off_cd"] = {
+				["WeakAuras_confraglation_of_chaos"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -40863,8 +40870,9 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
+					["Disabled"] = true,
 					["Backdrop"] = true,
-					["SkinID"] = "kenzo",
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_shadow_inspiration_g"] = {
 					["Disabled"] = true,
@@ -40941,7 +40949,7 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "kenzo",
 				},
-				["WeakAuras_demon's_vigor"] = {
+				["WeakAuras_tranquility"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -40959,7 +40967,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["Disabled"] = true,
 					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_st_-_witness_the_void"] = {
 					["Disabled"] = true,
@@ -41726,7 +41734,7 @@ MasqueDB = {
 						},
 					},
 				},
-				["WeakAuras_hand_of_the_protector_rdy"] = {
+				["WeakAuras_ms_-_consuming_hunger"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
 					["Colors"] = {
@@ -41746,11 +41754,9 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_siphon_life_abs"] = {
+				["WeakAuras_st_(m)_-_frigid_pulse"] = {
 					["Disabled"] = true,
 					["Inherit"] = false,
-					["SkinID"] = "Masque: Shadow 3",
-					["Backdrop"] = true,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -41765,6 +41771,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_xavius_-_dream_simulacrum"] = {
 					["Disabled"] = true,
@@ -41998,25 +42006,17 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_helya_-_dark_hatred"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
+				["WeakAuras_breath_of_fire_available"] = {
 					["Colors"] = {
 						["Normal"] = {
-							0.125490196078431, -- [1]
-							0.125490196078431, -- [2]
-							0.125490196078431, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
 							1, -- [4]
 						},
 					},
-					["Backdrop"] = true,
-					["SkinID"] = "Masque: Shadow 3",
+					["Inherit"] = false,
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_holy_word:_serenity"] = {
 					["Colors"] = {
@@ -42761,11 +42761,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "SimpleSquare Thin",
 				},
-				["WeakAuras_mass_entanglement_"] = {
-					["Disabled"] = true,
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
-					["Backdrop"] = true,
+				["WeakAuras_dargrul_-_magma_wave"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -42773,13 +42769,9 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
 					},
+					["Inherit"] = false,
+					["SkinID"] = "Caith",
 				},
 				["WeakAuras_helya_-_bilewater_redox"] = {
 					["Disabled"] = true,
@@ -43596,7 +43588,9 @@ MasqueDB = {
 					["Backdrop"] = true,
 					["SkinID"] = "Masque: Shadow 3",
 				},
-				["WeakAuras_shield_slam_cd_low"] = {
+				["WeakAuras_gift_spucken_[vio]"] = {
+					["Disabled"] = true,
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0.125490196078431, -- [1]
@@ -43604,9 +43598,15 @@ MasqueDB = {
 							0.125490196078431, -- [3]
 							1, -- [4]
 						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
 					},
-					["Inherit"] = false,
-					["SkinID"] = "Caith",
+					["Backdrop"] = true,
+					["SkinID"] = "Masque: Shadow 3",
 				},
 				["WeakAuras_wirbelnde_klingen_[cos]"] = {
 					["Disabled"] = true,
@@ -47857,7 +47857,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_power_strikes"] = {
+				["WeakAuras_ancient_kings_-_available"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -47905,7 +47905,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_ancient_kings_-_available"] = {
+				["WeakAuras_power_strikes"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -47953,7 +47953,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_corstilax_-_suppression_protocol_2"] = {
+				["WeakAuras_thal'ena_-_blood_swarm"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48112,7 +48112,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_cb_cd_"] = {
+				["WeakAuras_hymdall_-_dancing_blade_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48124,7 +48124,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_song_of_chi-ji"] = {
+				["WeakAuras_cb_cd_"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48148,7 +48148,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_hymdall_-_dancing_blade_2"] = {
+				["WeakAuras_song_of_chi-ji"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48256,7 +48256,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_illysanna_-_brutal_glaive"] = {
+				["WeakAuras_invoke_xuen,_the_white_tiger"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48460,7 +48460,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_helya_-_torrent"] = {
+				["WeakAuras_keg_smash_cd"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48546,7 +48546,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_keg_smash_cd"] = {
+				["WeakAuras_helya_-_torrent"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48786,7 +48786,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_penance"] = {
+				["WeakAuras_trash_-_nightmare_toxin"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48798,7 +48798,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_brutal_slash"] = {
+				["WeakAuras_kur'talos_-_unerring_shear"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -48834,7 +48834,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_nightmare_toxin"] = {
+				["WeakAuras_penance"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49098,7 +49098,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_sck_tags_7+"] = {
+				["WeakAuras_energizing_elixir"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49122,7 +49122,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_energizing_elixir"] = {
+				["WeakAuras_sck_tags_7+"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49158,7 +49158,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_totm_no_buff"] = {
+				["WeakAuras_divine_steed_up_2_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49182,7 +49182,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_detox"] = {
+				["WeakAuras_nal'tira_-_devour"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49194,7 +49194,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_nal'tira_-_devour"] = {
+				["WeakAuras_odyn_-_branded"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49542,7 +49542,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_sef_cdown"] = {
+				["WeakAuras_aura_mastery_up_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49566,8 +49566,17 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["ElvUI_Pet Bar"] = {
-					["SkinID"] = "ElvUIesque",
+				["WeakAuras_invoke_niuzao,_the_black_ox_2"] = {
+					["SkinID"] = "SimpleSquare Thin",
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
 				},
 				["WeakAuras_healing_elixir_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
@@ -49581,7 +49590,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_75healing_elixir"] = {
+				["WeakAuras_divine_steed_up"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49605,7 +49614,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_aura_mastery_up_2"] = {
+				["WeakAuras_sef_cdown"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49617,7 +49626,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_invoke_niuzao,_the_black_ox_2"] = {
+				["WeakAuras_smashspite_-_fel_vomitus"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49740,7 +49749,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_shadowfiend_2"] = {
+				["WeakAuras_aura_of_mercy_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49884,7 +49893,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_knife_dance"] = {
+				["WeakAuras_seraphim_glow"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -49896,7 +49905,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_seraphim_glow"] = {
+				["WeakAuras_trash_-_knife_dance"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50124,7 +50133,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_odyn_-_surge"] = {
+				["WeakAuras_hyrja_-_eye_of_the_storm"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50208,7 +50217,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_hyrja_-_eye_of_the_storm"] = {
+				["WeakAuras_odyn_-_surge"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50376,7 +50385,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_t18:_masterful_strikes"] = {
+				["WeakAuras_serenity_timer"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50400,7 +50409,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_battle_cry"] = {
+				["WeakAuras_ravager"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50484,7 +50493,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_fenryr_-_scent_of_blood"] = {
+				["WeakAuras_75diffuse_magic_off"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50508,7 +50517,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_lunar_beam"] = {
+				["WeakAuras_trash_-_acid_splatter"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50520,7 +50529,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_polymorph:_fish"] = {
+				["WeakAuras_lunar_beam"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50556,7 +50565,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_sef_cd_0s"] = {
+				["WeakAuras_bestow_faith"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50652,7 +50661,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_shadow_crash_2"] = {
+				["WeakAuras_trash_-_portal:_argus"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50664,7 +50673,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_portal:_argus"] = {
+				["WeakAuras_shadow_crash_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50700,7 +50709,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_rising_sun_kick_2"] = {
+				["WeakAuras_lifecycle_vivify"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -50832,7 +50841,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_ancient_kings_-_cd_icon"] = {
+				["WeakAuras_bestow_faith_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51132,7 +51141,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_mistwalk_mw"] = {
+				["WeakAuras_oakheart_-_strangling_roots"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51144,7 +51153,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_oakheart_-_strangling_roots"] = {
+				["WeakAuras_mistwalk_mw"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51180,7 +51189,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_tirathon_-_darkstrikes"] = {
+				["WeakAuras_trash_-_drain_magic"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51228,31 +51237,31 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_drain_magic"] = {
-					["SkinID"] = "SimpleSquare Thin",
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-				},
-				["WeakAuras_avatar_prot_cd"] = {
-					["SkinID"] = "SimpleSquare Thin",
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-				},
 				["WeakAuras_fenryr_-_ravenous_leap"] = {
+					["SkinID"] = "SimpleSquare Thin",
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+				},
+				["WeakAuras_chi_burst_mw_2"] = {
+					["SkinID"] = "SimpleSquare Thin",
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+				},
+				["WeakAuras_tirathon_-_darkstrikes"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51372,7 +51381,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_holy_prism_up"] = {
+				["WeakAuras_wdp_cd"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51408,30 +51417,6 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_wild_charge"] = {
-					["SkinID"] = "SimpleSquare Thin",
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-				},
-				["WeakAuras_wdp_cd"] = {
-					["SkinID"] = "SimpleSquare Thin",
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
-				},
 				["WeakAuras_gerdo_-_arcane_lockdown"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
@@ -51444,7 +51429,19 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_consecration"] = {
+				["WeakAuras_trash_-_carrion_swarm"] = {
+					["SkinID"] = "SimpleSquare Thin",
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+				},
+				["WeakAuras_shield_wall_huge"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51457,6 +51454,18 @@ MasqueDB = {
 					["Inherit"] = false,
 				},
 				["WeakAuras_lc"] = {
+					["SkinID"] = "SimpleSquare Thin",
+					["Colors"] = {
+						["Normal"] = {
+							0.462745098039216, -- [1]
+							0.462745098039216, -- [2]
+							0.462745098039216, -- [3]
+							1, -- [4]
+						},
+					},
+					["Inherit"] = false,
+				},
+				["WeakAuras_consecration"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51554,7 +51563,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_avenging_wrath_2"] = {
+				["WeakAuras_keg_smash_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51602,7 +51611,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_keg_smash_2"] = {
+				["WeakAuras_wrath_-_crushing_depths"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51662,7 +51671,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_harbaron_-_summon_shackled_servitor"] = {
+				["Kaliel's Tracker"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51674,7 +51683,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_chi_wave_2"] = {
+				["WeakAuras_divine_steed_up_4"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51710,7 +51719,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_hammer_of_justice_up_2"] = {
+				["WeakAuras_healing_elixir_mw_cd"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51734,7 +51743,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_wrath_-_crushing_depths"] = {
+				["WeakAuras_avenging_wrath_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51770,7 +51779,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_fort_brew"] = {
+				["WeakAuras_zen_pulse_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51806,7 +51815,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["Kaliel's Tracker"] = {
+				["WeakAuras_thrash_cd"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51818,7 +51827,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_brewmaster_rotation_2"] = {
+				["WeakAuras_totm_buff_maxed"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -51878,7 +51887,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_seraphim_-_active_buff"] = {
+				["WeakAuras_tod_cdown"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52010,7 +52019,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_tod_cdown"] = {
+				["WeakAuras_seraphim_-_active_buff"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52058,7 +52067,8 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["Blizzard Action Bars_MultiBar Left"] = {
+				["WeakAuras_lotp_up"] = {
+					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -52068,9 +52078,6 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
-					["Gloss"] = 1,
-					["Backdrop"] = true,
-					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_mstrikes_stacks"] = {
 					["SkinID"] = "SimpleSquare Thin",
@@ -52132,7 +52139,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_hatecoil_-_curse_of_the_witch"] = {
+				["WeakAuras_trash_-_raven's_dive"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52156,8 +52163,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_lotp_up"] = {
-					["SkinID"] = "SimpleSquare Thin",
+				["Blizzard Action Bars_MultiBar Left"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0.462745098039216, -- [1]
@@ -52167,6 +52173,9 @@ MasqueDB = {
 						},
 					},
 					["Inherit"] = false,
+					["Gloss"] = 1,
+					["Backdrop"] = true,
+					["SkinID"] = "SimpleSquare Thin",
 				},
 				["WeakAuras_shield_slam_cd_low"] = {
 					["SkinID"] = "SimpleSquare Thin",
@@ -52180,7 +52189,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_raven's_dive"] = {
+				["WeakAuras_essence_of_g'hanir"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52228,7 +52237,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_life_cocoon"] = {
+				["WeakAuras_illysanna_-_dark_rush"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52410,7 +52419,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_illysanna_-_dark_rush"] = {
+				["WeakAuras_life_cocoon"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52422,7 +52431,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_essence_of_g'hanir"] = {
+				["WeakAuras_hatecoil_-_curse_of_the_witch"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52458,7 +52467,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_totm_buff_maxed"] = {
+				["WeakAuras_brewmaster_rotation_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52498,7 +52507,7 @@ MasqueDB = {
 					["SkinID"] = "ElvUIesque",
 					["Inherit"] = false,
 				},
-				["WeakAuras_ashamane's_frenzy"] = {
+				["WeakAuras_harbaron_-_summon_shackled_servitor"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52510,7 +52519,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_zen_pulse_2"] = {
+				["WeakAuras_fort_brew"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52534,7 +52543,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_healing_elixir_mw_cd"] = {
+				["WeakAuras_hammer_of_justice_up_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52546,7 +52555,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_divine_steed_up_4"] = {
+				["WeakAuras_chi_wave_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52558,7 +52567,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_thrash_cd"] = {
+				["WeakAuras_ashamane's_frenzy"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52618,7 +52627,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_shield_wall_huge"] = {
+				["WeakAuras_wild_charge"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52630,7 +52639,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_carrion_swarm"] = {
+				["WeakAuras_holy_prism_up"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52702,7 +52711,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_chi_burst_mw_2"] = {
+				["WeakAuras_avatar_prot_cd"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -52918,7 +52927,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_bestow_faith_2"] = {
+				["WeakAuras_ancient_kings_-_cd_icon"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53004,7 +53013,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_lifecycle_vivify"] = {
+				["WeakAuras_rising_sun_kick_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53052,7 +53061,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_bestow_faith"] = {
+				["WeakAuras_sef_cd_0s"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53064,7 +53073,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_trash_-_acid_splatter"] = {
+				["WeakAuras_trash_-_polymorph:_fish"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53100,7 +53109,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_75diffuse_magic_off"] = {
+				["WeakAuras_fenryr_-_scent_of_blood"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53160,7 +53169,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_ravager"] = {
+				["WeakAuras_battle_cry"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53172,7 +53181,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_serenity_timer"] = {
+				["WeakAuras_t18:_masterful_strikes"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53519,7 +53528,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_aura_of_mercy_2"] = {
+				["WeakAuras_shadowfiend_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53558,19 +53567,10 @@ MasqueDB = {
 				["ElvUI_Stance Bar"] = {
 					["SkinID"] = "ElvUIesque",
 				},
-				["WeakAuras_smashspite_-_fel_vomitus"] = {
-					["SkinID"] = "SimpleSquare Thin",
-					["Colors"] = {
-						["Normal"] = {
-							0.462745098039216, -- [1]
-							0.462745098039216, -- [2]
-							0.462745098039216, -- [3]
-							1, -- [4]
-						},
-					},
-					["Inherit"] = false,
+				["ElvUI_Pet Bar"] = {
+					["SkinID"] = "ElvUIesque",
 				},
-				["WeakAuras_divine_steed_up"] = {
+				["WeakAuras_75healing_elixir"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53654,7 +53654,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_odyn_-_branded"] = {
+				["WeakAuras_detox"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53666,7 +53666,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_divine_steed_up_2_2"] = {
+				["WeakAuras_totm_no_buff"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53729,7 +53729,7 @@ MasqueDB = {
 				["ElvUI_Debuffs"] = {
 					["SkinID"] = "ElvUIesque",
 				},
-				["WeakAuras_kur'talos_-_unerring_shear"] = {
+				["WeakAuras_brutal_slash"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -53933,7 +53933,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_invoke_xuen,_the_white_tiger"] = {
+				["WeakAuras_illysanna_-_brutal_glaive"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
@@ -54101,7 +54101,7 @@ MasqueDB = {
 					},
 					["Inherit"] = false,
 				},
-				["WeakAuras_thal'ena_-_blood_swarm"] = {
+				["WeakAuras_corstilax_-_suppression_protocol_2"] = {
 					["SkinID"] = "SimpleSquare Thin",
 					["Colors"] = {
 						["Normal"] = {
