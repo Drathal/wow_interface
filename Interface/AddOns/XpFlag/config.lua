@@ -34,14 +34,53 @@ D.options = {
     args = {
         bar = {
             type = 'group',
+            order = 1,
             name = L["SECTION_BAR"],
             get = Get('bar'),
             set = Set('bar'),
             args = {
                 show = {
                     type = 'toggle',
+                    order = 1,
+                    width = 'full',
                     name = L["SHOW_PLAYER_XP_BAR_LABEL"],
                     desc = L["SHOW_PLAYER_XP_BAR_DESC"]
+                },
+                height = {
+                    type = 'range',
+                    order = 2,
+                    width = 'full',
+                    min = 1,
+                    max = 15,
+                    step = 1,
+                    name = L["PLAYER_XP_BAR_HEIGHT_LABEL"],
+                    desc = L["PLAYER_XP_BAR_HEIGHT_DESC"]
+                },
+            }
+        },
+        mark = {
+            type = 'group',
+            order = 2,
+            name = L["SECTION_MARK"],
+            get = Get('mark'),
+            set = Set('mark'),
+            args = {
+                showPlayer = {
+                    type = 'toggle',
+                    order = 1,
+                    width = 'full',
+                    name = L["SHOW_PLAYER_MARK_LABEL"],
+                    desc = L["SHOW_PLAYER_MARK_DESC"]
+                },
+                size = {
+                    type = 'range',
+                    order = 2,
+                    width = 'full',
+                    min = 6,
+                    max = 30,
+                    step = 1,
+                    name = L["MARK_SIZE_LABEL"],
+                    desc = L["MARK_SIZE_DESC"]
                 },
             }
         },
@@ -95,9 +134,9 @@ C["bar"] = {
 }
 
 C["mark"] = {
-	["width"] = 15,
-	["height"] = 15,
+	["size"] = 15,
 	["flip"] = true,
+    ["showPlayer"] = true,
 	["animationSpeed"] = 6,
 	["texture"] = {
 		["default"] = "Interface\\AddOns\\"..D.addonName.."\\media\\circle.tga",

@@ -5,41 +5,24 @@ local CreateFrame = _G.CreateFrame
 
 local marks = {}
 
-local module = D:NewModule("Mark", "AceEvent-3.0")
+local module = D:NewModule("mark", "AceEvent-3.0")
 
-module.animationFrame = CreateFrame('Frame')
-
-local function UpdateAnimation(self, elapsed)
-    if D.Throttle(self, elapsed) then return end
-
-    local count = 0
-    for _, mark in pairs(marks) do
-        if mark and mark.to then
-            D.AnimateX(mark)
-            count = count + 1
-        end
-    end
-
-    if count == 0 then
-        module.animationFrame:SetScript("OnUpdate", nil)
-    end
+function module:OnAnimation(mark, elapsed)
+    D.AnimateX(mark)
 end
 
-local function StartAnimation()
-    module.animationFrame:SetScript("OnUpdate", UpdateAnimation)
-end
-
-local function CreateMark(name, class)
+function module:CreateMark(name, class)
     local rcolor = RAID_CLASS_COLORS[class]
     local m = CreateFrame("Frame", nil, _G['UIParent'])
-    m:SetHeight(C.mark.height)
-    m:SetWidth(C.mark.width)
+    m:SetHeight(C.db.profile.mark.size)
+    m:SetWidth(C.db.profile.mark.size)
     m:SetPoint("TOPLEFT", _G['UIParent'], "TOPLEFT", 0, 0)
     m:EnableMouse()
     m:SetScript("OnEnter", D.OnMarkTooltipEnter)
     m:SetScript("OnLeave", D.OnMarkTooltipLeave)
     m:SetFrameStrata("DIALOG")
     m:SetFrameLevel(2)
+    m:SetAlpha(1)
     m:Show()
 
     marks[name] = m
@@ -52,6 +35,8 @@ local function CreateMark(name, class)
 
     m.name = name
     m.class = class
+
+    m.anim = D.CreateUpdateAnimation(m, self.OnAnimation)
 
     D:SendMessage("CreateMark", name)
 
@@ -66,7 +51,7 @@ local function CreateMark(name, class)
     return m
 end
 
-local function UpdateMark(name, value, maxvalue, level, class)
+function module:UpdateMark(name, value, maxvalue, level, class)
     if not marks then return end
 
     local name = name or D.nameRealm
@@ -74,7 +59,7 @@ local function UpdateMark(name, value, maxvalue, level, class)
     local maxvalue = maxvalue or UnitXPMax("PLAYER")
     local level = level or UnitLevel("player")
     local class = class or D.class
-    local m = marks[name] or CreateMark(name, class);
+    local m = marks[name] or self:CreateMark(name, class);
 
     if D.IsMaxLevel(level) then
         m:Hide()
@@ -90,84 +75,110 @@ local function UpdateMark(name, value, maxvalue, level, class)
 
     m.texture:SetTexture(D.GetMarkTexture(level, UnitLevel("player")))
     m.texture:SetVertexColor(RAID_CLASS_COLORS[class].r, RAID_CLASS_COLORS[class].g, RAID_CLASS_COLORS[class].b)
+    m:SetHeight(C.db.profile.mark.size)
+    m:SetWidth(C.db.profile.mark.size)
+    m:Show()
 
-    if m.to then
-        StartAnimation()
-    end
+    m.anim.Start()
+
+    D:SendMessage("UpdateMark", name, m)
 
     if not m.player then return end
     m.texture:SetVertexColor(unpack(D.GetXpColor()))
 
-    D:SendMessage("UpdateMark", name, m)
+    D:SendMessage("UpdatePlayerMark", name, m)
 end
 
-local function OnUpdateMark(event, friend, msg )
-    UpdateMark(friend, msg.xp, msg.maxxp, msg.level, msg.class)
+function module:OnUpdateMark(event, friend, msg )
+    self:UpdateMark(friend, msg.xp, msg.maxxp, msg.level, msg.class)
 end
 
-local function OnDeleteMark(event, friend )
-    DeleteMark(friend)
+function module:OnDeleteMark(event, friend )
+    self:DeleteMark(friend)
 end
 
-local function UnregisterOnMaxLevel()
-    if D.IsMaxLevel() then
-        module:UnregisterEvent("PLAYER_UPDATE_RESTING");
-        module:UnregisterEvent("PLAYER_XP_UPDATE");
-        module:UnregisterEvent("PLAYER_LEVEL_UP");
+function module:UnregisterOnMaxLevel()
+    if D.IsMaxLevel() or not C.db.profile.mark.showPlayer then
+        self:UnregisterEvents()
         return true
     end
 end
 
+function module:RegisterEvents()
+    if D.IsMaxLevel() or not C.db.profile.mark.showPlayer then return end
+    self:RegisterEvent("PLAYER_ENTERING_WORLD")
+    self:RegisterEvent("PLAYER_UPDATE_RESTING")
+    self:RegisterEvent("PLAYER_XP_UPDATE")
+    self:RegisterEvent("PLAYER_LEVEL_UP")
+end
+
+function module:UnregisterEvents()
+    self:UnregisterEvent("PLAYER_UPDATE_RESTING")
+    self:UnregisterEvent("PLAYER_XP_UPDATE")
+    self:UnregisterEvent("PLAYER_LEVEL_UP")
+end
+
 function module:OnEnable()
-    module:RegisterEvent("PLAYER_ENTERING_WORLD")
-    module:RegisterEvent("PLAYER_XP_UPDATE")
-    module:RegisterEvent("PLAYER_LEVEL_UP")
-    module:RegisterEvent("PLAYER_UPDATE_RESTING")
+    self:RegisterEvents()
 
-    self:RegisterMessage("ReceiveData", OnUpdateMark)
-    self:RegisterMessage("ReceiveRequest", OnUpdateMark)
-    self:RegisterMessage("ReceiveDelete", OnDeleteMark)
+    self:RegisterMessage("ReceiveData", self.OnUpdateMark)
+    self:RegisterMessage("ReceiveRequest", self.OnUpdateMark)
+    self:RegisterMessage("ReceiveDelete", self.OnDeleteMark)
 
-    UnregisterOnMaxLevel()
+    self:UnregisterOnMaxLevel()
+end
+
+function module:OnDisable()
+    self:UnregisterEvents()
+
+    self:UnregisterMessage("ReceiveData")
+    self:UnregisterMessage("ReceiveRequest")
+    self:UnregisterMessage("ReceiveDelete")
 end
 
 function module:PLAYER_ENTERING_WORLD(event)
-    if C.player.show then
-        UpdateMark()
-    end
-    module:UnregisterEvent("PLAYER_ENTERING_WORLD")
+    self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+    self:UpdateMark()
 end
 
 function module:PLAYER_UPDATE_RESTING(event)
-    if UnregisterOnMaxLevel() then return end
-
-    if C.player.show then
-        UpdateMark()
-    end
+    if self:UnregisterOnMaxLevel() then return end
+    self:UpdateMark()
 end
 
 function module:PLAYER_XP_UPDATE(event, unit)
     if unit ~= "player" then return end
-    if UnregisterOnMaxLevel() then return end
-
-    if C.player.show then
-        UpdateMark()
-    end
+    if self:UnregisterOnMaxLevel() then return end
+    self:UpdateMark()
 end
 
 function module:PLAYER_LEVEL_UP(event, level)
-    if UnregisterOnMaxLevel() then return end
-    if C.player.show then
-        UpdateMark()
-    end
+    if self:UnregisterOnMaxLevel() then return end
+    self:UpdateMark()
 end
 
-local function DeleteMark(friend)
+function module:DeleteMark(friend)
     if not friend then return end
     if not marks[friend] then return end
     marks[friend]:Hide()
     marks[friend] = nil
     D:SendMessage("DeleteMark", friend)
+end
+
+function module:Update()
+    if not C.db.profile.mark.showPlayer then
+        self:DeleteMark(D.nameRealm)
+        self:UnregisterEvents()
+    elseif C.db.profile.mark.showPlayer then
+        self:RegisterEvents()
+        self:UpdateMark(D.nameRealm)
+    end
+
+    for name, mark in pairs(marks) do
+        if not mark then return end
+        self:UpdateMark(mark.name, mark.value, mark.maxvalue, mark.level, mark.class)
+    end
+
 end
 
 local function GetMark(friend)
@@ -179,7 +190,6 @@ local function GetMarks()
 end
 
 -- API
-D.UpdateMark = UpdateMark
-D.DeleteMark = DeleteMark
+D.DeleteMark = module.DeleteMark
 D.GetMark = GetMark
 D.GetMarks = GetMarks

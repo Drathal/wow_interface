@@ -25,6 +25,7 @@ local function CopyTable(src, dest)
     return dest
 end
 
+-- TODO: refactor
 local function Throttle(self, elapsed)
     self.delay = min((self.delay or 0.01) - elapsed, 0.15);
     if self.delay > 0 then return true end
@@ -33,15 +34,20 @@ local function Throttle(self, elapsed)
     return nil
 end
 
-local function CreateUpdateAnimation(cb)
+local function CreateUpdateAnimation(f, cb)
     local anim = CreateFrame('Frame')
 
     anim.UpdateAnimation = function(self, elapsed)
         if Throttle(self, elapsed) then return end
-        cb(anim, elapsed)
+        if not f.to or f.to == 0 then
+            self:Stop()
+            return
+        end
+        cb(self, f, elapsed)
     end
 
     anim.Start = function()
+        if not f.to or f.to == 0 then return end
         anim:SetScript("OnUpdate", anim.UpdateAnimation)
     end
 
@@ -49,7 +55,7 @@ local function CreateUpdateAnimation(cb)
         anim:SetScript("OnUpdate", nil)
     end
 
-    return anim    
+    return anim
 end
 
 local function GetXpColor()

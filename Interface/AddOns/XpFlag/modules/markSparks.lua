@@ -8,7 +8,7 @@ local function PlaySpark(xp, sparks, parent)
     for k, spark in pairs(sparks) do
         if not spark.ag:IsPlaying() then
             local _, _, _, xOfs, yOfs = parent:GetPoint()
-            local x = (xOfs + (C.mark.width / 2)) --* UIParent:GetEffectiveScale()
+            local x = (xOfs + (C.db.profile.mark.size / 2)) --* UIParent:GetEffectiveScale()
 
             spark:ClearAllPoints()
             spark:SetPoint("TOP", _G[UIParent], "TOPLEFT", x, C.sparkXP.y);
@@ -77,7 +77,7 @@ end
 
 local function PlayXpSpark(msg, name, f)
     if not f.xpSparks then return end
-    if not f.gain then return end
+    if not f.gain or f.gain == 0 then return end
     f.xpSparks.Play(f.gain)
 end
 
@@ -96,7 +96,7 @@ local function CreateSparks(parent)
 end
 
 function module:OnEnable()
-    self:RegisterMessage("UpdateMark", PlayXpSpark)
+    self:RegisterMessage("UpdatePlayerMark", PlayXpSpark)
 end
 
 -- API

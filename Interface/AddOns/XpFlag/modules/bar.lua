@@ -12,9 +12,13 @@ local parent = select(2, unpack(C.bar.position))
 
 local module = D:NewModule("bar", "AceEvent-3.0")
 
-local function CreateBar()
+function module:OnAnimation(bar, elapsed)
+    D.AnimateWidth(bar)
+end
+
+function module:CreateBar()
     local bar = CreateFrame("Frame", D.addonName..'-XpBar', parent)
-    bar:SetHeight(C.bar.height)
+    bar:SetHeight(C.db.profile.bar.height)
     bar:SetWidth(0)
     bar:SetPoint(unpack(C.bar.position))
     bar:SetFrameLevel(1)
@@ -37,21 +41,14 @@ local function CreateBar()
     bar:SetBackdropBorderColor(0, 0, 0, 0.5)
     bar:Show()
 
+    bar.anim = D.CreateUpdateAnimation(bar, self.OnAnimation)
+
     return bar
 end
 
-function module:OnAnimation(elapsed)
-    if not bars.player.to then
-        self:Stop()
-    end
-
-    D.AnimateWidth(bars.player)
-end
-
 function module:OnEnable()
-    if not C.player.show then return end
     if not C.db.profile.bar.show then return end
-    
+
     self:RegisterEvent("PLAYER_ENTERING_WORLD")
     self:RegisterEvent("PLAYER_UPDATE_RESTING")
     self:RegisterEvent("PLAYER_XP_UPDATE")
@@ -66,8 +63,7 @@ function module:OnDisable()
 end
 
 function module:CreatePlayerBar()
-    bars.player = CreateBar()
-    bars.player.anim = D.CreateUpdateAnimation(self.OnAnimation)
+    bars.player = self:CreateBar()
     return bars.player
 end
 
@@ -83,9 +79,8 @@ function module:UpdatePlayerBar()
     bar.texture:SetVertexColor(unpack(D.GetXpColor()))
     bar:Show()
 
-    if bar.to and bar.to > 0 then
-        bar.anim.Start()
-    end
+    bar.anim.Start()
+
 end
 
 function module:PLAYER_ENTERING_WORLD()
@@ -108,6 +103,9 @@ function module:Update()
         return
     elseif not module:IsEnabled() then
         self:Enable()
+    end
+    if bars.player then
+        bars.player:SetHeight(C.db.profile.bar.height)
     end
 
     self:UpdatePlayerBar()

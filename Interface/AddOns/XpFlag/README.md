@@ -10,13 +10,13 @@ Its shows Player Experience at the top of the Screen. It can also Sync your Batt
   * It should turn green and you should see your friendsExperience displayed on the top of the Screen.
 
 ## Features
-At the moment XpFlag has not a lot of features. When everything is working well i will add new features like:
+At the moment XpFlag has not a lot of features. When everything works well, i will add new features like:
 
   * Config - choose where to add the XpFlag
-  * Config - choose to show a bar not not
   * more Flag designs
   * more info on XpFlag Tooltip
+  * other Data sources than XP
   * ...
 
-## This Addon is in early development Stage.
-So maybe it will now work now for you.
+## This Addon is in beta development Stage.
+So maybe some bugs will bite you.

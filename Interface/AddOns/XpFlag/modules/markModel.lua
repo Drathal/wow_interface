@@ -26,6 +26,6 @@ local function FadeOutMarkModel(msg, f)
 end
 
 function module:OnEnable()
-    self:RegisterMessage("UpdateMark", FadeInMarkModel)
+    self:RegisterMessage("UpdatePlayerMark", FadeInMarkModel)
     self:RegisterMessage("AnimateXEnd", FadeOutMarkModel)
 end
