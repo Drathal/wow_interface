@@ -2,6 +2,9 @@
 CliqueDB = nil
 CliqueDB3 = {
 	["char"] = {
+		["Dronthal - Blackhand"] = {
+			["alerthidden"] = true,
+		},
 		["Drathair - Blackhand"] = {
 			["spec1_profileKey"] = "Drathair - Blackhand",
 			["blizzframes"] = {
@@ -13,8 +16,8 @@ CliqueDB3 = {
 				["compactraid"] = false,
 				["FocusFrame"] = false,
 				["arena"] = false,
-				["boss"] = false,
 				["TargetFrame"] = false,
+				["boss"] = false,
 			},
 			["fastooc"] = true,
 			["blacklist"] = {
@@ -22,13 +25,10 @@ CliqueDB3 = {
 			},
 			["alerthidden"] = true,
 			["downclick"] = false,
-			["stopcastingfix"] = true,
-			["specswap"] = false,
-			["spec2_profileKey"] = "Drathair - Blackhand",
 			["spec3_profileKey"] = "Drathair - Blackhand",
-		},
-		["Dronthal - Blackhand"] = {
-			["alerthidden"] = true,
+			["spec2_profileKey"] = "Drathair - Blackhand",
+			["specswap"] = false,
+			["stopcastingfix"] = true,
 		},
 		["Sungleave - Blackhand"] = {
 			["alerthidden"] = true,
@@ -38,16 +38,13 @@ CliqueDB3 = {
 			["fastooc"] = false,
 			["alerthidden"] = true,
 			["downclick"] = false,
-			["spec3_profileKey"] = "base",
-			["spec4_profileKey"] = "base",
-			["spec2_profileKey"] = "base",
-			["stopcastingfix"] = true,
 			["specswap"] = false,
+			["spec4_profileKey"] = "base",
+			["stopcastingfix"] = true,
+			["spec2_profileKey"] = "base",
+			["spec3_profileKey"] = "base",
 		},
 		["Drathal - Madmortem"] = {
-			["alerthidden"] = true,
-		},
-		["Drathtix - Madmortem"] = {
 			["alerthidden"] = true,
 		},
 		["Dronthal - Madmortem"] = {
@@ -61,31 +58,34 @@ CliqueDB3 = {
 				["compactraid"] = false,
 				["FocusFrame"] = false,
 				["arena"] = false,
-				["boss"] = false,
 				["TargetFrame"] = false,
+				["boss"] = false,
 			},
 			["fastooc"] = false,
 			["spec2_profileKey"] = "Dronthal - Madmortem",
 			["downclick"] = true,
-			["spec3_profileKey"] = "Dronthal - Madmortem",
-			["alerthidden"] = true,
-			["specswap"] = false,
 			["stopcastingfix"] = true,
+			["specswap"] = false,
+			["alerthidden"] = true,
+			["spec3_profileKey"] = "Dronthal - Madmortem",
+		},
+		["Drathtix - Madmortem"] = {
+			["alerthidden"] = true,
 		},
 		["Drathia - Madmortem"] = {
-			["alerthidden"] = true,
 			["blacklist"] = {
 				["LSBoss2Frame"] = true,
-				["Boss3TargetFrame"] = true,
+				["LSBoss1Frame"] = true,
 				["Boss1TargetFrame"] = true,
 				["Boss2TargetFrame"] = true,
-				["LSBoss4Frame"] = true,
 				["LSBoss5Frame"] = true,
-				["LSBoss3Frame"] = true,
+				["LSBoss4Frame"] = true,
 				["LSTargetTargetFrame"] = true,
+				["LSBoss3Frame"] = true,
 				["Boss4TargetFrame"] = true,
-				["LSBoss1Frame"] = true,
+				["Boss3TargetFrame"] = true,
 			},
+			["alerthidden"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -100,21 +100,21 @@ CliqueDB3 = {
 		["Drathon - Blackhand"] = "Drathon - Blackhand",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
-		["Drathair - Blackhand"] = "Drathair - Blackhand",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
 		["Drathol - Blackhand"] = "Drathol - Blackhand",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
+		["Dronthal - Blackhand"] = "Dronthal - Blackhand",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathair - Blackhand"] = "Drathair - Blackhand",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 	},
 	["profiles"] = {
 		["Drathal - Blackhand"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -130,10 +130,10 @@ CliqueDB3 = {
 		["Dorthal - Blackhand"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -149,10 +149,10 @@ CliqueDB3 = {
 		["Drathol - Blackhand"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -168,10 +168,10 @@ CliqueDB3 = {
 		["Modranthir - Madmortem"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -187,10 +187,10 @@ CliqueDB3 = {
 		["Modranthir - Blackhand"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -206,10 +206,10 @@ CliqueDB3 = {
 		["Drathal - Madmortem"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -244,9 +244,9 @@ CliqueDB3 = {
 					["spell"] = "Regrowth",
 					["key"] = "BUTTON2",
 					["sets"] = {
-						["hovercast"] = true,
 						["friend"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 136085,
 					["type"] = "spell",
@@ -266,9 +266,9 @@ CliqueDB3 = {
 					["spell"] = "Healing Touch",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
-						["hovercast"] = true,
 						["friend"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 136041,
 					["type"] = "spell",
@@ -288,9 +288,9 @@ CliqueDB3 = {
 					["spell"] = "Rejuvenation",
 					["key"] = "BUTTON1",
 					["sets"] = {
-						["hovercast"] = true,
 						["friend"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 136081,
 					["type"] = "spell",
@@ -299,10 +299,10 @@ CliqueDB3 = {
 					["spell"] = "Ironbark",
 					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 572025,
 					["type"] = "spell",
@@ -312,8 +312,8 @@ CliqueDB3 = {
 					["key"] = "ALT-0",
 					["sets"] = {
 						["spec3"] = true,
-						["hovercast"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 						["enemy"] = true,
 					},
 					["icon"] = 236946,
@@ -323,10 +323,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -336,8 +336,8 @@ CliqueDB3 = {
 					["key"] = "ALT-7",
 					["sets"] = {
 						["spec3"] = true,
-						["hovercast"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 						["enemy"] = true,
 					},
 					["icon"] = 132270,
@@ -347,10 +347,10 @@ CliqueDB3 = {
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
@@ -359,10 +359,10 @@ CliqueDB3 = {
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 134914,
 					["type"] = "spell",
@@ -434,10 +434,10 @@ CliqueDB3 = {
 		["Draltair - Blackhand"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -453,10 +453,10 @@ CliqueDB3 = {
 		["Dronthal - Blackhand"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -562,10 +562,10 @@ CliqueDB3 = {
 		["Drathon - Blackhand"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -626,8 +626,8 @@ CliqueDB3 = {
 					["key"] = "ALT-7",
 					["sets"] = {
 						["spec3"] = true,
-						["hovercast"] = true,
 						["default"] = true,
+						["hovercast"] = true,
 						["enemy"] = true,
 					},
 					["icon"] = 132270,
@@ -637,10 +637,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -736,32 +736,81 @@ CliqueDB3 = {
 				}, -- [9]
 			},
 		},
-		["Dranathal - Madmortem"] = {
+		["Drathair - Blackhand"] = {
 			["bindings"] = {
 				{
+					["spell"] = "Life Cocoon",
+					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
+					["icon"] = 627485,
+					["type"] = "spell",
 				}, -- [1]
 				{
-					["type"] = "menu",
+					["spell"] = "Detox",
+					["key"] = "ALT-7",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 460692,
+					["type"] = "spell",
+				}, -- [2]
+				{
+					["spell"] = "Tiger's Lust",
+					["key"] = "ALT-0",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 651727,
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Effuse",
 					["key"] = "BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-				}, -- [2]
+					["icon"] = 1360977,
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Vivify",
+					["key"] = "MOUSEWHEELUP",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 1360980,
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Sheilun's Gift",
+					["key"] = "BUTTON3",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 1242282,
+					["type"] = "spell",
+				}, -- [6]
+				{
+					["macrotext"] = "/cast [@mouseover] Mana Tea\n/cast [@mouseover] Thunder Focus Tea\n/cast [@mouseover] Enveloping Mist",
+					["type"] = "macro",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["friend"] = true,
+						["hovercast"] = true,
+						["spec2"] = true,
+					},
+				}, -- [7]
 			},
 		},
 		["Dronthal - Madmortem"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -871,7 +920,7 @@ CliqueDB3 = {
 				}, -- [13]
 			},
 		},
-		["Darlaxle - Blackhand"] = {
+		["Draltar - Blackhand"] = {
 			["bindings"] = {
 				{
 					["sets"] = {
@@ -893,10 +942,10 @@ CliqueDB3 = {
 		["Drathtix - Madmortem"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -1009,8 +1058,8 @@ CliqueDB3 = {
 					["type"] = "macro",
 					["key"] = "BUTTON1",
 					["sets"] = {
-						["hovercast"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 						["spec2"] = true,
 					},
 				}, -- [6]
@@ -1019,10 +1068,10 @@ CliqueDB3 = {
 		["Drahmoon - Madmortem"] = {
 			["bindings"] = {
 				{
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -1035,7 +1084,7 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Draltar - Blackhand"] = {
+		["Darlaxle - Blackhand"] = {
 			["bindings"] = {
 				{
 					["type"] = "target",
@@ -1054,72 +1103,23 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Drathair - Blackhand"] = {
+		["Dranathal - Madmortem"] = {
 			["bindings"] = {
 				{
-					["spell"] = "Life Cocoon",
-					["key"] = "MOUSEWHEELDOWN",
+					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 627485,
-					["type"] = "spell",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
 				}, -- [1]
 				{
-					["spell"] = "Detox",
-					["key"] = "ALT-7",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 460692,
-					["type"] = "spell",
-				}, -- [2]
-				{
-					["spell"] = "Tiger's Lust",
-					["key"] = "ALT-0",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 651727,
-					["type"] = "spell",
-				}, -- [3]
-				{
-					["spell"] = "Effuse",
+					["type"] = "menu",
 					["key"] = "BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 1360977,
-					["type"] = "spell",
-				}, -- [4]
-				{
-					["spell"] = "Vivify",
-					["key"] = "MOUSEWHEELUP",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 1360980,
-					["type"] = "spell",
-				}, -- [5]
-				{
-					["spell"] = "Sheilun's Gift",
-					["key"] = "BUTTON3",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 1242282,
-					["type"] = "spell",
-				}, -- [6]
-				{
-					["macrotext"] = "/cast [@mouseover] Mana Tea\n/cast [@mouseover] Thunder Focus Tea\n/cast [@mouseover] Enveloping Mist",
-					["type"] = "macro",
-					["key"] = "BUTTON1",
-					["sets"] = {
-						["hovercast"] = true,
-						["friend"] = true,
-						["spec2"] = true,
-					},
-				}, -- [7]
+				}, -- [2]
 			},
 		},
 	},

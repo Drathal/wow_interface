@@ -1,7 +1,6 @@
 
 TalentSetManager_Options = {
 	["visible"] = true,
-	["ldb_last_selected"] = "talents",
 	["interface"] = {
 		["ignored_tiers_bg"] = {
 			1, -- [1]
@@ -11,77 +10,84 @@ TalentSetManager_Options = {
 		},
 		["highlight_icon"] = "spells\\star",
 		["auto_equip_chatmsg"] = true,
-		["auto_equip_enable"] = false,
-		["hide_info_button"] = false,
 		["chat_filter"] = 2,
+		["hide_info_button"] = false,
+		["auto_equip_enable"] = false,
 	},
+	["ldb_last_selected"] = "talents",
 }
 TalentSetManager_CharacterSaves = {
 	["Drathtix-Madmortem"] = {
+		["talents_pvp"] = {
+		},
 		["talents"] = {
 			[3] = {
 			},
 			[2] = {
 			},
 		},
-		["talents_pvp"] = {
-		},
 		["version"] = 0,
 		["interface"] = {
-			["auto_equip4"] = 0,
 			["auto_equip2"] = 0,
+			["auto_equip4"] = 0,
 			["auto_equip1"] = 0,
 			["auto_equip3"] = 0,
 		},
 	},
 	["Drahmoon-Madmortem"] = {
+		["talents_pvp"] = {
+		},
 		["talents"] = {
 			{
 			}, -- [1]
 			[3] = {
 			},
 		},
-		["talents_pvp"] = {
-		},
 		["version"] = 0,
 		["interface"] = {
-			["auto_equip2"] = 0,
 			["auto_equip4"] = 0,
+			["auto_equip2"] = 0,
 			["auto_equip1"] = 0,
 			["auto_equip3"] = 0,
 		},
 	},
 	["Drathal-Madmortem"] = {
-		["talents_pvp"] = {
-		},
 		["talents"] = {
 			[4] = {
 			},
 		},
+		["talents_pvp"] = {
+		},
 		["version"] = 0,
 		["interface"] = {
-			["auto_equip2"] = 0,
 			["auto_equip4"] = 0,
+			["auto_equip2"] = 0,
 			["auto_equip1"] = 0,
 			["auto_equip3"] = 0,
 		},
 	},
 	["Drathia-Madmortem"] = {
-		["talents_pvp"] = {
-		},
 		["talents"] = {
 			[2] = {
 			},
 		},
+		["talents_pvp"] = {
+		},
 		["version"] = 0,
 		["interface"] = {
-			["auto_equip2"] = 0,
 			["auto_equip4"] = 0,
+			["auto_equip2"] = 0,
 			["auto_equip1"] = 0,
 			["auto_equip3"] = 0,
 		},
 	},
 	["Dronthal-Madmortem"] = {
+		["talents_pvp"] = {
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		},
 		["talents"] = {
 			{
 				{
@@ -126,12 +132,6 @@ TalentSetManager_CharacterSaves = {
 			{
 			}, -- [3]
 		},
-		["talents_pvp"] = {
-			{
-			}, -- [1]
-			{
-			}, -- [2]
-		},
 		["version"] = 0,
 		["interface"] = {
 			["auto_equip4"] = 0,
@@ -141,16 +141,16 @@ TalentSetManager_CharacterSaves = {
 		},
 	},
 	["Dranathal-Madmortem"] = {
-		["talents_pvp"] = {
-		},
 		["talents"] = {
 			{
 			}, -- [1]
 		},
+		["talents_pvp"] = {
+		},
 		["version"] = 0,
 		["interface"] = {
-			["auto_equip2"] = 0,
 			["auto_equip4"] = 0,
+			["auto_equip2"] = 0,
 			["auto_equip1"] = 0,
 			["auto_equip3"] = 0,
 		},

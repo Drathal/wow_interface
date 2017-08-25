@@ -2,6 +2,7 @@
 XpFlagDB = {
 	["profileKeys"] = {
 		["Drathtix - Madmortem"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
