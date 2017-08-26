@@ -45,9 +45,6 @@ PawnCommon = {
 		["\"MrRobot\":SHAMAN1"] = {
 			["IconTexturePath"] = 136048,
 			["PerCharacterOptions"] = {
-				["Dranathal-Madmortem"] = {
-					["Visible"] = true,
-				},
 			},
 			["Color"] = "0070de",
 			["ClassID"] = 7,
@@ -192,12 +189,12 @@ PawnCommon = {
 		["Guardian"] = {
 			["NormalizationFactor"] = 1,
 			["Values"] = {
-				["Versatility"] = 12.01,
+				["Stamina"] = 18.01,
 				["Agility"] = 10.51,
 				["HasteRating"] = 13.51,
 				["MasteryRating"] = 15.01,
-				["Stamina"] = 18.01,
 				["CritRating"] = 9.01,
+				["Versatility"] = 12.01,
 			},
 			["UpgradesFollowSpecialization"] = true,
 			["Color"] = "e6996c",
@@ -423,6 +420,9 @@ PawnCommon = {
 		["\"MrRobot\":SHAMAN3"] = {
 			["IconTexturePath"] = 136052,
 			["PerCharacterOptions"] = {
+				["Dranathal-Madmortem"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "0070de",
 			["ClassID"] = 7,
@@ -498,20 +498,20 @@ PawnCommon = {
 			["SpecID"] = 2,
 			["UnenchantedColor"] = "6566b2",
 		},
-		["\"MrRobot\":DRUID2"] = {
-			["IconTexturePath"] = 132115,
+		["\"MrRobot\":PALADIN2"] = {
+			["IconTexturePath"] = 236264,
 			["PerCharacterOptions"] = {
 			},
-			["Color"] = "ff7d0a",
-			["ClassID"] = 11,
-			["LocalizedName"] = "Druid: Feral",
-			["DoNotShow1HUpgrades"] = true,
-			["Role"] = "DAMAGER",
-			["DoNotShow2HUpgrades"] = false,
+			["Color"] = "f58cba",
+			["ClassID"] = 2,
+			["LocalizedName"] = "Paladin: Protection",
+			["DoNotShow1HUpgrades"] = false,
+			["Role"] = "TANK",
+			["DoNotShow2HUpgrades"] = true,
 			["UpgradesFollowSpecialization"] = true,
 			["Provider"] = "MrRobot",
 			["SpecID"] = 2,
-			["UnenchantedColor"] = "bf5d07",
+			["UnenchantedColor"] = "b7698b",
 		},
 		["\"MrRobot\":MAGE1"] = {
 			["IconTexturePath"] = 135932,
@@ -528,20 +528,34 @@ PawnCommon = {
 			["SpecID"] = 1,
 			["UnenchantedColor"] = "2f95b0",
 		},
-		["\"MrRobot\":PALADIN2"] = {
-			["IconTexturePath"] = 236264,
-			["PerCharacterOptions"] = {
+		["Holy"] = {
+			["IconTexturePath"] = 135920,
+			["Values"] = {
+				["IsWand"] = -1000000,
+				["IsFist"] = -1000000,
+				["IsWarglaive"] = -1000000,
+				["CritRating"] = 7.57,
+				["IsStaff"] = -1000000,
+				["IsOffHand"] = -1000000,
+				["IsBow"] = -1000000,
+				["Intellect"] = 9.07,
+				["HasteRating"] = 3.07,
+				["MasteryRating"] = 4.57,
+				["Versatility"] = 6.07,
+				["IsCrossbow"] = -1000000,
+				["IsDagger"] = -1000000,
+				["IsGun"] = -1000000,
 			},
 			["Color"] = "f58cba",
 			["ClassID"] = 2,
-			["LocalizedName"] = "Paladin: Protection",
-			["DoNotShow1HUpgrades"] = false,
-			["Role"] = "TANK",
-			["DoNotShow2HUpgrades"] = true,
+			["Role"] = "HEALER",
 			["UpgradesFollowSpecialization"] = true,
-			["Provider"] = "MrRobot",
-			["SpecID"] = 2,
-			["UnenchantedColor"] = "b7698b",
+			["SpecID"] = 1,
+			["PerCharacterOptions"] = {
+				["Dronthal-Madmortem"] = {
+					["Visible"] = true,
+				},
+			},
 		},
 		["Restoration"] = {
 			["NormalizationFactor"] = 1,
@@ -591,34 +605,20 @@ PawnCommon = {
 			["SpecID"] = 2,
 			["UnenchantedColor"] = "7a2496",
 		},
-		["Holy"] = {
-			["IconTexturePath"] = 135920,
-			["Values"] = {
-				["IsWand"] = -1000000,
-				["IsFist"] = -1000000,
-				["IsWarglaive"] = -1000000,
-				["CritRating"] = 7.57,
-				["IsStaff"] = -1000000,
-				["IsOffHand"] = -1000000,
-				["IsBow"] = -1000000,
-				["Intellect"] = 9.07,
-				["HasteRating"] = 3.07,
-				["MasteryRating"] = 4.57,
-				["Versatility"] = 6.07,
-				["IsCrossbow"] = -1000000,
-				["IsDagger"] = -1000000,
-				["IsGun"] = -1000000,
-			},
-			["Color"] = "f58cba",
-			["ClassID"] = 2,
-			["Role"] = "HEALER",
-			["UpgradesFollowSpecialization"] = true,
-			["SpecID"] = 1,
+		["\"MrRobot\":DRUID2"] = {
+			["IconTexturePath"] = 132115,
 			["PerCharacterOptions"] = {
-				["Dronthal-Madmortem"] = {
-					["Visible"] = true,
-				},
 			},
+			["Color"] = "ff7d0a",
+			["ClassID"] = 11,
+			["LocalizedName"] = "Druid: Feral",
+			["DoNotShow1HUpgrades"] = true,
+			["Role"] = "DAMAGER",
+			["DoNotShow2HUpgrades"] = false,
+			["UpgradesFollowSpecialization"] = true,
+			["Provider"] = "MrRobot",
+			["SpecID"] = 2,
+			["UnenchantedColor"] = "bf5d07",
 		},
 		["Affliction"] = {
 			["IconTexturePath"] = 136145,
@@ -700,12 +700,12 @@ PawnCommon = {
 			["Color"] = "7ce69b",
 			["UnenchantedColor"] = "5dac74",
 			["Values"] = {
-				["Stamina"] = 12.05,
+				["CritRating"] = 7.55,
 				["Agility"] = 6.05,
 				["HasteRating"] = 9.05,
 				["MasteryRating"] = 7.55,
-				["CritRating"] = 7.55,
 				["Versatility"] = 4.55,
+				["Stamina"] = 12.05,
 			},
 		},
 		["\"MrRobot\":DRUID4"] = {

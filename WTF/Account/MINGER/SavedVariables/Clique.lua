@@ -5,31 +5,6 @@ CliqueDB3 = {
 		["Dronthal - Blackhand"] = {
 			["alerthidden"] = true,
 		},
-		["Drathair - Blackhand"] = {
-			["spec1_profileKey"] = "Drathair - Blackhand",
-			["blizzframes"] = {
-				["PetFrame"] = false,
-				["FocusFrameToT"] = false,
-				["PlayerFrame"] = false,
-				["party"] = false,
-				["TargetFrameToT"] = false,
-				["compactraid"] = false,
-				["FocusFrame"] = false,
-				["arena"] = false,
-				["TargetFrame"] = false,
-				["boss"] = false,
-			},
-			["fastooc"] = true,
-			["blacklist"] = {
-				["PlayerFrame"] = true,
-			},
-			["alerthidden"] = true,
-			["downclick"] = false,
-			["spec3_profileKey"] = "Drathair - Blackhand",
-			["spec2_profileKey"] = "Drathair - Blackhand",
-			["specswap"] = false,
-			["stopcastingfix"] = true,
-		},
 		["Sungleave - Blackhand"] = {
 			["alerthidden"] = true,
 		},
@@ -44,7 +19,19 @@ CliqueDB3 = {
 			["spec2_profileKey"] = "base",
 			["spec3_profileKey"] = "base",
 		},
-		["Drathal - Madmortem"] = {
+		["Drathia - Madmortem"] = {
+			["blacklist"] = {
+				["LSBoss2Frame"] = true,
+				["LSBoss1Frame"] = true,
+				["Boss1TargetFrame"] = true,
+				["Boss2TargetFrame"] = true,
+				["LSBoss5Frame"] = true,
+				["LSBoss4Frame"] = true,
+				["LSTargetTargetFrame"] = true,
+				["LSBoss3Frame"] = true,
+				["Boss4TargetFrame"] = true,
+				["Boss3TargetFrame"] = true,
+			},
 			["alerthidden"] = true,
 		},
 		["Dronthal - Madmortem"] = {
@@ -72,20 +59,36 @@ CliqueDB3 = {
 		["Drathtix - Madmortem"] = {
 			["alerthidden"] = true,
 		},
-		["Drathia - Madmortem"] = {
+		["Drathal - Madmortem"] = {
+			["alerthidden"] = true,
+		},
+		["Dranathal - Madmortem"] = {
+			["alerthidden"] = true,
+		},
+		["Drathair - Blackhand"] = {
+			["spec1_profileKey"] = "Drathair - Blackhand",
+			["blizzframes"] = {
+				["PetFrame"] = false,
+				["FocusFrameToT"] = false,
+				["PlayerFrame"] = false,
+				["party"] = false,
+				["TargetFrameToT"] = false,
+				["compactraid"] = false,
+				["FocusFrame"] = false,
+				["arena"] = false,
+				["TargetFrame"] = false,
+				["boss"] = false,
+			},
+			["fastooc"] = true,
 			["blacklist"] = {
-				["LSBoss2Frame"] = true,
-				["LSBoss1Frame"] = true,
-				["Boss1TargetFrame"] = true,
-				["Boss2TargetFrame"] = true,
-				["LSBoss5Frame"] = true,
-				["LSBoss4Frame"] = true,
-				["LSTargetTargetFrame"] = true,
-				["LSBoss3Frame"] = true,
-				["Boss4TargetFrame"] = true,
-				["Boss3TargetFrame"] = true,
+				["PlayerFrame"] = true,
 			},
 			["alerthidden"] = true,
+			["downclick"] = false,
+			["spec3_profileKey"] = "Drathair - Blackhand",
+			["spec2_profileKey"] = "Drathair - Blackhand",
+			["specswap"] = false,
+			["stopcastingfix"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -244,9 +247,9 @@ CliqueDB3 = {
 					["spell"] = "Regrowth",
 					["key"] = "BUTTON2",
 					["sets"] = {
-						["friend"] = true,
 						["default"] = true,
 						["hovercast"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 136085,
 					["type"] = "spell",
@@ -266,9 +269,9 @@ CliqueDB3 = {
 					["spell"] = "Healing Touch",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
-						["friend"] = true,
 						["default"] = true,
 						["hovercast"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 136041,
 					["type"] = "spell",
@@ -288,9 +291,9 @@ CliqueDB3 = {
 					["spell"] = "Rejuvenation",
 					["key"] = "BUTTON1",
 					["sets"] = {
-						["friend"] = true,
 						["default"] = true,
 						["hovercast"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 136081,
 					["type"] = "spell",
@@ -299,10 +302,10 @@ CliqueDB3 = {
 					["spell"] = "Ironbark",
 					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 572025,
 					["type"] = "spell",
@@ -323,10 +326,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -347,10 +350,10 @@ CliqueDB3 = {
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
@@ -359,10 +362,10 @@ CliqueDB3 = {
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 134914,
 					["type"] = "spell",
@@ -637,10 +640,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -1110,16 +1113,34 @@ CliqueDB3 = {
 					["sets"] = {
 						["default"] = true,
 					},
-					["key"] = "BUTTON1",
+					["key"] = "ALT-BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
 				{
 					["type"] = "menu",
-					["key"] = "BUTTON2",
+					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
 				}, -- [2]
+				{
+					["spell"] = "Riptide",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 252995,
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Healing Surge",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136044,
+					["type"] = "spell",
+				}, -- [4]
 			},
 		},
 	},

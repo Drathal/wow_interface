@@ -59,10 +59,10 @@ XIVBarDB = {
 				["daily"] = 0,
 			},
 			["Drathtix"] = {
-				["dailyMoney"] = 82551494,
-				["sessionMoney"] = 15000,
+				["dailyMoney"] = 86631555,
+				["sessionMoney"] = 1823138,
 				["lastLoginDate"] = 20170825,
-				["currentMoney"] = 82949231,
+				["currentMoney"] = 87029292,
 				["daily"] = 0,
 			},
 			["Drahmoon"] = {
@@ -80,11 +80,11 @@ XIVBarDB = {
 				["daily"] = 0,
 			},
 			["Dranathal"] = {
-				["dailyMoney"] = 50,
-				["sessionMoney"] = 0,
+				["dailyMoney"] = 48647,
+				["sessionMoney"] = 22537,
 				["daily"] = 0,
-				["currentMoney"] = 50,
-				["lastLoginDate"] = 20170823,
+				["currentMoney"] = 48647,
+				["lastLoginDate"] = 20170826,
 			},
 			["Drathal"] = {
 				["currentMoney"] = 26496445,
@@ -119,8 +119,8 @@ XIVBarDB = {
 			},
 			["general"] = {
 				["ohHide"] = true,
-				["barPosition"] = "TOP",
 				["moduleSpacing"] = 29,
+				["barPosition"] = "TOP",
 			},
 			["modules"] = {
 				["tradeskill"] = {
@@ -135,11 +135,11 @@ XIVBarDB = {
 					["enabled"] = false,
 				},
 				["microMenu"] = {
-					["chat"] = false,
-					["help"] = false,
-					["quest"] = false,
-					["talent"] = false,
 					["char"] = false,
+					["help"] = false,
+					["talent"] = false,
+					["chat"] = false,
+					["quest"] = false,
 					["pvp"] = false,
 				},
 				["currency"] = {
@@ -164,8 +164,8 @@ XIVBarDB = {
 					["enabled"] = false,
 				},
 				["system"] = {
-					["showTooltip"] = false,
 					["showAllOnShift"] = false,
+					["showTooltip"] = false,
 				},
 			},
 		},
@@ -189,8 +189,8 @@ XIVBarDB = {
 			},
 			["general"] = {
 				["barPosition"] = "TOP",
-				["moduleSpacing"] = 29,
 				["ohHide"] = true,
+				["moduleSpacing"] = 29,
 			},
 			["modules"] = {
 				["tradeskill"] = {
@@ -205,11 +205,11 @@ XIVBarDB = {
 					["enabled"] = false,
 				},
 				["microMenu"] = {
-					["char"] = false,
-					["help"] = false,
-					["talent"] = false,
 					["chat"] = false,
+					["help"] = false,
 					["quest"] = false,
+					["talent"] = false,
+					["char"] = false,
 					["pvp"] = false,
 				},
 				["currency"] = {
@@ -230,8 +230,8 @@ XIVBarDB = {
 					["enabled"] = true,
 				},
 				["system"] = {
-					["showAllOnShift"] = false,
 					["showTooltip"] = false,
+					["showAllOnShift"] = false,
 				},
 				["clock"] = {
 					["hideEventText"] = true,

@@ -82,7 +82,8 @@ local setups = {
 local function setup(arg)
 
     print("drathal`s setup")
-    SetCVar("checkAddonVersion", 0)
+
+    
 
     local done = nil
     for _, data in pairs(setups) do 
@@ -121,3 +122,6 @@ SlashCmdList["DSETUP"] = function(arg)
     end
     setup(arg)   
 end
+
+SetCVar("checkAddonVersion", 0)
+SetCVar("floatingCombatTextCombatDamage", 0)

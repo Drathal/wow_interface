@@ -1,7 +1,6 @@
 ## Interface: 70200
 ## Title: dSetup
 ## Author: drathal
-## DefaultState: Disabled
 ## Notes: Setup UI
 ## Version: 1
 ## OptionalDeps: Grid2, XIV_Databar, Skada

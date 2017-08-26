@@ -1,5 +1,7 @@
 
 Grid2DB = {
+	["Default"] = {
+	},
 	["namespaces"] = {
 		["Grid2Frame"] = {
 			["profiles"] = {
@@ -69,8 +71,6 @@ Grid2DB = {
 		},
 		["LibDualSpec-1.0"] = {
 		},
-	},
-	["Default"] = {
 	},
 	["profileKeys"] = {
 		["Dronthal - Madmortem"] = "Default",
@@ -498,20 +498,20 @@ Grid2DB = {
 					["textlength"] = 5,
 					["fontFlags"] = "OUTLINE",
 				},
-				["bar-bottom-right"] = {
+				["bar-top"] = {
 					["type"] = "bar",
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
-					["height"] = 5,
 					["location"] = {
-						["y"] = 2,
-						["x"] = -2,
-						["point"] = "BOTTOMRIGHT",
-						["relPoint"] = "BOTTOMRIGHT",
+						["y"] = -2,
+						["x"] = 0,
+						["point"] = "TOP",
+						["relPoint"] = "TOP",
 					},
-					["level"] = 9,
 					["orientation"] = "HORIZONTAL",
+					["level"] = 9,
+					["height"] = 5,
 					["texture"] = "Grid2 Flat",
 				},
 				["icon-left"] = {
@@ -540,15 +540,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
-					["height"] = 5,
 					["location"] = {
 						["y"] = 2,
 						["x"] = -2,
 						["point"] = "BOTTOMLEFT",
 						["relPoint"] = "BOTTOMLEFT",
 					},
-					["level"] = 9,
 					["orientation"] = "HORIZONTAL",
+					["level"] = 9,
+					["height"] = 5,
 					["texture"] = "Grid2 Flat",
 				},
 				["indicator-top"] = {
@@ -586,36 +586,23 @@ Grid2DB = {
 					["type"] = "icon",
 					["size"] = 13,
 				},
-				["bar-top"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["height"] = 5,
-					["location"] = {
-						["y"] = -2,
-						["x"] = 0,
-						["point"] = "TOP",
-						["relPoint"] = "TOP",
-					},
-					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Grid2 Flat",
+				["bar-top-right-color"] = {
+					["type"] = "bar-color",
 				},
 				["bar-top-left"] = {
 					["type"] = "bar",
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
-					["height"] = 5,
 					["location"] = {
 						["y"] = -2,
 						["x"] = 2,
 						["point"] = "TOPLEFT",
 						["relPoint"] = "TOPLEFT",
 					},
-					["level"] = 9,
 					["orientation"] = "HORIZONTAL",
+					["level"] = 9,
+					["height"] = 5,
 					["texture"] = "Grid2 Flat",
 				},
 				["bar-top-left-color"] = {
@@ -685,22 +672,6 @@ Grid2DB = {
 					["fontSize"] = 8,
 					["size"] = 20,
 				},
-				["bar-top-right"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["height"] = 5,
-					["location"] = {
-						["y"] = -2,
-						["x"] = -2,
-						["point"] = "TOPRIGHT",
-						["relPoint"] = "TOPRIGHT",
-					},
-					["level"] = 9,
-					["orientation"] = "HORIZONTAL",
-					["texture"] = "Grid2 Flat",
-				},
 				["heals"] = {
 					["type"] = "bar",
 					["texture"] = "Grid2 Flat",
@@ -719,6 +690,9 @@ Grid2DB = {
 						["g"] = 0,
 						["b"] = 0,
 					},
+				},
+				["health-color"] = {
+					["type"] = "bar-color",
 				},
 				["indicator-bottom"] = {
 					["fontSize"] = 8,
@@ -801,15 +775,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
-					["height"] = 5,
 					["location"] = {
 						["y"] = 2,
 						["x"] = 0,
 						["point"] = "BOTTOM",
 						["relPoint"] = "BOTTOM",
 					},
-					["level"] = 9,
 					["orientation"] = "HORIZONTAL",
+					["level"] = 9,
+					["height"] = 5,
 					["texture"] = "Grid2 Flat",
 				},
 				["health"] = {
@@ -829,8 +803,21 @@ Grid2DB = {
 						["b"] = 0,
 					},
 				},
-				["health-color"] = {
-					["type"] = "bar-color",
+				["bar-top-right"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["location"] = {
+						["y"] = -2,
+						["x"] = -2,
+						["point"] = "TOPRIGHT",
+						["relPoint"] = "TOPRIGHT",
+					},
+					["orientation"] = "HORIZONTAL",
+					["level"] = 9,
+					["height"] = 5,
+					["texture"] = "Grid2 Flat",
 				},
 				["text-up"] = {
 					["fontSize"] = 10,
@@ -850,8 +837,21 @@ Grid2DB = {
 				["text-up-color"] = {
 					["type"] = "text-color",
 				},
-				["bar-top-right-color"] = {
-					["type"] = "bar-color",
+				["bar-bottom-right"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["location"] = {
+						["y"] = 2,
+						["x"] = -2,
+						["point"] = "BOTTOMRIGHT",
+						["relPoint"] = "BOTTOMRIGHT",
+					},
+					["orientation"] = "HORIZONTAL",
+					["level"] = 9,
+					["height"] = 5,
+					["texture"] = "Grid2 Flat",
 				},
 				["indicator-bottom-right"] = {
 					["fontSize"] = 8,
@@ -891,6 +891,17 @@ Grid2DB = {
 				},
 				["role"] = {
 					["hideInCombat"] = true,
+				},
+				["buff-Riptide-mine"] = {
+					["spellName"] = 61295,
+					["type"] = "buff",
+					["mine"] = 1,
+					["color1"] = {
+						["a"] = 1,
+						["r"] = 0,
+						["g"] = 0.52156862745098,
+						["b"] = 1,
+					},
 				},
 				["buff-RenewingMist-mine"] = {
 					["type"] = "buff",
@@ -1002,6 +1013,7 @@ Grid2DB = {
 				},
 				["bar-top-right"] = {
 					["buff-RenewingMist-mine"] = 50,
+					["buff-Riptide-mine"] = 51,
 				},
 				["bar-top"] = {
 					["buff-LifeCocoon-mine"] = 50,
@@ -1014,6 +1026,7 @@ Grid2DB = {
 				},
 				["indicator-top-right"] = {
 					["buff-RenewingMist-mine"] = 50,
+					["buff-Riptide-mine"] = 51,
 				},
 				["alpha"] = {
 					["offline"] = 97,
@@ -1039,9 +1052,9 @@ Grid2DB = {
 					["charmed"] = 65,
 					["feign-death"] = 95,
 					["health-deficit"] = 50,
-					["afk"] = 97,
 					["offline"] = 96,
 					["vehicle"] = 70,
+					["afk"] = 97,
 					["death"] = 93,
 				},
 				["text-up-color"] = {

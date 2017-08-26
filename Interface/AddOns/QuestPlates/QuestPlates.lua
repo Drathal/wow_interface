@@ -3,9 +3,9 @@
 
 local AnchorPoint = 'RIGHT' -- Point of icon to anchor to nameplate (CENTER, LEFT, RIGHT, TOP, BOTTOM)
 local RelativeTo = 'LEFT' -- Point of nameplate to anchor icon to (CENTER, LEFT, RIGHT, TOP, BOTTOM)
-local OffsetX = 17 -- Horizontal offset for icon (from anchor point)
+local OffsetX = 8 -- Horizontal offset for icon (from anchor point)
 local OffsetY = 0 -- Vertical offset for icon
-local IconScale = 1 -- Scale for icon
+local IconScale = 0.8 -- Scale for icon
 
 -- Uncomment these lines if you want to enable them, or set to 0 to turn them off
 SetCVar('showQuestUnitCircles', 1) -- Enables subtle glow under quest mobs

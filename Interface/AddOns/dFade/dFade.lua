@@ -35,6 +35,12 @@ end
 
 
 local function uffade(self, event, unit)
+
+    if event == "PLAYER_ENTERING_WORLD" then
+        SetCVar("floatingCombatTextCombatDamage", "0");
+    end
+
+    
     if event == "UNIT_SPELLCAST_START" then
         if unit == "player" then
             FadeIn()

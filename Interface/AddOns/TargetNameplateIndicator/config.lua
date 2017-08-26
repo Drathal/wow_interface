@@ -77,8 +77,8 @@ CONFIG.TEXTURE_WIDTH = 25
 -- See http://www.wowpedia.org/API_Region_SetPoint for explanation.
 CONFIG.TEXTURE_POINT = "BOTTOM" -- The point of the texture that should be anchored to the nameplate.
 CONFIG.ANCHOR_POINT  = "TOP"	   -- The point of the nameplate the texture should be anchored to.
-CONFIG.OFFSET_X = 40 			   -- The x/y offset of the texture relative to the anchor point.
-CONFIG.OFFSET_Y = -33
+CONFIG.OFFSET_X = 45 			   -- The x/y offset of the texture relative to the anchor point.
+CONFIG.OFFSET_Y = -26
 
 -------------------
 -- END OF CONFIG --

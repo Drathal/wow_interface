@@ -144,12 +144,12 @@ AdiBagsDB = {
 		["Drahmoon - Madmortem"] = {
 			["collapsedSections"] = {
 				["Broken Shore#Broken Shore"] = true,
-				["Junk#Junk"] = true,
 				["Hearthstones#Hearthstones"] = true,
+				["Equipment#Set: AMR Affliction"] = true,
 				["Equipment#Set: AMR Destruction"] = true,
 				["Equipment#Legenday"] = true,
 				["Equipment#Set: AMR Demonology"] = true,
-				["Equipment#Set: AMR Affliction"] = true,
+				["Junk#Junk"] = true,
 			},
 		},
 	},
@@ -191,8 +191,8 @@ AdiBagsDB = {
 					["yOffset"] = -125.999134159109,
 				},
 				["Backpack"] = {
-					["xOffset"] = -151.999155722748,
-					["yOffset"] = 155.000702375817,
+					["xOffset"] = -53.9994634946343,
+					["yOffset"] = 106.000526671925,
 				},
 			},
 			["compactLayout"] = true,

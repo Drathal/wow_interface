@@ -72,7 +72,7 @@ C["DataText"].Battleground = false
 C["Auras"].BuffsPerRow = 15
 C["Auras"].Consolidate = true
 
-C["Nameplates"].Enable = true
+C["Nameplates"].Enable = false
 
 C["Minimap"].ResetZoomTime = 5
 C["Minimap"].Size = 200
