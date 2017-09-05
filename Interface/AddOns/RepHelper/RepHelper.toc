@@ -1,6 +1,6 @@
-## Interface: 70200
+## Interface: 70300
 ## Title: RepHelper
-## Version: 7.2.0.13-release
+## Version: 7.3.0.2-release
 ## Author: Chawan, Marabon
 ## URL: http://wow.curseforge.com/addons/RepHelper/
 ## Description: RepHelper helps you manage your reputation and Factions.
@@ -12,3 +12,4 @@ content.lua
 mapping.lua
 locale.xml
 RepHelper.xml
+RepHelperSkin.lua

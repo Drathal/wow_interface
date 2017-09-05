@@ -1,6 +1,0 @@
-## Interface: 70300
-## Title: FasterLoot
-## Author: FoobarZA
-## Notes: Increases the speed at which you collect loot.
-## Version: 1.06
-FasterLoot.lua

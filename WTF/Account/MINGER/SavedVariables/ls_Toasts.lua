@@ -1,10 +1,14 @@
 
 LS_TOASTS_GLOBAL_CONFIG = {
 	["profileKeys"] = {
-		["Drahmoon - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Dranathal - Madmortem"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
+		["Drathal - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+		["Dranathal - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -14,7 +18,7 @@ LS_TOASTS_GLOBAL_CONFIG = {
 			["colors"] = {
 				["enabled"] = true,
 			},
-			["version"] = 7020011,
+			["version"] = 7030002,
 			["types"] = {
 				["garrison_6_0"] = {
 					["enabled"] = false,
@@ -28,21 +32,17 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
+				["world"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
 				["loot_special"] = {
 					["enabled"] = true,
 					["ilvl"] = true,
 					["dnd"] = false,
 					["threshold"] = 1,
 				},
-				["achievement"] = {
-					["enabled"] = true,
-					["dnd"] = false,
-				},
-				["world"] = {
-					["enabled"] = true,
-					["dnd"] = false,
-				},
-				["archaeology"] = {
+				["recipe"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
@@ -51,7 +51,15 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["dnd"] = false,
 					["threshold"] = 1,
 				},
-				["recipe"] = {
+				["archaeology"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["achievement"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["collection"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},

@@ -95,6 +95,8 @@ C["Position"].TalkingHead = {"TOP", "UIParent", "TOP", 0, -32}
 C["Position"].RaidUtility = {"TOP", "UIParent", "TOP", -280, -32}
 C["Position"].Alerts = {"TOP", "UIParent", "TOP", 0, -32}
 C["Position"].AltPowerBar = {"TOP", "UIParent", "TOP", 0, -64}
+C["Position"].PlayerCastbar = {"BOTTOMRIGHT", "oUF_KkthnxPlayer", "TOPRIGHT", 0, 100}
+C["Position"].TargetCastbar = {"BOTTOMLEFT", "oUF_KkthnxTarget", "TOPLEFT", 0, 100}
 
 C["General"].UIScale = 0.73 
 

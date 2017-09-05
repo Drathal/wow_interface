@@ -1,21 +1,27 @@
 
 HandyNotes_LegionClassOrderHallsDB = {
 	["profileKeys"] = {
+		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
 		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
 	},
 	["profiles"] = {
+		["Dranopix - Madmortem"] = {
+		},
 		["Dronthal - Madmortem"] = {
+		},
+		["Drahmoon - Madmortem"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
 		["Drathal - Madmortem"] = {
 		},
-		["Drahmoon - Madmortem"] = {
+		["Mythrilblade - Madmortem"] = {
 		},
 		["Dranathal - Madmortem"] = {
 		},

@@ -78,7 +78,7 @@
     <Button name="CliqueColumnTemplate" inherits="WhoFrameColumnHeaderTemplate" virtual="true">
         <Scripts>
             <OnClick>
-                PlaySound("igMainMenuOptionCheckBoxOn");
+                --PlaySound("igMainMenuOptionCheckBoxOn");
                 CliqueConfig:Column_OnClick(self, button)
             </OnClick>
         </Scripts>
@@ -192,7 +192,7 @@
     <Frame name="CliqueDialog" toplevel="true" enableMouse="true" movable="true" inherits="BasicFrameTemplate" parent="UIParent" frameStrata="DIALOG" hidden="true">
         <Size x="350" y="160"/>
         <Layers>
-            <Layer level="OVERLAY"> 
+            <Layer level="OVERLAY">
                 <FontString name="$parentDesc" parentKey="desc" inherits="GameFontHighlightSmallLeftTop">
                     <Size x="340" y="60"/>
                     <Anchors>
@@ -216,7 +216,7 @@
                 </Anchors>
                 <Scripts>
                     <OnLoad>
-                        self:RegisterForClicks("LeftButton") 
+                        self:RegisterForClicks("LeftButton")
                     </OnLoad>
                     <OnMouseDown>
                         CliqueDialog:SetUserPlaced(false)
@@ -483,7 +483,7 @@
                                 CliqueScrollFrameEditBox:SetFocus()
                             </OnClick>
                         </Scripts>
-                        <Frames> 
+                        <Frames>
                             <ScrollFrame name="CliqueScrollFrame" parentKey="scrollFrame" inherits="UIPanelScrollFrameTemplate">
                                 <Size>
                                     <AbsDimension x="288" y="150"/>
@@ -511,7 +511,7 @@
                                             <OnEscapePressed function="EditBox_ClearFocus"/>
                                         </Scripts>
                                         <FontString inherits="GameFontHighlightSmall"/>
-                                    </EditBox> 
+                                    </EditBox>
                                 </ScrollChild>
                             </ScrollFrame>
                         </Frames>

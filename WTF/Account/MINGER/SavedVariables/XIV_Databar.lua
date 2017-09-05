@@ -2,7 +2,19 @@
 TEST_CONFIG = nil
 XIVBarDB = {
 	["char"] = {
+		["Dranopix - Madmortem"] = {
+			["portItem"] = {
+				["text"] = "Dalaran",
+				["portId"] = 140192,
+			},
+		},
 		["Dronthal - Madmortem"] = {
+			["portItem"] = {
+				["text"] = "Dalaran",
+				["portId"] = 140192,
+			},
+		},
+		["Drahmoon - Madmortem"] = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
@@ -20,10 +32,10 @@ XIVBarDB = {
 				["text"] = "Dalaran",
 			},
 		},
-		["Drahmoon - Madmortem"] = {
+		["Mythrilblade - Madmortem"] = {
 			["portItem"] = {
-				["text"] = "Dalaran",
 				["portId"] = 140192,
+				["text"] = "Dalaran",
 			},
 		},
 		["Dranathal - Madmortem"] = {
@@ -42,22 +54,17 @@ XIVBarDB = {
 	["baseProfile"] = {
 	},
 	["profileKeys"] = {
+		["Dranopix - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Drathtix - Madmortem"] = "baseProfile",
 		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 	},
 	["factionrealm"] = {
 		["Alliance - Madmortem"] = {
-			["Drathia"] = {
-				["dailyMoney"] = 0,
-				["sessionMoney"] = 0,
-				["lastLoginDate"] = 20170810,
-				["currentMoney"] = 12864863,
-				["daily"] = 0,
-			},
 			["Drathtix"] = {
 				["dailyMoney"] = 86631555,
 				["sessionMoney"] = 1823138,
@@ -72,33 +79,53 @@ XIVBarDB = {
 				["lastLoginDate"] = 20170820,
 				["currentMoney"] = 507261290,
 			},
-			["Dronthal"] = {
-				["dailyMoney"] = -739736888,
+			["Drathia"] = {
+				["dailyMoney"] = 83527212,
+				["sessionMoney"] = 19015567,
+				["lastLoginDate"] = 20170905,
+				["currentMoney"] = 109001843,
+				["daily"] = 0,
+			},
+			["Mythrilblade"] = {
+				["dailyMoney"] = 35,
+				["sessionMoney"] = 35,
+				["daily"] = 0,
+				["lastLoginDate"] = 20170828,
+				["currentMoney"] = 35,
+			},
+			["Dranopix"] = {
+				["dailyMoney"] = 0,
 				["sessionMoney"] = 0,
-				["lastLoginDate"] = 20170810,
-				["currentMoney"] = 192431296,
+				["lastLoginDate"] = 20170904,
+				["currentMoney"] = 90,
+				["daily"] = 0,
+			},
+			["Dronthal"] = {
+				["dailyMoney"] = -736031332,
+				["sessionMoney"] = -22000,
+				["lastLoginDate"] = 20170830,
+				["currentMoney"] = 196136852,
 				["daily"] = 0,
 			},
 			["Dranathal"] = {
-				["dailyMoney"] = 48647,
-				["sessionMoney"] = 22537,
+				["dailyMoney"] = 134090,
+				["sessionMoney"] = 0,
 				["daily"] = 0,
-				["currentMoney"] = 48647,
-				["lastLoginDate"] = 20170826,
+				["currentMoney"] = 134090,
+				["lastLoginDate"] = 20170831,
 			},
 			["Drathal"] = {
-				["currentMoney"] = 26496445,
 				["dailyMoney"] = 0,
-				["lastLoginDate"] = 20170810,
 				["sessionMoney"] = 0,
+				["daily"] = 0,
+				["lastLoginDate"] = 20170830,
+				["currentMoney"] = 26496445,
 			},
 		},
 	},
 	["Default"] = {
 	},
 	["profiles"] = {
-		["Dronthal - Madmortem"] = {
-		},
 		["baseProfile"] = {
 			["color"] = {
 				["normal"] = {
@@ -168,6 +195,12 @@ XIVBarDB = {
 					["showTooltip"] = false,
 				},
 			},
+		},
+		["Mythrilblade - Madmortem"] = {
+		},
+		["Drathia - Madmortem"] = {
+		},
+		["Dronthal - Madmortem"] = {
 		},
 		["Default"] = {
 			["color"] = {
@@ -383,7 +416,7 @@ XIVBarDB = {
 		},
 		["Dranathal - Madmortem"] = {
 		},
-		["Drathia - Madmortem"] = {
+		["Dranopix - Madmortem"] = {
 		},
 	},
 }

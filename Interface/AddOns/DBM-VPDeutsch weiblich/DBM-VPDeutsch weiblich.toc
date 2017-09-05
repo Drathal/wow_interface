@@ -4,7 +4,7 @@
 ## DefaultState: enabled
 ## RequiredDeps: DBM-Core
 ## Author: Calanon
-## Version: 7.2.2
+## Version: 7.2.3
 ## X-DBM-Voice: 1
 ## X-DBM-Voice-Name: Deutsch weiblich by Calanon
 ## X-DBM-Voice-ShortName: Deutsch weiblich

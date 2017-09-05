@@ -3,10 +3,12 @@ SkadaDB = {
 	["baseProfile"] = {
 	},
 	["profileKeys"] = {
+		["Dranopix - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "baseProfile",
 		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 	},
@@ -624,7 +626,7 @@ SkadaDB = {
 				}, -- [2]
 			},
 			["icon"] = {
-				["minimapPos"] = 248.916233791662,
+				["minimapPos"] = 134.274697805496,
 			},
 			["versions"] = {
 				["1.6.3"] = true,

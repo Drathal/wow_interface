@@ -574,12 +574,9 @@ L["options_chat_filter_show"] = "不過濾"
 L["options_hide_info_button"] = "隱藏資訊按鈕"
 L["options_ignored_tiers_background_color"] = "忽略套裝背景顏色"
 L["options_talent_highlight_icon"] = "天賦高亮圖示"
---Translation missing 
-L["quick_talent_selection"] = "Quick Talent Selection"
---Translation missing 
-L["quick_talent_selection_canchange"] = "|cff00ff00Talents can be changed|r"
---Translation missing 
-L["quick_talent_selection_cannotchange"] = "|cffff0000Talents cannot be changed|r"
+L["quick_talent_selection"] = "快速選擇天賦"
+L["quick_talent_selection_canchange"] = "|cff00ff00天賦可以更改|r"
+L["quick_talent_selection_cannotchange"] = "|cffff0000天賦無法更改|r"
 L["search_icon"] = "搜尋圖標"
 L["set_already_exists"] = "此天賦設定的名稱已經存在"
 L["sets_limit_reached"] = "你不能在創建更多新天賦設定。"

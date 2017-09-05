@@ -47,85 +47,85 @@ local AceGUI = LibStub("AceGUI-3.0")
 --------------------------------------------------------------------------------
 
 do
-	local Type, Version = "ItemListElement", 1
+    local Type, Version = "ItemListElement", 1
 
-	local function Button_OnClick(frame, ...)
-		AceGUI:ClearFocus()
-		local widget = frame.obj
-		local listWidget = widget:GetUserData('listwidget')
-		if not listWidget then return end
-		PlaySound("igMainMenuOption")
-		local previousId = widget.itemId
-		if previousId then
-			listWidget:Fire("OnValueChanged", previousId, false)
-		end
-		local kind, newId = GetCursorInfo()
-		if kind == "item" and tonumber(newId) then
-			listWidget:Fire("OnValueChanged", newId, true)
-			if previousId then
-				PickupItem(previousId)
-			else
-				ClearCursor()
-			end
-		end
-	end
+    local function Button_OnClick(frame, ...)
+        AceGUI:ClearFocus()
+        local widget = frame.obj
+        local listWidget = widget:GetUserData('listwidget')
+        if not listWidget then return end
+        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION)
+        local previousId = widget.itemId
+        if previousId then
+            listWidget:Fire("OnValueChanged", previousId, false)
+        end
+        local kind, newId = GetCursorInfo()
+        if kind == "item" and tonumber(newId) then
+            listWidget:Fire("OnValueChanged", newId, true)
+            if previousId then
+                PickupItem(previousId)
+            else
+                ClearCursor()
+            end
+        end
+    end
 
-	local function Button_OnDragStart(frame)
-		local widget = frame.obj
-		local listWidget = widget:GetUserData('listwidget')
-		if not listWidget or not widget.itemId then return end
-		PickupItem(widget.itemId)
-		listWidget:Fire("OnValueChanged", widget.itemId, false)
-	end
+    local function Button_OnDragStart(frame)
+        local widget = frame.obj
+        local listWidget = widget:GetUserData('listwidget')
+        if not listWidget or not widget.itemId then return end
+        PickupItem(widget.itemId)
+        listWidget:Fire("OnValueChanged", widget.itemId, false)
+    end
 
-	local function Button_OnEnter(frame)
-		local listWidget = frame.obj:GetUserData('listwidget')
-		if listWidget then
-			listWidget:Fire("OnEnter")
-			if frame.obj.itemId then
-				local _, link = GetItemInfo(frame.obj.itemId)
-				if link then
-					GameTooltip:AddLine(link)
-				end
-				GameTooltip:AddLine(L["Click or drag this item to remove it."], 1, 1, 1)
-			else
-				GameTooltip:AddLine(L["Drop an item there to add it to the list."], 1, 1, 1)
-			end
-			GameTooltip:Show()
-		end
-	end
+    local function Button_OnEnter(frame)
+        local listWidget = frame.obj:GetUserData('listwidget')
+        if listWidget then
+            listWidget:Fire("OnEnter")
+            if frame.obj.itemId then
+                local _, link = GetItemInfo(frame.obj.itemId)
+                if link then
+                    GameTooltip:AddLine(link)
+                end
+                GameTooltip:AddLine(L["Click or drag this item to remove it."], 1, 1, 1)
+            else
+                GameTooltip:AddLine(L["Drop an item there to add it to the list."], 1, 1, 1)
+            end
+            GameTooltip:Show()
+        end
+    end
 
-	local function Button_OnLeave(frame)
-		local listWidget = frame.obj:GetUserData('listwidget')
-		if listWidget then
-			listWidget:Fire("OnLeave")
-		end
-	end
+    local function Button_OnLeave(frame)
+        local listWidget = frame.obj:GetUserData('listwidget')
+        if listWidget then
+            listWidget:Fire("OnLeave")
+        end
+    end
 
-	local methods = {}
+    local methods = {}
 
-	function methods:OnAcquire()
-		self:SetWidth(24)
-		self:SetHeight(24)
-	end
+    function methods:OnAcquire()
+        self:SetWidth(24)
+        self:SetHeight(24)
+    end
 
-	function methods:OnRelease()
-		self:SetUserData('listwidget', nil)
-	end
+    function methods:OnRelease()
+        self:SetUserData('listwidget', nil)
+    end
 
-	function methods:SetDisabled(disabled)
-		if disabled then
-			self.frame:Disable()
-		else
-			self.frame:Enable()
-		end
-	end
+    function methods:SetDisabled(disabled)
+        if disabled then
+            self.frame:Disable()
+        else
+            self.frame:Enable()
+        end
+    end
 
-	function methods:SetItemId(itemId)
-		self.itemId = itemId
-		if itemId then
-			local _, _, _, _, _, _, _, _, _, texture = GetItemInfo(itemId)
-			self.frame:SetNormalTexture(texture or [[Interface\\Icons\\INV_Misc_QuestionMark]])
+    function methods:SetItemId(itemId)
+        self.itemId = itemId
+        if itemId then
+            local _, _, _, _, _, _, _, _, _, texture = GetItemInfo(itemId)
+            self.frame:SetNormalTexture(texture or [[Interface\\Icons\\INV_Misc_QuestionMark]])
 			self.frame:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
 		else
 			self.frame:SetNormalTexture([[Interface\Buttons\UI-Slot-Background]])

@@ -27,7 +27,7 @@ function MyLFGListCategorySelectionFindGroupButton_OnClick(self)
 		return;
 	end
 
-	PlaySound("igMainMenuOptionCheckBoxOn");
+	PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
 	MyLFGListCategorySelection_StartFindGroup(panel);
 end
 
@@ -69,7 +69,7 @@ end
 LFGListFrame.SearchPanel:HookScript("OnEvent", MyLFGListSearchPanel_OnEvent);
 
 function MyLFGListSearchPanel_DoSearch(self)
-	--print("LFGListSearchPanel_DoSearch");
+	--print("MyLFGListSearchPanel_DoSearch");
 
 	local activity = LFGListDropDown.activeValue;
 	--print("MyLFGListSearchPanel_DoSearch", activity, self.categoryID)
@@ -106,7 +106,7 @@ function MyLFGListSearchPanel_DoSearch(self)
 end
 
 function MyLFGListSearchPanel_UpdateResultList(self)
-	--print("LFGListSearchPanel_UpdateResultList");
+	--print("MyLFGListSearchPanel_UpdateResultList");
 	local searchText = LFGListCustomSearchBox:GetText();
 
 	self.totalResults, self.results = C_LFGList.GetSearchResults();
@@ -141,7 +141,7 @@ function MyLFGListSearchPanel_UpdateResultList(self)
 		end
 
 		if numNotWarned > 0 then
-			PlaySound("ReadyCheck", "Master");
+			PlaySound(SOUNDKIT.READY_CHECK, "Master");
 			FlashClientIcon();
 		end
 	end
@@ -272,6 +272,10 @@ function MyLFGListSearchPanel_OnShow(self)
 	--print("MyLFGListSearchPanel_OnShow");
 	--LFGListSearchPanel_OnShowOld(self);
 
+	-- fix results not being filtered after reopening frame
+	MyLFGListSearchPanel_UpdateResultList(self);
+	LFGListSearchPanel_UpdateResults(self);
+
 	local text = LFRAdvancedOptions.LastSearchText;
 	if text and text ~= "" then
 		self.SearchBox:SetText(text);
@@ -334,7 +338,7 @@ ADDON_TABLE.StopAutoRefresh = StopAutoRefresh
 
 lfgRefreshButton:SetScript("OnClick", function(self, button)
 	if button == "LeftButton" then
-		PlaySound("igMainMenuOptionCheckBoxOn");
+		PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
 		LFGListSearchPanel_DoSearch(self:GetParent());
 	else
 		if ADDON_TABLE.updateFunc then
@@ -349,8 +353,9 @@ end)
 local lfgRefreshButton = LFGListFrame.SearchPanel.RefreshButton;
 
 lfgRefreshButton:SetScript("OnClick", function(self, button)
+	--print("click!")
 	if button == "LeftButton" then
-		PlaySound("igMainMenuOptionCheckBoxOn");
+		PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
 		MyLFGListSearchPanel_DoSearch(self:GetParent());
 	end
 end)

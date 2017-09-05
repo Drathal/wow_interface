@@ -2,6 +2,10 @@ VER 3 0100000000000004 "Barrier" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Power Word: Barrier
 END
+VER 3 010000000000000C "Feather" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor][]Angelic Feather
+END
 VER 3 0100000000000006 "Force" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Shining Force
@@ -12,7 +16,11 @@ VER 3 010000000000000B "Guardian" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000009 "HW:S" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@mouseover,help][@target,help][]Holy Word: Sanctify
+/cast [@cursor][@target,help][]Holy Word: Sanctify
+END
+VER 3 010000000000000F "Leap" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Leap of Faith
 END
 VER 3 0100000000000005 "Levitate" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -34,7 +42,15 @@ VER 3 0100000000000003 "Radiance" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Power Word: Radiance
 END
+VER 3 010000000000000D "Renew" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Renew
+END
 VER 3 010000000000000A "Serenity" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Holy Word: Serenity
+END
+VER 3 010000000000000E "Ta" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Light of T'uure(Artifact)
 END

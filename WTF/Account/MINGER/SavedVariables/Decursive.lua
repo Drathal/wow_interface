@@ -2,14 +2,38 @@
 DecursiveDB = {
 	["profileKeys"] = {
 		["Darlaxle - Blackhand"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
 		["Drahmoon - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 	},
 	["class"] = {
+		["HUNTER"] = {
+			["CureOrder"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
+		["PALADIN"] = {
+			["CureOrder"] = {
+				-13, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-14, -- [4]
+				[8] = 1,
+				[16] = 2,
+				[32] = -16,
+			},
+		},
 		["WARLOCK"] = {
 			["CureOrder"] = {
 				-13, -- [1]
@@ -21,23 +45,21 @@ DecursiveDB = {
 				[32] = 1,
 			},
 		},
-		["PALADIN"] = {
-			["CureOrder"] = {
-				3, -- [1]
-				-15, -- [2]
-				nil, -- [3]
-				-14, -- [4]
-				[8] = 1,
-				[16] = 2,
-				[32] = -16,
-			},
-		},
-		["SHAMAN"] = {
+		["ROGUE"] = {
 			["CureOrder"] = {
 				-11, -- [1]
 				-15, -- [2]
 				nil, -- [3]
 				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
+		["SHAMAN"] = {
+			["CureOrder"] = {
+				nil, -- [1]
+				-15, -- [2]
 				[8] = -13,
 				[16] = -14,
 				[32] = -16,
@@ -78,7 +100,7 @@ DecursiveDB = {
 		},
 	},
 	["global"] = {
-		["LastVersionAnnounce"] = 1503744991,
+		["LastVersionAnnounce"] = 1504643615,
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -92,7 +114,6 @@ DecursiveDB = {
 			["Show_Stealthed_Status"] = false,
 			["MainBarX"] = 3.55539423756738,
 			["MainBarY"] = -195.555386679698,
-			["ShowDebuffsFrame"] = false,
 			["Scan_Pets"] = false,
 			["DebuffsFrameElemBorderShow"] = false,
 			["Print_CustomFrame"] = false,

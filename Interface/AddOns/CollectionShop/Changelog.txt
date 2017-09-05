@@ -1,3 +1,16 @@
+**2.05**
+
+- Release date: 08/31/2017
+- New items added for patch 7.3.0.
+- Toys: Wormhole Generator: Argus
+- Companion Pets: Model D1-BB-L3R, Naxxy
+
+**2.04**
+
+- Release date: 08/30/2017
+- TOC Updated for patch 7.3
+- Bug fix: Lua error in patch 7.3 on PlaySound() API call.
+
 **2.03**
 
 - Release date: 08/04/2017

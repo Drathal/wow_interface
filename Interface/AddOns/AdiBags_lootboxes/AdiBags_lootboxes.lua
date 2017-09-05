@@ -31,11 +31,14 @@ local emissary = {
 	151466,		-- Valarjar 7.2.5
 	146752,		-- Warden 7.2
 	151469,		-- Warden 7.2.5
+	152652,		-- Army of the Light 7.3
+	152650,		-- Argussian Reach 7.3
 }
 
 local legionfall = {
 	147384,		-- Legionfall 7.2
 	151471,		-- Legionfall 7.2.5
+	152649,		-- Legionfall 7.3
 }
 local paragon = {
 	146897,		-- Farondis 7.2
@@ -52,6 +55,8 @@ local paragon = {
 	152104,		-- Highmountain 7.2.5
 	146898,		-- Dreamweaver 7.2
 	152103,		-- Dreamweaver 7.2.5
+	152923,		-- Army of the Light 7.3
+	152922,		-- Argussian Reach 7.3
 }
 
 local roguebox = {
@@ -116,7 +121,7 @@ local function Tooltip_Init()
 	return tip
 end
 
-local setFilter = AdiBags:RegisterFilter("Lockboxes and Chests", 90, "ABEvent-1.0")
+local setFilter = AdiBags:RegisterFilter("Lockboxes and Chests", 96, "ABEvent-1.0")
 setFilter.uiName = N["Lockboxes and Chests"]
 setFilter.uiDesc = N["Emissary chests, Legionfall Recompense bags, Paragon chests and Rogue lockboxes."]
 

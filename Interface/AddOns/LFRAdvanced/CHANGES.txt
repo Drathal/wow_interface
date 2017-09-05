@@ -1,3 +1,15 @@
+commit 974cae9b86b79ed54ab35ca144785a2aff88e3bc
+Author: TOM_RUS <tom_rus@github.com>
+Date:   Wed Aug 30 13:17:51 2017 +0300
+
+    7.3 fix
+
+commit ba3f505d27514bdb08fbf3753319d433269b7b49
+Author: TOM_RUS <tom_rus@github.com>
+Date:   Wed Aug 23 16:56:44 2017 +0300
+
+    Fix issues
+
 commit e7565c8aa640137260430536344a839307e09c63
 Author: TOM_RUS <tom_rus@github.com>
 Date:   Tue Aug 8 01:27:57 2017 +0300
@@ -604,17 +616,4 @@ Author: TOM_RUS <tom_rus@github.com>
 Date:   Wed Dec 11 00:12:27 2013 +0400
 
     Group ilvl tweak
-
-commit 210abd7fe7e87c4d19f3a3b944d4cd47592d461e
-Author: TOM_RUS <tom_rus@github.com>
-Date:   Wed Dec 11 00:01:38 2013 +0400
-
-    Added hidden option to disable stats display in tooltip:
-    /script LFRAdvancedOptions.ShowStats=false
-
-commit 255a42df06ac55bbbb39f31e2f47f5c14f09fd36
-Author: TOM_RUS <tom_rus@github.com>
-Date:   Tue Dec 10 23:46:13 2013 +0400
-
-    Role icons for group members are back
 

@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0211,
+	["LastVersion"] = 2.0213,
 	["LastPlayerFullName"] = "Dronthal-Madmortem",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
@@ -25,7 +25,7 @@ PawnOptions = {
 		[128866] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 49,
+					["ItemLevel"] = 52,
 					["Type"] = "Holy",
 				}, -- [1]
 				{

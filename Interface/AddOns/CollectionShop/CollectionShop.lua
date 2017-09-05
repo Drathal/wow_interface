@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 local NS = select( 2, ... );
 local L = NS.localization;
-NS.versionString = "2.03";
+NS.versionString = "2.05";
 NS.version = tonumber( NS.versionString );
 --
 NS.options = {};
@@ -89,8 +89,8 @@ for i = 1, #NS.ridingSpells do
 end
 NS.cachedDressUpIds = {};
 NS.mountInfo = {
-	-- As of 06/13/2017
-	--[mountItemId] = { displayID, spellID } -- creatureName -- itemName
+	-- As of 08/31/2017
+	--[mountItemId] = { displayID, spellID }, -- creatureName -- itemName
 	[71718] = { 17011, 101573 }, -- Swift Shorestrider -- Swift Shorestrider
 	[52200] = { 25279, 73313 }, -- Crimson Deathcharger -- Reins of the Crimson Deathcharger
 	[34060] = { 22719, 44153 }, -- Flying Machine -- Flying Machine
@@ -131,8 +131,10 @@ NS.mountInfo = {
 	[49290] = { 34655, 65917 }, -- Magic Rooster -- Magic Rooster Egg
 };
 NS.petInfo = {
-	-- As of 06/13/2017
-	--[companionPetItemId] = { speciesID, creatureID }
+	-- As of 08/31/2017
+	--[companionPetItemId] = { speciesID, creatureID }, -- itemName
+	[151645] = { 2001, 117340 }, -- Model D1-BB-L3R
+	[151269] = { 2002, 117341 }, -- Naxxy
 	[151569] = { 2063, 124389 }, -- Sneaky Marmot
 	[151633] = { 2065, 124594 }, -- Dig Rat
 	[142448] = { 1984, 116080 }, -- Albino Buzzard
@@ -311,8 +313,9 @@ NS.petInfo = {
 	[146953] = { 2042, 120397 }, -- Scraps
 };
 NS.toyInfo = {
-	-- As of 06/13/2017
-	--[toyItemId] = { catNum, subCatNum }
+	-- As of 08/31/2017
+	--[toyItemId] = { catNum, subCatNum }, -- itemName
+	[151652] = { 6, 1 }, -- Wormhole Generator: Argus
 	[144393] = { 12, 4 }, -- Portable Yak Wash
 	[142265] = { 12, 4 }, -- Big Red Raygun
 	[122681] = { 12, 4 }, -- Sternfathom's Pet Journal
@@ -866,7 +869,7 @@ NS.AuctionGroup_OnClick = function( groupKey )
 end
 --
 NS.AuctionGroup_AuctionMissing = function( groupKey, OnMessageOnly )
-	PlaySound( "SPELL_Shadow_Fizzle" );
+	PlaySound( 1427 ); -- SPELL_Shadow_Fizzle
 	local itemPrice = NS.auction.data.groups[groupKey][5][1][1]; -- auctions(5), first auction(1), itemPrice(1)
 	local itemLink = NS.auction.data.groups[groupKey][5][1][2]; -- auctions(5), first auction(1), itemLink(2)
 	local itemId = NS.auction.data.groups[groupKey][5][1][6]; -- auctions(5), first auction(1), itemId(6)
@@ -2017,7 +2020,7 @@ function NS.scan:Complete( cancelMessage )
 					-- Appearance
 					if NS.db["undressCharacter"] then
 						SideDressUpModel:Undress();
-						PlaySound( "gsTitleOptionOK" ); -- Keeps the sound consistent with the ResetButton click below
+						PlaySound( 798 ); -- gsTitleOptionOK: Keeps the sound consistent with the ResetButton click below
 					else
 						SideDressUpModelResetButton:Click(); -- ^^
 					end
@@ -2475,7 +2478,7 @@ NS.Blizzard_AuctionUI_OnLoad = function()
 		size = { 733, ( 30 * 9 - 5 ) },
 		setPoint = { "TOPLEFT", "$parent_NameSortButton", "BOTTOMLEFT", 1, -5 },
 		buttonTemplate = "AuctionFrameCollectionShop_ScrollFrameButtonTemplate",
-		udpate = {
+		update = {
 			numToDisplay = 9,
 			buttonHeight = 30,
 			UpdateFunction = function( sf )
@@ -2904,7 +2907,7 @@ NS.Blizzard_AuctionUI_OnLoad = function()
 		size = { 242, ( 20 * 17 - 5 ) },
 		setPoint = { "TOPLEFT", 1, -27 },
 		buttonTemplate = "AuctionFrameCollectionShop_FlyoutPanel_ScrollFrameButtonTemplate",
-		udpate = {
+		update = {
 			numToDisplay = 17,
 			buttonHeight = 20,
 			UpdateFunction = function( sf )

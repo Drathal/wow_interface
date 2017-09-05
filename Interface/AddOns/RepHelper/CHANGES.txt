@@ -1,10 +1,12 @@
-tag 524acb335702f321aa3c365e5579c17fe5449ced 7.2.0.13-release
+tag d3153dab180ee9511b24a559d4700b8754715bf9 7.3.0.2-release
 Author:	Chawan <chawan6@gmail.com>
-Date:	Fri May 26 04:29:29 2017 +0200
+Date:	Mon Sep 4 06:21:02 2017 +0200
 
-commit b8217cf79d63ac0468232af51bca36572c4259a5
+commit c066509d40e8872c711cfee6d9e9824ba3003cc1
 Author: Chawan <chawan6@gmail.com>
-Date:   Fri May 26 04:28:25 2017 +0200
+Date:   Mon Sep 4 06:20:24 2017 +0200
 
-    Fixed #3 Disabled GetFactionInfo hook as this would sometimes cause a Lua error due to GetFactionInfo returning nil sometimes. The only thing that used this custom function was not working anyway so might as well disable it.
+    Added ElvUI skin support
+    Added Army of the Light
+    Added Argussian Reach
 

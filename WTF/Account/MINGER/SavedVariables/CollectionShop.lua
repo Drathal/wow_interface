@@ -13,7 +13,7 @@ COLLECTIONSHOP_SAVEDVARIABLES = {
 		["APPEARANCES"] = 0,
 		["PETS"] = 0,
 	},
-	["version"] = 2.03,
+	["version"] = 2.05,
 	["modeFilters"] = {
 		["TOYS"] = {
 		},

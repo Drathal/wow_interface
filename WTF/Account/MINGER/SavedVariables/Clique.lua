@@ -20,19 +20,19 @@ CliqueDB3 = {
 			["spec3_profileKey"] = "base",
 		},
 		["Drathia - Madmortem"] = {
+			["alerthidden"] = true,
 			["blacklist"] = {
 				["LSBoss2Frame"] = true,
 				["LSBoss1Frame"] = true,
 				["Boss1TargetFrame"] = true,
 				["Boss2TargetFrame"] = true,
+				["LSTargetTargetFrame"] = true,
 				["LSBoss5Frame"] = true,
 				["LSBoss4Frame"] = true,
-				["LSTargetTargetFrame"] = true,
 				["LSBoss3Frame"] = true,
 				["Boss4TargetFrame"] = true,
 				["Boss3TargetFrame"] = true,
 			},
-			["alerthidden"] = true,
 		},
 		["Dronthal - Madmortem"] = {
 			["spec1_profileKey"] = "Dronthal - Madmortem",
@@ -94,11 +94,13 @@ CliqueDB3 = {
 	["profileKeys"] = {
 		["Drathal - Blackhand"] = "Drathal - Blackhand",
 		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
+		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
 		["Draltar - Blackhand"] = "Draltar - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Modranthir - Blackhand"] = "Modranthir - Blackhand",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
+		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
 		["Drathon - Blackhand"] = "Drathon - Blackhand",
 		["Drathia - Madmortem"] = "Drathia - Madmortem",
@@ -137,6 +139,25 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Mythrilblade - Madmortem"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -247,9 +268,9 @@ CliqueDB3 = {
 					["spell"] = "Regrowth",
 					["key"] = "BUTTON2",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136085,
 					["type"] = "spell",
@@ -269,9 +290,9 @@ CliqueDB3 = {
 					["spell"] = "Healing Touch",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136041,
 					["type"] = "spell",
@@ -291,25 +312,37 @@ CliqueDB3 = {
 					["spell"] = "Rejuvenation",
 					["key"] = "BUTTON1",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136081,
 					["type"] = "spell",
 				}, -- [9]
 				{
+					["spell"] = "Nature's Cure",
+					["key"] = "ALT-7",
+					["sets"] = {
+						["default"] = true,
+						["spec4"] = true,
+						["friend"] = true,
+						["hovercast"] = true,
+					},
+					["icon"] = 236288,
+					["type"] = "spell",
+				}, -- [10]
+				{
 					["spell"] = "Ironbark",
 					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 572025,
 					["type"] = "spell",
-				}, -- [10]
+				}, -- [11]
 				{
 					["spell"] = "Skull Bash",
 					["key"] = "ALT-0",
@@ -321,19 +354,19 @@ CliqueDB3 = {
 					},
 					["icon"] = 236946,
 					["type"] = "spell",
-				}, -- [11]
+				}, -- [12]
 				{
-					["spell"] = "Nature's Cure",
-					["key"] = "ALT-7",
+					["spell"] = "Swiftmend",
+					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
 						["hovercast"] = true,
 						["spec4"] = true,
 						["default"] = true,
 						["friend"] = true,
 					},
-					["icon"] = 236288,
+					["icon"] = 134914,
 					["type"] = "spell",
-				}, -- [12]
+				}, -- [13]
 				{
 					["spell"] = "Growl",
 					["key"] = "ALT-7",
@@ -345,29 +378,17 @@ CliqueDB3 = {
 					},
 					["icon"] = 132270,
 					["type"] = "spell",
-				}, -- [13]
+				}, -- [14]
 				{
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236153,
-					["type"] = "spell",
-				}, -- [14]
-				{
-					["spell"] = "Swiftmend",
-					["key"] = "SHIFT-BUTTON2",
-					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
-						["hovercast"] = true,
-						["default"] = true,
-					},
-					["icon"] = 134914,
 					["type"] = "spell",
 				}, -- [15]
 				{
@@ -435,6 +456,25 @@ CliqueDB3 = {
 			},
 		},
 		["Draltair - Blackhand"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Dranopix - Madmortem"] = {
 			["bindings"] = {
 				{
 					["sets"] = {
@@ -640,10 +680,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -660,41 +700,40 @@ CliqueDB3 = {
 					},
 				}, -- [1]
 				{
-					["spell"] = "Renew",
+					["spell"] = "Holy Word: Sanctify",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 135953,
+					["icon"] = 237541,
 					["type"] = "spell",
 				}, -- [2]
 				{
-					["spell"] = "Holy Word: Serenity",
+					["spell"] = "Binding Heal",
 					["key"] = "BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 135937,
+					["icon"] = 135883,
 					["type"] = "spell",
 				}, -- [3]
 				{
-					["spell"] = "Plea",
-					["key"] = "SHIFT-BUTTON1",
+					["spell"] = "Prayer of Healing",
+					["key"] = "CTRL-BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 135943,
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Power Word: Shield",
+					["key"] = "BUTTON1",
 					["sets"] = {
 						["default"] = true,
 						["spec1"] = true,
 					},
-					["icon"] = 1538775,
-					["type"] = "spell",
-				}, -- [4]
-				{
-					["spell"] = "Heal",
-					["key"] = "BUTTON1",
-					["sets"] = {
-						["default"] = true,
-						["spec2"] = true,
-					},
-					["icon"] = 135913,
+					["icon"] = 135940,
 					["type"] = "spell",
 				}, -- [5]
 				{
@@ -708,16 +747,6 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [6]
 				{
-					["spell"] = "Clarity of Will",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-						["spec1"] = true,
-					},
-					["icon"] = 1022947,
-					["type"] = "spell",
-				}, -- [7]
-				{
 					["spell"] = "Shadow Mend",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
@@ -726,17 +755,37 @@ CliqueDB3 = {
 					},
 					["icon"] = 136202,
 					["type"] = "spell",
+				}, -- [7]
+				{
+					["spell"] = "Heal",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["default"] = true,
+						["spec2"] = true,
+					},
+					["icon"] = 135913,
+					["type"] = "spell",
 				}, -- [8]
 				{
-					["spell"] = "Power Word: Shield",
-					["key"] = "BUTTON1",
+					["spell"] = "Plea",
+					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
 						["default"] = true,
 						["spec1"] = true,
 					},
-					["icon"] = 135940,
+					["icon"] = 1538775,
 					["type"] = "spell",
 				}, -- [9]
+				{
+					["spell"] = "Clarity of Will",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+						["spec1"] = true,
+					},
+					["icon"] = 1022947,
+					["type"] = "spell",
+				}, -- [10]
 			},
 		},
 		["Drathair - Blackhand"] = {
@@ -827,12 +876,21 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [2]
 				{
+					["spell"] = "Tyr's Deliverance",
+					["key"] = "MOUSEWHEELUP",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 1122562,
+					["type"] = "spell",
+				}, -- [3]
+				{
 					["type"] = "menu",
 					["key"] = "ALT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-				}, -- [3]
+				}, -- [4]
 				{
 					["spell"] = "Holy Shock",
 					["key"] = "BUTTON2",
@@ -840,15 +898,6 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["icon"] = 135972,
-					["type"] = "spell",
-				}, -- [4]
-				{
-					["spell"] = "Tyr's Deliverance",
-					["key"] = "MOUSEWHEELUP",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 1122562,
 					["type"] = "spell",
 				}, -- [5]
 				{
@@ -870,12 +919,12 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [7]
 				{
-					["spell"] = "Blessing of Freedom",
-					["key"] = "SHIFT-MOUSEWHEELUP",
+					["spell"] = "Holy Light",
+					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 135968,
+					["icon"] = 135981,
 					["type"] = "spell",
 				}, -- [8]
 				{
@@ -888,21 +937,21 @@ CliqueDB3 = {
 					["type"] = "spell",
 				}, -- [9]
 				{
+					["spell"] = "Blessing of Freedom",
+					["key"] = "SHIFT-MOUSEWHEELUP",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 135968,
+					["type"] = "spell",
+				}, -- [10]
+				{
 					["spell"] = "Blessing of Protection",
 					["key"] = "BUTTON3",
 					["sets"] = {
 						["default"] = true,
 					},
 					["icon"] = 135964,
-					["type"] = "spell",
-				}, -- [10]
-				{
-					["spell"] = "Holy Light",
-					["key"] = "SHIFT-BUTTON1",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 135981,
 					["type"] = "spell",
 				}, -- [11]
 				{
@@ -1141,6 +1190,24 @@ CliqueDB3 = {
 					["icon"] = 136044,
 					["type"] = "spell",
 				}, -- [4]
+				{
+					["spell"] = "Chain Heal",
+					["key"] = "SHIFT-BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136042,
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Healing Wave",
+					["key"] = "SHIFT-BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = 136043,
+					["type"] = "spell",
+				}, -- [6]
 			},
 		},
 	},

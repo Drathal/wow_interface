@@ -101,19 +101,19 @@ KkthnxUIDataPerChar = {
 			-140.000122070313, -- [4]
 			-201.000061035156, -- [5]
 		},
+		["oUF_KkthnxTarget_Castbar"] = {
+			"CENTER", -- [1]
+			"UIParent", -- [2]
+			"CENTER", -- [3]
+			397.000671386719, -- [4]
+			-82.0000534057617, -- [5]
+		},
 		["PetActionBarAnchor"] = {
 			"BOTTOM", -- [1]
 			"UIParent", -- [2]
 			"BOTTOM", -- [3]
 			7.00051164627075, -- [4]
 			70.9998092651367, -- [5]
-		},
-		["RaidUtilityPanel"] = {
-			"TOPLEFT", -- [1]
-			"UIParent", -- [2]
-			"TOPLEFT", -- [3]
-			0, -- [4]
-			-111.99991607666, -- [5]
 		},
 		["ExtraActionBarHolder"] = {
 			"BOTTOM", -- [1]
@@ -185,12 +185,12 @@ KkthnxUIDataPerChar = {
 			-389.999908447266, -- [4]
 			-175.000289916992, -- [5]
 		},
-		["oUF_KkthnxTarget_Castbar"] = {
-			"CENTER", -- [1]
+		["RaidUtilityPanel"] = {
+			"TOPLEFT", -- [1]
 			"UIParent", -- [2]
-			"CENTER", -- [3]
-			397.000671386719, -- [4]
-			-82.0000534057617, -- [5]
+			"TOPLEFT", -- [3]
+			0, -- [4]
+			-111.99991607666, -- [5]
 		},
 		["ArtifactAnchor"] = {
 			"TOPRIGHT", -- [1]

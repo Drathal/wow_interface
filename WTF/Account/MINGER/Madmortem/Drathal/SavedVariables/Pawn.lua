@@ -1,25 +1,23 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0209,
+	["LastVersion"] = 2.0213,
 	["LastPlayerFullName"] = "Drathal-Madmortem",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
-	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
-		[128858] = {
+		[128860] = {
 			["Relics"] = {
 				{
-					["Type"] = "Arcane",
+					["Type"] = "Frost",
 				}, -- [1]
 				{
-					["ItemLevel"] = 36,
-					["Type"] = "Life",
+					["Type"] = "Blood",
 				}, -- [2]
 				{
-					["Type"] = "Arcane",
+					["Type"] = "Life",
 				}, -- [3]
 			},
-			["Name"] = "Scythe of Elune",
+			["Name"] = "Fangs of Ashamane",
 		},
 		[128821] = {
 			["Relics"] = {
@@ -36,6 +34,21 @@ PawnOptions = {
 				}, -- [3]
 			},
 			["Name"] = "Claws of Ursoc",
+		},
+		[128858] = {
+			["Relics"] = {
+				{
+					["Type"] = "Arcane",
+				}, -- [1]
+				{
+					["ItemLevel"] = 36,
+					["Type"] = "Life",
+				}, -- [2]
+				{
+					["Type"] = "Arcane",
+				}, -- [3]
+			},
+			["Name"] = "Scythe of Elune",
 		},
 		[128306] = {
 			["Relics"] = {
@@ -54,21 +67,8 @@ PawnOptions = {
 			},
 			["Name"] = "G'Hanir, the Mother Tree",
 		},
-		[128860] = {
-			["Relics"] = {
-				{
-					["Type"] = "Frost",
-				}, -- [1]
-				{
-					["Type"] = "Blood",
-				}, -- [2]
-				{
-					["Type"] = "Life",
-				}, -- [3]
-			},
-			["Name"] = "Fangs of Ashamane",
-		},
 	},
+	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "DRUID",

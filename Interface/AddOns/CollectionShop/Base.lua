@@ -257,7 +257,7 @@ NS.ScrollFrame = function( name, parent, set )
 		FauxScrollFrame_OnVerticalScroll( self, offset, self.buttonHeight, self.UpdateFunction );
 	end );
 	-- Add properties for use with vertical scroll and update function ... FauxScrollFrame_Update( frame, numItems, numToDisplay, buttonHeight, button, smallWidth, bigWidth, highlightFrame, smallHighlightWidth, bigHighlightWidth, alwaysShowScrollBar );
-	for k, v in pairs( set.udpate ) do
+	for k, v in pairs( set.update ) do
 		f[k] = v;
 	end
 	-- Create buttons

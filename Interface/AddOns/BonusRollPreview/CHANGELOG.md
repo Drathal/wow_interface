@@ -1,3 +1,20 @@
+### Changes in 70300.44-Release:
+
+- Fixed: Scrollbar not showing for >8 items
+- Fixed: Random errors (temporary)
+
+### Changes in 70300.43-Release:
+
+- Changed: Update Interface version
+- Changed: Update embeds for regression fix
+
+### Changes in 70200.42-Release:
+
+- Added: Option to move the BonusRollFrame
+- Added: Option to control the direction the item list appears
+- Added: Option to always show the item list
+- Removed: Encounter database, there's an API for it now
+
 ### Changes in 70200.41-Release:
 
 - Fixed: Missing fallback difficulties for Tome of Sargeras raid

@@ -68,8 +68,12 @@ TalentSetManager_CharacterSaves = {
 	},
 	["Drathia-Madmortem"] = {
 		["talents"] = {
-			[2] = {
-			},
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+			{
+			}, -- [3]
 		},
 		["talents_pvp"] = {
 		},
@@ -77,6 +81,21 @@ TalentSetManager_CharacterSaves = {
 		["interface"] = {
 			["auto_equip4"] = 0,
 			["auto_equip2"] = 0,
+			["auto_equip1"] = 0,
+			["auto_equip3"] = 0,
+		},
+	},
+	["Dranopix-Madmortem"] = {
+		["talents_pvp"] = {
+		},
+		["talents"] = {
+			{
+			}, -- [1]
+		},
+		["version"] = 0,
+		["interface"] = {
+			["auto_equip2"] = 0,
+			["auto_equip4"] = 0,
 			["auto_equip1"] = 0,
 			["auto_equip3"] = 0,
 		},
@@ -146,6 +165,21 @@ TalentSetManager_CharacterSaves = {
 			}, -- [1]
 			[3] = {
 			},
+		},
+		["talents_pvp"] = {
+		},
+		["version"] = 0,
+		["interface"] = {
+			["auto_equip4"] = 0,
+			["auto_equip2"] = 0,
+			["auto_equip1"] = 0,
+			["auto_equip3"] = 0,
+		},
+	},
+	["Mythrilblade-Madmortem"] = {
+		["talents"] = {
+			{
+			}, -- [1]
 		},
 		["talents_pvp"] = {
 		},

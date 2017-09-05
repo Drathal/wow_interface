@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------
-r52 | nagboy@gmail.com | 2017-06-23 17:19:47 -0500 (Fri, 23 Jun 2017) | 1 line
+r54 | nagboy@gmail.com | 2017-09-02 08:20:39 -0500 (Sat, 02 Sep 2017) | 1 line
 Changed paths:
-   M /trunk/HandyNotes_DungeonLocations.lua
+   M /trunk/HandyNotes_DungeonLocations.toc
 
-Added Stratholme service entrance.
+TOC Bump
 ------------------------------------------------------------------------
 

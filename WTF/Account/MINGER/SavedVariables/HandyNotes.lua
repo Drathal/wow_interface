@@ -3,12 +3,14 @@ HandyNotesDB = {
 	["profileKeys"] = {
 		["Drathal - Blackhand"] = "Drathal - Blackhand",
 		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
+		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
 		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Modranthir - Blackhand"] = "Modranthir - Blackhand",
 		["Modrix - Blackhand"] = "Modrix - Blackhand",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
+		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
 		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
 		["Drathon - Blackhand"] = "base",
@@ -26,6 +28,8 @@ HandyNotesDB = {
 		["Drathal - Blackhand"] = {
 		},
 		["Dorthal - Blackhand"] = {
+		},
+		["Mythrilblade - Madmortem"] = {
 		},
 		["Drathol - Blackhand"] = {
 		},
@@ -46,6 +50,8 @@ HandyNotesDB = {
 			["icon_alpha_minimap"] = 0.49,
 			["icon_scale"] = 0.79,
 			["icon_alpha"] = 0.5,
+		},
+		["Dranopix - Madmortem"] = {
 		},
 		["Drathair - Blackhand"] = {
 			["enabled"] = false,
@@ -88,12 +94,14 @@ HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
 		["Drathal - Blackhand"] = "Drathal - Blackhand",
 		["Dorthal - Blackhand"] = "Dorthal - Blackhand",
+		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
 		["Drathol - Blackhand"] = "Drathol - Blackhand",
 		["Modranthir - Madmortem"] = "Modranthir - Madmortem",
 		["Modranthir - Blackhand"] = "Modranthir - Blackhand",
 		["Modrix - Blackhand"] = "Modrix - Blackhand",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
 		["Draltair - Blackhand"] = "Draltair - Blackhand",
+		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
 		["Sungleave - Blackhand"] = "Sungleave - Blackhand",
 		["Drathon - Blackhand"] = "base",
@@ -112,6 +120,8 @@ HandyNotes_HandyNotesDB = {
 		},
 		["Dorthal - Blackhand"] = {
 		},
+		["Mythrilblade - Madmortem"] = {
+		},
 		["Drathol - Blackhand"] = {
 		},
 		["Modranthir - Madmortem"] = {
@@ -123,6 +133,8 @@ HandyNotes_HandyNotesDB = {
 		["Drathal - Madmortem"] = {
 		},
 		["base"] = {
+		},
+		["Dranopix - Madmortem"] = {
 		},
 		["Drathair - Blackhand"] = {
 		},

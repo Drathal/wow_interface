@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0209,
+	["LastVersion"] = 2.0213,
 	["LastPlayerFullName"] = "Drathia-Madmortem",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
@@ -13,10 +13,11 @@ PawnOptions = {
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 10,
+					["ItemLevel"] = 53,
 					["Type"] = "Shadow",
 				}, -- [2]
 				{
+					["ItemLevel"] = 51,
 					["Type"] = "Holy",
 				}, -- [3]
 			},
@@ -25,12 +26,15 @@ PawnOptions = {
 		[128827] = {
 			["Relics"] = {
 				{
+					["ItemLevel"] = 55,
 					["Type"] = "Shadow",
 				}, -- [1]
 				{
+					["ItemLevel"] = 59,
 					["Type"] = "Blood",
 				}, -- [2]
 				{
+					["ItemLevel"] = 24,
 					["Type"] = "Shadow",
 				}, -- [3]
 			},
@@ -39,15 +43,15 @@ PawnOptions = {
 		[128825] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 51,
+					["ItemLevel"] = 55,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 46,
+					["ItemLevel"] = 56,
 					["Type"] = "Life",
 				}, -- [2]
 				{
-					["ItemLevel"] = 36,
+					["ItemLevel"] = 52,
 					["Type"] = "Holy",
 				}, -- [3]
 			},

@@ -144,8 +144,6 @@ function RPH_OnLoad(self)
 	--ChatFrame_OnEvent = RPH_ChatFrame_OnEvent
 
 	RPH_Orig_StandingText = ReputationFrameStandingLabel:GetText()
-
-	hooksecurefunc("MainMenuBar_UpdateExperienceBars", RPH_MainMenuBar_UpdateExperienceBars)
 end
 
 ------------------------
@@ -1424,18 +1422,6 @@ end
 -----------------------------------
 -- _10_ New Hook Functions --
 -----------------------------------
-function RPH_MainMenuBar_UpdateExperienceBars(level)
-	local name, _, _, _, _, factionID = GetWatchedFactionInfo()
-	
-	if (factionID and C_Reputation.IsFactionParagon(factionID)) then
-		local currentValue, threshold, rewardQuestID, hasRewardPending = C_Reputation.GetFactionParagonInfo(factionID);
-		local barMin, barMax, barValue = 0, threshold, mod(currentValue, threshold);
-		
-		ReputationWatchBar.StatusBar:SetAnimatedValues(barValue, barMin, barMax)
-		ReputationWatchBar.OverlayFrame.Text:SetText(name.." "..barValue.." / "..barMax);
-	end
-end
-
 function RPH_GetFactionInfo(factionIndex)
 
 	-- get original information
@@ -1612,12 +1598,12 @@ end
 function RPH_ReputationBar_OnClick(self)
 	-- redo from the main Reputation file
 	if ((ReputationDetailFrame:IsVisible() or RPH_ReputationDetailFrame:IsVisible()) and (GetSelectedFaction() == self.index) ) then
-		PlaySound("igMainMenuOptionCheckBoxOff");
+		PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
 		ReputationDetailFrame:Hide();
 		RPH_ReputationDetailFrame:Hide();
 	else
 		if (self.hasRep) then
-			PlaySound("igMainMenuOptionCheckBoxOn");
+			PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
 			RPH_ReputationDetailFrame:Show();
 			SetSelectedFaction(self.index);
 			ReputationDetailFrame:Hide();

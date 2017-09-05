@@ -1,28 +1,28 @@
-local oUFs = { 
-        [1] = "oUF_KkthnxPlayer", 
-        [2] = "Bar1Holder",
-        [3] = "Bar2Holder",
-        [4] = "Bar5Holder" 
+local oUFs = {
+    [1] = "oUF_KkthnxPlayer",
+    [2] = "Bar1Holder",
+    [3] = "Bar2Holder",
+    [4] = "Bar5Holder"
 }
 
 local function FadeIn()
-        if InCombatLockdown() then return end
+    if InCombatLockdown() then return end
 
-        _G["oUF_KkthnxPlayer"].Range.insideAlpha = 1
-        _G["oUF_KkthnxPlayer"].Range.outsideAlpha = 1
-        for i = 1, 4 do
-                UIFrameFadeIn(_G[oUFs[i]], 0.075, _G[oUFs[i]]:GetAlpha(), 1)
-        end
+    _G["oUF_KkthnxPlayer"].Range.insideAlpha = 1
+    _G["oUF_KkthnxPlayer"].Range.outsideAlpha = 1
+    for i = 1, 4 do
+        UIFrameFadeIn(_G[oUFs[i]], 0.075, _G[oUFs[i]]:GetAlpha(), 1)
+    end
 end
 
 local function FadeOut()
-        if InCombatLockdown() then return end
+    if InCombatLockdown() then return end
 
-        _G["oUF_KkthnxPlayer"].Range.insideAlpha = 0.2
-        _G["oUF_KkthnxPlayer"].Range.outsideAlpha = 0.2
-        for i = 1, 4 do      
-               UIFrameFadeOut(_G[oUFs[i]], 0.075, _G[oUFs[i]]:GetAlpha(), 0.2)
-        end
+    _G["oUF_KkthnxPlayer"].Range.insideAlpha = 0.2
+    _G["oUF_KkthnxPlayer"].Range.outsideAlpha = 0.2
+    for i = 1, 4 do
+        UIFrameFadeOut(_G[oUFs[i]], 0.075, _G[oUFs[i]]:GetAlpha(), 0.2)
+    end
 end
 
 local function fadeTarget()
@@ -40,7 +40,7 @@ local function uffade(self, event, unit)
         SetCVar("floatingCombatTextCombatDamage", "0");
     end
 
-    
+    --[[
     if event == "UNIT_SPELLCAST_START" then
         if unit == "player" then
             FadeIn()
@@ -56,8 +56,9 @@ local function uffade(self, event, unit)
     elseif event == "PLAYER_TARGET_CHANGED" then
         fadeTarget()
     end
+    ]]--
 end
- 
+
 local oocfade = CreateFrame("Frame")
 oocfade:RegisterEvent("PLAYER_ENTERING_WORLD")
 oocfade:RegisterEvent("PLAYER_REGEN_ENABLED")

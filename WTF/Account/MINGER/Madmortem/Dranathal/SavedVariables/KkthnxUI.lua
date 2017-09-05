@@ -10,6 +10,13 @@ KkthnxUIDataPerChar = {
 			-1.00000751018524, -- [4]
 			-46.0000190734863, -- [5]
 		},
+		["AltPowerBarHolder"] = {
+			"TOP", -- [1]
+			"UIParent", -- [2]
+			"TOP", -- [3]
+			-1.9998836517334, -- [4]
+			-45.9999504089356, -- [5]
+		},
 		["PetActionBarAnchor"] = {
 			"BOTTOM", -- [1]
 			"UIParent", -- [2]
@@ -45,12 +52,12 @@ KkthnxUIDataPerChar = {
 			-315.000183105469, -- [4]
 			-127.999938964844, -- [5]
 		},
-		["AltPowerBarHolder"] = {
-			"TOP", -- [1]
+		["KkthnxUIDebuffHeader"] = {
+			"LEFT", -- [1]
 			"UIParent", -- [2]
-			"TOP", -- [3]
-			-1.9998836517334, -- [4]
-			-45.9999504089356, -- [5]
+			"LEFT", -- [3]
+			214.999893188477, -- [4]
+			-180.000045776367, -- [5]
 		},
 	},
 	["BarsLocked"] = false,

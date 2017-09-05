@@ -1,4 +1,4 @@
 
 COLLECTIONSHOP_SAVEDVARIABLESPERCHARACTER = {
-	["version"] = 2.03,
+	["version"] = 2.04,
 }

@@ -189,12 +189,12 @@ PawnCommon = {
 		["Guardian"] = {
 			["NormalizationFactor"] = 1,
 			["Values"] = {
-				["Stamina"] = 18.01,
+				["CritRating"] = 9.01,
 				["Agility"] = 10.51,
 				["HasteRating"] = 13.51,
 				["MasteryRating"] = 15.01,
-				["CritRating"] = 9.01,
 				["Versatility"] = 12.01,
+				["Stamina"] = 18.01,
 			},
 			["UpgradesFollowSpecialization"] = true,
 			["Color"] = "e6996c",
@@ -498,36 +498,6 @@ PawnCommon = {
 			["SpecID"] = 2,
 			["UnenchantedColor"] = "6566b2",
 		},
-		["\"MrRobot\":PALADIN2"] = {
-			["IconTexturePath"] = 236264,
-			["PerCharacterOptions"] = {
-			},
-			["Color"] = "f58cba",
-			["ClassID"] = 2,
-			["LocalizedName"] = "Paladin: Protection",
-			["DoNotShow1HUpgrades"] = false,
-			["Role"] = "TANK",
-			["DoNotShow2HUpgrades"] = true,
-			["UpgradesFollowSpecialization"] = true,
-			["Provider"] = "MrRobot",
-			["SpecID"] = 2,
-			["UnenchantedColor"] = "b7698b",
-		},
-		["\"MrRobot\":MAGE1"] = {
-			["IconTexturePath"] = 135932,
-			["PerCharacterOptions"] = {
-			},
-			["Color"] = "3fc7eb",
-			["ClassID"] = 8,
-			["LocalizedName"] = "Mage: Arcane",
-			["DoNotShow1HUpgrades"] = false,
-			["Role"] = "DAMAGER",
-			["DoNotShow2HUpgrades"] = false,
-			["UpgradesFollowSpecialization"] = true,
-			["Provider"] = "MrRobot",
-			["SpecID"] = 1,
-			["UnenchantedColor"] = "2f95b0",
-		},
 		["Holy"] = {
 			["IconTexturePath"] = 135920,
 			["Values"] = {
@@ -557,6 +527,36 @@ PawnCommon = {
 				},
 			},
 		},
+		["\"MrRobot\":MAGE1"] = {
+			["IconTexturePath"] = 135932,
+			["PerCharacterOptions"] = {
+			},
+			["Color"] = "3fc7eb",
+			["ClassID"] = 8,
+			["LocalizedName"] = "Mage: Arcane",
+			["DoNotShow1HUpgrades"] = false,
+			["Role"] = "DAMAGER",
+			["DoNotShow2HUpgrades"] = false,
+			["UpgradesFollowSpecialization"] = true,
+			["Provider"] = "MrRobot",
+			["SpecID"] = 1,
+			["UnenchantedColor"] = "2f95b0",
+		},
+		["\"MrRobot\":DRUID2"] = {
+			["IconTexturePath"] = 132115,
+			["PerCharacterOptions"] = {
+			},
+			["Color"] = "ff7d0a",
+			["ClassID"] = 11,
+			["LocalizedName"] = "Druid: Feral",
+			["DoNotShow1HUpgrades"] = true,
+			["Role"] = "DAMAGER",
+			["DoNotShow2HUpgrades"] = false,
+			["UpgradesFollowSpecialization"] = true,
+			["Provider"] = "MrRobot",
+			["SpecID"] = 2,
+			["UnenchantedColor"] = "bf5d07",
+		},
 		["Restoration"] = {
 			["NormalizationFactor"] = 1,
 			["PerCharacterOptions"] = {
@@ -578,6 +578,9 @@ PawnCommon = {
 		["\"MrRobot\":HUNTER1"] = {
 			["IconTexturePath"] = 461112,
 			["PerCharacterOptions"] = {
+				["Dranopix-Madmortem"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "abd473",
 			["ClassID"] = 3,
@@ -605,20 +608,20 @@ PawnCommon = {
 			["SpecID"] = 2,
 			["UnenchantedColor"] = "7a2496",
 		},
-		["\"MrRobot\":DRUID2"] = {
-			["IconTexturePath"] = 132115,
+		["\"MrRobot\":PALADIN2"] = {
+			["IconTexturePath"] = 236264,
 			["PerCharacterOptions"] = {
 			},
-			["Color"] = "ff7d0a",
-			["ClassID"] = 11,
-			["LocalizedName"] = "Druid: Feral",
-			["DoNotShow1HUpgrades"] = true,
-			["Role"] = "DAMAGER",
-			["DoNotShow2HUpgrades"] = false,
+			["Color"] = "f58cba",
+			["ClassID"] = 2,
+			["LocalizedName"] = "Paladin: Protection",
+			["DoNotShow1HUpgrades"] = false,
+			["Role"] = "TANK",
+			["DoNotShow2HUpgrades"] = true,
 			["UpgradesFollowSpecialization"] = true,
 			["Provider"] = "MrRobot",
 			["SpecID"] = 2,
-			["UnenchantedColor"] = "bf5d07",
+			["UnenchantedColor"] = "b7698b",
 		},
 		["Affliction"] = {
 			["IconTexturePath"] = 136145,
@@ -700,12 +703,12 @@ PawnCommon = {
 			["Color"] = "7ce69b",
 			["UnenchantedColor"] = "5dac74",
 			["Values"] = {
-				["CritRating"] = 7.55,
+				["Versatility"] = 4.55,
 				["Agility"] = 6.05,
 				["HasteRating"] = 9.05,
 				["MasteryRating"] = 7.55,
-				["Versatility"] = 4.55,
 				["Stamina"] = 12.05,
+				["CritRating"] = 7.55,
 			},
 		},
 		["\"MrRobot\":DRUID4"] = {
@@ -756,6 +759,9 @@ PawnCommon = {
 		["\"MrRobot\":ROGUE1"] = {
 			["IconTexturePath"] = 236270,
 			["PerCharacterOptions"] = {
+				["Mythrilblade-Madmortem"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "fff569",
 			["ClassID"] = 4,
@@ -805,6 +811,6 @@ PawnCommon = {
 	["ButtonPosition"] = 2,
 	["Debug"] = false,
 	["ShowQuestUpgradeAdvisor"] = true,
-	["LastVersion"] = 2.0211,
+	["LastVersion"] = 2.0213,
 	["Digits"] = 1,
 }
