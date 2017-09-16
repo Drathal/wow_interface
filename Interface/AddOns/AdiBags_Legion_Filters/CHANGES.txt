@@ -1,14 +1,14 @@
-tag f530193f0c1655afe00dd3be94dfbcccfa0b3b4d 1.6
+tag d99524641d728efb7d7afa075c5eb7e3eb6b2df6 1.6.5
 Author:	legowxelab2z8 <legowxelab2z8@Gmail.com>
-Date:	Thu Aug 31 22:06:22 2017 -0700
+Date:	Fri Sep 8 16:25:32 2017 -0700
 
-Update for WoW Patch 7.3
+Champion Tokens Update
 
-commit 58ecd28f2cb9ce5524ae377c878d4f4023ce86e8
+commit 53681ae779ef77406233ba546f4ed3716526f752
 Author: legowxelab2z8 <legowxelab2z8@Gmail.com>
-Date:   Thu Aug 31 22:05:28 2017 -0700
+Date:   Fri Sep 8 16:25:15 2017 -0700
 
-    ArtifactPowerTable Update
+    Added New Champion Token Spell Effect
     
-    A new Tooltip Scan of artifact power for patch 7.3
+    Champion Upgrade Tokens use new SpellEffectID 80.  Added new ID to DataTablesExport.lua and created a new version of ItemTables.lua
 

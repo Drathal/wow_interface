@@ -9,7 +9,7 @@ local C_EquipmentSet, format, tremove, tinsert, lower, floor, ceil = C_Equipment
 local addonName, addonTable = ...
 local L = addonTable.L
 local ntl
-
+ 
 local icon_filenames, icons_added
 
 local charsvar

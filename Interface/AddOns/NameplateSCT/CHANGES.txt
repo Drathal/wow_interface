@@ -1,16 +1,10 @@
-tag 03b12bec7c8c283c8ba609a3b54be7aa7b0ffb34 1.07
+tag f26fea445ebeaf40ad0847ea2f41cf1b38fdb07f 1.08
 Author:	Michael P. Starkweather <mpstark@gmail.com>
-Date:	Fri Jun 23 04:34:44 2017 -0500
+Date:	Tue Sep 12 14:47:14 2017 -0500
 
-commit f63e669a1e3ad49ef9a111d1647034329c7321e6
+commit 1003555845ce9eebacb1e23d12d093a2480771eb
 Author: Michael P. Starkweather <mpstark@gmail.com>
-Date:   Fri Jun 23 04:34:26 2017 -0500
+Date:   Tue Sep 12 14:39:10 2017 -0500
 
-    Fix off-target size/icon, add only icon
-
-commit 910f3fdc1abd5004ea3ec30979b477e6c9d62d83
-Author: Michael P. Starkweather <mpstark@gmail.com>
-Date:   Sat Jun 17 03:30:12 2017 -0500
-
-    Add rainfall animation
+    Fix miss events
 

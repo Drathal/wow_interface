@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- 	Leatrix Plus 7.3.06 (3rd September 2017, www.leatrix.com)
+-- 	Leatrix Plus 7.3.10 (12th September 2017, www.leatrix.com)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:Player		72:Profile		
@@ -20,7 +20,7 @@
 	local void
 
 --	Version
-	LeaPlusLC["AddonVer"] = "7.3.06"
+	LeaPlusLC["AddonVer"] = "7.3.10"
 
 ----------------------------------------------------------------------
 -- 	Locale
@@ -961,6 +961,13 @@
 			--[[zhTW]] "透明度",
 			--[[ruRU]] "Прозрачность",
 			--[[koKR]] "투명도",
+			x)
+
+			Ln("Window width",
+			--[[zhCN]] "窗口宽度",
+			--[[zhTW]] "視窗寬度",
+			--[[ruRU]] "",
+			--[[koKR]] "창 너비",
 			x)
 
 			Ln("Window height",
@@ -2934,6 +2941,13 @@
 			--[[koKR]] "동영상 건너띄기가 시도되었습니다.",
 			x)
 
+			Ln("Movie number",
+			--[[zhCN]] "",
+			--[[zhTW]] "",
+			--[[ruRU]] "",
+			--[[koKR]] "",
+			x)
+
 		----------------------------------------------------------------------
 		-- Faster auto loot
 		----------------------------------------------------------------------
@@ -3125,12 +3139,19 @@
 			x)
 
 	----------------------------------------------------------------------
-	-- 	LA9: Music
+	-- 	LA9: Media
 	----------------------------------------------------------------------
 
 		----------------------------------------------------------------------
 		-- Panel
 		----------------------------------------------------------------------
+
+		Ln("Media",
+		--[[zhCN]] "媒体",
+		--[[zhTW]] "媒體",
+		--[[ruRU]] "СМИ",
+		--[[koKR]] "미디어",
+		x)
 
 		Ln("Music",
 		--[[zhCN]] "音乐",
@@ -3139,12 +3160,51 @@
 		--[[koKR]] "음악",
 		x)
 
+		Ln("Video",
+		--[[zhCN]] "视频",
+		--[[zhTW]] "視頻",
+		--[[ruRU]] "видео",
+		--[[koKR]] "비디오",
+		x)
+
+		Ln("Movies",
+		--[[zhCN]] "电影",
+		--[[zhTW]] "電影",
+		--[[ruRU]] "Кино",
+		--[[koKR]] "영화 산업",
+		x)
+
 		Ln("Stop",
 		--[[zhCN]] "停止",
 		--[[zhTW]] "停止",
 		--[[ruRU]] "Стоп",
 		--[[koKR]] "중지",
 		x)
+
+			----------------------------------------------------------------------
+			-- Chat messages
+			----------------------------------------------------------------------
+
+			Ln("Movie number",
+			--[[zhCN]] "影片编号",
+			--[[zhTW]] "",
+			--[[ruRU]] "",
+			--[[koKR]] "영화 번호",
+			x)
+
+			Ln("Movie not playable.",
+			--[[zhCN]] "无法播放该影片。",
+			--[[zhTW]] "",
+			--[[ruRU]] "",
+			--[[koKR]] "영화를 재생할수 없습니다.",
+			x)
+
+			Ln("Missing movie ID.",
+			--[[zhCN]] "影片编号不存在。",
+			--[[zhTW]] "",
+			--[[ruRU]] "",
+			--[[koKR]] "잘못된 영화 ID.",
+			x)
 
 	----------------------------------------------------------------------
 	-- 	LA10: Miscellaneous
@@ -4599,21 +4659,22 @@
 						if npcID == "45400" 	-- Fiona's Caravan (Eastern Plaguelands)
 						or npcID == "18166" 	-- Khadgar (Allegiance to Aldor/Scryer, Shattrath)
 						or npcID == "99183" 	-- Renegade Ironworker (Tanaan Jungle, repeatable quest)
-						or npcID == "87391" 	-- Fate-Twister Seress (Seal quest, Stormshield)
-						or npcID == "88570"		-- Fate-Twister Tiklal (Seal quest, Horde)
-						or npcID == "111243" 	-- Archmage Lan'dalock (Seal quest, Dalaran)
+						or npcID == "114719" 	-- Trader Caelen (Obliterum Forge, Dalaran, Broken Isles)
 						then
 							return true
 						end
 						-- Ignore specific NPCs for selecting quests only (required if incomplete quest turn-ins are selected automatically)
 						if actionType == "Select" then
-							if npcID == "87706" 	-- Gazmolf Futzwangler (Reputation quests, Nagrand, Draenor)
-							or npcID == "87393" 	-- Sallee Silverclamp (Reputation quests, Nagrand, Draenor)
-							or npcID == "55402" 	-- Korgol Crushskull (Darkmoon Faire, Pit Master)
-							or npcID == "15192" 	-- Anachronos (Caverns of Time)
-							or npcID == "109227" 	-- Meliah Grayfeather (Tradewind Roost, Highmountain)
-							or npcID == "70022" 	-- Ku'ma (Isle of Giants, Pandaria)
+							if npcID == "15192" 	-- Anachronos (Caverns of Time)
+							or npcID == "111243" 	-- Archmage Lan'dalock (Seal quest, Dalaran)
 							or npcID == "119388" 	-- Chieftain Hatuun (Krokul Hovel, Krokuun)
+							or npcID == "87391" 	-- Fate-Twister Seress (Seal quest, Stormshield)
+							or npcID == "88570"		-- Fate-Twister Tiklal (Seal quest, Horde)
+							or npcID == "87706" 	-- Gazmolf Futzwangler (Reputation quests, Nagrand, Draenor)
+							or npcID == "55402" 	-- Korgol Crushskull (Darkmoon Faire, Pit Master)
+							or npcID == "70022" 	-- Ku'ma (Isle of Giants, Pandaria)
+							or npcID == "109227" 	-- Meliah Grayfeather (Tradewind Roost, Highmountain)
+							or npcID == "87393" 	-- Sallee Silverclamp (Reputation quests, Nagrand, Draenor)
 							then
 								return true
 							end
@@ -4622,15 +4683,17 @@
 				end
 			end
 
-			-- Function to check if current quest requires currency
+			-- Function to check if quest requires currency
 			local function QuestRequiresCurrency()
-				local currencyRequiredNumber = GetNumQuestCurrencies()
-				if currencyRequiredNumber and currencyRequiredNumber > 0 then
-					return true
+				for i = 1, 6 do
+					local progItem = _G["QuestProgressItem" ..i] or nil
+					if progItem and progItem:IsShown() and progItem.type == "required" and progItem.objectType == "currency" then
+						return true
+					end
 				end
 			end
 
-			-- Function to check if current quest requires gold
+			-- Function to check if quest requires gold
 			local function QuestRequiresGold()
 				local goldRequiredAmount = GetQuestMoneyToGet()
 				if goldRequiredAmount and goldRequiredAmount > 0 then
@@ -4647,7 +4710,19 @@
 			qFrame:RegisterEvent("QUEST_GREETING")
 			qFrame:RegisterEvent("QUEST_AUTOCOMPLETE")
 			qFrame:RegisterEvent("GOSSIP_SHOW")
+			qFrame:RegisterEvent("QUEST_FINISHED")
 			qFrame:SetScript("OnEvent", function(self, event)
+
+				-- Clear progress items when quest interaction has ceased
+				if event == "QUEST_FINISHED" then
+					for i = 1, 6 do
+						local progItem = _G["QuestProgressItem" ..i] or nil
+						if progItem and progItem:IsShown() then
+							progItem:Hide()
+						end
+					end
+					return
+				end
 
 				-- Do nothing if SHIFT key is being held
 				if IsShiftKeyDown() then return end
@@ -4683,13 +4758,13 @@
 
 				-- Turn-in progression quests
 				if event == "QUEST_PROGRESS" and IsQuestCompletable() then
-					-- Don't complete quests for blocked NPCs
+					-- Don't continue quests for blocked NPCs
 					if isNpcBlocked("Complete") then return end
-					-- Don't complete if quest requires currency
+					-- Don't continue if quest requires currency
 					if QuestRequiresCurrency() then return end
-					-- Don't complete if quest requires gold
+					-- Don't continue if quest requires gold
 					if QuestRequiresGold() then return end
-					-- Complete quest
+					-- Continue quest
 					CompleteQuest()
 				end
 
@@ -4830,14 +4905,19 @@
 			end)
 
 			-- Skip movies
-			hooksecurefunc("MovieFrame_PlayMovie", function(self)
+			hooksecurefunc("MovieFrame_PlayMovie", function(self, movieID)
 				-- Do nothing if shift key is being held
 				if IsShiftKeyDown() then return	end
+				-- Do nothing if movie playback flag is on
+				if LeaPlusLC["ForceMoviePlaybackFlag"] == "On" then return end
 				-- Click the close dialog confirmation button to stop the movie
 				if self.CloseDialog and self.CloseDialog.ConfirmButton then
 					self.CloseDialog.ConfirmButton:Click()
 					-- Show confirmation message
 					LeaPlusLC:Print("A movie skip was attempted.")
+					if movieID then
+						LeaPlusLC:Print(LeaPlusLC:Translate("Movie number") .. ": |cffffffff" .. movieID .. "|r")
+					end
 				end
 			end)
 
@@ -7978,7 +8058,7 @@
 			local editFrame = CreateFrame("ScrollFrame", nil, nil, "InputScrollFrameTemplate")
 
 			-- Toggle frame with UIParent and pet battles
-			local hideUI, hideUIPet = false, false
+			local hideUI = false
 			local function HideRecentChatFrame() if editFrame:IsShown() then hideUI = true editFrame:Hide() end	end
 			local function ShowRecentChatFrame() if hideUI and not PetBattleFrame:IsShown() then editFrame:Show() hideUI = false end end
 			UIParent:HookScript("OnHide", HideRecentChatFrame)
@@ -8979,6 +9059,9 @@
 					-- Friends
 					if FriendsTooltip then FriendsTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"]) end
 
+					-- AutoCompleteBox
+					if AutoCompleteBox then AutoCompleteBox:SetScale(LeaPlusLC["LeaPlusTipSize"]) end
+
 					-- Pet battles and battle pets
 					if PetBattlePrimaryAbilityTooltip then PetBattlePrimaryAbilityTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"]) end
 					if PetBattlePrimaryUnitTooltip then PetBattlePrimaryUnitTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"]) end
@@ -9248,18 +9331,18 @@
 			end
 
 			-- Tag locale (code construction from tiplang)
-			local ttLevel, ttBoss, ttElite, ttRare, ttRareElite, ttRareBoss
-			if 		GameLocale == "zhCN" then 	ttLevel = "等级"		; ttBoss = "首领"	; ttElite = "精英"	; ttRare = "精良"	; ttRareElite = "精良 精英"		; ttRareBoss = "精良 首领"
-			elseif 	GameLocale == "zhTW" then 	ttLevel = "等級"		; ttBoss = "首領"	; ttElite = "精英"	; ttRare = "精良"	; ttRareElite = "精良 精英"		; ttRareBoss = "精良 首領"
-			elseif 	GameLocale == "ruRU" then 	ttLevel = "Уровень"	; ttBoss = "босс"	; ttElite = "элита"	; ttRare = "Редкое"	; ttRareElite = "Редкое элита"	; ttRareBoss = "Редкое босс"
-			elseif 	GameLocale == "koKR" then 	ttLevel = "레벨"		; ttBoss = "우두머리"	; ttElite = "정예"	; ttRare = "희귀"	; ttRareElite = "희귀 정예"		; ttRareBoss = "희귀 우두머리"
-			elseif 	GameLocale == "esMX" then 	ttLevel = "Nivel"	; ttBoss = "Jefe"	; ttElite = "Élite"	; ttRare = "Raro"	; ttRareElite = "Raro Élite"	; ttRareBoss = "Raro Jefe"
-			elseif 	GameLocale == "ptBR" then 	ttLevel = "Nível"	; ttBoss = "Chefe"	; ttElite = "Elite"	; ttRare = "Raro"	; ttRareElite = "Raro Elite"	; ttRareBoss = "Raro Chefe"
-			elseif 	GameLocale == "deDE" then 	ttLevel = "Stufe"	; ttBoss = "Boss"	; ttElite = "Elite"	; ttRare = "Selten"	; ttRareElite = "Selten Elite"	; ttRareBoss = "Selten Boss"
-			elseif 	GameLocale == "esES" then	ttLevel = "Nivel"	; ttBoss = "Jefe"	; ttElite = "Élite"	; ttRare = "Raro"	; ttRareElite = "Raro Élite"	; ttRareBoss = "Raro Jefe"
-			elseif 	GameLocale == "frFR" then 	ttLevel = "Niveau"	; ttBoss = "Boss"	; ttElite = "Élite"	; ttRare = "Rare"	; ttRareElite = "Rare Élite"	; ttRareBoss = "Rare Boss"
-			elseif 	GameLocale == "itIT" then 	ttLevel = "Livello"	; ttBoss = "Boss"	; ttElite = "Élite"	; ttRare = "Raro"	; ttRareElite = "Raro Élite"	; ttRareBoss = "Raro Boss"
-			else 								ttLevel = "Level"	; ttBoss = "Boss"	; ttElite = "Elite"	; ttRare = "Rare"	; ttRareElite = "Rare Elite"	; ttRareBoss = "Rare Boss"
+			local ttLevel, ttBoss, ttElite, ttRare, ttRareElite, ttRareBoss, ttTarget
+			if 		GameLocale == "zhCN" then 	ttLevel = "等级"		; ttBoss = "首领"	; ttElite = "精英"	; ttRare = "精良"	; ttRareElite = "精良 精英"		; ttRareBoss = "精良 首领"		; ttTarget = "目标"
+			elseif 	GameLocale == "zhTW" then 	ttLevel = "等級"		; ttBoss = "首領"	; ttElite = "精英"	; ttRare = "精良"	; ttRareElite = "精良 精英"		; ttRareBoss = "精良 首領"		; ttTarget = "目標"
+			elseif 	GameLocale == "ruRU" then 	ttLevel = "Уровень"	; ttBoss = "босс"	; ttElite = "элита"	; ttRare = "Редкое"	; ttRareElite = "Редкое элита"	; ttRareBoss = "Редкое босс"	; ttTarget = "Цель"
+			elseif 	GameLocale == "koKR" then 	ttLevel = "레벨"		; ttBoss = "우두머리"	; ttElite = "정예"	; ttRare = "희귀"	; ttRareElite = "희귀 정예"		; ttRareBoss = "희귀 우두머리"		; ttTarget = "대상"
+			elseif 	GameLocale == "esMX" then 	ttLevel = "Nivel"	; ttBoss = "Jefe"	; ttElite = "Élite"	; ttRare = "Raro"	; ttRareElite = "Raro Élite"	; ttRareBoss = "Raro Jefe"		; ttTarget = "Objetivo"
+			elseif 	GameLocale == "ptBR" then 	ttLevel = "Nível"	; ttBoss = "Chefe"	; ttElite = "Elite"	; ttRare = "Raro"	; ttRareElite = "Raro Elite"	; ttRareBoss = "Raro Chefe"		; ttTarget = "Alvo"
+			elseif 	GameLocale == "deDE" then 	ttLevel = "Stufe"	; ttBoss = "Boss"	; ttElite = "Elite"	; ttRare = "Selten"	; ttRareElite = "Selten Elite"	; ttRareBoss = "Selten Boss"	; ttTarget = "Ziel"
+			elseif 	GameLocale == "esES" then	ttLevel = "Nivel"	; ttBoss = "Jefe"	; ttElite = "Élite"	; ttRare = "Raro"	; ttRareElite = "Raro Élite"	; ttRareBoss = "Raro Jefe"		; ttTarget = "Objetivo"
+			elseif 	GameLocale == "frFR" then 	ttLevel = "Niveau"	; ttBoss = "Boss"	; ttElite = "Élite"	; ttRare = "Rare"	; ttRareElite = "Rare Élite"	; ttRareBoss = "Rare Boss"		; ttTarget = "Cible"
+			elseif 	GameLocale == "itIT" then 	ttLevel = "Livello"	; ttBoss = "Boss"	; ttElite = "Élite"	; ttRare = "Raro"	; ttRareElite = "Raro Élite"	; ttRareBoss = "Raro Boss"		; ttTarget = "Bersaglio"
+			else 								ttLevel = "Level"	; ttBoss = "Boss"	; ttElite = "Elite"	; ttRare = "Rare"	; ttRareElite = "Rare Elite"	; ttRareBoss = "Rare Boss"		; ttTarget = "Target"
 			end
 
 			-- Show tooltip
@@ -9573,7 +9656,7 @@
 					end
 					
 					-- Add target line
-					GameTooltip:AddLine("Target: " .. LT["Target"])
+					GameTooltip:AddLine(ttTarget .. ": " .. LT["Target"])
 
 				end
 
@@ -9897,8 +9980,45 @@
 
 	function LeaPlusLC:RunOnce()
 
-		-- Music player
-		function LeaPlusLC:MusicFunc()
+		----------------------------------------------------------------------
+		-- Remove cinematic cancel confirmation
+		----------------------------------------------------------------------
+
+		-- Allow space bar, escape key and enter key to cancel cinematic without confirmation
+		CinematicFrame:HookScript("OnKeyUp", function(self, key)
+			if key == "SPACE" or key == "ESCAPE" or key == "ENTER" then
+				if CinematicFrame:IsShown() and CinematicFrame.closeDialog and CinematicFrameCloseDialogConfirmButton then
+					CinematicFrameCloseDialogConfirmButton:Click()
+				end
+			end
+		end)
+		MovieFrame:HookScript("OnKeyUp", function(self, key)
+			if key == "SPACE" or key == "ESCAPE" or key == "ENTER" then
+				if MovieFrame:IsShown() and MovieFrame.CloseDialog and MovieFrame.CloseDialog.ConfirmButton then
+					MovieFrame.CloseDialog.ConfirmButton:Click()
+				end
+			end
+		end)
+
+		-- Allow mouse clicks to cancel cinematic without confirmation
+		CinematicFrame:EnableMouse(true)
+		CinematicFrame:HookScript("OnMouseUp", function()
+			if CinematicFrame:IsShown() and CinematicFrame.closeDialog and CinematicFrameCloseDialogConfirmButton then
+				CinematicFrameCloseDialogConfirmButton:Click()
+			end
+		end)
+		MovieFrame:EnableMouse(true)
+		MovieFrame:HookScript("OnMouseUp", function()
+			if MovieFrame:IsShown() and MovieFrame.CloseDialog and MovieFrame.CloseDialog.ConfirmButton then
+				MovieFrame.CloseDialog.ConfirmButton:Click()
+			end
+		end)
+
+		----------------------------------------------------------------------
+		-- Media player
+		----------------------------------------------------------------------
+
+		function LeaPlusLC:MediaFunc()
 
 			-- Create tables for list data and zone listing
 			local ListData, ZoneList, playlist, timelist = {}, {}, {}, {}
@@ -9907,7 +10027,7 @@
 			local uframe = CreateFrame("FRAME")
 
 			-- Create a table for each heading
-			ZoneList = {"Eastern Kingdoms", "Kalimdor", "Outland", "Northrend", "Maelstrom", "Pandaria", "Draenor", "Broken Isles", "Various"}
+			ZoneList = {"Eastern Kingdoms", "Kalimdor", "Outland", "Northrend", "Maelstrom", "Pandaria", "Draenor", "Broken Isles", "Various", "Movies"}
 			for k, v in pairs(ZoneList) do
 				ZoneList[v] = {}
 			end
@@ -9937,7 +10057,7 @@
 			Zn("Eastern Kingdoms", "Stranglethorn"			, {	"|cffffd800Eastern Kingdoms: Stranglethorn", "Cataclysm\\MUS_PiratesSurrender_UU01#128", "Cataclysm\\MUS_StranglethornVale_GU01#78", "Cataclysm\\MUS_StranglethornVale_GU02#93", "Cataclysm\\MUS_StranglethornVale_GU03#91", "Cataclysm\\MUS_StranglethornVale_GU04#102", "Cataclysm\\MUS_Stranglethorn_GU01#64", "Cataclysm\\MUS_Stranglethorn_GU02#91", "Cataclysm\\MUS_Stranglethorn_GU03#85", "Cataclysm\\MUS_Stranglethorn_GU04#90", "ZoneMusic\\Jungle\\DayJungle01#46", "ZoneMusic\\Jungle\\DayJungle02#99", "ZoneMusic\\Jungle\\DayJungle03#48", "ZoneMusic\\Jungle\\NightJungle01#55","ZoneMusic\\Jungle\\NightJungle02#53", "ZoneMusic\\Jungle\\NightJungle03#89",})
 			Zn("Eastern Kingdoms", "Swamp of Sorrows"		, {	"|cffffd800Eastern Kingdoms: Swamp of Sorrows", "ZoneMusic\\SoggyPlace\\soggyplace-zone1#97", "ZoneMusic\\SoggyPlace\\soggyplace-zone2#98", "ZoneMusic\\SoggyPlace\\soggyplace-zone3#91", "ZoneMusic\\SoggyPlace\\soggyplace-zone4#90", "ZoneMusic\\SoggyPlace\\soggyplace-zone5#71",})
 			Zn("Eastern Kingdoms", "Tanaris"				, {	"|cffffd800Eastern Kingdoms: Tanaris", "Cataclysm\\MUS_Tanaris_GU01#88", "Cataclysm\\MUS_Tanaris_GU02#88", "Cataclysm\\MUS_Tanaris_GU03#84", "Cataclysm\\MUS_Tanaris_GU04#66", "Cataclysm\\MUS_Tanaris_GU05#82", "Cataclysm\\MUS_Tanaris_GU06#72", "Cataclysm\\MUS_Tanaris_GU07#72", "Cataclysm\\MUS_Tanaris_GU08#61", "Cataclysm\\MUS_Tanaris_GU09#34", "Cataclysm\\MUS_Tanaris_GU10#84",})
-			Zn("Eastern Kingdoms", "Tirisfal Glades"		, {	"|cffffd800Eastern Kingdoms: Tirisfal Glades", "Cataclysm\\MUS_41_faeriedragon_UE01#132", "CityMusic\\Undercity\\undercity01-zone#67", "CityMusic\\Undercity\\undercity02-zone#86", "CityMusic\\Undercity\\undercity03-zone#76", "CityMusic\\Undercity\\undercityintro-moment#29", "ZoneMusic\\EvilForest\\DayEvilForest01#71", "ZoneMusic\\EvilForest\\DayEvilForest02#72", "ZoneMusic\\EvilForest\\DayEvilForest03#71", "ZoneMusic\\EvilForest\\NightEvilForest01#57", "ZoneMusic\\EvilForest\\NightEvilForest02#76", "ZoneMusic\\EvilForest\\NightEvilForest03#71",})
+			Zn("Eastern Kingdoms", "Tirisfal Glades"		, {	"|cffffd800Eastern Kingdoms: Tirisfal Glades", "Cataclysm\\MUS_41_faeriedragon_UE01#132", "CityMusic\\Undercity\\undercity01-zone#67", "CityMusic\\Undercity\\undercity02-zone#86", "CityMusic\\Undercity\\undercity03-zone#76", "CityMusic\\Undercity\\undercityintro-moment#29", "ZoneMusic\\EvilForest\\DayEvilForest01#71", "ZoneMusic\\EvilForest\\DayEvilForest02#72", "ZoneMusic\\EvilForest\\DayEvilForest03#71", "ZoneMusic\\EvilForest\\NightEvilForest01#57", "ZoneMusic\\EvilForest\\NightEvilForest02#76", "ZoneMusic\\EvilForest\\NightEvilForest03#71", "GlueScreenMusic\\BCCredits_Lament_of_the_Highborne#171",})
 			Zn("Eastern Kingdoms", "Twilight Highlands"		, {	"|cffffd800Eastern Kingdoms: Twilight Highlands", "Cataclysm\\MUS_TwilightHighlands_GU01#68", "Cataclysm\\MUS_TwilightHighlands_GU02#67", "Cataclysm\\MUS_TwilightHighlands_GU03#67", "Cataclysm\\MUS_TwilightHighlands_GU04#78", "Cataclysm\\MUS_TwilightHighlands_GU05#67", "Cataclysm\\MUS_TwilightsHammer_UU01#92", "Cataclysm\\MUS_TwilightsHammer_UU02#48", "Cataclysm\\MUS_TwilightsHammer_UU03#49", "Cataclysm\\MUS_TwilightVale_GU01#111", "Cataclysm\\MUS_TwilightVale_GU02#81", "Cataclysm\\MUS_TwilightVale_GU03#81", "Cataclysm\\MUS_TwilightVale_GU04#63", "Cataclysm\\MUS_TwilightVale_GU05#46",})
 			Zn("Eastern Kingdoms", "Vashj'ir"				, {	"|cffffd800Eastern Kingdoms: Vashj'ir", "Cataclysm\\MUS_Rift_UU01#90", "Cataclysm\\MUS_Rift_UU02#63", "Cataclysm\\MUS_Rift_UU03#32", "Cataclysm\\MUS_Rift_UU04#62", "Cataclysm\\MUS_VashjirNagaThrone_GU01#43", "Cataclysm\\MUS_VashjirNagaThrone_GU02#90", "Cataclysm\\MUS_VashjirNagaThrone_GU03#97", "Cataclysm\\MUS_VashjirNagaThrone_GU04#97", "Cataclysm\\MUS_VashjirNagaThrone_GU05#92", "Cataclysm\\MUS_VashjirNagaThrone_GU06#93", "Cataclysm\\MUS_VashjirNaga_GU01#88", "Cataclysm\\MUS_VashjirNaga_GU02#97", "Cataclysm\\MUS_VashjirNaga_GU03#97", "Cataclysm\\MUS_VashjirNaga_GU04#97", "Cataclysm\\MUS_VashjirNaga_GU05#127", "Cataclysm\\MUS_VashjirNaga_GU06#114", "Cataclysm\\MUS_Vashjir_GU01#98", "Cataclysm\\MUS_Vashjir_GU02#98", "Cataclysm\\MUS_Vashjir_GU03#154", "Cataclysm\\MUS_Vashjir_GU04#48", "Cataclysm\\MUS_Vashjir_GU05#93", "Cataclysm\\MUS_Vashjir_GU06#154", "Cataclysm\\MUS_Vashjir_GU07#91", "Cataclysm\\MUS_Vashjir_GU08#47", "Cataclysm\\MUS_Vashjir_GU09#133",})
 			Zn("Eastern Kingdoms", "Western Plaguelands"	, {	"|cffffd800Eastern Kingdoms: Western Plaguelands", "Cataclysm\\MUS_WestPlagueA_GD01#51", "Cataclysm\\MUS_WestPlagueA_GN01#51", "Cataclysm\\MUS_WestPlagueA_GN02#51", "Cataclysm\\MUS_WestPlagueB_GD01#51", "Cataclysm\\MUS_WestPlagueB_GN01#51", "Cataclysm\\MUS_WestPlagueB_GN02#51", "Cataclysm\\MUS_WestPlagueB_GN03#51", "Cataclysm\\MUS_WestPlagueC_GD01#51", "Cataclysm\\MUS_WestPlagueC_GN01#51", "Cataclysm\\MUS_WestPlagueC_GN02#51",})
@@ -10029,7 +10149,17 @@
 			-- Various
 			Zn("Various", "|cffffd800Various", {""})
 			Zn("Various", "Anduin's Theme"					, {	"|cffffd800Various: Anduin's Theme", "Legion\\MUS_70_AnduinPt1_A1#75", "Legion\\MUS_70_AnduinPt1_A2#113", "Legion\\MUS_70_AnduinPt1_B#141", "Legion\\MUS_70_AnduinPt1_C#138", "Legion\\MUS_70_AnduinPt1_D#90", "Legion\\MUS_70_AnduinPt1_E#71", "Legion\\MUS_70_AnduinPt1_H1#88", "Legion\\MUS_70_AnduinPt1_H2#116", "Legion\\MUS_70_AnduinPt2_B#111","Legion\\MUS_70_AnduinPt2_C#54", "Legion\\MUS_70_AnduinPt2_H#123",})
-			Zn("Various", "World of Warcraft"				, {	"|cffffd800Various: World of Warcraft", "GlueScreenMusic\\wow_main_theme#161", "GlueScreenMusic\\BC_main_theme#227", "GlueScreenMusic\\WotLK_main_title#544", "Cataclysm\\MUS_Shattering_UU01#726", "Pandaria\\MUS_50_HeartofPandaria_01#480", "Draenor\\MUS_60_ASiegeofWorlds_MainTitle#727", "Legion\\MUS_70_Kingdomswillburn_MainTitle#650", "Musical Moments\\haunted\\haunted01#62", "GlueScreenMusic\\BCCredits_Lament_of_the_Highborne#171",})
+			Zn("Various", "Cinematics"						, {	"|cffffd800Various: Cinematics", "GlueScreenMusic\\wow_main_theme#161", "GlueScreenMusic\\BC_main_theme#227", "GlueScreenMusic\\WotLK_main_title#544", "Cataclysm\\MUS_Shattering_UU01#726", "Pandaria\\MUS_50_HeartofPandaria_01#480", "Draenor\\MUS_60_ASiegeofWorlds_MainTitle#727", "Legion\\MUS_70_Kingdomswillburn_MainTitle#650", "Musical Moments\\haunted\\haunted01#62",})
+
+			-- Movies
+			Zn("Movies", "|cffffd800Movies", {""})
+			Zn("Movies", "World of Warcraft"				, {	"|cffffd800Movies: World of Warcraft", "Blizzard |r(001)", "World of Warcraft |r(002)"})
+			Zn("Movies", "The Burning Crusade"				, {	"|cffffd800Movies: The Burning Crusade", "The Burning Crusade |r(027)"})
+			Zn("Movies", "Wrath of the Lich King"			, {	"|cffffd800Movies: Wrath of the Lich King", "Wrath of the Lich King |r(018)", "Wrathgate |r(014)", "Icecrown Citadel |r(016)"})
+			Zn("Movies", "Cataclysm"						, {	"|cffffd800Movies: Cataclysm", "Cataclysm |r(023)", "Last Stand |r(021)", "Leaving Kezan |r(022)", "Fall of Deathwing |r(073)", "Fall of Deathwing |r(074)", "Fall of Deathwing |r(075)", "Fall of Deathwing |r(076)"})
+			Zn("Movies", "Mists of Pandaria"				, {	"|cffffd800Movies: Mists of Pandaria", "Mists of Pandaria |r(115)", "Leaving The Wandering Isle |r(116)", "Risking It All |r(117)", "Battle of Serpent's Heart |r(118)", "The King's Command |r(119)", "The Art of War |r(120)", "Krasarang Wilds (Horde) |r(128)", "Krasarang Wilds (Alliance) |r(127)", "Siege of Orgrimmar (Horde) |r(151)", "Siege of Orgrimmar (Alliance) |r(152)"})
+			Zn("Movies", "Warlords of Draenor"				, {	"|cffffd800Movies: Warlords of Draenor", "Warlords of Draenor |r(195)", "Yrel and the Dark Star |r(167)", "The Battle of Thunder Pass |r(168)", "And Justice for Thrall |r(177)", "The Dark Portal |r(185)", "A Taste of Iron |r(187)", "The Battle for Shattrath |r(188)", "Establish Your Garrison (Horde) |r(189)", "Establish Your Garrison (Alliance) |r(192)", "Bigger is Better (Horde) |r(190)", "Bigger is Better (Alliance) |r(193)", "My Very Own Castle (Horde) |r(191)", "My Very Own Castle (Alliance) |r(194)", "An Inside Job |r(270)", "Garrison Shipyard (Horde) |r(292)", "Garrison Shipyard (Alliance) |r(293)", "Hellfire Citadel (1) |r(294)", "Hellfire Citadel (2) |r(295)"})
+			Zn("Movies", "Legion"							, {	"|cffffd800Movies: Legion", "Legion |r(470)", "The Invasion Begins |r(469)", "Return to the Black Temple |r(471)", "Death of Ysera |r(472)", "Ysera's Corruption |r(473)", "Fate of the Horde |r(474)", "A New Life for Undeath |r(475)", "Harbingers Gul'dan |r(476)", "Harbingers Khadgar |r(477)", "Harbingers Illidan |r(478)", "Suramar |r(485)", "Broken Shore (Horde) |r(487)", "Broken Shore (Alliance) |r(531)", "A Falling Star |r(489)", "An Unclear Path |r(490)", "Victory at The Nighthold |r(635)", "A Found Memento |r(636)", "Tomb of Sargeras |r(656)", "Arrival on Argus |r(677)", "Rejection of the Gift |r(679)"})
 
 			-- Show relevant list items
 			local function UpdateList()
@@ -10085,6 +10215,21 @@
 
 			-- Give function file level scope (it's used in SetPlusScale to set the highlight bar scale)
 			LeaPlusLC.UpdateList = UpdateList
+
+			-- Right-button click to go back
+			local function BackClick()
+				-- Return to the current zone list (back button)
+				if type(ListData[1]) == "string" then
+					-- Strip the color code from the list data
+					local nocol = string.gsub(ListData[1], "|cffffd800", "")
+					-- Strip the zone
+					local backzone = strsplit(":", nocol, 2)
+					-- Show the tracklist continent 
+					if ZoneList[backzone] then ListData = ZoneList[backzone] end
+					UpdateList()
+					scrollFrame:SetVerticalScroll(ZonePage or 0)
+				end
+			end
 
 			-- Function to make navigation menu buttons
 			local function MakeButton(where, y)
@@ -10145,12 +10290,12 @@
 				conbtn[title]:ClearAllPoints()
 				if title == "Eastern Kingdoms" then
 					-- Set first button position and shorten title
-					conbtn[title]:SetPoint("TOPLEFT", LeaPlusLC["Page9"], "TOPLEFT", 146, -70)
+					conbtn[title]:SetPoint("TOPLEFT", LeaPlusLC["Page9"], "TOPLEFT", 146, -90)
 					conbtn[title].f:SetText("Eastern")
 				else
 					-- Set subsequent button positions
 					conbtn[title]:SetPoint("TOPLEFT", conbtn[anchor], "BOTTOMLEFT", 0, -00)
-					conbtn[title].f:SetText(title)
+					conbtn[title].f:SetText(LeaPlusLC:Translate(title))
 				end
 				conbtn[title]:SetSize(conbtn[title].f:GetWidth(), 16)
 			end
@@ -10164,6 +10309,13 @@
 			MakeButtonNow("Draenor", "Pandaria")
 			MakeButtonNow("Broken Isles", "Draenor")
 			MakeButtonNow("Various", "Broken Isles")
+			MakeButtonNow("Movies", "Various")
+
+			-- Add Music and Video headings and move Movies button
+			LeaPlusLC:MakeWD(LeaPlusLC["Page9"], "|cffE9DA67" .. LeaPlusLC:Translate("Music"), 146, -70);
+			LeaPlusLC:MakeWD(LeaPlusLC["Page9"], "|cffE9DA67" .. LeaPlusLC:Translate("Video"), 146, -250);
+			conbtn["Movies"]:ClearAllPoints()
+			conbtn["Movies"]:SetPoint("TOPLEFT", LeaPlusLC["Page9"], "TOPLEFT", 146, -270)
 
 			-- Show button highlight for clicked button
 			for q, w in pairs(ZoneList) do
@@ -10193,7 +10345,7 @@
 			-- Add stop button
 			local stopBtn = LeaPlusLC:CreateButton("StopMusicBtn", LeaPlusLC["Page9"], "Stop", "TOPRIGHT", -32, -31, 0, 25, true, "")
 			stopBtn:ClearAllPoints()
-			stopBtn:SetPoint("TOPLEFT", conbtn["Various"], "BOTTOMLEFT", 0, -70)
+			stopBtn:SetPoint("TOPLEFT", conbtn["Various"], "BOTTOMLEFT", 0, -60)
 			stopBtn:Hide(); stopBtn:Show()
 			LeaPlusLC:LockItem(stopBtn, true)
 			stopBtn:SetScript("OnClick", function()
@@ -10371,6 +10523,18 @@
 							PlayTrack()
 							-- Play subsequent tracks
 							uframe:SetScript("OnUpdate", upScript)
+						elseif strfind(item, "|r") then
+							-- A movie was clicked
+							local movieName, movieID = item:match("([^,]+)%|r([^,]+)")
+							movieID = strtrim(movieID, "()")
+							if IsMoviePlayable(movieID) then
+								stopBtn:Click()
+								LeaPlusLC["ForceMoviePlaybackFlag"] = "On"
+								MovieFrame_PlayMovie(MovieFrame, movieID)
+								LeaPlusLC["ForceMoviePlaybackFlag"] = "Off"
+							else
+								LeaPlusLC:Print("Movie not playable.")
+							end
 						else
 							-- A zone was clicked so show track listing
 							ZonePage = scrollFrame:GetVerticalScroll()
@@ -10412,6 +10576,15 @@
 
 			end
 
+			-- Right-click to go back (from anywhere on the main content area of the panel)
+			LeaPlusLC["PageF"]:HookScript("OnMouseUp", function(self, btn)
+				if LeaPlusLC["Page9"]:IsShown() and LeaPlusLC["Page9"]:IsMouseOver(0, 0, 0, -440) == false and LeaPlusLC["Page9"]:IsMouseOver(-330, 0, 0, 0) == false then 
+					if btn == "RightButton" then
+						BackClick()
+					end
+				end
+			end)
+
 			-- Delete the global scroll frame pointer
 			_G.LeaPlusScrollFrame = nil
 
@@ -10442,10 +10615,10 @@
 		end
 
 		-- Run on startup
-		LeaPlusLC:MusicFunc()
+		LeaPlusLC:MediaFunc()
 
 		-- Release memory
-		LeaPlusLC.MusicFunc = nil
+		LeaPlusLC.MediaFunc = nil
 
 		----------------------------------------------------------------------
 		-- Panel alpha
@@ -12383,12 +12556,37 @@
 				msg = msg .. 'ttRare = "' .. ITEM_QUALITY3_DESC .. '"; '
 				msg = msg .. 'ttRareElite = "' .. ITEM_QUALITY3_DESC .. " " .. ELITE .. '"; '
 				msg = msg .. 'ttRareBoss = "' .. ITEM_QUALITY3_DESC .. " " .. BOSS .. '"; '
+				msg = msg .. 'ttTarget = "' .. TARGET .. '"; '
 				msg = msg .. "end"
 				print(msg)
 			elseif str == "con" then
 				-- Show the developer console
 				C_Console.SetFontHeight(20)
 				DeveloperConsole:Toggle(true)
+			elseif str == "movlist" then
+				-- List playable movie IDs
+				local count = 0
+				for i = 1, 5000 do
+					if IsMoviePlayable(i) then
+						print(i)
+						count = count + 1
+					end
+				end
+				LeaPlusLC:Print("Total movies: |cffffffff" .. count)
+			elseif string.sub(str, 1, 5) == "movie" then
+				-- Playback movie by ID
+				local param = tonumber(string.sub(str, 7))
+				if param and param ~= "" then
+					if IsMoviePlayable(param) then
+						LeaPlusLC["ForceMoviePlaybackFlag"] = "On"
+						MovieFrame_PlayMovie(MovieFrame, param)
+						LeaPlusLC["ForceMoviePlaybackFlag"] = "Off"
+					else
+						LeaPlusLC:Print("Movie not playable.")
+					end
+				else
+					LeaPlusLC:Print("Missing movie ID.")
+				end
 			elseif str == "admin" then
 				-- Preset profile (used for testing)
 				LpEvt:UnregisterAllEvents()						-- Prevent changes
@@ -12744,7 +12942,7 @@
 	LeaPlusLC["Page6"] = LeaPlusLC:MakePage("Page6", "Frames"		, "LeaPlusNav6", "Frames"		, LeaPlusLC["PageF"], "TOPLEFT", 16, -212, 112, 20)
 	LeaPlusLC["Page7"] = LeaPlusLC:MakePage("Page7", "System"		, "LeaPlusNav7", "System"		, LeaPlusLC["PageF"], "TOPLEFT", 16, -232, 112, 20)
 	LeaPlusLC["Page8"] = LeaPlusLC:MakePage("Page8", "Settings"		, "LeaPlusNav8", "Settings"		, LeaPlusLC["PageF"], "TOPLEFT", 16, -272, 112, 20)
-	LeaPlusLC["Page9"] = LeaPlusLC:MakePage("Page9", "Music"		, "LeaPlusNav9", "Music"		, LeaPlusLC["PageF"], "TOPLEFT", 16, -292, 112, 20)
+	LeaPlusLC["Page9"] = LeaPlusLC:MakePage("Page9", "Media"		, "LeaPlusNav9", "Media"		, LeaPlusLC["PageF"], "TOPLEFT", 16, -292, 112, 20)
 
 	-- Page navigation mechanism
 	for i = 0, LeaPlusLC["NumberOfPages"] do
