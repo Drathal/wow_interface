@@ -1,0 +1,23 @@
+
+Conf_Interrupts = false
+Conf_ChatArrows = true
+Conf_ClassIcon = false
+Conf_ClassColours = true
+Conf_HealthUpdate = true
+Conf_ObjectiveTracker = true
+Conf_KillingBlow = true
+Conf_KillFeed = true
+Conf_HideSpam = true
+Conf_CastingTimer = true
+Conf_AutoRepair = true
+Conf_GuildBankRepair = true
+Conf_SellGreys = true
+Conf_AFKCamera = true
+Conf_ShowCoords = false
+Conf_ShowStats = false
+Conf_StyleChat = true
+Conf_MinifyGlobals = true
+Conf_ShowArt = true
+Conf_OutOfRange = false
+Conf_HealthBarColor = true
+Conf_MoveTalkingHead = true

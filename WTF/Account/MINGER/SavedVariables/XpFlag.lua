@@ -12,8 +12,7 @@ XpFlagDB = {
 	["profiles"] = {
 		["Default"] = {
 			["mark"] = {
-				["position"] = "SCREENBOTTOM",
-				["dataSource"] = "dataRep",
+				["position"] = "BLIZZEXPBAR",
 				["size"] = 20,
 			},
 			["bar"] = {

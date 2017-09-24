@@ -39,8 +39,8 @@ LS_TOASTS_GLOBAL_CONFIG = {
 				["loot_special"] = {
 					["enabled"] = true,
 					["threshold"] = 1,
-					["dnd"] = false,
 					["ilvl"] = true,
+					["dnd"] = false,
 				},
 				["recipe"] = {
 					["enabled"] = true,
