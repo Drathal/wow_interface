@@ -131,6 +131,7 @@ _L["48382_58066806_note"] = "";
 _L["48382_68026624_note"] = "Inside legion structure";
 _L["48382_64506868_note"] = "Outside";
 _L["48382_62666823_note"] = "Inside Building";
+_L["48382_60096945_note"] = "Outside, behind building";
 -- 48383
 _L["48383_56903570_note"] = "";
 _L["48383_57633179_note"] = "";
@@ -142,6 +143,7 @@ _L["48383_58413097_note"] = "Inside building, floor level";
 _L["48383_53753556_note"] = "";
 _L["48383_51703529_note"] = "High up on the cliffs";
 _L["48383_59853583_note"] = "";
+_L["48383_58273570_note"] = "Inside building, entrance from Il'thendra platform"
 -- 48384
 _L["48384_60872900_note"] = "";
 _L["48384_61332054_note"] = "Inside Munculus building";
@@ -165,6 +167,7 @@ _L["48387_65522831_note"] = "Under the bridge";
 _L["48387_63613643_note"] = "";
 _L["48387_73404669_note"] = "Jump over the ooze";
 _L["48387_67954006_note"] = "";
+_L["48387_63603642_note"] = "";
 -- 48388
 _L["48388_51502610_note"] = "";
 _L["48388_59261743_note"] = "";
@@ -181,6 +184,7 @@ _L["48389_60304675_note"] = "";
 _L["48389_65345192_note"] = "In cave behind Varga";
 _L["48389_64114242_note"] = "Under rocks";
 _L["48389_58734323_note"] = "On small piece of land within ooze";
+_L["48389_62955007_note"] = "On green ooze shore";
 -- 48390
 _L["48390_81306860_note"] = "On ship";
 _L["48390_80406152_note"] = "";
@@ -192,6 +196,7 @@ _L["48390_77255876_note"] = "Down the slope";
 _L["48390_72215680_note"] = "Inside building";
 _L["48390_73277299_note"] = "Behind Rel'var";
 _L["48390_77975620_note"] = "Down the slope and further over the cliffs"
+_L["48390_77246412_note"] = "Be careful on the way back. Don't jump down the cliffs!";
 -- 48391
 _L["48391_64135867_note"] = "In Ven'orn spider cave";
 _L["48391_67404790_note"] = "Spider area, in a small cave next to the northern exit";
@@ -203,6 +208,7 @@ _L["48391_68095075_note"] = "Inside small cave in spider area";
 _L["48391_69815522_note"] = "Outside in spider area";
 _L["48391_71205441_note"] = "Outside in spider area";
 _L["48391_66544668_note"] = "Exit the spider area north where the green zone is on the ground. Jump up the rocks.";
+_L["48391_65164951_note"] = "Inside small cave in spider area"
 
 -- Krokuun
 _L["Khazaduum"] = "Khazaduum";
@@ -275,6 +281,8 @@ _L["47752_53265096_note"] = "Run the path up to the top where you've first seen 
 _L["47752_57005472_note"] = "Under the rock outcropping, on the tiny lip of land";
 _L["47752_59695196_note"] = "Near to Xeth'tal, behind the rocks.";
 _L["47752_51425958_note"] = "";
+_L["47752_55525237_note"] = "Lower level in the area. Need to jump through green shit. Annoying chest. Start at Xeth'tal.";
+_L["47752_58375051_note"] = "";
 -- 47753
 _L["47753_53137304_note"] = "";
 _L["47753_55228114_note"] = "";
@@ -284,6 +292,7 @@ _L["47753_58597958_note"] = "Behind demon spike";
 _L["47753_58197157_note"] = "";
 _L["47753_52737591_note"] = "Behind rocks";
 _L["47753_58048036_note"] = "";
+_L["47753_60297610_note"] = "";
 -- 47997
 _L["47997_45876777_note"] = "Under rock, next to bridge";
 _L["47997_45797753_note"] = "";
@@ -295,6 +304,8 @@ _L["47997_41438003_note"] = "Climb up the rocks to the crashed legion ship";
 _L["47997_41548379_note"] = "";
 _L["47997_46458665_note"] = "Jump over the rocks to reach this chest.";
 _L["47997_40357414_note"] = "";
+_L["47997_44198653_note"] = "";
+_L["47997_46787984_note"] = "";
 -- 47999
 _L["47999_62592581_note"] = "";
 _L["47999_59763951_note"] = "";
@@ -308,6 +319,7 @@ _L["47999_65992286_note"] = "";
 _L["47999_64632319_note"] = "Inside building";
 _L["47999_51533583_note"] = "Outside building, over the litte ooze lake";
 _L["47999_60422354_note"] = "";
+_L["47999_62763812_note"] = "Inside building";
 -- 48000
 _L["48000_70907370_note"] = "";
 _L["48000_74136790_note"] = "";
@@ -321,6 +333,7 @@ _L["48000_73577146_note"] = "";
 _L["48000_71846166_note"] = "Climb up the tipped pillar";
 _L["48000_67886231_note"] = "Behind pillar";
 _L["48000_74996922_note"] = "";
+_L["48000_62946824_note"] = "In the upper cave. Ride up the rocks east from here to reach the upper cave."
 -- 48336
 _L["48336_33575511_note"] = "Xenadar upper level, outside";
 _L["48336_32047441_note"] = "";
@@ -334,6 +347,7 @@ _L["48336_25996814_note"] = "";
 _L["48336_37176401_note"] = "Under debris";
 _L["48336_28247134_note"] = "";
 _L["48336_30276403_note"] = "Inside escape pod";
+_L["48336_34566305_note"] = "";
 -- 48339
 _L["48339_68533891_note"] = "";
 _L["48339_63054240_note"] = "";
@@ -345,6 +359,7 @@ _L["48339_64934217_note"] = "Inside tree trunk";
 _L["48339_67713454_note"] = "";
 _L["48339_72493605_note"] = "";
 _L["48339_44864342_note"] = "";
+_L["48339_46094082_note"] = "";
 
 -- Mac'Aree
 _L["Shadowcaster Voruun"] = "Shadowcaster Voruun";
@@ -436,6 +451,9 @@ _L["Corrupted Blood of Argus_note"] = "";
 _L["Shadeflicker"] = "Shadeflicker";
 _L["Shadeflicker_note"] = "";
 
+_L["Nabiru"] = "Nabiru"
+_L["Nabiru_note"] = "He is in a cave. Turn in 900 resources for an Order Hall follower.";
+
 -- Shoot First, Loot Later
 _L["Eredar Treasure Cache"] = "Eredar Treasure Cache";
 _L["Eredar Treasure Cache_note"] = "In a litte cave. Use Lightforged Warframe's jump to remove the blocking boulders.";
@@ -467,6 +485,8 @@ _L["48346_57486159_note"] = "Inside building next to Kravos" ;
 _L["48346_50836729_note"] = "";
 _L["48346_52868241_note"] = "";
 _L["48346_47186234_note"] = "";
+_L["48346_50107580_note"] = "";
+_L["48346_53328001_note"] = "In cellar"
 -- 48350
 _L["48350_59622088_note"] = "Inside building under staircase";
 _L["48350_60493338_note"] = "Inside building";
@@ -475,6 +495,8 @@ _L["48350_55063508_note"] = "";
 _L["48350_62202636_note"] = "On the balcony. Go into the building and up the stairs to the right.";
 _L["48350_53332740_note"] = "Under tree";
 _L["48350_58574078_note"] = "";
+_L["48350_63262000_note"] = "Inside building";
+_L["48350_54952484_note"] = "";
 -- 48351
 _L["48351_43637134_note"] = "";
 _L["48351_34205929_note"] = "On 2nd floor, where Herald of Chaos resides.";
@@ -483,6 +505,10 @@ _L["48351_46917346_note"] = "Hidden under tree";
 _L["48351_36296646_note"] = "";
 _L["48351_42645361_note"] = "In a cave. Entrance is southwest from here.";
 _L["48351_38126342_note"] = "Inside Tureks cellar";
+_L["48351_42395752_note"] = "Inside building";
+_L["48351_39175934_note"] = "Inside building ruin";
+_L["48351_43555993_note"] = "In Naribu's cave"
+_L["48351_35535717_note"] = "On 2nd floor"
 -- 48357
 _L["48357_49412387_note"] = "";
 _L["48357_47672180_note"] = "";
@@ -490,6 +516,11 @@ _L["48357_48482115_note"] = "";
 _L["48357_57881053_note"] = "";
 _L["48357_52871676_note"] = "Up the stairs";
 _L["48357_47841956_note"] = "";
+_L["48357_51802871_note"] = "In the area up the northern stairs";
+_L["48357_49912946_note"] = "";
+_L["48357_54951750_note"] = "";
+_L["48357_46381509_note"] = "";
+_L["48357_50021442_note"] = "";
 -- 48371
 _L["48371_48604971_note"] = "";
 _L["48371_49865494_note"] = "";
@@ -497,6 +528,9 @@ _L["48371_47023655_note"] = "Up the stairs";
 _L["48371_49623585_note"] = "Up the stairs";
 _L["48371_51094790_note"] = "Under tree";
 _L["48371_35535718_note"] = "On 2nd floor, next to Herald of Chaos";
+_L["48371_25383016_note"] = "";
+_L["48371_53594211_note"] = "";
+_L["48371_59405863_note"] = "";
 -- 48362
 _L["48362_66682786_note"] = "Inside building, next to Zul'tan the Numerous";
 _L["48362_62134077_note"] = "Inside building";
@@ -505,6 +539,9 @@ _L["48362_68355322_note"] = "Inside building";
 _L["48362_65966017_note"] = "";
 _L["48362_62053268_note"] = "Upper terrain level";
 _L["48362_60964354_note"] = "Inside building";
+_L["48362_64445956_note"] = "Inside building";
+_L["48362_65354194_note"] = "";
+_L["48362_63924532_note"] = "";
 -- Void-Seeped Cache / Treasure Chest
 -- 49264
 _L["49264_38143985_note"] = "";
@@ -513,6 +550,9 @@ _L["49264_37812344_note"] = "";
 _L["49264_33972078_note"] = "";
 _L["49264_33312952_note"] = "";
 _L["49264_37102005_note"] = "";
+_L["49264_33592361_note"] = "Hidden under tree"
+_L["49264_31582553_note"] = "";
+_L["49264_32332131_note"] = "Kind of hidden in a corner";
 -- 48361
 _L["48361_37664221_note"] = "Behind pillar in cave thingy";
 _L["48361_25824471_note"] = "";
@@ -520,6 +560,11 @@ _L["48361_20674033_note"] = "";
 _L["48361_29503999_note"] = "";
 _L["48361_29455043_note"] = "Under tree";
 _L["48361_18794171_note"] = "Outside, behind building";
+_L["48361_25293498_note"] = "";
+_L["48361_35283586_note"] = "Behind Umbraliss"
+_L["48361_24654126_note"] = "";
+_L["48361_37754868_note"] = "Down in the cave area"
+_L["48361_39174733_note"] = "Down in the cave area";
 
 --
 --	KEEP THESE ENGLISH FOR THE GROUP BROWSER IN EU/US!! CHINA & CO ADJUST
@@ -532,8 +577,9 @@ _L["Invasion Point: Sangua"] = "Invasion Point: Sangua";
 _L["Invasion Point: Naigtal"] = "Invasion Point: Naigtal";
 _L["Invasion Point: Bonich"] = "Invasion Point: Bonich";
 _L["Invasion Point: Cen'gar"] = "Invasion Point: Cen'gar";
-_L["Greater Invasion Point: Mistress Alluradel"] = "Greater Invasion Point: Mistress Alluradel";
-_L["Greater Invasion Point: Matron Folnuna"] = "Greater Invasion Point: Matron Folnuna";
+_L["Greater Invasion Point: Mistress Alluradel"] = "Greater Invasion: Alluradel";
+_L["Greater Invasion Point: Matron Folnuna"] = "Greater Invasion: Folnuna";
+_L["Greater Invasion Point: Sotanathor"] = "Greater Invasion: Sotanathor";
 
 _L["invasion_val_search"] = { "val", "invasion.*val", "val.*invasion" };
 _L["invasion_aurinor_search"] = { "aurinor", "aurinor" };
@@ -543,6 +589,7 @@ _L["invasion_bonich_search"] = { "bonich", "bonich" };
 _L["invasion_cengar_search"] = { "cen", "cen.*gar" };
 _L["invasion_alluradel_search"] = { "radel", "alluradel" };
 _L["invasion_folnuna_search"] = { "fol", "folnuna" };
+_L["invasion_sotanathor_search"] = { "sot", "sotana" };
 
 --
 --
@@ -576,9 +623,8 @@ _L["Crossbow"] = "Crossbow";
 
 _L["groupBrowserOptionOne"] = "%s - %s Member (%s)";
 _L["groupBrowserOptionMore"] = "%s - %s Members (%s)";
-_L["chatmsg_old_group_delisted"] = "|cFFf7c92aOld group delisted. Click again to search groups for %s."
 _L["chatmsg_no_group_priv"] = "|cFFFF0000Insufficient rights. You are not the group leader.";
-_L["chatmsg_group_created"] = "Created group for %s.";
+_L["chatmsg_group_created"] = "|cFF6CF70FCreated group for %s.";
 _L["chatmsg_search_failed"] = "|cFFFF0000Too many search requests, please try again in a few seconds.";
 _L["hour_short"] = "h";
 _L["minute_short"] = "m";
@@ -605,7 +651,7 @@ _L["Close"] = "Close";
 _L["context_menu_title"] = "Handynotes Argus";
 _L["context_menu_check_group_finder"] = "Check group availability";
 _L["context_menu_reset_rare_counters"] = "Reset group counters";
-_L["context_menu_add_tomtom"] = "Add this location to TomTom waypoints";
+_L["context_menu_add_tomtom"] = "Add to TomTom";
 _L["context_menu_hide_node"] = "Hide this node";
 _L["context_menu_restore_hidden_nodes"] = "Restore all hidden nodes";
 
@@ -649,5 +695,26 @@ _L["options_toggle_show_loot"] = "Show Loot";
 _L["options_toggle_show_loot_desc"] = "Add loot information to the tooltip";
 _L["options_toggle_show_notes"] = "Show Notes";
 _L["options_toggle_show_notes_desc"] = "Add helpful notes to the tooltip where available";
+
+_L["options_general_settings"] = "General";
+_L["options_general_settings_desc"] = "General settings";
+_L["options_toggle_leave_group_on_search"] = "Leave groups";
+_L["options_toggle_leave_group_on_search_desc"] = "Leave groups when trying to search while grouped. Use with care!";
+_L["chatmsg_old_group_delisted_create"] = "|cFFF7C92AOld group delisted. Please click again to create a new group for %s."
+_L["chatmsg_left_group_create"] = "|cFFF7C92ALeft group. Please click again to create a new group for %s.";
+_L["chatmsg_old_group_delisted_search"] = "|cFFF7C92AOld group delisted. Please click again to search groups for %s."
+_L["chatmsg_left_group_search"] = "|cFFF7C92ALeft group. Please click again to search groups for %s.";
+
+_L["options_toggle_include_player_seen"] = "Include player seen rares";
+_L["options_toggle_include_player_seen_desc"] = "Don't use this yet.";
+_L["options_toggle_show_debug"] = "Debug";
+_L["options_toggle_show_debug_desc"] = "Show debug stuff";
+
+_L["options_toggle_hideKnowLoot"] = "Hide rare, if all loot known";
+_L["options_toggle_hideKnowLoot_desc"] = "Hide all rares for which all loot is known.";
+
+_L["options_toggle_alwaysTrackCoA"] = "Always track Commander of Argus";
+_L["options_toggle_alwaysTrackCoA_desc"] = "Always track Commander of Argus, even if the achievement is complete on the account, but not on the character.";
+_L["Missing for CoALink"] = "Missing for %s";
 
 end

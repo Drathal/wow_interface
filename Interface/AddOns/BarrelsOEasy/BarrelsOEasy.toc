@@ -1,4 +1,4 @@
-## Interface: 70200
+## Interface: 70300
 ## Title: Barrels o' Easy
 ## Notes: Marks the Barrels o' Fun Barrels
 ## Version: 1.1.11

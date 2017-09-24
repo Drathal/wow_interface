@@ -1,0 +1,8 @@
+## Interface: 70300
+## Author: zork
+## Title: rMinimap
+## Notes: Zork's Minimap adjustments
+## RequiredDeps: rLib
+
+core.lua
+ButtonCollect.lua

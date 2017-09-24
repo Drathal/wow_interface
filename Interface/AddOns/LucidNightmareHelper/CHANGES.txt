@@ -1,0 +1,10 @@
+lightweight tag f3719c3aa8bda9c14ba47d012a2df13d5331f1e6 v0.1.7
+Author:	Saregon <n_rhygar@yahoo.it>
+Date:	Tue Sep 19 10:58:03 2017 +0200
+
+commit f3719c3aa8bda9c14ba47d012a2df13d5331f1e6
+Author: Saregon <n_rhygar@yahoo.it>
+Date:   Tue Sep 19 10:58:03 2017 +0200
+
+    localization update
+

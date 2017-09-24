@@ -125,3 +125,76 @@ end
 
 SetCVar("checkAddonVersion", 0)
 SetCVar("floatingCombatTextCombatDamage", 0)
+
+
+ObjectiveTrackerFrame:ClearAllPoints()
+ObjectiveTrackerFrame:SetPoint("TOPRIGHT", ObjectiveFrameHolder, "TOPRIGHT", -100, -260)
+ObjectiveTrackerFrame:SetClampedToScreen(false)
+
+hooksecurefunc(ObjectiveTrackerFrame, "SetPoint", function(_, _, parent)
+    if parent ~= ObjectiveFrameHolder then
+        ObjectiveTrackerFrame:ClearAllPoints()
+        ObjectiveTrackerFrame:SetPoint("TOPRIGHT", ObjectiveFrameHolder, "TOPRIGHT", -100, -260)
+    end
+end)
+
+local function StripTextures(object, kill)
+    for i = 1, object:GetNumRegions() do
+        local region = select(i, object:GetRegions())
+        if region and region:GetObjectType() == "Texture" then
+            if kill and type(kill) == "boolean" then
+                region:Kill()
+            elseif region:GetDrawLayer() == kill then
+                region:SetTexture(nil)
+            elseif kill and type(kill) == "string" and region:GetTexture() ~= kill then
+                region:SetTexture(nil)
+            else
+                region:SetTexture(nil)
+            end
+        end
+    end
+end
+
+StripTextures(ObjectiveTrackerBlocksFrame.QuestHeader)
+StripTextures(ObjectiveTrackerBlocksFrame.AchievementHeader)
+StripTextures(ObjectiveTrackerBlocksFrame.ScenarioHeader)
+StripTextures(BONUS_OBJECTIVE_TRACKER_MODULE.Header)
+StripTextures(WORLD_QUEST_TRACKER_MODULE.Header)
+
+local function SetupChatFont()
+    if InCombatLockdown() then return end
+
+    for i = 1, NUM_CHAT_WINDOWS do
+        local frame = _G[string.format("ChatFrame%s", i)]
+        local id = frame:GetID()
+        local _, fontSize = FCF_GetChatWindowInfo(id)
+
+        -- Min. size for chat font
+        if fontSize < 12 then
+            FCF_SetChatWindowFontSize(nil, frame, 12)
+        else
+            FCF_SetChatWindowFontSize(nil, frame, fontSize)
+        end
+
+        -- Font and font style for chat
+        frame:SetFont(STANDARD_TEXT_FONT, fontSize, "OUTLINE" )
+        frame:SetShadowOffset(0,0)
+    end
+end
+
+local Loading = CreateFrame("Frame")
+Loading:RegisterEvent("ADDON_LOADED")
+Loading:RegisterEvent("PLAYER_ENTERING_WORLD")
+Loading:RegisterEvent("UPDATE_CHAT_WINDOWS", "SetupChatFont")
+Loading:RegisterEvent("UPDATE_FLOATING_CHAT_WINDOWS", "SetupChatFont")
+Loading:SetScript("OnEvent", function(self, event, addon)
+    if event == "ADDON_LOADED" then
+        if addon == "Blizzard_CombatLog" then
+            self:UnregisterEvent("ADDON_LOADED")
+            SetupChatFont()
+        end
+    elseif event == "PLAYER_ENTERING_WORLD" then
+        self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+        SetupChatFont()
+    end
+end)

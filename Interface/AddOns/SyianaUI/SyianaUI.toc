@@ -1,0 +1,36 @@
+## Interface: 70300
+## Author: Syiana
+## Version: 6.2
+## Title: |cfff58cbaSyiana|r|cff009cffUI|r
+## Notes: SyianaUI v6.2
+
+## CONFIG
+config.lua
+
+## UI
+inc\core\core.lua
+inc\core\buffs.lua
+# inc\core\actionbars.lua
+inc\core\auras.lua
+inc\core\unitframes.lua
+inc\core\castbars.lua
+inc\core\chat.lua
+inc\core\copy.lua
+## inc\core\tooltip.lua
+
+## SCRIPTS
+inc\scripts\range.lua
+inc\scripts\losecontrol.lua
+inc\scripts\incombat.lua
+inc\scripts\charlinks.lua
+inc\scripts\stats.lua
+inc\scripts\safequeue.lua
+inc\scripts\saysapped.lua
+inc\scripts\omnicc.lua
+inc\scripts\sgrid.lua
+inc\scripts\spellid.lua
+inc\scripts\interrupt.lua
+inc\scripts\hoverbind.lua
+inc\scripts\noredstuff.lua
+inc\scripts\tabbinder.lua
+inc\scripts\itemlevel.lua

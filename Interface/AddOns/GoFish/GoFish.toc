@@ -1,5 +1,5 @@
-## Interface: 70100
-## Version: 7.1.0.1
+## Interface: 70300
+## Version: 7.3.0.0
 
 ## Title: GoFish
 ## Notes: Click-cast fishing and enhanced fishing sounds.
@@ -7,11 +7,11 @@
 ## Notes-esES: Pescar rápidamente por doble clic, y aumentar los sonidos de pesca.
 ## Notes-esMX: Pescar rápidamente por doble clic, y aumentar los sonidos de pesca.
 
-## Author: Phanx
-## X-Email: addons@phanx.net
-## X-Copyright: Copyright (c) 2013-2016 Phanx. All rights reserved.
-## X-Website: https://github.com/Phanx/GoFish
-## X-Curse-Project-ID: gofish
+## Author: Phanx, Akkorian
+## X-Email: armordecai@protonmail.com
+## X-License: All rights reserved. OK to fork and modify on GitHub. Ask about anything else.
+## X-Website: https://github.com/phanx-wow/GoFish
+## X-Curse-Project-ID: 56393
 ## X-WoWI-ID: 22270
 
 ## SavedVariables: GoFishDB
