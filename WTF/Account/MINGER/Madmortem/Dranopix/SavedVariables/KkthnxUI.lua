@@ -32,8 +32,8 @@ KkthnxUIDataPerChar = {
 			225.999938964844, -- [5]
 		},
 	},
-	["BarsLocked"] = false,
-	["RightBars"] = 2,
-	["BottomBars"] = 3,
 	["Install"] = true,
+	["BottomBars"] = 3,
+	["RightBars"] = 2,
+	["BarsLocked"] = false,
 }

@@ -100,7 +100,7 @@ DecursiveDB = {
 		},
 	},
 	["global"] = {
-		["LastVersionAnnounce"] = 1504643615,
+		["LastVersionAnnounce"] = 1506283732,
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -114,6 +114,7 @@ DecursiveDB = {
 			["Show_Stealthed_Status"] = false,
 			["MainBarX"] = 3.55539423756738,
 			["MainBarY"] = -195.555386679698,
+			["ShowDebuffsFrame"] = false,
 			["Scan_Pets"] = false,
 			["DebuffsFrameElemBorderShow"] = false,
 			["Print_CustomFrame"] = false,

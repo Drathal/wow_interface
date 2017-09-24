@@ -1,19 +1,18 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0213,
+	["LastVersion"] = 2.0214,
 	["LastPlayerFullName"] = "Drathia-Madmortem",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
-	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128868] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 11,
+					["ItemLevel"] = 48,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 53,
+					["ItemLevel"] = 55,
 					["Type"] = "Shadow",
 				}, -- [2]
 				{
@@ -34,7 +33,7 @@ PawnOptions = {
 					["Type"] = "Blood",
 				}, -- [2]
 				{
-					["ItemLevel"] = 24,
+					["ItemLevel"] = 56,
 					["Type"] = "Shadow",
 				}, -- [3]
 			},
@@ -51,13 +50,14 @@ PawnOptions = {
 					["Type"] = "Life",
 				}, -- [2]
 				{
-					["ItemLevel"] = 52,
+					["ItemLevel"] = 62,
 					["Type"] = "Holy",
 				}, -- [3]
 			},
 			["Name"] = "T'uure, Beacon of the Naaru",
 		},
 	},
+	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "PRIEST",

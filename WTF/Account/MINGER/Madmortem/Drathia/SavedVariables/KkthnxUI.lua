@@ -17,6 +17,20 @@ KkthnxUIDataPerChar = {
 			321.00048828125, -- [4]
 			-145.000061035156, -- [5]
 		},
+		["TicketStatusMoverAnchor"] = {
+			"TOPRIGHT", -- [1]
+			"UIParent", -- [2]
+			"TOPRIGHT", -- [3]
+			0, -- [4]
+			-235.999847412109, -- [5]
+		},
+		["PetActionBarAnchor"] = {
+			"BOTTOM", -- [1]
+			"UIParent", -- [2]
+			"BOTTOM", -- [3]
+			0.500200688838959, -- [4]
+			73.0000839233399, -- [5]
+		},
 		["oUF_KkthnxPlayer_Castbar"] = {
 			"CENTER", -- [1]
 			"UIParent", -- [2]
@@ -31,12 +45,12 @@ KkthnxUIDataPerChar = {
 			1.00007307529449, -- [4]
 			-38.0000190734863, -- [5]
 		},
-		["PetActionBarAnchor"] = {
-			"BOTTOM", -- [1]
+		["ShiftHolder"] = {
+			"RIGHT", -- [1]
 			"UIParent", -- [2]
-			"BOTTOM", -- [3]
-			0.500200688838959, -- [4]
-			73.0000839233399, -- [5]
+			"RIGHT", -- [3]
+			-72.0008010864258, -- [4]
+			88.0000991821289, -- [5]
 		},
 		["KkthnxUIDebuffHeader"] = {
 			"LEFT", -- [1]

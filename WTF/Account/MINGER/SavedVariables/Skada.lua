@@ -459,9 +459,8 @@ SkadaDB = {
 				{
 					["barheight"] = 17,
 					["barslocked"] = true,
-					["hidden"] = true,
 					["y"] = 4.00001335144043,
-					["barfont"] = "KkthnxUI_Normal",
+					["x"] = -0.000244140625,
 					["title"] = {
 						["color"] = {
 							["a"] = 0,
@@ -477,7 +476,7 @@ SkadaDB = {
 						["texture"] = "Tooltip",
 					},
 					["barfontflags"] = "OUTLINE",
-					["x"] = -0.000244140625,
+					["barfont"] = "KkthnxUI_Normal",
 					["point"] = "BOTTOMRIGHT",
 					["barcolor"] = {
 						["a"] = 0.570000022649765,
@@ -519,7 +518,7 @@ SkadaDB = {
 					["clickthrough"] = false,
 					["wipemode"] = "",
 					["set"] = "current",
-					["hidden"] = true,
+					["hidden"] = false,
 					["y"] = 3.99986577033997,
 					["barfont"] = "KkthnxUI_Normal",
 					["name"] = "Heal",
@@ -626,7 +625,7 @@ SkadaDB = {
 				}, -- [2]
 			},
 			["icon"] = {
-				["minimapPos"] = 134.274697805496,
+				["minimapPos"] = 164.957194573416,
 			},
 			["versions"] = {
 				["1.6.3"] = true,

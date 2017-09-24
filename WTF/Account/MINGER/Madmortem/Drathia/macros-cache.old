@@ -16,7 +16,7 @@ VER 3 010000000000000B "Guardian" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000009 "HW:S" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@cursor,help][@target,help][]Holy Word: Sanctify
+/cast [@cursor][@target,help][]Holy Word: Sanctify
 END
 VER 3 010000000000000F "Leap" "INV_MISC_QUESTIONMARK"
 #showtooltip

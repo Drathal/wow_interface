@@ -18,7 +18,7 @@ LS_TOASTS_GLOBAL_CONFIG = {
 			["colors"] = {
 				["enabled"] = true,
 			},
-			["version"] = 7030002,
+			["version"] = 7030003,
 			["types"] = {
 				["garrison_6_0"] = {
 					["enabled"] = false,

@@ -1,5 +1,6 @@
 
 GoFishDB = {
+	["SoundInBG"] = true,
 	["CVars"] = {
 		["Sound_MusicVolume"] = 0,
 		["Sound_EnableEmoteSounds"] = 0,

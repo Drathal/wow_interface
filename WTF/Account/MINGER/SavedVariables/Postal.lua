@@ -46,7 +46,8 @@ Postal3DB = {
 		["Drathia - Madmortem"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Drahmoon|Madmortem|Alliance", -- [1]
+					"Malien|Madmortem|Alliance", -- [1]
+					"Drahmoon|Madmortem|Alliance", -- [2]
 				},
 			},
 		},

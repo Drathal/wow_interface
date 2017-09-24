@@ -4,7 +4,7 @@ VER 3 0100000000000004 "Barrier" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000000C "Feather" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@cursor][]Angelic Feather
+/cast [@player][]Angelic Feather
 END
 VER 3 0100000000000006 "Force" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -28,7 +28,7 @@ VER 3 0100000000000005 "Levitate" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000007 "Mending" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@mouseover,help][@target,help][]Prayer of Mending
+/cast [@mouseover,help][]Prayer of Mending
 END
 VER 3 0100000000000001 "Pain" "INV_MISC_QUESTIONMARK"
 #showtooltip

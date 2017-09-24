@@ -12,9 +12,12 @@ XpFlagDB = {
 	["profiles"] = {
 		["Default"] = {
 			["mark"] = {
-				["size"] = 19,
+				["position"] = "SCREENBOTTOM",
+				["dataSource"] = "dataRep",
+				["size"] = 20,
 			},
 			["bar"] = {
+				["show"] = false,
 				["height"] = 2,
 			},
 		},
