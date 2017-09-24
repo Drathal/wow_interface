@@ -1,5 +1,0 @@
-
-DynastyImpulse_GSaved = {
-	["Sets"] = {
-	},
-}
