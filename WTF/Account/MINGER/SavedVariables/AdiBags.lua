@@ -17,17 +17,17 @@ AdiBagsDB = {
 						[132457] = "Equipment#Legenday",
 						[146666] = "Equipment#Legenday",
 						[128941] = "Equipment#Legenday",
-						[144259] = "Equipment#Legenday",
+						[23247] = "Quest#Quest",
 						[128943] = "Equipment#Legenday",
 						[138111] = "Quest#Quest",
-						[141652] = "Quest#Quest",
+						[128823] = "Equipment#Legenday",
 						[141190] = "Quest#Quest",
-						[138019] = "Quest#Quest",
+						[120978] = "Equipment#Legenday",
 						[132374] = "Equipment#Legenday",
 						[128866] = "Equipment#Legenday",
-						[120978] = "Equipment#Legenday",
-						[128823] = "Equipment#Legenday",
-						[23247] = "Quest#Quest",
+						[138019] = "Quest#Quest",
+						[141652] = "Quest#Quest",
+						[144259] = "Equipment#Legenday",
 					},
 				},
 			},
@@ -104,11 +104,31 @@ AdiBagsDB = {
 		},
 		["Legion"] = {
 		},
-		["ItemLevel"] = {
+		["CurrencyFrame"] = {
 			["profiles"] = {
 				["Default"] = {
-					["minLevel"] = 850,
-					["colorScheme"] = "level",
+					["shown"] = {
+						["Ancient Mana"] = false,
+						["Elder Charm of Good Fortune"] = false,
+						["Seal of Inevitable Fate"] = false,
+						["Writhing Essence"] = false,
+						["Lesser Charm of Good Fortune"] = false,
+						["Curious Coin"] = false,
+						["Sightless Eye"] = false,
+						["Timeless Coin"] = false,
+						["Oil"] = false,
+						["Apexis Crystal"] = false,
+						["Darkmoon Prize Ticket"] = false,
+						["Warforged Seal"] = false,
+						["Ironpaw Token"] = false,
+						["Garrison Resources"] = false,
+						["Lingering Soul Fragment"] = false,
+						["Timewarped Badge"] = false,
+					},
+					["text"] = {
+						["name"] = "KkthnxUI_Normal",
+						["size"] = 15,
+					},
 				},
 			},
 		},
@@ -118,31 +138,11 @@ AdiBagsDB = {
 		},
 		["Bound"] = {
 		},
-		["CurrencyFrame"] = {
+		["ItemLevel"] = {
 			["profiles"] = {
 				["Default"] = {
-					["shown"] = {
-						["Ancient Mana"] = false,
-						["Elder Charm of Good Fortune"] = false,
-						["Curious Coin"] = false,
-						["Writhing Essence"] = false,
-						["Timeless Coin"] = false,
-						["Garrison Resources"] = false,
-						["Sightless Eye"] = false,
-						["Lesser Charm of Good Fortune"] = false,
-						["Seal of Inevitable Fate"] = false,
-						["Apexis Crystal"] = false,
-						["Darkmoon Prize Ticket"] = false,
-						["Warforged Seal"] = false,
-						["Ironpaw Token"] = false,
-						["Oil"] = false,
-						["Lingering Soul Fragment"] = false,
-						["Timewarped Badge"] = false,
-					},
-					["text"] = {
-						["name"] = "KkthnxUI_Normal",
-						["size"] = 15,
-					},
+					["minLevel"] = 850,
+					["colorScheme"] = "level",
 				},
 			},
 		},
@@ -155,26 +155,29 @@ AdiBagsDB = {
 				["Broken Shore#Broken Shore"] = true,
 				["Junk#Junk"] = true,
 				["Hearthstones#Hearthstones"] = true,
-				["Equipment#Legenday"] = true,
 				["Equipment#Set: AMR Destruction"] = true,
+				["Equipment#Legenday"] = true,
 				["Equipment#Set: AMR Demonology"] = true,
 				["Equipment#Set: AMR Affliction"] = true,
 			},
 		},
 	},
 	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Mythrilblade - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
-		["Dranopix - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
-			["scale"] = 0.9,
+			["columnWidth"] = {
+				["Bank"] = 14,
+				["Backpack"] = 14,
+			},
 			["skin"] = {
 				["ReagentBankColor"] = {
 					nil, -- [1]
@@ -193,23 +196,20 @@ AdiBagsDB = {
 					["xOffset"] = -155.99951171875,
 					["yOffset"] = 199,
 				},
-				["Backpack"] = {
-					["xOffset"] = -55.9996343400853,
-					["yOffset"] = 210.000649038933,
-				},
 				["Bank"] = {
 					["xOffset"] = 590.000136958224,
 					["yOffset"] = -94.9990129100188,
+				},
+				["Backpack"] = {
+					["xOffset"] = -55.9996343400853,
+					["yOffset"] = 210.000649038933,
 				},
 			},
 			["compactLayout"] = true,
 			["rightClickConfig"] = false,
 			["autoDeposit"] = true,
 			["positionMode"] = "manual",
-			["columnWidth"] = {
-				["Backpack"] = 14,
-				["Bank"] = 14,
-			},
+			["scale"] = 0.9,
 		},
 	},
 }

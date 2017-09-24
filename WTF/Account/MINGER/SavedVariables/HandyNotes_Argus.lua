@@ -1,8 +1,9 @@
 
 HandyNotesArgusDB = {
 	["profileKeys"] = {
-		["Dranopix - Madmortem"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

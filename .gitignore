@@ -27,9 +27,12 @@
 Launcher.db
 Config.wtf
 config-cache.old
+bindings-cache.old
+macros-cache.old
 config-cache.wtf
 layout-local.txt
 chat-cache.txt
+Blizzard_Console.lua
 AddOns.txt
 Blizzard_CombatLog.lua
 *.lua.bak

@@ -1,31 +1,31 @@
 
 HandyNotes_LegionInstanceWorldQuestsDB = {
 	["profileKeys"] = {
-		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
+		["Drathia - Madmortem"] = "Drathia - Madmortem",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
-		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
 	},
 	["profiles"] = {
-		["Dranopix - Madmortem"] = {
+		["Drathia - Madmortem"] = {
 		},
 		["Dronthal - Madmortem"] = {
 		},
-		["Drahmoon - Madmortem"] = {
+		["Mythrilblade - Madmortem"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
 		["Drathal - Madmortem"] = {
 		},
-		["Mythrilblade - Madmortem"] = {
+		["Drahmoon - Madmortem"] = {
 		},
 		["Dranathal - Madmortem"] = {
 		},
-		["Drathia - Madmortem"] = {
+		["Dranopix - Madmortem"] = {
 		},
 	},
 }

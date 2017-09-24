@@ -2,12 +2,12 @@
 XpFlagDB = {
 	["profileKeys"] = {
 		["Dronthal - Madmortem"] = "Default",
-		["Dranopix - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
 		["Mythrilblade - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0211,
+	["LastVersion"] = 2.0214,
 	["LastPlayerFullName"] = "Mythrilblade-Madmortem",
 	["AutoSelectScales"] = true,
 	["UpgradeTracking"] = false,

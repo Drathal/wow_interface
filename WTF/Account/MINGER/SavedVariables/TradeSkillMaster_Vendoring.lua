@@ -19,6 +19,7 @@ TradeSkillMaster_VendoringDB = {
 			"Drathal - Madmortem", -- [14]
 			"Dronthal - Madmortem", -- [15]
 			"Drathtix - Madmortem", -- [16]
+			"Mythrilblade - Madmortem", -- [17]
 		},
 		["factionrealm"] = {
 			"Horde - Blackhand", -- [1]
@@ -41,21 +42,22 @@ TradeSkillMaster_VendoringDB = {
 	["g@ @qsHideGrouped"] = true,
 	["_currentProfile"] = {
 		["Drathal - Blackhand"] = "Default",
-		["Dronthal - Blackhand"] = "Default",
 		["Dorthal - Blackhand"] = "Default",
-		["Drathon - Blackhand"] = "Default",
-		["Drathtix - Madmortem"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathol - Blackhand"] = "Default",
-		["Drathia - Madmortem"] = "Default",
 		["Modranthir - Blackhand"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
-		["Drahdo - Blackhand"] = "Default",
 		["Modrix - Blackhand"] = "Default",
 		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
+		["Drathon - Blackhand"] = "Default",
+		["Drathia - Madmortem"] = "Default",
+		["Drahdo - Blackhand"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Draltar - Blackhand"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
 	},
 	["g@ @qsHideSoulbound"] = true,
 	["g@ @defaultPage"] = 1,

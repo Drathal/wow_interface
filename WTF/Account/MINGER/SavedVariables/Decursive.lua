@@ -1,15 +1,7 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["Darlaxle - Blackhand"] = "Default",
-		["Mythrilblade - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
-		["Drathtix - Madmortem"] = "Default",
-		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
-		["Dranathal - Madmortem"] = "Default",
-		["Dranopix - Madmortem"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1506283732,
 	},
 	["class"] = {
 		["HUNTER"] = {
@@ -23,14 +15,14 @@ DecursiveDB = {
 				[32] = -16,
 			},
 		},
-		["PALADIN"] = {
+		["ROGUE"] = {
 			["CureOrder"] = {
-				-13, -- [1]
+				-11, -- [1]
 				-15, -- [2]
 				nil, -- [3]
-				-14, -- [4]
-				[8] = 1,
-				[16] = 2,
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
 				[32] = -16,
 			},
 		},
@@ -45,14 +37,14 @@ DecursiveDB = {
 				[32] = 1,
 			},
 		},
-		["ROGUE"] = {
+		["PALADIN"] = {
 			["CureOrder"] = {
-				-11, -- [1]
+				-13, -- [1]
 				-15, -- [2]
 				nil, -- [3]
-				-12, -- [4]
-				[8] = -13,
-				[16] = -14,
+				-14, -- [4]
+				[8] = 1,
+				[16] = 2,
 				[32] = -16,
 			},
 		},
@@ -99,12 +91,20 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1506283732,
+	["profileKeys"] = {
+		["Darlaxle - Blackhand"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Drathal - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+		["Dranathal - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
-			["DebuffsFrameMaxCount"] = 40,
+			["Print_Error"] = false,
 			["DebuffsFrameStickToRight"] = true,
 			["AutoHideMUFs"] = 2,
 			["HideLiveList"] = true,
@@ -123,7 +123,7 @@ DecursiveDB = {
 			["Amount_Of_Afflicted"] = 1,
 			["DebuffsFrameContainer_x"] = 538.311868451929,
 			["DebuffsFrameElemBorderAlpha"] = 0.5,
-			["Print_Error"] = false,
+			["DebuffsFrameMaxCount"] = 40,
 			["Print_ChatFrame"] = false,
 		},
 	},

@@ -1,14 +1,14 @@
 
 AyeDB = {
 	["profileKeys"] = {
-		["Dranopix - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
-		["Mythrilblade - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 	},
 	["global"] = {
 		["AutoOK"] = {

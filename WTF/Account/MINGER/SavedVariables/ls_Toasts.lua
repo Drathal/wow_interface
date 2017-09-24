@@ -1,24 +1,24 @@
 
 LS_TOASTS_GLOBAL_CONFIG = {
 	["profileKeys"] = {
-		["Dranopix - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Mythrilblade - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["point"] = {
 				["y"] = -53,
 			},
+			["version"] = 7030003,
 			["colors"] = {
 				["enabled"] = true,
 			},
-			["version"] = 7030003,
 			["types"] = {
 				["garrison_6_0"] = {
 					["enabled"] = false,
@@ -32,17 +32,40 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
-				["world"] = {
+				["transmog"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
 				["loot_special"] = {
 					["enabled"] = true,
-					["ilvl"] = true,
-					["dnd"] = false,
 					["threshold"] = 1,
+					["dnd"] = false,
+					["ilvl"] = true,
 				},
 				["recipe"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["garrison_7_0"] = {
+					["enabled"] = true,
+					["dnd"] = true,
+				},
+				["archaeology"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["loot_common"] = {
+					["threshold"] = 1,
+					["ilvl"] = true,
+					["enabled"] = true,
+					["quest"] = false,
+					["dnd"] = false,
+				},
+				["collection"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["achievement"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
@@ -51,30 +74,7 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["dnd"] = false,
 					["threshold"] = 1,
 				},
-				["archaeology"] = {
-					["enabled"] = true,
-					["dnd"] = false,
-				},
-				["achievement"] = {
-					["enabled"] = true,
-					["dnd"] = false,
-				},
-				["collection"] = {
-					["enabled"] = true,
-					["dnd"] = false,
-				},
-				["loot_common"] = {
-					["threshold"] = 1,
-					["ilvl"] = true,
-					["dnd"] = false,
-					["quest"] = false,
-					["enabled"] = true,
-				},
-				["garrison_7_0"] = {
-					["enabled"] = true,
-					["dnd"] = true,
-				},
-				["transmog"] = {
+				["world"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},

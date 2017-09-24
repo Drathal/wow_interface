@@ -2,7 +2,7 @@
 TEST_CONFIG = nil
 XIVBarDB = {
 	["char"] = {
-		["Dranopix - Madmortem"] = {
+		["Drathia - Madmortem"] = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
@@ -10,11 +10,11 @@ XIVBarDB = {
 		},
 		["Dronthal - Madmortem"] = {
 			["portItem"] = {
-				["text"] = "Dalaran",
 				["portId"] = 140192,
+				["text"] = "Dalaran",
 			},
 		},
-		["Drahmoon - Madmortem"] = {
+		["Mythrilblade - Madmortem"] = {
 			["portItem"] = {
 				["text"] = "Dalaran",
 				["portId"] = 140192,
@@ -22,17 +22,17 @@ XIVBarDB = {
 		},
 		["Drathtix - Madmortem"] = {
 			["portItem"] = {
-				["text"] = "Dalaran",
 				["portId"] = 140192,
+				["text"] = "Dalaran",
 			},
 		},
 		["Drathal - Madmortem"] = {
 			["portItem"] = {
-				["portId"] = 140192,
 				["text"] = "Dalaran",
+				["portId"] = 140192,
 			},
 		},
-		["Mythrilblade - Madmortem"] = {
+		["Drahmoon - Madmortem"] = {
 			["portItem"] = {
 				["portId"] = 140192,
 				["text"] = "Dalaran",
@@ -40,11 +40,11 @@ XIVBarDB = {
 		},
 		["Dranathal - Madmortem"] = {
 			["portItem"] = {
-				["portId"] = 140192,
 				["text"] = "Dalaran",
+				["portId"] = 140192,
 			},
 		},
-		["Drathia - Madmortem"] = {
+		["Dranopix - Madmortem"] = {
 			["portItem"] = {
 				["portId"] = 140192,
 				["text"] = "Dalaran",
@@ -54,72 +54,72 @@ XIVBarDB = {
 	["baseProfile"] = {
 	},
 	["profileKeys"] = {
-		["Dranopix - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Drahmoon - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "baseProfile",
 		["Drathal - Madmortem"] = "Default",
-		["Mythrilblade - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Dranathal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 	},
 	["factionrealm"] = {
 		["Alliance - Madmortem"] = {
-			["Drathtix"] = {
-				["dailyMoney"] = 86631555,
-				["sessionMoney"] = 1823138,
-				["lastLoginDate"] = 20170825,
-				["currentMoney"] = 87029292,
+			["Drathal"] = {
+				["dailyMoney"] = 0,
+				["sessionMoney"] = 0,
+				["lastLoginDate"] = 20170830,
+				["currentMoney"] = 26496445,
 				["daily"] = 0,
-			},
-			["Drahmoon"] = {
-				["dailyMoney"] = -200000060,
-				["sessionMoney"] = -100000030,
-				["daily"] = 0,
-				["lastLoginDate"] = 20170820,
-				["currentMoney"] = 507261290,
 			},
 			["Drathia"] = {
 				["dailyMoney"] = 181475346,
 				["sessionMoney"] = 1254317,
-				["lastLoginDate"] = 20170924,
+				["daily"] = 0,
 				["currentMoney"] = 206949977,
-				["daily"] = 0,
-			},
-			["Mythrilblade"] = {
-				["dailyMoney"] = 35,
-				["sessionMoney"] = 35,
-				["daily"] = 0,
-				["lastLoginDate"] = 20170828,
-				["currentMoney"] = 35,
-			},
-			["Dranopix"] = {
-				["dailyMoney"] = 0,
-				["sessionMoney"] = 0,
-				["lastLoginDate"] = 20170915,
-				["currentMoney"] = 90,
-				["daily"] = 0,
-			},
-			["Dronthal"] = {
-				["dailyMoney"] = -736031332,
-				["sessionMoney"] = -22000,
-				["lastLoginDate"] = 20170830,
-				["currentMoney"] = 196136852,
-				["daily"] = 0,
+				["lastLoginDate"] = 20170924,
 			},
 			["Dranathal"] = {
 				["dailyMoney"] = 134090,
 				["sessionMoney"] = 0,
-				["daily"] = 0,
 				["currentMoney"] = 134090,
 				["lastLoginDate"] = 20170831,
+				["daily"] = 0,
 			},
-			["Drathal"] = {
+			["Mythrilblade"] = {
+				["dailyMoney"] = 35,
+				["sessionMoney"] = 0,
+				["lastLoginDate"] = 20170924,
+				["currentMoney"] = 135,
+				["daily"] = 0,
+			},
+			["Dranopix"] = {
 				["dailyMoney"] = 0,
 				["sessionMoney"] = 0,
 				["daily"] = 0,
+				["currentMoney"] = 90,
+				["lastLoginDate"] = 20170915,
+			},
+			["Dronthal"] = {
+				["dailyMoney"] = -736031332,
+				["sessionMoney"] = -22000,
+				["daily"] = 0,
+				["currentMoney"] = 196136852,
 				["lastLoginDate"] = 20170830,
-				["currentMoney"] = 26496445,
+			},
+			["Drahmoon"] = {
+				["dailyMoney"] = -200000060,
+				["sessionMoney"] = -100000030,
+				["lastLoginDate"] = 20170820,
+				["currentMoney"] = 507261290,
+				["daily"] = 0,
+			},
+			["Drathtix"] = {
+				["dailyMoney"] = 86631555,
+				["sessionMoney"] = 1823138,
+				["daily"] = 0,
+				["currentMoney"] = 87029292,
+				["lastLoginDate"] = 20170825,
 			},
 		},
 	},
@@ -129,15 +129,15 @@ XIVBarDB = {
 		["baseProfile"] = {
 			["color"] = {
 				["normal"] = {
-					["b"] = 1,
-					["g"] = 1,
 					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["b"] = 0,
-					["g"] = 0,
 					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
 				},
 			},
 			["text"] = {
@@ -155,8 +155,8 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["showTooltip"] = false,
 					["barCC"] = true,
+					["showTooltip"] = false,
 				},
 				["travel"] = {
 					["enabled"] = false,
@@ -165,9 +165,9 @@ XIVBarDB = {
 					["char"] = false,
 					["help"] = false,
 					["talent"] = false,
-					["chat"] = false,
-					["quest"] = false,
 					["pvp"] = false,
+					["quest"] = false,
+					["chat"] = false,
 				},
 				["currency"] = {
 					["enabled"] = false,
@@ -187,12 +187,12 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["armor"] = {
-					["enabled"] = false,
-				},
 				["system"] = {
 					["showAllOnShift"] = false,
 					["showTooltip"] = false,
+				},
+				["armor"] = {
+					["enabled"] = false,
 				},
 			},
 		},
@@ -205,15 +205,15 @@ XIVBarDB = {
 		["Default"] = {
 			["color"] = {
 				["normal"] = {
-					["r"] = 1,
-					["g"] = 1,
 					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["r"] = 0,
-					["g"] = 0,
 					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
 				},
 			},
 			["text"] = {
@@ -231,8 +231,8 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["showTooltip"] = false,
 					["barCC"] = true,
+					["showTooltip"] = false,
 				},
 				["travel"] = {
 					["enabled"] = false,
@@ -262,28 +262,28 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["system"] = {
-					["showTooltip"] = false,
-					["showAllOnShift"] = false,
-				},
 				["clock"] = {
 					["hideEventText"] = true,
 					["timeFormat"] = "twoFourNoZero",
+				},
+				["system"] = {
+					["showTooltip"] = false,
+					["showAllOnShift"] = false,
 				},
 			},
 		},
 		["Drathtix - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
-					["b"] = 1,
-					["g"] = 1,
 					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["b"] = 0,
-					["g"] = 0,
 					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
 				},
 			},
 			["text"] = {
@@ -301,8 +301,8 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["barCC"] = true,
 					["showTooltip"] = false,
+					["barCC"] = true,
 				},
 				["travel"] = {
 					["enabled"] = false,
@@ -311,9 +311,9 @@ XIVBarDB = {
 					["char"] = false,
 					["help"] = false,
 					["talent"] = false,
-					["chat"] = false,
-					["quest"] = false,
 					["pvp"] = false,
+					["quest"] = false,
+					["chat"] = false,
 				},
 				["currency"] = {
 					["currencyTwo"] = "1226",
@@ -332,13 +332,13 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["clock"] = {
-					["hideEventText"] = true,
-					["timeFormat"] = "twoFourNoZero",
-				},
 				["system"] = {
 					["showAllOnShift"] = false,
 					["showTooltip"] = false,
+				},
+				["clock"] = {
+					["hideEventText"] = true,
+					["timeFormat"] = "twoFourNoZero",
 				},
 			},
 		},
@@ -347,15 +347,15 @@ XIVBarDB = {
 		["Drahmoon - Madmortem"] = {
 			["color"] = {
 				["normal"] = {
-					["r"] = 1,
-					["g"] = 1,
 					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
 				},
 				["barColor"] = {
 					["a"] = 0,
-					["r"] = 0,
-					["g"] = 0,
 					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
 				},
 			},
 			["text"] = {
@@ -373,8 +373,8 @@ XIVBarDB = {
 				},
 				["talent"] = {
 					["minWidth"] = 60,
-					["showTooltip"] = false,
 					["barCC"] = true,
+					["showTooltip"] = false,
 				},
 				["travel"] = {
 					["enabled"] = false,
@@ -383,9 +383,9 @@ XIVBarDB = {
 					["char"] = false,
 					["help"] = false,
 					["talent"] = false,
-					["pvp"] = false,
-					["quest"] = false,
 					["chat"] = false,
+					["quest"] = false,
+					["pvp"] = false,
 				},
 				["currency"] = {
 					["enabled"] = false,
@@ -404,13 +404,13 @@ XIVBarDB = {
 				["MasterVolume"] = {
 					["enabled"] = true,
 				},
-				["system"] = {
-					["showAllOnShift"] = false,
-					["showTooltip"] = false,
-				},
 				["clock"] = {
 					["hideEventText"] = true,
 					["timeFormat"] = "twoFourNoZero",
+				},
+				["system"] = {
+					["showAllOnShift"] = false,
+					["showTooltip"] = false,
 				},
 			},
 		},

@@ -5,6 +5,7 @@ BigDebuffsDB = {
 		},
 	},
 	["profileKeys"] = {
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathia - Madmortem"] = "Default",
 	},
 	["profiles"] = {

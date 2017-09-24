@@ -2,21 +2,22 @@
 TradeSkillMaster_ShoppingDB = {
 	["_currentProfile"] = {
 		["Drathal - Blackhand"] = "Default",
-		["Dronthal - Blackhand"] = "Default",
 		["Dorthal - Blackhand"] = "Default",
-		["Drathon - Blackhand"] = "Default",
-		["Drathtix - Madmortem"] = "Default",
-		["Darlaxle - Blackhand"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathol - Blackhand"] = "Default",
-		["Drathia - Madmortem"] = "Default",
 		["Modranthir - Blackhand"] = "Default",
-		["Dronthal - Madmortem"] = "Default",
-		["Drahdo - Blackhand"] = "Default",
 		["Modrix - Blackhand"] = "Default",
 		["Drathal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
 		["Draltair - Blackhand"] = "Default",
+		["Darlaxle - Blackhand"] = "Default",
+		["Drathon - Blackhand"] = "Default",
+		["Drathia - Madmortem"] = "Default",
+		["Drahdo - Blackhand"] = "Default",
+		["Dronthal - Madmortem"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Draltar - Blackhand"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
 	},
 	["_version"] = 3,
 	["g@ @sniperVendorPrice"] = true,
@@ -39,6 +40,7 @@ TradeSkillMaster_ShoppingDB = {
 			"Drathal - Madmortem", -- [14]
 			"Dronthal - Madmortem", -- [15]
 			"Drathtix - Madmortem", -- [16]
+			"Mythrilblade - Madmortem", -- [17]
 		},
 		["factionrealm"] = {
 			"Horde - Blackhand", -- [1]
@@ -59,7 +61,7 @@ TradeSkillMaster_ShoppingDB = {
 	["g@ @postUndercut"] = "1c",
 	["g@ @minDeSearchLvl"] = 1,
 	["g@ @maxDeSearchLvl"] = 735,
-	["_hash"] = 1861581,
+	["g@ @sniperSound"] = "TSM_CASH_REGISTER",
 	["g@ @marketValueSource"] = "dbmarket",
 	["g@ @savedSearches"] = {
 		{
@@ -111,7 +113,7 @@ TradeSkillMaster_ShoppingDB = {
 			["filter"] = "Lovely Black Dress/exact",
 		}, -- [8]
 	},
-	["g@ @sniperSound"] = "TSM_CASH_REGISTER",
+	["_hash"] = 1861581,
 	["g@ @normalPostPrice"] = "150% dbmarket",
 	["g@ @maxDeSearchPercent"] = 1,
 	["g@ @sniperCustomPrice"] = "check(minprice - 100000g, 90% minprice, check(minprice - 50000g, 80% minprice, check(minprice - 10000g, 60% minprice, check(minprice - 5000g, 50% minprice, check(minprice - 1000g, 30% minprice, check(minprice - 500g, 20% minprice, check(minprice - 50g, 10% minprice)))))))",
