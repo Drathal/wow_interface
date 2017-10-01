@@ -77,9 +77,6 @@ PawnCommon = {
 		["\"MrRobot\":PRIEST3"] = {
 			["IconTexturePath"] = 136207,
 			["PerCharacterOptions"] = {
-				["Drathia-Madmortem"] = {
-					["Visible"] = true,
-				},
 			},
 			["Color"] = "c959ff",
 			["LocalizedName"] = "Priest: Shadow",
@@ -155,6 +152,42 @@ PawnCommon = {
 			["UnenchantedColor"] = "bfb74e",
 			["SpecID"] = 2,
 		},
+		["PvE-Priest-Holy"] = {
+			["IconTexturePath"] = 237542,
+			["PerCharacterOptions"] = {
+				["Drathia-Madmortem"] = {
+					["Visible"] = true,
+				},
+			},
+			["Color"] = "ffffff",
+			["ClassID"] = 5,
+			["Role"] = "HEALER",
+			["UpgradesFollowSpecialization"] = true,
+			["SpecID"] = 2,
+			["Values"] = {
+				["IsOffHand"] = -1000000,
+				["IsFist"] = -1000000,
+				["Is2HMace"] = -1000000,
+				["IsWarglaive"] = -1000000,
+				["CritRating"] = 6.05,
+				["HasteRating"] = 4.55,
+				["MasteryRating"] = 7.55,
+				["IsCrossbow"] = -1000000,
+				["IsPolearm"] = -1000000,
+				["IsGun"] = -1000000,
+				["Is2HAxe"] = -1000000,
+				["IsShield"] = -1000000,
+				["IsBow"] = -1000000,
+				["IsMail"] = -1000000,
+				["IsSword"] = -1000000,
+				["IsLeather"] = -1000000,
+				["Intellect"] = 9.05,
+				["IsPlate"] = -1000000,
+				["Is2HSword"] = -1000000,
+				["Versatility"] = 3.05,
+				["IsAxe"] = -1000000,
+			},
+		},
 		["\"MrRobot\":WARRIOR3"] = {
 			["IconTexturePath"] = 132341,
 			["PerCharacterOptions"] = {
@@ -199,12 +232,12 @@ PawnCommon = {
 			["Color"] = "e6996c",
 			["UnenchantedColor"] = "ac7251",
 			["Values"] = {
-				["Stamina"] = 18.01,
+				["CritRating"] = 9.01,
 				["Agility"] = 10.51,
 				["HasteRating"] = 13.51,
 				["MasteryRating"] = 15.01,
-				["CritRating"] = 9.01,
 				["Versatility"] = 12.01,
+				["Stamina"] = 18.01,
 			},
 		},
 		["PvE-Warlock-Affliction-Noxxic"] = {
@@ -326,9 +359,6 @@ PawnCommon = {
 		["\"MrRobot\":PRIEST1"] = {
 			["IconTexturePath"] = 135940,
 			["PerCharacterOptions"] = {
-				["Drathia-Madmortem"] = {
-					["Visible"] = true,
-				},
 			},
 			["Color"] = "ffdd7c",
 			["LocalizedName"] = "Priest: Discipline",
@@ -518,39 +548,6 @@ PawnCommon = {
 			["UnenchantedColor"] = "6566b2",
 			["SpecID"] = 2,
 		},
-		["\"MrRobot\":PALADIN2"] = {
-			["IconTexturePath"] = 236264,
-			["PerCharacterOptions"] = {
-			},
-			["Color"] = "f58cba",
-			["LocalizedName"] = "Paladin: Protection",
-			["ClassID"] = 2,
-			["DoNotShow1HUpgrades"] = false,
-			["Role"] = "TANK",
-			["DoNotShow2HUpgrades"] = true,
-			["UpgradesFollowSpecialization"] = true,
-			["Provider"] = "MrRobot",
-			["UnenchantedColor"] = "b7698b",
-			["SpecID"] = 2,
-		},
-		["\"MrRobot\":SHAMAN3"] = {
-			["IconTexturePath"] = 136052,
-			["PerCharacterOptions"] = {
-				["Dranathal-Madmortem"] = {
-					["Visible"] = true,
-				},
-			},
-			["Color"] = "0070de",
-			["LocalizedName"] = "Shaman: Restoration",
-			["ClassID"] = 7,
-			["DoNotShow1HUpgrades"] = false,
-			["Role"] = "HEALER",
-			["DoNotShow2HUpgrades"] = false,
-			["UpgradesFollowSpecialization"] = true,
-			["Provider"] = "MrRobot",
-			["UnenchantedColor"] = "0054a6",
-			["SpecID"] = 3,
-		},
 		["Holy"] = {
 			["IconTexturePath"] = 135920,
 			["PerCharacterOptions"] = {
@@ -579,6 +576,39 @@ PawnCommon = {
 				["MasteryRating"] = 4.57,
 				["IsGun"] = -1000000,
 			},
+		},
+		["\"MrRobot\":SHAMAN3"] = {
+			["IconTexturePath"] = 136052,
+			["PerCharacterOptions"] = {
+				["Dranathal-Madmortem"] = {
+					["Visible"] = true,
+				},
+			},
+			["Color"] = "0070de",
+			["LocalizedName"] = "Shaman: Restoration",
+			["ClassID"] = 7,
+			["DoNotShow1HUpgrades"] = false,
+			["Role"] = "HEALER",
+			["DoNotShow2HUpgrades"] = false,
+			["UpgradesFollowSpecialization"] = true,
+			["Provider"] = "MrRobot",
+			["UnenchantedColor"] = "0054a6",
+			["SpecID"] = 3,
+		},
+		["\"MrRobot\":DRUID2"] = {
+			["IconTexturePath"] = 132115,
+			["PerCharacterOptions"] = {
+			},
+			["Color"] = "ff7d0a",
+			["LocalizedName"] = "Druid: Feral",
+			["ClassID"] = 11,
+			["DoNotShow1HUpgrades"] = true,
+			["Role"] = "DAMAGER",
+			["DoNotShow2HUpgrades"] = false,
+			["UpgradesFollowSpecialization"] = true,
+			["Provider"] = "MrRobot",
+			["UnenchantedColor"] = "bf5d07",
+			["SpecID"] = 2,
 		},
 		["\"MrRobot\":DEMONHUNTER2"] = {
 			["IconTexturePath"] = 1247265,
@@ -631,19 +661,19 @@ PawnCommon = {
 				},
 			},
 		},
-		["\"MrRobot\":DRUID2"] = {
-			["IconTexturePath"] = 132115,
+		["\"MrRobot\":PALADIN2"] = {
+			["IconTexturePath"] = 236264,
 			["PerCharacterOptions"] = {
 			},
-			["Color"] = "ff7d0a",
-			["LocalizedName"] = "Druid: Feral",
-			["ClassID"] = 11,
-			["DoNotShow1HUpgrades"] = true,
-			["Role"] = "DAMAGER",
-			["DoNotShow2HUpgrades"] = false,
+			["Color"] = "f58cba",
+			["LocalizedName"] = "Paladin: Protection",
+			["ClassID"] = 2,
+			["DoNotShow1HUpgrades"] = false,
+			["Role"] = "TANK",
+			["DoNotShow2HUpgrades"] = true,
 			["UpgradesFollowSpecialization"] = true,
 			["Provider"] = "MrRobot",
-			["UnenchantedColor"] = "bf5d07",
+			["UnenchantedColor"] = "b7698b",
 			["SpecID"] = 2,
 		},
 		["\"MrRobot\":WARRIOR2"] = {
@@ -697,12 +727,12 @@ PawnCommon = {
 		["Brewmaster"] = {
 			["NormalizationFactor"] = 1,
 			["Values"] = {
-				["CritRating"] = 7.55,
+				["Versatility"] = 4.55,
 				["Agility"] = 6.05,
 				["HasteRating"] = 9.05,
 				["MasteryRating"] = 7.55,
-				["Versatility"] = 4.55,
 				["Stamina"] = 12.05,
+				["CritRating"] = 7.55,
 			},
 			["UpgradesFollowSpecialization"] = true,
 			["Color"] = "7ce69b",
@@ -761,9 +791,6 @@ PawnCommon = {
 		["\"MrRobot\":PRIEST2"] = {
 			["IconTexturePath"] = 237542,
 			["PerCharacterOptions"] = {
-				["Drathia-Madmortem"] = {
-					["Visible"] = true,
-				},
 			},
 			["Color"] = "ffffff",
 			["LocalizedName"] = "Priest: Holy",

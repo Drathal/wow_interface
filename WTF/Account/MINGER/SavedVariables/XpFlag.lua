@@ -12,12 +12,12 @@ XpFlagDB = {
 	["profiles"] = {
 		["Default"] = {
 			["mark"] = {
-				["position"] = "BLIZZEXPBAR",
+				["dataSource"] = "dataRep",
 				["size"] = 20,
 			},
 			["bar"] = {
-				["show"] = false,
 				["height"] = 2,
+				["dataSource"] = "dataRep",
 			},
 		},
 	},

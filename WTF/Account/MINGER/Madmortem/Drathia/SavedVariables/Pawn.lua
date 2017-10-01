@@ -42,11 +42,11 @@ PawnOptions = {
 		[128825] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 55,
+					["ItemLevel"] = 56,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 56,
+					["ItemLevel"] = 59,
 					["Type"] = "Life",
 				}, -- [2]
 				{

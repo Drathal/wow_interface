@@ -1,46 +1,51 @@
-VER 3 0100000000000004 "Barrier" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help][@target,help][]Power Word: Barrier
+VER 3 0100000000000012 "Chastise" "INV_MISC_QUESTIONMARK"
+#showtoolip
+/startattack
+/use Holy Word: Chastise
 END
 VER 3 010000000000000C "Feather" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@player][]Angelic Feather
 END
-VER 3 0100000000000006 "Force" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help][@target,help][]Shining Force
-END
 VER 3 010000000000000B "Guardian" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Guardian Spirit
 END
+VER 3 0100000000000010 "Heal" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Heal
+END
+VER 3 0100000000000013 "Holyfire" "INV_MISC_QUESTIONMARK"
+#showtoolip
+/startattack
+/use Holy Fire
+END
 VER 3 0100000000000009 "HW:S" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [@cursor][@target,help][]Holy Word: Sanctify
+/cast [@cursor]Holy Word: Sanctify
+END
+VER 3 0100000000000011 "Jewel" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help,nodead][help,nodead][@player] Jewel of Insatiable Desire
 END
 VER 3 010000000000000F "Leap" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help][@target,help][]Leap of Faith
+#showtooltip Leap of Faith
+/cast [@mouseover,help][@target,help]Leap of Faith
 END
 VER 3 0100000000000005 "Levitate" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Levitate
 END
 VER 3 0100000000000007 "Mending" "INV_MISC_QUESTIONMARK"
-#showtooltip
+#showtooltip Prayer of Mending
+/use 13
+/use 14
+/cast [@mouseover,help,nodead][help,nodead][@player] Jewel of Insatiable Desire
 /cast [@mouseover,help][]Prayer of Mending
-END
-VER 3 0100000000000001 "Pain" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help][@target,help][]Pain Suppression
 END
 VER 3 0100000000000008 "PoH" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Prayer of Healing
-END
-VER 3 0100000000000003 "Radiance" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/cast [@mouseover,help][@target,help][]Power Word: Radiance
 END
 VER 3 010000000000000D "Renew" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -49,6 +54,11 @@ END
 VER 3 010000000000000A "Serenity" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Holy Word: Serenity
+END
+VER 3 0100000000000014 "Smite" "INV_MISC_QUESTIONMARK"
+#showtoolip
+/startattack
+/use Smite
 END
 VER 3 010000000000000E "Ta" "INV_MISC_QUESTIONMARK"
 #showtooltip

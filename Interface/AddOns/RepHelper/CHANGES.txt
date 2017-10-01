@@ -1,12 +1,97 @@
-tag d3153dab180ee9511b24a559d4700b8754715bf9 7.3.0.2-release
+tag 90c7bf3b9a2f5f9db09714b5907a64dfe17ccc42 7.3.0.3-release
 Author:	Chawan <chawan6@gmail.com>
-Date:	Mon Sep 4 06:21:02 2017 +0200
+Date:	Thu Sep 28 03:28:45 2017 +0200
 
-commit c066509d40e8872c711cfee6d9e9824ba3003cc1
+commit 546a14e9b918075be25e0ab2a054b82a7c8509ce
 Author: Chawan <chawan6@gmail.com>
-Date:   Mon Sep 4 06:20:24 2017 +0200
+Date:   Thu Sep 28 03:21:47 2017 +0200
 
-    Added ElvUI skin support
-    Added Army of the Light
-    Added Argussian Reach
+    Fixed bug causing the wrong standing to be printed to chat when friend faction standing was increased.
+
+commit 0903f894311fb5e362f7b44712a8ea83600fa275
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 03:08:54 2017 +0200
+
+    Corrected corbyn faction id
+
+commit 280ee25cdb89f7ef7e0937dd0e033803eb63d545
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 03:07:31 2017 +0200
+
+    Added missing labels for Corbyn
+
+commit 518b0cb8c5d27acf432ce543162ed36921481791
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 02:54:58 2017 +0200
+
+    Fixed friend reputations using 43000 as maximum reputation instead of 42000
+
+commit f2eebcc8e6ddc4b079d8be199b5422c9665243b1
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 02:26:58 2017 +0200
+
+    Corrected faction id
+
+commit 6c3f554896ad0a95662df719bbe3f06fd0b9a06f
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 02:22:32 2017 +0200
+
+    Added Talons Vengeance
+
+commit a8bf2f226aeb0d88b23455050fd882554d631ace
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 02:16:52 2017 +0200
+
+    Added fisherfriends
+
+commit b716276c1a7596f6ab628ba8cecde8f7262934c0
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 01:51:06 2017 +0200
+
+    Adjusted some button placements
+
+commit b716276c1a7596f6ab628ba8cecde8f7262934c0
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 01:51:06 2017 +0200
+
+    Adjusted some button placements
+
+commit a872f5dd6971f8c84f5b4c42c9ff15d67ec69007
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 01:44:37 2017 +0200
+
+    Fixed table initialization
+
+commit b6453074e6c6b775ebdce24ba319c03f56999836
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 01:42:35 2017 +0200
+
+    Corrected sizing of the reputation detial frame
+
+commit 0d14d95f0c2d50212f146a7695dd916fa1b82a1e
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 01:16:20 2017 +0200
+
+    Added RPH_GetFriendFactionRemaining to enable faction specific calculations for remaining reputation for friend factions
+
+commit 117a96c4cdc4af43dcac008901f4190ce6e3fc6d
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 00:57:46 2017 +0200
+
+    Changed text color
+    Added check for non-existing thresholds
+
+commit f33274812d38b23c3b89df22a09cb7455cd478b0
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 00:49:31 2017 +0200
+
+    Added function RPH_GetFriendFactionStandingLabel, makes it possible to have different standing labels for different friend factions like Nat Pagle
+
+commit 84d22da5bd6ed2d07330fc000df1a615b7c4f308
+Author: Chawan <chawan6@gmail.com>
+Date:   Thu Sep 28 00:27:12 2017 +0200
+
+    Fixed total reputation left to max for friend factions, with a few expections like Chromie and bodyguards
+    Fixed current standing label for friend factions
+    Fixed next standing label for friend factions, with a few expections like Chrome and bodyguards
 

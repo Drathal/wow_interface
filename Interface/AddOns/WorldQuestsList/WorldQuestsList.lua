@@ -1,4 +1,4 @@
-local VERSION = 45
+local VERSION = 47
 
 --[[
 Special icons for rares, pvp or pet battle quests in list
@@ -123,6 +123,11 @@ Fixes
 
 General Argus Map were replaced with zones map [in testing, you can disable this in options]
 Readded info for AP quests that can be done with next Aknowledge level [only for EU and US servers]
+
+Fixes for ADDON_ACTION_BLOCKED errors
+Added "/wql argus" command
+
+Fixes
 ]]
 
 
@@ -798,6 +803,7 @@ WorldQuestList.ScrollDownLine.i:SetTexCoord(0,.25,0,1)
 WorldQuestList.ScrollDownLine.i:SetSize(14,14)
 
 do
+	local WORLDMAP_TASK_POIS, WORLDMAP_POIS = {},{}
 	local function TaskPOI_OnClick(self, button)
 		if self.worldQuest and not ChatEdit_TryInsertQuestLinkForQuestID(self.questID) then
 			PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -827,6 +833,7 @@ do
 		end
 	
 		local button = CreateFrame("Button", "WorldMapFrameWCLTaskPOI"..index, WorldMapPOIFrame);
+		WORLDMAP_TASK_POIS[index] = button
 		button:SetFlattensRenderLayers(true);
 		button:RegisterForClicks("LeftButtonUp", "RightButtonUp");
 		button:SetScript("OnEnter", TaskPOI_OnEnter);
@@ -879,6 +886,7 @@ do
 	end
 	local function WorldMap_CreatePOI(index, isObjectIcon, atlasIcon)
 		local button = CreateFrame("Button", "WorldMapFrameWCLPOI"..index, WorldMapPOIFrame);
+		WORLDMAP_POIS[index] = button
 		button:RegisterForClicks("LeftButtonUp", "RightButtonUp");
 		button:SetScript("OnEnter", WorldMapPOI_OnEnter);
 		button:SetScript("OnLeave", WorldMapPOI_OnLeave);
@@ -896,14 +904,18 @@ do
 	end
 	local NUM_WORLDMAP_TASK_POIS = 0
 	local NUM_WORLDMAP_POIS = 0
+	local NUM_WORLDMAP_TASK_POIS_LAST = 0
+	local NUM_WORLDMAP_POIS_LAST = 0	
 	
 	local function HidePOIs()
-		for i = 1, NUM_WORLDMAP_TASK_POIS do
-			_G["WorldMapFrameWCLTaskPOI"..i]:Hide()
+		for i = 1, NUM_WORLDMAP_TASK_POIS_LAST do
+			WORLDMAP_TASK_POIS[i]:Hide()
 		end
-		for i = 1, NUM_WORLDMAP_POIS do
-			_G["WorldMapFrameWCLPOI"..i]:Hide()
-		end	
+		NUM_WORLDMAP_TASK_POIS_LAST = 0
+		for i = 1, NUM_WORLDMAP_POIS_LAST do
+			WORLDMAP_POIS[i]:Hide()
+		end
+		NUM_WORLDMAP_POIS_LAST = 0
 	end
 
 	local texturesList = {}
@@ -922,8 +934,8 @@ do
 			return
 		end
 		local currTime = GetTime()
-		if (currTime - prevUpdatePOIsTime) < .05 then
-			prevUpdatePOIs = C_Timer.NewTimer(.05,UpdatePOIsTimer)
+		if (currTime - prevUpdatePOIsTime) < .7 then
+			prevUpdatePOIs = C_Timer.NewTimer(.7,UpdatePOIsTimer)
 			return
 		end
 		prevUpdatePOIsTime = currTime
@@ -939,7 +951,7 @@ do
 			numTaskPOIs = #questsData
 			numPOIs = #questsData.poi
 		end
-		
+				
 		if ( NUM_WORLDMAP_TASK_POIS < numTaskPOIs ) then
 			for i=NUM_WORLDMAP_TASK_POIS+1, numTaskPOIs do
 				WorldMap_GetOrCreateTaskPOI(i)
@@ -988,11 +1000,9 @@ do
 				end		
 			end
 			
-			
-			
 			for i=1, NUM_WORLDMAP_POIS do
 				local worldMapPOIName = "WorldMapFrameWCLPOI"..i
-				local worldMapPOI = _G[worldMapPOIName]
+				local worldMapPOI = WORLDMAP_POIS[i]
 				if ( i <= numPOIs ) then
 					local poiData = questsData.poi[i]
 					local landmarkType, name, description, textureIndex, x, y, mapLinkID, inBattleMap, graveyardID, areaID, poiID, isObjectIcon, atlasIcon, displayAsBanner, mapFloor, textureKitPrefix = 
@@ -1035,14 +1045,17 @@ do
 					worldMapPOI:Hide();
 				end
 			end
+			
 		end
 		
 		for i = taskIconIndex, NUM_WORLDMAP_TASK_POIS do
-			_G["WorldMapFrameWCLTaskPOI"..i]:Hide()
+			WORLDMAP_TASK_POIS[i]:Hide()
 		end
 		for i = numPOIs + 1, NUM_WORLDMAP_POIS do
-			_G["WorldMapFrameWCLPOI"..i]:Hide()
+			WORLDMAP_POIS[i]:Hide()
 		end
+		NUM_WORLDMAP_TASK_POIS_LAST = taskIconIndex - 1
+		NUM_WORLDMAP_POIS_LAST = numPOIs
 		
 		WorldMap_QuantizeWorldQuestPOIs(worldQuestPOIs,true)
 	end
@@ -1052,7 +1065,8 @@ do
 		UpdatePOIs()
 	end
 	local textureState = true
-	mapChecker:SetScript("OnEvent",function()
+	local prevScale = nil
+	mapChecker:SetScript("OnEvent",function(self,event)
 		if not WorldMapFrame:IsVisible() then
 			return
 		end
@@ -1076,19 +1090,53 @@ do
 			end
 			HidePOIs()
 			bountyPosOverride = nil
+			if mapAreaID == 1170 or mapAreaID == 1171 or mapAreaID == 1135 then
+				if prevUpdatePOIs then
+					prevUpdatePOIs:Cancel()
+				end
+				prevUpdatePOIs = nil
+				prevUpdatePOIsTime = 0			
+			end 
 		end
-	end)
-	hooksecurefunc("WorldMapFrame_UpdateOverlayLocations", function ()
+		
+		--antiErrors
 		if bountyPosOverride then
 			WorldMapFrame_SetOverlayLocation(bountyFrame, bountyPosOverride)
 		end
 	end)
-	hooksecurefunc("WorldMap_QuantizeWorldQuestPOIs", function (_,isMine)
-		if bountyPosOverride and not isMine then
-			UpdatePOIs()
-			--UpdatePOIsTimer()
+	local prev_bonusObjectiveUpdateTimeLeft = 0
+	local antiErrorsFrame = CreateFrame("Frame",nil,WorldMapButton)
+	antiErrorsFrame:SetPoint("TOPLEFT")
+	antiErrorsFrame:SetSize(1,1)
+	antiErrorsFrame:SetScript("OnUpdate",function()
+		if bountyPosOverride then
+			if bountyFrame:GetPoint() ~= "TOPLEFT" then
+				WorldMapFrame_SetOverlayLocation(bountyFrame, bountyPosOverride)
+			end
+			
+			local t = WorldMapFrame.bonusObjectiveUpdateTimeLeft
+			if type(t) == 'number' and type(prev_bonusObjectiveUpdateTimeLeft) == 'number' and t > prev_bonusObjectiveUpdateTimeLeft then
+				local scale = WorldMapDetailFrame:GetScale()
+				if prevScale ~= scale then
+					UpdatePOIsTimer()
+					prevScale = scale
+				else
+					UpdatePOIs()
+				end				
+			end
+			prev_bonusObjectiveUpdateTimeLeft = t
+			
+			local scale = WorldMapDetailFrame:GetScale()
+			if prevScale ~= scale then
+				UpdatePOIsTimer()
+				prevScale = scale
+			else
+				UpdatePOIs()
+			end
 		end
+
 	end)
+
 	local size = 70
 	for i=1,10 do
 		for j=1,15 do
@@ -3765,6 +3813,7 @@ function WorldQuestList_Update(preTaskInfo)
 		end
 	elseif mapAreaID == 1007 then
 		O.isGeneralMap = true
+				
 		taskInfo = {}
 		
 		local _,xR,yT,xL,yB = GetCurrentMapZone()
@@ -3852,23 +3901,6 @@ function WorldQuestList_Update(preTaskInfo)
 		LastUpdateReset()
 	end
 	WorldQuestList_Update_PrevZone = mapAreaID
-	
-	--[[
-	local looseShipments = C_Garrison.GetLooseShipments(3)
-	for i = 1, #looseShipments do
-		local name, texture, shipmentCapacity, shipmentsReady, shipmentsTotal, creationTime, duration, timeleftString = C_Garrison.GetLandingPageShipmentInfoByContainerID(looseShipments[i])
-		if texture == 237446 and creationTime then
-			O.nextResearch = (creationTime + duration - time()) / 60 + 60
-			if O.nextResearch < 0 then
-				O.nextResearch = nil
-			end
-			if shipmentsReady and shipmentsReady > 0 then
-				O.nextResearch = 0
-			end
-			break
-		end
-	end
-	]]
 	
 	O.artifactKnowlegeLevel = WorldQuestList:DetectCurrentAK()
 
@@ -4667,6 +4699,7 @@ C_Timer.NewTicker(.7,function()
 	end
 end)
 
+--[[
 local prevZone
 hooksecurefunc("WorldMap_UpdateQuestBonusObjectives", function ()
 	local currZone = GetCurrentMapAreaID()
@@ -4676,6 +4709,7 @@ hooksecurefunc("WorldMap_UpdateQuestBonusObjectives", function ()
 	prevZone = currZone
 	UpdateTicker = true
 end)
+]]
 --[[
 local WorldMap_UpdateQuestBonusObjectives_Replace = CreateFrame'Frame'
 WorldMap_UpdateQuestBonusObjectives_Replace:RegisterEvent("QUEST_LOG_UPDATE")
@@ -4769,6 +4803,21 @@ WorldMapButton_HookShowHide:SetScript('OnShow',function()
 	end
 	C_Garrison.RequestLandingPageShipmentInfo()
 end)
+local prevZone
+WorldMapButton_HookShowHide:SetScript('OnUpdate',function()
+	local currZone = GetCurrentMapAreaID()
+	if currZone ~= prevZone then
+		WorldQuestList_Update()
+	end
+	prevZone = currZone
+	UpdateTicker = true
+end)
+WorldMapButton_HookShowHide:RegisterEvent("QUEST_LOG_UPDATE")
+WorldMapButton_HookShowHide:SetScript("OnEvent",function()
+	if WorldMapFrame:IsVisible() then
+		UpdateTicker = true
+	end
+end)
 
 SlashCmdList["WQLSlash"] = function(arg)
 	local argL = strlower(arg)
@@ -4797,6 +4846,10 @@ SlashCmdList["WQLSlash"] = function(arg)
 	SetMapToCurrentZone()
 	local currZone = GetCurrentMapAreaID()
 	local isArgus = false
+	if argL == "argus" then
+		SetMapByID(1184)
+		currZone = 1184
+	end
 	if currZone == 1170 or currZone == 1135 or currZone == 1171 or currZone == 1184 or currZone == 1171 then
 		LastUpdateReset()
 		SetMapByID(1184)

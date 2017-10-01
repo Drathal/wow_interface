@@ -1,5 +1,0 @@
-<Bindings>
-    <Binding name="NBAGS_TOGGLE" header="NBAGS" category="ADDONS">
-        ToggleBags()
-    </Binding>
-</Bindings>

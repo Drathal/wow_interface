@@ -7,21 +7,21 @@ local SetCVar = _G.SetCVar
 
 local function ensurePath(tbl, path)
     local p = tbl
-    for _, prop in pairs(path) do 
-        
+    for _, prop in pairs(path) do
+
         if not p[prop] then
             p[prop] = {}
         end
 
         p = p[prop]
     end
-    return p    
-end    
+    return p
+end
 
 local function copyTable(src, dest)
     if type(dest) ~= "table" then dest = {} end
     if type(src) == "table" then
-        for k,v in pairs(src) do
+        for k, v in pairs(src) do
             if type(v) == "table" then
                 v = copyTable(v, dest[k])
             end
@@ -35,76 +35,76 @@ local function setupProfile(src, dest, srcProfile, destProfile)
     if not src or not dest or not srcProfile or not destProfile then return end
     if not dest["profileKeys"] then return end
 
-    dest["profileKeys"][currentChar] = destProfile    
+    dest["profileKeys"][currentChar] = destProfile
 
     local profile = nil
 
     if src["profileKeys"] ~= nil and src["profileKeys"][srcProfile] ~= nil then
         profile = src["profileKeys"][srcProfile]
-    else 
+    else
         profile = srcProfile
     end
 
     return profile
 end
 
-local function copyProfileData(src, dest, path, srcProfile, destProfile) 
-    local newSrc = ensurePath(src, path)         
-    local newDest = ensurePath(dest, path)  
+local function copyProfileData(src, dest, path, srcProfile, destProfile)
+    local newSrc = ensurePath(src, path)
+    local newDest = ensurePath(dest, path)
 
     dest[destProfile] = {}
-    copyTable( 
-        newSrc[srcProfile], 
+    copyTable(
+        newSrc[srcProfile],
         newDest[destProfile]
     );
 end
 
-local function setupDefault(src, dest, srcProfile) 
+local function setupDefault(src, dest, srcProfile)
     if not src or not dest then return end
-    copyProfileData(src, dest, { "profiles" } , srcProfile, baseProfile)
+    copyProfileData(src, dest, { "profiles" }, srcProfile, baseProfile)
 end
 
 local function setupGrid2(src, dest, srcProfile)
-    if not src or not dest then return end    
-    copyProfileData(src, dest, { "namespaces", "Grid2Frame", "profiles" } , srcProfile, baseProfile)
-    copyProfileData(src, dest, { "namespaces", "Grid2Layout", "profiles" } , srcProfile, baseProfile)
-    copyProfileData(src, dest, { "namespaces", "Grid2RaidDebuffs", "profiles" } , srcProfile, baseProfile)
+    if not src or not dest then return end
+    copyProfileData(src, dest, { "namespaces", "Grid2Frame", "profiles" }, srcProfile, baseProfile)
+    copyProfileData(src, dest, { "namespaces", "Grid2Layout", "profiles" }, srcProfile, baseProfile)
+    copyProfileData(src, dest, { "namespaces", "Grid2RaidDebuffs", "profiles" }, srcProfile, baseProfile)
     setupDefault(src, dest, srcProfile)
-    
+
 end
 
-local setups = { 
-    { "Grid2",       "Grid2DB",  "Dronthal - Madmortem", setupGrid2 },
+local setups = {
+    { "Grid2", "Grid2DB", "Dronthal - Madmortem", setupGrid2 },
     { "XIV_Databar", "XIVBarDB", "Dronthal - Madmortem" },
-    { "Skada",       "SkadaDB",  "Dronthal - Madmortem" }    
+    { "Skada", "SkadaDB", "Dronthal - Madmortem" }
 }
 
 local function setup(arg)
 
     print("drathal`s setup")
 
-    
+
 
     local done = nil
-    for _, data in pairs(setups) do 
+    for _, data in pairs(setups) do
 
         local addonName, DBName, srcProfile, setupFunc = unpack(data)
 
-        if arg == "all" or arg == addonName or arg == addonName:lower() then 
+        if arg == "all" or arg == addonName or arg == addonName:lower() then
             print("setup: ", addonName)
             done = true
-            
+
             local profile = setupProfile(_G["setup"..DBName], _G[DBName], srcProfile, baseProfile)
 
             if profile then
                 if setupFunc then
-                    setupFunc(_G["setup"..DBName], _G[DBName], profile)   
+                    setupFunc(_G["setup"..DBName], _G[DBName], profile)
                 else
                     setupDefault(_G["setup"..DBName], _G[DBName], profile)
                 end
             else
                 _G[DBName] = _G["setup"..DBName]
-            end 
+            end
         end
     end
 
@@ -120,13 +120,22 @@ SlashCmdList["DSETUP"] = function(arg)
         print("missing parameter: all or DBName")
         return
     end
-    setup(arg)   
+    setup(arg)
 end
 
 SetCVar("checkAddonVersion", 0)
-SetCVar("floatingCombatTextCombatDamage", 0)
 
+local function events(self, event, unit)
+    if event == "PLAYER_ENTERING_WORLD" then
+        SetCVar("floatingCombatTextCombatDamage", "0")
+    end
+end
 
+local force = CreateFrame("Frame")
+force:RegisterEvent("PLAYER_ENTERING_WORLD")
+force:SetScript("OnEvent", events)
+
+--[[
 ObjectiveTrackerFrame:ClearAllPoints()
 ObjectiveTrackerFrame:SetPoint("TOPRIGHT", ObjectiveFrameHolder, "TOPRIGHT", -100, -260)
 ObjectiveTrackerFrame:SetClampedToScreen(false)
@@ -198,3 +207,4 @@ Loading:SetScript("OnEvent", function(self, event, addon)
         SetupChatFont()
     end
 end)
+]] --

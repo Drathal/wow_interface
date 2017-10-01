@@ -68,6 +68,8 @@ TalentSetManager_CharacterSaves = {
 	},
 	["Drathia-Madmortem"] = {
 		["talents_pvp"] = {
+			[2] = {
+			},
 		},
 		["talents"] = {
 			{

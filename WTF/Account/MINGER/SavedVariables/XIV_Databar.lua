@@ -80,11 +80,11 @@ XIVBarDB = {
 				["daily"] = 0,
 			},
 			["Drathia"] = {
-				["dailyMoney"] = 181475346,
-				["sessionMoney"] = 1254317,
+				["dailyMoney"] = 176383248,
+				["sessionMoney"] = -2991465,
 				["daily"] = 0,
-				["lastLoginDate"] = 20170924,
-				["currentMoney"] = 206949977,
+				["lastLoginDate"] = 20170930,
+				["currentMoney"] = 201857879,
 			},
 			["Mythrilblade"] = {
 				["dailyMoney"] = 35,

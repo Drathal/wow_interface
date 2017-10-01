@@ -20,19 +20,19 @@ CliqueDB3 = {
 			["specswap"] = false,
 		},
 		["Drathia - Madmortem"] = {
+			["alerthidden"] = true,
 			["blacklist"] = {
 				["LSBoss2Frame"] = true,
 				["Boss3TargetFrame"] = true,
 				["Boss1TargetFrame"] = true,
-				["LSBoss3Frame"] = true,
-				["LSTargetTargetFrame"] = true,
-				["LSBoss4Frame"] = true,
-				["LSBoss5Frame"] = true,
 				["Boss2TargetFrame"] = true,
+				["LSTargetTargetFrame"] = true,
+				["LSBoss5Frame"] = true,
+				["LSBoss4Frame"] = true,
+				["LSBoss3Frame"] = true,
 				["Boss4TargetFrame"] = true,
 				["LSBoss1Frame"] = true,
 			},
-			["alerthidden"] = true,
 		},
 		["Dronthal - Madmortem"] = {
 			["spec1_profileKey"] = "Dronthal - Madmortem",
@@ -268,9 +268,9 @@ CliqueDB3 = {
 					["spell"] = "Regrowth",
 					["key"] = "BUTTON2",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136085,
 					["type"] = "spell",
@@ -290,9 +290,9 @@ CliqueDB3 = {
 					["spell"] = "Healing Touch",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136041,
 					["type"] = "spell",
@@ -312,9 +312,9 @@ CliqueDB3 = {
 					["spell"] = "Rejuvenation",
 					["key"] = "BUTTON1",
 					["sets"] = {
-						["default"] = true,
 						["hovercast"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 136081,
 					["type"] = "spell",
@@ -323,10 +323,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -335,10 +335,10 @@ CliqueDB3 = {
 					["spell"] = "Ironbark",
 					["key"] = "MOUSEWHEELDOWN",
 					["sets"] = {
-						["hovercast"] = true,
-						["spec4"] = true,
 						["default"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["hovercast"] = true,
 					},
 					["icon"] = 572025,
 					["type"] = "spell",
@@ -359,10 +359,10 @@ CliqueDB3 = {
 					["spell"] = "Swiftmend",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
-						["friend"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["default"] = true,
+						["friend"] = true,
 					},
 					["icon"] = 134914,
 					["type"] = "spell",
@@ -383,10 +383,10 @@ CliqueDB3 = {
 					["spell"] = "Wild Growth",
 					["key"] = "MOUSEWHEELUP",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["hovercast"] = true,
+						["spec4"] = true,
 						["friend"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236153,
 					["type"] = "spell",
@@ -680,10 +680,10 @@ CliqueDB3 = {
 					["spell"] = "Nature's Cure",
 					["key"] = "ALT-7",
 					["sets"] = {
-						["default"] = true,
-						["spec4"] = true,
 						["friend"] = true,
+						["spec4"] = true,
 						["hovercast"] = true,
+						["default"] = true,
 					},
 					["icon"] = 236288,
 					["type"] = "spell",
@@ -693,99 +693,76 @@ CliqueDB3 = {
 		["Drathia - Madmortem"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
-					["key"] = "ALT-BUTTON1",
+					["type"] = "menu",
+					["key"] = "BUTTON2",
 					["sets"] = {
-						["default"] = true,
+						["friend"] = true,
+						["ooc"] = true,
 					},
 				}, -- [1]
 				{
-					["spell"] = "Holy Word: Sanctify",
+					["type"] = "menu",
 					["key"] = "SHIFT-BUTTON2",
 					["sets"] = {
 						["default"] = true,
 					},
-					["icon"] = 237541,
-					["type"] = "spell",
 				}, -- [2]
 				{
-					["spell"] = "Binding Heal",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 135883,
-					["type"] = "spell",
-				}, -- [3]
-				{
-					["spell"] = "Prayer of Healing",
-					["key"] = "CTRL-BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = 135943,
-					["type"] = "spell",
-				}, -- [4]
-				{
-					["spell"] = "Plea",
+					["type"] = "target",
 					["key"] = "SHIFT-BUTTON1",
 					["sets"] = {
 						["default"] = true,
-						["spec1"] = true,
 					},
-					["icon"] = 1538775,
-					["type"] = "spell",
-				}, -- [5]
-				{
-					["spell"] = "Power Word: Shield",
-					["key"] = "BUTTON1",
-					["sets"] = {
-						["default"] = true,
-						["spec1"] = true,
-					},
-					["icon"] = 135940,
-					["type"] = "spell",
-				}, -- [6]
+				}, -- [3]
 				{
 					["spell"] = "Heal",
-					["key"] = "BUTTON1",
+					["key"] = "BUTTON3",
 					["sets"] = {
 						["default"] = true,
 						["spec2"] = true,
 					},
 					["icon"] = 135913,
 					["type"] = "spell",
-				}, -- [7]
+				}, -- [4]
 				{
 					["spell"] = "Flash Heal",
-					["key"] = "SHIFT-BUTTON1",
+					["key"] = "BUTTON1",
 					["sets"] = {
 						["default"] = true,
 						["spec2"] = true,
 					},
 					["icon"] = 135907,
 					["type"] = "spell",
-				}, -- [8]
+				}, -- [5]
 				{
-					["spell"] = "Shadow Mend",
-					["key"] = "SHIFT-BUTTON2",
+					["spell"] = "Holy Word: Serenity",
+					["key"] = "ALT-BUTTON1",
 					["sets"] = {
 						["default"] = true,
-						["spec1"] = true,
+						["spec2"] = true,
 					},
-					["icon"] = 136202,
+					["icon"] = 135937,
 					["type"] = "spell",
-				}, -- [9]
+				}, -- [6]
 				{
-					["spell"] = "Clarity of Will",
+					["macrotext"] = "#showtooltip\n/cast [@cursor]Holy Word: Sanctify",
+					["type"] = "macro",
+					["key"] = "ALT-BUTTON2",
+					["sets"] = {
+						["default"] = true,
+						["global"] = true,
+						["spec2"] = true,
+					},
+				}, -- [7]
+				{
+					["spell"] = "Prayer of Healing",
 					["key"] = "BUTTON2",
 					["sets"] = {
-						["default"] = true,
-						["spec1"] = true,
+						["friend"] = true,
 					},
-					["icon"] = 1022947,
+					["icon"] = 135943,
 					["type"] = "spell",
-				}, -- [10]
+				}, -- [8]
 			},
 		},
 		["Dranathal - Madmortem"] = {

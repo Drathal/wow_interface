@@ -32,15 +32,16 @@ Grid2DB = {
 						["party"] = "Party",
 					},
 					["BackgroundR"] = 0,
-					["PosX"] = 555.400100254228,
+					["PosX"] = 549.000056696477,
 					["BackgroundG"] = 0,
 					["minimapIcon"] = {
 						["minimapPos"] = 200,
 						["hide"] = true,
 					},
-					["PosY"] = -519.109192257411,
-					["BackgroundB"] = 0,
+					["PosY"] = -489.244087367579,
+					["FrameLock"] = true,
 					["BackgroundA"] = 0,
+					["BackgroundB"] = 0,
 					["BorderTexture"] = "None",
 					["Spacing"] = 4,
 				},
@@ -69,8 +70,6 @@ Grid2DB = {
 		["Grid2Utils"] = {
 		},
 	},
-	["Default"] = {
-	},
 	["profileKeys"] = {
 		["Drathia - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
@@ -80,6 +79,8 @@ Grid2DB = {
 		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Dranathal - Madmortem"] = "Default",
 		["Dranopix - Madmortem"] = "Default",
+	},
+	["Default"] = {
 	},
 	["profiles"] = {
 		["Mythrilblade - Madmortem"] = {
@@ -1114,21 +1115,8 @@ Grid2DB = {
 					["textlength"] = 5,
 					["fontFlags"] = "OUTLINE",
 				},
-				["bar-top"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["location"] = {
-						["y"] = -2,
-						["x"] = 0,
-						["point"] = "TOP",
-						["relPoint"] = "TOP",
-					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
-					["height"] = 5,
-					["texture"] = "Grid2 Flat",
+				["bar-top-right-color"] = {
+					["type"] = "bar-color",
 				},
 				["icon-left"] = {
 					["type"] = "icon",
@@ -1150,15 +1138,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["orientation"] = "HORIZONTAL",
+					["height"] = 5,
+					["level"] = 9,
 					["location"] = {
 						["y"] = 2,
 						["x"] = -2,
 						["point"] = "BOTTOMLEFT",
 						["relPoint"] = "BOTTOMLEFT",
 					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
-					["height"] = 5,
 					["texture"] = "Grid2 Flat",
 				},
 				["indicator-top"] = {
@@ -1196,8 +1184,21 @@ Grid2DB = {
 					["type"] = "icon",
 					["size"] = 13,
 				},
-				["bar-top-right-color"] = {
-					["type"] = "bar-color",
+				["bar-bottom-right"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["orientation"] = "HORIZONTAL",
+					["height"] = 5,
+					["level"] = 9,
+					["location"] = {
+						["y"] = 2,
+						["x"] = -2,
+						["point"] = "BOTTOMRIGHT",
+						["relPoint"] = "BOTTOMRIGHT",
+					},
+					["texture"] = "Grid2 Flat",
 				},
 				["indicator-top-left"] = {
 					["fontSize"] = 8,
@@ -1250,15 +1251,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["orientation"] = "HORIZONTAL",
+					["height"] = 5,
+					["level"] = 9,
 					["location"] = {
 						["y"] = -2,
 						["x"] = 2,
 						["point"] = "TOPLEFT",
 						["relPoint"] = "TOPLEFT",
 					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
-					["height"] = 5,
 					["texture"] = "Grid2 Flat",
 				},
 				["bar-top-left-color"] = {
@@ -1282,27 +1283,24 @@ Grid2DB = {
 						["r"] = 0,
 					},
 				},
-				["heals"] = {
-					["type"] = "bar",
-					["color1"] = {
-						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["anchorTo"] = "health",
-					["location"] = {
-						["y"] = 0,
-						["relPoint"] = "CENTER",
-						["point"] = "CENTER",
-						["x"] = 0,
-					},
-					["level"] = 1,
-					["opacity"] = 0.25,
-					["texture"] = "Grid2 Flat",
-				},
 				["health-color"] = {
 					["type"] = "bar-color",
+				},
+				["bar-top-right"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["orientation"] = "HORIZONTAL",
+					["height"] = 5,
+					["level"] = 9,
+					["location"] = {
+						["y"] = -2,
+						["x"] = -2,
+						["point"] = "TOPRIGHT",
+						["relPoint"] = "TOPRIGHT",
+					},
+					["texture"] = "Grid2 Flat",
 				},
 				["indicator-bottom"] = {
 					["fontSize"] = 8,
@@ -1347,15 +1345,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["orientation"] = "HORIZONTAL",
+					["height"] = 5,
+					["level"] = 9,
 					["location"] = {
 						["y"] = 2,
 						["x"] = 0,
 						["point"] = "BOTTOM",
 						["relPoint"] = "BOTTOM",
 					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
-					["height"] = 5,
 					["texture"] = "Grid2 Flat",
 				},
 				["indicator-top-right"] = {
@@ -1413,20 +1411,23 @@ Grid2DB = {
 					},
 					["texture"] = "Grid2 Flat",
 				},
-				["bar-top-right"] = {
+				["heals"] = {
 					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["location"] = {
-						["y"] = -2,
-						["x"] = -2,
-						["point"] = "TOPRIGHT",
-						["relPoint"] = "TOPRIGHT",
+					["color1"] = {
+						["a"] = 0,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
-					["height"] = 5,
+					["anchorTo"] = "health",
+					["location"] = {
+						["y"] = 0,
+						["relPoint"] = "CENTER",
+						["point"] = "CENTER",
+						["x"] = 0,
+					},
+					["level"] = 1,
+					["opacity"] = 0.25,
 					["texture"] = "Grid2 Flat",
 				},
 				["text-up"] = {
@@ -1447,20 +1448,20 @@ Grid2DB = {
 				["text-up-color"] = {
 					["type"] = "text-color",
 				},
-				["bar-bottom-right"] = {
+				["bar-top"] = {
 					["type"] = "bar",
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
-					["location"] = {
-						["y"] = 2,
-						["x"] = -2,
-						["point"] = "BOTTOMRIGHT",
-						["relPoint"] = "BOTTOMRIGHT",
-					},
 					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
 					["height"] = 5,
+					["level"] = 9,
+					["location"] = {
+						["y"] = -2,
+						["x"] = 0,
+						["point"] = "TOP",
+						["relPoint"] = "TOP",
+					},
 					["texture"] = "Grid2 Flat",
 				},
 				["indicator-bottom-right"] = {
@@ -1572,6 +1573,19 @@ Grid2DB = {
 						["b"] = 0.301960784313726,
 					},
 				},
+				["buff-Vampyr'sKiss-mine"] = {
+					["type"] = "buff",
+					["valueMax"] = 10,
+					["color1"] = {
+						["a"] = 1,
+						["b"] = 0.250980392156863,
+						["g"] = 0.250980392156863,
+						["r"] = 0.658823529411765,
+					},
+					["valueIndex"] = 3,
+					["mine"] = 1,
+					["spellName"] = "Vampyr's Kiss",
+				},
 				["buff-DivineHymn-mine"] = {
 					["spellName"] = 64844,
 					["type"] = "buff",
@@ -1644,6 +1658,7 @@ Grid2DB = {
 					["name"] = 99,
 				},
 				["indicator-bottom-left"] = {
+					["buff-Vampyr'sKiss-mine"] = 51,
 					["buff-EchoofLight-mine"] = 50,
 				},
 				["icon-left"] = {
@@ -1659,6 +1674,7 @@ Grid2DB = {
 					["debuff-Curse"] = 60,
 				},
 				["bar-bottom-left"] = {
+					["buff-Vampyr'sKiss-mine"] = 51,
 					["buff-EchoofLight-mine"] = 50,
 				},
 				["indicator-top"] = {
