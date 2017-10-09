@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 local NS = select( 2, ... );
 local L = NS.localization;
-NS.versionString = "2.05";
+NS.versionString = "2.06";
 NS.version = tonumber( NS.versionString );
 --
 NS.options = {};
@@ -1107,7 +1107,7 @@ end
 NS.AuctionDataGroups_Filter = function( groupKey, FilterFunction, OnGroupsComplete, filterNotMatch, filter )
 	if not filter then return OnGroupsComplete(); end
 	--
-	local groupKeyStart,groupKeyStop,groupBatchNum,groupBatchRetry,filterGroupIds,NextGroup,GroupsComplete;
+	local groupKeyStart,groupKeyStop,groupBatchNum,groupBatchSize,groupBatchRetry,filterGroupIds,NextGroup,GroupsComplete;
 	local groupKeyList = type( groupKey ) == "table" and CopyTable( groupKey ) or nil;
 	local groupKey = not groupKeyList and groupKey or nil;
 	--
@@ -1855,6 +1855,7 @@ function NS.scan:ImportShopData()
 				elseif NS.mode == "PETS" then
 					if itemId == 82800 then
 						-- Battle Pet
+						local _;
 						_,speciesID,petLevel = strsplit( ":", data[itemId][auctionNum][2] ); -- battlepet:0:speciesID:level:breedQuality:maxHealth:power:speed:customName
 						speciesID,petLevel = tonumber( speciesID ), tonumber( petLevel );
 					else

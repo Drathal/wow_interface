@@ -1,5 +1,17 @@
 Changes since tag b2.0.16
 
+commit 531cf7a7e3a7588bda46fad6b6b8d140368b8d3a
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Tue Oct 3 20:04:22 2017 +0200
+
+    Update LibArtifact + fixing #48 + improving #37
+
+commit 531cf7a7e3a7588bda46fad6b6b8d140368b8d3a
+Author: Mikeprod <mikeprod.tm@gmail.com>
+Date:   Tue Oct 3 20:04:22 2017 +0200
+
+    Update LibArtifact + fixing #48 + improving #37
+
 commit c684722596797f0bb4a504096a9a76b640fa2661
 Author: Mikeprod <mikeprod.tm@gmail.com>
 Date:   Tue Aug 29 21:44:54 2017 +0200
