@@ -14,20 +14,22 @@ DraenorTreasuresDB = {
 		["Drathair - Blackhand"] = "base",
 		["Sungleave - Blackhand"] = "Default",
 		["Drathon - Blackhand"] = "base",
-		["Drathia - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Skullflower",
 		["Drahdo - Blackhand"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Dranathal - Madmortem"] = "Default",
-		["Drathtix - Madmortem"] = "Default",
-		["Dronthal - Blackhand"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
-		["Drathol - Blackhand"] = "Default",
 		["Darlaxle - Blackhand"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Drathol - Blackhand"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
+		["Dranathal - Madmortem"] = "Default",
 	},
 	["profiles"] = {
-		["Default"] = {
+		["Skullflower"] = {
 		},
 		["base"] = {
+		},
+		["Default"] = {
 		},
 	},
 }

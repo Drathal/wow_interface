@@ -1,0 +1,73 @@
+
+ElvCharacterDB = {
+	["ChatEditHistory"] = {
+	},
+	["ChatLog"] = {
+		["1508668881.318"] = {
+			"13:30 wäre besser ansonsten müsst ihr ohne mich gehen, ich muss dann noch die Wäsche machen", -- [1]
+			"Lessien-Madmortem", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Lessien", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			81, -- [11]
+			"Player-3696-049A9612", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_GUILD", -- [20]
+		},
+		["1508668829.703"] = {
+			"kk", -- [1]
+			"Cirdan-Madmortem", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Cirdan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			80, -- [11]
+			"Player-3696-049A1100", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_GUILD", -- [20]
+		},
+		["1508668824.12"] = {
+			"würd sagen wir warten bis 13 uhr", -- [1]
+			"Neesh-Madmortem", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Neesh", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			79, -- [11]
+			"Player-3696-05B55673", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_GUILD", -- [20]
+		},
+	},
+}

@@ -376,7 +376,7 @@ BonusRollManagerVariables = {
 			0, -- [9]
 			0, -- [10]
 		},
-		[577] = {
+		[256] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
@@ -400,7 +400,7 @@ BonusRollManagerVariables = {
 			0, -- [9]
 			0, -- [10]
 		},
-		[64] = {
+		[254] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
@@ -424,7 +424,7 @@ BonusRollManagerVariables = {
 			0, -- [9]
 			0, -- [10]
 		},
-		[254] = {
+		[64] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
@@ -436,7 +436,7 @@ BonusRollManagerVariables = {
 			0, -- [9]
 			0, -- [10]
 		},
-		[256] = {
+		[577] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
@@ -459,9 +459,9 @@ BonusRollManagerVariables = {
 		"", -- [1]
 		"", -- [2]
 	},
-	["selectedBosses"] = {
-	},
+	["selectedClass"] = "Select your Class",
 	["BiS"] = {
 	},
-	["selectedClass"] = "Select your Class",
+	["selectedBosses"] = {
+	},
 }

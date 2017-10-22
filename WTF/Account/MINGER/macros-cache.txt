@@ -39,6 +39,9 @@ END
 VER 3 00000000000000AA "Roll dice" "237285"
 /roll
 END
+VER 3 00000000000000C5 "Scale" "237551"
+/run ObjectiveTrackerFrame:SetScale(1.15)
+END
 VER 3 000000000000000F "t all" "INV_Pet_TigerGodCub.blp"
 #show
 /use 13

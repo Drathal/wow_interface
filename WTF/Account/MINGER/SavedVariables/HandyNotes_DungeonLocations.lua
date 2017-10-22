@@ -3,7 +3,7 @@ HandyNotes_DungeonLocationsDB = {
 	["profileKeys"] = {
 		["Darlaxle - Blackhand"] = "Default",
 		["Mythrilblade - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Skullflower",
 		["Dronthal - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
@@ -13,6 +13,8 @@ HandyNotes_DungeonLocationsDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+		},
+		["Skullflower"] = {
 		},
 	},
 }

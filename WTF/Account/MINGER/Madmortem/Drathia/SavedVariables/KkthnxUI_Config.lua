@@ -1,2 +1,2 @@
 
-KkthnxUIConfigPrivate = nil
+KkthnxUIConfigNotShared = nil

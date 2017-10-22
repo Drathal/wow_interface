@@ -1,0 +1,36 @@
+tag 6060f5fb89b0a53328ddba5401b3d12bf09f72fc 1.1.4
+Author:	Kyle Buller <bullerk@gmail.com>
+Date:	Wed Sep 13 21:12:45 2017 -0500
+
+Tagging as 1.1.4
+
+commit d48e7329e3cdbb249d291c5414bf7fe889b4bf92
+Author: Kyle Buller <bullerk@gmail.com>
+Date:   Wed Sep 13 20:51:32 2017 -0500
+
+    Fix registering english instead of the client locale
+
+commit 9e3e72e24ef9de4778bd84cb9cae00f0ebcf2cb9
+Author: Kyle Buller <bullerk@gmail.com>
+Date:   Wed Sep 13 20:50:26 2017 -0500
+
+    Fix resetting countdown voices
+
+commit 76418684e98d8202f7b2190fd6a1679c909f8f9c
+Author: Kyle Buller <bullerk@gmail.com>
+Date:   Wed Sep 13 20:21:48 2017 -0500
+
+    Ignore README.md
+
+commit 1125d05a552c96c3d2dae41532d4e5fcfb9bb387
+Author: Kyle Buller <bullerk@gmail.com>
+Date:   Wed Sep 13 20:01:31 2017 -0500
+
+    Remove old addon check
+
+commit 46d4d2f533eac5f89c7529d692bb947edb6b7387
+Author: Kyle Buller <bullerk@gmail.com>
+Date:   Tue Aug 29 21:33:05 2017 -0500
+
+    Update README.md
+

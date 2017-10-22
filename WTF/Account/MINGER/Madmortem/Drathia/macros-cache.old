@@ -38,9 +38,8 @@ VER 3 0100000000000005 "Levitate" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000007 "Mending" "INV_MISC_QUESTIONMARK"
 #showtooltip Prayer of Mending
-/use 13
-/use 14
-/cast [@mouseover,help,nodead][help,nodead][@player] Jewel of Insatiable Desire
+/use  [@mouseover,help,nodead] 13
+/use [@mouseover,help,nodead] 14
 /cast [@mouseover,help][]Prayer of Mending
 END
 VER 3 0100000000000008 "PoH" "INV_MISC_QUESTIONMARK"

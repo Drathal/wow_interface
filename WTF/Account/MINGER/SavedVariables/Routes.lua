@@ -1,15 +1,5 @@
 
 RoutesDB = {
-	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
-		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
-		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
-		["Drathal - Madmortem"] = "Drathal - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
-		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
-		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
-	},
 	["global"] = {
 		["routes"] = {
 			["BrokenShore"] = {
@@ -762,6 +752,20 @@ RoutesDB = {
 				["two_point_five_opt"] = true,
 			},
 			["width_minimap"] = 32,
+		},
+	},
+	["profileKeys"] = {
+		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
+		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
+		["Drathal - Madmortem"] = "Drathal - Madmortem",
+		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
+		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
+		["Drathia - Madmortem"] = "Skullflower",
+	},
+	["profiles"] = {
+		["Drathia - Madmortem"] = {
 		},
 	},
 }

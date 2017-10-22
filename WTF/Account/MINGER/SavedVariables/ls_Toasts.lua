@@ -1,24 +1,24 @@
 
 LS_TOASTS_GLOBAL_CONFIG = {
 	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Default",
+		["Dranopix - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Drahmoon - Madmortem"] = "Default",
+		["Mythrilblade - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
-		["Mythrilblade - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
-		["Dranopix - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Skullflower",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["point"] = {
 				["y"] = -53,
 			},
-			["version"] = 7030003,
 			["colors"] = {
 				["enabled"] = true,
 			},
+			["version"] = 7030004,
 			["types"] = {
 				["garrison_6_0"] = {
 					["enabled"] = false,
@@ -32,38 +32,78 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
-				["transmog"] = {
+				["world"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
 				["loot_special"] = {
 					["enabled"] = true,
-					["threshold"] = 1,
 					["ilvl"] = true,
 					["dnd"] = false,
+					["threshold"] = 1,
 				},
 				["recipe"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
-				["garrison_7_0"] = {
+				["loot_gold"] = {
 					["enabled"] = true,
-					["dnd"] = true,
+					["dnd"] = false,
+					["threshold"] = 1,
 				},
 				["archaeology"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["achievement"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["collection"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},
 				["loot_common"] = {
 					["threshold"] = 1,
 					["ilvl"] = true,
-					["enabled"] = true,
+					["dnd"] = false,
 					["quest"] = false,
+					["enabled"] = true,
+				},
+				["garrison_7_0"] = {
+					["enabled"] = true,
+					["dnd"] = true,
+				},
+				["transmog"] = {
+					["enabled"] = true,
 					["dnd"] = false,
 				},
-				["collection"] = {
+			},
+		},
+		["Skullflower"] = {
+			["version"] = 7030004,
+			["types"] = {
+				["garrison_6_0"] = {
+					["enabled"] = false,
+					["dnd"] = true,
+				},
+				["loot_currency"] = {
 					["enabled"] = true,
 					["dnd"] = false,
+				},
+				["instance"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["world"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["loot_special"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+					["ilvl"] = true,
+					["threshold"] = 1,
 				},
 				["achievement"] = {
 					["enabled"] = true,
@@ -74,7 +114,30 @@ LS_TOASTS_GLOBAL_CONFIG = {
 					["dnd"] = false,
 					["threshold"] = 1,
 				},
-				["world"] = {
+				["loot_common"] = {
+					["enabled"] = true,
+					["ilvl"] = true,
+					["dnd"] = false,
+					["quest"] = false,
+					["threshold"] = 1,
+				},
+				["recipe"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["collection"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["archaeology"] = {
+					["enabled"] = true,
+					["dnd"] = false,
+				},
+				["garrison_7_0"] = {
+					["enabled"] = true,
+					["dnd"] = true,
+				},
+				["transmog"] = {
 					["enabled"] = true,
 					["dnd"] = false,
 				},

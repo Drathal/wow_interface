@@ -1,10 +1,10 @@
-lightweight tag 77d0eca8a89f63e442fd29f51c5e2c43804aa057 v1.2.7
+lightweight tag 4190d38bb9987ea83a4b6b97b659cba9b3fc866a v1.2.8
 Author:	Saregon <n_rhygar@yahoo.it>
-Date:	Sun Sep 10 06:29:29 2017 +0200
+Date:	Wed Oct 18 16:42:52 2017 +0200
 
-commit 77d0eca8a89f63e442fd29f51c5e2c43804aa057
+commit 4190d38bb9987ea83a4b6b97b659cba9b3fc866a
 Author: Saregon <n_rhygar@yahoo.it>
-Date:   Sun Sep 10 06:29:29 2017 +0200
+Date:   Wed Oct 18 16:42:52 2017 +0200
 
-    icons library update
+    remove search filter character limit
 

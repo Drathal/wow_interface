@@ -4,6 +4,7 @@ PawnOptions = {
 	["LastPlayerFullName"] = "Drathia-Madmortem",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
+	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128868] = {
 			["Relics"] = {
@@ -46,7 +47,7 @@ PawnOptions = {
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 59,
+					["ItemLevel"] = 61,
 					["Type"] = "Life",
 				}, -- [2]
 				{
@@ -57,7 +58,6 @@ PawnOptions = {
 			["Name"] = "T'uure, Beacon of the Naaru",
 		},
 	},
-	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "PRIEST",

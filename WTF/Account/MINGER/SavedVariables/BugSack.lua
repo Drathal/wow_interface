@@ -1,6 +1,6 @@
 
 BugSackDB = {
-	["fontSize"] = "GameFontHighlightSmall",
+	["fontSize"] = "GameFontHighlight",
 	["auto"] = false,
 	["soundMedia"] = "BugSack: Fatality",
 	["mute"] = true,

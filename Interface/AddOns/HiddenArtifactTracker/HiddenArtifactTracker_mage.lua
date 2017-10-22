@@ -78,6 +78,7 @@ for k,v in ipairs(classWeaponQuests[classID]) do
 				["Halls of Valor"]=false,
 				["Maw of Souls"]=false,
 				["Neltharion's Lair"]=false,
+				["Lower Karazhan"]=false,
 				["Return to Karazhan"]=false,
 				["The Arcway"]=false,
 				["Vault of the Wardens"]=false,
@@ -135,7 +136,7 @@ function HiddenArtifactTrackerFuncs.doBossKill(name)
 	end
 
 	local bossKills = {	
-			[EJ_GetEncounterInfo(1697)]="Assault on Violet Hold",		--sael'orn
+			[EJ_GetEncounterInfo(1697)]="Assault on Violet Hold",		--Sael'orn
 			[EJ_GetEncounterInfo(1711)]="Assault on Violet Hold",		--Fel Lord Betrug
 			[EJ_GetEncounterInfo(1672)]="Black Rook Hold",			--Lord Kur'talos Ravencrest
 			[EJ_GetEncounterInfo(1878)]="Cathedral of Eternal Night",	--Mephistroth
@@ -146,6 +147,7 @@ function HiddenArtifactTrackerFuncs.doBossKill(name)
 			[EJ_GetEncounterInfo(1663)]="Maw of Souls",			--Helya
 			[EJ_GetEncounterInfo(1687)]="Neltharion's Lair",		--Dargrul the Underking
 			[EJ_GetEncounterInfo(1838)]="Return to Karazhan",		--Viz'aduum the Watcher
+			[EJ_GetEncounterInfo(1837)]="Lower Karazhan",			--Moroes
 			[EJ_GetEncounterInfo(1501)]="The Arcway",			--Advisor Vandros
 			[EJ_GetEncounterInfo(1470)]="Vault of the Wardens",		--Cordana Felsong
 			[EJ_GetEncounterInfo(1982)]="Seat of the Triumvirate"		--L'ura
@@ -221,6 +223,7 @@ function HiddenArtifactTrackerFuncs.recoverSaveData()
 				["Halls of Valor"]=false,
 				["Maw of Souls"]=false,
 				["Neltharion's Lair"]=false,
+				["Lower Karazhan"]=false,
 				["Return to Karazhan"]=false,
 				["The Arcway"]=false,
 				["Vault of the Wardens"]=false,
@@ -232,7 +235,6 @@ function HiddenArtifactTrackerFuncs.recoverSaveData()
 				if HiddenArtifactTrackerChars[d[2]][k] == nil then
 					if k~="quest" then
 						HiddenArtifactTrackerChars[d[2]][k] = v
-						HiddenArtifactTrackerChars[d[2]]["completion"] = 0
 					else
 						HiddenArtifactTrackerChars[d[2]][k] = d[1]
 					end

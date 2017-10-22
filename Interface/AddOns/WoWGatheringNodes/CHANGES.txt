@@ -1,0 +1,10 @@
+lightweight tag 25e253c519d1de902858ce6971e793be2fda6bbc 10.14.17.A
+Author:	SLOKnightfall <SLOKnightfall@gmail.com>
+Date:	Sat Oct 14 22:03:16 2017 -0700
+
+commit 25e253c519d1de902858ce6971e793be2fda6bbc
+Author: SLOKnightfall <SLOKnightfall@gmail.com>
+Date:   Sat Oct 14 22:03:16 2017 -0700
+
+    - Addon description added to the main LUA file
+

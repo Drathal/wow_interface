@@ -1,7 +1,7 @@
 
 HiddenArtifactTracker = {
-	["advTracking"] = true,
-	["forceTracking"] = false,
 	["colourOptions"] = true,
+	["forceTracking"] = false,
+	["advTracking"] = true,
 	["active"] = true,
 }

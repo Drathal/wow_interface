@@ -1,13 +1,14 @@
 
 XpFlagDB = {
 	["profileKeys"] = {
+		["Dranopix - Madmortem"] = "Default",
 		["Dronthal - Madmortem"] = "Default",
-		["Drathia - Madmortem"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
 		["Drathal - Madmortem"] = "Default",
 		["Mythrilblade - Madmortem"] = "Default",
 		["Dranathal - Madmortem"] = "Default",
-		["Dranopix - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Skullflower",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -18,6 +19,12 @@ XpFlagDB = {
 			["bar"] = {
 				["height"] = 2,
 				["dataSource"] = "dataRep",
+			},
+		},
+		["Skullflower"] = {
+			["mark"] = {
+				["dataSource"] = "dataRep",
+				["size"] = 19,
 			},
 		},
 	},

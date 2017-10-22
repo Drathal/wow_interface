@@ -3,7 +3,7 @@ HandyNotes_LegionTreasuresDB = {
 	["profileKeys"] = {
 		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
 		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Drathia - Madmortem"] = "Skullflower",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
@@ -19,6 +19,8 @@ HandyNotes_LegionTreasuresDB = {
 		["Drathia - Madmortem"] = {
 		},
 		["Dronthal - Madmortem"] = {
+		},
+		["Skullflower"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},

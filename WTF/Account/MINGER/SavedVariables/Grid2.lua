@@ -1115,20 +1115,20 @@ Grid2DB = {
 					["textlength"] = 5,
 					["fontFlags"] = "OUTLINE",
 				},
-				["bar-top"] = {
+				["bar-bottom-right"] = {
 					["type"] = "bar",
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
-					["location"] = {
-						["y"] = -2,
-						["x"] = 0,
-						["point"] = "TOP",
-						["relPoint"] = "TOP",
-					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
 					["height"] = 5,
+					["location"] = {
+						["y"] = 2,
+						["x"] = -2,
+						["point"] = "BOTTOMRIGHT",
+						["relPoint"] = "BOTTOMRIGHT",
+					},
+					["level"] = 9,
+					["orientation"] = "HORIZONTAL",
 					["texture"] = "Grid2 Flat",
 				},
 				["icon-left"] = {
@@ -1151,15 +1151,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["height"] = 5,
 					["location"] = {
 						["y"] = 2,
 						["x"] = -2,
 						["point"] = "BOTTOMLEFT",
 						["relPoint"] = "BOTTOMLEFT",
 					},
-					["orientation"] = "HORIZONTAL",
 					["level"] = 9,
-					["height"] = 5,
+					["orientation"] = "HORIZONTAL",
 					["texture"] = "Grid2 Flat",
 				},
 				["indicator-top"] = {
@@ -1197,8 +1197,21 @@ Grid2DB = {
 					["type"] = "icon",
 					["size"] = 13,
 				},
-				["bar-top-right-color"] = {
-					["type"] = "bar-color",
+				["bar-top"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["height"] = 5,
+					["location"] = {
+						["y"] = -2,
+						["x"] = 0,
+						["point"] = "TOP",
+						["relPoint"] = "TOP",
+					},
+					["level"] = 9,
+					["orientation"] = "HORIZONTAL",
+					["texture"] = "Grid2 Flat",
 				},
 				["indicator-top-left"] = {
 					["fontSize"] = 8,
@@ -1251,15 +1264,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["height"] = 5,
 					["location"] = {
 						["y"] = -2,
 						["x"] = 2,
 						["point"] = "TOPLEFT",
 						["relPoint"] = "TOPLEFT",
 					},
-					["orientation"] = "HORIZONTAL",
 					["level"] = 9,
-					["height"] = 5,
+					["orientation"] = "HORIZONTAL",
 					["texture"] = "Grid2 Flat",
 				},
 				["bar-top-left-color"] = {
@@ -1283,6 +1296,22 @@ Grid2DB = {
 						["r"] = 0,
 					},
 				},
+				["bar-top-right"] = {
+					["type"] = "bar",
+					["opacity"] = 1,
+					["width"] = 10,
+					["duration"] = true,
+					["height"] = 5,
+					["location"] = {
+						["y"] = -2,
+						["x"] = -2,
+						["point"] = "TOPRIGHT",
+						["relPoint"] = "TOPRIGHT",
+					},
+					["level"] = 9,
+					["orientation"] = "HORIZONTAL",
+					["texture"] = "Grid2 Flat",
+				},
 				["heals"] = {
 					["type"] = "bar",
 					["color1"] = {
@@ -1301,9 +1330,6 @@ Grid2DB = {
 					["level"] = 1,
 					["opacity"] = 0.25,
 					["texture"] = "Grid2 Flat",
-				},
-				["health-color"] = {
-					["type"] = "bar-color",
 				},
 				["indicator-bottom"] = {
 					["fontSize"] = 8,
@@ -1348,15 +1374,15 @@ Grid2DB = {
 					["opacity"] = 1,
 					["width"] = 10,
 					["duration"] = true,
+					["height"] = 5,
 					["location"] = {
 						["y"] = 2,
 						["x"] = 0,
 						["point"] = "BOTTOM",
 						["relPoint"] = "BOTTOM",
 					},
-					["orientation"] = "HORIZONTAL",
 					["level"] = 9,
-					["height"] = 5,
+					["orientation"] = "HORIZONTAL",
 					["texture"] = "Grid2 Flat",
 				},
 				["indicator-top-right"] = {
@@ -1414,21 +1440,8 @@ Grid2DB = {
 					},
 					["texture"] = "Grid2 Flat",
 				},
-				["bar-top-right"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["location"] = {
-						["y"] = -2,
-						["x"] = -2,
-						["point"] = "TOPRIGHT",
-						["relPoint"] = "TOPRIGHT",
-					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
-					["height"] = 5,
-					["texture"] = "Grid2 Flat",
+				["health-color"] = {
+					["type"] = "bar-color",
 				},
 				["text-up"] = {
 					["type"] = "text",
@@ -1448,21 +1461,8 @@ Grid2DB = {
 				["text-up-color"] = {
 					["type"] = "text-color",
 				},
-				["bar-bottom-right"] = {
-					["type"] = "bar",
-					["opacity"] = 1,
-					["width"] = 10,
-					["duration"] = true,
-					["location"] = {
-						["y"] = 2,
-						["x"] = -2,
-						["point"] = "BOTTOMRIGHT",
-						["relPoint"] = "BOTTOMRIGHT",
-					},
-					["orientation"] = "HORIZONTAL",
-					["level"] = 9,
-					["height"] = 5,
-					["texture"] = "Grid2 Flat",
+				["bar-top-right-color"] = {
+					["type"] = "bar-color",
 				},
 				["indicator-bottom-right"] = {
 					["fontSize"] = 8,

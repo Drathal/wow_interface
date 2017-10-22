@@ -190,9 +190,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872490.425,
 						["amount"] = -499,
+						["srcname"] = "Mechanized Sentry",
 						["hp"] = 1688,
 						["spellid"] = 88163,
-						["srcname"] = "Mechanized Sentry",
 					}, -- [1]
 					{
 						["absorb"] = 0,
@@ -213,9 +213,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872494.446,
 						["amount"] = -238,
+						["srcname"] = "Mechanized Sentry",
 						["hp"] = 1826,
 						["spellid"] = 88163,
-						["srcname"] = "Mechanized Sentry",
 					}, -- [4]
 					{
 						["absorb"] = 0,
@@ -244,16 +244,16 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872442.685,
 						["amount"] = -75,
+						["srcname"] = "Leprous Assistant",
 						["hp"] = 655,
 						["spellid"] = 88163,
-						["srcname"] = "Leprous Assistant",
 					}, -- [8]
 					{
 						["ts"] = 1503872444.689,
 						["amount"] = -83,
+						["srcname"] = "Leprous Assistant",
 						["hp"] = 508,
 						["spellid"] = 88163,
-						["srcname"] = "Leprous Assistant",
 					}, -- [9]
 					{
 						["absorb"] = 0,
@@ -290,9 +290,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872488.53,
 						["amount"] = -288,
+						["srcname"] = "Mechanized Sentry",
 						["hp"] = 1826,
 						["spellid"] = 88163,
-						["srcname"] = "Mechanized Sentry",
 					}, -- [14]
 					{
 						["absorb"] = 0,
@@ -568,13 +568,6 @@ SkadaPerCharDB = {
 				},
 			}, -- [1]
 			{
-				["ccbreaks"] = 0,
-				["healingabsorbed"] = 0,
-				["ffdamagedone"] = 0,
-				["class"] = "MAGE",
-				["damaged"] = {
-				},
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Brain Freeze"] = {
 						["name"] = "Brain Freeze",
@@ -633,6 +626,13 @@ SkadaPerCharDB = {
 						["school"] = 16,
 					},
 				},
+				["healingabsorbed"] = 0,
+				["ffdamagedone"] = 0,
+				["class"] = "MAGE",
+				["damaged"] = {
+				},
+				["alertDamage"] = 0,
+				["ccbreaks"] = 0,
 				["healingspells"] = {
 					["Heal"] = {
 						["shielding"] = 0,
@@ -817,6 +817,22 @@ SkadaPerCharDB = {
 				["name"] = "Bramý",
 				["damage"] = 142362,
 				["damagespells"] = {
+					["Blizzard"] = {
+						["hitmin"] = 118,
+						["criticalamount"] = 12764,
+						["id"] = 190357,
+						["damage"] = 44335,
+						["max"] = 244,
+						["school"] = 16,
+						["min"] = 118,
+						["criticalmax"] = 244,
+						["hitmax"] = 122,
+						["hit"] = 261,
+						["totalhits"] = 314,
+						["critical"] = 53,
+						["criticalmin"] = 237,
+						["hitamount"] = 31571,
+					},
 					["Frost Nova"] = {
 						["hitmin"] = 37,
 						["criticalamount"] = 76,
@@ -832,22 +848,6 @@ SkadaPerCharDB = {
 						["critical"] = 1,
 						["criticalmin"] = 76,
 						["hitamount"] = 796,
-					},
-					["Flurry"] = {
-						["hitmin"] = 458,
-						["criticalamount"] = 6098,
-						["id"] = 228354,
-						["damage"] = 18997,
-						["max"] = 1408,
-						["school"] = 16,
-						["min"] = 458,
-						["criticalmax"] = 1408,
-						["hitmax"] = 704,
-						["hit"] = 20,
-						["totalhits"] = 25,
-						["critical"] = 5,
-						["criticalmin"] = 938,
-						["hitamount"] = 12899,
 					},
 					["Frostbolt"] = {
 						["hitmin"] = 523,
@@ -882,21 +882,21 @@ SkadaPerCharDB = {
 						["criticalamount"] = 14396,
 						["hitamount"] = 26251,
 					},
-					["Blizzard"] = {
-						["hitmin"] = 118,
-						["criticalamount"] = 12764,
-						["id"] = 190357,
-						["damage"] = 44335,
-						["max"] = 244,
+					["Flurry"] = {
+						["hitmin"] = 458,
+						["criticalamount"] = 6098,
+						["id"] = 228354,
+						["damage"] = 18997,
+						["max"] = 1408,
 						["school"] = 16,
-						["min"] = 118,
-						["criticalmax"] = 244,
-						["hitmax"] = 122,
-						["hit"] = 261,
-						["totalhits"] = 314,
-						["critical"] = 53,
-						["criticalmin"] = 237,
-						["hitamount"] = 31571,
+						["min"] = 458,
+						["criticalmax"] = 1408,
+						["hitmax"] = 704,
+						["hit"] = 20,
+						["totalhits"] = 25,
+						["critical"] = 5,
+						["criticalmin"] = 938,
+						["hitamount"] = 12899,
 					},
 				},
 				["deaths"] = {
@@ -906,37 +906,37 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1503872472.32501,
 								["amount"] = -287,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 2109,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [1]
 							{
 								["ts"] = 1503872473.40002,
 								["amount"] = -229,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 1503,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [2]
 							{
 								["ts"] = 1503872473.93903,
 								["amount"] = -75,
+								["srcname"] = "Mechanized Guardian",
 								["hp"] = 1199,
 								["spellid"] = 11825,
-								["srcname"] = "Mechanized Guardian",
 							}, -- [3]
 							{
 								["ts"] = 1503872474.32704,
 								["amount"] = -327,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 1199,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [4]
 							{
 								["ts"] = 1503872474.98505,
 								["amount"] = -63,
+								["srcname"] = "Leprous Technician",
 								["hp"] = 809,
 								["spellid"] = 13398,
-								["srcname"] = "Leprous Technician",
 							}, -- [5]
 							{
 								["ts"] = 1503872475.08306,
@@ -949,51 +949,51 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1503872475.25007,
 								["amount"] = -93,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 1586,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [7]
 							{
 								["ts"] = 1503872475.41208,
 								["amount"] = -611,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 1586,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [8]
 							{
 								["ts"] = 1503872476.32909,
 								["amount"] = -309,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 882,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [9]
 							{
 								["ts"] = 1503872476.9541,
 								["amount"] = -240,
+								["srcname"] = "Mechanized Guardian",
 								["hp"] = 573,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Guardian",
 							}, -- [10]
 							{
 								["ts"] = 1503872477.20811,
 								["amount"] = -72,
+								["srcname"] = "Leprous Technician",
 								["hp"] = 261,
 								["spellid"] = 13398,
-								["srcname"] = "Leprous Technician",
 							}, -- [11]
 							{
 								["ts"] = 1503872477.25112,
 								["amount"] = -109,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 261,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [12]
 							{
 								["ts"] = 1503872477.41813,
 								["amount"] = -319,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 152,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [13]
 							{
 								["spellname"] = "Bramý dies",
@@ -1004,9 +1004,9 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1503872472.32415,
 								["amount"] = -319,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 2109,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [15]
 							["pos"] = 15,
 						},
@@ -1177,13 +1177,6 @@ SkadaPerCharDB = {
 				},
 			}, -- [2]
 			{
-				["ccbreaks"] = 0,
-				["healingabsorbed"] = 0,
-				["ffdamagedone"] = 0,
-				["class"] = "PALADIN",
-				["damaged"] = {
-				},
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Shield of the Righteous"] = {
 						["uptime"] = 18,
@@ -1226,6 +1219,13 @@ SkadaPerCharDB = {
 						["id"] = 62124,
 					},
 				},
+				["healingabsorbed"] = 0,
+				["ffdamagedone"] = 0,
+				["class"] = "PALADIN",
+				["damaged"] = {
+				},
+				["alertDamage"] = 0,
+				["ccbreaks"] = 0,
 				["healingspells"] = {
 					["Flash of Light"] = {
 						["shielding"] = 0,
@@ -1394,9 +1394,9 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1503872427.74902,
 								["amount"] = -38,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 765,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [2]
 							{
 								["ts"] = 1503872427.74903,
@@ -1441,9 +1441,9 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1503872428.44408,
 								["amount"] = -32,
+								["srcname"] = "Leprous Technician",
 								["hp"] = 610,
 								["spellid"] = 13398,
-								["srcname"] = "Leprous Technician",
 							}, -- [8]
 							{
 								["ts"] = 1503872428.46109,
@@ -1589,9 +1589,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872792.338,
 						["amount"] = -120,
+						["srcname"] = "Mekgineer Thermaplugg",
 						["hp"] = 3439,
 						["spellid"] = 52778,
-						["srcname"] = "Mekgineer Thermaplugg",
 					}, -- [10]
 					{
 						["absorb"] = 0,
@@ -1604,16 +1604,16 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872793.33,
 						["amount"] = -121,
+						["srcname"] = "Mekgineer Thermaplugg",
 						["hp"] = 3911,
 						["spellid"] = 52778,
-						["srcname"] = "Mekgineer Thermaplugg",
 					}, -- [12]
 					{
 						["ts"] = 1503872794.341,
 						["amount"] = -120,
+						["srcname"] = "Mekgineer Thermaplugg",
 						["hp"] = 3791,
 						["spellid"] = 52778,
-						["srcname"] = "Mekgineer Thermaplugg",
 					}, -- [13]
 					{
 						["absorb"] = 0,
@@ -2023,10 +2023,10 @@ SkadaPerCharDB = {
 						["ts"] = 1503872757.88,
 					}, -- [6]
 					{
-						["hp"] = 2904,
-						["ts"] = 1503872414.4,
-						["spellid"] = 88163,
 						["srcname"] = "Mechano-Flamewalker",
+						["ts"] = 1503872414.4,
+						["hp"] = 2904,
+						["spellid"] = 88163,
 					}, -- [7]
 					{
 						["absorb"] = 0,
@@ -2061,10 +2061,10 @@ SkadaPerCharDB = {
 						["absorb"] = 0,
 					}, -- [11]
 					{
-						["hp"] = 2904,
-						["ts"] = 1503872483.322,
-						["spellid"] = 88163,
 						["srcname"] = "Mechanized Guardian",
+						["ts"] = 1503872483.322,
+						["hp"] = 2904,
+						["spellid"] = 88163,
 					}, -- [12]
 					{
 						["ts"] = 1503872485.615,
@@ -2204,13 +2204,6 @@ SkadaPerCharDB = {
 				},
 			}, -- [4]
 			{
-				["ccbreaks"] = 0,
-				["healingabsorbed"] = 0,
-				["ffdamagedone"] = 0,
-				["class"] = "SHAMAN",
-				["damaged"] = {
-				},
-				["alertDamage"] = 299,
 				["auras"] = {
 					["Riptide"] = {
 						["name"] = "Riptide",
@@ -2253,6 +2246,13 @@ SkadaPerCharDB = {
 						["id"] = 225080,
 					},
 				},
+				["healingabsorbed"] = 0,
+				["ffdamagedone"] = 0,
+				["class"] = "SHAMAN",
+				["damaged"] = {
+				},
+				["alertDamage"] = 299,
+				["ccbreaks"] = 0,
 				["healingspells"] = {
 					["Riptide"] = {
 						["shielding"] = 0,
@@ -2355,79 +2355,79 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1503872422.38301,
 								["amount"] = -192,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 1501,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [1]
 							{
 								["ts"] = 1503872422.44802,
 								["amount"] = -228,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 1107,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [2]
 							{
 								["ts"] = 1503872422.66403,
 								["amount"] = -48,
+								["srcname"] = "Leprous Technician",
 								["hp"] = 1059,
 								["spellid"] = 13398,
-								["srcname"] = "Leprous Technician",
 							}, -- [3]
 							{
 								["ts"] = 1503872422.81504,
 								["amount"] = -59,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 1059,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [4]
 							{
 								["ts"] = 1503872423.16505,
 								["amount"] = -249,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 772,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [5]
 							{
 								["ts"] = 1503872423.23106,
 								["amount"] = -191,
+								["srcname"] = "Mechanized Sentry",
 								["hp"] = 772,
 								["spellid"] = 88163,
-								["srcname"] = "Mechanized Sentry",
 							}, -- [6]
 							{
 								["ts"] = 1503872423.23907,
 								["amount"] = -82,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 523,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [7]
 							{
 								["ts"] = 1503872423.23908,
 								["amount"] = -80,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 523,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [8]
 							{
 								["ts"] = 1503872424.02909,
 								["amount"] = -69,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 170,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [9]
 							{
 								["ts"] = 1503872424.0291,
 								["amount"] = -153,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 170,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [10]
 							{
 								["ts"] = 1503872424.02911,
 								["amount"] = -76,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 170,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [11]
 							{
 								["spellname"] = "Dranathal dies",
@@ -2438,23 +2438,23 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1503872422.01913,
 								["amount"] = -62,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 1501,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [13]
 							{
 								["ts"] = 1503872422.01914,
 								["amount"] = -58,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 1501,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [14]
 							{
 								["ts"] = 1503872422.01915,
 								["amount"] = -82,
+								["srcname"] = "Leprous Assistant",
 								["hp"] = 1501,
 								["spellid"] = 88163,
-								["srcname"] = "Leprous Assistant",
 							}, -- [15]
 							["pos"] = 13,
 						},
@@ -2530,9 +2530,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872485.994,
 						["amount"] = -71,
+						["srcname"] = "Leprous Assistant",
 						["hp"] = 3278,
 						["spellid"] = 88163,
-						["srcname"] = "Leprous Assistant",
 					}, -- [1]
 					{
 						["absorb"] = 0,
@@ -2545,9 +2545,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872486.426,
 						["amount"] = -188,
+						["srcname"] = "Mechanized Sentry",
 						["hp"] = 3278,
 						["spellid"] = 88163,
-						["srcname"] = "Mechanized Sentry",
 					}, -- [3]
 					{
 						["absorb"] = 0,
@@ -2560,16 +2560,16 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872488.425,
 						["amount"] = -211,
+						["srcname"] = "Mechanized Sentry",
 						["hp"] = 3278,
 						["spellid"] = 88163,
-						["srcname"] = "Mechanized Sentry",
 					}, -- [5]
 					{
 						["ts"] = 1503872488.604,
 						["amount"] = -49,
+						["srcname"] = "Leprous Technician",
 						["hp"] = 3018,
 						["spellid"] = 13398,
-						["srcname"] = "Leprous Technician",
 					}, -- [6]
 					{
 						["absorb"] = 0,
@@ -2582,9 +2582,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872490.941,
 						["amount"] = -52,
+						["srcname"] = "Leprous Technician",
 						["hp"] = 3226,
 						["spellid"] = 13398,
-						["srcname"] = "Leprous Technician",
 					}, -- [8]
 					{
 						["absorb"] = 0,
@@ -2629,9 +2629,9 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1503872483.976,
 						["amount"] = -82,
+						["srcname"] = "Leprous Assistant",
 						["hp"] = 3278,
 						["spellid"] = 88163,
-						["srcname"] = "Leprous Assistant",
 					}, -- [14]
 					{
 						["absorb"] = 0,
@@ -2818,7 +2818,8 @@ SkadaPerCharDB = {
 				["healingspells"] = {
 				},
 				["damagetaken"] = 0,
-				["shielding"] = 0,
+				["deathlog"] = {
+				},
 				["damage"] = 55,
 				["damagespells"] = {
 					["Attack"] = {
@@ -2837,8 +2838,7 @@ SkadaPerCharDB = {
 				["healing"] = 0,
 				["healed"] = {
 				},
-				["power"] = {
-				},
+				["shielding"] = 0,
 				["id"] = "Beast",
 				["maxhp"] = 0,
 				["name"] = "Beast",
@@ -2849,7 +2849,7 @@ SkadaPerCharDB = {
 				["ffdamagedonetargets"] = {
 				},
 				["alertCount"] = 0,
-				["deathlog"] = {
+				["power"] = {
 				},
 				["overhealing"] = 0,
 				["alert"] = {
@@ -3705,7 +3705,12 @@ SkadaPerCharDB = {
 					},
 				},
 			},
-			["gotboss"] = true,
+			["power"] = {
+				[0] = 161,
+				[82] = 0,
+				[44] = 37,
+				[72] = 10,
+			},
 			["alertCount"] = 0,
 			["damage"] = 32093,
 			["players"] = {
@@ -4512,7 +4517,7 @@ SkadaPerCharDB = {
 			},
 			["deaths"] = 0,
 			["damagetaken"] = 3021,
-			["shielding"] = 283,
+			["gotboss"] = true,
 			["dispells"] = 1,
 			["healing"] = 3122,
 			["overhealing"] = 4482,
@@ -4522,12 +4527,7 @@ SkadaPerCharDB = {
 			},
 			["name"] = "Mekgineer Thermaplugg",
 			["mobname"] = "Mekgineer Thermaplugg",
-			["power"] = {
-				[0] = 161,
-				[82] = 0,
-				[44] = 37,
-				[72] = 10,
-			},
+			["shielding"] = 283,
 			["mobhdone"] = 0,
 			["last_action"] = 1503872777,
 			["endtime"] = 1503872808,
@@ -4940,6 +4940,18 @@ SkadaPerCharDB = {
 					["healing"] = 0,
 					["damage"] = 4516,
 					["damagespells"] = {
+						["Ice Lance"] = {
+							["hitmin"] = 356,
+							["id"] = 228598,
+							["min"] = 356,
+							["damage"] = 721,
+							["hitmax"] = 365,
+							["hit"] = 2,
+							["school"] = 16,
+							["totalhits"] = 2,
+							["max"] = 365,
+							["hitamount"] = 721,
+						},
 						["Flurry"] = {
 							["criticalamount"] = 2815,
 							["id"] = 228354,
@@ -4951,18 +4963,6 @@ SkadaPerCharDB = {
 							["totalhits"] = 2,
 							["max"] = 1408,
 							["damage"] = 2815,
-						},
-						["Blizzard"] = {
-							["hitmin"] = 121,
-							["id"] = 190357,
-							["min"] = 121,
-							["damage"] = 365,
-							["hitmax"] = 122,
-							["hit"] = 3,
-							["school"] = 16,
-							["totalhits"] = 3,
-							["max"] = 122,
-							["hitamount"] = 365,
 						},
 						["Frostbolt"] = {
 							["hitmin"] = 539,
@@ -4988,17 +4988,17 @@ SkadaPerCharDB = {
 							["max"] = 38,
 							["hitamount"] = 76,
 						},
-						["Ice Lance"] = {
-							["hitmin"] = 356,
-							["id"] = 228598,
-							["min"] = 356,
-							["damage"] = 721,
-							["hitmax"] = 365,
-							["hit"] = 2,
+						["Blizzard"] = {
+							["hitmin"] = 121,
+							["id"] = 190357,
+							["min"] = 121,
+							["damage"] = 365,
+							["hitmax"] = 122,
+							["hit"] = 3,
 							["school"] = 16,
-							["totalhits"] = 2,
-							["max"] = 365,
-							["hitamount"] = 721,
+							["totalhits"] = 3,
+							["max"] = 122,
+							["hitamount"] = 365,
 						},
 					},
 					["name"] = "Bramý",
@@ -6155,9 +6155,9 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1503872427.74902,
 									["amount"] = -38,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 765,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [2]
 								{
 									["ts"] = 1503872427.74903,
@@ -6202,9 +6202,9 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1503872428.44408,
 									["amount"] = -32,
+									["srcname"] = "Leprous Technician",
 									["hp"] = 610,
 									["spellid"] = 13398,
-									["srcname"] = "Leprous Technician",
 								}, -- [8]
 								{
 									["ts"] = 1503872428.46109,
@@ -6644,79 +6644,79 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1503872422.38301,
 									["amount"] = -192,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 1501,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [1]
 								{
 									["ts"] = 1503872422.44802,
 									["amount"] = -228,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 1107,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [2]
 								{
 									["ts"] = 1503872422.66403,
 									["amount"] = -48,
+									["srcname"] = "Leprous Technician",
 									["hp"] = 1059,
 									["spellid"] = 13398,
-									["srcname"] = "Leprous Technician",
 								}, -- [3]
 								{
 									["ts"] = 1503872422.81504,
 									["amount"] = -59,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 1059,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [4]
 								{
 									["ts"] = 1503872423.16505,
 									["amount"] = -249,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 772,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [5]
 								{
 									["ts"] = 1503872423.23106,
 									["amount"] = -191,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 772,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [6]
 								{
 									["ts"] = 1503872423.23907,
 									["amount"] = -82,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 523,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [7]
 								{
 									["ts"] = 1503872423.23908,
 									["amount"] = -80,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 523,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [8]
 								{
 									["ts"] = 1503872424.02909,
 									["amount"] = -69,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 170,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [9]
 								{
 									["ts"] = 1503872424.0291,
 									["amount"] = -153,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 170,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [10]
 								{
 									["ts"] = 1503872424.02911,
 									["amount"] = -76,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 170,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [11]
 								{
 									["spellname"] = "Dranathal dies",
@@ -6727,23 +6727,23 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1503872422.01913,
 									["amount"] = -62,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 1501,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [13]
 								{
 									["ts"] = 1503872422.01914,
 									["amount"] = -58,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 1501,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [14]
 								{
 									["ts"] = 1503872422.01915,
 									["amount"] = -82,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 1501,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [15]
 								["pos"] = 13,
 							},
@@ -7282,37 +7282,37 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1503872472.32501,
 									["amount"] = -287,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 2109,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [1]
 								{
 									["ts"] = 1503872473.40002,
 									["amount"] = -229,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 1503,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [2]
 								{
 									["ts"] = 1503872473.93903,
 									["amount"] = -75,
+									["srcname"] = "Mechanized Guardian",
 									["hp"] = 1199,
 									["spellid"] = 11825,
-									["srcname"] = "Mechanized Guardian",
 								}, -- [3]
 								{
 									["ts"] = 1503872474.32704,
 									["amount"] = -327,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 1199,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [4]
 								{
 									["ts"] = 1503872474.98505,
 									["amount"] = -63,
+									["srcname"] = "Leprous Technician",
 									["hp"] = 809,
 									["spellid"] = 13398,
-									["srcname"] = "Leprous Technician",
 								}, -- [5]
 								{
 									["ts"] = 1503872475.08306,
@@ -7325,51 +7325,51 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1503872475.25007,
 									["amount"] = -93,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 1586,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [7]
 								{
 									["ts"] = 1503872475.41208,
 									["amount"] = -611,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 1586,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [8]
 								{
 									["ts"] = 1503872476.32909,
 									["amount"] = -309,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 882,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [9]
 								{
 									["ts"] = 1503872476.9541,
 									["amount"] = -240,
+									["srcname"] = "Mechanized Guardian",
 									["hp"] = 573,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Guardian",
 								}, -- [10]
 								{
 									["ts"] = 1503872477.20811,
 									["amount"] = -72,
+									["srcname"] = "Leprous Technician",
 									["hp"] = 261,
 									["spellid"] = 13398,
-									["srcname"] = "Leprous Technician",
 								}, -- [11]
 								{
 									["ts"] = 1503872477.25112,
 									["amount"] = -109,
+									["srcname"] = "Leprous Assistant",
 									["hp"] = 261,
 									["spellid"] = 88163,
-									["srcname"] = "Leprous Assistant",
 								}, -- [12]
 								{
 									["ts"] = 1503872477.41813,
 									["amount"] = -319,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 152,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [13]
 								{
 									["spellname"] = "Bramý dies",
@@ -7380,9 +7380,9 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1503872472.32415,
 									["amount"] = -319,
+									["srcname"] = "Mechanized Sentry",
 									["hp"] = 2109,
 									["spellid"] = 88163,
-									["srcname"] = "Mechanized Sentry",
 								}, -- [15]
 								["pos"] = 15,
 							},
@@ -8297,7 +8297,9 @@ SkadaPerCharDB = {
 					},
 				},
 			},
-			["gotboss"] = true,
+			["power"] = {
+				[0] = 18,
+			},
 			["alertCount"] = 0,
 			["damage"] = 36308,
 			["players"] = {
@@ -9178,7 +9180,7 @@ SkadaPerCharDB = {
 			},
 			["deaths"] = 0,
 			["damagetaken"] = 2687,
-			["shielding"] = 103,
+			["gotboss"] = true,
 			["dispells"] = 0,
 			["healing"] = 4530,
 			["overhealing"] = 6537,
@@ -9188,9 +9190,7 @@ SkadaPerCharDB = {
 			},
 			["name"] = "Electrocutioner 6000",
 			["mobname"] = "Electrocutioner 6000",
-			["power"] = {
-				[0] = 18,
-			},
+			["shielding"] = 103,
 			["mobhdone"] = 0,
 			["last_action"] = 1503872242,
 			["endtime"] = 1503872295,
@@ -12256,6 +12256,18 @@ SkadaPerCharDB = {
 					["healing"] = 0,
 					["damage"] = 12248,
 					["damagespells"] = {
+						["Frost Nova"] = {
+							["hitmin"] = 37,
+							["id"] = 122,
+							["min"] = 37,
+							["damage"] = 75,
+							["hitmax"] = 38,
+							["hit"] = 2,
+							["school"] = 16,
+							["totalhits"] = 2,
+							["max"] = 38,
+							["hitamount"] = 75,
+						},
 						["Blizzard"] = {
 							["hitmin"] = 118,
 							["criticalamount"] = 237,
@@ -12271,18 +12283,6 @@ SkadaPerCharDB = {
 							["hitmax"] = 119,
 							["criticalmin"] = 237,
 							["hitamount"] = 831,
-						},
-						["Flurry"] = {
-							["hitmin"] = 687,
-							["id"] = 228354,
-							["min"] = 687,
-							["damage"] = 1374,
-							["hitmax"] = 687,
-							["hit"] = 2,
-							["school"] = 16,
-							["totalhits"] = 2,
-							["max"] = 687,
-							["hitamount"] = 1374,
 						},
 						["Frostbolt"] = {
 							["hitmin"] = 525,
@@ -12316,17 +12316,17 @@ SkadaPerCharDB = {
 							["criticalmin"] = 746,
 							["hitamount"] = 2187,
 						},
-						["Frost Nova"] = {
-							["hitmin"] = 37,
-							["id"] = 122,
-							["min"] = 37,
-							["damage"] = 75,
-							["hitmax"] = 38,
+						["Flurry"] = {
+							["hitmin"] = 687,
+							["id"] = 228354,
+							["min"] = 687,
+							["damage"] = 1374,
+							["hitmax"] = 687,
 							["hit"] = 2,
 							["school"] = 16,
 							["totalhits"] = 2,
-							["max"] = 38,
-							["hitamount"] = 75,
+							["max"] = 687,
+							["hitamount"] = 1374,
 						},
 					},
 					["name"] = "Bramý",

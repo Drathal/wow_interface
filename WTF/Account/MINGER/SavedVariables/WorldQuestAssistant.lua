@@ -5,7 +5,7 @@ WorldQuestAssistantDB = {
 		},
 	},
 	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Skullflower",
 		["Dronthal - Madmortem"] = "Default",
 		["Mythrilblade - Madmortem"] = "Default",
 		["Drathtix - Madmortem"] = "Default",
@@ -16,6 +16,8 @@ WorldQuestAssistantDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+		},
+		["Skullflower"] = {
 		},
 	},
 }

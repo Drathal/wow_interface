@@ -4,5 +4,5 @@ LFRAdvancedOptions = {
 	["ShowMemberInfo"] = true,
 	["HideLegionHeroics"] = false,
 	["HideLegionNormals"] = false,
-	["LastSearchText"] = "",
+	["LastSearchText"] = "Agmozuul",
 }

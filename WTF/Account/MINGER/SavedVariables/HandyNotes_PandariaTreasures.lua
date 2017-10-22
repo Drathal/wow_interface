@@ -12,19 +12,21 @@ PandariaTreasuresDB = {
 		["Darlaxle - Blackhand"] = "Default",
 		["Sungleave - Blackhand"] = "Default",
 		["Drathon - Blackhand"] = "base",
-		["Drathia - Madmortem"] = "Default",
+		["Drathia - Madmortem"] = "Skullflower",
 		["Dronthal - Madmortem"] = "Default",
-		["Dranathal - Madmortem"] = "Default",
-		["Drathtix - Madmortem"] = "Default",
-		["Drathair - Blackhand"] = "base",
-		["Drahmoon - Madmortem"] = "Default",
-		["Dronthal - Blackhand"] = "Default",
 		["Draltar - Blackhand"] = "Default",
+		["Drathtix - Madmortem"] = "Default",
+		["Dronthal - Blackhand"] = "Default",
+		["Drahmoon - Madmortem"] = "Default",
+		["Drathair - Blackhand"] = "base",
+		["Dranathal - Madmortem"] = "Default",
 	},
 	["profiles"] = {
-		["Default"] = {
+		["Skullflower"] = {
 		},
 		["base"] = {
+		},
+		["Default"] = {
 		},
 	},
 }

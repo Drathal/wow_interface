@@ -115,6 +115,22 @@ local artNumbers = {
 	[128288] = "Scaleshard"
 	}
 
+local localisedDungeons = {
+				["Assault on Violet Hold"]=GetLFGDungeonInfo(1209),
+				["Black Rook Hold"]=GetLFGDungeonInfo(1205),
+				["Cathedral of Eternal Night"]=GetLFGDungeonInfo(1488),
+				["Court of Stars"]=GetLFGDungeonInfo(1318),
+				["Darkheart Thicket"]=GetLFGDungeonInfo(1202),
+				["Eye of Azshara"]=GetLFGDungeonInfo(1175),
+				["Halls of Valor"]=GetLFGDungeonInfo(1194),
+				["Maw of Souls"]=GetLFGDungeonInfo(1192),
+				["Neltharion's Lair"]=GetLFGDungeonInfo(1207),
+				["Lower Karazhan"]=GetLFGDungeonInfo(1475),
+				["Return to Karazhan"]=GetLFGDungeonInfo(1474),
+				["The Arcway"]=GetLFGDungeonInfo(1190),
+				["Vault of the Wardens"]=GetLFGDungeonInfo(1044),
+				["Seat of the Triumvirate"]=GetLFGDungeonInfo(1535)
+			}
 
 SLASH_HIDDENAT1 = '/hat'
 function SlashCmdList.HIDDENAT(msg, editbox)
@@ -289,12 +305,12 @@ GameTooltip:SetScript("OnTooltipSetItem",
 						if k ~= "rbg" and k ~= "completion" and k ~= "quest" then
 							if v==false then
 								if HiddenArtifactTracker.colourOptions then
-								GameTooltip:AddLine(k, 1,0,0,True)
+								GameTooltip:AddLine(localisedDungeons[k], 1,0,0,True)
 							else
-								GameTooltip:AddLine(k.." is available.", 1,1,1,True)
+								GameTooltip:AddLine(localisedDungeons[k].." is available.", 1,1,1,True)
 							end
 							elseif v==true and HiddenArtifactTracker.colourOptions then
-								GameTooltip:AddLine(k, 0,1,0,True)
+								GameTooltip:AddLine(localisedDungeons[k], 0,1,0,True)
 							end
 						end
 					end

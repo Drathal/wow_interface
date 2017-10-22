@@ -40,12 +40,15 @@ VER 3 0100000000000007 "Mending" "INV_MISC_QUESTIONMARK"
 #showtooltip Prayer of Mending
 /use  [@mouseover,help,nodead] 13
 /use [@mouseover,help,nodead] 14
-/cast [@mouseover,help,nodead][help,nodead][@player] Jewel of Insatiable Desire
 /cast [@mouseover,help][]Prayer of Mending
 END
 VER 3 0100000000000008 "PoH" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Prayer of Healing
+END
+VER 3 0100000000000015 "Purify" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Purify
 END
 VER 3 010000000000000D "Renew" "INV_MISC_QUESTIONMARK"
 #showtooltip

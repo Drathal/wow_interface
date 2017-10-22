@@ -1,56 +1,115 @@
 
-KkthnxUIConfigAll = {
+KkthnxUIConfigShared = {
+	["Account"] = {
+	},
 	["Madmortem"] = {
-		["Drathtix"] = false,
-		["Drathia"] = false,
-		["Dranathal"] = false,
-		["Mythrilblade"] = false,
-		["Dranopix"] = false,
-		["Drahmoon"] = false,
-		["Dronthal"] = false,
-		["Drathal"] = false,
-	},
-}
-KkthnxUIConfigPublic = {
-	["Nameplates"] = {
-		["Clamp"] = true,
-		["EnhancedThreat"] = true,
-		["AdditionalSize"] = 0,
-		["Width"] = 100,
-		["HealerIcon"] = true,
-		["Height"] = 8,
-		["Smooth"] = true,
-		["HealthValue"] = false,
-		["AurasSize"] = 22,
-	},
-	["Blizzard"] = {
-		["TexturesColor"] = {
-			0.188235294117647, -- [1]
-			0.188235294117647, -- [2]
-			0.188235294117647, -- [3]
-			1, -- [4]
+		["Drathia"] = {
+			["Misc"] = {
+				["ItemLevel"] = true,
+				["AFKCamera"] = true,
+				["UseGuildRepairFunds"] = true,
+				["AutoReward"] = true,
+				["SlotDurability"] = true,
+				["ColorPicker"] = true,
+				["BattlegroundSpam"] = true,
+				["EnhancedPvpMessages"] = true,
+			},
+			["General"] = {
+				["BubbleFontSize"] = 12,
+				["FontSize"] = 12,
+				["UIScale"] = 0.71,
+				["NumberPrefixStyle"] = {
+					["Options"] = {
+						["German"] = "GERMAN",
+						["Default"] = "DEFAULT",
+						["Chinese"] = "CHINESE",
+						["Metric"] = "METRIC",
+						["Korean"] = "KOREAN",
+					},
+					["Value"] = "GERMAN",
+				},
+				["DisableTutorialButtons"] = true,
+				["SpellTolerance"] = true,
+				["TalkingHeadScale"] = 1,
+			},
+			["Bags"] = {
+				["ItemLevel"] = true,
+				["Enable"] = false,
+			},
+			["ActionBar"] = {
+				["ToggleMode"] = false,
+				["ButtonSpace"] = 4,
+				["Macro"] = false,
+				["EquipBorder"] = true,
+				["RightBars"] = 2,
+				["BottomBars"] = 3,
+			},
+			["Loot"] = {
+				["AutoRoll"] = true,
+			},
+			["Automation"] = {
+				["DeclinePvPDuel"] = true,
+				["AutoResurrectThank"] = true,
+				["DeclinePetDuel"] = true,
+				["ScreenShot"] = true,
+			},
+			["Skins"] = {
+				["WeakAuras"] = true,
+				["Skada"] = true,
+				["Spy"] = true,
+				["DBM"] = true,
+			},
+			["Tooltip"] = {
+				["FontOutline"] = true,
+				["HealthBarText"] = false,
+				["Icons"] = true,
+				["PlayerTitles"] = true,
+				["GuildRanks"] = true,
+			},
+			["Raidframe"] = {
+				["Enable"] = false,
+			},
+			["Announcements"] = {
+				["Interrupt"] = {
+					["Options"] = {
+						["Disabled"] = "NONE",
+						["Emote Chat"] = "EMOTE",
+						["Party Chat"] = "PARTY",
+						["Raid Chat"] = "RAID",
+						["Say Chat"] = "SAY",
+						["Raid Chat Only"] = "RAID_ONLY",
+					},
+					["Value"] = "NONE",
+				},
+			},
+			["Unitframe"] = {
+				["CastbarTicks"] = true,
+				["GCDBar"] = true,
+				["PortraitStyle"] = {
+					["Options"] = {
+						["3D Portraits"] = "ThreeDPortraits",
+						["Class Portraits"] = "ClassPortraits",
+						["Default Portraits"] = "DefaultPortraits",
+					},
+					["Value"] = "ThreeDPortraits",
+				},
+				["Smooth"] = true,
+			},
+			["DataText"] = {
+				["LocalTime"] = false,
+				["System"] = false,
+			},
+			["Minimap"] = {
+				["Size"] = 200,
+				["ResetZoom"] = true,
+			},
+			["Chat"] = {
+				["Outline"] = true,
+				["TabsOutline"] = true,
+				["MessageFilter"] = true,
+				["SpamFilter"] = true,
+			},
 		},
 	},
-	["Bags"] = {
-		["Spacing"] = 2,
-		["SortRightToLeft"] = true,
-	},
-	["Tooltip"] = {
-		["HealthValue"] = false,
-		["Talents"] = true,
-		["ItemIcon"] = true,
-	},
-	["Raidframe"] = {
-		["Outline"] = true,
-		["ShowMouseoverHighlight"] = false,
-		["Width"] = 70,
-		["RaidAsParty"] = true,
-		["IconSize"] = 16,
-		["ShowRolePrefix"] = true,
-		["MainTankFrames"] = false,
-		["Height"] = 30,
-		["ShowThreatText"] = true,
-		["ManabarShow"] = false,
-		["Smooth"] = true,
-	},
 }
+KkthnxUIConfigPerAccount = nil

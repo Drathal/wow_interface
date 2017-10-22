@@ -1,10 +1,16 @@
-lightweight tag f3719c3aa8bda9c14ba47d012a2df13d5331f1e6 v0.1.7
+lightweight tag 777507640b152c5eee9d15824dc6b23d3b147949 v0.1.8
 Author:	Saregon <n_rhygar@yahoo.it>
-Date:	Tue Sep 19 10:58:03 2017 +0200
+Date:	Mon Oct 16 21:09:16 2017 +0200
 
-commit f3719c3aa8bda9c14ba47d012a2df13d5331f1e6
+commit 777507640b152c5eee9d15824dc6b23d3b147949
 Author: Saregon <n_rhygar@yahoo.it>
-Date:   Tue Sep 19 10:58:03 2017 +0200
+Date:   Mon Oct 16 21:09:16 2017 +0200
 
-    localization update
+    repository change
+
+commit 3d76e0202c331bc658458804f955ee49b0576410
+Author: Saregon <n_rhygar@yahoo.it>
+Date:   Mon Oct 16 21:07:17 2017 +0200
+
+    add blockade markers
 

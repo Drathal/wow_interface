@@ -1,21 +1,23 @@
 
 HandyNotes_SuramarShalAranTelemancyDB = {
 	["profileKeys"] = {
-		["Drathia - Madmortem"] = "Drathia - Madmortem",
+		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
 		["Dronthal - Madmortem"] = "Dronthal - Madmortem",
-		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
+		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
 		["Drathtix - Madmortem"] = "Drathtix - Madmortem",
 		["Drathal - Madmortem"] = "Drathal - Madmortem",
-		["Drahmoon - Madmortem"] = "Drahmoon - Madmortem",
+		["Mythrilblade - Madmortem"] = "Mythrilblade - Madmortem",
 		["Dranathal - Madmortem"] = "Dranathal - Madmortem",
-		["Dranopix - Madmortem"] = "Dranopix - Madmortem",
+		["Drathia - Madmortem"] = "Skullflower",
 	},
 	["profiles"] = {
+		["Mythrilblade - Madmortem"] = {
+		},
 		["Drathia - Madmortem"] = {
 		},
 		["Dronthal - Madmortem"] = {
 		},
-		["Mythrilblade - Madmortem"] = {
+		["Skullflower"] = {
 		},
 		["Drathtix - Madmortem"] = {
 		},
