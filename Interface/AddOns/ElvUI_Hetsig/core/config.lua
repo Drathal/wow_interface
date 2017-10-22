@@ -363,27 +363,24 @@ function HetsigInstall:ElvUI(theme)
 		E.db["general"]["minimap"]["icons"]["classHall"]["position"] = "BOTTOMRIGHT"
 		E.db["general"]["minimap"]["icons"]["vehicleLeave"]["size"] = 25
 		E.db["general"]["bottomPanel"] = false
-		E.db["general"]["backdropfadecolor"]["a"] = 0.9
-		E.db["general"]["backdropfadecolor"]["b"] = 0.070588235294118
-		E.db["general"]["backdropfadecolor"]["g"] = 0.070588235294118
-		E.db["general"]["backdropfadecolor"]["r"] = 0.070588235294118
+		E.db["general"]["backdropfadecolor"]["a"] = 0.8
+		E.db["general"]["backdropfadecolor"]["b"] = 0
+		E.db["general"]["backdropfadecolor"]["g"] = 0
+		E.db["general"]["backdropfadecolor"]["r"] = 0
 		E.db["general"]["objectiveFrameHeight"] = 500
 		E.db["general"]["chatBubbleFont"] = "Friz Quadrata TT"
 		E.db["general"]["dmgfont"] = "Friz Quadrata TT"
 		E.db["general"]["loginmessage"] = false
 		E.db["general"]["threat"]["enable"] = false
 		E.db["general"]["threat"]["position"] = "LEFTCHAT"
-		E.db["general"]["backdropcolor"]["b"] = 0.070588235294118
-		E.db["general"]["backdropcolor"]["g"] = 0.070588235294118
-		E.db["general"]["backdropcolor"]["r"] = 0.070588235294118
+		E.db["general"]["backdropcolor"]["b"] = 0.0470588235294118
+		E.db["general"]["backdropcolor"]["g"] = 0.0470588235294118
+		E.db["general"]["backdropcolor"]["r"] = 0.0470588235294118
 		E.db["general"]["vendorGrays"] = true
 		E.db["general"]["bordercolor"]["b"] = 0
 		E.db["general"]["bordercolor"]["g"] = 0
 		E.db["general"]["bordercolor"]["r"] = 0
 		E.db["general"]["font"] = "Friz Quadrata TT"
-		E.db["general"]["valuecolor"]["b"] = 0.93
-		E.db["general"]["valuecolor"]["g"] = 0.53
-		E.db["general"]["valuecolor"]["r"] = 0.53
 		E.db["general"]["namefont"] = "Friz Quadrata TT"
 		E.db["general"]["topPanel"] = false
 		E.db["general"]["talkingHeadFrameScale"] = 0.7		
@@ -404,16 +401,16 @@ function HetsigInstall:ElvUI(theme)
 		E.db["bags"]["bagWidth"] = 380
 		E.db["tooltip"]["itemCount"] = "NONE"
 		E.db["tooltip"]["healthBar"]["height"] = 10
-		E.db["tooltip"]["healthBar"]["fontSize"] = 12
-		E.db["tooltip"]["healthBar"]["fontSIze"] = 11
+		E.db["tooltip"]["healthBar"]["fontSize"] = 11
 		E.db["tooltip"]["healthBar"]["font"] = "Friz Quadrata TT"
-		E.db["tooltip"]["headerFontSize"] = 11
+		E.db["tooltip"]["fontOutline"] = "OUTLINE"
+		E.db["tooltip"]["headerFontSize"] = 12
 		E.db["tooltip"]["textFontSize"] = 11
 		E.db["tooltip"]["font"] = "Friz Quadrata TT"
 		E.db["tooltip"]["smallTextFontSize"] = 11
 		E.db["tooltip"]["targetInfo"] = false
 		E.db["tooltip"]["guildRanks"] = false
-		E.db["tooltip"]["spellID"] = false
+		E.db["tooltip"]["spellID"] = true
 		E.db["auras"]["debuffs"]["horizontalSpacing"] = 1
 		E.db["auras"]["debuffs"]["maxWraps"] = 2
 		E.db["auras"]["fontOutline"] = "OUTLINE"
@@ -801,6 +798,13 @@ function HetsigInstall:ElvUI(theme)
 		E.db["bagSortIgnoreItemsReset"] = true
 		E.db["hideTutorial"] = true
 
+		E.db["general"]["valuecolor"] = {
+			["a"] = 1,
+			["r"] = 0.164705882352941,
+			["g"] = 0.733333333333333,
+			["b"] = 0.988235294117647,
+		}
+
 		E.global["general"]["disableOrderHallBar"] = true
 		E.global["general"]["autoScale"] = false
 		E.global["general"]["animateConfig"] = false
@@ -810,6 +814,7 @@ function HetsigInstall:ElvUI(theme)
 		E.global["uiScale"] = "0.71111111111111"
 		E.global["unitframe"]["ChannelTicks"]["Penance"] = 3
 		E.global["userInformedNewChanges1"] = true
+
 
 		E.private["general"]["autorepchange"] = true
 
