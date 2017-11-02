@@ -46,6 +46,10 @@ VER 3 0100000000000008 "PoH" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Prayer of Healing
 END
+VER 3 0100000000000015 "Purify" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][@target,help][]Purify
+END
 VER 3 010000000000000D "Renew" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Renew
@@ -53,6 +57,10 @@ END
 VER 3 010000000000000A "Serenity" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Holy Word: Serenity
+END
+VER 3 0100000000000016 "Shakle" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover][@target]Shackle Undead
 END
 VER 3 0100000000000014 "Smite" "INV_MISC_QUESTIONMARK"
 #showtoolip

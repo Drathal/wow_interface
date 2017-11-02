@@ -1,0 +1,12 @@
+## Interface: 70300
+## Title: |cff1784d1ElvUI |r|cff9482C9Drathal UI|r
+## Version: 1.1.0
+## RequiredDeps: ElvUI
+
+core\addonsettings.lua
+core\install.lua
+core\config.lua
+core\math.lua
+media\load_media.xml
+modules\load_modules.xml
+tweaks\hide-mana.lua

@@ -16,10 +16,10 @@ AdiBagsDB = {
 					["overrides"] = {
 						[132457] = "Equipment#Legenday",
 						[146666] = "Equipment#Legenday",
-						[128941] = "Equipment#Legenday",
 						[23247] = "Quest#Quest",
+						[128941] = "Equipment#Legenday",
 						[128943] = "Equipment#Legenday",
-						[144259] = "Equipment#Legenday",
+						[128823] = "Equipment#Legenday",
 						[138111] = "Quest#Quest",
 						[120978] = "Equipment#Legenday",
 						[141190] = "Quest#Quest",
@@ -28,7 +28,7 @@ AdiBagsDB = {
 						[138019] = "Quest#Quest",
 						[141652] = "Quest#Quest",
 						[153005] = "Champion Upgrades#Champion Upgrades",
-						[128823] = "Equipment#Legenday",
+						[144259] = "Equipment#Legenday",
 					},
 				},
 				["Skullflower"] = {
@@ -122,18 +122,18 @@ AdiBagsDB = {
 					["shown"] = {
 						["Ancient Mana"] = false,
 						["Elder Charm of Good Fortune"] = false,
-						["Seal of Inevitable Fate"] = false,
+						["Garrison Resources"] = false,
 						["Writhing Essence"] = false,
 						["Lesser Charm of Good Fortune"] = false,
-						["Curious Coin"] = false,
+						["Oil"] = false,
 						["Sightless Eye"] = false,
 						["Timeless Coin"] = false,
-						["Oil"] = false,
+						["Curious Coin"] = false,
 						["Apexis Crystal"] = false,
 						["Darkmoon Prize Ticket"] = false,
 						["Warforged Seal"] = false,
 						["Ironpaw Token"] = false,
-						["Garrison Resources"] = false,
+						["Seal of Inevitable Fate"] = false,
 						["Lingering Soul Fragment"] = false,
 						["Timewarped Badge"] = false,
 					},
@@ -188,12 +188,12 @@ AdiBagsDB = {
 		["Drahmoon - Madmortem"] = {
 			["collapsedSections"] = {
 				["Broken Shore#Broken Shore"] = true,
-				["Hearthstones#Hearthstones"] = true,
 				["Equipment#Set: AMR Affliction"] = true,
+				["Junk#Junk"] = true,
 				["Equipment#Set: AMR Destruction"] = true,
 				["Equipment#Legenday"] = true,
 				["Equipment#Set: AMR Demonology"] = true,
-				["Junk#Junk"] = true,
+				["Hearthstones#Hearthstones"] = true,
 			},
 		},
 	},
@@ -250,8 +250,9 @@ AdiBagsDB = {
 		["Skullflower"] = {
 			["showBagType"] = false,
 			["virtualStacks"] = {
-				["stackable"] = true,
+				["notWhenTrading"] = 2,
 				["others"] = true,
+				["stackable"] = true,
 			},
 			["columnWidth"] = {
 				["Backpack"] = 5,
@@ -269,8 +270,13 @@ AdiBagsDB = {
 			["autoDeposit"] = true,
 			["positions"] = {
 				["Backpack"] = {
-					["xOffset"] = -101.000754144799,
-					["yOffset"] = 197.999893087147,
+					["xOffset"] = -116.00058489904,
+					["yOffset"] = 142.999979427126,
+				},
+				["Bank"] = {
+					["xOffset"] = -533.700329693151,
+					["point"] = "TOPRIGHT",
+					["yOffset"] = -115.999708154472,
 				},
 			},
 			["positionMode"] = "manual",

@@ -1,3 +1,9 @@
+commit c806e138d2a10e0f32197850b2587f061e9e2909
+Author: TOM_RUS <tom_rus@github.com>
+Date:   Thu Oct 26 17:22:22 2017 +0300
+
+    toc bump
+
 commit 974cae9b86b79ed54ab35ca144785a2aff88e3bc
 Author: TOM_RUS <tom_rus@github.com>
 Date:   Wed Aug 30 13:17:51 2017 +0300
@@ -610,10 +616,4 @@ Author: TOM_RUS <tom_rus@github.com>
 Date:   Wed Dec 11 14:52:35 2013 +0400
 
     Fix tooltip
-
-commit 98a1e193df2f56f7bab3f4d4657f3f1b849767d7
-Author: TOM_RUS <tom_rus@github.com>
-Date:   Wed Dec 11 00:12:27 2013 +0400
-
-    Group ilvl tweak
 

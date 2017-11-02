@@ -1,7 +1,7 @@
 VER 3 0100000000000012 "Chastise" "INV_MISC_QUESTIONMARK"
-#showtoolip
+#showtooltip
 /startattack
-/use Holy Word: Chastise
+/cast Holy Word: Chastise
 END
 VER 3 010000000000000C "Feather" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -57,6 +57,10 @@ END
 VER 3 010000000000000A "Serenity" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [@mouseover,help][@target,help][]Holy Word: Serenity
+END
+VER 3 0100000000000016 "Shakle" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover][@target]Shackle Undead
 END
 VER 3 0100000000000014 "Smite" "INV_MISC_QUESTIONMARK"
 #showtoolip

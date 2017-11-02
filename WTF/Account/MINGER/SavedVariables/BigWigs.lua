@@ -1,5 +1,14 @@
 
 BigWigs3DB = {
+	["profileKeys"] = {
+		["Dronthal - Madmortem"] = "Hetsig",
+		["Dranopix - Madmortem"] = "Hetsig",
+		["Drathtix - Madmortem"] = "Hetsig",
+		["Drathal - Madmortem"] = "Hetsig",
+		["Drahmoon - Madmortem"] = "Hetsig",
+		["Dranathal - Madmortem"] = "Hetsig",
+		["Drathia - Madmortem"] = "Hetsig",
+	},
 	["namespaces"] = {
 		["BigWigs_Plugins_Victory"] = {
 		},
@@ -10,8 +19,8 @@ BigWigs3DB = {
 					["fontSize"] = 11.0000009536743,
 					["disabled"] = true,
 					["fontOutline"] = "",
-					["font"] = "Friz Quadrata TT",
 					["posy"] = 472.88903054794,
+					["font"] = "Friz Quadrata TT",
 				},
 			},
 		},
@@ -50,14 +59,14 @@ BigWigs3DB = {
 					["BigWigsEmphasizeAnchor_width"] = 203.000076293945,
 					["BigWigsEmphasizeAnchor_x"] = 839.111044624115,
 					["font"] = "Friz Quadrata TT",
-					["interceptKey"] = "SHIFT",
+					["BigWigsEmphasizeAnchor_y"] = 38.3997269497911,
 					["interceptMouse"] = true,
 					["MiddleButton"] = {
 						["remove"] = false,
 					},
 					["onlyInterceptOnKeypress"] = true,
 					["emphasizeScale"] = 1,
-					["BigWigsEmphasizeAnchor_y"] = 38.3997269497911,
+					["interceptKey"] = "SHIFT",
 				},
 			},
 		},
@@ -73,6 +82,8 @@ BigWigs3DB = {
 		["BigWigs_Plugins_Pull"] = {
 		},
 		["BigWigs_Plugins_Transcriptor"] = {
+		},
+		["BigWigs_Plugins_Respawn"] = {
 		},
 		["BigWigs_Plugins_Messages"] = {
 			["profiles"] = {
@@ -104,8 +115,6 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Plugins_Respawn"] = {
-		},
 		["BigWigs_Plugins_Common Auras"] = {
 		},
 		["BigWigs_Plugins_HeroesVoices"] = {
@@ -116,16 +125,12 @@ BigWigs3DB = {
 			},
 		},
 	},
-	["discord"] = 15,
-	["profileKeys"] = {
-		["Dronthal - Madmortem"] = "Hetsig",
-		["Dranopix - Madmortem"] = "Hetsig",
-		["Drathtix - Madmortem"] = "Hetsig",
-		["Drathal - Madmortem"] = "Hetsig",
-		["Drahmoon - Madmortem"] = "Hetsig",
-		["Dranathal - Madmortem"] = "Hetsig",
-		["Drathia - Madmortem"] = "Hetsig",
+	["global"] = {
+		["watchedMovies"] = {
+			[656] = true,
+		},
 	},
+	["discord"] = 15,
 	["profiles"] = {
 		["Hetsig"] = {
 		},
@@ -137,4 +142,50 @@ BigWigs3IconDB = {
 	["hide"] = true,
 }
 BigWigsStatisticsDB = {
+	[1147] = {
+		[1856] = {
+			["LFR"] = {
+				["best"] = 190.600000000006,
+				["kills"] = 1,
+			},
+		},
+		[1898] = {
+			["LFR"] = {
+				["best"] = 483.483,
+				["kills"] = 1,
+			},
+		},
+		[1896] = {
+			["LFR"] = {
+				["kills"] = 1,
+				["wipes"] = 1,
+				["best"] = 337.774000000005,
+			},
+		},
+		[1862] = {
+			["LFR"] = {
+				["best"] = 165.570000000007,
+				["kills"] = 1,
+			},
+		},
+		[1897] = {
+			["LFR"] = {
+				["best"] = 373.957000000002,
+				["kills"] = 1,
+			},
+		},
+		[1873] = {
+			["LFR"] = {
+				["best"] = 261.758000000002,
+				["kills"] = 1,
+			},
+		},
+		[1861] = {
+			["LFR"] = {
+				["kills"] = 1,
+				["wipes"] = 1,
+				["best"] = 254.890000000007,
+			},
+		},
+	},
 }

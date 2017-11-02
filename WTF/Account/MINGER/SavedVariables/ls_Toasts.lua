@@ -38,8 +38,8 @@ LS_TOASTS_GLOBAL_CONFIG = {
 				},
 				["loot_special"] = {
 					["enabled"] = true,
-					["ilvl"] = true,
 					["dnd"] = false,
+					["ilvl"] = true,
 					["threshold"] = 1,
 				},
 				["recipe"] = {
@@ -101,8 +101,8 @@ LS_TOASTS_GLOBAL_CONFIG = {
 				},
 				["loot_special"] = {
 					["enabled"] = true,
-					["dnd"] = false,
 					["ilvl"] = true,
+					["dnd"] = false,
 					["threshold"] = 1,
 				},
 				["achievement"] = {

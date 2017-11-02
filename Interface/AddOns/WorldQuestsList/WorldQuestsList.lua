@@ -1,4 +1,4 @@
-local VERSION = 48
+local VERSION = 49
 
 --[[
 Special icons for rares, pvp or pet battle quests in list
@@ -132,6 +132,9 @@ Fixes
 Added option for percentage of the current level's max AP number (by Corveroth)
 Update for korean translation (by yuk6196)
 Fixes (Frame strata for free position)
+
+Minor fixes
+Update for chinese translation (by dxlmike)
 ]]
 
 
@@ -340,7 +343,7 @@ local LOCALE =
 		invasionPoints = "침공 거점",
 		argusMap = "아르거스 지도 활성화",
 	} or
-	(locale == "zhCN" or locale == "zhTW") and {	--by cuihuanyu1986
+	(locale == "zhCN" or locale == "zhTW") and {	--by dxlmike, cuihuanyu1986
 		gear = "装备",
 		gold = "黄金",
 		blood = "萨格拉斯之血",
@@ -361,10 +364,10 @@ local LOCALE =
 		headerEnable = "开启 标题行",
 		disabeHighlightNewQuests = "禁用 新任务高亮",
 		distance = "距离",
-		disableBountyIcon = "Disable Emissary icons for faction names",
-		arrow = "Arrow",
-		invasionPoints = "Invasion Points",
-		argusMap = "Enable Argus map",
+		disableBountyIcon = "大使任务不在列表中显示派系图标",
+		arrow = "箭头",
+		invasionPoints = "入侵点",
+		argusMap = "启用阿古斯地图",
 	} or	
 	{
 		gear = "Gear",
@@ -806,8 +809,46 @@ WorldQuestList.ScrollDownLine.i:SetPoint("CENTER")
 WorldQuestList.ScrollDownLine.i:SetTexCoord(0,.25,0,1)
 WorldQuestList.ScrollDownLine.i:SetSize(14,14)
 
+
+local _BonusObjectiveTracker_TrackWorldQuest, _BonusObjectiveTracker_UntrackWorldQuest = BonusObjectiveTracker_TrackWorldQuest, BonusObjectiveTracker_UntrackWorldQuest
+local lastTrackedQuestID = nil
+local BonusObjectiveTracker_TrackWorldQuest = function(questID, hardWatch)
+	if InCombatLockdown() then
+		if AddWorldQuestWatch(questID, hardWatch) then
+			if lastTrackedQuestID and lastTrackedQuestID ~= questID then
+				if not IsWorldQuestHardWatched(lastTrackedQuestID) and hardWatch then
+					AddWorldQuestWatch(lastTrackedQuestID, true) -- Promote to a hard watch
+				end
+			end
+			lastTrackedQuestID = questID
+		end
+	
+		if not hardWatch or GetSuperTrackedQuestID() == 0 then
+			SetSuperTrackedQuestID(questID)
+		end
+	else
+		return _BonusObjectiveTracker_TrackWorldQuest(questID, hardWatch)
+	end
+end
+
+local BonusObjectiveTracker_UntrackWorldQuest = function(questID)
+	if InCombatLockdown() then
+		if RemoveWorldQuestWatch(questID) then
+			if lastTrackedQuestID == questID then
+				lastTrackedQuestID = nil
+			end
+			if questID == GetSuperTrackedQuestID() then
+				QuestSuperTracking_ChooseClosestQuest()
+			end
+		end
+	else
+		return _BonusObjectiveTracker_UntrackWorldQuest(questID)
+	end
+end
+
 do
 	local WORLDMAP_TASK_POIS, WORLDMAP_POIS = {},{}
+	
 	local function TaskPOI_OnClick(self, button)
 		if self.worldQuest and not ChatEdit_TryInsertQuestLinkForQuestID(self.questID) then
 			PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -3524,7 +3565,7 @@ local function WorldQuestList_Leveling_Update()
 end
 
 
-local function FormatAPnumber(ap,artifactKnowlegeLevel,ignorePercentFormt)
+local function FormatAPnumber(ap,artifactKnowlegeLevel,ignorePercentForm)
 	if VWQL.APFormat == 1 then
 		return tostring(ap)
 	elseif VWQL.APFormat == 2 then
@@ -3537,11 +3578,11 @@ local function FormatAPnumber(ap,artifactKnowlegeLevel,ignorePercentFormt)
 		return format("%.1fB",ap / 1000000000)
 	elseif VWQL.APFormat == 6 then
 		return format("%dB",ap / 1000000000)
-	elseif VWQL.APFormat == 10 and not ignorePercentFormt then		--by Corveroth
+	elseif VWQL.APFormat == 10 and not ignorePercentForm then		--by Corveroth
 		local artifactItemID, _, _, _, artifactTotalXP, artifactPointsSpent, _, _, _, _, _, _, artifactTier = C_ArtifactUI.GetEquippedArtifactInfo()
 		if artifactItemID then
 			local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(artifactPointsSpent, artifactTotalXP, artifactTier)
-			if xpForNextPoint then
+			if xpForNextPoint and xpForNextPoint ~= 0 then
 				return format("%.1f%%%%", ap*100 / xpForNextPoint)
 			end
 		end

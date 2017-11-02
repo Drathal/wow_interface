@@ -33,6 +33,9 @@ END
 VER 3 00000000000000C4 "PlaySpark" "136010"
 /run XpFlagPlaySpark(math.random(500,3000))
 END
+VER 3 00000000000000C6 "Quests" "Ability_BossFelOrcs_Necromancer_Red."
+/btwquests 
+END
 VER 3 00000000000000C3 "reload" "135863"
 /reload
 END
