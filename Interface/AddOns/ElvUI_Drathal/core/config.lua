@@ -27,6 +27,10 @@ local function setUpBar(num)
 		E.db["actionbar"]["bar"..num]["paging"]["ROGUE"] = "[stance:1] 1;  [stance:2] 1; [stance:3] 1;"
 	end
 
+	if num == 3 then
+		E.db["actionbar"]["bar"..num]["mouseover"] = true
+	end
+
 	if num == 4 or num == 5 then
 		E.db["actionbar"]["bar"..num]["buttonsPerRow"] = 4
 		E.db["actionbar"]["bar"..num]["mouseover"] = true
@@ -47,68 +51,52 @@ local function setUpBar(num)
 
 end
 
-function DrathalInstall:ElvUI(theme)
-	E.private.theme = theme
+local function SetupIndicator(class, spellID, point, color, style) 
 
-	if E.db['movers'] then 
-		table.wipe(E.db['movers'])
-	else 
-		E.db['movers'] = {} 
-	end
-
-	-- Custom created tables if they don't exist already.
-	if not E.db["unitframe"]["units"]["player"]["customTexts"] then
-		E.db["unitframe"]["units"]["player"]["customTexts"] = {}
-	end
-	if not E.db["unitframe"]["units"]["player"]["customTexts"]["HealthText"] then
-		E.db["unitframe"]["units"]["player"]["customTexts"]["HealthText"] = {}
-	end
-	if not E.db["unitframe"]["units"]["target"]["customTexts"] then
-		E.db["unitframe"]["units"]["target"]["customTexts"] = {}
-	end
-	if not E.db["unitframe"]["units"]["target"]["customTexts"]["HealthText"] then
-		E.db["unitframe"]["units"]["target"]["customTexts"]["HealthText"] = {}
-	end
-
-	-- Don't forget to add new Filter spells here.
 	if not E.global["unitframe"]["buffwatch"] then
 		E.global["unitframe"]["buffwatch"] = {}
 	end
 
-	if not E.global["unitframe"]["buffwatch"]["PALADIN"] then
-		E.global["unitframe"]["buffwatch"]["PALADIN"] = {}
+	if not E.global["unitframe"]["buffwatch"][class] then
+		E.global["unitframe"]["buffwatch"][class] = {}
 	end
 
-	if not E.global["unitframe"]["buffwatch"]["PALADIN"][200025] then
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025] = {}
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["color"] = {}
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["enabled"] = true
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["anyUnit"] = false
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["point"] = "TOPRIGHT"
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["color"]["b"] = 0
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["color"]["g"] = 0
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["color"]["r"] = 1
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["id"] = 200025
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["xOffset"] = 0
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["style"] = "coloredIcon"
-			E.global["unitframe"]["buffwatch"]["PALADIN"][200025]["yOffset"] = 0
-	end
+	E.global["unitframe"]["buffwatch"][class][spellID] = {}
+	E.global["unitframe"]["buffwatch"][class][spellID]["id"] = spellID		
+	E.global["unitframe"]["buffwatch"][class][spellID]["point"] = point or TOP
+	E.global["unitframe"]["buffwatch"][class][spellID]["enabled"] = true
+	E.global["unitframe"]["buffwatch"][class][spellID]["anyUnit"] = false				
+	E.global["unitframe"]["buffwatch"][class][spellID]["xOffset"] = 0
+	E.global["unitframe"]["buffwatch"][class][spellID]["yOffset"] = 0
+	E.global["unitframe"]["buffwatch"][class][spellID]["style"] = style or "coloredIcon"
+	E.global["unitframe"]["buffwatch"][class][spellID]["onlyShowMissing"] = false
+	E.global["unitframe"]["buffwatch"][class][spellID]["textThreshold"] = 0
+	E.global["unitframe"]["buffwatch"][class][spellID]["decimalThreshold"] = -1
+	E.global["unitframe"]["buffwatch"][class][spellID]["textColor"] = {
+		["b"] = 0.98,
+		["g"] = 0.98,
+		["r"] = 0.98,
+		["a"] = 0,
+	}
+	E.global["unitframe"]["buffwatch"][class][spellID]["color"] = color or {
+		["r"] = 0,
+		["g"] = 0.64,
+		["b"] = 1,						
+	}
+	
+	return E.global["unitframe"]["buffwatch"][class][spellID]
 
-	if not E.global["unitframe"]["buffwatch"]["PALADIN"][183415] then
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415] = {}
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["color"] = {}
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["enabled"] = false
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["anyUnit"] = false
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["point"] = "BOTTOMLEFT"
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["id"] = 183415
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["yOffset"] = 0
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["style"] = "coloredIcon"
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["xOffset"] = 0
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["color"]["b"] = 0.96862745098039
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["color"]["g"] = 1
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["color"]["r"] = 0.72549019607843
-		E.global["unitframe"]["buffwatch"]["PALADIN"][183415]["onlyShowMissing"] = false
-	end
+end	
+
+function DrathalInstall:ElvUI(theme)
+	E.private.theme = theme
+
+	SetupIndicator("PRIEST", 202685, "TOP", { r = 0, g = 0.64, b = 1}) -- light of tuure
+	SetupIndicator("PRIEST", 41635, "BOTTOMRIGHT", { r = 0.77, g = 0.77, b = 0}) -- prayer of mending
+	SetupIndicator("PRIEST", 139, "BOTTOMLEFT", { r = 0, g = 0.77, b = 0}) -- renew
+
+	SetupIndicator("PALADIN", 200025, "TOPRIGHT", { r = 1, g = 0, b = 0}) -- Beacon of Virtue
+	SetupIndicator("PALADIN", 183415, "BOTTOMLEFT", { r = 0.72, g = 1, b = 0.96}) -- Aura of Mercy
 
 	if not E.global["unitframe"]["buffwatch"]["PALADIN"][31821] then
 		E.global["unitframe"]["buffwatch"]["PALADIN"][31821] = {}
@@ -145,50 +133,6 @@ function DrathalInstall:ElvUI(theme)
 	if not E.global["unitframe"]["buffwatch"]["PALADIN"][53563] then
 		E.global["unitframe"]["buffwatch"]["PALADIN"][53563] = {}
 		E.global["unitframe"]["buffwatch"]["PALADIN"][53563]["anyUnit"] = false
-	end
-
-	if not E.global["unitframe"]["buffwatch"]["PRIEST"] then
-		E.global["unitframe"]["buffwatch"]["PRIEST"] = {}
-	end
-
-	if not E.global["unitframe"]["buffwatch"]["PRIEST"][202685] then
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685] = {}
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["color"] = {}
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["enabled"] = false
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["anyUnit"] = false
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["point"] = "TOPRIGHT"
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["id"] = 202685
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["color"]["r"] = 1
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["color"]["g"] = 0
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["color"]["b"] = 0
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["style"] = "coloredIcon"
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["xOffset"] = 0
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685]["yOffset"] = 0
-	end
-
-	if not E.global["unitframe"]["buffwatch"]["PRIEST"][202685] then
-		E.global["unitframe"]["buffwatch"]["PRIEST"][202685] = {
-			["enabled"] = true,
-			["anyUnit"] = false,
-			["point"] = "TOP",
-			["color"] = {
-				["b"] = 1,
-				["g"] = 0.63921568627451,
-				["r"] = 0,
-			},
-			["id"] = 208065,
-			["xOffset"] = 0,
-			["style"] = "coloredIcon",
-			["yOffset"] = 0,
-		}
-	end
-
-	if E.global["unitframe"]["buffwatch"]["PRIEST"][41635] then
-		E.global["unitframe"]["buffwatch"]["PRIEST"][41635]["color"] = {
-			["r"] = 0.772549019607843,
-			["g"] = 0.752941176470588,
-			["b"] = 0,
-		}			
 	end
 
 	if not E.global["unitframe"]["buffwatch"]["DRUID"] then
@@ -251,9 +195,10 @@ function DrathalInstall:ElvUI(theme)
 	local uiHeight = _G["ElvUIParent"]:GetHeight()
 	local barWidth = _G["ElvUI_Bar1"]:GetWidth()
 
+	E.db['movers'] = {} 
 	E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-"..(barWidth * 0.75)..","..(uiHeight * 0.355)
 	E.db["movers"]["PlayerPowerBarMover"] = "TOP,ElvUF_Player,BOTTOM,0,1"
-	E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,"..(uiHeight * 0.3845)
+	E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,"..(uiHeight * 0.39)
 	E.db["movers"]["ClassBarMover"] = "BOTTOM,ElvUF_Player,TOP,0,1"
 
 	E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,"..(barWidth * 0.75)..","..(uiHeight * 0.355)
@@ -268,10 +213,11 @@ function DrathalInstall:ElvUI(theme)
 
 	E.db["movers"]["ElvUF_PartyMover"] = "TOP,ElvUIParent,TOP,0,-"..(uiHeight * 0.655)
 	E.db["movers"]["ElvUF_RaidMover"] = "TOP,ElvUIParent,TOP,0,-"..(uiHeight * 0.655)
-	E.db["movers"]["ElvUF_Raid40Mover"] = "TOP,ElvUIParent,TOP,0,-"..(uiHeight * 0.650)
+	E.db["movers"]["ElvUF_Raid40Mover"] = "TOP,ElvUIParent,TOP,0,-"..(uiHeight * 0.655)
+	E.db["movers"]["ElvUF_TankMover"] = "LEFT,ElvUF_Target,LEFT,0,-100"
 
 	E.db["movers"]["ElvUF_FocusCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-478,282"
-	E.db["movers"]["RaidMarkerBarAnchor"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-28,231"
+	--E.db["movers"]["RaidMarkerBarAnchor"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-28,231"
 	E.db["movers"]["MinimapButtonAnchor"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-26,-185"
 
 	E.db["movers"]["BossButton"] = "BOTTOMLEFT,ElvUIParent,BOTTOM,-"..(barWidth * 0.67)..",130"
@@ -302,23 +248,22 @@ function DrathalInstall:ElvUI(theme)
 	E.db["movers"]["ArtifactBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-177,-31"
 	E.db["movers"]["ArenaHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-30,-325"
 	E.db["movers"]["ObjectiveFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-82,-337"
-	E.db["movers"]["BNETMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,30,207"
+	E.db["movers"]["BNETMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,30,220"
 	E.db["movers"]["ShiftAB"] = "BOTTOM,ElvUIParent,BOTTOM,0,165"
 	E.db["movers"]["CM_MOVER"] = "BOTTOM,ElvUIParent,BOTTOM,0,150"
 	E.db["movers"]["HonorBarMover"] = "TOP,ElvUIParent,TOP,0,-66"
 	E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,0"
-	E.db["movers"]["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-29,232"
-	E.db["movers"]["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,30,894"
+	E.db["movers"]["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-29,232"	
 	E.db["movers"]["BossHeaderMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,30,-297"
 	E.db["movers"]["ElvUIBagMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-30,30"		
 
 	E.db["actionbar"]["microbar"]["enabled"] = true
 	E.db["actionbar"]["microbar"]["mouseover"] = true
-	E.db["actionbar"]["keyDown"] = false
+	E.db["actionbar"]["keyDown"] = true
 	E.db["actionbar"]["globalFadeAlpha"] = 1
 	E.db["actionbar"]["fontOutline"] = "OUTLINE"
 	E.db["actionbar"]["font"] = "Friz Quadrata TT"
-	E.db["actionbar"]["fontSize"] = 12
+	E.db["actionbar"]["fontSize"] = 11
 
 	setUpBar(1)
 	setUpBar(2)
@@ -344,7 +289,6 @@ function DrathalInstall:ElvUI(theme)
 	E.db["actionbar"]["barPet"]["buttonsize"] = 17
 	E.db["actionbar"]["barPet"]["backdropSpacing"] = 0
 	E.db["actionbar"]["backdropSpacingConverted"] = true
-
 
 	E.db["databars"]["artifact"]["enable"] = false
 	E.db["databars"]["artifact"]["height"] = 151
@@ -394,6 +338,7 @@ function DrathalInstall:ElvUI(theme)
 	E.db["datatexts"]["fontOutline"] = "OUTLINE"
 	E.db["datatexts"]["actionbar1"] = false
 	E.db["datatexts"]["actionbar3"] = false
+
 	E.db["general"]["totems"]["enable"] = false
 	E.db["general"]["totems"]["size"] = 43
 	E.db["general"]["totems"]["growthDirection"] = "HORIZONTAL"
@@ -420,9 +365,9 @@ function DrathalInstall:ElvUI(theme)
 	E.db["general"]["loginmessage"] = false
 	E.db["general"]["threat"]["enable"] = false
 	E.db["general"]["threat"]["position"] = "LEFTCHAT"
-	E.db["general"]["backdropcolor"]["b"] = 0.0470588235294118
-	E.db["general"]["backdropcolor"]["g"] = 0.0470588235294118
-	E.db["general"]["backdropcolor"]["r"] = 0.0470588235294118
+	E.db["general"]["backdropcolor"]["b"] = 0.07
+	E.db["general"]["backdropcolor"]["g"] = 0.07
+	E.db["general"]["backdropcolor"]["r"] = 0.07
 	E.db["general"]["vendorGrays"] = true
 	E.db["general"]["bordercolor"]["b"] = 0
 	E.db["general"]["bordercolor"]["g"] = 0
@@ -437,6 +382,7 @@ function DrathalInstall:ElvUI(theme)
 		["g"] = 0.733333333333333,
 		["b"] = 0.988235294117647,
 	}
+
 	E.db["bags"]["countFontSize"] = 12
 	E.db["bags"]["itemLevelFont"] = "Friz Quadrata TT"
 	E.db["bags"]["ignoreItems"] = ""
@@ -452,6 +398,7 @@ function DrathalInstall:ElvUI(theme)
 	E.db["bags"]["bagBar"]["enable"] = false
 	E.db["bags"]["bagSize"] = 32
 	E.db["bags"]["bagWidth"] = 380
+
 	E.db["tooltip"]["itemCount"] = "NONE"
 	E.db["tooltip"]["healthBar"]["height"] = 10
 	E.db["tooltip"]["healthBar"]["fontSize"] = 11
@@ -464,6 +411,7 @@ function DrathalInstall:ElvUI(theme)
 	E.db["tooltip"]["targetInfo"] = false
 	E.db["tooltip"]["guildRanks"] = false
 	E.db["tooltip"]["spellID"] = true
+
 	E.db["auras"]["debuffs"]["horizontalSpacing"] = 1
 	E.db["auras"]["debuffs"]["maxWraps"] = 2
 	E.db["auras"]["fontOutline"] = "OUTLINE"
@@ -472,17 +420,35 @@ function DrathalInstall:ElvUI(theme)
 	E.db["auras"]["buffs"]["maxWraps"] = 2
 	E.db["auras"]["timeYOffset"] = -6
 	E.db["auras"]["font"] = "Friz Quadrata TT"
+	
+	if not E.db["unitframe"]["units"]["player"]["customTexts"] then
+		E.db["unitframe"]["units"]["player"]["customTexts"] = {}
+	end
+	if not E.db["unitframe"]["units"]["player"]["customTexts"]["HealthText"] then
+		E.db["unitframe"]["units"]["player"]["customTexts"]["HealthText"] = {}
+	end
+	if not E.db["unitframe"]["units"]["target"]["customTexts"] then
+		E.db["unitframe"]["units"]["target"]["customTexts"] = {}
+	end
+	if not E.db["unitframe"]["units"]["target"]["customTexts"]["HealthText"] then
+		E.db["unitframe"]["units"]["target"]["customTexts"]["HealthText"] = {}
+	end
 
-	E.db["unitframe"]["fontSize"] = 11
 	E.db["unitframe"]["units"]["targettarget"]["debuffs"]["enable"] = false
 	E.db["unitframe"]["units"]["targettarget"]["power"]["enable"] = false
 	E.db["unitframe"]["units"]["targettarget"]["rangeCheck"] = false
 	E.db["unitframe"]["units"]["targettarget"]["width"] = 85
 	E.db["unitframe"]["units"]["targettarget"]["height"] = 25
 	E.db["unitframe"]["units"]["targettarget"]["name"]["text_format"] = "[name:veryshort]"
+	E.db["unitframe"]["units"]["targettarget"]["enable"] = false
 
 	E.db["unitframe"]["units"]["tank"]["buffIndicator"]["enable"] = false
 	E.db["unitframe"]["units"]["tank"]["buffs"]["priority"] = "blockNoDuration"
+	E.db["unitframe"]["units"]["tank"]["width"] = 60
+	E.db["unitframe"]["units"]["tank"]["height"] = 30
+	E.db["unitframe"]["units"]["tank"]["verticalSpacing"] = 1
+	E.db["unitframe"]["units"]["tank"]["targetsGroup"]["height"] = 30
+	E.db["unitframe"]["units"]["tank"]["targetsGroup"]["width"] = 60
 
 	E.db["unitframe"]["units"]["boss"]["debuffs"]["numrows"] = 1
 	E.db["unitframe"]["units"]["boss"]["debuffs"]["fontSize"] = 22
@@ -772,8 +738,7 @@ function DrathalInstall:ElvUI(theme)
 	E.db["unitframe"]["units"]["player"]["buffs"]["yOffset"] = 4
 	E.db["unitframe"]["units"]["player"]["raidicon"]["enable"] = false
 	E.db["unitframe"]["units"]["player"]["pvp"]["text_format"] = ""
-
-	E.db["unitframe"]["statusbar"] = "Skullflower"
+	
 
 	E.db["unitframe"]["colors"]["colorhealthbyvalue"] = false
 	E.db["unitframe"]["colors"]["healthclass"] = true
@@ -841,10 +806,14 @@ function DrathalInstall:ElvUI(theme)
 	E.db["unitframe"]["colors"]["classResources"]["MONK"][6]["b"] = 0.58823529411765
 	E.db["unitframe"]["colors"]["classResources"]["MONK"][6]["g"] = 1
 	E.db["unitframe"]["colors"]["classResources"]["MONK"][6]["r"] = 0
+
+	E.db["unitframe"]["statusbar"] = "Skullflower"
 	E.db["unitframe"]["fontOutline"] = "OUTLINE"
 	E.db["unitframe"]["font"] = "Friz Quadrata TT"
 	E.db["unitframe"]["smartRaidFilter"] = false
 	E.db["unitframe"]["smoothbars"] = true
+	E.db["unitframe"]["debuffHighlighting"] = "NONE"
+	E.db["unitframe"]["fontSize"] = 11
 
 	E.db["bossAuraFiltersConverted"] = true
 	E.db["thinBorderColorSet"] = true
@@ -986,8 +955,19 @@ function DrathalInstall:ElvUI(theme)
 		E.db["sle"]["quests"]["visibility"]["enable"] = true
 		E.db["sle"]["quests"]["autoReward"] = true
 
-		E.db["sle"]["skins"]["objectiveTracker"] = {}
-		E.db["sle"]["skins"]["objectiveTracker"]["scenarioBG"] = true
+		if not E.db["sle"]["actionbars"] then
+			E.db["sle"]["actionbars"] = {}
+		end
+
+		E.db["sle"]["actionbars"]["checkedtexture"] = true
+		E.db["sle"]["actionbars"]["transparentButtons"] = true
+
+		if not E.db["sle"]["skins"]["objectiveTracker"] then
+			E.db["sle"]["skins"]["objectiveTracker"] = {}
+		end
+
+		E.db["sle"]["skins"]["objectiveTracker"]["scenarioBG"] = false
+		E.db["sle"]["skins"]["objectiveTracker"]["colorHeader"] = {r = 1, g = 0.82, b = 0}
 
 		E.db["sle"]["raidmarkers"]["enable"] = false
 
@@ -1002,6 +982,8 @@ function DrathalInstall:ElvUI(theme)
 end
 
 function GetOptions()
+	local profile = DrathalInstall:GetProfileName()
+
 	E.Options.args.profile = {
 		order = 1,
 		name = "|cff9482C9Drathal UI",
@@ -1019,9 +1001,9 @@ function GetOptions()
 					table.wipe(E.private)
 					E:CopyTable(E.private, V)
 					
-					ElvUI[1].data:SetProfile("Hetsig")
+					ElvUI[1].data:SetProfile(profile)
 
-					DrathalInstall:ElvUI('Hetsig')
+					DrathalInstall:ElvUI(profile)
 					DrathalInstall:ElvUI_Chat()
 
 					if IsAddOnLoaded('BigWigs') then
@@ -1084,6 +1066,15 @@ end
 
 function ElvDrathal:Initialize()
 	EP:RegisterPlugin(addon, GetOptions)
+
+	_G["ObjectiveTrackerFrame"].HeaderMenu.Title:SetShadowOffset(0,0)
+	_G["ObjectiveTrackerBlocksFrame"].QuestHeader.Text:SetShadowOffset(0,0)
+	_G["ObjectiveTrackerBlocksFrame"].AchievementHeader.Text:SetShadowOffset(0,0)
+	_G["ObjectiveTrackerBlocksFrame"].ScenarioHeader.Text:SetShadowOffset(0,0)
+	_G["BONUS_OBJECTIVE_TRACKER_MODULE"].Header.Text:SetShadowOffset(0,0)
+	_G["WORLD_QUEST_TRACKER_MODULE"].Header.Text:SetShadowOffset(0,0)
+	_G["ObjectiveFont"]:SetShadowOffset(0,0)
+
 end
 
 E:RegisterModule(ElvDrathal:GetName())

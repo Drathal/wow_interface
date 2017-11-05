@@ -10,6 +10,10 @@ local questItems = { -- Quest items and matching quests
 	[128250] = 39358, -- Alliance
 	[128489] = 39358, -- Horde
 }
+local specialItems = { -- Items needing special treatment
+	-- Krokul Flute -> Flight Master's Whistle
+	[152964] = { 141605, 11, 269 } -- 269 for Flute applied Whistle, 257 (or anything else than 269) for pre-apply Whistle
+}
 
 -- Tooltip and scanning by Phanx @ http://www.wowinterface.com/forums/showthread.php?p=271406
 -- Search string by Phanx @ https://github.com/Phanx/BetterBattlePetTooltip/blob/master/Addon.lua
@@ -31,6 +35,19 @@ local function _checkIfKnown(itemLink)
 			return true -- This quest item is already known
 		end
 		return false -- Quest item is uncollected... or something went wrong
+	elseif itemID and specialItems[itemID] then -- Check if we need special handling, this is most likely going to break with then next item we add to this
+		local specialData = specialItems[itemID]
+		local _, specialLink = GetItemInfo(specialData[1])
+		if specialLink then
+			local specialTbl = { strsplit(":", specialLink) }
+			local specialInfo = tonumber(specialTbl[specialData[2]])
+			if specialInfo == specialData[3] then
+				if db.debug and not knownTable[itemLink] then print(format("%d, %d - SpecialItem", itemID, specialInfo)) end
+				knownTable[itemLink] = true -- Mark as known for later use
+				return true -- This specialItem is already known
+			end
+		end
+		return false -- Item is specialItem, but data isn't special
 	end
 
 	if itemLink:match("|H(.-):") == "battlepet" then -- Check if item is Caged Battlepet (dummy item 82800)

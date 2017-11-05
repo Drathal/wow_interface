@@ -1,3 +1,4 @@
 ﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Include file="datatexts\time.lua"/>
+    <Include file="RaidControl.lua"/>
 </Ui>

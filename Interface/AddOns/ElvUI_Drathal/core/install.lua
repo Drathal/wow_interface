@@ -26,23 +26,25 @@ end
 local function copyAndSelectAceProfiles(self, svname)
     local dst = _G[svname] or {}
     local src = self.AddonSettings[svname]
+    local profile = DrathalInstall:GetProfileName()
+
     _G[svname] = dst
     dst.profiles = dst.profiles or {}
-    dst.profiles.Hetsig = deepCopy(src.profiles.Hetsig)
+    dst.profiles[profile] = deepCopy(src.profiles[profile])
 
     if src.namespaces then
         dst.namespaces = dst.namespaces or {}
         for nsname in pairs(src.namespaces) do
             dst.namespaces[nsname] = dst.namespaces[nsname] or {}
             dst.namespaces[nsname].profiles = dst.namespaces[nsname].profiles or {}
-            dst.namespaces[nsname].profiles.Hetsig = deepCopy(src.namespaces[nsname].profiles.Hetsig)
+            dst.namespaces[nsname].profiles[profile] = deepCopy(src.namespaces[nsname].profiles[profile])
         end
     end
 
     local AceDB = LibStub:GetLibrary("AceDB-3.0")
     for db in pairs(AceDB.db_registry) do
         if db.sv == _G[svname] then
-            db:SetProfile("Hetsig")
+            db:SetProfile(profile)
             break
         end
     end
@@ -58,7 +60,10 @@ function DrathalInstall:InstallAddonSimple(svname)
     copyDB(self, svname)
 end
 
-
 function DrathalInstall:InstallAddonAceProf(svname)
     copyAndSelectAceProfiles(self, svname)
+end
+
+function DrathalInstall:GetProfileName()
+    return DrathalInstall.profileName
 end

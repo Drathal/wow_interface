@@ -17,10 +17,10 @@ RelicInspectorCharDB = {
 				[128825] = {
 					{
 						["relic"] = {
-							"Clarity of Conviction", -- [1]
-							461857, -- [2]
+							"Odyn's Boon", -- [1]
+							236263, -- [2]
 							"Holy", -- [3]
-							"|cffa335ee|Hitem:153461:::::::::::43:3:3573:3159:3528:::|h[Clarity of Conviction]|h|r", -- [4]
+							"|cffa335ee|Hitem:133685:::::::::::16:3:3413:1557:3336:::|h[Odyn's Boon]|h|r", -- [4]
 						},
 						["traits"] = {
 							{
@@ -36,10 +36,10 @@ RelicInspectorCharDB = {
 								["requiredArtifactLevel"] = 60,
 								["tier"] = 2,
 								["canChoose"] = false,
-								["powerID"] = 1781,
-								["icon"] = 839910,
+								["powerID"] = 1778,
+								["icon"] = 136146,
 								["isChosen"] = false,
-								["spellID"] = 252922,
+								["spellID"] = 252875,
 							}, -- [2]
 							{
 								["requiredArtifactLevel"] = 60,
@@ -54,28 +54,28 @@ RelicInspectorCharDB = {
 								["requiredArtifactLevel"] = 69,
 								["tier"] = 3,
 								["canChoose"] = false,
-								["powerID"] = 844,
-								["icon"] = 135921,
+								["powerID"] = 847,
+								["icon"] = 237541,
 								["isChosen"] = false,
-								["spellID"] = 196418,
+								["spellID"] = 196429,
 							}, -- [4]
 							{
 								["requiredArtifactLevel"] = 69,
 								["tier"] = 3,
 								["canChoose"] = false,
-								["powerID"] = 841,
-								["icon"] = 463835,
+								["powerID"] = 842,
+								["icon"] = 135944,
 								["isChosen"] = false,
-								["spellID"] = 196355,
+								["spellID"] = 196358,
 							}, -- [5]
 							{
 								["requiredArtifactLevel"] = 69,
 								["tier"] = 3,
 								["canChoose"] = false,
-								["powerID"] = 847,
-								["icon"] = 237541,
+								["powerID"] = 838,
+								["icon"] = 135948,
 								["isChosen"] = false,
-								["spellID"] = 196429,
+								["spellID"] = 196489,
 							}, -- [6]
 						},
 					}, -- [1]
@@ -207,9 +207,9 @@ RelicInspectorCharDB = {
 							}, -- [6]
 						},
 					}, -- [3]
-					["level"] = 66,
+					["level"] = 67,
 					["crucibled"] = true,
-					["timestamp"] = 3123.179,
+					["timestamp"] = 6643.783,
 				},
 			},
 		},

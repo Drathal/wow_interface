@@ -1,9 +1,11 @@
 DrathalInstall = DrathalInstall or {}
 
+DrathalInstall.profileName = 'Drathal'
+
 DrathalInstall.AddonSettings = {
 	AddOnSkinsDB = 	{
 		["profiles"] = {	
-			["Hetsig"] = {
+			[DrathalInstall.profileName] = {
 				["EmbedOoCDelay"] = 5,
 				["Blizzard_AbilityButton"] = true,
 				["Blizzard_Transmogrify"] = false,
@@ -31,7 +33,7 @@ DrathalInstall.AddonSettings = {
 		["namespaces"] = {
 			["BigWigs_Plugins_Bars"] = {
 				["profiles"] = {
-					["Hetsig"] = {
+					[DrathalInstall.profileName] = {
 						["outline"] = "OUTLINE",
 						["fontSize"] = 11,
 						["BigWigsAnchor_width"] = 199.999908447266,
@@ -56,14 +58,14 @@ DrathalInstall.AddonSettings = {
 			},
 			["BigWigs_Plugins_Super Emphasize"] = {
 				["profiles"] = {
-					["Hetsig"] = {
+					[DrathalInstall.profileName] = {
 						["font"] = "Friz Quadrata TT",
 					},
 				},
 			},
 			["BigWigs_Plugins_Proximity"] = {
 				["profiles"] = {
-					["Hetsig"] = {
+					[DrathalInstall.profileName] = {
 						["fontSize"] = 20,
 						["width"] = 140.000061035156,
 						["font"] = "Friz Quadrata TT",
@@ -75,7 +77,7 @@ DrathalInstall.AddonSettings = {
 			},
 			["BigWigs_Plugins_Messages"] = {
 				["profiles"] = {
-					["Hetsig"] = {
+					[DrathalInstall.profileName] = {
 						["outline"] = "OUTLINE",
 						["BWEmphasizeMessageAnchor_x"] = 611,
 						["BWEmphasizeMessageAnchor_y"] = 650,
@@ -89,7 +91,7 @@ DrathalInstall.AddonSettings = {
 			},
 			["BigWigs_Plugins_InfoBox"] = {
 				["profiles"] = {
-					["Hetsig"] = {
+					[DrathalInstall.profileName] = {
 						["posx"] = 366.222057478954,
 						["posy"] = 486.399881569541,
 					},
@@ -97,7 +99,7 @@ DrathalInstall.AddonSettings = {
 			},
 			["BigWigs_Plugins_Alt Power"] = {
 				["profiles"] = {
-					["Hetsig"] = {
+					[DrathalInstall.profileName] = {
 						["posx"] = 198.399831193019,
 						["fontSize"] = 11.0000009536743,
 						["disabled"] = true,
@@ -110,7 +112,7 @@ DrathalInstall.AddonSettings = {
 		},
 		["discord"] = 0,
 		["profiles"] = {
-			["Hetsig"] = {},
+			[DrathalInstall.profileName] = {},
 		},
 	},
 	BigWigs3IconDB = {
@@ -127,7 +129,7 @@ DrathalInstall.AddonSettings = {
 	------------------------------------------------------------
 	ErrorFilterDB = {
 		["profiles"] = {
-			["Hetsig"] = {
+			[DrathalInstall.profileName] = {
 				["q_updateOnlyInCombat"] = true,
 				["filters"] = {
 					["Your cast didn't land in fishable water"] = true,
@@ -191,7 +193,7 @@ DrathalInstall.AddonSettings = {
 	------------------------------------------------------------
 	SkadaDB = {
 		["profiles"] = {
-			["Hetsig"] = {
+			[DrathalInstall.profileName] = {
 				["showtotals"] = true,
 				["showself"] = true,
 				["hidesolo"] = true,

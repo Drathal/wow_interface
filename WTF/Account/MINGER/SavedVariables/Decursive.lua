@@ -100,7 +100,7 @@ DecursiveDB = {
 		},
 	},
 	["global"] = {
-		["LastVersionAnnounce"] = 1509654264,
+		["LastVersionAnnounce"] = 1509901609,
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -134,9 +134,9 @@ DecursiveDB = {
 			["MainBarX"] = 682.666683197022,
 			["MainBarY"] = -95.9999914738864,
 			["ShowDebuffsFrame"] = false,
-			["DebuffsFramePerline"] = 5,
-			["AfflictionTooltips"] = false,
 			["Print_CustomFrame"] = false,
+			["AfflictionTooltips"] = false,
+			["DebuffsFramePerline"] = 5,
 			["DebuffsFrameContainer_x"] = 451.555566489697,
 			["HideLiveList"] = true,
 			["DebuffsFrameMaxCount"] = 40,
