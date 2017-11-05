@@ -1,2 +1,0 @@
-
-KkthnxUIConfigNotShared = nil

@@ -1,2 +1,0 @@
-
-KkthnxUIConfigPrivate = nil
